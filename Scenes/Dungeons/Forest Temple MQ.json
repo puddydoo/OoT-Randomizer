@@ -1,0 +1,457 @@
+[
+    {
+        "region_name": "Forest Temple Entrance",
+        "dungeon": "Forest Temple",
+        "room": "0",
+        "locations": {
+            "Forest Temple MQ First Room Chest": "
+                can_press_floor_switch and
+                (is_adult or Bombs or can_use(Sticks) or Nuts or can_use(Boomerang) or
+                can_use(Dins_Fire) or Kokiri_Sword or can_use(Slingshot))"
+        },
+        "exits": {
+            "Sacred Forest Meadow": "True",
+            "Forest Temple Hall to Lobby": "True"
+        }
+    },
+    {
+        "region_name": "Forest Temple Hall to Lobby",
+        "dungeon": "Forest Temple",
+        "room": "1",
+        "locations": {
+            "Forest Temple MQ GS First Hallway": "can_use(Hookshot) or can_use(Boomerang)"
+        },
+        "exits": {
+            "Forest Temple Entrance": "True",
+            "Forest Temple Lobby": "Small_Key_Forest_Temple"
+        }
+    },
+    {
+        "region_name": "Forest Temple Lobby",
+        "dungeon": "Forest Temple",
+        "room": "2",
+        "events": {
+            "Forest Temple Meg": "'Forest Temple Amy' and 'Forest Temple Joelle' and 'Forest Temple Beth' and can_use(Bow)"
+        },
+        "exits": {
+            "Forest Temple Hall to Lobby": "Still_a_key",
+            "Forest Temple Hall to Poe Puzzle Room": "can_climb(198)",
+            "Forest Temple Hall to Miniboss Room": "can_climb(70)",
+            "Forest Temple Hall to Block Push Room": "can_climb(48)",
+            "Forest Temple East Courtyard": "can_use(Bow) or can_use(Slingshot) or barred_door",
+            "Forest Temple West Courtyard": "can_use(Bow) or can_use(Slingshot) or barred_door",
+            "Forest Temple Basement": "'Forest Temple Meg'"
+        }
+    },
+    {
+        "region_name": "Forest Temple Hall to Miniboss Room",
+        "dungeon": "Forest Temple",
+        "room": "4",
+        "exits": {
+            "Forest Temple Lobby": "True",
+            "Forest Temple Miniboss Room": "is_child or can_play(Song_of_Time)"
+        }
+    },
+    {
+        "region_name": "Forest Temple Hall to Block Push Room",
+        "dungeon": "Forest Temple",
+        "room": "5",
+        "events": {
+            "Forest Temple Room 5 Enemies": "
+                "
+                #Stalfos
+        }
+        "exits": {
+            "Forest Temple Lobby": "'Forest Temple Room 5 Enemies' or barred_door",
+            "Forest Temple Block Push Room": "'Forest Temple Room 5 Enemies' or barred_door"
+        }
+    },
+    {
+        "region_name": "Forest Temple Miniboss Room",
+        "dungeon": "Forest Temple",
+        "room": "6",
+        "events": {
+            "Forest Temple Room 6 Enemies Wave 1": "
+                is_adult or can_use(Dins_Fire) or
+                can_use(Sticks) or can_use(Slingshot) or Kokiri_Sword"
+                #Wolfos
+        }
+        "locations": {
+            "Forest Temple MQ Wolfos Chest": "'Forest Temple Room 6 Enemies Wave 1'",
+            "Fairy Pot": "has_bottle"
+        },
+        "exits": {
+            "Forest Temple Hall to Miniboss Room": "
+                (is_child or can_play(Song_of_Time) and
+                ('Forest Temple Room 6 Enemies Wave 1' or barred_door)"
+        }
+    },
+    {
+        "region_name": "Forest Temple Miniboss Room Upper",
+        "dungeon": "Forest Temple",
+        "room": "6",
+        "events": {
+            "Forest Temple Room 6 Enemies Wave 2": "
+                is_adult or Kokiri_Sword"
+                #Stalfos
+        }
+        "locations": {
+            "Forest Temple MQ Bow Chest": "'Forest Temple Room 6 Enemies Wave 2'"
+        },
+        "exits": {
+            "Forest Temple Joelles Room": "'Forest Temple Room 6 Enemies Wave 2' or barred_door",
+            "Forest Temple Compass Room": "'Forest Temple Room 6 Enemies Wave 2' or barred_door"
+        }
+    },
+    {
+        "region_name": "Forest Temple East Courtyard",
+        "dungeon": "Forest Temple",
+        "room": "7",
+        "events": {
+            "Forest Temple Drain Well": "can_use(Bow) or can_use(Slingshot)"
+        },
+        "locations": {
+            "Forest Temple MQ GS Raised Island Courtyard": "can_use(Hookshot) or can_use(Boomerang)",
+            "Deku Baba Sticks": "is_adult or Kokiri_Sword or Boomerang",
+            "Deku Baba Nuts": "
+                is_adult or Slingshot or Sticks or 
+                has_explosives or Kokiri_Sword or can_use(Dins_Fire)"
+        },
+        "exits": {
+            "Forest Temple Lobby": "True",
+            "Forest Temple Well Tunnel": "
+                'Forest Temple Drain Well' or can_use(Iron_Boots) or (Progressive_Scale, 2)",
+            "Forest Temple East Courtyard Balcony": "
+                can_use(Hookshot) and 
+                (can_use(Longshot) or can_use(Hover_Boots) 
+                 or (can_play(Song_of_Time) and can_climb(100))or 
+                 logic_forest_vines)",
+            "Forest Temple East Courtyard Raised Island": "can_use(Longshot)"
+            #Maybe the chest might be hookshotable if it is big.
+        }
+    },
+    {
+        "region_name": "Forest Temple East Courtyard Raised Island",
+        "dungeon": "Forest Temple",
+        "room": "7",
+        "locations": {
+            "Forest Temple MQ Raised Island Courtyard Lower Chest": "True",
+            "Deku Baba Sticks": "is_adult or Kokiri_Sword or Boomerang",
+            "Deku Baba Nuts": "
+                is_adult or Slingshot or Sticks or 
+                has_explosives or Kokiri_Sword or can_use(Dins_Fire)"
+        },
+        "exits": {
+            "Forest Temple East Courtyard": "True",
+            "Forest Temple East Courtyard Door Ledge": "can_play(Song_of_Time) and can_climb(60)"
+        }
+    },
+    {
+        "region_name": "Forest Temple East Courtyard Door Ledge",
+        "dungeon": "Forest Temple",
+        "room": "7",
+        "exits": {
+            "Forest Temple Falling Room": "True",
+            "Forest Temple East Courtyard Raised Island": "True",
+            "Forest Temple East Courtyard": "True"
+        }
+    },
+    {
+        "region_name": "Forest Temple East Courtyard Balcony",
+        "dungeon": "Forest Temple",
+        "room": "7",
+        "locations": {
+            "Forest Temple MQ Raised Island Courtyard Upper Chest": "True"
+        },
+        "exits": {
+            "Forest Temple East Courtyard": "True",
+            "Forest Temple Balcony Room": "True",
+            "Forest Temple East Courtyard Raised Island": "
+                logic_forest_outdoors_ledge and can_use(Hover_Boots)",
+            "Forest Temple East Courtyard Door Ledge": "False"
+        }
+    },
+    {
+        "region_name": "Forest Temple West Courtyard",
+        "dungeon": "Forest Temple",
+        "room": "8",
+        "locations": {
+            "Forest Temple MQ GS Level Island Courtyard": "is_adult or can_child_attack"
+        },
+        "exits": {
+            "Forest Temple Lobby": "True",
+            "Forest Temple Well Tunnel": "
+                'Forest Temple Drain Well' or can_use(Iron_Boots) or (Progressive_Scale, 2)
+                or (logic_forest_well_swim and can_use(Hookshot))",
+            "Forest Temple Balcony Room": "can_use(Fire_Arrows)",
+            "Forest Temple West Courtyard Ledge": "False"
+        }
+    },
+    {
+        "region_name": "Forest Temple West Courtyard Ledge",
+        "dungeon": "Forest Temple",
+        "room": "8",
+        "locations": {
+            "Forest Temple GS Level Island Courtyard": "can_use(Hookshot) or can_use(Boomerang)"
+        },
+        "exits": {
+            "Forest Temple West Courtyard": "True",
+            "Forest Temple Block Push Room North Ledge": "True",
+            "Forest Temple Enemy Side Room": "True",
+            "Forest Temple Blue Bubble Room under Boss Key Room": "True"
+        }
+    },
+    {
+        "region_name": "Forest Temple Enemy Side Room",
+        "dungeon": "Forest Temple",
+        "room": "18",
+        "events": {
+            "Forest Temple Room 18 Enemies": "
+                Defeat all enemies"
+                #ReDead
+        }
+        "locations": {
+            "Forest Temple MQ Redead Chest": "'Forest Temple Room 18 Enemies'"
+        },
+        "exits": {
+            "Forest Temple West Courtyard Ledge": "'Forest Temple Room 18 Enemies' or barred_door"  
+        }
+    },
+    {
+        "region_name": "Forest Temple Well Tunnel",
+        "dungeon": "Forest Temple",
+        "room": "9",
+        "locations": {
+            "Forest Temple MQ Well Chest": "'Forest Temple Drain Well'",
+            "Forest Temple MQ GS Well": "
+                (can_use(Iron_Boots) and can_use(Hookshot)) 
+                or ('Forest Temple Drain Well' and (is_adult or can_child_attack))",
+        },
+        "exits": {
+            "Forest Temple East Courtyard": "True",
+            "Forest Temple West Courtyard": "True"
+        }
+    },
+    {
+        "region_name": "Forest Temple Balcony Room",
+        "dungeon": "Forest Temple",
+        "room": "10",
+        "exits": {
+            "Forest Temple West Courtyard": "has_fire_source_with_torch or can_use(Bow)"
+            "Forest Temple East Courtyard Balcony": "True"
+        }
+    },
+    {
+        "region_name": "Forest Temple Block Push Room",
+        "dungeon": "Forest Temple",
+        "room": "11",
+        "events": {
+            "Forest Temple Room 6 Crystal Switch": "logic_forest_mq_block_puzzle and has_bombchus"
+        }
+        "locations": {
+            "Forest Temple MQ GS Block Push Room": "is_adult or can_child_attack"
+        },
+        "exits": {
+            "Forest Temple Hall to Block Push Room": "True",
+            "Forest Temple Block Push Room Lower Ledge": "
+                can_use(Hover_Boots) or Progressive_Strength_Upgrade
+                or ('Forest Temple Room 6 Crystal Switch' and can_use(Hookshot))",
+            #end of the road for child forest.
+            "Forest Temple Block Push Room North Ledge": "
+                ((logic_forest_mq_hallway_switch 
+                    or at('Forest Temple Block Push Room North Ledge', true)) and can_use(Hookshot))
+                or (at('Forest Temple Block Push Room North Ledge', true) and can_climb(140))",
+            "Forest Temple Block Push Room Top": "Progressive_Strength_Upgrade and can_climb(100)"
+        }
+    },
+    {
+        "region_name": "Forest Temple Block Push Room Lower Ledge",
+        "dungeon": "Forest Temple",
+        "room": "11",
+        "exits": {
+            "Forest Temple Block Push Room": "True",
+            "Forest Temple Block Push Room Upper Ledge": "Progressive_Strength_Upgrade",
+            "Forest Temple Block Push Room North Ledge": "
+                (can_use(Hover_Boots) and at('Forest Temple Block Push Room North Ledge', true))",
+            "Forest Temple Block Push Room Top": "
+                'Forest Temple Room 6 Crystal Switch' and can_use(Hookshot) and can_climb(60)"
+        }
+    },
+    {
+        "region_name": "Forest Temple Block Push Room Upper Ledge",
+        "dungeon": "Forest Temple",
+        "room": "11",
+        "events": {
+            "Forest Temple Room 6 Crystal Switch": "
+                can_use(Bow) or can_use(Slingshot) or can_use(Longshot)"
+        }
+        "exits": {
+            "Forest Temple Block Push Room": "True",
+            #Not sure if the jumpslash could be done as child if child was up there somehow
+            "Forest Temple Block Push Room North Ledge": "
+                at('Forest Temple Block Push Room North Ledge', true) and
+                (can_use(Hover_Boots) or (logic_forest_outside_backdoor and can_jumpslash))",
+            "Forest Temple Block Push Room Top": "
+                'Forest Temple Room 6 Crystal Switch' and can_use(Hookshot)"
+        }
+    },
+    {
+        "region_name": "Forest Temple Block Push Room North Ledge",
+        "dungeon": "Forest Temple",
+        "room": "11",
+        "exits": {
+            "Forest Temple West Courtyard Ledge": "True",
+            "Forest Temple Block Push Room": "True"
+        }
+    },
+    {
+        "region_name": "Forest Temple Block Push Room Top",
+        "dungeon": "Forest Temple",
+        "room": "11",
+        "events": {
+            "Forest Temple Room 6 Crystal Switch": "can hit crystal switch"
+        }
+        "exits": {
+            "Forest Temple Block Push Room": "True",
+            "Forest Temple Block Push Room Upper Ledge": "True",
+            "Forest Temple Boss Key Room": "Small_Key_Forest_Temple"
+        }
+    },
+    {
+        "region_name": "Forest Temple Boss Key Room",
+        "dungeon": "Forest Temple",
+        "room": "19",
+        #Note: In MQ the twisting flag is permanent, unlike vanilla.
+        "locations": {
+            "Forest Temple MQ Boss Key Chest": "
+                Straighten the room"
+        },
+        "exits": {
+            "Forest Temple Block Push Room": "Still_a_key",
+            "Forest Temple Joelles Room": "Small_Key_Forest_Temple",
+            "Forest Temple Blue Bubble Room under Boss Key Room": "
+                Straighten the room"
+        }
+    },
+    {
+        "region_name": "Forest Temple Blue Bubble Room under Boss Key Room",
+        "dungeon": "Forest Temple",
+        "room": "21",
+        "events": {
+            "Forest Temple Room 21 Enemies": "
+                "
+                #
+        }
+        "exits": {
+            "Forest Temple West Courtyard Ledge": "'Forest Temple Room 21 Enemies' or barred_door",
+            "Forest Temple Boss Key Room": "False"
+        }
+    },
+    {
+        "region_name": "Forest Temple Joelles Room",
+        "dungeon": "Forest Temple",
+        "room": "12",
+        "events": {
+            "Forest Temple Joelle": "can_use(Bow)",
+        },
+        "locations": {
+            "Forest Temple MQ Map Chest": "'Forest Temple Joelle'"
+        },
+        "exits": {
+            "Forest Temple Miniboss Room Upper": "True",
+            "Forest Temple Boss Key Room": "Still_a_key"
+        }
+    },
+    {
+        "region_name": "Forest Temple Compass Room",
+        "dungeon": "Forest Temple",
+        "room": "13",
+        "events": {
+            "Forest Temple Beth": "can_use(Bow)"
+        },
+        "locations": {
+            "Forest Temple MQ Compass Chest": "'Forest Temple Beth'"
+        },
+        "exits": {
+            "Forest Temple Miniboss Room Upper": "True",
+            "Forest Temple Green Bubble Hall and Turning Room": "Small_Key_Forest_Temple"
+        }
+    },
+    {
+        "region_name": "Forest Temple Green Bubble Hall and Turning Room",
+        "dungeon": "Forest Temple",
+        "room": "20",
+        "exits": {
+            "Forest Temple Compass Room": "Still_a_key",
+            "Forest Temple Pink Lava Room": "Small_Key_Forest_Temple",
+            #Note: In MQ the twisting flag is permanent, unlike vanilla.
+            "Forest Temple Falling Room": "
+                Twist the room
+                at('Forest Temple Pink Lava Room', can_use(Bow) or can_use(Dins_Fire)"
+        }
+    },
+    {
+        "region_name": "Forest Temple Pink Lava Room",
+        "dungeon": "Forest Temple",
+        "room": "14",
+        "exits": {
+            "Forest Temple Green Bubble Hall and Turning Room": "Still_a_key"
+        }
+    },
+    {
+        "region_name": "Forest Temple Falling Room",
+        "dungeon": "Forest Temple",
+        "room": "15",
+        "locations": {
+            "Forest Temple MQ Falling Ceiling Room Chest": "can_press_floor_switch"
+        },
+        "exits": {
+            "Forest Temple East Courtyard": "can_press_floor_switch or barred_door",
+            "Forest Temple Poe Puzzle Room": "Small_Key_Forest_Temple",
+            "Forest Temple Green Bubble Hall and Turning Room": "False"
+        }
+    },
+    {
+        "region_name": "Forest Temple Poe Puzzle Room",
+        "dungeon": "Forest Temple",
+        "room": "16",
+        "events": {
+            "Forest Temple Amy": "can_use(Bow)"
+        },
+        "exits": {
+            "Forest Temple Falling Room": "Still_a_key",
+            "Forest Temple Hall to Poe Puzzle Room": "'Forest Temple Amy' or barred_door"
+        }
+    },
+    {
+        "region_name": "Forest Temple Hall to Poe Puzzle Room",
+        "dungeon": "Forest Temple",
+        "room": "3",
+        "exits": {
+            "Forest Temple Poe Puzzle Room": "True",
+            "Forest Temple Lobby": "True"
+        }
+    },
+    {
+        "region_name": "Forest Temple Basement",
+        "dungeon": "Forest Temple",
+        "room": "17",
+        "locations": {
+            "Forest Temple MQ Basement Chest": "True"
+        }
+        "exits": {
+            "Forest Temple Lobby": "True",
+            "Forest Temple Basement Hall": "can_press_floor_switch and can hit a crystal switch on the ceiling"
+        }
+    },
+    {
+        "region_name": "Forest Temple Basement Hall",
+        "dungeon": "Forest Temple",
+        "room": "17",
+        "exits": {
+            "Forest Temple Basement": "
+                at('Forest Temple Basement', can_press_floor_switch)",
+            "Phantom Ganon Arena": "Boss_Key_Forest_Temple"
+        }
+    }
+]

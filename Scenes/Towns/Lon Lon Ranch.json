@@ -1,0 +1,26 @@
+[
+    {
+        "region_name": "Lon Lon Ranch",
+        "scene": "Lon Lon Ranch",
+        "room": "0",
+        "hint": "Lon Lon Ranch",
+        "events": {
+            "Epona": "can_play(Eponas_Song) and is_adult and at_day",
+            "Links Cow": "can_play(Eponas_Song) and is_adult and at_day"
+        },
+        "locations": {
+            "Song from Malon": "is_child and Zeldas_Letter and Ocarina and at_day",
+            "LLR GS Tree": "is_child",
+            "LLR GS Rain Shed": "is_child and at_night",
+            "LLR GS House Window": "can_use(Boomerang) and at_night",
+            "LLR GS Back Wall": "can_use(Boomerang) and at_night"
+        },
+        "exits": {
+            "Hyrule Field": "True",
+            "LLR Talons House": "is_adult or at_day",
+            "LLR Stables": "True",
+            "LLR Tower": "True",
+            "LLR Grotto": "is_child"
+        }
+    }
+]

@@ -1,0 +1,278 @@
+[
+    #These boss rooms all have a Room 0 but they are not real rooms
+    {
+        "region_name": "Gohma Entrance",
+        "dungeon": "Deku Tree",
+        "room": "1",
+        "exits": {
+            "Deku Tree Three Scrub Room": "True",
+            "Gohma Arena": "True"
+        }
+    },
+    {
+        "region_name": "Gohma Arena",
+        "dungeon": "Deku Tree",
+        "room": "1",
+        "events": {
+            "Queen Gohma": "is_adult or Kokiri_Sword or Sticks"
+        },
+        "locations": {
+            "Deku Tree Queen Gohma Heart": "'Queen Gohma'"
+        },
+        "exits": {
+            "Gohma Entrance": "'Queen Gohma'",
+            "Deku Tree Post Boss": "'Queen Gohma''"
+        }
+    },
+    {
+        "region_name": "Deku Tree Post Boss",
+        "dungeon": "Deku Tree",
+        "events": {
+            "Deku Tree Clear": "True"
+        },
+        "locations": {
+            "Kokiri Emerald": "True"
+        },
+        "exits": {
+            "KF Outside Deku Tree": "True"
+        }
+    },
+    {
+        "region_name": "King Dodongo Entrance",
+        "dungeon": "Dodongos Cavern",
+        "room": "1",
+        "locations": {
+            "Dodongos Cavern Boss Room Chest": "True"
+        },
+        "exits": {
+            "Dodongos Cavern Floor Hole Switch Room": "True",
+            "King Dodongo Arena": "has_explosives"
+        }
+    },
+    {
+        "region_name": "King Dodongo Arena",
+        "dungeon": "Dodongos Cavern",
+        "room": "1",
+        "events": {
+            "King Dodongo": "
+                (Bombs or Progressive_Strength_Upgrade) and 
+                (is_adult or Sticks or Kokiri_Sword)"
+        },
+        "locations": {
+            "Dodongos Cavern King Dodongo Heart": "'King Dodongo'"
+        },
+        "exits": {
+            "Dodongos Cavern Post Boss": "'King Dodongo'",
+            "King Dodongo Entrance": "False"
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Post Boss",
+        "dungeon": "Dodongos Cavern",
+        "locations": {
+            "Goron Ruby": "True"
+        },
+        "exits": {
+            "Dodongos Cavern Entryway": "True"
+        }
+    },
+    {
+        "region_name": "Barinade Arena",
+        "dungeon": "Jabu Jabus Belly",
+        "room": "1",
+        "events": {
+            "Barinade": "can_use(Boomerang)"
+        },
+        "locations": {
+            "Jabu Jabus Belly Barinade Heart": "'Barinade'"
+        },
+        "exits": {
+            "Jabu Jabus Belly Post Boss": "'Barinade'"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Post Boss",
+        "dungeon": "Jabu Jabus Belly",
+        "locations": {
+            "Zora Sapphire": "True"
+        },
+        "exits": {
+            "Zoras Fountain": "True"
+        }
+    },
+    {
+        "region_name": "Phantom Ganon Arena",
+        "dungeon": "Forest Temple",
+        "room": "1",
+        "events": {
+            "Phantom Ganon": "
+                "
+        },
+        "locations": {
+            "Forest Temple Phantom Ganon Heart": "'Phantom Ganon'"
+        },
+        "exits": {
+            "Forest Temple Post Boss": "'Phantom Ganon'"
+        }
+    },
+    {
+        "region_name": "Forest Temple Post Boss",
+        "dungeon": "Forest Temple",
+        "locations": {
+            "Forest Medallion": "True"
+        },
+        "exits": {
+            "Sacred Forest Meadow": "True"
+            #Non-repeatable: "KF Outside Deku Tree" when you get the Medallion
+        }
+    },
+    {
+        "region_name": "Volvagia Arena",
+        "dungeon": "Fire Temple",
+        "room": "1",
+        "events": {
+            "Volvagia": "can_use(Goron_Tunic) and can_use(Megaton_Hammer)"
+        },
+        "locations": {
+            "Fire Temple Volvagia Heart": "'Volvagia'"
+        },
+        "exits": {
+            "Fire Temple Post Boss": "'Volvagia'"
+        }
+    },
+    {
+        "region_name": "Fire Temple Post Boss",
+        "dungeon": "Fire Temple",
+        "locations": {
+            "Fire Medallion": "True"
+        },
+        "exits": {
+            "DMC Central Local": "True"
+        }
+    },
+    {
+        "region_name": "Morpha Arena",
+        "dungeon": "Water Temple",
+        "room": "1",
+        "events": {
+            "Morpha": "is_adult and can_use(Hookshot)"
+        },
+        "locations": {
+            "Water Temple Morpha Heart": "'Morpha'"
+        },
+        "exits": {
+            "Water Temple Post Boss": "'Morpha'"
+        }
+    },
+    {
+        "region_name": "Water Temple Post Boss",
+        "dungeon": "Water Temple",
+        "events": {
+            "Water Temple Clear": "True"
+        },
+        "locations": {
+            "Water Medallion": "True"
+        },
+        "exits": {
+            "Lake Hylia": "True"
+        }
+    },
+    {
+        "region_name": "Iron Knuckle Arena",
+        "dungeon": "Spirit Temple",
+        "room": "1",
+        "events": {
+            "Boss Iron Knuckle": "
+                "
+        },
+        "exits": {
+            "Twinrova Hallway": "'Boss Iron Knuckle' or barred_door"
+        }
+    },
+    {
+        "region_name": "Twinrova Hallway",
+        "dungeon": "Spirit Temple",
+        "room": "2",
+        "exits": {
+            "Iron Knuckle Arena": "True",
+            "Twinrova Arena": "True"
+        }
+    },
+    {
+        "region_name": "Twinrova Arena",
+        "dungeon": "Spirit Temple",
+        "room": "3",
+        "events": {
+            "Twinrova": "is_adult and can_use(Mirror_Shield)"
+        }
+        "locations": {
+            "Spirit Temple Twinrova Heart": "'Twinrova'"
+        },
+        "exits": {
+            "Spirit Temple Post Boss": "'Twinrova'"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Post Boss",
+        "dungeon": "Spirit Temple",
+        "locations": {
+            "Spirit Medallion": "True"
+        },
+        "exits": {
+            "Desert Colossus": "True"
+        }
+    },
+    {
+        "region_name": "Bongo Bongo Arena",
+        "dungeon": "Shadow Temple",
+        "room": "1",
+        "events": {
+            "Bongo Bongo": "
+                "
+        }
+        "locations": {
+            "Shadow Temple Bongo Bongo Heart": "'Bongo Bongo'"
+        },
+        "exits": {
+            "Shadow Temple Post Boss": "'Bongo Bongo'"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Post Boss",
+        "dungeon": "Shadow Temple",
+        "locations": {
+            "Shadow Medallion": "True"
+        },
+        "exits": {
+            "Graveyard Warp Pad Region": "True"
+        }
+    },
+    {
+        "region_name": "Ganondorf Arena",
+        "room": "0",
+        "events": {
+            "Ganondorf": "is_adult and can_use(Light_Arrows)"
+        }
+        "locations": {
+            "Ganondorf Hint": "True"
+        }
+        "exits": {
+            "Ganons Tower Post Boss": "'Ganondorf'"
+        }
+    },
+    {
+        "region_name": "Ganons Tower Post Boss",
+        "exits": {
+            "Collapsing Tower Exterior 1": "True"
+        }
+    },
+    {
+        "region_name": "Ganon Arena",
+        "room": "0",
+        #Even Child Link gets the Master Sword and can beat the second phase.
+        #I don't know what the exact requirements should be for the first phase though.
+        "events": {
+            "Ganon": "True"
+        }
+    }
+]

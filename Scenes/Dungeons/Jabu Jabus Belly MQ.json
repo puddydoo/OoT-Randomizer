@@ -1,0 +1,407 @@
+[
+    {
+        "region_name": "Jabu Jabus Belly Mouth",
+        "dungeon": "Jabu Jabus Belly",
+        "room": "0",
+        "locations": {
+            "Nut Pot": "True",
+            "Jabu Jabus Belly MQ Map Chest": "can_blast_or_smash",
+            "Jabu Jabus Belly MQ First Room Side Chest": "can_use(Slingshot)"
+        },
+        "exits": {
+            "Zoras Fountain": "True",
+            "Jabu Jabus Belly Lobby": "here(can_use(Slingshot))"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Lobby",
+        "dungeon": "Jabu Jabus Belly",
+        "room": "1",
+        "events": {
+            "Jabu Jabus Belly Room 1 Upper Cow": "can_use(Slingshot)"
+        },
+        "locations": {
+            "Nut Pot": "can_dive or is_child or logic_jabu_scrub_jump_dive or can_use(Iron_Boots)",
+            "Jabu Jabus Belly MQ Compass Chest": "
+                here(can_use(Slingshot)) and 
+                (can_dive or is_child or logic_jabu_scrub_jump_dive or can_use(Iron_Boots))",
+            "Jabu Jabus Belly MQ Second Room Lower Chest": "True"
+        },
+        "exits": {
+            "Jabu Jabus Belly Pit Room": "
+                here(can_dive or is_child or logic_jabu_scrub_jump_dive or can_use(Iron_Boots)) or barred_door",
+            "Jabu Jabus Belly Water Switch Room South Hall": "'Jabu Jabus Belly MQ Water Spouts'",
+            "Jabu Jabus Belly Lobby East Hall": "
+                at('Jabu Jabus Belly Lobby Upper', True) or can_use(Hover_Boots)
+                or ('Jabu Jabus Belly Room 1 Upper Cow' and can_use(Hookshot))",
+            "Jabu Jabus Belly Lobby Upper": "False"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Lobby Upper",
+        "dungeon": "Jabu Jabus Belly",
+        "room": "1",
+        "exits": {
+            "Jabu Jabus Belly Lobby": "True",
+            "Jabu Jabus Belly Post-Miniboss Room": "True"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Lobby East Hall",
+        "dungeon": "Jabu Jabus Belly",
+        "room": "1",
+        "locations": {
+            "Jabu Jabus Belly MQ Second Room Upper Chest": "'Jabu Jabus Belly Room 1 Upper Cow'"
+        },
+        "exits": {
+            "Jabu Jabus Belly Lobby": "True",
+            "Jabu Jabus Belly Lobby East": "'Jabu Jabus Belly Red Tentacle'"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Lobby East",
+        "dungeon": "Jabu Jabus Belly",
+        "room": "1",
+        "exits": {
+            "Jabu Jabus Belly Lobby East Hall": "
+                'Jabu Jabus Belly Red Tentacle' or
+                damage_multiplier != 'ohko' or Fairy or can_use(Nayrus_Love)",
+            "Jabu Jabus Belly Pre-Boss Room": "True"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Pit Room",
+        "dungeon": "Jabu Jabus Belly",
+        "room": "2",
+        "events": {
+            "Jabu Jabus Belly Room 2 Cow": "has_explosives and can_use(Slingshot)"
+        },
+        "exits": {
+            "Jabu Jabus Belly Lobby": "True",
+            "Jabu Jabus Belly Under Pit": "True",
+            "Jabu Jabus Belly Under Pit North": "True",
+            "Jabu Jabus Belly Under Pit East": "True",
+            "Jabu Jabus Belly Under Pit West": "True",
+            "Jabu Jabus Belly Pit Room North": "can_use(Boomerang) and can_climb(60)"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Pit Room North",
+        "dungeon": "Jabu Jabus Belly",
+        "room": "2",
+        "exits": {
+            "Jabu Jabus Belly Pit Room": "can_use(Boomerang) and can_climb(60)",
+            "Jabu Jabus Belly Branching Hallways": "'Jabu Jabus Belly Room 2 Cow' or barred_door"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Under Pit",
+        "dungeon": "Jabu Jabus Belly",
+        "room": "3",
+        "locations": {
+            "Jabu Jabus Belly MQ Basement Near Vines Chest": "can_use(Slingshot)",
+            "Jabu Jabus Belly MQ Basement Near Switches Chest": "can_use(Slingshot)"
+        },
+        "exits": {
+            "Jabu Jabus Belly Pit Room": "True",
+            "Jabu Jabus Belly Under Pit East": "can_press_floor_switch or can_climb(97)",
+            "Jabu Jabus Belly Under Pit North": "can_press_floor_switch or can_climb(95)",
+            "Jabu Jabus Belly Under Pit West": "can_press_floor_switch",
+            "Jabu Jabus Belly Under Pit Southwest": "'Jabu Jabus Belly Red Tentacle'"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Under Pit North",
+        "dungeon": "Jabu Jabus Belly",
+        "room": "3",
+        "exits": {
+            "Jabu Jabus Belly Under Pit": "True",
+            "Jabu Jabus Belly Under Pit East": "can_use(Hover_Boots)"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Under Pit East",
+        "dungeon": "Jabu Jabus Belly",
+        "room": "3",
+        "exits": {
+            "Jabu Jabus Belly Under Pit": "True",
+            "Jabu Jabus Belly Under Pit North": "can_use(Hover_Boots)",
+            #Aside from can_hold_down_switch this normally requires Ruto and I'm not sure how to represent this
+            "Jabu Jabus Belly Water Switch Room North": "
+                at('Jabu Jabus Belly Under Pit North', Ruto or can_press_floor_switch) or barred_door"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Under Pit West",
+        "dungeon": "Jabu Jabus Belly",
+        "room": "3",
+        "exits": {
+            "Jabu Jabus Belly Under Pit": "True",
+            "Jabu Jabus Belly Under Pit West Hall": "'Jabu Jabus Belly Green Tentacle'"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Under Pit West Hall",
+        "dungeon": "Jabu Jabus Belly",
+        "room": "3",
+        "exits": {
+            "Jabu Jabus Belly Under Pit West": "
+                'Jabu Jabus Belly Green Tentacle' or
+                damage_multiplier != 'ohko' or Fairy or can_use(Nayrus_Love)",
+            "Jabu Jabus Belly Miniboss Room": "True"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Under Pit Southwest",
+        "dungeon": "Jabu Jabus Belly",
+        "room": "3",
+        "exits": {
+            "Jabu Jabus Belly Under Pit": "
+                'Jabu Jabus Belly Red Tentacle' or
+                damage_multiplier != 'ohko' or Fairy or can_use(Nayrus_Love)",
+            "Jabu Jabus Belly Under Pit Side Room": "'Jabu Jabus Belly Red Tentacle'"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Post-Miniboss Room",
+        "dungeon": "Jabu Jabus Belly",
+        "room": "4",
+        "locations": {
+            "Jabu Jabus Belly MQ Cow": "can_use(Slingshot) and can_play(Eponas_Song)"
+        },
+        "exits": {
+            "Jabu Jabus Belly Lobby Upper": "
+                (can_use(Slingshot) and can_use(Boomerang))
+                or (can_climb(120) and can_hold_down_switch)",
+            "Jabu Jabus Belly Miniboss Room Upper": "True"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Pre-Boss Room",
+        "dungeon": "Jabu Jabus Belly",
+        "room": "5",
+        "locations": {
+            "Jabu Jabus Belly MQ Near Boss Chest": "can_use(Slingshot)",
+            "Jabu Jabus Belly MQ GS Near Boss": "can_use(Boomerang)",
+            "Fairy Pot": "has_bottle"
+        },
+        "exits": {
+            "Jabu Jabus Belly Lobby East": "True",
+            "Barinade Arena": "here(can_use(Slingshot))"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Miniboss Room",
+        "dungeon": "Jabu Jabus Belly",
+        "room": "6",
+        "exits": {
+            "Jabu Jabus Belly Under Pit West Hall": "True",
+            "Jabu Jabus Belly Miniboss Room Upper": "Bring Ruto and kill Big Octo"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Miniboss Room Upper",
+        "dungeon": "Jabu Jabus Belly",
+        "room": "6",
+        "exits": {
+            "Jabu Jabus Belly Under Pit West Hall": "True",
+            "Jabu Jabus Belly Post-Miniboss Room": "can_use(Slingshot)"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Branching Hallways",
+        "dungeon": "Jabu Jabus Belly",
+        "room": "7",
+        "events": {
+            "Jabu Jabus Belly Room 7 Rocks": "can_blast_or_smash"
+        },
+        "exits": {
+            "Jabu Jabus Belly Pit Room North": "True",
+            "Jabu Jabus Belly Branching Hallways W": "'Jabu Jabus Belly Blue Tentacle'",
+            #Torch is in adjacent room
+            "Jabu Jabus Belly Branching Hallways E": "
+                here(has_fire_source or ('Jabu Jabus Belly Room 11 Enemies' and can_use(Sticks)))",
+            "Jabu Jabus Belly Branching Hallways NW": "'Jabu Jabus Belly Blue Tentacle'",
+            "Jabu Jabus Belly Branching Hallways NE": "True",
+            "Jabu Jabus Belly Branching Hallways N": "'Jabu Jabus Belly Room 7 Rocks'"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Branching Hallways W",
+        "dungeon": "Jabu Jabus Belly",
+        "room": "7",
+        "exits": {
+            "Jabu Jabus Belly Branching Hallways": "
+                'Jabu Jabus Belly Blue Tentacle' or
+                (damage_multiplier != 'ohko' or Fairy or can_use(Nayrus_Love))",
+            "Jabu Jabus Belly West Chamber": "True"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Branching Hallways E",
+        "dungeon": "Jabu Jabus Belly",
+        "room": "7",
+        "exits": {
+            "Jabu Jabus Belly Branching Hallways": "True",
+            "Jabu Jabus Belly East Chamber": "True"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Branching Hallways NW",
+        "dungeon": "Jabu Jabus Belly",
+        "room": "7",
+        "exits": {
+            "Jabu Jabus Belly Branching Hallways": "
+                'Jabu Jabus Belly Blue Tentacle' or
+                (damage_multiplier != 'ohko' or Fairy or can_use(Nayrus_Love))",
+            "Jabu Jabus Belly Northwest Chamber": "True"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Branching Hallways NE",
+        "dungeon": "Jabu Jabus Belly",
+        "room": "7",
+        "exits": {
+            "Jabu Jabus Belly Branching Hallways": "True",
+            "Jabu Jabus Belly Northeast Chamber": "True"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Branching Hallways N",
+        "dungeon": "Jabu Jabus Belly",
+        "room": "7",
+        "events": {
+            "Jabu Jabus Belly Room 7 Rocks": "can_blast_or_smash"
+        },
+        "exits": {
+            "Jabu Jabus Belly Branching Hallways": "'Jabu Jabus Belly Room 7 Rocks'",
+            #No Ruto, just put down crate from the other part of the room
+            "Jabu Jabus Belly North Chamber": "'Jabu Jabus Belly Room 7 Rocks'"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly North Chamber",
+        "dungeon": "Jabu Jabus Belly",
+        "room": "8",
+        "events": {
+            "Jabu Jabus Belly Red Tentacle": "can_use(Boomerang)"
+        },
+        "exits": {
+            "Jabu Jabus Belly Branching Hallways N": "True"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly East Chamber",
+        "dungeon": "Jabu Jabus Belly",
+        "room": "9",
+        "events": {
+            "Jabu Jabus Belly Blue Tentacle": "can_use(Boomerang)"
+        }
+        "exits": {
+            "Jabu Jabus Belly Branching Hallways E": "True"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly West Chamber",
+        "dungeon": "Jabu Jabus Belly",
+        "room": "10",
+        "events": {
+            "Jabu Jabus Belly Green Tentacle": "can_use(Boomerang)"
+        },
+        "exits": {
+            "Jabu Jabus Belly Branching Hallways W": "True"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Northeast Chamber",
+        "dungeon": "Jabu Jabus Belly",
+        "room": "11",
+        "events": {
+            "Jabu Jabus Belly Room 11 Enemies": "can_use(Slingshot)"
+                #Like Likes summoned by shooting cows
+        }
+        "locations": {
+            "Jabu Jabus Belly MQ Falling Like Like Room Chest": "'Jabu Jabus Belly Room 11 Enemies'"
+        },
+        "exits": {
+            "Jabu Jabus Belly Branching Hallways NE": "'Jabu Jabus Belly Room 11 Enemies' or barred_door"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Northwest Chamber",
+        "dungeon": "Jabu Jabus Belly",
+        "room": "12",
+        "locations": {
+            "Jabu Jabus Belly MQ GS Tailpasaran Room": "
+                here((Bombs and can_press_floor_switch) or has_bombchus)
+                and can_use(Boomerang) or can_use(Hookshot)"
+        },
+        "exits": {
+            "Jabu Jabus Belly Branching Hallways NW": "True"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Under Pit Side Room",
+        "dungeon": "Jabu Jabus Belly",
+        "room": "13",
+        "locations": {
+            "Jabu Jabus Belly MQ GS Invisible Enemies Room": "
+                (can_use(Boomerang) or can_use(Hookshot)) and
+                ((logic_lens_jabu_mq or can_use(Lens_of_Truth)) or
+                can_use(Hover_Boots) or (mm_ice_arrows and can_use(Ice_Arrows)))"
+        },
+        "exits": {
+            "Jabu Jabus Belly Under Pit Southwest": "can_swim"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Water Switch Room North",
+        "dungeon": "Jabu Jabus Belly",
+        "room": "14",
+        "events": {
+            "Jabu Jabus Belly Room 14 Enemies": "
+                "
+        },
+        "locations": {
+            "Jabu Jabus Belly MQ Boomerang Room Small Chest": "True",
+            "Jabu Jabus Belly MQ Boomerang Chest": "'Jabu Jabus Belly Room 14 Enemies'"
+        },
+        "exits": {
+            "Jabu Jabus Belly Water Switch Room": "True",
+            "Jabu Jabus Belly Under Pit East": "True"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Water Switch Room",
+        "dungeon": "Jabu Jabus Belly",
+        "room": "14",
+        "events": {
+            "Jabu Jabus Belly Room 14 Enemies": "
+                ",
+                #
+            "Jabu Jabus Belly MQ Water Spouts": "
+                'Jabu Jabus Belly Room 14 Enemies' and can_press_floor_switch"
+                #Opening the Boomerang chest lowers the water spouts across MQ Jabu Jabu's Belly
+        },
+        "locations": {
+            "Jabu Jabus Belly MQ Boomerang Chest": "'Jabu Jabus Belly MQ Water Spouts'",
+            "Jabu Jabus Belly MQ GS Boomerang Chest Room": "
+                can_play(Song_of_Time) or (logic_jabu_mq_sot_gs and can_use(Boomerang))"
+        },
+        "exits": {
+            "Jabu Jabus Belly Water Switch Room North": "
+                can_press_floor_switch or can_climb(100) or can_use(Hookshot)",
+            "Jabu Jabus Belly Water Switch Room South Hall": "
+                (can_press_floor_switch or can_climb(100)) and 'Jabu Jabus Belly MQ Water Spouts'"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Water Switch Room South Hall",
+        "dungeon": "Jabu Jabus Belly",
+        "room": "14",
+        "exits": {
+            "Jabu Jabus Belly Lobby": "True",
+            "Jabu Jabus Belly Water Switch Room": "'Jabu Jabus Belly MQ Water Spouts'"
+        }
+    }
+]

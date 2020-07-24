@@ -1,0 +1,120 @@
+[
+    {
+        "region_name": "DMC Upper Nearby",
+        "scene": "Death Mountain Crater",
+        "room": "1",
+        "hint": "Death Mountain Crater",
+        "exits": {
+            "DMC Upper Local": "can_use(Goron_Tunic)",
+            "Death Mountain Summit": "True",
+            "DMC Upper Grotto": "here(can_blast_or_smash)"
+        }
+    },
+    {
+        "region_name": "DMC Upper Local",
+        "scene": "Death Mountain Crater",
+        "room": "1",
+        "hint": "Death Mountain Crater",
+        "locations": {
+            "DMC Wall Freestanding PoH": "True",
+            "DMC GS Crate": "is_child and can_child_attack",
+            "DMC Gossip Stone": "has_explosives",
+            "Gossip Stone Fairy": "
+                has_explosives and can_summon_gossip_fairy_without_suns and has_bottle"
+        },
+        "exits": {
+            "DMC Upper Nearby": "True",
+            "DMC Ladder Area Nearby": "True",
+            "DMC Central Nearby": "
+                can_use(Goron_Tunic) and can_use(Longshot) and 
+                ((damage_multiplier != 'ohko' and damage_multiplier != 'quadruple') or 
+                    (Fairy and not shuffle_dungeon_entrances) or can_use(Nayrus_Love))"
+        }
+    },
+    {
+        "region_name": "DMC Ladder Area Nearby",
+        "scene": "Death Mountain Crater",
+        "room": "1",
+        "hint": "Death Mountain Crater",
+        "locations": {
+            "DMC Deku Scrub": "is_child and can_stun_deku"
+        },
+        "exits": {
+            "DMC Upper Nearby": "is_adult",
+            "DMC Lower Nearby": "
+                can_use(Hover_Boots) or
+                (logic_crater_upper_to_lower and can_use(Megaton_Hammer))"
+        }
+    },
+    {
+        "region_name": "DMC Lower Nearby",
+        "scene": "Death Mountain Crater",
+        "room": "1",
+        "hint": "Death Mountain Crater",
+        "exits": {
+            "DMC Lower Local": "can_use(Goron_Tunic)",
+            "GC Darunias Chamber": "True",
+            "DMC Great Fairy Fountain": "can_use(Megaton_Hammer)",
+            "DMC Hammer Grotto": "can_use(Megaton_Hammer)"
+        }
+    },
+    {
+        "region_name": "DMC Lower Local",
+        "scene": "Death Mountain Crater",
+        "room": "1",
+        "hint": "Death Mountain Crater",
+        "exits": {
+            "DMC Lower Nearby": "True",
+            "DMC Ladder Area Nearby": "True",
+            "DMC Central Nearby": "can_use(Hover_Boots) or can_use(Hookshot)",
+            "Fire Temple Entrance": "
+                (can_use(Hover_Boots) or can_use(Hookshot)) and
+                (logic_fewer_tunic_requirements or can_use(Goron_Tunic))"
+        }
+    },
+    {
+        "region_name": "DMC Central Nearby",
+        "scene": "Death Mountain Crater",
+        "room": "1",
+        "hint": "Death Mountain Crater",
+        "locations": {
+            "DMC Volcano Freestanding PoH": "
+                is_adult and
+                (here(can_plant_bean) or 
+                    (logic_crater_bean_poh_with_hovers and Hover_Boots))",
+            "Sheik in Crater": "is_adult"
+        },
+        "exits": {
+            "DMC Central Local": "can_use(Goron_Tunic)"
+        }
+    },
+    {
+        "region_name": "DMC Central Local",
+        "scene": "Death Mountain Crater",
+        "room": "1",
+        "hint": "Death Mountain Crater",
+        "locations": {
+            "DMC GS Bean Patch": "can_plant_bugs and can_child_attack",
+            "Bean Plant Fairy": "can_plant_bean and can_play(Song_of_Storms) and has_bottle"
+        },
+        "exits": {
+            "DMC Central Nearby": "True",
+            "DMC Lower Nearby": "
+                is_adult and
+                (can_use(Hover_Boots) or can_use(Hookshot) or here(can_plant_bean))",
+            "DMC Upper Nearby": "is_adult and here(can_plant_bean)",
+            "Fire Temple Entrance": "
+                (is_child and shuffle_dungeon_entrances) or
+                (is_adult and (logic_fewer_tunic_requirements or can_use(Goron_Tunic)))"
+        }
+    },
+    {
+        "region_name": "Fire Temple Entrance",
+        "scene": "Death Mountain Crater",
+        "room": "0",
+        "hint": "Death Mountain Crater",
+        "exits": {
+            "Fire Temple Entrance Chamber": "True"
+        }
+    }
+]

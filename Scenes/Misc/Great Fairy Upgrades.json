@@ -1,0 +1,32 @@
+[
+    {
+        "region_name": "DMT Great Fairy Fountain",
+        "room": "0",
+        "locations": {
+            "DMT Great Fairy Reward": "can_play(Zeldas_Lullaby)"
+        },
+        "exits": {
+            "Death Mountain Summit": "True"
+        }
+    },
+    {
+        "region_name": "DMC Great Fairy Fountain",
+        "room": "0",
+        "locations": {
+            "DMC Great Fairy Reward": "can_play(Zeldas_Lullaby)"
+        },
+        "exits": {
+            "DMC Lower Local": "True"
+        }
+    },
+    {
+        "region_name": "OGC Great Fairy Fountain",
+        "room": "0",
+        "locations": {
+            "OGC Great Fairy Reward": "can_play(Zeldas_Lullaby)"
+        },
+        "exits": {
+            "Castle Grounds": "True"
+        }
+    }
+]

@@ -1,0 +1,52 @@
+[
+    {
+        "region_name": "GF Storms Grotto",
+        "room": "0",
+        "locations": {
+            "Free Fairies": "has_bottle"
+        },
+        "exits": {
+            "GF Entrances Behind Crates": "True"
+        }
+    },
+    {
+        "region_name": "ZD Storms Grotto",
+        "room": "0",
+        "locations": {
+            "Free Fairies": "has_bottle"
+        },
+        "exits": {
+            "Zoras Domain": "True"
+        }
+    },
+    {
+        "region_name": "SFM Fairy Grotto",
+        "room": "0",
+        "locations": {
+            "Free Fairies": "has_bottle"
+        },
+        "exits": {
+            "Sacred Forest Meadow": "True"
+        }
+    },
+    {
+        "region_name": "HF Fairy Grotto",
+        "room": "0",
+        "locations": {
+            "Free Fairies": "has_bottle"
+        },
+        "exits": {
+            "Hyrule Field": "True"
+        }
+    },
+    {
+        "region_name": "ZR Fairy Grotto",
+        "room": "0",
+        "locations": {
+            "Free Fairies": "has_bottle"
+        },
+        "exits": {
+            "Zora River": "True"
+        }
+    },
+]

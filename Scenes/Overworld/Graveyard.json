@@ -1,0 +1,67 @@
+[
+    {
+        "region_name": "Graveyard",
+        "scene": "Graveyard",
+        "room": "1",
+        "hint": "the Graveyard",
+        "locations": {
+            "Graveyard Freestanding PoH": "logic_graveyard_poh and can_use(Boomerang)",
+            "Graveyard Dampe Gravedigging Tour": "is_child and at_dampe_time",
+            "Graveyard GS Wall": "can_use(Boomerang) and at_night",
+            "Graveyard GS Bean Patch": "can_plant_bugs and can_child_attack",
+            "Butterfly Fairy": "can_use(Sticks) and at_day and has_bottle",
+            "Bean Plant Fairy": "can_plant_bean and can_play(Song_of_Storms) and has_bottle",
+            "Bug Rock": "has_bottle"
+        },
+        "exits": {
+            "Graveyard Warp Pad Region": "False",
+            "Graveyard Bean Ledge": "is_adult and (here(can_plant_bean) or can_use(Longshot))",
+            "Graveyard Shield Grave": "is_adult or at_night",
+            "Royal Familys Tomb": "can_play(Zeldas_Lullaby)",
+            "Graveyard Heart Piece Grave": "is_adult or at_night",
+            "Graveyard Dampes Grave": "is_adult",
+            "Graveyard Dampes House": "is_adult or at_dampe_time",
+            "Kakariko Village": "True"
+        }
+    },
+    {
+        "region_name": "Graveyard Bean Ledge",
+        "scene": "Graveyard",
+        "room": "1",
+        "hint": "the Graveyard",
+        "locations": {
+            "Graveyard Freestanding PoH": "true"
+                (is_adult and (here(can_plant_bean) or can_use(Longshot))) or
+                (logic_graveyard_poh and can_use(Boomerang))",
+        },
+        "exits": {
+            "Graveyard": "True"
+        }
+    },
+    {
+        "region_name": "Graveyard Warp Pad Region",
+        "scene": "Graveyard",
+        "room": "1",
+        "hint": "the Graveyard",
+        "locations": {
+            "Graveyard Gossip Stone": "True",
+            "Gossip Stone Fairy": "can_summon_gossip_fairy_without_suns and has_bottle"
+        },
+        "exits": {
+            "Graveyard": "True",
+            "Graveyard Temple Entrance": "True",
+        }
+    },
+    {
+        "region_name": "Graveyard Temple Entrance",
+        "scene": "Graveyard",
+        "room": "0",
+        "hint": "the Graveyard",
+        "exits": {
+            "Graveyard Warp Pad Region": "True",
+            "Shadow Temple Lobby Entryway": "
+                can_use(Dins_Fire) or
+                (logic_shadow_fire_arrow_entry and can_use(Fire_Arrows))"
+        }
+    }
+]

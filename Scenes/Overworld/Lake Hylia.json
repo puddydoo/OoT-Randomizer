@@ -1,0 +1,106 @@
+[
+    {
+        "region_name": "Lake Hylia",
+        "scene": "Lake Hylia",
+        "room": "0",
+        "hint": "Lake Hylia",
+        "time_passes": true,
+        "events": {
+            "Bonooru": "is_child and Ocarina"
+        },
+        "locations": {
+            "Pierre": "is_adult and Bonooru and not free_scarecrow",
+            "LH Underwater Item": "is_child and can_dive",
+            "LH GS Bean Patch": "can_plant_bugs and can_child_attack",
+            "LH GS Lab Wall": "
+                is_child and (Boomerang or 
+                    (logic_lab_wall_gs and (Sticks or Kokiri_Sword))) and at_night",
+            "LH Lab Gossip Stone": "True",
+            "LH Gossip Stone (Southeast)": "True",
+            "LH Gossip Stone (Southwest)": "True",
+            "Gossip Stone Fairy": "can_summon_gossip_fairy and has_bottle",
+            "Bean Plant Fairy": "can_plant_bean and can_play(Song_of_Storms) and has_bottle",
+            "Butterfly Fairy": "can_use(Sticks) and has_bottle",
+            "Bug Shrub": "is_child and can_cut_shrubs and has_bottle"
+        },
+        "exits": {
+            "Hyrule Field": "True",
+            "Zoras Domain": "is_child and can_dive",
+            "LH Owl Flight": "is_child",
+            "LH Lab": "True",
+            "LH Lab Roof": "
+                is_adult and (can_use(Scarecrow) or here(can_plant_bean))",
+            "LH Fishing Hole Entrance": "
+                is_child or can_use(Scarecrow) or
+                here(can_plant_bean) or 'Water Temple Clear'",
+            "LH Sun Island": "is_child or can_use(Distant_Scarecrow) or 'Water Temple Clear'",
+            "LH Tree": "can_use(Longshot)",
+            "Water Temple Lobby 3F Entrance Ledge": "
+                can_use(Hookshot) and
+                (can_use(Iron_Boots) or
+                    ((can_use(Longshot) or logic_water_hookshot_entry) and (Progressive_Scale, 2))) or
+                    (mm_ice_arrows and can_use(Ice_Arrows))",
+            "LH Grotto": "True"
+        }
+    },
+    {
+        "region_name": "LH Owl Flight",
+        "scene": "Lake Hylia",
+        "room": "0",
+        "exits": {
+            "Hyrule Field": "True"
+        }
+    },
+    {
+        "region_name": "LH Fishing Hole Entrance",
+        "scene": "Lake Hylia",
+        "room": "0",
+        "hint": "Lake Hylia",
+        "time_passes": true,
+        "exits": {
+            "Lake Hylia": "True",
+            "LH Fishing Hole": "True"
+        }
+    },
+    {
+        "region_name": "LH Sun Island",
+        "scene": "Lake Hylia",
+        "room": "0",
+        "hint": "Lake Hylia",
+        "time_passes": true,
+        "locations": {
+            "LH Sun": "can_use(Bow)",
+            "LH GS Small Island": "is_child and can_child_attack and at_night"
+        },
+        "exits": {
+            "Lake Hylia": "True"
+        }
+    },
+    {
+        "region_name": "LH Lab Roof",
+        "scene": "Lake Hylia",
+        "room": "0",
+        "hint": "Lake Hylia",
+        "time_passes": true,
+        "locations": {
+            "LH Freestanding PoH": "True"
+        },
+        "exits": {
+            "Lake Hylia": "True"
+        }
+    },
+    {
+        "region_name": "LH Tree",
+        "scene": "Lake Hylia",
+        "room": "0",
+        "hint": "Lake Hylia",
+        "time_passes": true,
+        "locations": {
+            #Only spawns as adult
+            "LH GS Tree": "is_adult and at_night"
+        },
+        "exits": {
+            "Lake Hylia": "True"
+        }
+    }
+]

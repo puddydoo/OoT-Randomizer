@@ -1,0 +1,195 @@
+[
+    {
+        "region_name": "Deku Tree Lobby",
+        "dungeon": "Deku Tree",
+        "room": "0",
+        "locations": {
+            "Deku Tree Map Chest": "True",
+            "Deku Baba Sticks": "is_adult or Kokiri_Sword or Boomerang",
+            "Deku Baba Nuts": "
+                is_adult or Slingshot or Sticks or 
+                has_explosives or Kokiri_Sword or can_use(Dins_Fire)"
+        },
+        "exits": {
+            "KF Outside Deku Tree": "True",
+            "Deku Tree 2F Passage": "True",
+            "Deku Tree Basement River Room": "True",
+            "Deku Tree 3F Room": "True"
+        }
+    },
+    {
+        "region_name": "Deku Tree 2F Passage",
+        "dungeon": "Deku Tree",
+        "room": "1",
+        "events": {
+            "Deku Tree Room 1 Enemies": "
+                has_shield"
+                #Hint Scrub
+        }
+        "exits": {
+            "Deku Tree Lobby": "'Deku Tree Room 1 Enemies' or barred_door",
+            "Deku Tree 2F Room": "'Deku Tree Room 1 Enemies' or barred_door"
+        }
+    },
+    {
+        "region_name": "Deku Tree 2F Room",
+        "dungeon": "Deku Tree",
+        "room": "2",
+        "locations": {
+            "Deku Tree Slingshot Chest": "True",
+            "Deku Tree 2F Room Side Chest": "True"
+        },
+        "exits": {
+            "Deku Tree 2F Passage": "True"
+        }
+    },
+    {
+        "region_name": "Deku Tree Basement River Room",
+        "dungeon": "Deku Tree",
+        "room": "3",
+        "locations": {
+            "Deku Tree Basement Chest": "can_climb(60) and (can_press_floor_switch or has_fire_source)",
+            "Deku Tree GS Basement Vines": "
+                can_use_projectile or can_use(Dins_Fire) or
+                (logic_deku_basement_gs and (is_adult or Sticks or Kokiri_Sword))",
+            "Deku Tree GS Basement Gate": "is_adult or can_child_attack",
+            "Deku Baba Sticks": "is_adult or Kokiri_Sword or Boomerang",
+            "Deku Baba Nuts": "
+                is_adult or Slingshot or Sticks or 
+                has_explosives or Kokiri_Sword or can_use(Dins_Fire)"
+        },
+        "exits": {
+            "Deku Tree Lobby": "True",
+            "Deku Tree Basement Hint Scrub Room": "
+                here(has_fire_source or
+                (can_climb(60) and can_press_floor_switch and
+                    (can_use(Sticks) or (logic_deku_b1_webs_with_bow and can_use(Bow)))))",
+            "Deku Tree Basement River Room Ledge": "
+                can_climb(60) and
+                (at('Deku Tree Basement River Room Ledge', True)
+                    or here(logic_deku_b1_skip or can_climb(85)))"
+        }
+    },
+    {
+        "region_name": "Deku Tree Basement River Room Ledge",
+        "dungeon": "Deku Tree",
+        "room": "3",
+        "locations": {
+            "Deku Baba Sticks": "is_adult or Kokiri_Sword or Boomerang",
+            "Deku Baba Nuts": "
+                is_adult or Slingshot or Sticks or 
+                has_explosives or Kokiri_Sword or can_use(Dins_Fire)"
+        },
+        "exits": {
+            "Deku Tree Basement River Room": "True",
+            "Deku Tree Basement Back Room": "is_child",
+            "Deku Tree Three Scrub Room": "
+                here(has_fire_source or
+                (can_climb(60) and can_press_floor_switch and
+                    (can_use(Sticks) or (logic_deku_b1_webs_with_bow and can_use(Bow)))))"
+        }
+    },
+    {
+        "region_name": "Deku Tree Basement Hint Scrub Room",
+        "dungeon": "Deku Tree",
+        "room": "4",
+        "exits": {
+            "Deku Tree Basement River Room": "True",
+            "Deku Tree Spiked Log Room East": "
+                here(can_use(Slingshot) or can_use(Bow)) or barred_door"
+        }
+    },
+    {
+        "region_name": "Deku Tree Spiked Log Room East",
+        "dungeon": "Deku Tree",
+        "room": "5",
+        "exits": {
+            "Deku Tree Basement Hint Scrub Room": "True",
+            "Deku Tree Spiked Log Room West": "can_swim or can_crouch"
+        }
+    },
+    {
+        "region_name": "Deku Tree Spiked Log Room West",
+        "dungeon": "Deku Tree",
+        "room": "5",
+        "exits": {
+            "Deku Tree Spiked Log Room East": "can_swim or can_crouch",
+            "Deku Tree Torch Deku Baba Room": "can_climb(60)"
+        }
+    },
+    {
+        "region_name": "Deku Tree Torch Deku Baba Room",
+        "dungeon": "Deku Tree",
+        "room": "6",
+        "locations": {
+            "Deku Baba Sticks": "is_adult or Kokiri_Sword or Boomerang",
+            "Deku Baba Nuts": "
+                is_adult or Slingshot or Sticks or 
+                has_explosives or Kokiri_Sword or can_use(Dins_Fire)"
+        },
+        "exits": {
+            "Deku Tree Spiked Log Room West": "here(has_fire_source_with_torch or can_use(Bow)) or barred_door",
+            "Deku Tree Basement Back Room": "here(has_fire_source_with_torch or can_use(Bow)) or barred_door"
+        }
+    },
+    {
+        "region_name": "Deku Tree Basement Back Room",
+        "dungeon": "Deku Tree",
+        "room": "7",
+        "locations": {
+            "Deku Baba Sticks": "is_adult or Kokiri_Sword or Boomerang",
+            "Deku Baba Nuts": "
+                is_adult or Slingshot or Sticks or 
+                has_explosives or Kokiri_Sword or can_use(Dins_Fire)"
+        },
+        "exits": {
+            "Deku Tree Torch Deku Baba Room": "True",
+            "Deku Tree Basement River Room Ledge": "here(has_fire_source_with_torch or can_use(Bow)) and is_child",
+            "Deku Tree Gold Skulltula Room": "
+                here((has_fire_source_with_torch or can_use(Bow)) and can_blast_or_smash)"
+        }
+    },
+    {
+        "region_name": "Deku Tree Gold Skulltula Room",
+        "dungeon": "Deku Tree",
+        "room": "8",
+        "locations": {
+            "Deku Tree GS Basement Back Room": "can_use(Hookshot) or can_use(Boomerang)"
+        },
+        "exits": {
+            "Deku Tree Basement Back Room": "True"
+        }
+    },
+    {
+        "region_name": "Deku Tree Three Scrub Room",
+        "dungeon": "Deku Tree",
+        "room": "9",
+        "events": {
+            "Deku Tree Room 9 Enemies": "
+                has_shield"
+                #3 Hint Scrubs
+        }
+        "exits": {
+            "Deku Tree Basement River Room Ledge": "True",
+            "Gohma Entrance": "'Deku Tree Room 9 Enemies' or barred_door"
+        }
+    },
+    {
+        "region_name": "Deku Tree 3F Room",
+        "dungeon": "Deku Tree",
+        "room": "10",
+        "locations": {
+            "Deku Tree Compass Chest": "can_press_floor_switch or can_climb(120)",
+            "Deku Tree 3F Room Side Chest": "can_press_floor_switch or can_climb(100)",
+            "Deku Tree GS Compass Room": "
+                (can_press_floor_switch or can_climb(100)) and (is_adult or can_child_attack)",
+            "Deku Baba Sticks": "is_adult or Kokiri_Sword or Boomerang",
+            "Deku Baba Nuts": "
+                is_adult or Slingshot or Sticks or 
+                has_explosives or Kokiri_Sword or can_use(Dins_Fire)"
+        },
+        "exits": {
+            "Deku Tree Lobby": "has_fire_source_with_torch or can_use(Bow) or barred_door"
+        }
+    }
+]

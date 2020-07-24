@@ -1,0 +1,193 @@
+[
+    {
+        "region_name": "LW Forest Exit",
+        "scene": "Lost Woods",
+        "exits": {
+            "Kokiri Forest": "True"
+        }
+    },
+    {
+        "region_name": "LW Start Square",
+        "scene": "Lost Woods",
+        "room": "0",
+        "hint": "the Lost Woods",
+        "exits": {
+            "LW Forest Exit": "True",
+            "LW Game Square": "True"
+        }
+    },
+    {
+        "region_name": "LW Grog Meadow",
+        "scene": "Lost Woods",
+        "room": "9",
+        "hint": "the Lost Woods",
+        "events": {
+            "Odd Mushroom Access": "is_adult and ('Cojiro Access' or Cojiro)",
+            "Poachers Saw Access": "is_adult and 'Odd Potion Access'"
+        },
+        "locations": {
+            "LW Skull Kid": "is_child and can_play(Sarias_Song)"
+        },
+        "exits": {
+            "LW Start Square": "True",
+            "LW Around Bridge": "True"
+        }
+    },
+    {
+        "region_name": "LW Bridge From Forest",
+        "scene": "Lost Woods",
+        "hint": "the Lost Woods",
+        "locations": {
+            "LW Gift from Saria": "True"
+        },
+        "exits": {
+            "LW Bridge": "True"
+        }
+    },
+    {
+        "region_name": "LW Bridge",
+        "scene": "Lost Woods",
+        "room": "5",
+        "hint": "the Lost Woods",
+        "exits": {
+            "Kokiri Forest": "True",
+            "Hyrule Field": "True",
+            "LW Around Bridge": "can_use(Longshot)"
+        }
+    },
+    {
+        "region_name": "LW Around Bridge",
+        "scene": "Lost Woods",
+        "room": "5",
+        "hint": "the Lost Woods",
+        "locations": {
+            "LW Deku Scrub Near Bridge": "is_child and can_stun_deku",
+            "LW GS Bean Patch Near Bridge": "can_plant_bugs and can_child_attack",
+            "LW Gossip Stone": "True",
+            "Gossip Stone Fairy": "can_summon_gossip_fairy_without_suns and has_bottle",
+            "Bean Plant Fairy": "can_plant_bean and can_play(Song_of_Storms) and has_bottle"
+        },
+        "exits": {
+            "LW Grog Meadow": "True",
+            "LW Bridge": "
+                is_adult and
+                (can_use(Hover_Boots) or can_use(Longshot) or
+                    here(can_plant_bean) or logic_lost_woods_bridge)"
+        }
+    },
+    {
+        "region_name": "LW Game Square",
+        "scene": "Lost Woods",
+        "room": "1",
+        "hint": "the Lost Woods",
+        "locations": {
+            "LW Ocarina Memory Game": "is_child and Ocarina",
+            "LW Target in Woods": "can_use(Slingshot)"
+        },
+        "exits": {
+            "LW Forest Exit": "True",
+            "LW Start Square": "True",
+            "LW Goron Square": "True"
+        }
+    },
+    {
+        "region_name": "LW Goron Square",
+        "scene": "Lost Woods",
+        "room": "2",
+        "hint": "the Lost Woods",
+        "locations": {
+            "Bug Shrub": "is_child and can_cut_shrubs and has_bottle"
+        },
+        "exits": {
+            "LW Forest Exit": "True",
+            "LW Game Square": "True",
+            "LW Zora Square": "True",
+            "GC Woods Warp": "True",
+            "LW Near Shortcuts Grotto": "here(can_blast_or_smash)"
+        }
+    },
+    {
+        "region_name": "LW Zora Square",
+        "scene": "Lost Woods",
+        "room": "3",
+        "hint": "the Lost Woods",
+        "exits": {
+            "LW Forest Exit": "True",
+            "LW Goron Square": "True",
+            "Zora River": "can_leave_forest and (can_dive or can_use(Iron_Boots))",
+            "LW Behind Mido": "is_child or logic_mido_backflip or can_play(Sarias_Song)"
+        }
+    },
+    {
+        "region_name": "LW Behind Mido",
+        "scene": "Lost Woods",
+        "room": "3",
+        "hint": "the Lost Woods",
+        "exits": {
+            "LW Zora Square": "is_child or can_play(Sarias_Song)",
+            "LW Blank Square": "True"
+        }
+    },
+    {
+        "region_name": "LW Blank Square",
+        "scene": "Lost Woods",
+        "room": "4",
+        "hint": "the Lost Woods",
+        "exits": {
+            "LW Forest Exit": "True",
+            "LW Behind Mido": "True",
+            "LW Theater Meadow": "True",
+            "LW Blupee Square": "True"
+        }
+    },
+    {
+        "region_name": "LW Theater Meadow",
+        "scene": "Lost Woods",
+        "room": "6",
+        "hint": "the Lost Woods",
+        "locations": {
+            "LW Deku Scrub Near Deku Theater Right": "is_child and can_stun_deku",
+            "LW Deku Scrub Near Deku Theater Left": "is_child and can_stun_deku",
+            "LW GS Above Theater": "
+                is_adult and at_night and
+                (here(can_plant_bean) or
+                     (logic_lost_woods_gs_bean and can_use(Hookshot) and
+                     (can_use(Longshot) or can_use(Bow) or has_bombchus or can_use(Dins_Fire))))",
+            "LW GS Bean Patch Near Theater": "
+                can_plant_bugs and 
+                (can_child_attack or (shuffle_scrubs == 'off' and Buy_Deku_Shield))",
+            "Butterfly Fairy": "can_use(Sticks) and has_bottle",
+            "Bean Plant Fairy": "can_plant_bean and can_play(Song_of_Storms) and has_bottle"
+        },
+        "exits": {
+            "LW Blank Square": "True",
+            "Deku Theater": "True"
+        }
+    },
+    {
+        "region_name": "LW Blupee Square",
+        "scene": "Lost Woods",
+        "room": "7",
+        "hint": "the Lost Woods",
+        "locations": {
+            "Bug Shrub": "is_child and can_cut_shrubs and has_bottle"
+        },
+        "exits": {
+            "LW Forest Exit": "True",
+            "LW Blank Square": "True",
+            "LW End Square": "True"
+        }
+    },
+    {
+        "region_name": "LW End Square",
+        "scene": "Lost Woods",
+        "room": "8",
+        "hint": "the Lost Woods",
+        "exits": {
+            "LW Forest Exit": "True",
+            "LW Blupee Square": "True",
+            "SFM Entryway": "True",
+            "LW Scrubs Grotto": "here(can_blast_or_smash)"
+        }
+    }
+]

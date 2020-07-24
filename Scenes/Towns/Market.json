@@ -1,0 +1,60 @@
+[
+    {
+        "region_name": "Market Entrance",
+        "scene": "Market Entrance",
+        "room": "0",
+        "hint": "the Market",
+        "exits": {
+            "Hyrule Field": "is_adult or at_day",
+            "Market": "True",
+            "Market Guard House": "True"
+        }
+    },
+    {
+        "region_name": "Market",
+        "scene": "Market",
+        "room": "0",
+        "hint": "the Market",
+        "exits": {
+            "Market Entrance": "True",
+            "Market Back Alley": "is_child",
+            "ToT Entrance": "True",
+            "Castle Grounds": "True",
+            "Market Bazaar": "is_child and at_day",
+            "Market Mask Shop": "is_child and at_day",
+            "Market Shooting Gallery": "is_child and at_day",
+            "Market Bombchu Bowling": "is_child",
+            "Market Potion Shop": "is_child and at_day",
+            "Market Treasure Chest Game": "is_child and at_night"
+        }
+    },
+    {
+        "region_name": "Market Back Alley",
+        "scene": "Market Back Alley",
+        "room": "0",
+        "hint": "the Market",
+        "exits": {
+            "Market": "True",
+            "Market Bombchu Shop": "at_night",
+            "Market Market Dog Lady": "True",
+            "Market Man in Green House": "at_night"
+        }
+    },
+    {
+        "region_name": "ToT Entrance",
+        "scene": "ToT Entrance",
+        "room": "0",
+        "hint": "the Market",
+        "locations": {
+            "ToT Gossip Stone (Left)": "True",
+            "ToT Gossip Stone (Left-Center)": "True",
+            "ToT Gossip Stone (Right)": "True",
+            "ToT Gossip Stone (Right-Center)": "True",
+            "Gossip Stone Fairy": "can_summon_gossip_fairy_without_suns and has_bottle"
+        },
+        "exits": {
+            "Market": "True",
+            "Temple of Time": "True"
+        }
+    }
+]

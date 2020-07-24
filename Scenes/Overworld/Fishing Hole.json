@@ -1,0 +1,13 @@
+[
+    {
+        "region_name": "LH Fishing Hole",
+        "room": "0",
+        "locations": {
+            "LH Child Fishing": "is_child",
+            "LH Adult Fishing": "is_adult"
+        },
+        "exits": {
+            "LH Fishing Hole Entrance": "True"
+        }
+    }
+]

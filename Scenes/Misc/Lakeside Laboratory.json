@@ -1,0 +1,20 @@
+[
+    {
+        "region_name": "LH Lab",
+        "room": "0",
+        "events": {
+            "Eyedrops Access": "
+                is_adult and 
+                ('Eyeball Frog Access' or (Eyeball_Frog and disable_trade_revert))"
+        },
+        "locations": {
+            "LH Lab Dive": "
+                (Progressive_Scale, 2) or
+                (logic_lab_diving and Iron_Boots and can_use(Hookshot))",
+            "LH GS Lab Crate": "Iron_Boots and can_use(Hookshot)"
+        },
+        "exits": {
+            "Lake Hylia": "True"
+        }
+    }
+]

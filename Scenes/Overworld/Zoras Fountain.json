@@ -1,0 +1,52 @@
+[
+    {
+        "region_name": "Zoras Fountain",
+        "scene": "Zoras Fountain",
+        "room": "0",
+        "hint": "Zora's Fountain",
+        "locations": {
+            "ZF Iceberg Freestanding PoH": "is_adult",
+            "ZF Bottom Freestanding PoH": "
+                is_adult and Iron_Boots and (logic_fewer_tunic_requirements or can_use(Zora_Tunic))",
+            "ZF GS Tree": "is_child",
+            "ZF GS Above the Log": "can_use(Boomerang) and at_night",
+            "ZF Fairy Gossip Stone": "True",
+            "ZF Jabu Gossip Stone": "True",
+            "Gossip Stone Fairy": "can_summon_gossip_fairy_without_suns and has_bottle",
+            "Butterfly Fairy": "can_use(Sticks) and at_day and has_bottle"
+        },
+        "exits": {
+            "ZD Behind King Zora": "True",
+            "Jabu Jabus Belly Mouth": "is_child and Fish",
+            "Ice Cavern Entrance Corridor": "is_adult",
+            "ZF Great Fairy Fountain": "has_explosives",
+            "ZF Cave Hole": "can_use(Silver_Gauntlets) and can_blast_or_smash",
+            "ZF Cave Ledge": "False"
+        }
+    },
+    {
+        "region_name": "ZF Cave Hole",
+        "scene": "Zoras Fountain",
+        "room": "0",
+        "hint": "Zora's Fountain",
+        "exits": {
+            "ZF Cave Ledge": "True",
+            "Zoras Fountain": "True",
+            #If you hammer the rock you can climb onto the other side of the hole
+            "ZF Great Fairy Fountain": "logic_zf_fairy_without_bombs"
+        }
+    },
+    {
+        "region_name": "ZF Cave Ledge",
+        "scene": "Zoras Fountain",
+        "room": "0",
+        "hint": "Zora's Fountain",
+        "locations": {
+            "ZF GS Hidden Cave": "is_adult and can_use(Hookshot) and at_night"
+        },
+        "exits": {
+            "Zoras Fountain": "True",
+            "ZF Cave Hole": "False"
+        }
+    }
+]

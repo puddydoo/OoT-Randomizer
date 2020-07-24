@@ -1,0 +1,210 @@
+[
+    {
+        "region_name": "Ice Cavern Entrance Corridor",
+        "dungeon": "Ice Cavern",
+        "room": "0",
+        "exits": {
+            "Zoras Fountain": "True",
+            "Ice Cavern Lobby": "True"
+        }
+    },
+    {
+        "region_name": "Ice Cavern Lobby",
+        "dungeon": "Ice Cavern",
+        "room": "1",
+        "exits": {
+            "Ice Cavern Entrance Corridor": "True",
+            "Ice Cavern Lobby Back": "can_use_projectile",
+            "Ice Cavern Underwater Hall to Lobby": "can_climb(230)"
+        }
+    },
+    {
+        "region_name": "Ice Cavern Lobby Back",
+        "dungeon": "Ice Cavern",
+        "room": "1",
+        "exits": {
+            #Blocked by ice blocks which can't be removed from this side
+            "Ice Cavern Lobby": "False",
+            "Ice Cavern Hall to Central Room": "True"
+        }
+    },
+    {
+        "region_name": "Ice Cavern Hall to Central Room",
+        "dungeon": "Ice Cavern",
+        "room": "2",
+        "exits": {
+            "Ice Cavern Lobby Back": "True",
+            "Ice Cavern Central Room": "True"
+        }
+    },
+    {
+        "region_name": "Ice Cavern Central Room",
+        "dungeon": "Ice Cavern",
+        "room": "3",
+        "events": {
+            "Ice Cavern Room 3 Enemies": "
+                is_adult or can_use(Dins_Fire) or
+                (has_explosives and (can_use(Sticks) or can_use(Slingshot) or Kokiri_Sword))"
+            #Freezards and Wolfos
+        }
+        "locations": {
+            "Fairy Pot": "has_bottle"
+        }
+        "exits": {
+            "Ice Cavern Hall to Central Room": "True",
+            "Ice Cavern Central Room East": "Can break icicles",
+            "Ice Cavern Central Room West": "Blue_Fire",
+            "Ice Cavern Central Room North": "can_climb(92) and Blue_Fire"
+        }
+    },
+    {
+        "region_name": "Ice Cavern Central Room East",
+        "dungeon": "Ice Cavern",
+        "room": "3",
+        "exits": {
+            "Ice Cavern Central Room": "Can break icicles",
+            "Ice Cavern Side Room": "'Ice Cavern Room 3 Enemies' or barred_door"
+        }
+    },
+    {
+        "region_name": "Ice Cavern Central Room West",
+        "dungeon": "Ice Cavern",
+        "room": "3",
+        "exits": {
+            "Ice Cavern Central Room": "Blue_Fire",
+            "Ice Cavern Hall to Square Pit Room": "True"
+        }
+    },
+    {
+        "region_name": "Ice Cavern Central Room North",
+        "dungeon": "Ice Cavern",
+        "room": "3",
+        "exits": {
+            "Ice Cavern Central Room": "Blue_Fire",
+            "Ice Cavern Hall to Ice Bridge Room": "True"
+        }
+    },
+    {
+        "region_name": "Ice Cavern Hall to Square Pit Room",
+        "dungeon": "Ice Cavern",
+        "room": "4",
+        "exits": {
+            "Ice Cavern Central Room": "True",
+            "Ice Cavern Square Pit Room": "True"
+        }
+    },
+    {
+        "region_name": "Ice Cavern Square Pit Room",
+        "dungeon": "Ice Cavern",
+        "room": "5",
+        "locations": {
+            "Ice Cavern MQ GS Ice Block": "can_use_projectile",
+            "Ice Cavern MQ GS Scarecrow": "
+                can_use(Scarecrow) or (Hover_Boots and can_use(Longshot)) or
+                (logic_ice_mq_scarecrow and is_adult) or can_climb(119)",
+            "Blue Fire": "has_bottle and can_climb(61) and (can_play(Song_of_Time) or can_climb(121))"
+        }
+        "exits": {
+            "Ice Cavern Hall to Square Pit Room": "can_climb(60)",
+            "Ice Cavern Square Pit Room South": "can_climb(100) and Blue_Fire"
+        }
+    },
+    {
+        "region_name": "Ice Cavern Square Pit Room South",
+        "dungeon": "Ice Cavern",
+        "room": "5",
+        "exits": {
+            "Ice Cavern Square Pit Room": "Blue_Fire",
+            "Ice Cavern Hall to Iron Boots North": "True"
+        }
+    },
+    {
+        "region_name": "Ice Cavern Hall to Iron Boots North",
+        "dungeon": "Ice Cavern",
+        "room": "6",
+        "exits": {
+            "Ice Cavern Square Pit Room South": "True",
+            "Ice Cavern Hall to Iron Boots": "True"
+        }
+    },
+    {
+        "region_name": "Ice Cavern Hall to Iron Boots",
+        "dungeon": "Ice Cavern",
+        "room": "6",
+        "locations": {
+            "Fairy Pot": "has_bottle"
+        }
+        "exits": {
+            "Ice Cavern Hall to Iron Boots North": "True",
+            "Ice Cavern Iron Boots Icefield": "True"
+        }
+    },
+    {
+        "region_name": "Ice Cavern Iron Boots Icefield",
+        "dungeon": "Ice Cavern",
+        "room": "7",
+        "events": {
+            "Ice Cavern Room 7 Enemies": "
+                "
+                #Stalfos
+        }
+        "locations": {
+            "Ice Cavern MQ Iron Boots Chest": "'Ice Cavern Room 7 Enemies'",
+            "Sheik in Ice Cavern": "'Ice Cavern Room 7 Enemies'"
+        }
+        "exits": {
+            "Ice Cavern Hall to Iron Boots": "'Ice Cavern Room 7 Enemies' or barred_door",
+            #There is a barred floor blocking the exit before the enemies are defeated, but not a barred door
+            "Ice Cavern Underwater Hall to Lobby": "
+                'Ice Cavern Room 7 Enemies' and can_use(Iron_Boots)",
+        }
+    },
+    {
+        "region_name": "Ice Cavern Hall to Ice Bridge Room",
+        "dungeon": "Ice Cavern",
+        "room": "8",
+        "exits": {
+            "Ice Cavern Central Room North": "True",
+            "Ice Cavern Ice Bridge Room": "True"
+        }
+    },
+    {
+        "region_name": "Ice Cavern Ice Bridge Room",
+        "dungeon": "Ice Cavern",
+        "room": "9",
+        "locations": {
+            "Ice Cavern MQ Compass Chest": "can_climb(57)",
+            "Ice Cavern MQ Freestanding PoH": "can_climb(57) and has_explosives",
+            "Ice Cavern MQ GS Red Ice": "
+                can_climb(57) and can_play(Song_of_Time) and Blue_Fire and can kill skulltula"
+            "Blue Fire": "can_climb(57) and has_bottle"
+        }
+        "exits": {
+            "Ice Cavern Hall to Ice Bridge Room": "can_climb(60)"
+        }
+    },
+    {
+        "region_name": "Ice Cavern Underwater Hall to Lobby",
+        "dungeon": "Ice Cavern",
+        "room": "10",
+        "exits": {
+            "Ice Cavern Lobby": "True",
+            "Ice Cavern Iron Boots Icefield": "can_use(Iron_Boots)"
+        }
+    },
+    {
+        "region_name": "Ice Cavern Side Room",
+        "dungeon": "Ice Cavern",
+        "room": "11",
+        #Icicles block the Blue Fire but child can walk through them
+        "locations": {
+            "Ice Cavern MQ Map Chest": "
+                Blue_Fire and
+                (is_adult or can_use(Sticks) or Kokiri_Sword or can_use_projectile)",
+            "Blue Fire": "(is_child or is_adult) and has_bottle"
+        }
+        "exits": {
+            "Ice Cavern Central Room East": "can_climb(20)"
+        }
+    }
+]

@@ -1,0 +1,77 @@
+[
+    {
+        "region_name": "Gerudo Valley",
+        "scene": "Gerudo Valley",
+        "room": "0",
+        "hint": "Gerudo Valley",
+        "time_passes": true,
+        "locations": {
+            "GV GS Small Bridge": "can_use(Boomerang) and at_night",
+            "Bug Rock": "is_child and has_bottle"
+        },
+        "exits": {
+            "Hyrule Field": "True",
+            "GV Stream": "True",
+            "GV Crate Ledge": "is_child or can_use(Longshot)",
+            "GV Octorok Grotto": "can_use(Silver_Gauntlets)",
+            "GV Fortress Side": "
+                is_adult and 
+                (can_ride_epona or can_use(Longshot) or gerudo_fortress == 'open' or 'Carpenter Rescue')"
+        }
+    },
+    {
+        "region_name": "GV Stream",
+        "scene": "Gerudo Valley",
+        "room": "0",
+        "hint": "Gerudo Valley",
+        "time_passes": true,
+        "locations": {
+            "GV Waterfall Freestanding PoH": "True",
+            "GV GS Bean Patch": "can_plant_bugs and can_child_attack",
+            "GV Cow": "is_child and can_play(Eponas_Song)",
+            "GV Gossip Stone": "True",
+            "Gossip Stone Fairy": "can_summon_gossip_fairy and has_bottle",
+            "Bean Plant Fairy": "can_plant_bean and can_play(Song_of_Storms) and has_bottle"
+        },
+        "exits": {
+            "Lake Hylia": "True"
+        }
+    },
+    {
+        "region_name": "GV Crate Ledge",
+        "scene": "Gerudo Valley",
+        "room": "0",
+        "hint": "Gerudo Valley",
+        "time_passes": true,
+        "locations": {
+            "GV Crate Freestanding PoH": "True"
+        }
+    },
+    {
+        "region_name": "GV Fortress Side",
+        "scene": "Gerudo Valley",
+        "room": "0",
+        "hint": "Gerudo Valley",
+        "time_passes": true,
+        "events": {
+            "Broken Sword Access": "is_adult and ('Poachers Saw Access' or Poachers_Saw)"
+        },
+        "locations": {
+            "GV Chest": "can_use(Megaton_Hammer)",
+            "GV GS Behind Tent": "can_use(Hookshot) and at_night",
+            "GV GS Pillar": "can_use(Hookshot) and at_night"
+        },
+        "exits": {
+            "Gerudo Fortress": "True",
+            "GV Stream": "True",
+            "GV Crate Ledge": "
+                logic_valley_crate_hovers and can_use(Hover_Boots) and
+                (damage_multiplier != 'ohko' or Fairy or can_use(Nayrus_Love))",
+            "Gerudo Valley": "
+                is_child or can_ride_epona or can_use(Longshot) or
+                gerudo_fortress == 'open' or 'Carpenter Rescue'",
+            "GV Carpenter Tent": "is_adult", # Invisible as child so not in logic
+            "GV Storms Grotto": "is_adult and can_open_storm_grotto" # Not there as child
+        }
+    },
+]

@@ -1,0 +1,32 @@
+[
+    {
+        "region_name": "Hyrule Field",
+        "scene": "Hyrule Field",
+        "room": "0",
+        "hint": "Hyrule Field",
+        "time_passes": true,
+        "locations": {
+            "HF Ocarina of Time Item": "is_child and has_all_stones",
+            "Song from Ocarina of Time": "is_child and has_all_stones",
+            "Big Poe Kill": "can_use(Bow) and can_ride_epona and has_bottle"
+        },
+        "exits": {
+            "LW Bridge": "True",
+            "Lake Hylia": "True",
+            "Gerudo Valley": "True",
+            "Market Entrance": "True",
+            "Kakariko Village": "True",
+            "ZR Front": "True",
+            "Lon Lon Ranch": "True",
+            "HF Southeast Grotto": "here(can_blast_or_smash)",
+            "HF Open Grotto": "True",
+            "HF Inside Fence Grotto": "can_open_bomb_grotto",
+            "HF Cow Grotto": "(can_use(Megaton_Hammer) or is_child) and can_open_bomb_grotto",
+                                   # There is a hammerable boulder as adult which is not there as child
+            "HF Near Market Grotto": "here(can_blast_or_smash)",
+            "HF Fairy Grotto": "here(can_blast_or_smash)",
+            "HF Near Kak Grotto": "can_open_bomb_grotto",
+            "HF Tektite Grotto": "can_open_bomb_grotto"
+        }
+    }
+]

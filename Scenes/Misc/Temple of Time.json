@@ -1,0 +1,26 @@
+[
+    {
+        "region_name": "Temple of Time",
+        "room": "1",
+        "hint": "Temple of Time",
+        "locations": {
+            "ToT Light Arrows Cutscene": "is_adult and can_trigger_lacs"
+        },
+        "exits": {
+            "ToT Entrance": "True",
+            "Beyond Door of Time": "can_play(Song_of_Time) or open_door_of_time"
+        }
+    },
+    {
+        "region_name": "Beyond Door of Time",
+        "room": "0",
+        "hint": "Temple of Time",
+        "locations": {
+            "Master Sword Pedestal": "True",
+            "Sheik at Temple": "Forest_Medallion and is_adult"
+        },
+        "exits": {
+            "Temple of Time": "True"
+        }
+    }
+]

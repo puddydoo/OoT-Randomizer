@@ -1,0 +1,383 @@
+[
+    {
+        "region_name": "Dodongos Cavern Lobby Beginning",
+        "dungeon": "Dodongos Cavern",
+        "room": "0",
+        "exits": {
+            "Dodongos Cavern Entryway": "True",
+            "Dodongos Cavern Lobby": "
+                here(can_blast_or_smash) or Progressive_Strength_Upgrade"
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Lobby",
+        "dungeon": "Dodongos Cavern",
+        "room": "0",
+        "locations": {
+            "Dodongos Cavern Map Chest": "here(can_blast_or_smash or Progressive_Strength_Upgrade)",
+            "Dodongos Cavern Deku Scrub Lobby": "can_stun_deku",
+            "Dodongos Cavern Gossip Stone": "here(can_blast_or_smash or Progressive_Strength_Upgrade)",
+            "Gossip Stone Fairy": "
+                here(can_blast_or_smash or Progressive_Strength_Upgrade)
+                and can_summon_gossip_fairy and has_bottle"
+        },
+        "exits": {
+            "Dodongos Cavern Lobby Beginning": "True",
+            "Dodongos Cavern Lobby East Ledge": "can_climb(80)",
+            "Dodongos Cavern Lobby North Bridge": "
+                at('Dodongos Cavern Lobby North Bridge', can_press_floor_switch)",
+            "Dodongos Cavern Lobby South Bridge": "False",
+            "Dodongos Cavern Baby Dodongo Corridor": "here(can_blast_or_smash)",
+            "Dodongos Cavern Bomb Flower Staircase Room": "
+                at('Dodongos Cavern Lobby East Ledge', can_press_floor_switch) or barred_door",
+            "Dodongos Cavern Floor Hole Switch Room": "
+                at('Dodongos Cavern Lobby North Bridge', has_explosives)"
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Lobby East Ledge",
+        "dungeon": "Dodongos Cavern",
+        "room": "0",
+        "exits": {
+            "Dodongos Cavern Lobby": "True",
+            "Dodongos Cavern Blue Dodongo Cavern": "True"
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Lobby North Bridge",
+        "dungeon": "Dodongos Cavern",
+        "room": "0",
+        "locations": {
+            "Dodongos Cavern End of Bridge Chest": "can_blast_or_smash"
+        },
+        "exits": {
+            "Dodongos Cavern Lobby": "True",
+            "Dodongos Cavern Lobby North Bridge East": "True",
+            "Dodongos Cavern Lobby East Ledge": "
+                (logic_dc_mq_child_bombs and is_child and can_jumpslash and
+                    (damage_multiplier != 'ohko' or Fairy or can_use(Nayrus_Love)))"
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Lobby North Bridge East",
+        "dungeon": "Dodongos Cavern",
+        "room": "0",
+        "exits": {
+            "Dodongos Cavern Lobby North Bridge": "True",
+            "Dodongos Cavern Bomb Bag Room Upper": "True"
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Lobby South Bridge",
+        "dungeon": "Dodongos Cavern",
+        "room": "0",
+        "exits": {
+            "Dodongos Cavern Lobby": "True",
+            "Dodongos Cavern Bomb Bag Room": "True",
+            "Dodongos Cavern Platform Switch with 2 Armos Room": "True"
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Baby Dodongo Corridor",
+        "dungeon": "Dodongos Cavern",
+        "room": "1",
+        "locations": {
+            "Dodongos Cavern GS Scarecrow": "
+                can_use(Scarecrow) or can_use(Longshot) or 
+                ((logic_dc_scarecrow_gs or can_climb(160)) and (is_adult or can_child_attack))"
+        },
+        "exits": {
+            "Dodongos Cavern Lobby": "True",
+            "Dodongos Cavern Baby Dodongo Corridor North": "can_climb(60) and (True or barred_door)",
+            "Dodongos Cavern Gold Skulltula Torch Room": "
+                has_explosives or is_adult or Slingshot or 
+                Boomerang or Sticks or Kokiri_Sword"
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Baby Dodongo Corridor North",
+        "dungeon": "Dodongos Cavern",
+        "room": "1",
+        "exits": {
+            "Dodongos Cavern Baby Dodongo Corridor": "True",
+            "Dodongos Cavern Lizalfos Miniboss Room 1F": "True"
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Bomb Flower Staircase Room",
+        "dungeon": "Dodongos Cavern",
+        "room": "2",
+        "events": {
+            "Dodongos Cavern Room 2 Staircase": "
+                has_explosives or Progressive_Strength_Upgrade 
+                or can_use(Dins_Fire) or (logic_dc_staircase and can_use(Bow))"
+        }
+        "exits": {
+            "Dodongos Cavern Lobby": "True",
+            "Dodongos Cavern Bomb Flower Staircase Room Top": "
+                can_climb(40) and 'Dodongos Cavern Room 2 Staircase'",
+            "Dodongos Cavern Bomb Flower Staircase Room South": "
+                Progressive_Strength_Upgrade or here(can_blast_or_smash)"
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Bomb Flower Staircase Room Top",
+        "dungeon": "Dodongos Cavern",
+        "room": "2",
+        "locations": {
+            "Dodongos Cavern GS Vines Above Stairs": "True",
+            "Dodongos Cavern GS Alcove Above Stairs": "can_use(Hookshot) or can_use(Boomerang)"
+        },
+        "exits": {
+            "Dodongos Cavern Bomb Flower Staircase Room": "True",
+            "Dodongos Cavern Platform Switch with 2 Armos Room": "True"
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Bomb Flower Staircase Room South",
+        "dungeon": "Dodongos Cavern",
+        "room": "2",
+        "exits": {
+            "Dodongos Cavern Bomb Flower Staircase Room": "True",
+            "Dodongos Cavern Compass Room": "True",
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Lizalfos Miniboss Room 1F",
+        "dungeon": "Dodongos Cavern",
+        "room": "3",
+        "events": {
+            "Dodongos Cavern Room 3 Enemies Wave 1": "can beat Lizalfos"
+        }
+        "exits": {
+            "Dodongos Cavern Baby Dodongo Corridor North": "'Dodongos Cavern Room 3 Enemies Wave 1' or barred_door",
+            "Dodongos Cavern Blue Dodongo Cavern": "'Dodongos Cavern Room 3 Enemies Wave 1' or barred_door",
+            "Dodongos Cavern Single Flame Trap Room East":
+                "False and (('Dodongos Cavern Room 3 Enemies Wave 1'
+                and 'Dodongos Cavern Room 3 Enemies Wave 2') or barred_door)",
+            "Dodongos Cavern Double Flame Trap Room":
+                "False and (('Dodongos Cavern Room 3 Enemies Wave 1'
+                and 'Dodongos Cavern Room 3 Enemies Wave 2') or barred_door)",
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Lizalfos Miniboss Room 2F",
+        "dungeon": "Dodongos Cavern",
+        "room": "3",
+        "events": {
+            "Dodongos Cavern Room 3 Enemies Wave 2": "can beat Lizalfos"
+        }
+        "exits": {
+            "Dodongos Cavern Single Flame Trap Room East": "'Dodongos Cavern Room 3 Enemies Wave 2' or barred_door",
+            "Dodongos Cavern Double Flame Trap Room": "'Dodongos Cavern Room 3 Enemies Wave 2' or barred_door",
+            "Dodongos Cavern Baby Dodongo Corridor North":
+                "('Dodongos Cavern Room 3 Enemies Wave 1'
+                and 'Dodongos Cavern Room 3 Enemies Wave 2') or barred_door",
+            "Dodongos Cavern Blue Dodongo Cavern":
+                "('Dodongos Cavern Room 3 Enemies Wave 1'
+                and 'Dodongos Cavern Room 3 Enemies Wave 2') or barred_door",
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Blue Dodongo Cavern",
+        "dungeon": "Dodongos Cavern",
+        "room": "4",
+        "exits": {
+            "Dodongos Cavern Lizalfos Miniboss Room 1F": "True",
+            "Dodongos Cavern Single Business Scrub Room": "
+                Progressive_Strength_Upgrade or here(can_blast_or_smash)",
+            "Dodongos Cavern Lobby East Ledge": "has_fire_source_with_torch or barred_door"
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Platform Switch with 2 Armos Room",
+        "dungeon": "Dodongos Cavern",
+        "room": "5",
+        "exits": {
+            "Dodongos Cavern Bomb Flower Staircase Room Top": "can_press_floor_switch or barred_door",
+            "Dodongos Cavern Lobby South Bridge": "can_press_floor_switch or barred_door",
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Double Business Scrub Room",
+        "dungeon": "Dodongos Cavern",
+        "room": "6",
+        "locations": {
+            "Dodongos Cavern Deku Scrub Near Bomb Bag Right": "can_stun_deku",
+            "Dodongos Cavern Deku Scrub Near Bomb Bag Left": "can_stun_deku"
+        },
+        "exits": {
+            "Dodongos Cavern Bomb Bag Room": "True"
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Floor Hole Switch Room",
+        "dungeon": "Dodongos Cavern",
+        "room": "7",
+        "exits": {
+            "Dodongos Cavern Lobby": "can_climb(60)",
+            "Dodongos Cavern Fire Keese Pushblock Room": "can_climb(60)",
+            "Dodongos Cavern Floor Hole Switch Room Ledge": "can_climb(110)",
+            "King Dodongo Entrance": "can_hold_down_switch or barred_door"
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Floor Hole Switch Room Ledge",
+        "dungeon": "Dodongos Cavern",
+        "room": "7",
+        "exits": {
+            "Dodongos Cavern Floor Hole Switch Room": "True",
+            "Dodongos Cavern Fire Keese Pushblock Room": "True",
+            "King Dodongo Entrance": "True"
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Fire Keese Pushblock Room",
+        "dungeon": "Dodongos Cavern",
+        "room": "8",
+        "exits": {
+            "Dodongos Cavern Fire Keese Pushblock Room North": "can_climb(60)",
+            "Dodongos Cavern Floor Hole Switch Room": "can_climb(60)"
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Fire Keese Pushblock Room North",
+        "dungeon": "Dodongos Cavern",
+        "room": "8",
+        "exits": {
+            "Dodongos Cavern Fire Keese Pushblock Room": "can_climb(60)",
+            "Dodongos Cavern Fire Keese Pushblock Room West": "can_climb(60)",
+            "Dodongos Cavern Gold Skulltula Armos Room": "can_climb(60) and here(can_blast_or_smash)"
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Fire Keese Pushblock Room West",
+        "dungeon": "Dodongos Cavern",
+        "room": "8",
+        "locations": {
+            "Fairy Pot": "has_bottle"
+        },
+        "exits": {
+            "Dodongos Cavern Fire Keese Pushblock Room North": "True",
+            "Dodongos Cavern Floor Hole Switch Room Ledge": "True"
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Bomb Bag Room",
+        "dungeon": "Dodongos Cavern",
+        "room": "9",
+        "locations": {
+            "Dodongos Cavern Bomb Flower Platform Chest": "can_climb(60) or can_use(Hookshot)"
+        },
+        "exits": {
+            "Dodongos Cavern Lobby South Bridge": "True",
+            "Dodongos Cavern Bomb Bag Room Upper": "
+                can_use(Longshot) or can_use(Hover_Boots) or (logic_dc_jump and is_adult) or can_climb(120)",
+            "Dodongos Cavern Double Business Scrub Room": "can_climb(60) and here(can_blast_or_smash)",
+            "Dodongos Cavern Single Flame Trap Room West": "
+                can_climb(60) and (Progressive_Strength_Upgrade or here(can_blast_or_smash))",
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Bomb Bag Room Upper",
+        "dungeon": "Dodongos Cavern",
+        "room": "9",
+        "locations": {
+            "Dodongos Cavern Bomb Bag Chest": "can_climb(60) or can_use(Hookshot)"
+        },
+        "exits": {
+            "Dodongos Cavern Lobby North Bridge East": "True",
+            "Dodongos Cavern Bomb Bag Room": "True",
+            "Dodongos Cavern Double Flame Trap Room": "True",
+            "Dodongos Cavern Double Business Scrub Room": "here(can_blast_or_smash)",
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Single Flame Trap Room West",
+        "dungeon": "Dodongos Cavern",
+        "room": "10",
+        "exits": {
+            "Dodongos Cavern Single Flame Trap Room": "True",
+            "Dodongos Cavern Bomb Bag Room": "True",
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Single Flame Trap Room",
+        "dungeon": "Dodongos Cavern",
+        "room": "10",
+        "exits": {
+            "Dodongos Cavern Single Flame Trap Room East": "
+                can_use(Slingshot) or (is_child and logic_dc_slingshot_skip) or can_use(Bow) or can_climb(120)",
+            "Dodongos Cavern Single Flame Trap Room West": "can_climb(60) or can_use(Slingshot) or can_use(Bow)",
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Single Flame Trap Room East",
+        "dungeon": "Dodongos Cavern",
+        "room": "10",
+        "exits": {
+            "Dodongos Cavern Single Flame Trap Room": "True",
+            "Dodongos Cavern Lizalfos Miniboss Room 2F": "True",
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Gold Skulltula Torch Room",
+        "dungeon": "Dodongos Cavern",
+        "room": "11",
+        "locations": {
+            "Dodongos Cavern GS Side Room Near Lower Lizalfos": "
+                is_adult or can_child_attack"
+        },
+        "exits": {
+            "Dodongos Cavern Baby Dodongo Corridor": "True",
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Double Flame Trap Room",
+        "dungeon": "Dodongos Cavern",
+        "room": "12",
+        "exits": {
+            "Dodongos Cavern Lizalfos Miniboss Room 2F": "can_climb(60)",
+            "Dodongos Cavern Bomb Bag Room Upper": "
+                can_use(Slingshot) or (is_child and logic_dc_slingshot_skip) or can_use(Bow) or can_climb(120)"
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Single Business Scrub Room",
+        "dungeon": "Dodongos Cavern",
+        "room": "13",
+        "locations": {
+            "Dodongos Cavern Deku Scrub Side Room Near Dodongos": "can_stun_deku"
+        },
+        "exits": {
+            "Dodongos Cavern Blue Dodongo Cavern": "True"
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Gold Skulltula Armos Room",
+        "dungeon": "Dodongos Cavern",
+        "room": "14",
+        "locations": {
+            "Dodongos Cavern GS Back Room": "is_adult or can_child_attack"
+        },
+        "exits": {
+            "Dodongos Cavern Fire Keese Pushblock Room North": "True"
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Compass Room",
+        "dungeon": "Dodongos Cavern",
+        "room": "15",
+        "events": {
+            "Dodongos Cavern Room 15 Enemies": "
+                Progressive_Strength_Upgrade or have a way to kill armos"
+        }
+        "locations": {
+            "Dodongos Cavern Compass Chest": "True"
+        },
+        "exits": {
+            "Dodongos Cavern Bomb Flower Staircase Room South": "
+                'Dodongos Cavern Room 15 Enemies' or barred_door",
+        }
+    }
+]

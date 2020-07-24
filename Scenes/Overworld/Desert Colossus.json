@@ -1,0 +1,31 @@
+[
+    {
+        "region_name": "Desert Colossus",
+        "scene": "Desert Colossus",
+        "room": "0",
+        "hint": "Desert Colossus",
+        "time_passes": true,
+        "locations": {
+            "Colossus Freestanding PoH": "is_adult and here(can_plant_bean)",
+            "Sheik at Colossus": "True",
+            "Colossus GS Bean Patch": "can_plant_bugs and can_child_attack",
+            "Colossus GS Tree": "can_use(Hookshot) and at_night",
+            "Colossus GS Hill": "
+                is_adult and at_night and
+                    (here(can_plant_bean) or can_use(Longshot) or
+                        (logic_colossus_gs and can_use(Hookshot)))",
+            "Colossus Gossip Stone": "True",
+            "Gossip Stone Fairy": "can_summon_gossip_fairy and has_bottle",
+            "Fairy Pond": "can_play(Song_of_Storms) and has_bottle",
+            "Bug Rock": "has_bottle"
+        },
+        "exits": {
+            "Colossus Great Fairy Fountain": "has_explosives",
+            "Spirit Temple Lobby": "True",
+            "Wasteland Near Colossus": "True",
+            "Colossus Grotto": "can_use(Silver_Gauntlets)",
+            "Spirit Temple Outdoor Right Hand": "False",
+            "Spirit Temple Outdoor Left Hand": "False"
+        }
+    }
+]

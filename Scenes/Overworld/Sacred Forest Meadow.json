@@ -1,0 +1,36 @@
+[ 
+    {
+        "region_name": "SFM Entryway",
+        "scene": "Sacred Forest Meadow",
+        "room": "0",
+        "hint": "Sacred Forest Meadow",
+        "exits": {
+            "LW End Square": "True",
+            "Sacred Forest Meadow": "
+                is_adult or Slingshot or Sticks or 
+                Kokiri_Sword or can_use(Dins_Fire)",
+            "SFM Wolfos Grotto": "can_open_bomb_grotto"
+        }
+    },
+    {
+        "region_name": "Sacred Forest Meadow",
+        "scene": "Sacred Forest Meadow",
+        "room": "0",
+        "hint": "Sacred Forest Meadow",
+        "locations": {
+            "Song from Saria": "is_child and Zeldas_Letter",
+            "Sheik in Forest": "is_adult",
+            "SFM GS": "can_use(Hookshot) and at_night",
+            "SFM Maze Gossip Stone (Lower)": "True",
+            "SFM Maze Gossip Stone (Upper)": "True",
+            "SFM Saria Gossip Stone": "True",
+            "Gossip Stone Fairy": "can_summon_gossip_fairy_without_suns and has_bottle"
+        },
+        "exits": {
+            "SFM Entryway": "True",
+            "Forest Temple Entrance": "can_use(Hookshot)",
+            "SFM Fairy Grotto": "True",
+            "SFM Storms Grotto": "can_open_storm_grotto"
+        }
+    }
+]

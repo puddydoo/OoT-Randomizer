@@ -1,0 +1,34 @@
+[
+    {
+        "region_name": "Royal Familys Tomb",
+        "room": "0",
+        "locations": {
+            "Graveyard Composers Grave Chest": "has_fire_source"
+        },
+        "exits": {
+            "Graveyard": "True",
+            "Royal Familys Tomb Acid Room": "
+                is_adult or 
+                (Slingshot or Boomerang or Sticks or 
+                    has_explosives or Kokiri_Sword)"
+        }
+    },
+    {
+        "region_name": "Royal Familys Tomb Acid Room",
+        "room": "1",
+        "exits": {
+            "Royal Familys Tomb": "True",
+            "Royal Familys Tomb Suns Song Room": "True"
+        }
+    },
+    {
+        "region_name": "Royal Familys Tomb Suns Song Room",
+        "room": "2",
+        "locations": {
+            "Song from Composers Grave": "True"
+        },
+        "exits": {
+            "Royal Familys Tomb Acid Room": "True"
+        }
+    },
+]

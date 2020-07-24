@@ -1,0 +1,72 @@
+[
+    {
+        "region_name": "Kokiri Forest",
+        "scene": "Kokiri Forest",
+        "room": "0",
+        "hint": "Kokiri Forest",
+        "events": {
+            "Showed Mido Sword & Shield": "open_forest == 'open' or (is_child and Kokiri_Sword and Buy_Deku_Shield)"
+        },
+        "locations": {
+            "KF GS Know It All House": "
+                is_child and can_child_attack and at_night and
+                (had_night_start or can_leave_forest or can_play(Suns_Song))",
+            "KF GS Bean Patch": "
+                can_plant_bugs and can_child_attack",
+            "KF GS House of Twins": "
+                is_adult and at_night and 
+                (can_use(Hookshot) or (logic_adult_kokiri_gs and can_use(Hover_Boots)))",
+            "KF Gossip Stone": "True",
+            "Gossip Stone Fairy": "can_summon_gossip_fairy_without_suns and has_bottle",
+            "Bean Plant Fairy": "can_plant_bean and can_play(Song_of_Storms) and has_bottle"
+        },
+        "exits": {
+            "KF Links House": "True",
+            "KF Midos House": "True",
+            "KF Sarias House": "True",
+            "KF House of Twins": "True",
+            "KF Know It All House": "True",
+            "KF Kokiri Shop": "True",
+            "KF Outside Deku Tree": "is_adult or 'Showed Mido Sword & Shield'",
+            "KF Training Area": "is_child",
+            "LW Start Square": "True",
+            "LW Bridge From Forest": "can_leave_forest",
+            "KF Storms Grotto": "can_open_storm_grotto"
+        }
+    },
+    {
+        "region_name": "KF Outside Deku Tree",
+        "scene": "Kokiri Forest",
+        "room": "1",
+        "hint": "Kokiri Forest",
+        "locations": {
+            #The Babas despawn for Adult on forest temple completion. For vanilla forest temple
+            #placement this is not an issue as Adult can go back to forest for the Baba's there.
+            #Entrance rando cannot rely on this for the case forest completion was done on non
+            #repeatable access.
+            "Deku Baba Sticks": "(is_adult and not shuffle_dungeon_entrances) or Kokiri_Sword or Boomerang",
+            "Deku Baba Nuts": "
+                (is_adult and not shuffle_dungeon_entrances) or Slingshot or Sticks or 
+                has_explosives or Kokiri_Sword or can_use(Dins_Fire)",
+            "KF Deku Tree Gossip Stone (Left)": "True",
+            "KF Deku Tree Gossip Stone (Right)": "True",
+            "Gossip Stone Fairy": "can_summon_gossip_fairy_without_suns and has_bottle"
+        },
+        "exits": {
+            "Deku Tree Lobby": "is_child or (shuffle_dungeon_entrances and 'Showed Mido Sword & Shield')",
+            "Kokiri Forest": "True"
+        }
+    },
+    {
+        "region_name": "KF Training Area",
+        "scene": "Kokiri Forest",
+        "room": "2",
+        "hint": "Kokiri Forest",
+        "locations": {
+            "KF Kokiri Sword Chest": "True"
+        },
+        "exits": {
+            "Kokiri Forest": "is_child"
+        }
+    },
+]

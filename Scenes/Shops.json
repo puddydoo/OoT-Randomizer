@@ -1,0 +1,282 @@
+[
+    {
+        "region_name": "Market Bazaar",
+        "room": "0",
+        "locations": {
+            "Market Bazaar Item 1": "True",
+            "Market Bazaar Item 2": "True",
+            "Market Bazaar Item 3": "True",
+            "Market Bazaar Item 4": "True",
+            "Market Bazaar Item 5": "True",
+            "Market Bazaar Item 6": "True",
+            "Market Bazaar Item 7": "True",
+            "Market Bazaar Item 8": "True"
+        },
+        "exits": {
+            "Market": "True"
+        }
+    },
+    {
+        "region_name": "Kak Bazaar",
+        "room": "0",
+        "locations": {
+            "Kak Bazaar Item 1": "True",
+            "Kak Bazaar Item 2": "True",
+            "Kak Bazaar Item 3": "True",
+            "Kak Bazaar Item 4": "True",
+            "Kak Bazaar Item 5": "True",
+            "Kak Bazaar Item 6": "True",
+            "Kak Bazaar Item 7": "True",
+            "Kak Bazaar Item 8": "True"
+        },
+        "exits": {
+            "Kakariko Village": "True"
+        }
+    },
+    {
+        "region_name": "KF Kokiri Shop",
+        "room": "0",
+        "locations": {
+            "KF Shop Item 1": "True",
+            "KF Shop Item 2": "True",
+            "KF Shop Item 3": "True",
+            "KF Shop Item 4": "True",
+            "KF Shop Item 5": "True",
+            "KF Shop Item 6": "True",
+            "KF Shop Item 7": "True",
+            "KF Shop Item 8": "True"
+        },
+        "exits": {
+            "Kokiri Forest": "True"
+        }
+    },
+    {
+        "region_name": "GC Shop",
+        "room": "0",
+        "locations": {
+            "GC Shop Item 1": "True",
+            "GC Shop Item 2": "True",
+            "GC Shop Item 3": "True",
+            "GC Shop Item 4": "True",
+            "GC Shop Item 5": "True",
+            "GC Shop Item 6": "True",
+            "GC Shop Item 7": "True",
+            "GC Shop Item 8": "True"
+        },
+        "exits": {
+            "Goron City": "True"
+        }
+    },
+    {
+        "region_name": "ZD Shop",
+        "room": "0",
+        "locations": {
+            "ZD Shop Item 1": "True",
+            "ZD Shop Item 2": "True",
+            "ZD Shop Item 3": "True",
+            "ZD Shop Item 4": "True",
+            "ZD Shop Item 5": "True",
+            "ZD Shop Item 6": "True",
+            "ZD Shop Item 7": "True",
+            "ZD Shop Item 8": "True"
+        },
+        "exits": {
+            "Zoras Domain": "True"
+        }
+    },
+    {
+        "region_name": "Kak Potion Shop Front",
+        "room": "0",
+        "locations": {
+            "Kak Potion Shop Item 1": "is_adult",
+            "Kak Potion Shop Item 2": "is_adult",
+            "Kak Potion Shop Item 3": "is_adult",
+            "Kak Potion Shop Item 4": "is_adult",
+            "Kak Potion Shop Item 5": "is_adult",
+            "Kak Potion Shop Item 6": "is_adult",
+            "Kak Potion Shop Item 7": "is_adult",
+            "Kak Potion Shop Item 8": "is_adult"
+        },
+        "exits": {
+            "Kakariko Village": "True",
+            "Kak Potion Shop Back": "is_adult"
+        }
+    },
+    {
+        "region_name": "Kak Potion Shop Back",
+        "room": "0",
+        "exits": {
+            "Kak Backyard": "is_adult",
+            "Kak Potion Shop Front": "True"
+        }
+    },
+    {
+        "region_name": "Market Potion Shop",
+        "room": "0",
+        "locations": {
+            "Market Potion Shop Item 1": "True",
+            "Market Potion Shop Item 2": "True",
+            "Market Potion Shop Item 3": "True",
+            "Market Potion Shop Item 4": "True",
+            "Market Potion Shop Item 5": "True",
+            "Market Potion Shop Item 6": "True",
+            "Market Potion Shop Item 7": "True",
+            "Market Potion Shop Item 8": "True"
+        },
+        "exits": {
+            "Market": "True"
+        }
+    },
+    {
+        "region_name": "Market Bombchu Shop",
+        "room": "0",
+        "locations": {
+            "Market Bombchu Shop Item 1": "True",
+            "Market Bombchu Shop Item 2": "True",
+            "Market Bombchu Shop Item 3": "True",
+            "Market Bombchu Shop Item 4": "True",
+            "Market Bombchu Shop Item 5": "True",
+            "Market Bombchu Shop Item 6": "True",
+            "Market Bombchu Shop Item 7": "True",
+            "Market Bombchu Shop Item 8": "True"
+        },
+        "exits": {
+            "Market": "True"
+        }
+    },
+    {
+        "region_name": "Market Mask Shop",
+        "room": "0",
+        "events": {
+            "Skull Mask": "at('Kakariko Village', is_child and Zeldas_Letter)",
+            "Mask of Truth": "'Skull Mask' and
+                at('Lost Woods', is_child and can_play(Sarias_Song)) and
+                at('Graveyard', is_child and at_day) and
+                at('Hyrule Field', is_child and has_all_stones)"
+        },
+        "exits": {
+            "Market": "True"
+        }
+    },
+    {
+        "region_name": "Market Shooting Gallery",
+        "room": "0",
+        "locations": {
+            "Market Shooting Gallery": "is_child"
+        },
+        "exits": {
+            "Market": "True"
+        }
+    },
+    {
+        "region_name": "Kak Shooting Gallery",
+        "room": "0",
+        "locations": {
+            "Kak Shooting Gallery": "is_adult and Bow"
+        },
+        "exits": {
+            "Kakariko Village": "True"
+        }
+    },
+    {
+        "region_name": "Market Bombchu Bowling",
+        "room": "0",
+        "locations": {
+            "Market Bombchu Bowling First Prize": "found_bombchus",
+            "Market Bombchu Bowling Second Prize": "found_bombchus",
+            "Market Bombchu Bowling Bombchus": "found_bombchus"
+        },
+        "exits": {
+            "Market": "True"
+        }
+    },
+    {
+        "region_name": "Kak Odd Medicine Building",
+        "room": "0",
+        "events": {
+            "Odd Potion Access": "
+                is_adult and
+                ('Odd Mushroom Access' or (Odd_Mushroom and disable_trade_revert))"
+        },
+        "exits": {
+            "Kak Backyard": "True"
+        }
+    },
+    #I don't know if the keys should be shufflable, but they are included to give an accurate layout of the rooms.
+    {
+        "region_name": "Market Treasure Chest Game",
+        "room": "0",
+        "locations": {
+            "Treasure Chest Game Key 1": "True",
+        },
+        "exits": {
+            "Market": "True",
+            "Treasure Chest Shop Green Room 1": "Treasure_Chest_Game_Key"
+        }
+    },
+    {
+        "region_name": "Treasure Chest Shop Green Room 1",
+        "room": "1",
+        "locations": {
+            "Treasure Chest Game Key 2": "can_use(Lens_of_Truth)"
+        },
+        "exits": {
+            "Market Treasure Chest Game": "True",
+            "Treasure Chest Shop Green Room 2": "Treasure_Chest_Game_Key"
+        }
+    },
+    {
+        "region_name": "Treasure Chest Shop Green Room 2",
+        "room": "2",
+        "locations": {
+            "Treasure Chest Game Key 3": "can_use(Lens_of_Truth)"
+        },
+        "exits": {
+            "Treasure Chest Shop Green Room 1": "True",
+            "Treasure Chest Shop Blue Room 1": "Treasure_Chest_Game_Key"
+        }
+    },
+    {
+        "region_name": "Treasure Chest Blue Room 1",
+        "room": "3",
+        "locations": {
+            "Treasure Chest Game Key 4": "can_use(Lens_of_Truth)"
+        },
+        "exits": {
+            "Treasure Chest Shop Green Room 2": "True",
+            "Treasure Chest Shop Blue Room 2": "Treasure_Chest_Game_Key"
+        }
+    },
+    {
+        "region_name": "Treasure Chest Blue Room 2",
+        "room": "4",
+        "locations": {
+            "Treasure Chest Game Key 5": "can_use(Lens_of_Truth)"
+        },
+        "exits": {
+            "Treasure Chest Shop Blue Room 1": "True",
+            "Treasure Chest Shop Red Room": "Treasure_Chest_Game_Key"
+        }
+    },
+    {
+        "region_name": "Treasure Chest Red Room",
+        "room": "5",
+        "locations": {
+            "Treasure Chest Game Key 6": "can_use(Lens_of_Truth)"
+        },
+        "exits": {
+            "Treasure Chest Shop Blue Room 2": "True",
+            "Treasure Chest Shop Yellow Room": "Treasure_Chest_Game_Key"
+        }
+    },
+    {
+        "region_name": "Treasure Chest Yellow Room",
+        "room": "6",
+        "locations": {
+            "Market Treasure Chest Game": "True"
+        },
+        "exits": {
+            "Treasure Chest Shop Red Room": "True"
+        }
+    }
+]

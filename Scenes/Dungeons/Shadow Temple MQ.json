@@ -1,0 +1,581 @@
+[
+    {
+        "region_name": "Shadow Temple Lobby Entryway",
+        "dungeon": "Shadow Temple",
+        "room": "2",
+        "exits": {
+            "Graveyard Temple Entrance": "True",
+            "Shadow Temple Lobby": "
+                can_use(Hover_Boots) or can_use(Hookshot)"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Lobby",
+        "dungeon": "Shadow Temple",
+        "room": "2",
+        "events": {
+            "Shadow Temple Room 2 Torches": "can_use(Fire_Arrows)"
+        },
+        "exits": {
+            "Shadow Temple Whispering Wall Maze East": "
+                (logic_lens_shadow_mq or can_use(Lens_of_Truth) or Shadow_Temple_Dungeon_Map)
+                and has_explosives and Small_Key_Shadow_Temple",
+            "Shadow Temple Lobby East": "
+                (logic_lens_shadow_mq or can_use(Lens_of_Truth))
+                and (can_use(Hover_Boots) or 'Shadow Temple Room 2 Torches'
+                    or (logic_shadow_mq_gap and can_use(Longshot)))",
+            "Shadow Temple Lobby Entryway": "
+                (logic_lens_shadow_mq or can_use(Lens_of_Truth) or Shadow_Temple_Dungeon_Map) and
+                (can_use(Hover_Boots) or can_use(Hookshot))"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Lobby East",
+        "dungeon": "Shadow Temple",
+        "room": "2",
+        "events": {
+            "Shadow Temple Room 2 Torches": "has_fire_source"
+        },
+        "exits": {
+            "Shadow Temple Lobby": "can_use(Hover_Boots) or 'Shadow Temple Room 2 Torches'",
+            "Shadow Temple First Beamos Room": "True"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Whispering Wall Maze East",
+        "dungeon": "Shadow Temple",
+        "room": "0",
+        "locations": {
+            "Nut Pot": "True"
+        },
+        "exits": {
+            "Shadow Temple Whispering Wall Maze": "
+                (can_play(Song_of_Time) or is_child) and
+                (logic_lens_shadow_mq or can_use(Lens_of_Truth) or Shadow_Temple_Dungeon_Map)",
+            "Shadow Temple Lobby": "
+                Still_a_key and (logic_lens_shadow_mq or can_use(Lens_of_Truth) or Shadow_Temple_Dungeon_Map)",
+            "Shadow Temple Dungeon Map Room": "
+                logic_lens_shadow_mq or can_use(Lens_of_Truth) or Shadow_Temple_Dungeon_Map"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Whispering Wall Maze",
+        "dungeon": "Shadow Temple",
+        "room": "0",
+        "events": {
+            "Shadow Temple Room 0 Eye Switch": "can_use(Bow) or can_use(Slingshot)"
+        },
+        "exits": {
+            "Shadow Temple Whispering Wall Maze West": "
+                'Shadow Temple Room 0 Eye Switch' and
+                (logic_lens_shadow_mq or can_use(Lens_of_Truth) or Shadow_Temple_Dungeon_Map)",
+            "Shadow Temple Whispering Wall Maze East": "
+                (can_play(Song_of_Time) or is_child) and
+                (logic_lens_shadow_mq or can_use(Lens_of_Truth) or Shadow_Temple_Dungeon_Map)"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Whispering Wall Maze West",
+        "dungeon": "Shadow Temple",
+        "room": "0",
+        "exits": {
+            "Shadow Temple Dead Hand Room": "True",
+            "Shadow Temple Whispering Wall Maze": "'Shadow Temple Room 0 Eye Switch'"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Dungeon Map Room",
+        "dungeon": "Shadow Temple",
+        "room": "1",
+        "events": {
+            "Shadow Temple Room 1 Enemies": "
+                "
+                #ReDead
+        },
+        "locations": {
+            "Shadow Temple MQ Compass Chest": "'Shadow Temple Room 1 Enemies'"
+        },
+        "exits": {
+            "Shadow Temple Whispering Wall Maze East": "'Shadow Temple Room 1 Enemies' or barred_door"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Dead Hand Room",
+        "dungeon": "Shadow Temple",
+        "room": "4",
+        "events": {
+            "Shadow Temple Room 4 Enemies": "
+                is_adult or Kokiri_Sword or (Sticks and logic_child_deadhand)"
+                #Dead Hand
+        },
+        "locations": {
+            "Shadow Temple MQ Hover Boots Chest": "'Shadow Temple Room 4 Enemies'"
+        },
+        "exits": {
+            "Shadow Temple Whispering Wall Maze West": "'Shadow Temple Room 4 Enemies' or barred_door"
+        }
+    },
+    {
+        "region_name": "Shadow Temple First Beamos Room",
+        "dungeon": "Shadow Temple",
+        "room": "5",
+        "exits": {
+            "Shadow Temple Lobby East": "True",
+            "Shadow Temple Spinning Scythe Silver Rupee Room": "
+                logic_lens_shadow_mq or can_use(Lens_of_Truth)",
+            "Shadow Temple Compass Room": "
+                logic_lens_shadow_mq or can_use(Lens_of_Truth)",
+            "Shadow Temple Guillotine Corridor": "has_explosives and Small_Key_Shadow_Temple"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Spinning Scythe Silver Rupee Room",
+        "dungeon": "Shadow Temple",
+        "room": "6",
+        "events": {
+            "Shadow Temple Room 6 Silver Rupees": "can_use(Hookshot) or can_climb(120)",
+                #Opens a grate in the room where there is an enemy and chest.
+            "Shadow Temple Room 6 Enemies": "
+                can_use(Dins_Fire)
+                or ('Shadow Temple Room 6 Silver Rupees' and (is_adult or can kill skulltulas as child))"
+                #Skulltulas
+                #One is behind the grate and can be killed through it with Din's Fire.
+        },
+        "locations": {
+            "Shadow Temple MQ Map Chest": "'Shadow Temple Room 6 Silver Rupees'"
+        },
+        "exits": {
+            "Shadow Temple First Beamos Room": "'Shadow Temple Room 6 Enemies' or barred_door",
+            "Shadow Temple River Styx Shortcut": "True"
+        }
+    },
+    {
+        "region_name": "Shadow Temple River Styx Shortcut",
+        "dungeon": "Shadow Temple",
+        "room": "21",
+        "locations": {
+            "Shadow Temple MQ Near Ship Invisible Chest": "
+                logic_lens_shadow_mq or can_use(Lens_of_Truth)"
+        },
+        "exits": {
+            "Shadow Temple Spinning Scythe Silver Rupee Room": "True",
+            "Shadow Temple River Styx East": "'Shadow Temple Room 21 Pushblock'"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Compass Room",
+        "dungeon": "Shadow Temple",
+        "room": "7",
+        "events": {
+            "Shadow Temple Room 7 Enemies": "
+                "
+                #2 Gibdos
+        },
+        "locations": {
+            "Shadow Temple MQ Early Gibdos Chest": "'Shadow Temple Room 7 Enemies'"
+        },
+        "exits": {
+            "Shadow Temple First Beamos Room": "'Shadow Temple Room 7 Enemies' or barred_door"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Guillotine Corridor",
+        "dungeon": "Shadow Temple",
+        "room": "8",
+        "exits": {
+            "Shadow Temple First Beamos Room": "Still_a_key",
+            "Shadow Temple Guillotine Corridor After Ledge": "True"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Guillotine Corridor After Ledge",
+        "dungeon": "Shadow Temple",
+        "room": "8",
+        "exits": {
+            "Shadow Temple Guillotine Corridor": "can_use(Hookshot) or can_climb(160)",
+            "Shadow Temple Huge Pit Upper": "True"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Huge Pit Upper",
+        "dungeon": "Shadow Temple",
+        "room": "9",
+        "exits": {
+            "Shadow Temple Guillotine Corridor After Ledge": "True",
+            "Shadow Temple Huge Pit": "True"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Huge Pit",
+        "dungeon": "Shadow Temple",
+        "room": "9",
+        "exits": {
+            "Shadow Temple Huge Pit East": "logic_lens_shadow_mq_back or can_use(Lens_of_Truth)",
+            "Shadow Temple Huge Pit West": "'Shadow Temple Room 9 Frozen Eye' or logic_shadow_mq_huge_pit"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Huge Pit East",
+        "dungeon": "Shadow Temple",
+        "room": "9",
+        "events": {
+            "Shadow Temple Room 9 Frozen Eye": "
+                has_fire_source and (logic_lens_shadow_mq_back or can_use(Lens_of_Truth))"
+        },
+        "exits": {
+            "Shadow Temple Invisible Scythe Statue Room": "True",
+            "Shadow Temple Huge Pit": "logic_lens_shadow_mq_back or can_use(Lens_of_Truth)"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Huge Pit West",
+        "dungeon": "Shadow Temple",
+        "room": "9",
+        "events": {
+            "Shadow Temple Room 6 Silver Rupees": "can_use(Longshot)",
+            "Shadow Temple Room 6 Crystal Switch": "is_adult or Kokiri_Sword or has_explosives"
+        },
+        "locations": {
+            "Shadow Temple MQ Beamos Silver Rupees Chest": "'Shadow Temple Room 6 Silver Rupees'"
+        },
+        "exits": {
+            "Shadow Temple Huge Pit": "'Shadow Temple Room 9 Frozen Eye' and can_climb(54)",
+            "Shadow Temple Huge Pit West Hall": "'Shadow Temple Room 6 Crystal Switch'",
+            "Shadow Temple Huge Pit Northwest": "logic_lens_shadow_mq_back or can_use(Lens_of_Truth)"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Huge Pit West Hall",
+        "dungeon": "Shadow Temple",
+        "room": "9",
+        "events": {
+            "Shadow Temple Room 6 Crystal Switch": "can hit crystal switch"
+        },
+        "exits": {
+            "Shadow Temple Falling Spikes Room": "True",
+            "Shadow Temple Huge Pit West": "True"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Huge Pit Northwest",
+        "dungeon": "Shadow Temple",
+        "room": "9",
+        "exits": {
+            "Shadow Temple Invisible Spike Room": "Small_Key_Shadow_Temple and can_use(Hover_Boots)",
+            "Shadow Temple Huge Pit West": "
+                (logic_lens_shadow_mq_back or can_use(Lens_of_Truth)) and can_use(Hover_Boots)",
+            "Shadow Temple Huge Pit Upper": "
+                (logic_lens_shadow_mq_back or can_use(Lens_of_Truth)) and can_use(Longshot)"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Falling Spikes Room",
+        "dungeon": "Shadow Temple",
+        "room": "10",
+        "locations": {
+            "Shadow Temple MQ Falling Spikes Lower Chest": "True",
+            "Shadow Temple MQ GS Falling Spikes Room": "can_use(Hookshot) or can_use(Boomerang)"
+        },
+        "exits": {
+            "Shadow Temple Huge Pit West Hall": "True",
+            "Shadow Temple Falling Spikes Room Upper": "
+                (logic_shadow_umbrella and can_use(Hover_Boots)) or
+                (Progressive_Strength_Upgrade and can_climb(110))
+                or can_climb(150)"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Falling Spikes Room Upper",
+        "dungeon": "Shadow Temple",
+        "room": "10",
+        "locations": {
+            "Shadow Temple MQ Falling Spikes Upper Chest": "True",
+            "Shadow Temple MQ Falling Spikes Switch Chest": "can_press_floor_switch"
+        },
+        "exits": {
+            "Shadow Temple Falling Spikes Room": "True"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Invisible Spike Room",
+        "dungeon": "Shadow Temple",
+        "room": "11",
+        "events": {
+            "Shadow Temple Room 11 Silver Rupees": "
+                (logic_lens_shadow_mq_back or can_use(Lens_of_Truth) and can_use(Hookshot)",
+            "Shadow Temple Room 11 Enemies": "
+                (logic_lens_shadow_mq_back or can_use(Lens_of_Truth) and defeat ReDeads"
+                #ReDeads
+        },
+        "locations": {
+            "Shadow Temple MQ Invisible Spikes Chest": "'Shadow Temple Room 11 Enemies'"
+        },
+        "exits": {
+            "Shadow Temple Huge Pit Northwest": "
+                Still_a_key and (logic_lens_shadow_mq_back or can_use(Lens_of_Truth))",
+            "Shadow Temple Singular Skull Jar Room": "
+                'Shadow Temple Room 11 Silver Rupees' or barred_door",
+            #I think regular Hookshot only works here if you backflip onto chest.
+            "Shadow Temple Fan Trap Room": "Small_Key_Shadow_Temple and
+                ((logic_lens_shadow_mq_back or can_use(Lens_of_Truth) and can_use(Longshot))"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Invisible Scythe Statue Room",
+        "dungeon": "Shadow Temple",
+        "room": "16",
+        "events": {
+            "Shadow Temple Room 16 Silver Rupees": "
+                (logic_lens_shadow_mq_back or can_use(Lens_of_Truth))
+                and can_climb(100) and (can_play(Song_of_Time) or is_child)"
+        },
+        "exits": {
+            "Shadow Temple Huge Pit East": "True",
+            "Shadow Temple Invisible Scythe Statue Room Cage" : "'Shadow Temple Room 16 Silver Rupees'"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Invisible Scythe Statue Room Cage",
+        "dungeon": "Shadow Temple",
+        "room": "16",
+        "locations": {
+            "Shadow Temple Invisible Blades Visible Chest": "True",
+            "Shadow Temple Invisible Blades Invisible Chest": "logic_lens_shadow_mq_back or can_use(Lens_of_Truth)"
+        },
+        "exits": {
+            "Shadow Temple Invisible Scythe Statue Room": "True"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Singular Skull Jar Room",
+        "dungeon": "Shadow Temple",
+        "room": "14",
+        "exits": {
+            "Shadow Temple Invisible Spike Room": "'Shadow Temple Room 14 Enemies' or barred_door",
+            "Shadow Temple Singular Skull Jar Room Upper": "can_climb(70)"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Singular Skull Jar Room Upper",
+        "dungeon": "Shadow Temple",
+        "room": "14",
+        "events": {
+            "Shadow Temple Room 14 Enemies": "
+                "
+                #Stalfos
+        },
+        "locations": {
+            "Shadow Temple MQ Stalfos Room Chest": "'Shadow Temple Room 14 Enemies'"
+        },
+        "exits": {
+            "Shadow Temple Singular Skull Jar Room": "True"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Fan Trap Room",
+        "dungeon": "Shadow Temple",
+        "room": "18",
+        #There is an annoying skulltula.
+        "exits": {
+            "Shadow Temple Invisible Spike Room": "Still_a_key",
+            "Shadow Temple Fan Trap Room Lower": "can_use(Hookshot) or can_use(Hover_Boots)"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Fan Trap Room Lower",
+        "dungeon": "Shadow Temple",
+        "room": "18",
+        "exits": {
+            "Shadow Temple Fan Trap Room": "can_use(Hookshot) or can_climb(160)",
+            "Shadow Temple Wind Hint Room": "True",
+            "Shadow Temple Gibdo Room": "True"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Wind Hint Room",
+        "dungeon": "Shadow Temple",
+        "room": "19",
+        "locations": {
+            "Shadow Temple MQ Wind Hint Chest": "logic_lens_shadow_mq_back or can_use(Lens_of_Truth)",
+            "Shadow Temple MQ GS Wind Hint Room": "can_use(Hookshot) or can_use(Boomerang)"
+        },
+        "exits": {
+            "Shadow Temple Fan Trap Room Lower": "True"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Gibdo Room",
+        "dungeon": "Shadow Temple",
+        "room": "20",
+        "events": {
+            "Shadow Temple Room 20 Enemies": "
+                "
+                #2 Gibdos
+        },
+        "locations": {
+            "Shadow Temple MQ After Wind Enemy Chest": "'Shadow Temple Room 20 Enemies'",
+            "Shadow Temple MQ After Wind Hidden Chest": "
+                has_explosives and (logic_lens_shadow_mq_back or can_use(Lens_of_Truth))",
+            "Shadow Temple MQ GS After Wind": "has_explosives",
+            "Nut Pot": "True"
+        },
+        "exits": {
+            "Shadow Temple Fan Trap Room Lower": "True",
+            "Shadow Temple River Styx East": "Small_Key_Shadow_Temple"
+        }
+    },
+    {
+        "region_name": "Shadow Temple River Styx East",
+        "dungeon": "Shadow Temple",
+        "room": "21",
+        "events": {
+            "Shadow Temple Room 21 Pushblock": "Progressive_Strength_Upgrade"
+        },
+        "exits": {
+            "Shadow Temple River Styx East Dock": "
+                can_use(Hookshot) or 'Shadow Temple Room 21 Pushblock' or can_climb(105)",
+            "Shadow Temple Gibdo Room": "Still_a_key",
+            "Shadow Temple River Styx Shortcut": "'Shadow Temple Room 21 Pushblock'"
+        }
+    },
+    {
+        "region_name": "Shadow Temple River Styx East Dock",
+        "dungeon": "Shadow Temple",
+        "room": "21",
+        "exits": {
+            "Shadow Temple River Styx East": "True",
+            "Shadow Temple River Styx West Dock": "can_play(Zeldas_Lullaby)"
+        }
+    },
+    {
+        "region_name": "Shadow Temple River Styx West Dock",
+        "dungeon": "Shadow Temple",
+        "room": "21",
+        "events": {
+            "Shadow Temple Shadow Statue": "can_use(Bow) or (logic_shadow_statue and has_bombchus)"
+        },
+        "locations": {
+            "Shadow Temple MQ GS After Ship": "can_use_projectile"
+        },
+        "exits": {
+            "Shadow Temple River Styx East Dock": "False",
+            "Shadow Temple River Styx West": "
+                'Shadow Temple Shadow Statue' or ('Shadow Temple Room 21 Eye Switch' and can_use(Longshot))",
+            "Shadow Temple River Styx West Ledge": "'Shadow Temple Room 21 Eye Switch' and can_use(Longshot)",
+            "Shadow Temple Invisible Maze": "'Shadow Temple Room 21 Floor Switch' or barred_door"
+        },
+    },
+    {
+        "region_name": "Shadow Temple River Styx West Ledge",
+        "dungeon": "Shadow Temple",
+        "room": "21",
+        "events": {
+            "Shadow Temple Room 21 Floor Switch": "can_press_floor_switch"
+        },
+        "exits": {
+            "Shadow Temple River Styx West": "True"
+        },
+    },
+    {
+        "region_name": "Shadow Temple River Styx West",
+        "dungeon": "Shadow Temple",
+        "room": "21",
+        "events": {
+            "Shadow Temple Shadow Statue": "
+                has_explosives or can_use(Bow) or Progressive_Strength_Upgrade or can_use(Dins_Fire)",
+            "Shadow Temple Room 21 Eye Switch": "
+                can_play(Song_of_Time) and (can_use(Bow) or can_use(Slingshot))"
+        },
+        "exits": {
+            "Shadow Temple River Styx West Dock": "'Shadow Temple Shadow Statue'",
+            "Shadow Temple River Styx West Ledge": "
+                'Shadow Temple Room 21 Eye Switch' and can_use(Longshot)",
+            "Shadow Temple Invisible Platforms Room": "True"
+        },
+    },
+    {
+        "region_name": "Shadow Temple Invisible Maze",
+        "dungeon": "Shadow Temple",
+        "room": "15",
+        "exits": {
+            "Shadow Temple Triplicate Skull Jar Room": "True",
+            "Shadow Temple Boss Key Room": "Small_Key_Shadow_Temple",
+            "Shadow Temple Invisible Floormaster Room": "True",
+            "Shadow Temple River Styx West Dock": "True"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Triplicate Skull Jar Room",
+        "dungeon": "Shadow Temple",
+        "room": "12",
+        "locations": {
+            "Shadow Temple MQ Freestanding Key": "True"
+        }
+        "exits": {
+            "Shadow Temple Invisible Maze": "True",
+            "Shadow Temple Triplicate Skull Jar Room Upper": "can_climb(70)"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Triplicate Skull Jar Room Upper",
+        "dungeon": "Shadow Temple",
+        "room": "12",
+        "exits": {
+            "Shadow Temple Triplicate Skull Jar Room": "True"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Boss Key Room",
+        "dungeon": "Shadow Temple",
+        "room": "13",
+        "locations": {
+            "Shadow Temple MQ Spike Walls Left Chest": "can_use(Dins_Fire)",
+            "Shadow Temple MQ Boss Key Chest": "can_use(Dins_Fire)"
+        },
+        "exits": {
+            "Shadow Temple Invisible Maze": "Still_a_key"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Invisible Floormaster Room",
+        "dungeon": "Shadow Temple",
+        "room": "17",
+        "events": {
+            "Shadow Temple Room 17 Enemies": "
+                (logic_lens_shadow_mq_back or can_use(Lens_of_Truth))
+                and (has_explosives or can_use(Bow) or can_use(Dins_Fire) or Progressive_Strength_Upgrade)
+                and (is_adult or Kokiri_Sword or (Sticks and logic_child_deadhand))"
+                #Dead Hand
+        },
+        "locations": {
+            "Shadow Temple MQ Bomb Flower Chest": "'Shadow Temple Room 17 Enemies'"
+        },
+        "exits": {
+            "Shadow Temple Invisible Maze": "True"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Invisible Platforms Room",
+        "dungeon": "Shadow Temple",
+        "room": "3",
+        "exits": {
+            "Shadow Temple River Styx West": "True",
+            "Shadow Temple Invisible Platforms Room Rear": "
+                (logic_lens_shadow_mq_back or can_use(Lens_of_Truth)) and can_use(Hover_Boots)"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Invisible Platforms Room Rear",
+        "dungeon": "Shadow Temple",
+        "room": "3",
+        "locations": {
+            "Shadow Temple MQ GS Near Boss": "
+                (logic_lens_shadow_mq_back or can_use(Lens_of_Truth)) and can_use_projectile"
+        },
+        "exits": {
+            "Shadow Temple Invisible Platforms Room": "
+                (logic_lens_shadow_mq_back or can_use(Lens_of_Truth)) and can_use(Hover_Boots)",
+            "Bongo Bongo Arena": "Shadow_Temple_Boss_Key"
+        }
+    }
+]

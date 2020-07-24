@@ -1,0 +1,355 @@
+[
+    {
+        "region_name": "KF Storms Grotto",
+        "room": "0",
+        "locations": {
+            "KF Storms Grotto Chest": "True",
+            "KF Storms Grotto Gossip Stone": "True",
+            "Gossip Stone Fairy": "can_summon_gossip_fairy and has_bottle",
+            "Butterfly Fairy": "can_use(Sticks) and has_bottle",
+            "Bug Shrub": "can_cut_shrubs and has_bottle",
+            "Lone Fish": "has_bottle"
+        },
+        "exits": {
+            "Kokiri Forest": "True"
+        }
+    },
+    {
+        "region_name": "LW Near Shortcuts Grotto",
+        "room": "0",
+        "locations": {
+            "LW Near Shortcuts Grotto Chest": "True",
+            "LW Near Shortcuts Grotto Gossip Stone": "True",
+            "Gossip Stone Fairy": "can_summon_gossip_fairy and has_bottle",
+            "Butterfly Fairy": "can_use(Sticks) and has_bottle",
+            "Bug Shrub": "can_cut_shrubs and has_bottle",
+            "Lone Fish": "has_bottle"
+        },
+        "exits": {
+            "LW Goron Square": "True"
+        }
+    },
+    {
+        "region_name": "LW Scrubs Grotto",
+        "room": "6",
+        "locations": {
+            "LW Deku Scrub Grotto Rear": "can_stun_deku",
+            "LW Deku Scrub Grotto Front": "can_stun_deku"
+        },
+        "exits": {
+            "LW End Square": "True"
+        }
+    },
+    {
+        "region_name": "Deku Theater",
+        "room": "11",
+        "locations": {
+            "Deku Theater Skull Mask": "is_child and 'Skull Mask'",
+            "Deku Theater Mask of Truth": "is_child and 'Mask of Truth'"
+        },
+        "exits": {
+            "LW Theater Meadow": "True"
+        }
+    },
+    {
+        "region_name": "SFM Storms Grotto",
+        "room": "9",
+        "locations": {
+            "SFM Deku Scrub Grotto Rear": "can_stun_deku",
+            "SFM Deku Scrub Grotto Front": "can_stun_deku"
+        },
+        "exits": {
+            "Sacred Forest Meadow": "True"
+        }
+    },
+    {
+        "region_name": "SFM Wolfos Grotto",
+        "room": "7",
+        "locations": {
+            "SFM Wolfos Grotto Chest": "
+                is_adult or Slingshot or Sticks or 
+                Kokiri_Sword or can_use(Dins_Fire)"
+        },
+        "exits": {
+            "SFM Entryway": "True"
+        }
+    },
+    {
+        "region_name": "LLR Grotto",
+        "room": "12",
+        "locations": {
+            "LLR Deku Scrub Grotto Left": "can_stun_deku",
+            "LLR Deku Scrub Grotto Right": "can_stun_deku",
+            "LLR Deku Scrub Grotto Center": "can_stun_deku"
+        },
+        "exits": {
+            "Lon Lon Ranch": "True"
+        }
+    },
+    {
+        "region_name": "HF Southeast Grotto",
+        "room": "0",
+        "locations": {
+            "HF Southeast Grotto Chest": "True",
+            "HF Southeast Grotto Gossip Stone": "True",
+            "Gossip Stone Fairy": "can_summon_gossip_fairy and has_bottle",
+            "Butterfly Fairy": "can_use(Sticks) and has_bottle",
+            "Bug Shrub": "can_cut_shrubs and has_bottle",
+            "Lone Fish": "has_bottle"
+        },
+        "exits": {
+            "Hyrule Field": "True"
+        }
+    },
+    {
+        "region_name": "HF Open Grotto",
+        "room": "0",
+        "locations": {
+            "HF Open Grotto Chest": "True",
+            "HF Open Grotto Gossip Stone": "True",
+            "Gossip Stone Fairy": "can_summon_gossip_fairy and has_bottle",
+            "Butterfly Fairy": "can_use(Sticks) and has_bottle",
+            "Bug Shrub": "can_cut_shrubs and has_bottle",
+            "Lone Fish": "has_bottle"
+        },
+        "exits": {
+            "Hyrule Field": "True"
+        }
+    },
+    {
+        "region_name": "HF Inside Fence Grotto",
+        "room": "1",
+        "locations": {
+            "HF Deku Scrub Grotto": "can_stun_deku"
+        },
+        "exits": {
+            "Hyrule Field": "True"
+        }
+    },
+    {
+        "region_name": "HF Cow Grotto",
+        "room": "4",
+        "locations": {
+            "HF GS Cow Grotto": "
+                has_fire_source and (can_use(Hookshot) or can_use(Boomerang))",
+            "HF Cow Grotto Cow": "has_fire_source and can_play(Eponas_Song)",
+            "HF Cow Grotto Gossip Stone": "has_fire_source",
+            "Gossip Stone Fairy": "has_fire_source and can_summon_gossip_fairy and has_bottle",
+            "Bug Shrub": "has_fire_source and can_cut_shrubs and has_bottle",
+            "Nut Pot": "has_fire_source"
+        },
+        "exits": {
+            "Hyrule Field": "True"
+        }
+    },
+    {
+        "region_name": "HF Near Market Grotto",
+        "room": "0",
+        "locations": {
+            "HF Near Market Grotto Chest": "True",
+            "HF Near Market Grotto Gossip Stone": "True",
+            "Gossip Stone Fairy": "can_summon_gossip_fairy and has_bottle",
+            "Butterfly Fairy": "can_use(Sticks) and has_bottle",
+            "Bug Shrub": "can_cut_shrubs and has_bottle",
+            "Lone Fish": "has_bottle"
+        },
+        "exits": {
+            "Hyrule Field": "True"
+        }
+    },
+    
+    {
+        "region_name": "HF Near Kak Grotto",
+        "room": "13",
+        "locations": {
+            "HF GS Near Kak Grotto": "can_use(Boomerang) or can_use(Hookshot)"
+        },
+        "exits": {
+            "Hyrule Field": "True"
+        }
+    },
+    {
+        "region_name": "HF Tektite Grotto",
+        "room": "10",
+        "locations": {
+            "HF Tektite Grotto Freestanding PoH": "
+                (Progressive_Scale, 2) or can_use(Iron_Boots)"
+        },
+        "exits": {
+            "Hyrule Field": "True"
+        }
+    },
+    {
+        "region_name": "HC Storms Grotto",
+        "room": "8",
+        "locations": {
+            "HC GS Storms Grotto": "can_blast_or_smash and (can_use(Boomerang) or can_use(Hookshot))",
+            "HC Storms Grotto Gossip Stone": "can_blast_or_smash",
+            "Gossip Stone Fairy": "can_blast_or_smash and can_summon_gossip_fairy and has_bottle",
+            "Wandering Bugs": "can_blast_or_smash and has_bottle",
+            "Nut Pot": "can_blast_or_smash"
+        },
+        "exits": {
+            "Hyrule Castle Grounds": "True"
+        }
+    },
+    {
+        "region_name": "Kak Redead Grotto",
+        "room": "2",
+        "locations": {
+            "Kak Redead Grotto Chest": "
+                is_adult or 
+                (Sticks or Kokiri_Sword or can_use(Dins_Fire))"
+        },
+        "exits": {
+            "Kakariko Village": "True"
+        }
+    },
+    {
+        "region_name": "Kak Open Grotto",
+        "room": "0",
+        "locations": {
+            "Kak Open Grotto Chest": "True",
+            "Kak Open Grotto Gossip Stone": "True",
+            "Gossip Stone Fairy": "can_summon_gossip_fairy and has_bottle",
+            "Butterfly Fairy": "can_use(Sticks) and has_bottle",
+            "Bug Shrub": "can_cut_shrubs and has_bottle",
+            "Lone Fish": "has_bottle"
+        },
+        "exits": {
+            "Kak Backyard": "True"
+        }
+    },
+    {
+        "region_name": "DMT Cow Grotto",
+        "room": "3",
+        "locations": {
+            "DMT Cow Grotto Cow": "can_play(Eponas_Song)"
+        },
+        "exits": {
+            "Death Mountain Summit": "True"
+        }
+    },
+    {
+        "region_name": "DMT Storms Grotto",
+        "room": "0",
+        "locations": {
+            "DMT Storms Grotto Chest": "True",
+            "DMT Storms Grotto Gossip Stone": "True",
+            "Gossip Stone Fairy": "can_summon_gossip_fairy and has_bottle",
+            "Butterfly Fairy": "can_use(Sticks) and has_bottle",
+            "Bug Shrub": "can_cut_shrubs and has_bottle",
+            "Lone Fish": "has_bottle"
+        },
+        "exits": {
+            "Death Mountain": "True"
+        }
+    },
+    {
+        "region_name": "GC Grotto",
+        "room": "12",
+        "locations": {
+            "GC Deku Scrub Grotto Left": "can_stun_deku",
+            "GC Deku Scrub Grotto Right": "can_stun_deku",
+            "GC Deku Scrub Grotto Center": "can_stun_deku"
+        },
+        "exits": {
+            "Goron City": "True"
+        }
+    },
+    {
+        "region_name": "DMC Upper Grotto",
+        "room": "0",
+        "locations": {
+            "DMC Upper Grotto Chest": "True",
+            "DMC Upper Grotto Gossip Stone": "True",
+            "Gossip Stone Fairy": "can_summon_gossip_fairy and has_bottle",
+            "Butterfly Fairy": "can_use(Sticks) and has_bottle",
+            "Bug Shrub": "can_cut_shrubs and has_bottle",
+            "Lone Fish": "has_bottle"
+        },
+        "exits": {
+            "DMC Upper Local": "True"
+        }
+    },
+    {
+        "region_name": "DMC Hammer Grotto",
+        "room": "12",
+        "locations": {
+            "DMC Deku Scrub Grotto Left": "can_stun_deku",
+            "DMC Deku Scrub Grotto Right": "can_stun_deku",
+            "DMC Deku Scrub Grotto Center": "can_stun_deku"
+        },
+        "exits": {
+            "DMC Lower Local": "True"
+        }
+    },
+    {
+        "region_name": "ZR Open Grotto",
+        "room": "0",
+        "locations": {
+            "ZR Open Grotto Chest": "True",
+            "ZR Open Grotto Gossip Stone": "True",
+            "Gossip Stone Fairy": "can_summon_gossip_fairy and has_bottle",
+            "Butterfly Fairy": "can_use(Sticks) and has_bottle",
+            "Bug Shrub": "can_cut_shrubs and has_bottle",
+            "Lone Fish": "has_bottle"
+        },
+        "exits": {
+            "Zora River": "True"
+        }
+    },
+    
+    {
+        "region_name": "ZR Storms Grotto",
+        "room": "9",
+        "locations": {
+            "ZR Deku Scrub Grotto Rear": "can_stun_deku",
+            "ZR Deku Scrub Grotto Front": "can_stun_deku"
+        },
+        "exits": {
+            "Zora River": "True"
+        }
+    },
+    {
+        "region_name": "LH Grotto",
+        "room": "12",
+        "locations": {
+            "LH Deku Scrub Grotto Left": "can_stun_deku",
+            "LH Deku Scrub Grotto Right": "can_stun_deku",
+            "LH Deku Scrub Grotto Center": "can_stun_deku"
+        },
+        "exits": {
+            "Lake Hylia": "True"
+        }
+    },
+    {
+        "region_name": "Colossus Grotto",
+        "room": "9",
+        "locations": {
+            "Colossus Deku Scrub Grotto Rear": "can_stun_deku",
+            "Colossus Deku Scrub Grotto Front": "can_stun_deku"
+        },
+        "exits": {
+            "Desert Colossus": "True"
+        }
+    },
+    {
+        "region_name": "GV Octorok Grotto",
+        "room": "5",
+        "exits": {
+            "Gerudo Valley": "True"
+        }
+    },
+    {
+        "region_name": "GV Storms Grotto",
+        "room": "9",
+        "locations": {
+            "GV Deku Scrub Grotto Rear": "can_stun_deku",
+            "GV Deku Scrub Grotto Front": "can_stun_deku"
+        },
+        "exits": {
+            "GV Fortress Side": "True"
+        }
+    }
+]

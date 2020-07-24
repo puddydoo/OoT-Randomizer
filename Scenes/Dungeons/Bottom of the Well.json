@@ -1,0 +1,263 @@
+[    
+    {
+        "region_name": "Bottom of the Well Lobby Entrance",
+        "dungeon": "Bottom of the Well",
+        "room": "0",
+        "exits": {
+            "Kakariko Village": "True",
+            "Bottom of the Well Lobby Perimeter": "is_child and (can_child_attack or Nuts)"
+        }
+    },
+    {
+        "region_name": "Bottom of the Well Lobby Perimeter",
+        "dungeon": "Bottom of the Well",
+        "room": "0",
+        "events": {
+            "Bottom of the Well Lower Water": "can_play(Zeldas_Lullaby)"
+        },
+        "locations": {
+            "Bottom of the Well Front Center Bombable Chest": "has_explosives",
+            "Bottom of the Well Back Left Bombable Chest": "has_explosives and (logic_lens_botw or can_use(Lens_of_Truth))",
+            "Bottom of the Well Front Left Fake Wall Chest": "logic_lens_botw or can_use(Lens_of_Truth)",
+            "Bottom of the Well Right Bottom Fake Wall Chest": "logic_lens_botw or can_use(Lens_of_Truth)",
+            "Bottom of the Well Underwater Front Chest": "'Bottom of the Well Lower Water'",
+            "Stick Pot": "True"
+        },
+        "exits": {
+            "Bottom of the Well Lobby Entrance": "
+                is_child and (Bottom_of_the_Well_Dungeon_Map or logic_lens_botw or can_use(Lens_of_Truth))",
+            "Bottom of the Well Lobby Central": "logic_lens_botw or can_use(Lens_of_Truth)",
+            "Bottom of the Well Lobby Central West Cage": "logic_lens_botw or can_use(Lens_of_Truth)",
+            "Bottom of the Well Lobby NE Crawl Space": "is_child",
+            "Bottom of the Well Lobby SE Crawl Space": "'Bottom of the Well Lower Water' and is_child",
+            "Bottom of the Well Lobby Water Grate": "
+                'Bottom of the Well Lower Water' or is_child or can_dive or can_use(Iron_Boots)",
+            "Bottom of the Well Lobby SW Fake Wall": "
+                Bottom_of_the_Well_Dungeon_Map or logic_lens_botw or can_use(Lens_of_Truth)",
+            "Bottom of the Well Basement": "True",
+            "Bottom of the Well Basement First Finger": "True",
+            "Bottom of the Well East Cage": "False"
+        }
+    },
+    {
+        "region_name": "Bottom of the Well Lobby Central",
+        "dungeon": "Bottom of the Well",
+        "room": "0",
+        "locations": {
+            "Bottom of the Well Center Skulltula Chest": "True",
+        },
+        "exits": {
+            "Bottom of the Well Lobby Perimeter": "logic_lens_botw or can_use(Lens_of_Truth)",
+            "Bottom of the Well Lobby Central West Cage": "
+                can_use(Hover_Boots) and (logic_lens_botw or can_use(Lens_of_Truth))",
+            "Bottom of the Well Basement": "True",
+            "Bottom of the Well Basement Ceiling": "True",
+            "Bottom of the Well East Inner Room": "Small_Key_Bottom_of_the_Well",
+            "Bottom of the Well West Inner Room": "Small_Key_Bottom_of_the_Well",
+        }
+    },
+    {
+        "region_name": "Bottom of the Well Lobby Central West Cage",
+        "dungeon": "Bottom of the Well",
+        "room": "0",
+        "locations": {
+            "Bottom of the Well Compass Chest": "True"
+        },
+        "exits": {
+            "Bottom of the Well Lobby Perimeter": "logic_lens_botw or can_use(Lens_of_Truth)",
+            "Bottom of the Well Lobby Central": "
+                (can_jumpslash or can_use(Hover_Boots)) and (logic_lens_botw or can_use(Lens_of_Truth))",
+            "Bottom of the Well Basement": "True"
+        }
+    },
+    {
+        "region_name": "Bottom of the Well East Cage",
+        "dungeon": "Bottom of the Well",
+        "room": "0",
+        "locations": {
+            "Bottom of the Well Like Like Chest": "True",
+            "Bottom of the Well GS Like Like Cage": "
+                can_use(Boomerang) or (logic_botw_cage_gs and (can_child_attack or is_adult)) or can_use(Hookshot)",
+        },
+        "exits": {
+            "Bottom of the Well Beamos Room": "True"
+        }
+    },
+    {
+        "region_name": "Bottom of the Well Lobby NE Crawl Space",
+        "dungeon": "Bottom of the Well",
+        "room": "0",
+        "exits": {
+            "Bottom of the Well Lobby Perimeter": "is_child",
+            "Bottom of the Well Beamos Room": "Small_Key_Bottom_of_the_Well"
+        }
+    },
+    {
+        "region_name": "Bottom of the Well Lobby SE Crawl Space",
+        "dungeon": "Bottom of the Well",
+        "room": "0",
+        "exits": {
+            "Bottom of the Well Lobby Perimeter": "is_child",
+            "Bottom of the Well Dead Hand Room": "True"
+        }
+    },
+    {
+        "region_name": "Bottom of the Well Lobby SW Fake Wall",
+        "dungeon": "Bottom of the Well",
+        "room": "0",
+        "exits": {
+            "Bottom of the Well Lobby Perimeter": "
+                Bottom_of_the_Well_Dungeon_Map or logic_lens_botw or can_use(Lens_of_Truth)",
+            "Bottom of the Well Basement": "barred_door"
+        }
+    },
+    {
+        "region_name": "Bottom of the Well Lobby Water Grate",
+        "dungeon": "Bottom of the Well",
+        "room": "0",
+        "locations": {
+            "Bottom of the Well Underwater Left Chest": "'Bottom of the Well Lower Water'"
+        },
+        "exits": {
+            "Bottom of the Well Lobby Perimeter": "
+                'Bottom of the Well Lower Water' or is_child or can_dive or can_use(Iron_Boots)",
+            "Bottom of the Well Coffin Room": "True"
+        }
+    },
+    {
+        "region_name": "Bottom of the Well Basement",
+        "dungeon": "Bottom of the Well",
+        "room": "1",
+        "events": {
+            "Bottom of the Well Room 1 Silver Rupees": "True",
+            "Bottom of the Well First Finger Rocks": "can_blast_or_smash",
+            "Bottom of the Well Third Finger Rocks": "
+                Progressive_Strength_Upgrade or can_blast_or_smash or can_use(Dins_Fire)
+                or (logic_botw_basement and can_use(Sticks))"
+        },
+        "locations": {
+            "Bottom of the Well Map Chest": "
+                can_blast_or_smash or ('Bottom of the Well Third Finger Rocks' and Progressive_Strength_Upgrade)",
+            "Nut Pot": "True"
+        },
+        "exits": {
+            "Bottom of the Well Lobby Perimeter": "False",
+            "Bottom of the Well Lobby Central": "False",
+            "Bottom of the Well Lobby Central West Cage": "False",
+            "Bottom of the Well Lobby SW Fake Wall": "'Bottom of the Well Room 1 Silver Rupees' or barred_door",
+            "Bottom of the Well Basement Ceiling": "False",
+            "Bottom of the Well Basement First Finger": "'Bottom of the Well First Finger Rocks'",
+            "Bottom of the Well Basement Third Finger": "'Bottom of the Well Third Finger Rocks'",
+            "Bottom of the Well East Inner Room": "False"
+        }
+    },
+    {
+        "region_name": "Bottom of the Well Basement Ceiling",
+        "dungeon": "Bottom of the Well",
+        "room": "1",
+        "exits": {
+            "Bottom of the Well Basement": "True",
+            "Bottom of the Well Lobby Central": "False"
+        }
+    },
+    {
+        "region_name": "Bottom of the Well Basement First Finger",
+        "dungeon": "Bottom of the Well",
+        "room": "1",
+        "events": {
+            "Bottom of the Well First Finger Rocks": "
+                Progressive_Strength_Upgrade or can_blast_or_smash"
+        },
+        "exits": {
+            "Bottom of the Well Basement": "'Bottom of the Well First Finger Rocks'",
+            "Bottom of the Well Lobby Perimeter": "False"
+        }
+    },
+    {
+        "region_name": "Bottom of the Well Basement Third Finger",
+        "dungeon": "Bottom of the Well",
+        "room": "1",
+        "events": {
+            "Bottom of the Well Third Finger Rocks": "
+                Progressive_Strength_Upgrade or can_blast_or_smash or can_use(Dins_Fire) or can_use(Bow)"
+        },
+        "exits": {
+            "Bottom of the Well Basement": "'Bottom of the Well Third Finger Rocks'",
+            "Bottom of the Well Beamos Room": "False"
+        }
+    },
+    {
+        "region_name": "Bottom of the Well Coffin Room",
+        "dungeon": "Bottom of the Well",
+        "room": "2",
+        "locations": {
+            "Bottom of the Well Freestanding Key": "has_fire_source_with_torch or can_use(Bow)",
+            "Bottom of the Well Invisible Chest": "can_play(Zeldas_Lullaby) and (logic_lens_botw or can_use(Lens_of_Truth))",
+        },
+        "exits": {
+            "Bottom of the Well Lobby Water Grate": "True"
+        }
+    },
+    {
+        "region_name": "Bottom of the Well Beamos Room",
+        "dungeon": "Bottom of the Well",
+        "room": "3",
+        "locations": {
+            "Bottom of the Well Fire Keese Chest": "
+                logic_lens_botw or can_use(Lens_of_Truth) or can_use(Hookshot)", #These pits are really unfair.
+        },
+        "exits": {
+            "Bottom of the Well Lobby NE Crawl Space": "Still_a_key and (logic_lens_botw or can_use(Lens_of_Truth))",
+            "Bottom of the Well East Cage": "logic_lens_botw or can_use(Lens_of_Truth)",
+            "Bottom of the Well Basement Third Finger": "True",
+        }
+    },
+    {
+        "region_name": "Bottom of the Well Dead Hand Room",
+        "dungeon": "Bottom of the Well",
+        "room": "4",
+        "events": {
+            "Bottom of the Well Room 4 Enemies": "
+                is_adult or Kokiri_Sword or (Sticks and logic_child_deadhand)"
+                #Dead Hand miniboss
+                #Sword not strictly necessary but frankly being forced to do this with sticks isn't fair
+        },
+        "locations": {
+            "Bottom of the Well Lens of Truth Chest": "'Bottom of the Well Room 4 Enemies'",
+            "Bottom of the Well Invisible Chest": "logic_lens_botw or can_use(Lens_of_Truth)"
+        },
+        "exits": {
+            "Bottom of the Well Lobby SE Crawl Space": "'Bottom of the Well Room 4 Enemies' or barred_door"
+        }
+    },
+    {
+        "region_name": "Bottom of the Well East Inner Room",
+        "dungeon": "Bottom of the Well",
+        "room": "5",
+        "locations": {
+            "Bottom of the Well GS East Inner Room": "
+                (logic_lens_botw or can_use(Lens_of_Truth))
+                and (can_use(Boomerang) or can_use(Hookshot))"
+        },
+        "exits": {
+            "Bottom of the Well Lobby Central": "Still_a_key",
+            "Bottom of the Well Basement": "True"
+        }
+    },
+    {
+        "region_name": "Bottom of the Well West Inner Room",
+        "dungeon": "Bottom of the Well",
+        "room": "6",
+        "locations": {
+            "Bottom of the Well GS West Inner Room":
+                "can_use(Boomerang) or can_use(Hookshot)",
+            "Deku Baba Sticks": "is_adult or Kokiri_Sword or Boomerang",
+            "Deku Baba Nuts": "
+                is_adult or Slingshot or Sticks or 
+                has_explosives or Kokiri_Sword or can_use(Dins_Fire)"
+        },
+        "exits": {
+            "Bottom of the Well Lobby Central": "Still_a_key",
+        }
+    }
+]

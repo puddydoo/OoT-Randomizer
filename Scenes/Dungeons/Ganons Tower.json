@@ -1,0 +1,99 @@
+[
+    {
+        "region_name": "Ganons Tower 1F Entrance",
+        "dungeon": "Ganons Castle",
+        "room": "7",
+        "exits": {
+            "Ganons Castle Barrier Chamber": "True",
+            "Ganons Tower 2F Dinolfos Room": "True"
+        }
+    },
+    {
+        "region_name": "Ganons Tower 2F Dinolfos Room",
+        "dungeon": "Ganons Castle",
+        "room": "0",
+        "events": {
+            "Ganons Tower Room 0 Enemies": "
+                "
+                #2 Dinolfos
+        },
+        "exits": {
+            "Ganons Tower 1F Entrance": "'Ganons Tower Room 0 Enemies' or barred_door",
+            "Ganons Tower Stairs to Boss Key Room": "'Ganons Tower Room 0 Enemies' or barred_door"
+        }
+    },
+    {
+        "region_name": "Ganons Tower Stairs to Boss Key Room",
+        "dungeon": "Ganons Castle",
+        "room": "1",
+        "exits": {
+            "Ganons Tower 2F Dinolfos Room": "True",
+            "Ganons Tower 3F Boss Key Room": "True"
+        }
+    },
+    {
+        "region_name": "Ganons Tower 3F Boss Key Room",
+        "dungeon": "Ganons Castle",
+        "room": "2",
+        "events": {
+            "Ganons Tower Room 2 Enemies": "
+                "
+                #2 Stalfos
+        },
+        "locations": {
+            "Ganons Tower Boss Key Chest": "'Ganons Tower Room 2 Enemies'",
+        }
+        "exits": {
+            "Ganons Tower Stairs to Boss Key Room": "'Ganons Tower Room 2 Enemies'",
+            "Ganons Tower Stairs to Iron Knuckle Room": "'Ganons Tower Room 2 Enemies'"
+        }
+    },
+    {
+        "region_name": "Ganons Tower Stairs to Iron Knuckle Room",
+        "dungeon": "Ganons Castle",
+        "room": "3",
+        "exits": {
+            "Ganons Tower 3F Boss Key Room": "True",
+            "Ganons Tower 4F Iron Knuckle Room": "True"
+        }
+    },
+    {
+        "region_name": "Ganons Tower 4F Iron Knuckle Room",
+        "dungeon": "Ganons Castle",
+        "room": "4",
+        "events": {
+            "Ganons Tower Room 4 Enemies": "
+                "
+                #2 Iron Knuckles
+        },
+        "exits": {
+            "Ganons Tower Stairs to Iron Knuckle Room": "'Ganons Tower Room 4 Enemies'",
+            "Ganons Tower Stairs to Lower Ganondorfs Lair": "'Ganons Tower Room 4 Enemies'"
+        }
+    },
+    {
+        "region_name": "Ganons Tower Stairs to Lower Ganondorfs Lair",
+        "dungeon": "Ganons Castle",
+        "room": "5",
+        "exits": {
+            "Ganons Tower 4F Iron Knuckle Room": "True",
+            "Ganons Tower 5F Lower Ganondorfs Lair": "Boss_Key_Ganons_Castle"
+        }
+    },
+    {
+        "region_name": "Ganons Tower 5F Lower Ganondorfs Lair",
+        "dungeon": "Ganons Castle",
+        "room": "8",
+        "exits": {
+            "Ganons Tower Stairs to Ganondorfs Lair": "Boss_Key_Ganons_Castle"
+        }
+    },
+    {
+        "region_name": "Ganons Tower Stairs to Ganondorfs Lair",
+        "dungeon": "Ganons Castle",
+        "room": "6",
+        "exits": {
+            "Ganondorf Boss Arena": "Boss_Key_Ganons_Castle"
+        }
+    }
+]

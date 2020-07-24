@@ -1,0 +1,68 @@
+[
+    {
+        "region_name": "Castle Grounds",
+        "scene": "Castle Grounds",
+        "exits": {
+            "Market": "True",
+            "Hyrule Castle Grounds": "is_child",
+            "Ganons Castle Grounds": "is_adult"
+        }
+    },
+    {
+        "region_name": "Hyrule Castle Grounds",
+        "scene": "Castle Grounds",
+        "room": "0",
+        "hint": "Hyrule Castle",
+        "time_passes": true,
+        "locations": {
+            "HC Malon Egg": "True",
+            "HC GS Tree": "can_child_attack",
+            "HC Malon Gossip Stone": "True",
+            "HC Rock Wall Gossip Stone": "True",
+            "Gossip Stone Fairy": "can_summon_gossip_fairy and has_bottle",
+            "Butterfly Fairy": "can_use(Sticks) and has_bottle",
+            "Bug Rock": "has_bottle"
+        },
+        "exits": {
+            "Market": "True",
+            "HC Guard Capture": "True",
+            "HC Garden": "Weird_Egg or (not shuffle_weird_egg)",
+            "HC Great Fairy Fountain": "has_explosives",
+            "HC Storms Grotto": "can_open_storm_grotto"
+        }
+    },
+    {
+        "region_name": "HC Guard Capture",
+        "scene": "Castle Grounds",
+        "exits": {
+            "Hyrule Castle Grounds": "True"
+        }
+    },
+    {
+        "region_name": "HC Garden",
+        "scene": "Castle Grounds",
+        "room": "0",
+        "hint": "Hyrule Castle",
+        "locations": {
+            "HC Zeldas Letter": "True",
+            "Song from Impa": "True"
+        },
+        "exits": {
+            "Hyrule Castle Grounds": "True"
+        }
+    },
+    {
+        "region_name": "Ganons Castle Grounds",
+        "scene": "Castle Grounds",
+        "room": "0",
+        "hint": "outside Ganon's Castle",
+        "locations": {
+            "OGC GS": "True"
+        },
+        "exits": {
+            "Castle Grounds": "at_night",
+            "OGC Great Fairy Fountain": "can_use(Golden_Gauntlets) and at_night",
+            "Ganons Castle Entrance": "can_build_rainbow_bridge"
+        }
+    }
+]

@@ -1,0 +1,121 @@
+[
+    #Tower interior
+    {
+        "region_name": "Collapsing Tower 2F",
+        "room": "0",
+        "exits": {
+            "Collapsing Tower Exterior 4 After Ledge": "True",
+            #Needs Zelda
+            "Collapsing Tower Stairs": "True"
+        }
+    },
+    {
+        "region_name": "Collapsing Tower 3F",
+        "room": "1",
+        "events": {
+            "Collapsing Tower Room 1 Enemies": "
+                "
+                #2 Stalfos
+        },
+        "exits": {
+            "Collapsing Tower Exterior 3": "True",
+            #Needs Zelda
+            "Collapsing Tower Exterior 4": "'Collapsing Tower Room 1 Enemies'"
+        }
+    },
+    {
+        "region_name": "Collapsing Tower 4F",
+        "room": "2",
+        "exits": {
+            "Collapsing Tower Exterior 2": "True",
+            #Needs Zelda
+            "Collapsing Tower Exterior 3": "True"
+        }
+    },
+    {
+        "region_name": "Collapsing Tower Stairs",
+        "room": "3",
+        "exits": {
+            "Collapsing Tower 2F": "True",
+            #Needs Zelda
+            "Collapsing Tower Castle Barrier Chamber": "True"
+        }
+    },
+    {
+        "region_name": "Collapsing Tower 5F",
+        "room": "4",
+        "exits": {
+            "Collapsing Tower Exterior 1": "True",
+            #Needs Zelda
+            "Collapsing Tower Exterior 2": "True"
+        }
+    },
+    #Tower exterior
+    {
+        "region_name": "Collapsing Tower Exterior 1",
+        "room": "0",
+        "exits": {
+            #Needs Zelda
+            "Collapsing Tower 5F": "True"
+        }
+    },
+    {
+        "region_name": "Collapsing Tower Exterior 2",
+        "room": "0",
+        "exits": {
+            "Collapsing Tower 5F": "True",
+            #Needs Zelda
+            "Collapsing Tower 4F": "True",
+            "Collapsing Tower Exterior 1": "False"
+        }
+    },
+    {
+        "region_name": "Collapsing Tower Exterior 3",
+        "room": "0",
+        "exits": {
+            "Collapsing Tower 4F": "True",
+            #Needs Zelda
+            "Collapsing Tower 3F": "True",
+            "Collapsing Tower Exterior 2": "False",
+            "Collapsing Tower Exterior 1": "False"
+        }
+    },
+    {
+        "region_name": "Collapsing Tower Exterior 4",
+        "room": "0",
+        "exits": {
+            "Collapsing Tower 3F": "True",
+            "Collapsing Tower Exterior 4 After Ledge": "True"
+            "Collapsing Tower Exterior 3": "False",
+            "Collapsing Tower Exterior 2": "False",
+            "Collapsing Tower Exterior 1": "False"
+        }
+    },
+    {
+        "region_name": "Collapsing Tower Exterior 4 After Ledge",
+        "room": "0",
+        "exits": {
+            "Collapsing Tower Exterior 4": "can_climb(66)",
+            #Needs Zelda
+            "Collapsing Tower 2F": "True"
+        }
+    },
+    #Castle interior
+    {
+        "region_name": "Collapsing Castle Barrier Chamber",
+        "room": "0",
+        "exits": {
+            "Collapsing Tower Stairs": "True",
+            #Needs Zelda
+            "Collapsing Castle Entrance": "True"
+        }
+    },
+    {
+        "region_name": "Collapsing Castle Entrance",
+        "room": "1",
+        "exits": {
+            "Collapsing Castle Barrier Chamber": "True",
+            "Ganon Arena": "True"
+        }
+    }
+]

@@ -1,0 +1,12 @@
+[
+    {
+        "region_name": "Graveyard Heart Piece Grave",
+        "room": "0",
+        "locations": {
+            "Graveyard Heart Piece Grave Chest": "can_play(Suns_Song)"
+        },
+        "exits": {
+            "Graveyard": "True"
+        }
+    }
+]

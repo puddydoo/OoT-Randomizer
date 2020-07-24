@@ -1,0 +1,13 @@
+[
+    {
+        "region_name": "Graveyard Shield Grave",
+        "room": "0",
+        "locations": {
+            "Graveyard Shield Grave Chest": "True",
+            "Free Fairies": "can_blast_or_smash and has_bottle"
+        },
+        "exits": {
+            "Graveyard": "True"
+        }
+    }
+]

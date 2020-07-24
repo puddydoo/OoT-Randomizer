@@ -1,0 +1,83 @@
+[
+    {
+        "region_name": "ZR Front",
+        "scene": "Zora River",
+        "room": "0",
+        "hint": "Zora's River",
+        "time_passes": true,
+        "locations": {
+            "ZR GS Tree": "is_child and can_child_attack"
+        },
+        "exits": {
+            "Zora River": "is_adult or has_explosives
+                or (mm_ice_arrows and can_use(Ice_Arrows))",
+            "Hyrule Field": "True"
+        }
+    },
+    {
+        "region_name": "Zora River",
+        "scene": "Zora River",
+        "room": "0",
+        "hint": "Zora's River",
+        "time_passes": true,
+        "locations": {
+            "ZR Magic Bean Salesman": "is_child",
+            "ZR Frogs Ocarina Game": "
+                is_child and can_play(Zeldas_Lullaby) and can_play(Sarias_Song) and 
+                can_play(Suns_Song) and can_play(Eponas_Song) and 
+                can_play(Song_of_Time) and can_play(Song_of_Storms)",
+            "ZR Frogs in the Rain": "is_child and can_play(Song_of_Storms)",
+            "ZR Near Open Grotto Freestanding PoH": "
+                is_child or can_use(Hover_Boots) or (is_adult and logic_zora_river_lower)",
+            "ZR GS Near Raised Grottos": "can_use(Hookshot) and at_night",
+            "ZR Near Grottos Gossip Stone": "True",
+            "Gossip Stone Fairy": "can_summon_gossip_fairy and has_bottle",
+            "Bean Plant Fairy": "can_plant_bean and can_play(Song_of_Storms) and has_bottle",
+            "Butterfly Fairy": "can_use(Sticks) and has_bottle",
+            "Bug Shrub": "can_cut_shrubs and has_bottle"
+        },
+        "exits": {
+            "ZR Front": "True",
+            "ZR Waterfall Area": "True",
+            "ZR Open Grotto": "True",
+            "ZR Fairy Grotto": "here(can_blast_or_smash)",
+            "ZR Storms Grotto": "can_open_storm_grotto"
+        }
+    },
+    {
+        "region_name": "ZR Waterfall Area",
+        "scene": "Zora River",
+        "room": "1",
+        "hint": "Zora's River",
+        "time_passes": true,
+        "locations": {
+            "ZR Near Domain Freestanding PoH": "
+                is_child or can_use(Hover_Boots) or (is_adult and logic_zora_river_upper)",
+            "ZR GS Ladder": "is_child and at_night and can_child_attack",
+            "ZR GS Above Bridge": "can_use(Hookshot) and at_night",
+            "ZR Near Domain Gossip Stone": "True",
+            "Gossip Stone Fairy": "can_summon_gossip_fairy and has_bottle",
+            "Butterfly Fairy": "can_use(Sticks) and has_bottle",
+        },
+        "exits": {
+            "Zora River": "True",
+            "LW Zora Square": "can_dive or can_use(Iron_Boots)",
+            "ZR Behind Waterfall": "
+                can_play(Zeldas_Lullaby) or
+                (can_use(Hover_Boots) and logic_zora_with_hovers) or
+                (is_child and logic_zora_with_cucco) or
+                (mm_ice_arrows and can_use(Ice_Arrows))"
+        }
+    },
+    {
+        "region_name": "ZR Behind Waterfall",
+        "scene": "Zora River",
+        "room": "1",
+        "hint": "Zora's River",
+        "time_passes": true,
+        "exits": {
+            "ZR Waterfall Area": "True",
+            "Zoras Domain": "True"
+        }
+    }
+]

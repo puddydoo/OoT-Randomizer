@@ -1,0 +1,91 @@
+[
+    {
+        "region_name": "Graveyard Dampes Grave",
+        "room": "0",
+        "locations": {
+            "Nut Pot": "True"
+        },
+        "exits": {
+            "Graveyard": "True",
+            "Grave Relay Checkpoint 1": "True"
+        }
+    },
+    {
+        "region_name": "Grave Relay Checkpoint 1",
+        "room": "1",
+        "exits": {
+            "Graveyard Dampes Grave": "False",
+            "Grave Relay Checkpoint 2": "True"
+        }
+    },
+    {
+        "region_name": "Grave Relay Checkpoint 2",
+        "room": "2",
+        "exits": {
+            "Grave Relay Checkpoint 1": "False",
+            "Grave Relay Checkpoint 3": "True"
+        }
+    },
+    {
+        "region_name": "Grave Relay Checkpoint 3",
+        "room": "3",
+        "exits": {
+            "Grave Relay Checkpoint 2": "False",
+            "Grave Relay End Room": "True"
+        }
+    },
+    {
+        "region_name": "Grave Relay End Room",
+        "room": "4",
+        "locations": {
+            "Graveyard Hookshot Chest": "True",
+            "Graveyard Dampe Race Freestanding PoH": "is_adult or logic_child_dampe_race_poh"
+        },
+        "exits": {
+            "Grave Relay Checkpoint 3": "False",
+            "Dampes Time Block Hole": "True"
+        }
+    },
+    {
+        "region_name": "Dampes Time Block Hole",
+        "room": "5",
+        "exits": {
+            "Grave Relay End Room": "False",
+            "Grave Windmill Passage": "is_adult and can_play(Song_of_Time)"
+        }
+    },
+    {
+        "region_name": "Grave Windmill Passage",
+        "room": "5",
+        "exits": {
+            "Dampes Time Block Hole": "True",
+            "Kak Windmill Upper": "True"
+        }
+    },
+    {
+        "region_name": "Kak Windmill Upper",
+        "room": "6",
+        "locations": {
+            "Kak Windmill Freestanding PoH": "True"
+        },
+        "exits": {
+            "Kak Windmill": "True",
+            "Grave Windmill Passage": "True"
+        }
+    },
+    {
+        "region_name": "Kak Windmill",
+        "room": "6",
+        "events": {
+            "Drain Well": "is_child and can_play(Song_of_Storms)"
+        },
+        "locations": {
+            "Kak Windmill Freestanding PoH": "can_use(Boomerang)",
+            "Song from Windmill": "is_adult and Ocarina"
+        },
+        "exits": {
+            "Kakariko Village": "True",
+            "Kak Windmill Upper": "logic_windmill_poh and is_adult"
+        }
+    }
+]

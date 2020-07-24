@@ -1,0 +1,96 @@
+[
+    {
+        "region_name": "Kakariko Village",
+        "scene": "Kakariko Village",
+        "room": "0",
+        "hint": "Kakariko Village",
+        "events": {
+            "Cojiro Access": "is_adult and 'Wake Up Adult Talon'",
+            "Kakariko Village Gate Open": "is_child and Zeldas_Letter"
+        },
+        "locations": {
+            "Sheik in Kakariko": "
+                is_adult and Forest_Medallion and Fire_Medallion and Water_Medallion",
+            "Kak Anju as Adult": "is_adult and at_day",
+            "Kak Anju as Child": "is_child and at_day",
+            "Kak GS House Under Construction": "is_child and at_night",
+            "Kak GS Skulltula House": "is_child and at_night",
+            "Kak GS Guards House": "is_child and at_night",
+            "Kak GS Tree": "is_child and at_night",
+            "Kak GS Watchtower": "
+                is_child and (Slingshot or has_bombchus or 
+                    (logic_kakariko_tower_gs and (Sticks or Kokiri_Sword) and
+                    (damage_multiplier != 'ohko' or Fairy or can_use(Nayrus_Love)))) and at_night",
+            "Kak GS Above Impas House": "can_use(Hookshot) and at_night",
+            "Bug Rock": "has_bottle"
+        },
+        "exits": {
+            "Hyrule Field": "True",
+            "Kak Carpenter Boss House": "True",
+            "Kak House of Skulltula": "True",
+            "Kak Impas House": "True",
+            "Kak Windmill": "True",
+            "Kak Bazaar": "is_adult and at_day",
+            "Kak Shooting Gallery": "is_adult and at_day",
+            "Bottom of the Well Lobby Entrance": "
+                'Drain Well' and (is_child or shuffle_dungeon_entrances)",
+            "Kak Potion Shop Front": "is_child or at_day",
+            "Kak Redead Grotto": "can_open_bomb_grotto",
+            "Kak Impas Ledge": "
+                (is_child and at_day) or (is_adult and logic_visible_collisions) or can_use(Hookshot)",
+            "Kak Rooftop": "
+                can_use(Hookshot) or 
+                (logic_man_on_roof and 
+                    (is_adult or at_day or Slingshot or has_bombchus or 
+                        (logic_kakariko_tower_gs and (Sticks or Kokiri_Sword) and
+                            (damage_multiplier != 'ohko' or Fairy or can_use(Nayrus_Love)))))",
+            "Kak Backyard": "is_adult or (is_child and at_day)",
+            "Graveyard": "True",
+            "Kak Behind Gate": "is_adult or 'Kakariko Village Gate Open'"
+        }
+    },
+    {
+        "region_name": "Kak Impas Ledge",
+        "scene": "Kakariko Village",
+        "room": "0",
+        "hint": "Kakariko Village",
+        "exits": {
+            "Kak Impas House Back": "True",
+            "Kakariko Village": "True"
+        }
+    },
+    {
+        "region_name": "Kak Rooftop",
+        "scene": "Kakariko Village",
+        "room": "0",
+        "hint": "Kakariko Village",
+        "locations": {
+            "Kak Man on Roof": "True"
+        },
+        "exits": {
+            "Kak Backyard": "True"
+        }
+    },
+    {
+        "region_name": "Kak Backyard",
+        "scene": "Kakariko Village",
+        "room": "0",
+        "hint": "Kakariko Village",
+        "exits": {
+            "Kakariko Village": "True",
+            "Kak Open Grotto": "True",
+            "Kak Odd Medicine Building": "is_adult",
+            "Kak Potion Shop Back": "is_adult and at_day"
+        }
+    },
+    {
+        "region_name": "Kak Behind Gate",
+        "scene": "Kakariko Village",
+        "room": "0",
+        "exits": {
+            "Kakariko Village": "
+                is_adult or logic_visible_collisions or 'Kakariko Village Gate Open'",
+            "Death Mountain": "True"
+        }
+    }
+]

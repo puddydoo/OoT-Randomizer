@@ -1,0 +1,707 @@
+[
+    {
+        "region_name": "Spirit Temple Lobby",
+        "dungeon": "Spirit Temple",
+        "room": "0",
+        "events": {
+            "Spirit Temple Room 0 Ceiling Rock": "has_bombchus"
+        },
+        "locations": {
+            "Spirit Temple MQ Entrance Front Left Chest": "True",
+            "Spirit Temple MQ Entrance Back Left Chest": "
+                here(can_blast_or_smash) and 
+                (can_use(Slingshot) or can_use(Bow))",
+            "Spirit Temple MQ Entrance Back Right Chest": "
+                has_bombchus or can_use(Bow) or can_use(Hookshot) or 
+                can_use(Slingshot) or can_use(Boomerang)",
+            "Spirit Temple MQ Entrance Front Right Chest": "'Spirit Temple Room 0 Silver Rupees'"
+        },
+        "exits": {
+            "Desert Colossus": "True",
+            "Spirit Temple First Child Room": "is_child",
+            "Spirit Temple Lobby East": "False",
+            "Spirit Temple Shortcut Room South": "'Spirit Temple Room 0 Ceiling Rock' and can_use(Longshot)"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Lobby East",
+        "dungeon": "Spirit Temple",
+        "room": "0",
+        "events": {
+            "Spirit Temple Room 0 Silver Rupees": "can_use(Megaton_Hammer)"
+        },
+        "exits": {
+            "Spirit Temple Lobby": "can_use(Megaton_Hammer)",
+            "Spirit Temple Rolling Boulder Room": "Small_Key_Spirit_Temple",
+            "Spirit Temple Sandy Lullaby Room": "True",
+            "Spirit Temple Wallmaster Room 1F": "True"
+        }
+    },
+    {
+        "region_name": "Spirit Temple First Child Room",
+        "dungeon": "Spirit Temple",
+        "room": "1",
+        "events": {
+            "Spirit Temple Room 1 Enemies": "
+                is_adult or Sticks or Kokiri_Sword or has_explosives"
+        },
+        "locations": {
+            "Spirit Temple MQ Child Hammer Switch Chest": "'Spirit Temple Room 1 Rusted Switch'"
+        },
+        "exits": {
+            "Spirit Temple Lobby": "is_child",
+            "Spirit Temple Cage Crossing Room Front": "'Spirit Temple Room 1 Enemies' or barred_door",
+            "Spirit Temple Child Enemy Pit Room Front": "'Spirit Temple Room 1 Enemies' or barred_door",
+            "Spirit Temple First Child Room Rear": "is_child"
+        }
+    },
+    {
+        "region_name": "Spirit Temple First Child Room Rear",
+        "dungeon": "Spirit Temple",
+        "room": "1",
+        "events": {
+            "Spirit Temple Room 1 Rusted Switch": "can_use(Megaton_Hammer)"
+        },
+        "exits": {
+            "Spirit Temple First Child Room": "is_child",
+            "Spirit Temple Rock Light Room": "Small_Key_Spirit_Temple"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Cage Crossing Room Front",
+        "dungeon": "Spirit Temple",
+        "room": "2",
+        "events": {
+            "Spirit Temple Room 2 Floor Switch": "can_press_floor_switch",
+            "Spirit Temple Room 2 Eye Switch": "
+                'Spirit Temple Room 2 Floor Switch' and has_bombchus
+                and (can_use(Slingshot) or can_use(Bow))",
+            "Spirit Temple Room 2 Enemies": "
+                can kill Gibdos and 'Spirit Temple Room 2 Floor Switch' and
+                ('Spirit Temple Room 2 Eye Switch' or can_use(Hover_Boots) or can_use(Hookshot))"
+                #Gibdos
+        },
+        "exits": {
+            "Spirit Temple First Child Room": "True",
+            "Spirit Temple Cage Crossing Room": "
+                'Spirit Temple Room 2 Floor Switch' and
+                ('Spirit Temple Room 2 Eye Switch' or can_use(Hover_Boots) or can_use(Hookshot))"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Cage Crossing Room",
+        "dungeon": "Spirit Temple",
+        "room": "2",
+        "events": {
+            "Spirit Temple Room 2 Eye Switch": "can_use(Slingshot) or can_use(Bow)",
+            "Spirit Temple Room 2 Enemies": "
+                can kill Gibdos and 'Spirit Temple Room 2 Floor Switch' and 
+                ('Spirit Temple Room 2 Eye Switch' or can_use(Hover_Boots))"
+                #Gibdos
+        },
+        "exits": {
+            "Spirit Temple Cage Crossing Room Front": "
+                'Spirit Temple Room 2 Floor Switch' and 
+                ('Spirit Temple Room 2 Eye Switch' or can_use(Hover_Boots))",
+            "Spirit Temple Child Enemy Pit Room": "'Spirit Temple Room 2 Enemies' or barred_door"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Child Enemy Pit Room Front",
+        "dungeon": "Spirit Temple",
+        "room": "3",
+        "events": {
+            "Spirit Temple Room 3 Enemies": "
+                (Can kill all the Keese and has_fire_source_with_torch) or can_use(Bow)"
+                #Keese and Anubis
+        },
+        "locations": {
+            "Spirit Temple MQ Map Chest": "True"
+        },
+        "exits": {
+            "Spirit Temple First Child Room": "True",
+            "Spirit Temple Child Enemy Pit Room": "
+                'Spirit Temple Room 3 Bridge'
+                or can_use(Hookshot) or can_use(Hover_Boots)"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Child Enemy Pit Room",
+        "dungeon": "Spirit Temple",
+        "room": "3",
+        "events": {
+            "Spirit Temple Room 3 Bridge": "can_press_floor_switch",
+            "Spirit Temple Room 3 Enemies": "
+                (Can kill all the Keese and has_fire_source_with_torch) or can_use(Bow)"
+                #Keese and Anubis
+        },
+        "locations": {
+            "Spirit Temple MQ Map Room Enemy Chest": "'Spirit Temple Room 3 Enemies'"
+        },
+        "exits": {
+            "Spirit Temple Child Enemy Pit Room Front": "
+                'Spirit Temple Room 3 Bridge'
+                or can_use(Hookshot) or can_use(Hover_Boots)",
+            "Spirit Temple Child Enemy Pit Room": "True"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Child Enemy Pit Room West",
+        "dungeon": "Spirit Temple",
+        "room": "27",
+        "exits": {
+            "Spirit Temple Child Enemy Pit Room": "'Spirit Temple Room 27 Enemies'",
+            "Spirit Temple Child Enemy Pit Room": "'Spirit Temple Room 27 Enemies' or barred_door"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Child Enemy Pit Room",
+        "dungeon": "Spirit Temple",
+        "room": "27",
+        "events": {
+            "Spirit Temple Room 27 Enemies": "
+                "
+                #Stalfos
+        },
+        "locations": {
+            "Fairy Pot": "has_bottle and 'Spirit Temple Room 27 Enemies'"
+        },
+        "exits": {
+            "Spirit Temple Cage Crossing Room": "True",
+            "Spirit Temple Child Enemy Pit Room West": "'Spirit Temple Room 27 Enemies'"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Rock Light Room 1F",
+        "dungeon": "Spirit Temple",
+        "room": "4",
+        "exits": {
+            "Spirit Temple First Child Room Rear": "Still_a_key",
+            "Spirit Temple Rock Light Room 2F": "Can hit crystal switch"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Rock Light Room 2F",
+        "dungeon": "Spirit Temple",
+        "room": "4",
+        "events": {
+            "Spirit Temple Room 4 Enemies": "
+                "
+                #
+        },
+        "locations": {
+            "Spirit Temple MQ Child Climb North Chest": "'Spirit Temple Room 4 Enemies'",
+            "Spirit Temple MQ Child Climb South Chest": "
+                (has_explosives or (mm_light_arrows and can_use(Light_Arrows)))
+                and (can_use(Hookshot) or can_climb(126))"
+        },
+        "exits": {
+            "Spirit Temple Rock Light Room 1F": "Can hit crystal switch",
+            "Spirit Temple Central Chamber": "Small_Key_Spirit_Temple"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Central Chamber",
+        "dungeon": "Spirit Temple",
+        "room": "5",
+        "events": {
+            "Spirit Temple Statue Face": "mm_light_arrows and can_use(Light_Arrows)",
+            "Spirit Temple Room 5 Frozen Eye": "
+                has_fire_source or
+                (logic_spirit_mq_frozen_eye and can_use(Bow) and can_play(Song_of_Time))",
+            "Spirit Temple Room 5 Torches": "
+                can_use(Fire_Arrows) or
+                (logic_spirit_mq_lower_adult and can_use(Dins_Fire) and can_use(Bow))"
+        },
+        "locations": {
+            "Spirit Temple MQ Compass Chest": "can_use(Bow) or can_use(Slingshot)",
+            "Spirit Temple MQ Statue Room Lullaby Chest": "'Spirit Temple Room 5 Lullaby'",
+            "Spirit Temple Map Chest": "can_use_fire_source_with_torch or (logic_spirit_map_chest and can_use(Bow))",
+            "Spirit Temple GS Lobby": "can_use(Longshot)"
+        },
+        "exits": {
+            "Spirit Temple Rock Light Room 2F": "Still_a_key",
+            "Spirit Temple Western 3F Corridor": "
+                can_play(Song_of_Time) or can_hold_down_switch or barred_door",
+            "Spirit Temple Shortcut Room": "'Spirit Temple Room 5 Frozen Eye' or barred_door",
+            "Spirit Temple Central Chamber Adult Stairs": "can_use(Hookshot) or can_climb(147)",
+            "Spirit Temple Central Chamber Northwest Ledge": "
+                can_use(Hover_Boots) or can_play(Song_of_Time) or can_climb(480)",
+            "Spirit Temple Central Chamber Right Arm": "True",
+            "Spirit Temple Central Chamber Northeast Ledge": "can_climb(480)",
+            "Spirit Temple Central Chamber Hanging Platform": "
+                'Spirit Temple Room 25 Sun Switch' and can_use(Longshot)"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Central Chamber Northwest Ledge",
+        "dungeon": "Spirit Temple",
+        "room": "5",
+        "events": {
+            "Spirit Temple Statue Face": "mm_light_arrows and can_use(Light_Arrows)"
+        },
+        "locations": {
+            "Spirit Temple GS Lobby": "can kill skulltula in any way"
+        },
+        "exits": {
+            "Spirit Temple Central Chamber": "True",
+            "Spirit Temple Central Chamber Right Arm": "True",
+            "Spirit Temple Central Chamber Hanging Platform": "
+                'Spirit Temple Room 25 Sun Switch' and can_use(Longshot)"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Central Chamber Right Arm",
+        "dungeon": "Spirit Temple",
+        "room": "5",
+        "events": {
+            "Spirit Temple Statue Face": "mm_light_arrows and can_use(Light_Arrows)"
+        },
+        "exits": {
+            "Spirit Temple Central Chamber": "True",
+            "Spirit Temple Central Chamber Northwest Ledge": "False",
+            "Spirit Temple Central Chamber Hanging Platform": "
+                'Spirit Temple Room 25 Sun Switch' and can_use(Hookshot)",
+            "Spirit Temple Central Chamber Inside Statue": "
+                'Spirit Temple Statue Face' and can_use(Longshot)"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Central Chamber Adult Stairs",
+        "dungeon": "Spirit Temple",
+        "room": "5",
+        "events": {
+            "Spirit Temple Statue Face": "mm_light_arrows and can_use(Light_Arrows)"
+        },
+        "exits": {
+            "Spirit Temple Central Chamber": "True",
+            "Spirit Temple Central Chamber Left Arm": "True",
+            "Spirit Temple Central Chamber Northeast Ledge": "
+                can_use(Hover_Boots) or ((logic_lens_spirit_mq or can_use(Lens_of_Truth)) and can_use(Longshot))",
+            "Spirit Temple Wallmaster Room 2F": "'Spirit Temple Room 5 Torches' or barred_door",
+            "Spirit Temple Eastern 3F Corridor": "Small_Key_Spirit_Temple",
+            "Spirit Temple Central Chamber Hanging Platform": "
+                'Spirit Temple Room 25 Sun Switch' and can_use(Longshot)"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Central Chamber Northeast Ledge",
+        "dungeon": "Spirit Temple",
+        "room": "5",
+        "events": {
+            "Spirit Temple Statue Face": "mm_light_arrows and can_use(Light_Arrows)"
+        },
+        "locations": {
+            "Spirit Temple MQ Statue Room Invisible Chest": "logic_lens_spirit_mq or can_use(Lens_of_Truth)"
+        },
+        "exits": {
+            "Spirit Temple Central Chamber": "True",
+            "Spirit Temple Central Chamber Adult Stairs": "can_use(Hover_Boots) or can_use(Longshot)",
+            "Spirit Temple Central Chamber Left Arm": "True",
+            "Spirit Temple Central Chamber Hanging Platform": "
+                'Spirit Temple Room 25 Sun Switch' and can_use(Longshot)"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Central Chamber Left Arm",
+        "dungeon": "Spirit Temple",
+        "room": "5",
+        "events": {
+            "Spirit Temple Room 5 Lullaby": "can_play(Zeldas_Lullaby)",
+            "Spirit Temple Statue Face": "mm_light_arrows and can_use(Light_Arrows)"
+        },
+        "exits": {
+            "Spirit Temple Central Chamber": "True",
+            "Spirit Temple Central Chamber Adult Stairs": "True",
+            "Spirit Temple Central Chamber Northeast Ledge": "
+                can_use(Hookshot) and (logic_lens_spirit_mq or can_use(Lens_of_Truth))",
+            "Spirit Temple Central Chamber Right Arm": "False",
+            "Spirit Temple Central Chamber Hanging Platform": "
+                'Spirit Temple Room 25 Sun Switch' and can_use(Hookshot)",
+            "Spirit Temple Central Chamber Inside Statue": "
+                'Spirit Temple Statue Face' and can_use(Longshot)"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Shortcut Room",
+        "dungeon": "Spirit Temple",
+        "room": "6",
+        "locations": {
+            "Spirit Temple MQ Silver Block Hallway Chest": "
+                can_use(Bow) or can_use(Slingshot)"
+        },
+        "exits": {
+            "Spirit Temple Shortcut Room South": "is_adult and 'Spirit Temple Room 6 Heavy Blocks'",
+            "Spirit Temple Central Chamber": "True"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Shortcut Room South",
+        "dungeon": "Spirit Temple",
+        "room": "6",
+        "events": {
+            "Spirit Temple Room 6 Heavy Blocks": "can_use(Silver_Gauntlets)"
+        },
+        "exits": {
+            "Spirit Temple Lobby": "True",
+            "Spirit Temple Shortcut Room": "
+                is_adult and 'Spirit Temple Room 6 Heavy Blocks'"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Western 3F Corridor",
+        "dungeon": "Spirit Temple",
+        "room": "7",
+        "exits": {
+            "Spirit Temple Central Chamber": "True",
+            "Spirit Temple Sun Block Room": "True"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Sun Block Room",
+        "dungeon": "Spirit Temple",
+        "room": "8",
+        "locations": {
+            "Spirit Temple MQ Sun Block Room Chest": "True",
+            "Spirit Temple MQ GS Sun Block Room": "
+                (logic_spirit_mq_sun_block_gs and can_use(Boomerang)) or can_use(Hookshot)"
+        },
+        "exits": {
+            #Just pull sun block into light
+            "Spirit Temple Western 3F Corridor": "True or barred_door",
+            "Spirit Temple Hall to Child Iron Knuckle Room": "True or barred_door"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Hall to Child Iron Knuckle Room",
+        "dungeon": "Spirit Temple",
+        "room": "9",
+        "exits": {
+            "Spirit Temple Sun Block Room": "True",
+            "Spirit Temple Child Iron Knuckle Room": "Small_Key_Spirit_Temple"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Child Iron Knuckle Room",
+        "dungeon": "Spirit Temple",
+        "room": "10",
+        "events": {
+            "Spirit Temple Room 10 Enemies": "
+                "
+                #Iron Knuckle
+        },
+        "exits": {
+            "Spirit Temple Hall to Child Iron Knuckle Room": "Still_a_key",
+            "Spirit Temple Exit to Right Hand": "'Spirit Temple Room 10 Enemies' or barred_door"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Exit to Right Hand",
+        "dungeon": "Spirit Temple",
+        "room": "11",
+        "exits": {
+            "Spirit Temple Outdoor Right Hand": "True",
+            "Spirit Temple Child Iron Knuckle Room": "True"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Outdoor Right Hand",
+        "dungeon": "Spirit Temple",
+        "time_passes": true,
+        "locations": {
+            "Spirit Temple Silver Gauntlets Chest": "True"
+        },
+        "exits": {
+            "Spirit Temple Exit to Right Hand": "True",
+            "Desert Colossus": "True",
+            "Spirit Temple Outdoor Left Hand": "'Spirit Temple Mirror Shield Chest Spawn' and can_use(Longshot)"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Rolling Boulder Room",
+        "dungeon": "Spirit Temple",
+        "room": "13",
+        "exits": {
+            "Spirit Temple Lobby East": "Still_a_key",
+            "Spirit Temple 1F Treasure Room": "
+                here(can_use(Megaton_Hammer) and Ocarina and 
+                Song_of_Time and Eponas_Song and Suns_Song and 
+                Song_of_Storms and Zeldas_Lullaby) or barred_door"
+        }
+    },
+    {
+        "region_name": "Spirit Temple 1F Treasure Room",
+        "dungeon": "Spirit Temple",
+        "room": "12",
+        "locations": {
+            "Spirit Temple MQ Symphony Room Chest": "True",
+            "Spirit Temple MQ GS Symphony Room": "can_use(Hookshot) or can_use(Boomerang)"
+        },
+        "exits": {
+            "Spirit Temple Rolling Boulder Room": "True"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Sandy Lullaby Room",
+        "dungeon": "Spirit Temple",
+        "room": "14",
+        "events": {
+            "Spirit Temple Room 14 Enemies": "
+                "
+                #Leevers
+        },
+        "locations": {
+            "Spirit Temple MQ Leever Room Chest": "
+                'Spirit Temple Room 14 Enemies' and (can_use(Longshot) or can_climb(167))",
+            "Spirit Temple MQ GS Leever Room": "can_use(Hookshot) or can_use(Boomerang)"
+        },
+        "exits": {
+            "Spirit Temple Lobby East": "can_play(Zeldas_Lullaby) or barred_door"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Wallmaster Room 1F",
+        "dungeon": "Spirit Temple",
+        "room": "15",
+        "exits": {
+            "Spirit Temple Lobby East": "True",
+            "Spirit Temple Wallmaster Room 2F": "'Spirit Temple Room 15 Enemies'"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Wallmaster Room 2F",
+        "dungeon": "Spirit Temple",
+        "room": "15",
+        "events": {
+            "Spirit Temple Room 15 Enemies": "
+                (can_use(Mirror_Shield) and is_adult)
+                or (mm_light_arrows and can_use(Light_Arrows))"
+                #Wallmasters summoned by sun switches
+        },
+        "exits": {
+            "Spirit Temple Wallmaster Room 1F": "'Spirit Temple Room 15 Enemies'",
+            "Spirit Temple Central Chamber Adult Stairs": "True"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Eastern 3F Corridor",
+        "dungeon": "Spirit Temple",
+        "room": "16",
+        "exits": {
+            "Spirit Temple Central Chamber": "Still_a_key and can_use(Hookshot)",
+            "Spirit Temple Adult Enemy Pit Room": "can_use(Hookshot)"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Adult Enemy Pit Room",
+        "dungeon": "Spirit Temple",
+        "room": "17",
+        "events": {
+            "Spirit Temple Room 17 Enemies": "
+                has_explosives"
+                #Beamos
+        },
+        "locations": {
+            "Spirit Temple MQ Beamos Room Chest": "'Spirit Temple Room 17 Enemies'"
+        },
+        "exits": {
+            "Spirit Temple Eastern 3F Corridor": "'Spirit Temple Room 17 Enemies' or barred_door",
+            "Spirit Temple Funny Switch Room": "can_play(Song_of_Time)",
+            "Spirit Temple Shifting Wall Room": "Small_Key_Spirit_Temple"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Funny Switch Room",
+        "dungeon": "Spirit Temple",
+        "room": "18",
+        "events": {
+            "Spirit Temple Room 18 Sun Switch": "
+                (can_play(Song_of_Time) and can_use(Mirror_Shield))
+                or (mm_light_arrows and can_use(Light_Arrows))"
+        },
+        "locations": {
+            "Spirit Temple MQ Chest Switch Chest": "True"
+        },
+        "exits": {
+            "Spirit Temple Adult Enemy Pit Room": "True",
+            "Spirit Temple Hall to Adult Iron Knuckle Room": "
+                Hit chest (does this require sword?) or barred_door",
+            "Spirit Temple Key Room": "
+                'Spirit Temple Room 18 Sun Switch' or barred_door"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Hall to Adult Iron Knuckle Room",
+        "dungeon": "Spirit Temple",
+        "room": "19",
+        "events": {
+            "Spirit Temple Room 19 Enemies": "
+                (logic_lens_spirit_mq or can_use(Lens_of_Truth))
+                and can beat floormaster"
+                #Invisible Floormaster
+        },
+        "locations": {
+            "Spirit Temple Hallway Left Invisible Chest": "logic_lens_spirit or can_use(Lens_of_Truth)",
+            "Spirit Temple Hallway Right Invisible Chest": "logic_lens_spirit or can_use(Lens_of_Truth)"
+        },
+        "exits": {
+            "Spirit Temple Funny Switch Room": "True",
+            "Spirit Temple Adult Iron Knuckle Room": "'Spirit Temple Room 19 Enemies' or barred_door"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Adult Iron Knuckle Room",
+        "dungeon": "Spirit Temple",
+        "room": "20",
+        "events": {
+            "Spirit Temple Room 20 Enemies": "
+                "
+                #Iron Knuckle
+        },
+        "exits": {
+            "Spirit Temple Hall to Adult Iron Knuckle Room": "True",
+            "Spirit Temple Exit to Left Hand": "'Spirit Temple Room 20 Enemies' or barred_door"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Exit to Left Hand",
+        "dungeon": "Spirit Temple",
+        "room": "11",
+        "exits": {
+            "Spirit Temple Outdoor Left Hand": "True",
+            "Spirit Temple Adult Iron Knuckle Room": "True"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Outdoor Left Hand",
+        "dungeon": "Spirit Temple",
+        "time_passes": true,
+        "events": {
+            "Spirit Temple Mirror Shield Chest Spawn": "True"
+        },
+        "locations": {
+            "Spirit Temple Mirror Shield Chest": "'Spirit Temple Mirror Shield Chest Spawn'"
+        },
+        "exits": {
+            "Spirit Temple Exit to Left Hand": "True",
+            "Desert Colossus": "True",
+            "Spirit Temple Outdoor Right Hand": "can_use(Longshot)"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Key Room",
+        "dungeon": "Spirit Temple",
+        "room": "21",
+        "locations": {
+            "Spirit Temple MQ Boss Key Chest": "True"
+        },
+        "exits": {
+            "Spirit Temple Funny Switch Room": "True"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Shifting Wall Room",
+        "dungeon": "Spirit Temple",
+        "room": "23",
+        "events": {
+            "Spirit Temple Room 23 Silver Rupees": "True"
+        },
+        "exits": {
+            "Spirit Temple Adult Enemy Pit Room": "Still_a_key",
+            "Spirit Temple Lullaby Landing": "'Spirit Temple Room 23 Silver Rupees' or barred_door"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Lullaby Landing",
+        "dungeon": "Spirit Temple",
+        "room": "24",
+        "exits": {
+            "Spirit Temple Furniture Room": "Small_Key_Spirit_Temple",
+            "Spirit Temple Shifting Wall Room": "True",
+            "Spirit Temple Ceiling Mirror Room": "can_play(Zeldas_Lullaby) or barred_door"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Furniture Room",
+        "dungeon": "Spirit Temple",
+        "room": "22",
+        "locations": {
+            "Spirit Temple MQ GS Nine Thrones Room West": "can_use(Hookshot) or can_use(Boomerang)",
+            "Spirit Temple MQ GS Nine Thrones Room North": "is_adult or can_child_attack"
+        }
+        "exits": {
+            "Spirit Temple Lullaby Landing": "Still_a_key"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Ceiling Mirror Room",
+        "dungeon": "Spirit Temple",
+        "room": "25",
+        "events": {
+            "Spirit Temple Room 25 Rusted Switch": "can_use(Megaton_Hammer)",
+            "Spirit Temple Room 25 Sun Switch": "
+                ('Spirit Temple 4F Mirrors' and can_use(Mirror_Shield))
+                or (mm_light_arrows and can_use(Light_Arrows))"
+        },
+        "exits": {
+            "Spirit Temple Central Chamber Hanging Platform": "'Spirit Temple Room 25 Sun Switch'",
+            "Spirit Temple Lullaby Landing": "True",
+            "Spirit Temple Snake Mirror Rooms": "
+                'Spirit Temple Room 25 Rusted Switch' or barred_door"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Snake Mirror Rooms",
+        "dungeon": "Spirit Temple",
+        "room": "26",
+        "events": {
+            #I just put this as an event but I don't know, the mirrors reset upon leaving the dungeon by any means including Farore's Wind
+            "Spirit Temple 4F Mirrors": "
+                can_use(Mirror_Shield)
+                or (mm_light_arrows and can_use(Light_Arrows))"
+        },
+        "locations": {
+            "Spirit Temple MQ Mirror Puzzle Invisible Chest": "logic_lens_spirit_mq or can_use(Lens_of_Truth)"
+        }
+        "exits": {
+            "Spirit Temple Ceiling Mirror Room": "True"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Central Chamber Hanging Platform",
+        "dungeon": "Spirit Temple",
+        "room": "5",
+        "events": {
+            "Spirit Temple Statue Face": "
+                ('Spirit Temple 4F Mirrors' and can_use(Mirror_Shield))
+                or (mm_light_arrows and can_use(Light_Arrows))"
+        },
+        "exits": {
+            "Spirit Temple Central Chamber": "True",
+            "Spirit Temple Central Chamber Adult Stairs": "True",
+            "Spirit Temple Central Chamber Left Arm": "True",
+            "Spirit Temple Central Chamber Right Arm": "True",
+            "Spirit Temple Central Chamber Northeast Ledge": "False",
+            "Spirit Temple Central Chamber Northwest Ledge": "False",
+            "Spirit Temple Central Chamber Inside Statue": "
+                'Spirit Temple Statue Face' and can_use(Hookshot)",
+            "Spirit Temple Ceiling Mirror Room": "False"
+        },
+    },
+    {
+        "region_name": "Spirit Temple Central Chamber Inside Statue",
+        "dungeon": "Spirit Temple",
+        "room": "5",
+        "events": {
+            "Spirit Temple Statue Face": "mm_light_arrows and can_use(Light_Arrows)"
+        },
+        "exits": {
+            "Iron Knuckle Arena": "Boss_Key_Spirit_Temple",
+            "Spirit Temple Central Chamber": "True",
+            "Spirit Temple Central Chamber Left Arm": "True",
+            "Spirit Temple Central Chamber Right Arm": "True",
+            "Spirit Temple Central Chamber Hanging Platform": "
+                'Spirit Temple Room 25 Sun Switch' and (can_use(Hookshot) or can_use(Hover_Boots))"
+        }
+    }
+]
