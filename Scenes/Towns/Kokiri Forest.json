@@ -5,7 +5,7 @@
         "room": "0",
         "hint": "Kokiri Forest",
         "events": {
-            "Showed Mido Sword & Shield": "open_forest == 'open' or (is_child and Kokiri_Sword and Buy_Deku_Shield)"
+            "Showed Mido Sword & Shield": "is_child and Kokiri_Sword and Buy_Deku_Shield"
         },
         "locations": {
             "KF GS Know It All House": "
@@ -27,7 +27,7 @@
             "KF House of Twins": "True",
             "KF Know It All House": "True",
             "KF Kokiri Shop": "True",
-            "KF Outside Deku Tree": "is_adult or 'Showed Mido Sword & Shield'",
+            "KF Outside Deku Tree": "is_adult or open_forest == 'open' or 'Showed Mido Sword & Shield'",
             "KF Training Area": "is_child",
             "LW Start Square": "True",
             "LW Bridge From Forest": "can_leave_forest",
@@ -44,9 +44,9 @@
             #placement this is not an issue as Adult can go back to forest for the Baba's there.
             #Entrance rando cannot rely on this for the case forest completion was done on non
             #repeatable access.
-            "Deku Baba Sticks": "(is_adult and not shuffle_dungeon_entrances) or Kokiri_Sword or Boomerang",
+            "Deku Baba Sticks": "(is_adult and not entrance_shuffle) or Kokiri_Sword or Boomerang",
             "Deku Baba Nuts": "
-                (is_adult and not shuffle_dungeon_entrances) or Slingshot or Sticks or 
+                (is_adult and not entrance_shuffle) or Slingshot or Sticks or 
                 has_explosives or Kokiri_Sword or can_use(Dins_Fire)",
             "KF Deku Tree Gossip Stone (Left)": "True",
             "KF Deku Tree Gossip Stone (Right)": "True",
@@ -54,7 +54,7 @@
         },
         "exits": {
             "Deku Tree Lobby": "is_child or (shuffle_dungeon_entrances and 'Showed Mido Sword & Shield')",
-            "Kokiri Forest": "True"
+            "Kokiri Forest": "is_adult or open_forest == 'open' or 'Showed Mido Sword & Shield'"
         }
     },
     {

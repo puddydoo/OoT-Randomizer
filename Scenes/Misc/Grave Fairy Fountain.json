@@ -1,6 +1,7 @@
 [
     {
         "region_name": "Graveyard Shield Grave",
+        "scene": "Graveyard Shield Grave",
         "room": "0",
         "locations": {
             "Graveyard Shield Grave Chest": "True",

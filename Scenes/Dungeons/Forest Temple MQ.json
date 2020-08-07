@@ -10,7 +10,7 @@
                 can_use(Dins_Fire) or Kokiri_Sword or can_use(Slingshot))"
         },
         "exits": {
-            "Sacred Forest Meadow": "True",
+            "SFM Forest Temple Entrance Ledge": "True",
             "Forest Temple Hall to Lobby": "True"
         }
     },
@@ -35,12 +35,21 @@
         },
         "exits": {
             "Forest Temple Hall to Lobby": "Still_a_key",
-            "Forest Temple Hall to Poe Puzzle Room": "can_climb(198)",
+            "Forest Temple Lobby East": "can_climb(198)",
             "Forest Temple Hall to Miniboss Room": "can_climb(70)",
             "Forest Temple Hall to Block Push Room": "can_climb(48)",
             "Forest Temple East Courtyard": "can_use(Bow) or can_use(Slingshot) or barred_door",
             "Forest Temple West Courtyard": "can_use(Bow) or can_use(Slingshot) or barred_door",
             "Forest Temple Basement": "'Forest Temple Meg'"
+        }
+    },
+    {
+        "region_name": "Forest Temple Lobby East",
+        "dungeon": "Forest Temple",
+        "room": "2",
+        "exits": {
+            "Forest Temple Lobby": "True",
+            "Forest Temple Hall to Poe Puzzle Room": "True"
         }
     },
     {
@@ -429,7 +438,7 @@
         "room": "3",
         "exits": {
             "Forest Temple Poe Puzzle Room": "True",
-            "Forest Temple Lobby": "True"
+            "Forest Temple Lobby East": "True"
         }
     },
     {

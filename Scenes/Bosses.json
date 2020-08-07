@@ -182,11 +182,11 @@
         "dungeon": "Spirit Temple",
         "room": "1",
         "events": {
-            "Boss Iron Knuckle": "
+            "Nabooru Iron Knuckle": "
                 "
         },
         "exits": {
-            "Twinrova Hallway": "'Boss Iron Knuckle' or barred_door"
+            "Twinrova Hallway": "'Nabooru Iron Knuckle' or barred_door"
         }
     },
     {

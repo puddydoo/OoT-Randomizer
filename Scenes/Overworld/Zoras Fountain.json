@@ -18,10 +18,20 @@
         "exits": {
             "ZD Behind King Zora": "True",
             "Jabu Jabus Belly Mouth": "is_child and Fish",
-            "Ice Cavern Entrance Corridor": "is_adult",
+            "ZF Ice Ledge": "is_adult",
             "ZF Great Fairy Fountain": "has_explosives",
             "ZF Cave Hole": "can_use(Silver_Gauntlets) and can_blast_or_smash",
             "ZF Cave Ledge": "False"
+        }
+    },
+    {
+        "region_name": "ZF Ice Ledge",
+        "scene": "Zoras Fountain",
+        "room": "0",
+        "hint": "Zora's Fountain",
+        "exits": {
+            "Zoras Fountain": "True",
+            "Ice Cavern Entrance Corridor": "True"
         }
     },
     {

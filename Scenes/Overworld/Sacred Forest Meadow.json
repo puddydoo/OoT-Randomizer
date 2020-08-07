@@ -28,9 +28,19 @@
         },
         "exits": {
             "SFM Entryway": "True",
-            "Forest Temple Entrance": "can_use(Hookshot)",
+            "SFM Forest Temple Entrance Ledge": "can_use(Hookshot)",
             "SFM Fairy Grotto": "True",
             "SFM Storms Grotto": "can_open_storm_grotto"
+        }
+    },
+    {
+        "region_name": "SFM Forest Temple Entrance Ledge",
+        "scene": "Sacred Forest Meadow",
+        "room": "0",
+        "hint": "Sacred Forest Meadow",
+        "exits": {
+            "Sacred Forest Meadow": "True",
+            "Forest Temple Entrance": "True"
         }
     }
 ]

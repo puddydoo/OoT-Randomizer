@@ -7,7 +7,7 @@
             "Spirit Temple Room 0 Heavy Block": "can_use(Silver_Gauntlets)"
         },
         "exits": {
-            "Desert Colossus": "True",
+            "Desert Colossus From Spirit Lobby": "True",
             "Spirit Temple First Child Room": "is_child",
             "Spirit Temple Lobby East": "is_adult and 'Spirit Temple Room 0 Heavy Block'",
             "Spirit Temple Shortcut Room South": "is_adult and 'Spirit Temple Elevator'"

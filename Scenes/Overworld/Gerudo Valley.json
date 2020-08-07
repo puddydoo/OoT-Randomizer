@@ -11,16 +11,16 @@
         },
         "exits": {
             "Hyrule Field": "True",
-            "GV Stream": "True",
+            "GV Upper Stream": "True",
             "GV Crate Ledge": "is_child or can_use(Longshot)",
-            "GV Octorok Grotto": "can_use(Silver_Gauntlets)",
+            "GV Grotto Ledge": "can_use(Silver_Gauntlets)",
             "GV Fortress Side": "
                 is_adult and 
                 (can_ride_epona or can_use(Longshot) or gerudo_fortress == 'open' or 'Carpenter Rescue')"
         }
     },
     {
-        "region_name": "GV Stream",
+        "region_name": "GV Upper Stream",
         "scene": "Gerudo Valley",
         "room": "0",
         "hint": "Gerudo Valley",
@@ -34,7 +34,28 @@
             "Bean Plant Fairy": "can_plant_bean and can_play(Song_of_Storms) and has_bottle"
         },
         "exits": {
+            "GV Lower Stream": "True"
+        }
+    },
+    {
+        "region_name": "GV Lower Stream",
+        "scene": "Gerudo Valley",
+        "room": "0",
+        "hint": "Gerudo Valley",
+        "time_passes": true,
+        "exits": {
             "Lake Hylia": "True"
+        }
+    },
+    {
+        "region_name": "GV Grotto Ledge",
+        "scene": "Gerudo Valley",
+        "hint": "Gerudo Valley",
+        "time_passes": true,
+        "exits": {
+            "GV Lower Stream": "True",
+            "GV Octorok Grotto": "can_use(Silver_Gauntlets)",
+            "GV Crate Ledge": "can_use(Longshot)"
         }
     },
     {
@@ -45,6 +66,9 @@
         "time_passes": true,
         "locations": {
             "GV Crate Freestanding PoH": "True"
+        },
+        "exits": {
+            "GV Lower Stream": "True"
         }
     },
     {
@@ -63,7 +87,7 @@
         },
         "exits": {
             "Gerudo Fortress": "True",
-            "GV Stream": "True",
+            "GV Upper Stream": "True",
             "GV Crate Ledge": "
                 logic_valley_crate_hovers and can_use(Hover_Boots) and
                 (damage_multiplier != 'ohko' or Fairy or can_use(Nayrus_Love))",
@@ -73,5 +97,5 @@
             "GV Carpenter Tent": "is_adult", # Invisible as child so not in logic
             "GV Storms Grotto": "is_adult and can_open_storm_grotto" # Not there as child
         }
-    },
+    }
 ]

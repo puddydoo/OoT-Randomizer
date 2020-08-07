@@ -50,11 +50,21 @@
         "region_name": "ZD Behind King Zora",
         "scene": "Zoras Domain",
         "room": "0",
+        "hint": "Zora's Domain",
         "exits": {
             "ZD King Zoras Chamber": "
                 Deliver_Letter or zora_fountain == 'open' or
                 (zora_fountain == 'adult' and is_adult)",
             "Zoras Fountain": "True"
+        }
+    },
+    {
+        "region_name": "ZD Eyeball Frog Timeout",
+        "scene": "Zoras Domain",
+        "room": "0",
+        "hint": "Zora's Domain",
+        "exits": {
+            "ZD King Zoras Chamber": "True"
         }
     }
 ]

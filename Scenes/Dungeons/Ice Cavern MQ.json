@@ -4,7 +4,7 @@
         "dungeon": "Ice Cavern",
         "room": "0",
         "exits": {
-            "Zoras Fountain": "True",
+            "ZF Ice Ledge": "True",
             "Ice Cavern Lobby": "True"
         }
     },

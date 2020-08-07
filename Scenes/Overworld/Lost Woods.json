@@ -2,6 +2,7 @@
     {
         "region_name": "LW Forest Exit",
         "scene": "Lost Woods",
+        "hint": "the Lost Woods",
         "exits": {
             "Kokiri Forest": "True"
         }
@@ -31,6 +32,15 @@
         "exits": {
             "LW Start Square": "True",
             "LW Around Bridge": "True"
+        }
+    },
+    {
+        "region_name": "Lost Woods Mushroom Timeout",
+        "scene": "Lost Woods",
+        "room": "9",
+        "hint": "the Lost Woods",
+        "exits": {
+            "LW Grog Meadow": "True"
         }
     },
     {

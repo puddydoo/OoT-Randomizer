@@ -67,6 +67,7 @@
                 (can_use(Hover_Boots) and logic_zora_with_hovers) or
                 (is_child and logic_zora_with_cucco) or
                 (mm_ice_arrows and can_use(Ice_Arrows))"
+            #Cucco is from previous room
         }
     },
     {
@@ -78,6 +79,15 @@
         "exits": {
             "ZR Waterfall Area": "True",
             "Zoras Domain": "True"
+        }
+    },
+    {
+        "region_name": "ZR Top of Waterfall",
+        "scene": "Zora River",
+        "room": "1",
+        "hint": "Zora's River",
+        "exits": {
+            "ZR Waterfall Area": "True"
         }
     }
 ]

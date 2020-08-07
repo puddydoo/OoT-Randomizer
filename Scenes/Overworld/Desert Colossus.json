@@ -7,7 +7,6 @@
         "time_passes": true,
         "locations": {
             "Colossus Freestanding PoH": "is_adult and here(can_plant_bean)",
-            "Sheik at Colossus": "True",
             "Colossus GS Bean Patch": "can_plant_bugs and can_child_attack",
             "Colossus GS Tree": "can_use(Hookshot) and at_night",
             "Colossus GS Hill": "
@@ -26,6 +25,17 @@
             "Colossus Grotto": "can_use(Silver_Gauntlets)",
             "Spirit Temple Outdoor Right Hand": "False",
             "Spirit Temple Outdoor Left Hand": "False"
+        }
+    },
+    {
+        "region_name": "Desert Colossus From Spirit Lobby",
+        "scene": "Desert Colossus",
+        "hint": "Desert Colossus",
+        "locations": {
+            "Sheik at Colossus": "True"
+        },
+        "exits": {
+            "Desert Colossus": "True"
         }
     }
 ]

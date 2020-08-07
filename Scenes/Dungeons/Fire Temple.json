@@ -4,7 +4,7 @@
         "dungeon": "Fire Temple",
         "room": "0",
         "exits": {
-            "Fire Temple Entrance": "True",
+            "DMC Fire Temple Entrance": "True",
             "Fire Temple Entrance Chamber North": "True",
             "Fire Temple Combat Room": "here(can_use(Megaton_Hammer)) and Small_Key_Fire_Temple",
             "Fire Temple Two-Sided Cell South": "True"

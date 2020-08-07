@@ -67,7 +67,7 @@
             "DMC Lower Nearby": "True",
             "DMC Ladder Area Nearby": "True",
             "DMC Central Nearby": "can_use(Hover_Boots) or can_use(Hookshot)",
-            "Fire Temple Entrance": "
+            "DMC Outside Fire Temple Entrance": "
                 (can_use(Hover_Boots) or can_use(Hookshot)) and
                 (logic_fewer_tunic_requirements or can_use(Goron_Tunic))"
         }
@@ -103,18 +103,39 @@
                 is_adult and
                 (can_use(Hover_Boots) or can_use(Hookshot) or here(can_plant_bean))",
             "DMC Upper Nearby": "is_adult and here(can_plant_bean)",
-            "Fire Temple Entrance": "
+            "DMC Outside Fire Temple Entrance": "
                 (is_child and shuffle_dungeon_entrances) or
                 (is_adult and (logic_fewer_tunic_requirements or can_use(Goron_Tunic)))"
         }
     },
-    {
-        "region_name": "Fire Temple Entrance",
+	{
+        "region_name": "DMC Outside Fire Temple Entrance",
+        "scene": "Death Mountain Crater",
+        "room": "1",
+        "hint": "Death Mountain Crater",
+        "exits": {
+            "DMC Fire Temple Entrance Top": "True",
+            "DMC Central Nearby": "can_use(Goron_Tunic)"
+        }
+    },
+	{
+        "region_name": "DMC Fire Temple Entrance Top",
         "scene": "Death Mountain Crater",
         "room": "0",
         "hint": "Death Mountain Crater",
         "exits": {
-            "Fire Temple Entrance Chamber": "True"
+            "DMC Fire Temple Entrance": "True",
+            "DMC Outside Fire Temple Entrance": "True"
+        }
+    },
+    {
+        "region_name": "DMC Fire Temple Entrance",
+        "scene": "Death Mountain Crater",
+        "room": "0",
+        "hint": "Death Mountain Crater",
+        "exits": {
+            "Fire Temple Entrance Chamber": "True",
+            "DMC Fire Temple Entrance Top": "(logic_fewer_tunic_requirements or can_use(Goron_Tunic))"
         }
     }
 ]

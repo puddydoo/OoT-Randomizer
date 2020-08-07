@@ -1,6 +1,7 @@
 [
     {
         "region_name": "GF Storms Grotto",
+        "scene": "GF Storms Grotto",
         "room": "0",
         "locations": {
             "Free Fairies": "has_bottle"
@@ -11,6 +12,7 @@
     },
     {
         "region_name": "ZD Storms Grotto",
+        "scene": "ZD Storms Grotto",
         "room": "0",
         "locations": {
             "Free Fairies": "has_bottle"
@@ -21,6 +23,7 @@
     },
     {
         "region_name": "SFM Fairy Grotto",
+        "scene": "SFM Fairy Grotto",
         "room": "0",
         "locations": {
             "Free Fairies": "has_bottle"
@@ -31,6 +34,7 @@
     },
     {
         "region_name": "HF Fairy Grotto",
+        "scene": "HF Fairy Grotto",
         "room": "0",
         "locations": {
             "Free Fairies": "has_bottle"
@@ -41,6 +45,7 @@
     },
     {
         "region_name": "ZR Fairy Grotto",
+        "scene": "ZR Fairy Grotto",
         "room": "0",
         "locations": {
             "Free Fairies": "has_bottle"
@@ -48,5 +53,5 @@
         "exits": {
             "Zora River": "True"
         }
-    },
+    }
 ]

@@ -3,6 +3,7 @@
         "region_name": "Wasteland Near Fortress",
         "scene": "Haunted Wasteland",
         "room": "1",
+        "hint": "Haunted Wasteland",
         "exits": {
             "GF Outside Gate": "True",
             "Haunted Wasteland": "
@@ -20,7 +21,7 @@
                 (is_adult or Sticks or Kokiri_Sword)"
         },
         "exits": {]
-            "Wasteland Underground Structure": "True",
+            "Wasteland Underground": "True",
             "Wasteland Near Colossus": "logic_lens_wasteland or can_use(Lens_of_Truth)",
             "Wasteland Near Fortress": "
                 logic_wasteland_crossing or can_use(Hover_Boots) or can_use(Longshot)"
@@ -30,15 +31,17 @@
         "region_name": "Wasteland Near Colossus",
         "scene": "Haunted Wasteland",
         "room": "1",
+        "hint": "Haunted Wasteland",
         "exits": {
             "Desert Colossus": "True",
             "Haunted Wasteland": "logic_reverse_wasteland"
         }
     },
     {
-        "region_name": "Wasteland Underground Structure",
+        "region_name": "Wasteland Underground",
         "scene": "Haunted Wasteland",
         "room": "0",
+        "hint": "Haunted Wasteland",
         "locations": {
             "Wasteland Chest": "has_fire_source",
             "Wasteland GS": "can_use(Hookshot) or can_use(Boomerang)",

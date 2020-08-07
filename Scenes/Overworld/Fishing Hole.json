@@ -7,7 +7,7 @@
             "LH Adult Fishing": "is_adult"
         },
         "exits": {
-            "LH Fishing Hole Entrance": "True"
+            "LH Fishing Island": "True"
         }
     }
 ]

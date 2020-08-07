@@ -4,7 +4,7 @@
         "dungeon": "Fire Temple",
         "room": "0",
         "exits": {
-            "Fire Temple Entrance": "True",
+            "DMC Fire Temple Entrance": "True",
             "Fire Temple Entrance Chamber North": "can_climb(100) or can_use(Hookshot)",
             "Fire Temple Combat Room": "Small_Key_Fire_Temple",
             "Fire Temple Two-Sided Cell South": "True"

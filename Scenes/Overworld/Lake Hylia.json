@@ -30,7 +30,7 @@
             "LH Lab": "True",
             "LH Lab Roof": "
                 is_adult and (can_use(Scarecrow) or here(can_plant_bean))",
-            "LH Fishing Hole Entrance": "
+            "LH Fishing Island": "
                 is_child or can_use(Scarecrow) or
                 here(can_plant_bean) or 'Water Temple Clear'",
             "LH Sun Island": "is_child or can_use(Distant_Scarecrow) or 'Water Temple Clear'",
@@ -47,6 +47,7 @@
         "region_name": "LH Owl Flight",
         "scene": "Lake Hylia",
         "room": "0",
+        "hint": "Lake Hylia",
         "exits": {
             "Hyrule Field": "True"
         }

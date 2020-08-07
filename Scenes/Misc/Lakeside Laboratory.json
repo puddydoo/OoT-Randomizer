@@ -1,6 +1,7 @@
 [
     {
         "region_name": "LH Lab",
+        "scene": "LH Lab",
         "room": "0",
         "events": {
             "Eyedrops Access": "

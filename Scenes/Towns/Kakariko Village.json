@@ -38,13 +38,13 @@
             "Kak Redead Grotto": "can_open_bomb_grotto",
             "Kak Impas Ledge": "
                 (is_child and at_day) or (is_adult and logic_visible_collisions) or can_use(Hookshot)",
-            "Kak Rooftop": "
+            "Kak Odd Medicine Rooftop": "
                 can_use(Hookshot) or 
                 (logic_man_on_roof and 
                     (is_adult or at_day or Slingshot or has_bombchus or 
                         (logic_kakariko_tower_gs and (Sticks or Kokiri_Sword) and
                             (damage_multiplier != 'ohko' or Fairy or can_use(Nayrus_Love)))))",
-            "Kak Backyard": "is_adult or (is_child and at_day)",
+            "Kak Backyard": "is_adult and at_day",
             "Graveyard": "True",
             "Kak Behind Gate": "is_adult or 'Kakariko Village Gate Open'"
         }
@@ -60,7 +60,7 @@
         }
     },
     {
-        "region_name": "Kak Rooftop",
+        "region_name": "Kak Odd Medicine Rooftop",
         "scene": "Kakariko Village",
         "room": "0",
         "hint": "Kakariko Village",
@@ -68,6 +68,7 @@
             "Kak Man on Roof": "True"
         },
         "exits": {
+            "Kakariko Village": "True",
             "Kak Backyard": "True"
         }
     },

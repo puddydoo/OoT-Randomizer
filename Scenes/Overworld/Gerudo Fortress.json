@@ -209,11 +209,7 @@
         "region_name": "GF Outside Gate",
         "scene": "Gerudo Fortress",
         "room": "0",
-        "events": {
-            "GF Gate Open": "
-                is_adult and Gerudo_Membership_Card and
-                (shuffle_gerudo_card or shuffle_overworld_entrances or shuffle_special_indoor_entrances)"
-        },
+        "hint": "Gerudo's Fortress",
         "exits": {
             "Gerudo Fortress": "is_adult or (shuffle_overworld_entrances and 'GF Gate Open')",
             "Wasteland Near Fortress": "True"

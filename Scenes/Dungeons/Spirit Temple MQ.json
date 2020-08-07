@@ -17,7 +17,7 @@
             "Spirit Temple MQ Entrance Front Right Chest": "'Spirit Temple Room 0 Silver Rupees'"
         },
         "exits": {
-            "Desert Colossus": "True",
+            "Desert Colossus From Spirit Lobby": "True",
             "Spirit Temple First Child Room": "is_child",
             "Spirit Temple Lobby East": "False",
             "Spirit Temple Shortcut Room South": "'Spirit Temple Room 0 Ceiling Rock' and can_use(Longshot)"
