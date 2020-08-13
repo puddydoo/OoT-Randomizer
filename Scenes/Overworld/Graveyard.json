@@ -32,7 +32,7 @@
         "locations": {
             "Graveyard Freestanding PoH": "true"
                 (is_adult and (here(can_plant_bean) or can_use(Longshot))) or
-                (logic_graveyard_poh and can_use(Boomerang))",
+                (logic_graveyard_poh and can_use(Boomerang))"
         },
         "exits": {
             "Graveyard": "True"
@@ -49,7 +49,7 @@
         },
         "exits": {
             "Graveyard": "True",
-            "Graveyard Temple Entrance": "True",
+            "Graveyard Temple Entrance": "True"
         }
     },
     {

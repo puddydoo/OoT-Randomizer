@@ -2,7 +2,7 @@
     {
         "region_name": "Graveyard Dampes Grave",
         "scene": "Windmill and Dampes Grave",
-        "room": "0",
+        "room": "00",
         "locations": {
             "Nut Pot": "True"
         },
@@ -14,7 +14,7 @@
     {
         "region_name": "Grave Relay Checkpoint 1",
         "scene": "Windmill and Dampes Grave",
-        "room": "1",
+        "room": "01",
         "exits": {
             "Graveyard Dampes Grave": "False",
             "Grave Relay Checkpoint 2": "True"
@@ -23,7 +23,7 @@
     {
         "region_name": "Grave Relay Checkpoint 2",
         "scene": "Windmill and Dampes Grave",
-        "room": "2",
+        "room": "02",
         "exits": {
             "Grave Relay Checkpoint 1": "False",
             "Grave Relay Checkpoint 3": "True"
@@ -32,7 +32,7 @@
     {
         "region_name": "Grave Relay Checkpoint 3",
         "scene": "Windmill and Dampes Grave",
-        "room": "3",
+        "room": "03",
         "exits": {
             "Grave Relay Checkpoint 2": "False",
             "Grave Relay End Room": "True"
@@ -41,7 +41,7 @@
     {
         "region_name": "Grave Relay End Room",
         "scene": "Windmill and Dampes Grave",
-        "room": "4",
+        "room": "04",
         "locations": {
             "Graveyard Hookshot Chest": "True",
             "Graveyard Dampe Race Freestanding PoH": "is_adult or logic_child_dampe_race_poh"
@@ -54,7 +54,7 @@
     {
         "region_name": "Dampes Time Block Hole",
         "scene": "Windmill and Dampes Grave",
-        "room": "5",
+        "room": "05",
         "exits": {
             "Grave Relay End Room": "False",
             "Grave Windmill Passage": "is_adult and can_play(Song_of_Time)"
@@ -63,7 +63,7 @@
     {
         "region_name": "Grave Windmill Passage",
         "scene": "Windmill and Dampes Grave",
-        "room": "5",
+        "room": "05",
         "exits": {
             "Dampes Time Block Hole": "True",
             "Kak Windmill Upper": "True"
@@ -72,7 +72,7 @@
     {
         "region_name": "Kak Windmill Upper",
         "scene": "Windmill and Dampes Grave",
-        "room": "6",
+        "room": "06",
         "locations": {
             "Kak Windmill Freestanding PoH": "True"
         },
@@ -84,7 +84,7 @@
     {
         "region_name": "Kak Windmill",
         "scene": "Windmill and Dampes Grave",
-        "room": "6",
+        "room": "06",
         "events": {
             "Drain Well": "is_child and can_play(Song_of_Storms)"
         },

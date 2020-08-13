@@ -2,7 +2,7 @@
     {
         "region_name": "Water Temple Lobby 3F Entrance Ledge H",
         "dungeon": "Water Temple",
-        "room": "0",
+        "room": "00",
         "exits": {
             "Lake Hylia": "True",
             "Water Temple Lobby 3F H": "True"
@@ -11,7 +11,7 @@
     {
         "region_name": "Water Temple Lobby 3F Entrance Ledge M",
         "dungeon": "Water Temple",
-        "room": "0",
+        "room": "00",
         "exits": {
             "Lake Hylia": "True",
             "Water Temple Lobby 3F M": "can_use(Hookshot) or can_use(Hover_Boots)"
@@ -20,7 +20,7 @@
     {
         "region_name": "Water Temple Lobby 3F Entrance Ledge L",
         "dungeon": "Water Temple",
-        "room": "0",
+        "room": "00",
         "exits": {
             "Lake Hylia": "True",
             "Water Temple Lobby 3F L": "can_use(Hookshot) or can_use(Hover_Boots)"
@@ -29,7 +29,7 @@
     {
         "region_name": "Water Temple Lobby 3F H",
         "dungeon": "Water Temple",
-        "room": "0",
+        "room": "00",
         "exits": {
             "Water Temple Lobby 2F H": "can_use(Iron_Boots)",
             "Water Temple Lobby 1F H": "can_use(Iron_Boots)",
@@ -43,13 +43,13 @@
             "Water Temple Lobby 2F East Tunnel H": "can_dive or can_use(Iron_Boots)",
             "Water Temple Lobby 2F Behind Grate H": "(Progressive_Scale, 2) and can_press_floor_switch",
             "Water Temple Lobby Outer Floating Platform H": "True",
-            "Water Temple Ruto Meeting Room 1F H": "False"
+            "Water Temple Ruto Meeting Room 1F H": "False and transition('Water Temple T01', True)"
         }
     },
     {
         "region_name": "Water Temple Lobby 3F M",
         "dungeon": "Water Temple",
-        "room": "0",
+        "room": "00",
         "exits": {
             "Water Temple Lobby 2F M": "True",
             "Water Temple Lobby 1F M": "can_use(Iron_Boots)",
@@ -61,13 +61,13 @@
             "Water Temple Lobby 2F East Tunnel M": "True",
             "Water Temple Lobby 2F Behind Grate M": "can_press_floor_switch",
             "Water Temple Lobby Outer Floating Platform M": "True",
-            "Water Temple Ruto Meeting Room 1F M": "False"
+            "Water Temple Ruto Meeting Room 1F M": "False and transition('Water Temple T01', True)"
         }
     },
     {
         "region_name": "Water Temple Lobby 3F L",
         "dungeon": "Water Temple",
-        "room": "0",
+        "room": "00",
         "exits": {
             "Water Temple Lobby 2F L": "True",
             "Water Temple Lobby 1F L": "True",
@@ -79,42 +79,43 @@
             "Water Temple Lobby 2F East Tunnel L": "True",
             "Water Temple Lobby 2F Behind Grate L": "can_press_floor_switch",
             "Water Temple Lobby Outer Floating Platform L": "True",
-            "Water Temple Ruto Meeting Room 1F L": "False"
+            "Water Temple Ruto Meeting Room 1F L": "False and transition('Water Temple T01', True)"
         }
     },
     {
         "region_name": "Water Temple Lobby Outer Floating Platform H",
         "dungeon": "Water Temple",
-        "room": "0",
+        "room": "00",
         "exits": {
-            "Water Temple Falling Platform Room": "Small_Key_Water_Temple",
+            "Water Temple Falling Platform Room": "transition('Water Temple T09', True)",
             "Water Temple Lobby 3F H": "True"
         }
     },
     {
         "region_name": "Water Temple Lobby Outer Floating Platform M",
         "dungeon": "Water Temple",
-        "room": "0",
+        "room": "00",
         "exits": {
             "Water Temple Water Elevator 2F M": "
+			    transition('Water Temple T18',
                 at('Water Temple Spike Tunnel M', can_use(Hookshot) and 'Water Temple M') 
-                or can_hold_down_switch or barred_door",
+                or can_hold_down_switch or 'Water Temple MQ Room 00 T18 Unbar')",
             "Water Temple Lobby 2F M": "True"
         }
     },
     {
         "region_name": "Water Temple Lobby Outer Floating Platform L",
         "dungeon": "Water Temple",
-        "room": "0",
+        "room": "00",
         "exits": {
-            "Water Temple Lobby 1F West Corridor L": "'Water Temple Room 0 1F West Switch'",
+            "Water Temple Lobby 1F West Corridor L": "'Water Temple Room 00 1F West Switch'",
             "Water Temple Lobby 1F L": "True"
         }
     },
     {
         "region_name": "Water Temple Lobby 3F Lullaby Ledge H",
         "dungeon": "Water Temple",
-        "room": "0",
+        "room": "00",
         "events": {
             "Water Temple H": "
                 'Water Temple HML Loop' or 'Water Temple LMH Loop' or
@@ -122,13 +123,14 @@
         },
         "exits": {
             "Water Temple Lobby 3F H": "True",
-            "Water Temple Water Elevator 3F H": "barred_door"
+            "Water Temple Water Elevator 3F H": "
+			    transition('Water Temple T25', 'Water Temple MQ Room 00 T25 Unbar')"
         }
     },
     {
         "region_name": "Water Temple Lobby 3F Lullaby Ledge M",
         "dungeon": "Water Temple",
-        "room": "0",
+        "room": "00",
         "events": {
             "Water Temple MH": "can_play(Zeldas_Lullaby)",
             "Water Temple HM Loop": "'Water Temple MH' and 'Water Temple HM'",
@@ -137,13 +139,14 @@
         "exits": {
             "Water Temple Lobby 3F Lullaby Ledge H": "can_play(Zeldas_Lullaby)",
             "Water Temple Lobby 3F M": "True",
-            "Water Temple Water Elevator 3F M": "barred_door"
+            "Water Temple Water Elevator 3F M": "
+			    transition('Water Temple T25', 'Water Temple MQ Room 00 T25 Unbar')"
         }
     },
     {
         "region_name": "Water Temple Lobby 3F Lullaby Ledge L",
         "dungeon": "Water Temple",
-        "room": "0",
+        "room": "00",
         "events": {
             "Water Temple LH": "can_play(Zeldas_Lullaby)",
             "Water Temple HL Loop": "'Water Temple LH' and 'Water Temple HL'",
@@ -152,76 +155,79 @@
         "exits": {
             "Water Temple Lobby 3F Lullaby Ledge H": "can_play(Zeldas_Lullaby)",
             "Water Temple Lobby 3F L": "True",
-            "Water Temple Water Elevator 3F L": "barred_door"
+            "Water Temple Water Elevator 3F L": "
+			    transition('Water Temple T25', 'Water Temple MQ Room 00 T25 Unbar')"
         }
     },
     {
         "region_name": "Water Temple Lobby 3F Boss Ledge H",
         "dungeon": "Water Temple",
-        "room": "0",
+        "room": "00",
         "exits": {
             "Water Temple Lobby 3F H": "True",
-            "Water Temple Hall to Boss": "True"
+            "Water Temple Hall to Boss": "transition('Water Temple T17', True)"
         }
     },
     {
         "region_name": "Water Temple Lobby 3F Boss Ledge M",
         "dungeon": "Water Temple",
-        "room": "0",
+        "room": "00",
         "exits": {
             "Water Temple Lobby 3F M": "can_use(Longshot)",
-            "Water Temple Hall to Boss": "True"
+            "Water Temple Hall to Boss": "transition('Water Temple T17', True)"
         }
     },
     {
         "region_name": "Water Temple Lobby 3F Boss Ledge L",
         "dungeon": "Water Temple",
-        "room": "0",
+        "room": "00",
         "exits": {
             "Water Temple Lobby 3F L": "can_use(Longshot)",
-            "Water Temple Hall to Boss": "True"
+            "Water Temple Hall to Boss": "transition('Water Temple T17', True)"
         }
     },
     {
         "region_name": "Water Temple Lobby 3F East Ledge H",
         "dungeon": "Water Temple",
-        "room": "0",
+        "room": "00",
         "exits": {
             "Water Temple Lobby 3F H": "can_press_floor_switch",
-            "Water Temple Grate Passage North H": "True"
+            "Water Temple Grate Passage North H": "transition('Water Temple T03', True)"
         }
     },
     {
         "region_name": "Water Temple Lobby 3F East Ledge M",
         "dungeon": "Water Temple",
-        "room": "0",
+        "room": "00",
         "exits": {
             "Water Temple Lobby 3F M": "
                 can_press_floor_switch and (can_use(Hookshot) or can_use(Hover_Boots))",
             "Water Temple Lobby 2F M": "True",
-            "Water Temple Grate Passage North M": "True"
+            "Water Temple Grate Passage North M": "transition('Water Temple T03', True)"
         }
     },
     {
         "region_name": "Water Temple Lobby 3F East Ledge L",
         "dungeon": "Water Temple",
-        "room": "0",
+        "room": "00",
         "exits": {
             "Water Temple Lobby 3F L": "
                 can_press_floor_switch and (can_use(Hookshot) or can_use(Hover_Boots))",
             "Water Temple Lobby 2F L": "True",
-            "Water Temple Grate Passage North L": "True"
+            "Water Temple Grate Passage North L": "transition('Water Temple T03', True)"
         }
     },
     {
         "region_name": "Water Temple Lobby 2F H",
         "dungeon": "Water Temple",
-        "room": "0",
+        "room": "00",
         "exits": {
             "Water Temple Lobby 3F H": "True"
             "Water Temple Lobby 1F H": "can_use(Iron_Boots)"
-            "Water Temple Inner Tower 2F H": "can_use(Iron_Boots)",
-            "Water Temple Inner Tower 1F H": "False",
+            "Water Temple Inner Tower 2F H": "
+			    can_use(Iron_Boots) and transition('Water Temple T16',
+				'Water Temple MQ Room 00 T16 Unbar')",
+            "Water Temple Inner Tower 1F H": "False and transition('Water Temple T15', True)",
             "Water Temple Lobby 3F Lullaby Ledge H": "can_use(Iron_Boots) and can_use(Longshot)",
             "Water Temple Lobby 2F East Tunnel H": "can_use(Iron_Boots)",
             "Water Temple Lobby 2F Behind Grate H": "can_use(Iron_Boots) and can_press_floor_switch",
@@ -231,12 +237,12 @@
     {
         "region_name": "Water Temple Lobby 2F M",
         "dungeon": "Water Temple",
-        "room": "0",
+        "room": "00",
         "exits": {
             "Water Temple Lobby 3F M": "False",
             "Water Temple Lobby 1F M": "can_use(Iron_Boots)",
-            "Water Temple Inner Tower 2F M": "True",
-            "Water Temple Inner Tower 1F M": "False",
+            "Water Temple Inner Tower 2F M": "transition('Water Temple T16', True)",
+            "Water Temple Inner Tower 1F M": "False and transition('Water Temple T15', True)",
             "Water Temple Lobby 3F Lullaby Ledge M": "can_use(Longshot)",
             "Water Temple Lobby 2F East Tunnel M": "True",
             "Water Temple Lobby 2F Behind Grate M": "can_press_floor_switch",
@@ -246,12 +252,12 @@
     {
         "region_name": "Water Temple Lobby 2F L",
         "dungeon": "Water Temple",
-        "room": "0",
+        "room": "00",
         "exits": {
             "Water Temple Lobby 3F L": "False",
             "Water Temple Lobby 1F L": "True",
-            "Water Temple Inner Tower 2F L": "True",
-            "Water Temple Inner Tower 1F L": "True",
+            "Water Temple Inner Tower 2F L": "transition('Water Temple T16', True)",
+            "Water Temple Inner Tower 1F L": "transition('Water Temple T15', True)",
             "Water Temple Lobby 3F Lullaby Ledge L": "can_use(Longshot)",
             "Water Temple Lobby 2F East Tunnel L": "True",
             "Water Temple Lobby 2F Behind Grate L": "
@@ -260,15 +266,15 @@
         }
     },
     {
-        #When the water is high, Room 0 can access the tunnel with just Silver Scale.
+        #When the water is high, Room 00 can access the tunnel with just Silver Scale.
         #However, the ceiling raises shortly before the transition to Room 4.
-        #This means that when "entering" Room 0 from the Room 4 exit at high water,
+        #This means that when "entering" Room 00 from the Room 04 exit at high water,
         #you start in a flooded nook and need Iron Boots to access the rest of Room 0.
         "region_name": "Water Temple Lobby 2F East Tunnel H",
         "dungeon": "Water Temple",
-        "room": "0",
+        "room": "00",
         "exits": {
-            "Water Temple Spike Tunnel H": "True"
+            "Water Temple Spike Tunnel H": "transition('Water Temple T02', True)",
             "Water Temple Lobby 2F H": "
                 can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)"
         }
@@ -276,9 +282,9 @@
     {
         "region_name": "Water Temple Lobby 2F East Tunnel M",
         "dungeon": "Water Temple",
-        "room": "0",
+        "room": "00",
         "exits": {
-            "Water Temple Spike Tunnel M": "True",
+            "Water Temple Spike Tunnel M": "transition('Water Temple T02', True)",
             "Water Temple Lobby 2F M": "True",
             "Water Temple Lobby 3F M": "can_use(Hookshot)"
         }
@@ -286,9 +292,9 @@
     {
         "region_name": "Water Temple Lobby 2F East Tunnel L",
         "dungeon": "Water Temple",
-        "room": "0",
+        "room": "00",
         "exits": {
-            "Water Temple Spike Tunnel L": "True",
+            "Water Temple Spike Tunnel L": "transition('Water Temple T02', True)",
             "Water Temple Lobby 2F L": "True",
             "Water Temple Lobby 3F L": "can_use(Hookshot)"
         }
@@ -296,48 +302,49 @@
     {
         "region_name": "Water Temple Lobby 2F Behind Grate H",
         "dungeon": "Water Temple",
-        "room": "0",
+        "room": "00",
         "exits": {
-            "Water Temple Grate Passage West H": "True",
+            "Water Temple Grate Passage West H": "transition('Water Temple T05', True)",
             "Water Temple Lobby 2F H": "False"
         }
     },
     {
         "region_name": "Water Temple Lobby 2F Behind Grate M",
         "dungeon": "Water Temple",
-        "room": "0",
+        "room": "00",
         "exits": {
-            "Water Temple Grate Passage West M": "True",
+            "Water Temple Grate Passage West M": "transition('Water Temple T05', True)",
             "Water Temple Lobby 2F L": "False"
         }
     },
     {
         "region_name": "Water Temple Lobby 2F Behind Grate L",
         "dungeon": "Water Temple",
-        "room": "0",
+        "room": "00",
         "exits": {
-            "Water Temple Grate Passage West L": "True",
+            "Water Temple Grate Passage West L": "transition('Water Temple T05', True)",
             "Water Temple Lobby 2F L": "False"
         }
     },
     {
         "region_name": "Water Temple Lobby 1F H",
         "dungeon": "Water Temple",
-        "room": "0",
+        "room": "00",
         "exits": {
             "Water Temple Lobby 3F H": "True",
             "Water Temple Lobby 2F H": "can_use(Iron_Boots)",
-            "Water Temple Inner Tower 1F H": "False",
+            "Water Temple Inner Tower 1F H": "False and transition('Water Temple T15', True)",
             "Water Temple Ruto Meeting Room 1F H": "
-                can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)",
+                can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)
+				and transition('Water Temple T01', True)",
             "Water Temple Lobby 1F West Corridor H": "
-                'Water Temple Room 0 1F West Switch' and can_use(Iron_Boots)
+                'Water Temple Room 00 1F West Switch' and can_use(Iron_Boots)
                 and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)",
             "Water Temple Lobby 1F South Corridor H": "
-                'Water Temple Room 0 1F West Switch' and can_use(Iron_Boots)
+                'Water Temple Room 00 1F West Switch' and can_use(Iron_Boots)
                 and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)",
             "Water Temple Lobby 1F North Basement Access H": "
-                'Water Temple Room 0 1F West Switch' and can_use(Iron_Boots)
+                'Water Temple Room 00 1F West Switch' and can_use(Iron_Boots)
                 and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)",
             "Water Temple Lobby Outer Floating Platform H": "False"
         }
@@ -345,21 +352,22 @@
     {
         "region_name": "Water Temple Lobby 1F M",
         "dungeon": "Water Temple",
-        "room": "0",
+        "room": "00",
         "exits": {
             "Water Temple Lobby 3F M": "False",
             "Water Temple Lobby 2F M": "True",
-            "Water Temple Inner Tower 1F M": "False",
+            "Water Temple Inner Tower 1F M": "False and transition('Water Temple T15', True)",
             "Water Temple Ruto Meeting Room 1F M": "
-                can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)",
+                can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)
+				and transition('Water Temple T01', True)",
             "Water Temple Lobby 1F West Corridor M": "
-                'Water Temple Room 0 1F West Switch' and can_use(Iron_Boots)
+                'Water Temple Room 00 1F West Switch' and can_use(Iron_Boots)
                 and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)",
             "Water Temple Lobby 1F South Corridor M": "
-                'Water Temple Room 0 1F West Switch' and can_use(Iron_Boots)
+                'Water Temple Room 00 1F West Switch' and can_use(Iron_Boots)
                 and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)",
             "Water Temple Lobby 1F North Basement Access M": "
-                'Water Temple Room 0 1F West Switch' and can_use(Iron_Boots)
+                'Water Temple Room 00 1F West Switch' and can_use(Iron_Boots)
                 and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)",
             "Water Temple Lobby Outer Floating Platform M": "False"
         }
@@ -367,51 +375,51 @@
     {
         "region_name": "Water Temple Lobby 1F L",
         "dungeon": "Water Temple",
-        "room": "0",
+        "room": "00",
         "exits": {
             "Water Temple Lobby 3F L": "False",
             "Water Temple Lobby 2F L": "can_use(Hookshot) and (can_climb(70) or can_use(Longshot))",
-            "Water Temple Inner Tower 1F L": "can_climb(50)",
-            "Water Temple Ruto Meeting Room 1F L": "True",
+            "Water Temple Inner Tower 1F L": "can_climb(50) and transition('Water Temple T15', True)",
+            "Water Temple Ruto Meeting Room 1F L": "transition('Water Temple T01', True)",
             "Water Temple Lobby 1F West Corridor L": "False",
-            "Water Temple Lobby 1F South Corridor L": "'Water Temple Room 0 1F West Switch'",
-            "Water Temple Lobby 1F North Basement Access L": "'Water Temple Room 0 1F West Switch'",
+            "Water Temple Lobby 1F South Corridor L": "'Water Temple Room 00 1F West Switch'",
+            "Water Temple Lobby 1F North Basement Access L": "'Water Temple Room 00 1F West Switch'",
             "Water Temple Lobby Outer Floating Platform H": "can_climb(70)"
         }
     },
     {
         "region_name": "Water Temple Lobby 1F West Corridor H",
         "dungeon": "Water Temple",
-        "room": "0",
+        "room": "00",
         "events": {
-            "Water Temple Room 0 1F West Switch": "'Water Temple H' and can_use(Iron_Boots) and can_press_floor_switch",
+            "Water Temple Room 00 1F West Switch": "'Water Temple H' and can_use(Iron_Boots) and can_press_floor_switch"
         },
         "exits": {
-            "Water Temple Lobby Outer Floating Platform H": "'Water Temple Room 0 1F West Switch'",
+            "Water Temple Lobby Outer Floating Platform H": "'Water Temple Room 00 1F West Switch'",
             "Water Temple Lobby B1 West Corridor H": "can_use(Iron_Boots)"
         }
     },
     {
         "region_name": "Water Temple Lobby 1F West Corridor M",
         "dungeon": "Water Temple",
-        "room": "0",
+        "room": "00",
         "events": {
-            "Water Temple Room 0 1F West Switch": "'Water Temple M' and can_use(Iron_Boots) and can_press_floor_switch",
+            "Water Temple Room 00 1F West Switch": "'Water Temple M' and can_use(Iron_Boots) and can_press_floor_switch"
         },
         "exits": {
-            "Water Temple Lobby Outer Floating Platform M": "'Water Temple Room 0 1F West Switch'",
+            "Water Temple Lobby Outer Floating Platform M": "'Water Temple Room 00 1F West Switch'",
             "Water Temple Lobby B1 West Corridor M": "can_use(Iron_Boots)"
         }
     },
     {
         "region_name": "Water Temple Lobby 1F West Corridor L",
         "dungeon": "Water Temple",
-        "room": "0",
+        "room": "00",
         "events": {
-            "Water Temple Room 0 1F West Switch": "'Water Temple L' and can_press_floor_switch",
+            "Water Temple Room 00 1F West Switch": "'Water Temple L' and can_press_floor_switch"
         },
         "exits": {
-            "Water Temple Lobby Outer Floating Platform L": "'Water Temple Room 0 1F West Switch'",
+            "Water Temple Lobby Outer Floating Platform L": "'Water Temple Room 00 1F West Switch'",
             #Child can dive under without Silver Scale but Adult can't because of height
             "Water Temple Lobby B1 West Corridor L": "
                 can_use(Iron_Boots) or can_dive or is_child"
@@ -420,64 +428,64 @@
     {
         "region_name": "Water Temple Lobby B1 West Corridor H",
         "dungeon": "Water Temple",
-        "room": "0",
+        "room": "00",
         "exits": {
             "Water Temple Lobby 1F West Corridor H": "True",
-            "Water Temple Single Water Jet Gap Room": "True"
+            "Water Temple Single Water Jet Gap Room": "transition('Water Temple T08', True)"
         }
     },
     {
         "region_name": "Water Temple Lobby B1 West Corridor M",
         "dungeon": "Water Temple",
-        "room": "0",
+        "room": "00",
         "exits": {
             "Water Temple Lobby 1F West Corridor M": "can_use(Iron_Boots) and can_use(Hookshot)",
-            "Water Temple Single Water Jet Gap Room": "True"
+            "Water Temple Single Water Jet Gap Room": "transition('Water Temple T08', True)"
         }
     },
     {
         "region_name": "Water Temple Lobby B1 West Corridor L",
         "dungeon": "Water Temple",
-        "room": "0",
+        "room": "00",
         "exits": {
             "Water Temple Lobby 1F West Corridor L": "can_use(Iron_Boots) and can_use(Hookshot)",
-            "Water Temple Single Water Jet Gap Room": "True"
+            "Water Temple Single Water Jet Gap Room": "transition('Water Temple T08', True)"
         }
     },
     {
         "region_name": "Water Temple Lobby 1F South Corridor H",
         "dungeon": "Water Temple",
-        "room": "0",
+        "room": "00",
         "exits": {
-            "Water Temple Lobby 1F H": "'Water Temple Room 0 1F West Switch'",
-            "Water Temple South Basement Tunnel H": "True"
+            "Water Temple Lobby 1F H": "'Water Temple Room 00 1F West Switch'",
+            "Water Temple South Basement Tunnel H": "transition('Water Temple T04', True)"
         }
     },
     {
         "region_name": "Water Temple Lobby 1F South Corridor M",
         "dungeon": "Water Temple",
-        "room": "0",
+        "room": "00",
         "exits": {
-            "Water Temple Lobby 1F M": "'Water Temple Room 0 1F West Switch'",
-            "Water Temple South Basement Tunnel M": "True"
+            "Water Temple Lobby 1F M": "'Water Temple Room 00 1F West Switch'",
+            "Water Temple South Basement Tunnel M": "transition('Water Temple T04', True)"
         }
     },
     {
         "region_name": "Water Temple Lobby 1F South Corridor L",
         "dungeon": "Water Temple",
-        "room": "0",
+        "room": "00",
         "exits": {
-            "Water Temple Lobby 1F L": "'Water Temple Room 0 1F West Switch'",
-            "Water Temple South Basement Tunnel L": "True"
+            "Water Temple Lobby 1F L": "'Water Temple Room 00 1F West Switch'",
+            "Water Temple South Basement Tunnel L": "transition('Water Temple T04', True)"
         }
     },
     {
         "region_name": "Water Temple Lobby 1F North Basement Access",
         "dungeon": "Water Temple",
-        "room": "0",
+        "room": "00",
         "exits": {
-            "Water Temple Lobby 1F": "'Water Temple Room 0 1F West Switch'",
-            "Water Temple North Basement": "
+            "Water Temple Lobby 1F": "'Water Temple Room 00 1F West Switch'",
+            "Water Temple Lobby 1F North Basement": "
                 can_use(Longshot) or (logic_water_boss_key_region and can_use(Hover_Boots))
                 or (mm_ice_arrows and can_use(Ice_Arrows) and can_use(Hookshot))"
         }
@@ -485,18 +493,18 @@
     {
         "region_name": "Water Temple Lobby 1F North Basement",
         "dungeon": "Water Temple",
-        "room": "0",
+        "room": "00",
         "exits": {
             "Water Temple Lobby 1F North Basement Access": "can_use(Longshot)",
-            "Water Temple Whirlpool Room": "True"
+            "Water Temple Whirlpool Room": "transition('Water Temple T10', True)"
         }
     },
     {
         "region_name": "Water Temple Inner Tower 3F H",
         "dungeon": "Water Temple",
-        "room": "1",
+        "room": "01",
         "events": {
-            "Water Temple Room 1 Torches": "can_play(Song_of_Time) and has_fire_source"
+            "Water Temple Room 01 Torches": "can_play(Song_of_Time) and has_fire_source"
         },
         "exits": {
             "Water Temple Inner Tower 2F H": "can_use(Iron_Boots)"
@@ -505,7 +513,7 @@
     {
         "region_name": "Water Temple Inner Tower 3F M",
         "dungeon": "Water Temple",
-        "room": "1",
+        "room": "01",
         "exits": {
             "Water Temple Inner Tower 2F M": "True"
         }
@@ -513,7 +521,7 @@
     {
         "region_name": "Water Temple Inner Tower 3F L",
         "dungeon": "Water Temple",
-        "room": "1",
+        "room": "01",
         "exits": {
             "Water Temple Inner Tower 2F L": "True"
         }
@@ -521,9 +529,9 @@
     {
         "region_name": "Water Temple Inner Tower 2F H",
         "dungeon": "Water Temple",
-        "room": "1",
+        "room": "01",
         "exits": {
-            "Water Temple Lobby 2F H": "can_use(Iron_Boots)",
+            "Water Temple Lobby 2F H": "can_use(Iron_Boots) and transition('Water Temple T16', True)",
             "Water Temple Inner Tower 2F Lullaby Platform H": "can_use(Iron_Boots)",
             "Water Temple Inner Tower 3F H": "True",
             "Water Temple Inner Tower 1F H": "can_use(Iron_Boots)"
@@ -532,9 +540,9 @@
     {
         "region_name": "Water Temple Inner Tower 2F M",
         "dungeon": "Water Temple",
-        "room": "1",
+        "room": "01",
         "exits": {
-            "Water Temple Lobby 2F M": "True",
+            "Water Temple Lobby 2F M": "transition('Water Temple T16', True)",
             "Water Temple Inner Tower 2F Lullaby Platform M": "can_use(Iron_Boots)",
             "Water Temple Inner Tower 3F M": "can_use(Longshot)",
             "Water Temple Inner Tower 1F M": "can_use(Iron_Boots)"
@@ -543,9 +551,9 @@
     {
         "region_name": "Water Temple Inner Tower 2F L",
         "dungeon": "Water Temple",
-        "room": "1",
+        "room": "01",
         "exits": {
-            "Water Temple Lobby 2F L": "True",
+            "Water Temple Lobby 2F L": "transition('Water Temple T16', True)",
             "Water Temple Inner Tower 2F Lullaby Platform L": "True",
             "Water Temple Inner Tower 3F L": "can_use(Longshot)",
             "Water Temple Inner Tower 1F L": "True"
@@ -554,7 +562,7 @@
     {
         "region_name": "Water Temple Inner Tower 2F Lullaby Platform H",
         "dungeon": "Water Temple",
-        "room": "1",
+        "room": "01",
         "events": {
             "Water Temple HM": "can_play_underwater and can_play(Zeldas_Lullaby)",
             "Water Temple HM Loop": "'Water Temple HM' and 'Water Temple MH'",
@@ -571,7 +579,7 @@
     {
         "region_name": "Water Temple Inner Tower 2F Lullaby Platform M",
         "dungeon": "Water Temple",
-        "room": "1",
+        "room": "01",
         "events": {
             "Water Temple M": "
                 'Water Temple HML Loop' or 'Water Temple LMH Loop' or
@@ -586,7 +594,7 @@
     {
         "region_name": "Water Temple Inner Tower 2F Lullaby Platform L",
         "dungeon": "Water Temple",
-        "room": "1",
+        "room": "01",
         "events": {
             "Water Temple LM": "can_play(Zeldas_Lullaby)",
             "Water Temple ML Loop": "'Water Temple LM' and 'Water Temple ML'",
@@ -603,37 +611,37 @@
     {
         "region_name": "Water Temple Inner Tower 1F H",
         "dungeon": "Water Temple",
-        "room": "1",
+        "room": "01",
         "exits": {
-            "Water Temple Lobby 1F H": "False",
+            "Water Temple Lobby 1F H": "False and transition('Water Temple T15', True)",
             "Water Temple Inner Tower 2F H": "
                 can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)",
             "Water Temple Inner Tower 2F Lullaby Platform H": "
                 can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)",
             "Water Temple Inner Tower B1 H": "
-                'Water Temple Room 1 Torches' and can_use(Iron_Boots)
+                'Water Temple Room 01 Torches' and can_use(Iron_Boots)
                 and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)"
         }
     },
     {
         "region_name": "Water Temple Inner Tower 1F M",
         "dungeon": "Water Temple",
-        "room": "1",
+        "room": "01",
         "exits": {
-            "Water Temple Lobby 1F M": "False",
+            "Water Temple Lobby 1F M": "False and transition('Water Temple T15', True)",
             "Water Temple Inner Tower 2F M": "True",
             "Water Temple Inner Tower 2F Lullaby Platform M": "can_use(Iron_Boots)",
             "Water Temple Inner Tower B1 M": "
-                'Water Temple Room 1 Torches' and can_use(Iron_Boots)
+                'Water Temple Room 01 Torches' and can_use(Iron_Boots)
                 and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)"
         }
     },
     {
         "region_name": "Water Temple Inner Tower 1F L",
         "dungeon": "Water Temple",
-        "room": "1",
+        "room": "01",
         "exits": {
-            "Water Temple Lobby 1F L": "True",
+            "Water Temple Lobby 1F L": "transition('Water Temple T15', True)",
             "Water Temple Inner Tower 2F L": "can_use(Longshot)",
             "Water Temple Inner Tower 2F Lullaby Platform L": "can_use(Hookshot)",
             "Water Temple Inner Tower B1 L": "False"
@@ -642,73 +650,73 @@
     {
         "region_name": "Water Temple Inner Tower B1 H",
         "dungeon": "Water Temple",
-        "room": "1",
+        "room": "01",
         "exits": {
-            "Water Temple Inner Tower 1F H": "'Water Temple Room 1 Torches'",
-            "Water Temple Underwater Storage": "True"
+            "Water Temple Inner Tower 1F H": "'Water Temple Room 01 Torches'",
+            "Water Temple Underwater Storage": "transition('Water Temple T06', True)"
         }
     },
     {
         "region_name": "Water Temple Inner Tower B1 M",
         "dungeon": "Water Temple",
-        "room": "1",
+        "room": "01",
         "exits": {
-            "Water Temple Inner Tower 1F M": "'Water Temple Room 1 Torches'",
-            "Water Temple Underwater Storage": "True"
+            "Water Temple Inner Tower 1F M": "'Water Temple Room 01 Torches'",
+            "Water Temple Underwater Storage": "transition('Water Temple T06', True)"
         }
     },
     {
         "region_name": "Water Temple Inner Tower B1 L",
         "dungeon": "Water Temple",
-        "room": "1",
+        "room": "01",
         "exits": {
             "Water Temple Inner Tower 1F L": "False",
-            "Water Temple Underwater Storage": "True"
+            "Water Temple Underwater Storage": "transition('Water Temple T06', True)"
         }
     },
     {
         "region_name": "Water Temple Underwater Storage",
         "dungeon": "Water Temple",
-        "room": "2",
+        "room": "02",
         "locations": {
             "Water Temple MQ Central Pillar Chest": "
                 can_use(Iron_Boots) and can_use(Zora_Tunic) and can_use(Hookshot)"
         },
         "exits": {
-            "Water Temple Inner Tower B1": "True"
+            "Water Temple Inner Tower B1": "transition('Water Temple T06', True)"
         }
     },
     {
         "region_name": "Water Temple South Basement Tunnel H",
         "dungeon": "Water Temple",
-        "room": "3",
+        "room": "03",
         "exits": {
-            "Water Temple Lobby 1F South Corridor H": "True",
+            "Water Temple Lobby 1F South Corridor H": "transition('Water Temple T04', True)",
             "Water Temple South Basement": "can_use(Iron_Boots)"
         }
     },
     {
         "region_name": "Water Temple South Basement Tunnel M",
         "dungeon": "Water Temple",
-        "room": "3",
+        "room": "03",
         "exits": {
-            "Water Temple Lobby 1F South Corridor M": "True",
+            "Water Temple Lobby 1F South Corridor M": "transition('Water Temple T04', True)",
             "Water Temple South Basement": "can_use(Iron_Boots)"
         }
     },
     {
         "region_name": "Water Temple South Basement Tunnel L",
         "dungeon": "Water Temple",
-        "room": "3",
+        "room": "03",
         "exits": {
-            "Water Temple Lobby 1F South Corridor L": "True",
+            "Water Temple Lobby 1F South Corridor L": "transition('Water Temple T04', True)",
             "Water Temple South Basement": "can_use(Iron_Boots) or can_dive"
         }
     },
     {
         "region_name": "Water Temple South Basement",
         "dungeon": "Water Temple",
-        "room": "3",
+        "room": "03",
         "locations": {
             "Water Temple MQ GS Triple Wall Torch": "
                 (can_use(Hookshot) or can_use(Boomerang))
@@ -726,26 +734,26 @@
     {
         "region_name": "Water Temple Spike Tunnel H",
         "dungeon": "Water Temple",
-        "room": "4",
+        "room": "04",
         "exits": {
-            "Water Temple Lobby 2F East Tunnel H": "True"
+            "Water Temple Lobby 2F East Tunnel H": "transition('Water Temple T02', True)"
         }
     },
     {
         "region_name": "Water Temple Spike Tunnel M",
         "dungeon": "Water Temple",
-        "room": "4",
+        "room": "04",
         #This room contains boxes to be used on the blue floor switch in Lobby 2F M.
         "exits": {
-            "Water Temple Lobby 2F East Tunnel M": "True"
+            "Water Temple Lobby 2F East Tunnel M": "transition('Water Temple T02', True)"
         }
     },
     {
         "region_name": "Water Temple Spike Tunnel L",
         "dungeon": "Water Temple",
-        "room": "4",
+        "room": "04",
         "exits": {
-            "Water Temple Lobby 2F East Tunnel L": "True"
+            "Water Temple Lobby 2F East Tunnel L": "transition('Water Temple T02', True)"
         }
     },
     {
@@ -753,10 +761,11 @@
         "dungeon": "Water Temple",
         "room": "10",
         "exits": 
-            "Water Temple Lobby Outer Floating Platform H": "can_use(Iron_Boots)",
+            "Water Temple Lobby Outer Floating Platform H": "
+			    can_use(Iron_Boots) and transition('Water Temple T18', True)",
             "Water Temple Water Elevator 3F H": "
                 can_use(Longshot) and can_use(Iron_Boots)
-                and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)",
+                and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)"
         }
     },
     {
@@ -764,7 +773,7 @@
         "dungeon": "Water Temple",
         "room": "10",
         "exits": 
-            "Water Temple Lobby Outer Floating Platform M": "True",
+            "Water Temple Lobby Outer Floating Platform M": "transition('Water Temple T18', True)",
             "Water Temple Water Elevator 3F M": "can_use(Longshot)"
         }
     },
@@ -773,7 +782,7 @@
         "dungeon": "Water Temple",
         "room": "10",
         "exits": 
-            "Water Temple Lobby Outer Floating Platform L": "True",
+            "Water Temple Lobby Outer Floating Platform L": "transition('Water Temple T18', True)",
             "Water Temple Water Elevator 3F L": "can_use(Longshot)"
         }
     },
@@ -784,10 +793,10 @@
         "locations": {
             "Water Temple MQ GS Before Upper Water Switch": "
                 'Water Temple H' and is_adult or can_child_attack"
-        }
+        },
         "exits": 
             "Water Temple Water Elevator 2F H": "can_use(Iron_Boots)",
-            "Water Temple Lobby 3F Lullaby Ledge H": "True"
+            "Water Temple Lobby 3F Lullaby Ledge H": "transition('Water Temple T25', True)"
         }
     },
     {
@@ -797,10 +806,10 @@
         "locations": {
             "Water Temple MQ GS Before Upper Water Switch": "
                 'Water Temple M' and is_adult or can_child_attack"
-        }
+        },
         "exits": 
             "Water Temple Water Elevator 2F M": "True",
-            "Water Temple Lobby 3F Lullaby Ledge M": "True"
+            "Water Temple Lobby 3F Lullaby Ledge M": "transition('Water Temple T25', True)"
         }
     },
     {
@@ -810,10 +819,10 @@
         "locations": {
             "Water Temple MQ GS Before Upper Water Switch": "
                 'Water Temple L' and is_adult or can_child_attack"
-        }
+        },
         "exits": 
             "Water Temple Water Elevator 2F L": "True",
-            "Water Temple Lobby 3F Lullaby Ledge L": "True"
+            "Water Temple Lobby 3F Lullaby Ledge L": "transition('Water Temple T25', True)"
         }
     },
     {
@@ -822,8 +831,11 @@
         "room": "17",
         "exits": {
             "Water Temple Lobby 1F H": "
-                can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)",
-            "Water Temple Submerged Combat Room H": "barred_door and can_use(Iron_Boots)",
+                can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)
+				and transition('Water Temple T01', True)",
+            "Water Temple Submerged Combat Room H": "
+			    can_use(Iron_Boots) and transition('Water Temple T24',
+				'Water Temple MQ Room 17 T24 Unbar')",
             "Water Temple Ruto Meeting Room 2F H": "can_use(Iron_Boots)",
             "Water Temple Ruto Meeting Room 3F H": "True"
         }
@@ -834,8 +846,11 @@
         "room": "17",
         "exits": {
             "Water Temple Lobby 1F M": "
-                can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)",
-            "Water Temple Submerged Combat Room M": "barred_door and can_use(Iron_Boots)",
+                can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)
+				and transition('Water Temple T01', True)",
+            "Water Temple Submerged Combat Room M": "
+			    can_use(Iron_Boots) and transition('Water Temple T24',
+				'Water Temple MQ Room 17 T24 Unbar')",
             "Water Temple Ruto Meeting Room 2F M": "True",
             "Water Temple Ruto Meeting Room 3F M": "False"
         }
@@ -845,9 +860,11 @@
         "dungeon": "Water Temple",
         "room": "17",
         "exits": {
-            "Water Temple Lobby 1F L": "True",
+            "Water Temple Lobby 1F L": "transition('Water Temple T01', True)",
             "Water Temple Submerged Combat Room L": "
-                (can_use(Bow) or has_fire_source_with_torch or barred_door",
+                transition('Water Temple T24',
+				can_use(Bow) or has_fire_source_with_torch
+				or 'Water Temple MQ Room 17 T24 Unbar')",
             "Water Temple Ruto Meeting Room 2F L": "False",
             "Water Temple Ruto Meeting Room 3F L": "False"
         }
@@ -873,12 +890,12 @@
         "room": "17",
         "events": {
             "Water Temple Room 17 Hookshot Wall": "'Water Temple M' and can_use(Hookshot)"
-        }
+        },
         "locations": {
             "Water Temple MQ Longshot Chest": "'Water Temple M' and 'Water Temple Room 17 Hookshot Wall'"
         },
         "exits": {
-            "Water Temple Lobby 1F M": "(Progressive_Scale, 2)",
+            "Water Temple Lobby 1F M": "(Progressive_Scale, 2) and transition('Water Temple T01', True)",
             "Water Temple Ruto Meeting Room 1F M": "can_use(Iron_Boots)",
             "Water Temple Ruto Meeting Room 3F M": "False"
         }
@@ -889,7 +906,7 @@
         "room": "17",
         "events": {
             "Water Temple Room 17 Hookshot Wall": "'Water Temple L' and can_use(Hookshot)"
-        }
+        },
         "locations": {
             "Water Temple MQ Longshot Chest": "'Water Temple L' and 'Water Temple Room 17 Hookshot Wall'"
         },
@@ -906,10 +923,12 @@
             "Water Temple HL": "can_play(Zeldas_Lullaby)",
             "Water Temple HL Loop": "'Water Temple HL' and 'Water Temple LH'",
             "Water Temple LMH Loop": "'Water Temple HL' and 'Water Temple LM' and 'Water Temple MH'"
-        }
+        },
         "exits": {
             "Water Temple Ruto Meeting Room 3F L": "can_play(Zeldas_Lullaby)",
-            "Water Temple Dungeon Map Room": "has_fire_source or barred_door",
+            "Water Temple Dungeon Map Room": "
+			    transition('Water Temple T14', 
+				has_fire_source or 'Water Temple MQ Room 17 T14 Unbar'",
             "Water Temple Ruto Meeting Room 1F H": "can_use(Iron_Boots)",
             "Water Temple Ruto Meeting Room 2F H": "can_use(Iron_Boots)"
         }
@@ -922,10 +941,12 @@
             "Water Temple ML": "can_play(Zeldas_Lullaby)",
             "Water Temple ML Loop": "'Water Temple ML' and 'Water Temple LM'",
             "Water Temple HML Loop": "'Water Temple ML' and 'Water Temple LH' and 'Water Temple HM'"
-        }
+        },
         "exits": {
             "Water Temple Ruto Meeting Room 3F L": "can_play(Zeldas_Lullaby)",
-            "Water Temple Dungeon Map Room": "has_fire_source or barred_door",
+            "Water Temple Dungeon Map Room": "
+			    transition('Water Temple T14', 
+				has_fire_source or 'Water Temple MQ Room 17 T14 Unbar'",
             "Water Temple Ruto Meeting Room 1F": "can_use(Iron_Boots)",
             "Water Temple Ruto Meeting Room 2F": "True"
         }
@@ -938,9 +959,11 @@
             "Water Temple L": "
                 'Water Temple HML Loop' or 'Water Temple LMH Loop' or
                 'Water Temple ML Loop' or 'Water Temple HL Loop'"
-        }
+        },
         "exits": {
-            "Water Temple Dungeon Map Room": "has_fire_source or barred_door",
+            "Water Temple Dungeon Map Room": "
+			    transition('Water Temple T14', 
+				has_fire_source or 'Water Temple MQ Room 17 T14 Unbar'",
             "Water Temple Ruto Meeting Room 1F": "True",
             "Water Temple Ruto Meeting Room 2F": "
                 logic_water_cracked_wall_nothing or 
@@ -956,7 +979,7 @@
                 False and 'Water Temple H' and can_use(Iron_Boots)
                 and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)"
                 #Hookshot can't kill Lizalfos
-        }
+        },
         "locations": {
             "Water Temple MQ Compass Chest": "
                 'Water Temple H' and 'Water Temple Room 18 Enemies' and can_use(Iron_Boots)
@@ -964,7 +987,8 @@
         },
         "exits": {
             "Water Temple Ruto Meeting Room 1F H": "
-                can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)"
+                can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)
+				and transition('Water Temple T24', True)"
         }
     },
     {
@@ -976,7 +1000,7 @@
                 False and 'Water Temple M' and can_use(Iron_Boots)
                 and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)"
                 #Hookshot can't kill Lizalfos
-        }
+        },
         "locations": {
             "Water Temple MQ Compass Chest": "
                 'Water Temple M' and 'Water Temple Room 18 Enemies' and can_use(Iron_Boots)
@@ -984,7 +1008,8 @@
         },
         "exits": {
             "Water Temple Ruto Meeting Room 1F M": "
-                can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)"
+                can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)
+				and transition('Water Temple T24', True)"
         }
     },
     {
@@ -994,12 +1019,12 @@
         "events": {
             "Water Temple Room 18 Enemies": "
                 'Water Temple L' and Beat the enemies"
-        }
+        },
         "locations": {
             "Water Temple MQ Compass Chest": "'Water Temple L' and 'Water Temple Room 18 Enemies'"
         },
         "exits": {
-            "Water Temple Ruto Meeting Room 1F L": "True"
+            "Water Temple Ruto Meeting Room 1F L": "transition('Water Temple T24', True)"
         }
     },
     {
@@ -1007,7 +1032,7 @@
         "dungeon": "Water Temple",
         "room": "20",
         "exits": {
-            "Water Temple Lobby 3F East Ledge H": "True",
+            "Water Temple Lobby 3F East Ledge H": "transition('Water Temple T03', True)",
             "Water Temple Grate Passage West H": "
                 (can_dive or can_use(Iron_Boots))
                 and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)"
@@ -1021,7 +1046,8 @@
             "Water Temple MQ GS Lizalfos Hallway": "'Water Temple M' and can_use(Dins_Fire)"
         },
         "exits": {
-            "Water Temple Lobby 3F East Ledge M": "can_use(Hookshot)",
+            "Water Temple Lobby 3F East Ledge M": "
+			    can_use(Hookshot) and transition('Water Temple T03', True)",
             "Water Temple Grate Passage West M": "True"
         }
     },
@@ -1033,7 +1059,8 @@
             "Water Temple MQ GS Lizalfos Hallway": "'Water Temple L' and can_use(Dins_Fire)"
         },
         "exits": {
-            "Water Temple Lobby 3F East Ledge L": "can_use(Hookshot)",
+            "Water Temple Lobby 3F East Ledge L": "
+			    can_use(Hookshot) and transition('Water Temple T03', True)",
             "Water Temple Grate Passage West L": "True"
         }
     },
@@ -1042,7 +1069,7 @@
         "dungeon": "Water Temple",
         "room": "20",
         "exits": {
-            "Water Temple Lobby 2F Behind Grate H": "True",
+            "Water Temple Lobby 2F Behind Grate H": "transition('Water Temple T05', True)",
             "Water Temple Grate Passage North H": "True"
         }
     },
@@ -1051,7 +1078,7 @@
         "dungeon": "Water Temple",
         "room": "20",
         "exits": {
-            "Water Temple Lobby 2F Behind Grate M": "True",
+            "Water Temple Lobby 2F Behind Grate M": "transition('Water Temple T05', True)",
             "Water Temple Grate Passage North M": "True"
         }
     },
@@ -1060,7 +1087,7 @@
         "dungeon": "Water Temple",
         "room": "20",
         "exits": {
-            "Water Temple Lobby 2F Behind Grate L": "True",
+            "Water Temple Lobby 2F Behind Grate L": "transition('Water Temple T05', True)",
             "Water Temple Grate Passage North L": "True"
         }
     },
@@ -1072,48 +1099,54 @@
             "Water Temple Room 19 Enemies": "
                 "
                 #3 Stalfos
-        }
+        },
         "locations": {
             "Water Temple MQ Map Chest": "can_use(Hookshot)"
         },
         "exits": {
-            "Water Temple Ruto Meeting Room 3F": "'Water Temple Room 19 Enemies' or barred_door"
+            "Water Temple Ruto Meeting Room 3F": "
+			    transition('Water Temple T14', 'Water Temple Room 19 Enemies'
+				or 'Water Temple MQ Room 19 T14 Unbar')"
         }
     },
     {
         "region_name": "Water Temple Falling Platform Room",
         "dungeon": "Water Temple",
-        "room": "5",
+        "room": "05",
         "exits": {
             "Water Temple Lobby Outer Falling Platform": "
-                Still_a_key and can_use(Longshot) and (can_use(Hover_Boots) or can_use(Bow) or can_use(Slingshot)",
-            "Water Temple Triple Serpent Head Room": "can_use(Longshot)"
+                can_use(Longshot) and (can_use(Hover_Boots) or can_use(Bow) or can_use(Slingshot))
+				and transition('Water Temple T09', True)",
+            "Water Temple Triple Serpent Head Room": "
+			    can_use(Longshot) and transition('Water Temple T11', True)"
         }
     },
     {
         "region_name": "Water Temple Triple Serpent Head Room",
         "dungeon": "Water Temple",
-        "room": "6",
+        "room": "06",
         "events": {
-            "Water Temple Room 6 Enemies": "
+            "Water Temple Room 06 Enemies": "
                 "
                 #3 Stalfos
-        }
+        },
         "locations": {
             "Fairy Pot": "
                 has_bottle and (can_use(Hover_Boots) or 
-                    ('Water Temple Room 6 Enemies' and can_use(Hookshot) and can_climb(106)) or can_climb(240))",
+                    ('Water Temple Room 06 Enemies' and can_use(Hookshot) and can_climb(106)) or can_climb(240))",
             "Nut Pot": "
                 can_use(Hover_Boots) or 
-                    ('Water Temple Room 6 Enemies' and can_use(Hookshot) and can_climb(106)) or can_climb(240)",
+                    ('Water Temple Room 06 Enemies' and can_use(Hookshot) and can_climb(106)) or can_climb(240)"
         },
         "exits": {
             "Water Temple Falling Platform Room": "
                 (can_use(Hookshot) or can_use(Hover_Boots))
-                and ('Water Temple Room 6 Enemies' or barred_door)",
+                and transition('Water Temple T11',
+				'Water Temple Room 06 Enemies' or 'Water Temple MQ Room 06 T11 Unbar')",
             "Water Temple Dark Link Room": "
-                'Water Temple Room 6 Enemies' and can_use(Hookshot) and
-                (can_climb(106) or can_use(Longshot) or can_use(Hover_Boots))"
+                'Water Temple Room 06 Enemies' and can_use(Hookshot) and
+                (can_climb(106) or can_use(Longshot) or can_use(Hover_Boots))
+				and transition('Water Temple T19', True)"
         }
     },
     {
@@ -1121,23 +1154,30 @@
         "dungeon": "Water Temple",
         "room": "13",
         "events": {
-            "Water Temple Room 13 Enemies": "Defeat Dark Link"
-        }
+            "Water Temple Room 13 Enemies": "
+			    "
+				#Dark Link
+        },
         "exits": {
-            "Water Temple Triple Serpent Head Room": "'Water Temple Room 13 Enemies' or barred_door",
-            "Water Temple River Drop Room": "'Water Temple Room 13 Enemies' or barred_door"
+            "Water Temple Triple Serpent Head Room": "
+			    transition('Water Temple T19', 'Water Temple Room 13 Enemies'
+				or 'Water Temple MQ Room 13 T19 Unbar')",
+            "Water Temple River Drop Room": "
+			    transition('Water Temple T20', 'Water Temple Room 13 Enemies'
+				or 'Water Temple MQ Room 13 T20 Unbar')"
         }
     },
     {
         "region_name": "Water Temple River Drop Room",
         "dungeon": "Water Temple",
-        "room": "7",
+        "room": "07",
         "locations": {
             "Fairy Pot": "has_bottle"
         },
         "exits": {
-            "Water Temple Dark Link Room": "True",
-            "Water Temple Serpent River": "can_use(Hookshot)"
+            "Water Temple Dark Link Room": "transition('Water Temple T20', True)",
+            "Water Temple Serpent River": "
+			    can_use(Hookshot) and transition('Water Temple T27', True)"
         }
     },
     {
@@ -1149,7 +1189,7 @@
             "Fairy Pot": "has_bottle"
         },
         "exits": {
-            "Water Temple River Drop Room": "False",
+            "Water Temple River Drop Room": "False and transition('Water Temple T27', True)",
             "Water Temple Serpent River Endpoint": "True"
         }
     },
@@ -1159,26 +1199,28 @@
         "room": "21",
         "exits": {
             "Water Temple Serpent River": "True",
-            "Water Temple Dragon Statue Room Ledge": "True"
+            "Water Temple Dragon Statue Room Ledge": "transition('Water Temple T07', True)"
         }
     },
     {
         "region_name": "Water Temple Dragon Statue Room Ledge",
         "dungeon": "Water Temple",
-        "room": "8",
+        "room": "08",
         "exits": {
             "Water Temple Dragon Statue Room": "True",
             "Water Temple Dragon Statue Room Rear": "logic_water_dragon_jump_dive",
-            "Water Temple Serpent River Endpoint": "True"
+            "Water Temple Serpent River Endpoint": "transition('Water Temple T07', True)"
         }
     },
     {
         "region_name": "Water Temple Dragon Statue Room",
         "dungeon": "Water Temple",
-        "room": "8",
+        "room": "08",
         "exits": {
             "Water Temple Single Water Jet Gap Room North": "
-                at('Water Temple Dragon Statue Room Rear', has_fire_source) or barred_door",
+			    transition('Water Temple T21',
+                at('Water Temple Dragon Statue Room Rear', has_fire_source)
+				or 'Water Temple MQ Room 08 T21 Unbar')",
             "Water Temple Dragon Statue Room Rear": "
                 (can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements))
                 or can_dive",
@@ -1188,7 +1230,7 @@
     {
         "region_name": "Water Temple Dragon Statue Room Rear",
         "dungeon": "Water Temple",
-        "room": "8",
+        "room": "08",
         "exits": {
             "Water Temple Dragon Statue Room": "can_dive or can_use(Iron_Boots)"
         }
@@ -1196,31 +1238,32 @@
     {
         "region_name": "Water Temple Single Water Jet Gap Room North",
         "dungeon": "Water Temple",
-        "room": "9",
+        "room": "09",
         "events": {
-            "Water Temple Room 9 Torches": "can_use(Dins_Fire)"
+            "Water Temple Room 09 Torches": "can_use(Dins_Fire)"
         },
         "exits": {
             "Water Temple Single Water Jet Gap Room": "
-                'Water Temple Room 9 Torches' and
+                'Water Temple Room 09 Torches' and
                 (can hit crystal switch or can_use(Hookshot) or can_use(Hover_Boots))",
-            "Water Temple Dragon Statue Room": "True"
+            "Water Temple Dragon Statue Room": "transition('Water Temple T21', True)"
         }
     },
     {
         "region_name": "Water Temple Single Water Jet Gap Room",
         "dungeon": "Water Temple",
-        "room": "9",
+        "room": "09",
         "events": {
-            "Water Temple Room 9 Torches": "has_fire_source"
+            "Water Temple Room 09 Torches": "has_fire_source"
         },
         "locations": {
             "Water Temple MQ Boss Key Chest": "True"
         },
         "exits": {
-            "Water Temple Lobby B1 West Corridor": "can_use(Iron_Boots) or can_dive",
+            "Water Temple Lobby B1 West Corridor": "
+			    (can_use(Iron_Boots) or can_dive) and transition('Water Temple T08', True)",
             "Water Temple Single Water Jet Gap Room North": "
-                'Water Temple Room 9 Torches' and (can_use_projectile or can_use(Hover_Boots))"
+                'Water Temple Room 09 Torches' and (can_use_projectile or can_use(Hover_Boots))"
         }
     },
     {
@@ -1228,7 +1271,7 @@
         "dungeon": "Water Temple",
         "room": "12",
         "exits": {
-            "Water Temple Lobby 1F North Basement": "True",
+            "Water Temple Lobby 1F North Basement": "transition('Water Temple T10', True)",
             "Water Temple Whirlpool Room Rear": "False",
             "Water Temple Whirlpool Room Water Corridor": "
                 can_use(Scarecrow) or (is_adult and logic_water_north_basement_ledge_jump)
@@ -1241,10 +1284,10 @@
         "room": "12",
         "locations": {
             "Water Temple MQ GS Freestanding Key Area": "is_adult or can_child_attack"
-        }
+        },
         "exits": {
             "Water Temple Whirlpool Room": "False",
-            "Water Temple Dropdown Room": "True"
+            "Water Temple Dropdown Room": "transition('Water Temple T12', True)"
         }
     },
     {
@@ -1253,8 +1296,8 @@
         "room": "12",
         "exits": {
             "Water Temple Whirlpool Room": "True",
-            "Water Temple Triple Water Jet Gap Room": "Small_Key_Water_Temple",
-            "Water Temple Whirlpool Room Water Corridor Rear": "logic_water_bk_jump_dive or can_use(Iron_Boots)",
+            "Water Temple Triple Water Jet Gap Room": "transition('Water Temple T23', True)",
+            "Water Temple Whirlpool Room Water Corridor Rear": "logic_water_bk_jump_dive or can_use(Iron_Boots)"
         }
     },
     {
@@ -1263,25 +1306,7 @@
         "room": "12",
         "exits": {
             "Water Temple Whirlpool Room Water Corridor": "is_child or can_dive or can_use(Iron_Boots)",
-            "Water Temple Boss Key Room": "True"
-        }
-    },
-    {
-        "region_name": "Water Temple Boss Key Room",
-        "dungeon": "Water Temple",
-        "room": "16",
-        "events": {
-            "Water Temple Room 16 Enemies": "
-                "
-                #Stalfos
-        },
-        "locations": {
-            "Water Temple MQ Freestanding Key": "True",
-            "Fairy Pot": "has_bottle"
-        }
-        "exits": {
-            "Water Temple Whirlpool Room Water Corridor Rear": "
-                'Water Temple Room 16 Enemies' or barred_door"
+            "Water Temple North Basement Treasure Room": "transition('Water Temple T22', True)"
         }
     },
     {
@@ -1295,11 +1320,15 @@
         },
         "exits": {
             "Water Temple Whirlpool Room Rear": "
-                (can_use(Hookshot) or can_use(Hover_Boots))
-                and ('Water Temple Room 14 Enemies' or barred_door)",
+			    (can_use(Hookshot) or can_use(Hover_Boots))
+				and transition('Water Temple T12',
+                'Water Temple Room 14 Enemies'
+				or 'Water Temple MQ Room 14 T12 Unbar')",
             "Water Temple Triple Water Jet Gap Room": "
-                (can_use(Hookshot) or can_use(Hover_Boots))
-                and ('Water Temple Room 14 Enemies' or barred_door)"
+			    (can_use(Hookshot) or can_use(Hover_Boots))
+				and transition('Water Temple T13',
+                'Water Temple Room 14 Enemies'
+				or 'Water Temple MQ Room 14 T13 Unbar')"
         }
     },
     {
@@ -1308,11 +1337,33 @@
         "room": "15",
         "exits": {
             "Water Temple Dropdown Room": "
-                can hit crystal switch and (can_use(Dins_Fire) or barred_door)",
+                can hit crystal switch
+				and transition('Water Temple T13',
+				can_use(Dins_Fire)
+				or 'Water Temple MQ Room 15 T13 Unbar')",
                 #I can't seem to get fire arrows to work here for some reason
             "Water Temple Whirlpool Room Water Corridor": "
-                Still_a_key and
-                (can_use(Hookshot) or can_use(Slingshot) or can_use(Bow) or has_bombchus)"
+                (can_use(Hookshot) or can_use(Slingshot) or can_use(Bow) or has_bombchus)
+				and transition('Water Temple T23', True)"
+        }
+    },
+	{
+        "region_name": "Water Temple North Basement Treasure Room",
+        "dungeon": "Water Temple",
+        "room": "16",
+        "events": {
+            "Water Temple Room 16 Enemies": "
+                "
+                #Stalfos
+        },
+        "locations": {
+            "Water Temple MQ Freestanding Key": "True",
+            "Fairy Pot": "has_bottle"
+        },
+        "exits": {
+            "Water Temple Whirlpool Room Water Corridor Rear": "
+			    transition('Water Temple T22', 'Water Temple Room 16 Enemies'
+				or 'Water Temple MQ Room 16 T22 Unbar')"
         }
     },
     {
@@ -1321,13 +1372,15 @@
         "room": "11",
         "locations": {
             "Wall Switch Fairy": "has_bottle and can_use(Hookshot)"
-        }
+        },
         "exits": {
             "Water Temple Lobby 3F Boss Ledge": "
-                (damage_multiplier != 'ohko' and damage_multiplier != 'quadruple')
-                or can_use(Longshot) or can_use(Nayrus_Love)",
+                ((damage_multiplier != 'ohko' and damage_multiplier != 'quadruple')
+                or can_use(Longshot) or can_use(Nayrus_Love))
+				and transition('Water Temple T17', True)",
             "Morpha Arena": "
-                Boss_Key_Water_Temple and (can_use(Longshot) or can_use(Nayrus_Love))"
+                (can_use(Longshot) or can_use(Nayrus_Love))
+				and transition('Water Temple T26', True)"
         }
     }
 ]

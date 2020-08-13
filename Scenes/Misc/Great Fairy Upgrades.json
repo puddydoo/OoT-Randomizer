@@ -2,7 +2,7 @@
     {
         "region_name": "DMT Great Fairy Fountain",
         "scene": "DMT Great Fairy Fountain",
-        "room": "0",
+        "room": "00",
         "locations": {
             "DMT Great Fairy Reward": "can_play(Zeldas_Lullaby)"
         },
@@ -13,7 +13,7 @@
     {
         "region_name": "DMC Great Fairy Fountain",
         "scene": "DMC Great Fairy Fountain",
-        "room": "0",
+        "room": "00",
         "locations": {
             "DMC Great Fairy Reward": "can_play(Zeldas_Lullaby)"
         },
@@ -24,7 +24,7 @@
     {
         "region_name": "OGC Great Fairy Fountain",
         "scene": "OGC Great Fairy Fountain",
-        "room": "0",
+        "room": "00",
         "locations": {
             "OGC Great Fairy Reward": "can_play(Zeldas_Lullaby)"
         },

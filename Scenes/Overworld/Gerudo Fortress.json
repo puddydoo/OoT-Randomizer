@@ -2,7 +2,7 @@
     {
         "region_name": "Gerudo Fortress",
         "scene": "Gerudo Fortress",
-        "room": "0",
+        "room": "00",
         "hint": "Gerudo's Fortress",
         "events": {
             "GF Gate Open": "is_adult and Gerudo_Membership_Card"
@@ -31,7 +31,7 @@
     {
         "region_name": "GF Jail",
         "scene": "Gerudo Fortress",
-        "room": "0",
+        "room": "00",
         "hint": "Gerudo's Fortress",
         "exits": {
             "Gerudo Fortress": "can_use(Hookshot) or can_climb(219)",
@@ -42,7 +42,7 @@
     {
         "region_name": "GF Balcony",
         "scene": "Gerudo Fortress",
-        "room": "0",
+        "room": "00",
         "hint": "Gerudo's Fortress",
         "locations": {
             "GF Glitch Freestanding PoH": "is_child"
@@ -57,7 +57,7 @@
     {
         "region_name": "GF Hall to Balcony Entrance",
         "scene": "Gerudo Fortress",
-        "room": "0",
+        "room": "00",
         "hint": "Gerudo's Fortress",
         "exits": {
             "Gerudo Fortress": "True",
@@ -70,7 +70,7 @@
     {
         "region_name": "GF Entrances Behind Crates",
         "scene": "Gerudo Fortress",
-        "room": "0",
+        "room": "00",
         "hint": "Gerudo's Fortress",
         "exits": {
             "Gerudo Fortress": "True",
@@ -84,7 +84,7 @@
     {
         "region_name": "GF Guarded Roof",
         "scene": "Gerudo Fortress",
-        "room": "0",
+        "room": "00",
         "hint": "Gerudo's Fortress",
         "exits": {
             "Thieves Hideout Exit 4": "True",
@@ -98,7 +98,7 @@
     {
         "region_name": "GF Roof Entrance Cluster",
         "scene": "Gerudo Fortress",
-        "room": "0",
+        "room": "00",
         "hint": "Gerudo's Fortress",
         "exits": {
             "Thieves Hideout Exit 6": "True",
@@ -116,7 +116,7 @@
     {
         "region_name": "GF Green Jail Exterior",
         "scene": "Gerudo Fortress",
-        "room": "0",
+        "room": "00",
         "hint": "Gerudo's Fortress",
         "exits": {
             "Thieves Hideout Exit 13": "True",
@@ -130,7 +130,7 @@
     {
         "region_name": "GF Kitchen Roof Access",
         "scene": "Gerudo Fortress",
-        "room": "0",
+        "room": "00",
         "hint": "Gerudo's Fortress",
         "exits": {
             "Thieves Hideout Exit 10": "True",
@@ -145,7 +145,7 @@
     {
         "region_name": "GF Empty Roof",
         "scene": "Gerudo Fortress",
-        "room": "0",
+        "room": "00",
         "hint": "Gerudo's Fortress",
         "exits": {
             "GF Hall to Balcony Entrance": "True",
@@ -161,7 +161,7 @@
     {
         "region_name": "GF Kitchen Roof Access Ledge",
         "scene": "Gerudo Fortress",
-        "room": "0",
+        "room": "00",
         "hint": "Gerudo's Fortress",
         "exits": {
             "GF Southeast Roof": "True",
@@ -172,7 +172,7 @@
     {
         "region_name": "GF Southeast Roof",
         "scene": "Gerudo Fortress",
-        "room": "0",
+        "room": "00",
         "hint": "Gerudo's Fortress",
         "locations": {
             "GF GS Top Floor": "is_adult and at_night"
@@ -190,7 +190,7 @@
     {
         "region_name": "GF Chest Roof",
         "scene": "Gerudo Fortress",
-        "room": "0",
+        "room": "00",
         "hint": "Gerudo's Fortress",
         "locations": 
             "GF Chest": "True",
@@ -208,7 +208,7 @@
     {
         "region_name": "GF Outside Gate",
         "scene": "Gerudo Fortress",
-        "room": "0",
+        "room": "00",
         "hint": "Gerudo's Fortress",
         "exits": {
             "Gerudo Fortress": "is_adult or (shuffle_overworld_entrances and 'GF Gate Open')",
@@ -218,7 +218,7 @@
     {
         "region_name": "GF Archery Range",
         "scene": "Gerudo Fortress",
-        "room": "1",
+        "room": "01",
         "locations": {
             "GF HBA 1000 Points": "
                 Gerudo_Membership_Card and can_ride_epona and Bow and at_day",

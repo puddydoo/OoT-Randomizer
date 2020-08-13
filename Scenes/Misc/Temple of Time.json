@@ -1,7 +1,7 @@
 [
     {
         "region_name": "Temple of Time",
-        "room": "1",
+        "room": "01",
         "hint": "Temple of Time",
         "locations": {
             "ToT Light Arrows Cutscene": "is_adult and can_trigger_lacs"
@@ -13,7 +13,7 @@
     },
     {
         "region_name": "Beyond Door of Time",
-        "room": "0",
+        "room": "00",
         "hint": "Temple of Time",
         "locations": {
             "Master Sword Pedestal": "True",

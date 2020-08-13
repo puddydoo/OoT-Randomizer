@@ -2,7 +2,7 @@
     {
         "region_name": "Deku Tree Lobby",
         "dungeon": "Deku Tree",
-        "room": "0",
+        "room": "00",
         "locations": {
             "Deku Tree MQ Map Chest": "True",
             "Deku Tree MQ GS Lobby": "is_adult or can_child_attack",
@@ -14,15 +14,18 @@
         "exits": {
             "KF Outside Deku Tree": "True",
             "Deku Tree 2F Passage": "
-                here(has_fire_source or (can_press_floor_switch and (can_use(Sticks) or can_use(Bow))))",
-            "Deku Tree Basement River Room": "True",
-            "Deku Tree 3F Room": "here(can_press_floor_switch or has_fire_source)"
+                here(has_fire_source or (can_press_floor_switch and (can_use(Sticks) or can_use(Bow))))
+				and transition('Deku Tree T01', True)",
+            "Deku Tree Basement River Room": "transition('Deku Tree T10', True)",
+            "Deku Tree 3F Room": "
+			    here(can_press_floor_switch or has_fire_source)
+				and transition('Deku Tree T07', True)"
         }
     },
     {
         "region_name": "Deku Tree 2F Passage",
         "dungeon": "Deku Tree",
-        "room": "1",
+        "room": "01",
         "locations": {
             "Deku Baba Sticks": "is_adult or Kokiri_Sword or Boomerang",
             "Deku Baba Nuts": "
@@ -30,15 +33,17 @@
                 has_explosives or Kokiri_Sword or can_use(Dins_Fire)"
         },
         "exits": {
-            "Deku Tree Lobby": "True",
+            "Deku Tree Lobby": "transition('Deku Tree T01', True)",
             "Deku Tree 2F Room": "
-                here(can_use(Slingshot) or can_use(Bow)) or barred_door"
+			    transition('Deku Tree T06',
+                here(can_use(Slingshot) or can_use(Bow))
+				or 'Deku Tree MQ Room 01 T06 Unbar')"
         }
     },
     {
         "region_name": "Deku Tree 2F Room",
         "dungeon": "Deku Tree",
-        "room": "2",
+        "room": "02",
         "locations": {
             "Deku Tree MQ Compass Chest": "True",
             "Deku Tree MQ GS Compass Room": "
@@ -46,13 +51,13 @@
                 (has_bombchus or (Bombs and (here(is_adult) or can_play(Song_of_Time))))"
         },
         "exits": {
-            "Deku Tree 2F Passage": "True"
+            "Deku Tree 2F Passage": "transition('Deku Tree T06', True)"
         }
     },
     {
         "region_name": "Deku Tree Basement River Room",
         "dungeon": "Deku Tree",
-        "room": "3",
+        "room": "03",
         "locations": {
             "Deku Tree MQ Basement Chest": "
                 can_climb(60) and can_press_floor_switch and (has_fire_source_with_torch or can_use(Bow))",
@@ -62,9 +67,11 @@
                 has_explosives or Kokiri_Sword or can_use(Dins_Fire)"
         },
         "exits": {
-            "Deku Tree Lobby": "True",
+            "Deku Tree Lobby": "transition('Deku Tree T10', True)",
             "Deku Tree Basement Hint Scrub Room": "
-                here(can_use(Slingshot) or can_use(Bow)) or barred_door",
+			    transition('Deku Tree T03',
+                here(can_use(Slingshot) or can_use(Bow))
+				or 'Deku Tree MQ Room 03 T03 Unbar')",
             "Deku Tree Basement River Room Ledge": "
                 can_climb(60) and
                 (at('Deku Tree Basement River Room Ledge', True)
@@ -74,7 +81,7 @@
     {
         "region_name": "Deku Tree Basement River Room Ledge",
         "dungeon": "Deku Tree",
-        "room": "3",
+        "room": "03",
         "locations": {
             "Deku Tree MQ Deku Scrub": "can_stun_deku",
             "Deku Baba Sticks": "is_adult or Kokiri_Sword or Boomerang",
@@ -84,72 +91,82 @@
         },
         "exits": {
             "Deku Tree Basement River Room": "True",
-            "Deku Tree Basement Back Room": "is_child",
+            "Deku Tree Basement Back Room": "is_child and transition('Deku Tree T12', True)",
             "Deku Tree Three Scrub Room": "
                 here(has_fire_source or
-                (can_climb(60) and can_press_floor_switch and can_use(Sticks))"
+                (can_climb(60) and can_press_floor_switch and can_use(Sticks))
+				and transition('Deku Tree T11', True)"
         }
     },
     {
         "region_name": "Deku Tree Basement Hint Scrub Room",
         "dungeon": "Deku Tree",
-        "room": "4",
+        "room": "04",
         "events": {
-            "Deku Tree Room 4 Enemies": "
+            "Deku Tree Room 04 Enemies": "
                 "
                 #
         }
         "exits": {
-            "Deku Tree Basement River Room": "'Deku Tree Room 4 Enemies' or barred_door",
-            "Deku Tree Spiked Log Room East": "here(has_fire_source_with_torch) or barred_door"
+            "Deku Tree Basement River Room": "
+			    transition('Deku Tree T03',
+				'Deku Tree Room 04 Enemies' or 'Deku Tree MQ Room 04 T03 Unbar'",
+            "Deku Tree Spiked Log Room East": "
+			    transition('Deku Tree T09',
+				here(has_fire_source_with_torch) or 'Deku Tree MQ Room 04 T09 Unbar')"
                 #The torch is actually in the previous room.
         }
     },
     {
         "region_name": "Deku Tree Spiked Log Room East",
         "dungeon": "Deku Tree",
-        "room": "5",
+        "room": "05",
         "locations": {
             "Deku Tree MQ Before Spinning Log Chest": "True"
         },
         "exits": {
-            "Deku Tree Basement Hint Scrub Room": "True",
+            "Deku Tree Basement Hint Scrub Room": "transition('Deku Tree T09', True)",
             "Deku Tree Spiked Log Room West": "can_crouch"
         }
     },
     {
         "region_name": "Deku Tree Spiked Log Room West",
         "dungeon": "Deku Tree",
-        "room": "5",
+        "room": "05",
         "locations": {
             "Deku Tree MQ After Spinning Log Chest": "can_play(Song_of_Time)"
         },
         "exits": {
             "Deku Tree Spiked Log Room East": "can_swim or can_crouch",
             "Deku Tree Torch Deku Baba Room": "
+			    can_climb(60) and transition('Deku Tree T02',
                 here(has_fire_source or 
                     (can_press_floor_switch and can_crouch and can_use(Sticks)))
-                and can_climb(60)"
+                or 'Deku Tree MQ Room 05 T02 Unbar')"
         }
     },
     {
         "region_name": "Deku Tree Torch Deku Baba Room",
         "dungeon": "Deku Tree",
-        "room": "6",
+        "room": "06",
         "events": {
-            "Deku Tree Room 6 Enemies": "
+            "Deku Tree Room 06 Enemies": "
                 is_adult or can_use(Kokiri_Sword) or can_use_projectile or (Nuts and can_use(Sticks))"
                 #
         }
         "exits": {
-            "Deku Tree Spiked Log Room West": "'Deku Tree Room 6 Enemies' or barred_door",
-            "Deku Tree Basement Back Room": "'Deku Tree Room 6 Enemies' or barred_door"
+            "Deku Tree Spiked Log Room West": "
+			    transition('Deku Tree T02',
+				'Deku Tree Room 06 Enemies' or 'Deku Tree MQ Room 06 T02 Unbar')",
+            "Deku Tree Basement Back Room": "
+			    transition('Deku Tree T08',
+				'Deku Tree Room 06 Enemies' or 'Deku Tree MQ Room 06 T08 Unbar')"
         }
     },
     {
         "region_name": "Deku Tree Basement Back Room",
         "dungeon": "Deku Tree",
-        "room": "7",
+        "room": "07",
         "locations": {
             "Deku Tree MQ GS Basement Graves Room": "
                 can_use(Longshot) or
@@ -160,17 +177,19 @@
                 has_explosives or Kokiri_Sword or can_use(Dins_Fire)"
         },
         "exits": {
-            "Deku Tree Torch Deku Baba Room": "True",
+            "Deku Tree Torch Deku Baba Room": "transition('Deku Tree T08', True)",
             "Deku Tree Basement River Room Ledge": "
-                here(has_fire_source or (can_press_floor_switch and can_use(Sticks) or can_use(Bow))) and is_child",
+                here(has_fire_source or (can_press_floor_switch and can_use(Sticks) or can_use(Bow)))
+				and is_child and transition('Deku Tree T12', True)",
             "Deku Tree Gold Skulltula Room": "
-                here(has_fire_source or (can_press_floor_switch and can_use(Sticks) or can_use(Bow)))"
+                here(has_fire_source or (can_press_floor_switch and can_use(Sticks) or can_use(Bow)))
+				and transition('Deku Tree T04', True)"
         }
     },
     {
         "region_name": "Deku Tree Gold Skulltula Room",
         "dungeon": "Deku Tree",
-        "room": "8",
+        "room": "08",
         "locations": {
             "Deku Tree MQ GS Basement Back Room": "can_use(Hookshot) or can_use(Boomerang)",
             "Deku Baba Sticks": "is_adult or Kokiri_Sword or Boomerang",
@@ -179,21 +198,23 @@
                 has_explosives or Kokiri_Sword or can_use(Dins_Fire)"
         },
         "exits": {
-            "Deku Tree Basement Back Room": "True"
+            "Deku Tree Basement Back Room": "transition('Deku Tree T04', True)"
         }
     },
     {
         "region_name": "Deku Tree Three Scrub Room",
         "dungeon": "Deku Tree",
-        "room": "9",
+        "room": "09",
         "events": {
-            "Deku Tree Room 9 Enemies": "
+            "Deku Tree Room 09 Enemies": "
                 has_shield"
                 #3 Hint Scrubs
         }
         "exits": {
-            "Deku Tree Basement River Room Ledge": "True",
-            "Gohma Entrance": "'Deku Tree Room 9 Enemies' or barred_door"
+            "Deku Tree Basement River Room Ledge": "transition('Deku Tree T11', True)",
+            "Gohma Entrance": "
+			    transition('Deku Tree T05',
+				'Deku Tree Room 09 Enemies' or 'Deku Tree MQ Room 09 T05 Unbar'))"
         }
     },
     {
@@ -211,7 +232,9 @@
                 (has_fire_source_with_torch or can_use(Bow)) and (can_press_floor_switch or can_climb(120))"
         },
         "exits": {
-            "Deku Tree Lobby": "'Deku Tree Room 10 Enemies' or barred_door"
+            "Deku Tree Lobby": "
+			    transition('Deku Tree T07', 'Deku Tree Room 10 Enemies'
+				or 'Deku Tree MQ Room 10 T07 Unbar')"
         }
     }
 ]

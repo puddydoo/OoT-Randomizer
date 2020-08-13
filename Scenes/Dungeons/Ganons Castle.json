@@ -2,24 +2,25 @@
     {
         "region_name": "Ganons Castle Entrance",
         "dungeon": "Ganons Castle",
-        "room": "0",
+        "room": "00",
         "exits": {
             "Ganons Castle Grounds": "True",
-            "Ganons Castle Barrier Chamber": "True"
+            "Ganons Castle Barrier Chamber": "transition('Ganons Castle T03', True)"
         }
     },
     {
         "region_name": "Ganons Castle Barrier Chamber",
         "dungeon": "Ganons Castle",
-        "room": "1",
+        "room": "01",
         "exits": {
-            "Ganons Castle Entrance": "True",
-            "Ganons Castle Forest Trial Combat Room": "True",
-            "Ganons Castle Fire Trial": "True",
-            "Ganons Castle Water Trial Red Ice Room": "True",
-            "Ganons Castle Shadow Trial": "True",
-            "Ganons Castle Spirit Trial Danger Room": "True",
-            "Ganons Castle Light Trial Enemy Room": "can_use(Golden_Gauntlets)",
+            "Ganons Castle Entrance": "transition('Ganons Castle T03', True)",
+            "Ganons Castle Forest Trial Combat Room": "transition('Ganons Castle T09', True)",
+            "Ganons Castle Fire Trial": "transition('Ganons Castle T12', True)",
+            "Ganons Castle Water Trial Red Ice Room": "transition('Ganons Castle T10', True)",
+            "Ganons Castle Shadow Trial": "transition('Ganons Castle T13', True)",
+            "Ganons Castle Spirit Trial Danger Room": "transition('Ganons Castle T17', True)",
+            "Ganons Castle Light Trial Enemy Room": "
+			    can_use(Golden_Gauntlets) and transition('Ganons Castle T11', True)",
             "Ganons Tower 1F Entrance": "
                 (skipped_trials[Forest] or 'Forest Trial Clear') and 
                 (skipped_trials[Fire] or 'Fire Trial Clear') and 
@@ -27,102 +28,109 @@
                 (skipped_trials[Shadow] or 'Shadow Trial Clear') and 
                 (skipped_trials[Spirit] or 'Spirit Trial Clear') and 
                 (skipped_trials[Light] or 'Light Trial Clear')",
-            "Ganons Castle Deku Scrubs": "logic_lens_castle or can_use(Lens_of_Truth)"
+            "Ganons Castle Deku Scrubs": "
+			    (logic_lens_castle or can_use(Lens_of_Truth))
+				and transition('Ganons Castle T01', True)"
         }
     },
     {
         "region_name": "Ganons Castle Water Trial Red Ice Room",
         "dungeon": "Ganons Castle",
-        "room": "2",
+        "room": "02",
         "locations": {
             "Ganons Castle Water Trial Left Chest": "True",
             "Ganons Castle Water Trial Right Chest": "True",
             "Blue Fire": "has_bottle and can break icicles"
-        }
+        },
         "exits": {
-            "Ganons Castle Barrier Chamber": "True",
-            "Ganons Castle Water Trial Block Puzzle Room": "Blue_Fire"
+            "Ganons Castle Barrier Chamber": "transition('Ganons Castle T10', True)",
+            "Ganons Castle Water Trial Red Ice Room Rear": "Blue_Fire"
         }
     },
     {
         "region_name": "Ganons Castle Water Trial Red Ice Room Rear",
         "dungeon": "Ganons Castle",
-        "room": "2",
+        "room": "02",
         "exits": {
-            "Ganons Castle Water Trial Red Ice Room": "True",
-            "Ganons Castle Water Trial Block Puzzle Room": "True"
+            "Ganons Castle Water Trial Red Ice Room": "Blue_Fire",
+            "Ganons Castle Water Trial Block Puzzle Room": "transition('Ganons Castle T05', True)"
         }
     },
     {
         "region_name": "Ganons Castle Water Trial Block Puzzle Room",
         "dungeon": "Ganons Castle",
-        "room": "3",
+        "room": "03",
         "events": {
-            "Ganons Castle Room 3 Silver Rupees": "can_climb(100) and Blue_Fire and can_use(Megaton_Hammer)"
+            "Ganons Castle Room 03 Silver Rupees": "can_climb(100) and Blue_Fire and can_use(Megaton_Hammer)"
         },
         "locations": {
             "Fairy Pot": "has_bottle"
-        }
+        },
         "exits": {
-            "Ganons Castle Water Trial Red Ice Room Rear": "can_climb(70)",
+            "Ganons Castle Water Trial Red Ice Room Rear": "
+			    can_climb(70) and transition('Ganons Castle T05', True)",
             "Ganons Castle Water Trial Block Puzzle Room Rear": "can_climb(70)"
         }
     },
     {
         "region_name": "Ganons Castle Water Trial Block Puzzle Room Rear",
         "dungeon": "Ganons Castle",
-        "room": "3",
+        "room": "03",
         "exits": {
             "Ganons Castle Water Trial Block Puzzle Room": "True",
-            "Ganons Castle Water Barrier": "'Ganons Castle Room 3 Silver Rupees' or barred_door"
+            "Ganons Castle Water Barrier": "
+			    transition('Ganons Castle T14',
+				'Ganons Castle Room 03 Silver Rupees' or 'Ganons Castle Room 03 T14 Unbar')"
         }
     },
     {
         "region_name": "Ganons Castle Water Barrier",
         "dungeon": "Ganons Castle",
-        "room": "4",
+        "room": "04",
         "events": {
             "Water Trial Clear": "can_use(Light_Arrows)"
         },
         "exits": {
-            "Ganons Castle Water Trial Block Puzzle Room Rear": "True"
+            "Ganons Castle Water Trial Block Puzzle Room Rear": "transition('Ganons Castle T14', True)"
         }
     },
     {
         "region_name": "Ganons Castle Forest Trial Combat Room",
         "dungeon": "Ganons Castle",
-        "room": "5",
+        "room": "05",
         "events": {
-            "Ganons Castle Room 5 Enemies": "
+            "Ganons Castle Room 05 Enemies": "
                 "
                 #Wolfos
         },
         "locations": {
-            "Ganons Castle Forest Trial Chest": "'Ganons Castle Room 5 Enemies'"
-        }
+            "Ganons Castle Forest Trial Chest": "'Ganons Castle Room 05 Enemies'"
+        },
         "exits": {
-            "Ganons Castle Barrier Chamber": "True",
-            "Ganons Castle Forest Trial Wind Room Front": "here(can_use(Bow) and has_fire_source) or barred_door"
+            "Ganons Castle Barrier Chamber": "transition('Ganons Castle T09', True)",
+            "Ganons Castle Forest Trial Wind Room Front": "
+			    transition('Ganons Castle T07',
+				here(can_use(Bow) and has_fire_source) or 'Ganons Castle Room 05 T07 Unbar')"
         }
     },
     {
         "region_name": "Ganons Castle Forest Trial Wind Room Front",
         "dungeon": "Ganons Castle",
-        "room": "6",
+        "room": "06",
         "events": {
-            "Ganons Castle Room 6 Silver Rupees": "
+            "Ganons Castle Room 06 Silver Rupees": "
                 at('Ganons Castle Forest Trial Wind Room Rear', True)
                 and can_press_floor_switch and (can_use(Hookshot) or can_climb(100))"
         },
         "exits": {
-            "Ganons Castle Forest Trial Combat Room": "True",
+            "Ganons Castle Forest Trial Combat Room": "transition('Ganons Castle T07', True)",
             "Ganons Castle Forest Trial Wind Room": "True"
         }
     },
     {
         "region_name": "Ganons Castle Forest Trial Wind Room",
         "dungeon": "Ganons Castle",
-        "room": "6",
+        "room": "06",
         "exits": {
             "Ganons Castle Forest Trial Wind Room Front": "
                 can_use(Longshot) or (can_use(Hover_Boots) and can_climb(60))",
@@ -132,39 +140,43 @@
     {
         "region_name": "Ganons Castle Forest Trial Wind Room Rear",
         "dungeon": "Ganons Castle",
-        "room": "6",
+        "room": "06",
         "exits": {
             "Ganons Castle Forest Trial Wind Room": "True",
-            "Ganons Castle Forest Barrier": "'Ganons Castle Room 6 Silver Rupees' or barred_door"
+            "Ganons Castle Forest Barrier": "
+			    transition('Ganons Castle T08',
+				'Ganons Castle Room 06 Silver Rupees' or 'Ganons Castle Room 06 T08 Unbar')"
         }
     },
     {
         "region_name": "Ganons Castle Forest Barrier",
         "dungeon": "Ganons Castle",
-        "room": "7",
+        "room": "07",
         "events": {
             "Forest Trial Clear": "can_use(Light_Arrows)"
         },
         "exits": {
-            "Ganons Castle Forest Trial Wind Room Rear": "True"
+            "Ganons Castle Forest Trial Wind Room Rear": "transition('Ganons Castle T08', True)"
         }
     },
     {
         "region_name": "Ganons Castle Light Trial Boulder Room",
         "dungeon": "Ganons Castle",
-        "room": "8",
+        "room": "08",
         "events": {
-            "Ganons Castle Room 8 Silver Rupees": "can_use(Hookshot) or can_climb(120)"
+            "Ganons Castle Room 08 Silver Rupees": "can_use(Hookshot) or can_climb(120)"
         },
         "exits": {
-            "Ganons Castle Light Trial Lullaby Room": "Still_a_key",
-            "Ganons Castle Light Trial Fake Barrier": "'Ganons Castle Room 8 Silver Rupees' or barred_door"
+            "Ganons Castle Light Trial Lullaby Room": "transition('Ganons Castle T20', True)",
+            "Ganons Castle Light Trial Fake Barrier": "
+			    transition('Ganons Castle T06',
+				'Ganons Castle Room 08 Silver Rupees' or 'Ganons Castle Room 08 T06 Unbar')"
         },
     },
     {
         "region_name": "Ganons Castle Light Trial Enemy Room",
         "dungeon": "Ganons Castle",
-        "room": "9",
+        "room": "09",
         "locations": {
             "Ganons Castle Light Trial First Left Chest": "True",
             "Ganons Castle Light Trial Second Left Chest": "True",
@@ -173,22 +185,22 @@
             "Ganons Castle Light Trial Second Right Chest": "True",
             "Ganons Castle Light Trial Third Right Chest": "True",
             "Ganons Castle Light Trial Invisible Enemies Chest": "logic_lens_castle or can_use(Lens_of_Truth)"
-        }
+        },
         "exits": {
-            "Ganons Castle Barrier Chamber": "True",
-            "Ganons Castle Light Trial Lullaby Room": "Small_Key_Ganons_Castle"
+            "Ganons Castle Barrier Chamber": "transition('Ganons Castle T11', True)",
+            "Ganons Castle Light Trial Lullaby Room": "transition('Ganons Castle T04', True)"
         }
     },
     {
         "region_name": "Ganons Castle Light Trial Lullaby Room",
         "dungeon": "Ganons Castle",
-        "room": "9",
+        "room": "09",
         "locations": {
             "Ganons Castle Light Trial Lullaby Chest": "can_play(Zeldas_Lullaby)"
-        }
+        },
         "exits": {
-            "Ganons Castle Light Trial Enemy Room": "Still_a_key",
-            "Ganons Castle Light Trial Boulder Room": "Small_Key_Ganons_Castle"
+            "Ganons Castle Light Trial Enemy Room": "transition('Ganons Castle T04', True)",
+            "Ganons Castle Light Trial Boulder Room": "transition('Ganons Castle T20', True)"
         }
     },
     {
@@ -196,8 +208,10 @@
         "dungeon": "Ganons Castle",
         "room": "10",
         "exits": {
-            "Ganons Castle Light Barrier": "logic_lens_castle or can_use(Lens_of_Truth)",
-            "Ganons Castle Light Trial Boulder Room": "True"
+            "Ganons Castle Light Barrier": "
+			    (logic_lens_castle or can_use(Lens_of_Truth))
+				and transition('Ganons Castle T02', True)",
+            "Ganons Castle Light Trial Boulder Room": "transition('Ganons Castle T06', True)"
         }
     },
     {
@@ -208,7 +222,7 @@
             "Light Trial Clear": "can_use(Light_Arrows)"
         },
         "exits": {
-            "Ganons Castle Light Trial Fake Barrier": "True"
+            "Ganons Castle Light Trial Fake Barrier": "transition('Ganons Castle T02', True)"
         }
     },
     {
@@ -221,7 +235,7 @@
                 can_use(Hover_Boots) or can_play(Song_of_Time)"
         },
         "exits": {
-            "Ganons Castle Barrier Chamber": "True",
+            "Ganons Castle Barrier Chamber": "transition('Ganons Castle T13', True)",
             "Ganons Castle Shadow Trial Switch Area": 
                 can_use(Fire_Arrows) or
                     (can_use(Longshot) and (can_use(Hover_Boots) or can_use(Dins_Fire)))"
@@ -264,7 +278,8 @@
                 or ('Ganons Castle Room 12 Floor Switch' and can_use(Longshot))
                 or (can_use(Hover_Boots) and has_fire_source and can_climb(40))",
             "Ganons Castle Shadow Barrier": "
-                'Ganons Castle Room 12 Rusted Switch' or barred_door"
+                transition('Ganons Castle T15',
+				'Ganons Castle Room 12 Rusted Switch' or 'Ganons Castle Room 12 T15 Unbar')"
         }
     },
     {
@@ -275,7 +290,7 @@
             "Shadow Trial Clear": "can_use(Light_Arrows)"
         },
         "exits": {
-            "Ganons Castle Shadow Trial Rear": "True"
+            "Ganons Castle Shadow Trial Rear": "transition('Ganons Castle T15', True)"
         }
     },
     {
@@ -288,10 +303,12 @@
         "exits": {
             #If you're quick, you can make it across the room without Goron Tunic, but the rupees require it
             "Ganons Castle Barrier Chamber": "
-               (can_use(Goron_Tunic) or logic_fewer_tunic_requirements) and can_use(Longshot)",
+               (can_use(Goron_Tunic) or logic_fewer_tunic_requirements) and can_use(Longshot)
+			   and transition('Ganons Castle T12', True)",
             "Ganons Castle Fire Barrier": "
                 (can_use(Goron_Tunic) or logic_fewer_tunic_requirements) and can_use(Longshot)
-                and ('Ganons Castle Room 14 Silver Rupees' or barred_door)"
+                and transition('Ganons Castle T16',
+				'Ganons Castle Room 14 Silver Rupees' or 'Ganons Castle Room 14 T16 Unbar')"
         }
     },
     {
@@ -302,7 +319,7 @@
             "Fire Trial Clear": "can_use(Light_Arrows)"
         },
         "exits": {
-            "Ganons Castle Fire Trial": "True"
+            "Ganons Castle Fire Trial": "transition('Ganons Castle T16', True)"
         }
     },
     {
@@ -315,9 +332,9 @@
             "Ganons Castle Deku Scrub Left": "can_stun_deku",
             "Ganons Castle Deku Scrub Right": "can_stun_deku",
             "Free Fairies": "has_bottle"
-        }
+        },
         "exits": {
-            "Ganons Castle Barrier Chamber": "True"
+            "Ganons Castle Barrier Chamber": "transition('Ganons Castle T01', True)"
         }
     },
     {
@@ -328,9 +345,10 @@
             "Ganons Castle Room 17 Silver Rupees": "logic_spirit_trial_hookshot or can_use(Hookshot)"
         },
         "exits": {
-            "Ganons Castle Barrier Chamber": "True",
+            "Ganons Castle Barrier Chamber": "transition('Ganons Castle T17', True)",
             "Ganons Castle Spirit Trial Sun Switch Room Front": "
-                'Ganons Castle Room 17 Silver Rupees' or barred_door"
+                transition('Ganons Castle T18',
+				'Ganons Castle Room 17 Silver Rupees' or 'Ganons Castle Room 17 T18 Unbar')"
         }
     },
     {
@@ -340,15 +358,16 @@
         "events": {
             "Ganons Castle Room 18 First Crystal Switch": "has_explosives",
             "Ganons Castle Room 18 Door Crystal Switch": "has_bombchus"
-        }
+        },
         "locations": {
             "Ganons Castle Spirit Trial Crystal Switch Chest": "
                 'Ganons Castle Room 18 First Crystal Switch'"
-        }
+        },
         "exits": {
-            "Ganons Castle Spirit Trial Danger Room": "True",
-            "Ganons Castle Spirit Trial Sun Switch Room": 
-                'Ganons Castle Room 18 Door Crystal Switch' or barred_door"
+            "Ganons Castle Spirit Trial Danger Room": "transition('Ganons Castle T18', True)",
+            "Ganons Castle Spirit Trial Sun Switch Room": "
+                transition('Ganons Castle T21',
+				'Ganons Castle Room 18 Door Crystal Switch' or 'Ganons Castle Room 18 T21 Unbar')"
         }
     },
     {
@@ -358,16 +377,19 @@
         "events": {
             "Ganons Castle Room 18 First Crystal Switch": "Can hit crystal switch",
             "Ganons Castle Room 18 Door Crystal Switch": "Can hit crystal switch"
-        }
+        },
         "locations": {
             "Ganons Castle Spirit Trial Invisible Chest": "logic_lens_castle or can_use(Lens_of_Truth)"
-        }
+        },
         "exits": {
             "Ganons Castle Spirit Trial Sun Switch Room Front": "
-                'Ganons Castle Room 18 Door Crystal Switch' or barred_door",
+                transition('Ganons Castle T21',
+				'Ganons Castle Room 18 Door Crystal Switch' or 'Ganons Castle Room 18 T21 Unbar')",
             "Ganons Castle Spirit Barrier": 
-                here(can_use(Bow) and (can_use(Mirror_Shield)
-                    or (mm_light_arrows and can_use(Light_Arrows))) or barred_door"
+                transition('Ganons Castle T19',
+				    here(can_use(Bow) and (can_use(Mirror_Shield)
+                    or (mm_light_arrows and can_use(Light_Arrows))))
+					or 'Ganons Castle Room 18 T19 Unbar')"
         }
     },
     {
@@ -379,9 +401,9 @@
         },
         "locations": {
             "Nut Pot": "True"
-        }
+        },
         "exits": {
-            "Ganons Castle Spirit Trial Sun Switch Room": "True"
+            "Ganons Castle Spirit Trial Sun Switch Room": "transition('Ganons Castle T19', True)"
         }
     }
 ]

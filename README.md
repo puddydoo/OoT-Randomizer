@@ -13,7 +13,8 @@ They pave way for such features as lock rando, door rando, hybridized Vanilla/MQ
 ### Logic helpers
 
 * I did not edit `LogicHelpers.json` but have used these in the files.
-* `barred_door`: When a door can be barred for any reason, I put this as an alternate condition on that exit. This is meant to be false. Perhaps this would make it possible to have all barred doors open automatically or split it up for each barred door in the game. The ones in Ice Cavern and Jabu-Jabu are different from the standard barred doors and might need to be separate things but I didn't.
+* `transition()`: Represents doors and other room transitions in dungeons. The intent is that it should first check whether that door needs to be unlocked with a key. If not, the condition after the comma is required to go through the door (to unbar it). The key is checked first because a lock placed by door rando would replace the bars on both sides of the door.
+* `barred_door`: I put this as an alternate condition on barred doors (meant to be false) before labeling the individual transitions. It remains on certain barred doors which turned out not to be actual transition actors such as in Ice Cavern. I might remove it.
 * `can_climb()`: For every ledge that I could think to add it I counted the change in Link's Y coordinate and put it as a condition. I even included ledges that are too high for Link to ever climb. Why do this instead of just `is_adult` for those ledges that child cannot climb? Because the forms of Link in MM have different heights. Deku Link is very short and Fierce Deity Link is very tall. But I do not even know the exact heights or maximum climbing heights of any of the forms in OoT or MM. Also, in Glitched, ground jumps can be calculated into this because they allow Link to climb higher than normal.
 * `can_fall`: I put this for some instances in which the player is required to fall a distance that they cannot roll out of. I don't know if this is necessary to put it as its own term or just use the regular assortment of no OHKO or Fairy or Nayru's Love (if that prevents fall damage) but I put that there and I couldn't be bothered to change it before forking.
 * `can_press_floor_switch`: Every time that Link has to step on a floor switch I put this condition, which is always true. What is the point? Because Deku Link in MM is too light to do so.
@@ -36,7 +37,7 @@ They pave way for such features as lock rando, door rando, hybridized Vanilla/MQ
 
 * In general, many things that I didn't bother to figure out all the conditions for I went bleh.
 * All these conditions will slow down generation.
-* I put a single key as a requirement for each locked door and the logic doesn't currently tally them. In general, it will be necessary for lock rando to introduce some representation for doors into these JSON files but since I couldn't decide on how to do that I just used the exits for now. So there is not yet any distinction between an unlocked door and a non-door room transition. Whenever I got to the other side of a key door I put "Still_a_key" or some such there.
+* The `transition()` condition is meant to check the key status of each door on a separate json but I have written no such json, much less provided a way to handle lock rando logic without softlocks.
 * Deku Tree MQ has requirements of using torch from outside the room. Though this might not matter without Door Rando.
 * Jabu-Jabu has Ruto and I couldn't decide how to handle this as a condition since she goes away so that would be technically NRA as far as I know. Not as much of a problem without door rando though.
 * Forest Temple twisting rooms hurt me especially when they both turned out to be a permanent flag in MQ only.

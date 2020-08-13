@@ -2,29 +2,30 @@
     {
         "region_name": "Fire Temple Entrance Chamber",
         "dungeon": "Fire Temple",
-        "room": "0",
+        "room": "00",
         "exits": {
             "DMC Fire Temple Entrance": "True",
             "Fire Temple Entrance Chamber North": "True",
-            "Fire Temple Combat Room": "here(can_use(Megaton_Hammer)) and Small_Key_Fire_Temple",
-            "Fire Temple Two-Sided Cell South": "True"
+            "Fire Temple Combat Room": "
+			    here(can_use(Megaton_Hammer)) and transition('Fire Temple T35', True)",
+            "Fire Temple Two-Sided Cell South": "transition('Fire Temple T18', True)"
         }
     },
     {
         "region_name": "Fire Temple Entrance Chamber North",
         "dungeon": "Fire Temple",
-        "room": "0",
+        "room": "00",
         "exits": {
             "Fire Temple Entrance Chamber": "True",
-            "Fire Temple Big Lava Room West": "Small_Key_Fire_Temple",
-            "Fire Temple Boss Door Room Entrance": "True"
+            "Fire Temple Big Lava Room West": "transition('Fire Temple T37', True)",
+            "Fire Temple Boss Door Room Entrance": "transition('Fire Temple T17', True)"
         }
     },
     #I put the tag "hot" as if the logic was changed so that going from one "hot" region to another "hot" region requires Goron Tunic. However, I did not do this with DMC. This was just a placeholder solution to prevent entrance rando/door rando from lining up two "hot" rooms without Goron Tunic. The door between the big lava room and elevator required Goron Tunic in the original logic but that was because of the hot rooms being adjacent and carrying over the timer.
     {
         "region_name": "Fire Temple Big Lava Room",
         "dungeon": "Fire Temple",
-        "room": "1",
+        "room": "01",
         "hot": "true",
         "exits": {
             "Fire Temple Big Lava Room Exits": "
@@ -34,34 +35,36 @@
     {
         "region_name": "Fire Temple Big Lava Room Exits",
         "dungeon": "Fire Temple",
-        "room": "1",
+        "room": "01",
         "exits": {
-            "Fire Temple Entrance Chamber North": "Still_a_key",
-            "Fire Temple Flame Pillar Elevator Room": "Small_Key_Fire_Temple",
-            "Fire Temple Southern Cell": "can_climb(83) and has_explosives",
-            "Fire Temple Northern Cell": "True",
+            "Fire Temple Entrance Chamber North": "transition('Fire Temple T37', True)",
+            "Fire Temple Flame Pillar Elevator Room": "transition('Fire Temple T15', True)",
+            "Fire Temple Southern Cell": "
+			    can_climb(83) and has_explosives and transition('Fire Temple T16', True)",
+            "Fire Temple Northern Cell": "transition('Fire Temple T14', True)",
             "Fire Temple High Floor Tile Room": "
-                (can_play(Song_of_Time) and can_climb(96))
+                ((can_play(Song_of_Time) and can_climb(96))
                 or (logic_fire_song_of_time and is_adult)
-                or can_climb(136)",
-            "Fire Temple Eastern Shaft": "False"
+                or can_climb(136))
+				and transition('Fire Temple T13', True)",
+            "Fire Temple Eastern Shaft": "False and transition('Fire Temple T03', True)"
         }
     },
     {
         "region_name": "Fire Temple Boss Door Room Entrance",
         "dungeon": "Fire Temple",
-        "room": "2",
+        "room": "02",
         "hot": "true",
         "exits": {
-            "Fire Temple Entrance Chamber North": "True",
+            "Fire Temple Entrance Chamber North": "transition('Fire Temple T17', True)",
             "Fire Temple Boss Door Room": "
-                logic_fewer_tunic_requirements or can_use(Goron_Tunic)",
+                logic_fewer_tunic_requirements or can_use(Goron_Tunic)"
         }
     },
     {
         "region_name": "Fire Temple Boss Door Room",
         "dungeon": "Fire Temple",
-        "room": "2",
+        "room": "02",
         "locations": {
             "Fire Temple Near Boss Chest" : "can_press_floor_switch"
         },
@@ -79,13 +82,13 @@
                 (can_climb(200) and 
                     ((damage_multiplier != 'ohko' and damage_multiplier != 'quadruple')
                     or Fairy or can_use(Nayrus_Love)))",
-            "Fire Temple Flame Maze": "False"
+            "Fire Temple Flame Maze": "False and transition('Fire Temple T02', True)"
         }
     },
     {
         "region_name": "Fire Temple Boss Door Room Hookshot Platform",
         "dungeon": "Fire Temple",
-        "room": "2",
+        "room": "02",
         "locations": {
             "Fairy Pot": "has_bottle and can_climb(100)"
         },
@@ -94,79 +97,83 @@
                 can_use(Hover_Boots) or (can_climb(100) and 
                 ((damage_multiplier != 'ohko' and damage_multiplier != 'quadruple')
                 or Fairy or can_use(Nayrus_Love)))",
-            "Fire Temple Boss Door Room Boss Platform", "can_use(Hover_Boots)",
+            "Fire Temple Boss Door Room Boss Platform", "can_use(Hover_Boots)"
         }
     },
     {
         "region_name": "Fire Temple Boss Door Room Boss Platform",
         "dungeon": "Fire Temple",
-        "room": "2",
+        "room": "02",
         "hot": "true",
         "exits": {
-            "Fire Temple Volvagia Arena": "Boss_Key_Fire_Temple",
+            "Fire Temple Volvagia Arena": "transition('Fire Temple T36', True)",
             "Fire Temple Boss Door Room": "
                 (logic_fewer_tunic_requirements or can_use(Goron_Tunic)) and
                 (('Fire Temple Boss Door Stone' and is_adult)
-                or can_climb(100) or can_use(Hover_Boots))",
+                or can_climb(100) or can_use(Hover_Boots))"
         }
     },
     {
         "region_name": "Fire Temple Flare Dancer Treasure Room",
         "dungeon": "Fire Temple",
-        "room": "3",
+        "room": "03",
         "events": {
-            "Fire Temple Room 3 Enemies": "
+            "Fire Temple Room 03 Enemies": "
                 "
                 #Flare Dancer
         },
         "locations": {
-            "Fire Temple Flare Dancer Chest": "'Fire Temple Room 3 Enemies' and (can_climb(80) or can_use(Hookshot))"
+            "Fire Temple Flare Dancer Chest": "'Fire Temple Room 03 Enemies' and (can_climb(80) or can_use(Hookshot))"
         },
         "exits": {
-            "Fire Temple Lower Floor Tile Room": "'Fire Temple Room 3 Enemies' or barred_door"
-            "Fire Temple Two-Sided Cell": "'Fire Temple Room 3 Enemies' or barred_door",
+            "Fire Temple Lower Floor Tile Room": "
+			    transition('Fire Temple T30',
+				'Fire Temple Room 03 Enemies' or 'Fire Temple Room 03 T30 Unbar')",
+            "Fire Temple Two-Sided Cell": "
+			    transition('Fire Temple T26',
+				'Fire Temple Room 03 Enemies' or 'Fire Temple Room 03 T26 Unbar')"
         }
     },
     {
         "region_name": "Fire Temple Ascent to Stone Maze",
         "dungeon": "Fire Temple",
-        "room": "4",
+        "room": "04",
         "exits": {
-            "Fire Temple Flame Pillar Elevator Top West": "Still_a_key",
+            "Fire Temple Flame Pillar Elevator Top West": "transition('Fire Temple T07', True)",
             "Fire Temple Ascent to Stone Maze Top": "
                 can_climb(100) and can_use_projectile and 
                 (logic_fire_strength or Progressive_Strength_Upgrade or can_climb(120))",
-            "Fire Temple Ascent to Stone Maze Rear": "'Fire Temple Room 4 Floor Switch'"
+            "Fire Temple Ascent to Stone Maze Rear": "'Fire Temple Room 04 Floor Switch'"
         }
     },
     {
         "region_name": "Fire Temple Ascent to Stone Maze Top",
         "dungeon": "Fire Temple",
-        "room": "4",
+        "room": "04",
         "exits": {
             "Fire Temple Ascent to Stone Maze": "True",
-            "Fire Temple Stone Maze": "True"
+            "Fire Temple Stone Maze": "transition('Fire Temple T28', True)"
         }
     },
     {
         "region_name": "Fire Temple Ascent to Stone Maze Rear",
         "dungeon": "Fire Temple",
-        "room": "4",
+        "room": "04",
         "events": {
-            "Fire Temple Room 4 Floor Switch": "can_press_floor_switch"
+            "Fire Temple Room 04 Floor Switch": "can_press_floor_switch"
         },
         "locations": {
-            "Fire Temple Boulder Maze Shortcut Chest": "'Fire Temple Room 4 Floor Switch'"
+            "Fire Temple Boulder Maze Shortcut Chest": "'Fire Temple Room 04 Floor Switch'"
         },
         "exits": {
-            "Fire Temple Ascent to Stone Maze": "'Fire Temple Room 4 Floor Switch'",
-            "Fire Temple Stone Maze Shortcut": "True"
+            "Fire Temple Ascent to Stone Maze": "'Fire Temple Room 04 Floor Switch'",
+            "Fire Temple Stone Maze Shortcut": "transition('Fire Temple T01', True)"
         }
     },
     {
         "region_name": "Fire Temple Stone Maze",
         "dungeon": "Fire Temple",
-        "room": "5",
+        "room": "05",
         "locations": {
             "Fire Temple Boulder Maze Lower Chest": "can_press_floor_switch",
             "Fire Temple GS Boulder Maze": "
@@ -174,36 +181,36 @@
         },
         "exits": {
             "Fire Temple Stone Maze Upper", "can_climb(140)",
-            "Fire Temple Ascent to Stone Maze Top": "True",
-            "Fire Temple Eastern Shaft": "Small_Key_Fire_Temple",
-            "Fire Temple Stone Maze Side Room": "True"
+            "Fire Temple Ascent to Stone Maze Top": "transition('Fire Temple T28', True)",
+            "Fire Temple Eastern Shaft": "transition('Fire Temple T22', True)",
+            "Fire Temple Stone Maze Side Room": "transition('Fire Temple T19', True)"
         }
     },
     {
         "region_name": "Fire Temple Stone Maze Upper",
         "dungeon": "Fire Temple",
-        "room": "5",
+        "room": "05",
         "events": {
-            "Fire Temple Room 5 Upper Cage": "can_press_floor_switch"
+            "Fire Temple Room 05 Upper Cage": "can_press_floor_switch"
         }
         "locations": {
-            "Fire Temple Boulder Maze Upper Chest": "'Fire Temple Room 5 Upper Cage'"
+            "Fire Temple Boulder Maze Upper Chest": "'Fire Temple Room 05 Upper Cage'"
         },
         "exits": {
             "Fire Temple Stone Maze", "True",
             "Fire Temple Stone Maze Shortcut", "has_explosives",
             "Fire Temple Stone Maze Top", "
                 can_use(Scarecrow) or (logic_fire_scarecrow and can_use(Longshot))"
-            "Fire Temple Lava Grate Room North": "True",
-            "Fire Temple Stone Maze Side Room": "True"
+            "Fire Temple Lava Grate Room North": "transition('Fire Temple T29', True)",
+            "Fire Temple Stone Maze Side Room": "transition('Fire Temple T19', True)"
         }
     },
     {
         "region_name": "Fire Temple Stone Maze Shortcut",
         "dungeon": "Fire Temple",
-        "room": "5",
+        "room": "05",
         "exits": {
-            "Fire Temple Ascent to Stone Maze Rear": "True",
+            "Fire Temple Ascent to Stone Maze Rear": "transition('Fire Temple T01', True)",
             "Fire Temple Stone Maze Upper": "
                 at('Fire Temple Stone Maze Upper', has_explosives)"
         }
@@ -211,57 +218,59 @@
     {
         "region_name": "Fire Temple Stone Maze Top",
         "dungeon": "Fire Temple",
-        "room": "5",
+        "room": "05",
         "exits": {
             "Fire Temple Stone Maze Upper", "True",
             "Fire Temple Stone Maze", "True",
-            "Fire Temple Ascent to Eastern Tower": "True",
+            "Fire Temple Ascent to Eastern Tower": "transition('Fire Temple T23', True)"
         }
     },
     {
         "region_name": "Fire Temple Eastern Shaft",
         "dungeon": "Fire Temple",
-        "room": "6",
+        "room": "06",
         "exits": {
-            "Fire Temple Stone Maze": "Still_a_key",
-            "Fire Temple Lava Grate Room South": "Small_Key_Fire_Temple",
-            "Fire Temple Lava Grate Room East": "can_use(Bow) or can_use(Slingshot) or barred_door",
-            "Fire Temple Big Lava Room": "can_fall",
-            "Fire Temple Eastern Tower": "False"
+            "Fire Temple Stone Maze": "transition('Fire Temple T22', True)",
+            "Fire Temple Lava Grate Room South": "transition('Fire Temple T20', True)",
+            "Fire Temple Lava Grate Room East": "
+			    transition('Fire Temple T21',
+				can_use(Bow) or can_use(Slingshot) or 'Fire Temple Room 06 T21 Unbar')",
+            "Fire Temple Big Lava Room": "can_fall and transition('Fire Temple T03', True)",
+            "Fire Temple Eastern Tower": "False and transition('Fire Temple T04', True)"
         }
     },
     {
         "region_name": "Fire Temple Ascent to Eastern Tower",
         "dungeon": "Fire Temple",
-        "room": "7",
+        "room": "07",
         "locations": {
             "Fire Temple GS Scarecrow Climb": "Kill the skulltula"
         }
         "exits": {
-            "Fire Temple Stone Maze Top": "True",
-            "Fire Temple Eastern Tower": "True"
+            "Fire Temple Stone Maze Top": "transition('Fire Temple T23', True)",
+            "Fire Temple Eastern Tower": "transition('Fire Temple T24', True)"
         }
     },
     {
         "region_name": "Fire Temple Eastern Tower",
         "dungeon": "Fire Temple",
-        "room": "8",
+        "room": "08",
         "locations": {
             "Fire Temple Scarecrow Chest": "can_press_floor_switch",
             "Fire Temple GS Scarecrow Top": "can_use_projectile"
         },
         "exits": {
-            "Fire Temple Ascent to Eastern Tower": "True",
-            "Fire Temple Eastern Shaft": "can_fall"
+            "Fire Temple Ascent to Eastern Tower": "transition('Fire Temple T24', True)",
+            "Fire Temple Eastern Shaft": "can_fall and transition('Fire Temple T04', True)"
         }
     },
     {
         "region_name": "Fire Temple Hallway to Flame Maze",
         "dungeon": "Fire Temple",
-        "room": "9",
+        "room": "09",
         "exits": {
-            "Fire Temple Flame Maze East": "True",
-            "Fire Temple Lava Grate Room West": "Still_a_key"
+            "Fire Temple Flame Maze East": "transition('Fire Temple T08', True)",
+            "Fire Temple Lava Grate Room West": "transition('Fire Temple T06', True)"
         }
     },
     {
@@ -269,7 +278,7 @@
         "dungeon": "Fire Temple",
         "room": "10",
         "exits": {
-            "Fire Temple Hallway to Flame Maze": "True",
+            "Fire Temple Hallway to Flame Maze": "transition('Fire Temple T08', True)",
             "Fire Temple Flame Maze": "True",
             "Fire Temple Flame Maze Ledge": "can_use(Hover_Boots)"
         }
@@ -279,14 +288,15 @@
         "dungeon": "Fire Temple",
         "room": "10",
         "exits": {
-            "Fire Temple Boss Door Room": "'Fire Temple Boss Door Stone' and can_fall",
-            "Fire Temple Center of Flame Maze": "Small_Key_Fire_Temple",
-            "Fire Temple Flame Maze Side Room": "True",
+            "Fire Temple Boss Door Room": "
+			    'Fire Temple Boss Door Stone' and can_fall and transition('Fire Temple T02', True)",
+            "Fire Temple Center of Flame Maze": "transition('Fire Temple T10', True)",
+            "Fire Temple Flame Maze Side Room": "transition('Fire Temple T34', True)",
             "Fire Temple Flame Maze East": "can_climb(70)",
             "Fire Temple Flame Maze Ledge": "'Fire Temple Flame Maze Ceiling Stone' and can_climb(100)",
             "Fire Temple Flame Maze North": "logic_fire_flame_maze",
             "Fire Temple Flame Maze Northeast": "True",
-            "Fire Temple Flame Maze Ceiling": "False",
+            "Fire Temple Flame Maze Ceiling": "False"
         }
     },
     {
@@ -294,9 +304,9 @@
         "dungeon": "Fire Temple",
         "room": "10",
         "exits": {
-            "Fire Temple Flame Maze Side Room": "True",
+            "Fire Temple Flame Maze Side Room": "transition('Fire Temple T34', True)",
             "Fire Temple Flame Maze": "True",
-            "Fire Temple Flame Maze North": "logic_fire_flame_maze",
+            "Fire Temple Flame Maze North": "logic_fire_flame_maze"
         }
     },
     {
@@ -307,9 +317,11 @@
             "Fire Temple Boss Door Stone": "can_use(Megaton_Hammer)"
         }
         "exits": {
-            "Fire Temple Center of Flame Maze East": "can_use(Megaton_Hammer) or barred_door",
+            "Fire Temple Center of Flame Maze East": "
+			    transition('Fire Temple T25',
+				can_use(Megaton_Hammer) or 'Fire Temple Room 10 T25 Unbar')",
             "Fire Temple Flame Maze": "True",
-            "Fire Temple Flame Maze Northeast": "True",
+            "Fire Temple Flame Maze Northeast": "True"
         }
     },
     {
@@ -317,7 +329,7 @@
         "dungeon": "Fire Temple",
         "room": "10",
         "exits": {
-            "Fire Temple Center of Flame Maze": "True",
+            "Fire Temple Center of Flame Maze": "transition('Fire Temple T09', True)",
             "Fire Temple Flame Maze West": "can_press_floor_switch and can_climb(40)",
             "Fire Temple Flame Maze": "logic_fire_flame_maze",
             "Fire Temple Flame Maze Northeast": "logic_fire_flame_maze"
@@ -329,7 +341,8 @@
         "room": "10",
         "exits": {
             "Fire Temple Flame Maze North": "False",
-            "Fire Temple Flare Dancer Elevator Room": "has_explosives"
+            "Fire Temple Flare Dancer Elevator Room": "
+			    has_explosives and transition('Fire Temple T27', True)"
         }
     },
     {
@@ -341,7 +354,7 @@
         }
         "exits": {
             "Fire Temple Flame Maze": "'Fire Temple Flame Maze Ceiling Stone' and can_fall",
-            "Fire Temple Stone Stairway Bottom": "True"
+            "Fire Temple Stone Stairway Bottom": "transition('Fire Temple T31', True)"
         }
     },
     {
@@ -352,8 +365,8 @@
             "Fire Temple Highest Goron Chest": "'Fire Temple Room 11 Rusted Switch'"
         }
         "exits": {
-            "Fire Temple Flame Maze": "still_a_key",
-            "Fire Temple Flame Maze North": "True",
+            "Fire Temple Flame Maze": "transition('Fire Temple T10', True)",
+            "Fire Temple Flame Maze North": "transition('Fire Temple T09', True)",
             "Fire Temple Center of Flame Maze West": "(can_play(Song_of_Time) and can_climb(100)) or can_climb(180)",
             "Fire Temple Center of Flame Maze East": "(can_play(Song_of_Time) and can_climb(100)) or can_climb(180)"
         }
@@ -368,9 +381,9 @@
         }
         "exits": {
             "Fire Temple Center of Flame Maze": "True",
-            "Fire Temple Center of Fire Wall East": "
+            "Fire Temple Center of Flame Maze East": "
                 can_climb(100) or (can_play(Song_of_Time) and can_climb(80)) or can_use(Hover_Boots)",
-            "Fire Temple Western Tower": "False"
+            "Fire Temple Western Tower": "False and transition('Fire Temple T05', True)"
         }
     },
     {
@@ -379,10 +392,10 @@
         "room": "11",
         "exits": {
             "Fire Temple Center of Flame Maze": "True",
-            "Fire Temple Center of Fire Wall West": "
+            "Fire Temple Center of Flame Maze West": "
                 can_climb(100) or (can_play(Song_of_Time) and can_climb(63)) or can_use(Hover_Boots)",
-            "Fire Temple Flame Maze Ledge": "True",
-            "Fire Temple Western Tower": "False"
+            "Fire Temple Flame Maze Ledge": "transition('Fire Temple T25', True)",
+            "Fire Temple Western Tower": "False and transition('Fire Temple T05', True)"
         }
     },
     {
@@ -390,8 +403,8 @@
         "dungeon": "Fire Temple",
         "room": "12",
         "exits": {
-            "Fire Temple Western Tower": "can_use_projectile",
-            "Fire Temple Flare Dancer Elevator Top": "True"
+            "Fire Temple Western Tower": "can_use_projectile and transition('Fire Temple T11', True)",
+            "Fire Temple Flare Dancer Elevator Top": "transition('Fire Temple T12', True)"
         }
     },
     {
@@ -402,12 +415,12 @@
             "Fire Temple Megaton Hammer Chest": "can_press_floor_switch and can_climb(60)"
         }
         "exits": {
-            "Fire Temple Ascent to Western Tower": "True",
+            "Fire Temple Ascent to Western Tower": "transition('Fire Temple T11', True)",
             "Fire Temple Western Tower Under Stone": "can_use(Megaton_Hammer)",
-            "Fire Temple Center of Flame Maze": "can_fall"
+            "Fire Temple Center of Flame Maze": "can_fall and transition('Fire Temple T05', True)"
             #It invisibly pushes you into the bottom, but if you really try you can land on the sides
-            "Fire Temple Center of Flame Maze West": "can_fall"
-            "Fire Temple Center of Flame Maze East": "can_fall"
+            "Fire Temple Center of Flame Maze West": "can_fall and transition('Fire Temple T05', True)"
+            "Fire Temple Center of Flame Maze East": "can_fall and transition('Fire Temple T05', True)"
         }
     },
     {
@@ -417,7 +430,8 @@
         "exits": {
             "Fire Temple Western Tower": "can_climb(220) and
                 at('Fire Temple Western Tower', can_use(Megaton_Hammer))",
-            "Fire Temple Stone Stairway": "can_use(Megaton_Hammer)"
+            "Fire Temple Stone Stairway": "
+			    can_use(Megaton_Hammer) and transition('Fire Temple T32', True)"
         }
     },
     {
@@ -428,9 +442,11 @@
             "Fire Temple Stone Stairs": "can_use(Megaton_Hammer)"
         }
         "exits": {
-            "Fire Temple Western Tower Under Stone": "True",
+            "Fire Temple Western Tower Under Stone": "transition('Fire Temple T32', True)",
             "Fire Temple Stone Stairway Bottom": "'Fire Temple Stone Stairs'"
-            "Fire Temple Flame Maze Ceiling": "'Fire Temple Stone Stairs' and (True or barred_door)"
+            "Fire Temple Flame Maze Ceiling": "
+			    'Fire Temple Stone Stairs' and
+				transition('Fire Temple T31', True or 'Fire Temple Room 14 T31 Unbar')"
         }
     },
     {
@@ -440,7 +456,9 @@
         #If the stairs aren't lowered then you can drop into an unloaded Flame Maze
         "exits": {
             "Fire Temple Stone Stairway": "'Fire Temple Stone Stairs' and can_climb(100)",
-            "Fire Temple Flame Maze Ceiling": "can_hold_down_switch or barred_door"
+            "Fire Temple Flame Maze Ceiling": "
+			    transition('Fire Temple T31',
+				can_hold_down_switch or 'Fire Temple Room 14 T31 Unbar')"
         }
     },
     {
@@ -453,9 +471,10 @@
                 #
         },
         "exits": {
-            "Fire Temple Entrance Chamber": "Still_a_key",
+            "Fire Temple Entrance Chamber": "transition('Fire Temple T35', True)",
             "Fire Temple Lower Floor Tile Room": "
-                'Fire Temple Room 15 Enemies' or barred_door"
+                transition('Fire Temple T33',
+				'Fire Temple Room 15 Enemies' or 'Fire Temple Room 15 T33 Unbar')"
         }
     },
     {
@@ -464,8 +483,8 @@
         "room": "16",
         "hot": "true",
         "exits": {
-            "Fire Temple Eastern Shaft": "Still_a_key",
-            "Fire Temple Lava Grate Room": "(logic_fewer_tunic_requirements or can_use(Goron_Tunic))",
+            "Fire Temple Eastern Shaft": "transition('Fire Temple T20', True)",
+            "Fire Temple Lava Grate Room": "(logic_fewer_tunic_requirements or can_use(Goron_Tunic))"
         }
     },
     {
@@ -485,9 +504,9 @@
         "room": "16",
         "hot": "true",
         "exits": {
-            "Fire Temple Stone Maze Upper": "True",
+            "Fire Temple Stone Maze Upper": "transition('Fire Temple T29', True)",
             "Fire Temple Lava Grate Room Map Cage": "can_climb(100)",
-            "Fire Temple Lava Grate Room": "(logic_fewer_tunic_requirements or can_use(Goron_Tunic))",
+            "Fire Temple Lava Grate Room": "(logic_fewer_tunic_requirements or can_use(Goron_Tunic))"
         }
     },
     {
@@ -500,7 +519,7 @@
         "exits": {
             "Fire Temple Lava Grate Room East": "True",
             "Fire Temple Lava Grate Room South": "can_climb(140)",
-            "Fire Temple Lava Grate Room North": "can_climb(240)",
+            "Fire Temple Lava Grate Room North": "can_climb(240)"
         }
     },
     {
@@ -509,7 +528,7 @@
         "room": "16",
         "hot": "true",
         "exits": {
-            "Fire Temple Eastern Shaft": "True",
+            "Fire Temple Eastern Shaft": "transition('Fire Temple T21', True)",
             "Fire Temple Lava Grate Room Map Cage", "True"
         }
     },
@@ -520,7 +539,7 @@
         "hot": "true",
         "exits": {
             "Fire Temple Lava Grate Room": "(logic_fewer_tunic_requirements or can_use(Goron_Tunic))",
-            "Fire Temple Hallway to Flame Maze": "Small_Key_Fire_Temple"
+            "Fire Temple Hallway to Flame Maze": "transition('Fire Temple T06', True)"
         }
     },
     {
@@ -528,7 +547,7 @@
         "dungeon": "Fire Temple",
         "room": "17",
         "exits": {
-            "Fire Temple Entrance Chamber": "True",
+            "Fire Temple Entrance Chamber": "transition('Fire Temple T18', True)",
             "Fire Temple Two-Sided Cell": "'Fire Temple Room 17 Rusted Switch'"
         }
     },
@@ -544,7 +563,7 @@
         },
         "exits": {
             "Fire Temple Two-Sided Cell South": "'Fire Temple Room 17 Rusted Switch'",
-            "Fire Temple Flare Dancer Treasure Room": "True"
+            "Fire Temple Flare Dancer Treasure Room": "transition('Fire Temple T26', True)"
         }
     },
     {
@@ -555,8 +574,8 @@
             "Fire Temple GS Boss Key Loop": "Kill the skulltula",
         },
         "exits": {
-            "Fire Temple Flare Dancer Treasure Room": "True",
-            "Fire Temple Combat Room": "True"   
+            "Fire Temple Flare Dancer Treasure Room": "transition('Fire Temple T30', True)",
+            "Fire Temple Combat Room": "transition('Fire Temple T33', True)"   
         }
     },
     {
@@ -567,7 +586,7 @@
             "Fire Temple GS High Floor Tile Room": "is_adult or can_use(Boomerang)"
         },
         "exits": {
-            "Fire Temple Big Lava Room": "True"
+            "Fire Temple Big Lava Room": "transition('Fire Temple T13', True)"
         }
     },
     {
@@ -578,7 +597,7 @@
             "Fire Temple Big Lava Room Lower Open Door Chest": "can_press_floor_switch"
         },
         "exits": {
-            "Fire Temple Big Lava Room": "True"
+            "Fire Temple Big Lava Room": "transition('Fire Temple T14', True)"
         }
     },
     {
@@ -587,7 +606,7 @@
         "room": "21",
         "hot_room": "true",
         "exits": {
-            "Fire Temple Big Lava Room": "Still_a_key",
+            "Fire Temple Big Lava Room": "transition('Fire Temple T15', True)",
             #If you were to door rando in from a non-hot room, there is enough time to hookshot up and push the block
             "Fire Temple Flame Pillar Elevator Top": "
                 (can_use(Hookshot) and logic_fewer_tunic_requirements) or can_use(Goron_Tunic)"
@@ -610,7 +629,7 @@
         "hot_room": "true",
         "exits": {
             "Fire Temple Flame Pillar Elevator Top": "True",
-            "Fire Temple Ascent to Stone Maze": "Small_Key_Fire_Temple"
+            "Fire Temple Ascent to Stone Maze": "transition('Fire Temple T07', True)"
         }
     },
     {
@@ -621,7 +640,7 @@
             "Fire Temple Big Lava Room Blocked Door Chest": "can_press_floor_switch"
         },
         "exits": {
-            "Fire Temple Big Lava Room": "True"
+            "Fire Temple Big Lava Room": "transition('Fire Temple T16', True)"
         }
     },
     {
@@ -632,7 +651,7 @@
             "Fire Temple Boulder Maze Side Room Chest": "can_press_floor_switch"
         },
         "exits": {
-            "Fire Temple Stone Maze": "True"
+            "Fire Temple Stone Maze": "transition('Fire Temple T19', True)"
         }
     },
     {
@@ -645,7 +664,9 @@
                 #Flare Dancer
         },
         "exits": {
-            "Fire Temple Flame Maze West": "'Fire Temple Room 24 Enemies' or barred_door",
+            "Fire Temple Flame Maze West": "
+			    transition('Fire Temple T27',
+				'Fire Temple Room 24 Enemies' or 'Fire Temple Room 24 T27 Unbar')",
             "Fire Temple Flare Dancer Elevator Top": "'Fire Temple Room 24 Enemies'"
         }
     },
@@ -655,7 +676,7 @@
         "room": "24",
         "exits": {
             "Fire Temple Flare Dancer Elevator Room": "True",
-            "Fire Temple Ascent to Western Tower": "True"
+            "Fire Temple Ascent to Western Tower": "transition('Fire Temple T12', True)"
         }
     },
     {
@@ -666,7 +687,7 @@
             "Fire Temple Compass Chest": "True"
         }
         "exits": {
-            "Fire Temple Flame Maze Northeast": "True"
+            "Fire Temple Flame Maze Northeast": "transition('Fire Temple T34', True)"
         }
     }
 ]

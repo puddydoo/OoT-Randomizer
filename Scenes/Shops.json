@@ -2,7 +2,7 @@
     {
         "region_name": "KF Kokiri Shop",
         "scene": "KF Kokiri Shop",
-        "room": "0",
+        "room": "00",
         "locations": {
             "KF Shop Item 1": "True",
             "KF Shop Item 2": "True",
@@ -20,7 +20,7 @@
     {
         "region_name": "GC Shop",
         "scene": "GC Shop",
-        "room": "0",
+        "room": "00",
         "locations": {
             "GC Shop Item 1": "True",
             "GC Shop Item 2": "True",
@@ -38,7 +38,7 @@
     {
         "region_name": "ZD Shop",
         "scene": "ZD Shop",
-        "room": "0",
+        "room": "00",
         "locations": {
             "ZD Shop Item 1": "True",
             "ZD Shop Item 2": "True",
@@ -56,7 +56,7 @@
     {
         "region_name": "Market Bazaar",
         "scene": "Market Bazaar",
-        "room": "0",
+        "room": "00",
         "locations": {
             "Market Bazaar Item 1": "True",
             "Market Bazaar Item 2": "True",
@@ -74,7 +74,7 @@
     {
         "region_name": "Kak Bazaar",
         "scene": "Kak Bazaar",
-        "room": "0",
+        "room": "00",
         "locations": {
             "Kak Bazaar Item 1": "True",
             "Kak Bazaar Item 2": "True",
@@ -92,7 +92,7 @@
     {
         "region_name": "Kak Potion Shop Front",
         "scene": "Kak Potion Shop Front",
-        "room": "0",
+        "room": "00",
         "locations": {
             "Kak Potion Shop Item 1": "is_adult",
             "Kak Potion Shop Item 2": "is_adult",
@@ -111,7 +111,7 @@
     {
         "region_name": "Kak Potion Shop Back",
         "scene": "Kak Potion Shop Back",
-        "room": "0",
+        "room": "00",
         "exits": {
             "Kak Backyard": "is_adult",
             "Kak Potion Shop Front": "True"
@@ -120,7 +120,7 @@
     {
         "region_name": "Market Potion Shop",
         "scene": "Market Potion Shop",
-        "room": "0",
+        "room": "00",
         "locations": {
             "Market Potion Shop Item 1": "True",
             "Market Potion Shop Item 2": "True",
@@ -138,7 +138,7 @@
     {
         "region_name": "Market Bombchu Shop",
         "scene": "Market Bombchu Shop",
-        "room": "0",
+        "room": "00",
         "locations": {
             "Market Bombchu Shop Item 1": "True",
             "Market Bombchu Shop Item 2": "True",
@@ -156,9 +156,9 @@
     {
         "region_name": "Market Shooting Gallery",
         "scene": "Market Shooting Gallery",
-        "room": "0",
+        "room": "00",
         "locations": {
-            "Market Shooting Gallery": "is_child"
+            "Market Shooting Gallery Reward": "is_child"
         },
         "exits": {
             "Market": "True"
@@ -167,9 +167,9 @@
     {
         "region_name": "Kak Shooting Gallery",
         "scene": "Kak Shooting Gallery",
-        "room": "0",
+        "room": "00",
         "locations": {
-            "Kak Shooting Gallery": "is_adult and Bow"
+            "Kak Shooting Gallery Reward": "is_adult and Bow"
         },
         "exits": {
             "Kakariko Village": "True"
@@ -178,7 +178,7 @@
     {
         "region_name": "Kak Odd Medicine Building",
         "scene": "Kak Odd Medicine Building",
-        "room": "0",
+        "room": "00",
         "events": {
             "Odd Potion Access": "
                 is_adult and
@@ -191,7 +191,7 @@
     {
         "region_name": "Market Mask Shop",
         "scene": "Market Mask Shop",
-        "room": "0",
+        "room": "00",
         "events": {
             "Skull Mask": "at('Kakariko Village', is_child and Zeldas_Letter)",
             "Mask of Truth": "'Skull Mask' and
@@ -206,7 +206,7 @@
     {
         "region_name": "Market Bombchu Bowling",
         "scene": "Market Bombchu Bowling",
-        "room": "0",
+        "room": "00",
         "locations": {
             "Market Bombchu Bowling First Prize": "found_bombchus",
             "Market Bombchu Bowling Second Prize": "found_bombchus",
@@ -220,9 +220,9 @@
     {
         "region_name": "Market Treasure Chest Game",
         "scene": "Market Treasure Chest Game",
-        "room": "0",
+        "room": "00",
         "locations": {
-            "Treasure Chest Game Key 1": "True",
+            "Market Treasure Chest Game Key 1": "True",
         },
         "exits": {
             "Market": "True",
@@ -232,9 +232,9 @@
     {
         "region_name": "Market Treasure Chest Game Green Room 1",
         "scene": "Market Treasure Chest Game",
-        "room": "1",
+        "room": "01",
         "locations": {
-            "Treasure Chest Game Key 2": "can_use(Lens_of_Truth)"
+            "Market Treasure Chest Game Key 2": "can_use(Lens_of_Truth)"
         },
         "exits": {
             "Market Treasure Chest Game": "True",
@@ -244,9 +244,9 @@
     {
         "region_name": "Market Treasure Chest Game Green Room 2",
         "scene": "Market Treasure Chest Game",
-        "room": "2",
+        "room": "02",
         "locations": {
-            "Treasure Chest Game Key 3": "can_use(Lens_of_Truth)"
+            "Market Treasure Chest Game Key 3": "can_use(Lens_of_Truth)"
         },
         "exits": {
             "Market Treasure Chest Game Green Room 1": "True",
@@ -256,9 +256,9 @@
     {
         "region_name": "Market Treasure Chest Game Blue Room 1",
         "scene": "Market Treasure Chest Game",
-        "room": "3",
+        "room": "03",
         "locations": {
-            "Treasure Chest Game Key 4": "can_use(Lens_of_Truth)"
+            "Market Treasure Chest Game Key 4": "can_use(Lens_of_Truth)"
         },
         "exits": {
             "Market Treasure Chest Game Green Room 2": "True",
@@ -268,9 +268,9 @@
     {
         "region_name": "Market Treasure Chest Game Blue Room 2",
         "scene": "Market Treasure Chest Game",
-        "room": "4",
+        "room": "04",
         "locations": {
-            "Treasure Chest Game Key 5": "can_use(Lens_of_Truth)"
+            "Market Treasure Chest Game Key 5": "can_use(Lens_of_Truth)"
         },
         "exits": {
             "Market Treasure Chest Game Blue Room 1": "True",
@@ -280,9 +280,9 @@
     {
         "region_name": "Market Treasure Chest Game Red Room",
         "scene": "Market Treasure Chest Game",
-        "room": "5",
+        "room": "05",
         "locations": {
-            "Treasure Chest Game Key 6": "can_use(Lens_of_Truth)"
+            "Market Treasure Chest Game Key 6": "can_use(Lens_of_Truth)"
         },
         "exits": {
             "Market Treasure Chest Game Blue Room 2": "True",
@@ -292,9 +292,9 @@
     {
         "region_name": "Market Treasure Chest Game Yellow Room",
         "scene": "Market Treasure Chest Game",
-        "room": "6",
+        "room": "06",
         "locations": {
-            "Market Treasure Chest Game": "True"
+            "Market Treasure Chest Game Reward": "True"
         },
         "exits": {
             "Market Treasure Chest Game Red Room": "True"

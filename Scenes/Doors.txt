@@ -1,0 +1,635 @@
+Deku Tree
+
+T01 01-00 Front Clear Door
+T02 06-05 Front Switch Door Perm 03
+T03 04-03 Lifting Door
+T04 07-08 Lifting Door
+T05 09-11 Front Clear Door
+T06 01-02 Front Clear Door
+T07 10-00 Front Switch Door Local 04
+T08 06-07 Front Switch Door Perm 03
+T09 04-05 Front Switch Door Perm 04
+T10 03-00 Transition Plane
+T11 09-03 Transition Plane
+T12 03-07 Transition Plane
+
+Deku Tree MQ
+
+T01 00-01 Lifting Door (flipped from original)
+T02 05-06 Front Switch Back Clear Door 0x01C9 (flipped from original)
+T03 03-04 Front Switch Back Clear Door 0x01D5 (flipped from original)
+T04 07-08 Lifting Door
+T05 09-11 Front Clear Door 0x007F
+T06 01-02 Front Switch Door 0x008C
+T07 10-00 Front Clear Door 0x007F
+T08 06-07 Front Clear Door 0x007F
+T09 04-05 Front Switch Door 0x0099
+T10 03-00 Transition Plane
+T11 09-03 Transition Plane
+T12 03-07 Transition Plane
+
+Dodongo's Cavern
+
+T01 01-00 Transition Plane
+T02 09-00 Transition Plane
+T03 09-00 Transition Plane
+T04 08-07 Transition Plane
+T05 08-07 Transition Plane
+T06 12-09 Transition Plane
+T07 10-09 Transition Plane
+T08 00-07 Lifting Door
+T09 03-04 Front Switch Door Perm 05
+T10 03-01 Front Switch Door Perm 05
+T11 03-10 Front Switch Door Perm 06
+T12 03-12 Front Switch Door Perm 06
+T13 11-01 Lifting Door
+T14 14-08 Lifting Door
+T15 13-04 Lifting Door
+T16 15-02 Front Clear Door
+T17 06-09 Lifting Door
+T18 05-02 Front Switch Door Temp 02
+T19 05-00 Front Switch Door Temp 02
+T20 01-01 Front Switch Door Temp 16
+T21 07-16 Front Switch Door Temp 00
+T22 00-02 Front Switch Door Perm 19
+T23 04-00 Front Switch Door Temp 01
+
+Dodongo's Cavern MQ
+
+T01 01-00 Transition Plane
+T02 09-00 Transition Plane
+T03 09-00 Transition Plane
+T04 08-07 Transition Plane
+T05 08-07 Transition Plane
+T06 12-09 Transition Plane
+T07 10-09 Transition Plane
+T08 00-07 Lifting Door
+T09 03-04 Front Switch Door 0x0085
+T10 03-01 Front Switch Door 0x0085
+T11 03-10 Front Switch Door 0x0086
+T12 03-12 Front Switch Door 0x0086
+T13 11-01 Lifting Door
+T14 14-08 Front Clear Door 0x007F
+T15 04-13 Front Switch Back Clear Door 0x01DE (flipped from original)
+T16 15-02 Lifting Door
+T17 09-06 Front Switch Back Clear Door 0x01E7 (flipped from original)
+T18 02-05 Front Switch Door 0x00A5 (flipped from original)
+T19 05-00 Front Clear Door 0x007F
+T20 01-01 Front Switch Door 0x00B6
+T21 07-16 Front Switch Door 0x00A0
+T22 00-02 Front Switch Door 0x0083
+T23 04-00 Front Switch Door 0x009B
+
+Jabu-Jabu
+
+T01 05-15 Front Switch Door Local 05
+T02 00-01 Front Switch Door Local 03
+T03 01-02 Lifting Door
+T04 04-06 Lifting Door
+T05 02-07 Lifting Door
+T06 12-07 Front Switch Door Perm 1E
+T07 08-07 Front Clear Door
+T08 11-07 Front Clear Door
+T09 01-04 Lifting Door
+T10 01-05 Front Switch Door Local 02
+T11 07-10 Front Switch Door Local 00
+T12 07-09 Front Switch Door Perm 1C
+T13 03-14 Lifting Door
+T14 13-03 Lifting Door
+T15 14-01 Front Switch Door Local 04
+T16 03-02 Transition Plane
+T17 03-02 Transition Plane
+T18 03-02 Transition Plane
+T19 03-02 Transition Plane
+T20 03-02 Transition Plane
+T21 03-02 Transition Plane
+T22 06-03 Front Switch Door Perm 1F
+
+Jabu-Jabu MQ
+
+T01 05-15 Front Switch Door 0x0094
+T02 00-01 Front Switch Door 0x0095
+T03 01-02 Front Switch Door 0x0099
+T04 06-04 Front Switch Door 0x00A0 (flipped from original)
+T05 02-07 Front Switch Door 0x0093
+T06 12-07 Lifting Door
+T07 07-08 Front Switch Door 0x008D (flipped from original)
+T08 11-07 Front Switch Door 0x0081
+T09 04-01 Front Switch Door 0x0092 (flipped from original)
+T10 01-05 Lifting Door
+T11 07-10 Lifting Door
+T12 07-09 Lifting Door
+T13 03-14 Front Switch Door 0x00BC
+T14 13-03 Front Switch Door 0x00BB
+T15 01-14 Lifting Door (flipped from original)
+T16 03-02 Transition Plane
+T17 03-02 Transition Plane
+T18 03-02 Transition Plane
+T19 03-02 Transition Plane
+T20 03-02 Transition Plane
+T21 03-02 Transition Plane
+T22 06-03 Front Switch Door 0x009F
+
+Forest Temple
+
+T01 00-01 Knob Door
+T02 02-04 Knob Door
+T03 05-11 Knob Door
+T04 07-15 Knob Door
+T05 08-11 Knob Door
+T06 13-20 Locked Lifting Door Perm 00
+T07 06-13 Front Switch Door Perm 15
+T08 06-12 Front Switch Door Perm 15
+T09 06-04 Front Clear Door
+T10 10-08 Front Clear Door
+T11 10-07 Front Clear Door
+T12 21-08 Front Clear Door
+T13 18-08 Front Clear Door
+T14 16-03 Front Clear Door
+T15 02-05 Locked Knob Door Perm 01
+T16 02-08 Knob Door
+T17 02-07 Front Switch Door Temp 05
+T18 02-03 Knob Door
+T19 09-07 Transition Plane
+T20 09-08 Transition Plane
+T21 17-02 Transition Plane Perm 1B
+T22 15-20 Transition Plane
+T23 21-19 Transition Plane
+T24 01-02 Knob Door
+T25 15-16 Front Switch Door Temp 0B
+T26 11-19 Locked Lifting Door Perm 02
+T27 12-19 Locked Lifting Door Perm 03
+T28 20-14 Locked Lifting Door Perm 04
+T29 17-22 Boss Door Perm 14
+
+Forest Temple MQ
+
+T01 00-01 Knob Door
+T02 02-04 Knob Door
+T03 05-11 Front Clear Door 0x007F
+T04 15-07 Front Switch Door 0x0099 (flipped from original)
+T05 08-11 Knob Door
+T06 13-20 Locked Lifting Door 0x02C0
+T07 06-13 Front Switch Door 0x0095
+T08 06-12 Front Switch Door 0x0095
+T09 06-04 Front Clear Door 0x007F
+T10 10-08 Lifting Door
+T11 10-07 Lifting Door
+T12 21-08 Front Clear Door 0x007F
+T13 18-08 Front Clear Door 0x007F
+T14 16-03 Front Clear Door 0x007F
+T15 05-02 Front Clear Door 0x007F (flipped from original)
+T16 02-08 Front Switch Door 0x00A5
+T17 02-07 Front Switch Door 0x00AA
+T18 02-03 Knob Door
+T19 09-07 Transition Plane
+T20 09-08 Transition Plane
+T21 17-02 Transition Plane
+T22 15-20 Transition Plane
+T23 21-19 Transition Plane
+T24 01-02 Locked Knob Door 0x0086
+T25 15-16 Locked Knob Door 0x0083
+T26 11-19 Locked Lifting Door 0x02C2
+T27 12-19 Locked Lifting Door 0x02C1
+T28 20-14 Locked Lifting Door 0x02C4
+T29 17-22 Boss Door 0x0154
+
+Fire Temple
+
+T01 04-05 Transition Plane
+T02 02-10 Transition Plane
+T03 01-06 Transition Plane
+T04 06-08 Transition Plane
+T05 11-13 Transition Plane
+T06 16-09 Locked Knob Door Perm 1F
+T07 21-04 Locked Knob Door Perm 18
+T08 09-10 Knob Door
+T09 11-10 Knob Door
+T10 10-11 Locked Knob Door Perm 19
+T11 12-13 Knob Door
+T12 24-12 Knob Door
+T13 01-19 Knob Door
+T14 01-20 Knob Door
+T15 01-21 Locked Knob Door Perm 1E
+T16 01-22 Knob Door
+T17 00-02 Knob Door
+T18 00-17 Knob Door
+T19 05-23 Knob Door
+T20 06-16 Locked Knob Door Perm 1A
+T21 06-16 Front Switch Door Local 04
+T22 05-06 Locked Knob Door Perm 1B
+T23 05-07 Knob Door
+T24 08-07 Knob Door
+T25 10-11 Front Switch Door Local 03
+T26 03-17 Front Clear Door
+T27 24-10 Front Clear Door
+T28 04-05 Knob Door
+T29 05-16 Knob Door
+T30 03-18 Front Clear Door
+T31 14-10 Front Switch Door Local 05
+T32 13-14 Knob Door
+T33 15-18 Front Clear Door
+T34 10-25 Knob Door
+T35 00-15 Locked Knob Door Perm 17
+T36 02-26 Boss Door Perm 14
+T37 00-01 Locked Knob Door Perm 1D
+
+Fire Temple MQ
+
+T01 04-05 Transition Plane
+T02 02-10 Transition Plane
+T03 01-06 Transition Plane
+T04 06-08 Transition Plane
+T05 11-13 Transition Plane
+T06 16-09 Front Switch Door 0x009F
+T07 21-04 Knob Door
+T08 09-10 Knob Door
+T09 11-10 Front Switch Door 0x0099
+T10 10-11 Knob Door
+T11 12-13 Locked Knob Door 0x0098
+T12 24-12 Knob Door
+T13 01-19 Front Switch Door 0x00A9
+T14 01-20 Knob Door
+T15 01-21 Locked Knob Door 0x009E
+T16 01-22 Knob Door
+T17 02-00 Front Switch Door 0x00A8 (flipped from original)
+T18 17-00 Front Clear Door 0x007F (flipped from original)
+T19 05-23 Front Switch Door 0x00BE
+T20 06-16 Front Switch Door 0x00BF
+T21 06-16 Front Switch Door 0x00BF
+T22 05-06 Front Switch Door 0x00BF
+T23 07-05 Knob Door (flipped from original)
+T24 07-08 Front Switch Door 0x00B5 (flipped from original)
+T25 10-11 Knob Door
+T26 03-17 Front Clear Door 0x007F
+T27 24-10 Front Clear Door 0x007F
+T28 04-05 Knob Door
+T29 05-16 Locked Knob Door 0x009A
+T30 18-03 Front Clear Door 0x007F (flipped from original)
+T31 14-10 Front Switch Door 0x01FD
+T32 13-14 Locked Knob Door 0x009B
+T33 15-18 Front Clear Door 0x007F
+T34 10-25 Knob Door
+T35 00-15 Locked Knob Door 0x0097
+T36 02-26 Boss Door 0x0154
+T37 00-01 Knob Door
+
+Water Temple
+
+T01 17-00 Transition Plane
+T02 00-04 Transition Plane
+T03 20-00 Transition Plane
+T04 03-00 Transition Plane
+T05 00-20 Transition Plane
+T06 01-02 Transition Plane
+T07 08-21 Transition Plane
+T08 00-09 Transition Plane
+T09 00-05 Locked Knob Door Perm 05
+T10 00-12 Locked Knob Door Perm 01
+T11 05-06 Locked Knob Door Perm 02
+T12 12-14 Knob Door
+T13 15-14 Front Switch Door Local 06
+T14 19-17 Front Clear Door
+T15 00-01 Locked Knob Door Perm 06
+T16 00-01 Front Switch Door Local 01
+T17 00-11 Knob Door
+T18 00-10 Locked Knob Door Perm 15
+T19 13-06 Front Clear Door
+T20 13-07 Front Clear Door
+T21 08-09 Knob Door
+T22 12-16 Locked Knob Door Perm 09
+T23 15-12 Front Switch Door Local 06
+T24 17-18 Front Switch Door Local 00
+T25 00-10 Front Switch Door
+T26 11-22 Boss Door Perm 14
+T27 21-07 Transition Plane
+
+Water Temple MQ
+
+T01 17-00 Transition Plane
+T02 00-04 Transition Plane
+T03 20-00 Transition Plane
+T04 03-00 Transition Plane
+T05 00-20 Transition Plane
+T06 01-02 Transition Plane
+T07 08-21 Transition Plane
+T08 00-09 Transition Plane
+T09 00-05 Locked Knob Door 0x0095
+T10 00-12 Lifting Door
+T11 06-05 Front Clear Door 0x007F (flipped from original)
+T12 14-12 Front Clear Door 0x0068 (flipped from original)
+T13 15-14 Front Switch Back Clear Door 0x01E6
+T14 17-19 Front Switch Back Clear Door 0x01F7 (flipped from original)
+T15 00-01 Lifting Door
+T16 00-01 Lifting Door
+T17 00-11 Knob Door
+T18 00-10 Front Switch Door 0x00BB
+T19 13-06 Front Clear Door 0x007F
+T20 13-07 Front Clear Door 0x007F
+T21 08-09 Front Switch Door 0x009B
+T22 16-12 Front Clear Door 0x007F (flipped from original)
+T23 12-15 Locked Knob Door 0x0083 (flipped from original)
+T24 17-18 Front Switch Door 0x00BE
+T25 00-10 Front Switch Door 0x00BF
+T26 11-22 Boss Door 0x0154
+T27 21-07 Transition Plane
+
+Spirit Temple
+
+T01 25-24 Lifting Door
+T02 25-26 Front Switch Door Perm 13
+T03 15-05 Front Switch Door Perm 0F
+T04 00-15 Locked Lifting Door Perm 0D
+T05 00-13 Front Switch Door Perm 0E
+T06 00-14 Front Switch Door Perm 0E
+T07 20-11 Front Clear Door Perm 1A
+T08 10-11 Front Clear Door Perm 19
+T09 08-09 Front Switch Door Temp 04
+T10 01-04 Locked Lifting Door Perm 1E
+T11 01-03 Front Clear Door
+T12 01-02 Front Clear Door
+T13 24-22 Front Switch Door Temp 15
+T14 23-24 Lifting Door
+T15 17-23 Locked Lifting Door Perm 1C
+T16 18-21 Front Switch Door Perm 16
+T17 20-19 Front Clear Door Perm 1A
+T18 18-19 Front Switch Door Temp 0F
+T19 17-18 Front Clear Door
+T20 17-16 Front Clear Door
+T21 05-16 Locked Lifting Door Perm 1B
+T22 09-10 Locked Lifting Door Perm 15
+T23 08-07 Front Switch Door Temp 04
+T24 05-06 Front Switch Door Perm 07
+T25 04-05 Front Switch Door Temp 03
+T26 05-07 Front Switch Door Perm 08
+T27 27-03 Front Clear Door
+T28 27-02 Front Clear Door
+T29 13-12 Front Switch Door Perm 02
+T30 01-00 Transition Plane
+T31 05-28 Boss Door Perm 14
+T32 00-06 Transition Plane
+T33 05-25 Transition Plane
+
+Spirit Temple MQ
+
+T01 24-25 Front Switch Door 0x00B5 (flipped from original)
+T02 25-26 Front Switch Door 0x0093
+T03 05-15 Front Switch Door 0x0086 (flipped from original)
+T04 00-15 Lifting Door
+T05 00-13 Locked Lifting Door 0x02C3
+T06 14-00 Front Switch Door 0x00B1 (flipped from original)
+T07 20-11 Front Clear Door 0x005A
+T08 10-11 Front Clear Door 0x0059
+T09 08-09 Front Switch Door 0x00A4
+T10 01-04 Locked Lifting Door 0x02DE
+T11 01-03 Front Clear Door 0x007F
+T12 01-02 Front Clear Door 0x007F
+T13 24-22 Locked Lifting Door 0x02C1
+T14 23-24 Front Switch Door 0x0080
+T15 17-23 Locked Lifting Door 0x02DC
+T16 18-21 Front Switch Door 0x0096
+T17 19-20 Front Clear Door 0x007F (flipped from original)
+T18 18-19 Front Switch Door 0x00AF
+T19 17-18 Front Switch Door 0x00AC
+T20 17-16 Front Clear Door 0x007F
+T21 05-16 Locked Lifting Door 0x02DB
+T22 09-10 Locked Lifting Door 0x02D5
+T23 08-07 Front Switch Door 0x00A4
+T24 05-06 Front Switch Door 0x0087
+T25 04-05 Locked Lifting Door 0x02D2
+T26 05-07 Front Switch Door 0x0088
+T27 27-03 Front Clear Door 0x007F
+T28 02-27 Front Clear Door 0x007F (flipped from original)
+T29 13-12 Front Switch Door 0x0082
+T30 01-00 Transition Plane
+T31 05-28 Boss Door 0x0154
+T32 00-06 Transition Plane
+T33 05-25 Transition Plane
+
+Shadow Temple
+
+T01 04-00 Front Clear Door
+T02 01-00 Front Clear Door
+T03 00-02 Knob Door
+T04 21-03 Locked Knob Door Perm 19
+T05 05-08 Locked Knob Door Perm 16
+T06 05-06 Knob Door
+T07 07-05 Front Clear Door
+T08 09-16 Knob Door
+T09 09-11 Locked Knob Door Perm 17
+T10 11-18 Locked Knob Door Perm 18
+T11 11-14 Front Switch Back Clear Door Perm 08
+T12 12-15 Knob Door
+T13 13-15 Knob Door
+T14 17-15 Front Clear Door
+T15 15-21 Knob Door
+T16 20-18 Front Clear Door
+T17 19-18 Front Clear Door
+T18 20-21 Locked Knob Door Perm 15
+T19 09-10 Transition Plane
+T20 02-05 Transition Plane
+T21 09-08 Transition Plane
+T22 03-22 Boss Door Perm 14
+T23 21-06 Transition Plane
+
+Shadow Temple MQ
+
+T01 04-00 Front Clear Door 0x007F
+T02 01-00 Front Clear Door 0x007F
+T03 02-00 Locked Knob Door 0x0099 (flipped from original)
+T04 21-03 Knob Door
+T05 05-08 Locked Knob Door 0x0096
+T06 06-05 Front Clear Door 0x007F (flipped from original)
+T07 07-05 Front Clear Door 0x007F
+T08 09-16 Knob Door
+T09 09-11 Locked Knob Door 0x0097
+T10 11-18 Locked Knob Door 0x0098
+T11 11-14 Front Switch Back Clear Door 0x01C8
+T12 12-15 Knob Door
+T13 13-15 Locked Lifting Door 0x02DB
+T14 17-15 Lifting Door
+T15 21-15 Front Switch Door 0x009A (flipped from original)
+T16 18-20 Knob Door (flipped from original)
+T17 19-18 Knob Door
+T18 20-21 Locked Knob Door 0x0095
+T19 09-10 Transition Plane
+T20 02-05 Transition Plane
+T21 09-08 Transition Plane
+T22 03-22 Boss Door 0x0154
+T23 21-06 Transition Plane
+
+Bottom of the Well
+
+T01 01-00 Front Switch Back Clear Door Perm 1F
+T02 00-03 Knob Door
+T03 00-03 Locked Knob Door Perm 1B
+T04 00-05 Locked Knob Door Perm 1D
+T05 00-06 Locked Knob Door Perm 1C
+T06 02-00 Knob Door
+T07 04-00 Front Clear Door
+T08 01-00 Transition Plane
+T09 01-00 Transition Plane
+T10 01-00 Transition Plane
+T11 01-05 Transition Plane
+T12 01-00 Transition Plane
+T13 01-03 Transition Plane
+T14 01-03 Transition Plane
+T15 01-03 Transition Plane
+
+Bottom of the Well MQ
+
+T01 00-01 Front Switch Door 0x009F (flipped from original)
+T02 00-03 Locked Lifting Door 0x02D5
+T03 00-03 Front Switch Door 0x00BB
+T04 00-05 Front Switch Door 0x008A
+T05 00-06 Front Switch Door 0x008C
+T06 02-00 Locked Lifting Door 0x02D4
+T07 04-00 Front Clear Door 0x0056
+T08 01-00 Transition Plane
+T09 01-00 Transition Plane
+T10 01-00 Transition Plane
+T11 01-05 Transition Plane
+T12 01-00 Transition Plane
+T13 01-03 Transition Plane
+T14 01-03 Transition Plane
+T15 01-03 Transition Plane
+
+Ice Cavern
+
+T01 10-01 Transition Plane
+T02 08-03 Transition Plane
+T03 03-02 Transition Plane
+T04 02-01 Transition Plane
+T05 00-01 Transition Plane
+T06 04-03 Transition Plane
+T07 05-04 Transition Plane
+T08 05-06 Transition Plane
+T09 09-08 Transition Plane
+T10 11-03 Transition Plane
+T11 10-07 Lifting Door
+T12 07-06 Front Clear Door Perm 14
+
+Ice Cavern MQ
+
+T01 10-01 Transition Plane
+T02 08-03 Transition Plane
+T03 03-02 Transition Plane
+T04 02-01 Transition Plane
+T05 00-01 Transition Plane
+T06 04-03 Transition Plane
+T07 05-04 Transition Plane
+T08 05-06 Transition Plane
+T09 09-08 Transition Plane
+T10 11-03 Transition Plane
+T11 10-07 Lifting Door
+T12 07-06 Front Clear Door 0x0054
+
+Gerudo Training Ground
+
+T01 08-06 Transition Plane
+T02 01-02 Front Switch Door Perm 1F
+T03 02-03 Front Switch Door Perm 1C
+T04 03-10 Front Switch Door Perm 0F
+T05 00-08 Lifting Door Temp 05
+T06 07-00 Lifting Door
+T07 00-01 Lifting Door
+T08 04-03 Lifting Door
+T09 05-04 Front Switch Door Perm 19
+T10 05-06 Front Clear Door Perm 0E
+T11 06-09 Front Switch Door Perm 0C
+T12 07-06 Front Switch Door Perm 1E
+T13 04-08 Front Switch Door Perm 15
+T14 08-08 Locked Lifting Door Perm 09
+T15 08-08 Locked Lifting Door Perm 01
+T16 08-08 Locked Lifting Door Perm 0A
+T17 08-08 Locked Lifting Door Perm 03
+T18 08-08 Locked Lifting Door Perm 04
+T19 08-08 Locked Lifting Door Perm 05
+T20 08-08 Locked Lifting Door Perm 06
+T21 08-08 Locked Lifting Door Perm 07
+T22 08-08 Locked Lifting Door Perm 17
+
+Gerudo Training Ground MQ
+
+T01 08-06 Transition Plane
+T02 01-02 Front Switch Door 0x009F
+T03 02-03 Front Switch Door 0x009C
+T04 03-10 Front Clear Door 0x007F
+T05 00-08 Lifting Door
+T06 00-07 Front Switch Door 0x009A (flipped from original)
+T07 00-01 Front Switch Door 0x0098
+T08 03-04 Front Clear Door 0x007F (flipped from original)
+T09 05-04 Front Switch Door 0x0099
+T10 05-06 Front Switch Door 0x0099
+T11 06-09 Front Switch Door 0x008C
+T12 07-06 Front Switch Door 0x009E
+T13 04-08 Front Switch Door 0x0084
+T14 08-08 Lifting Door
+T15 08-08 Lifting Door
+T16 08-08 Front Switch Door 0x0080
+T17 08-08 Lifting Door
+T18 08-08 Lifting Door
+T19 08-08 Lifting Door
+T20 08-08 Locked Lifting Door 0x02DD
+T21 08-08 Locked Lifting Door 0x02D4
+T22 08-08 Locked Lifting Door 0x02D7
+
+Inside Ganon's Castle
+
+T01 01-16 Transition Plane
+T02 10-11 Transition Plane
+T03 00-01 Lifting Door
+T04 09-09 Locked Lifting Door Perm 1E
+T05 02-03 Front Clear Door Temp 12
+T06 08-10 Front Switch Door Perm 12
+T07 05-06 Front Switch Door Perm 10
+T08 06-07 Front Switch Door Perm 0E
+T09 05-01 Lifting Door
+T10 01-02 Lifting Door
+T11 09-01 Lifting Door
+T12 14-01 Lifting Door
+T13 01-12 Lifting Door
+T14 03-04 Front Switch Door Perm 1C
+T15 12-13 Front Switch Door Perm 1B
+T16 14-15 Front Switch Door Perm 09
+T17 17-01 Lifting Door
+T18 17-18 Front Switch Door Perm 0B
+T19 18-19 Front Switch Door Perm 19
+T20 09-08 Locked Lifting Door Perm 1D
+T21 18-18 Front Switch Door Perm 1A
+
+Inside Ganon's Castle MQ
+
+T01 01-16 Transition Plane
+T02 10-11 Transition Plane
+T03 00-01 Front Clear Door 0x007F
+T04 09-09 Front Clear Door 0x007F
+T05 02-03 Locked Lifting Door 0x02D6
+T06 08-10 Locked Lifting Door 0x02D4
+T07 05-06 Front Clear Door 0x007F
+T08 06-07 Front Switch Door 0x00B8
+T09 05-01 Lifting Door
+T10 01-02 Lifting Door
+T11 09-01 Lifting Door
+T12 14-01 Lifting Door
+T13 01-12 Lifting Door
+T14 03-04 Front Switch Door 0x0082
+T15 12-13 Front Switch Door 0x008B
+T16 14-15 Front Switch Door 0x0081
+T17 17-01 Lifting Door
+T18 17-18 Front Switch Door 0x008F
+T19 18-19 Front Switch Door 0x008E
+T20 09-08 Locked Lifting Door 0x02D5
+T21 18-18 Front Switch Door 0x0088
+
+Ganon's Tower
+
+T01 02-03 Front Switch Door Perm 0A
+T02 04-05 Front Clear Door
+T03 00-01 Front Clear Door
+T04 00-07 Front Clear Door
+T05 02-01 Front Switch Door Perm 0A
+T06 04-03 Front Clear Door
+T07 05-08 Boss Door Perm 14
+T08 08-06 Boss Door Perm 14
+T09 06-09 Boss Door Perm 14

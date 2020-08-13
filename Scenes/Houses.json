@@ -2,7 +2,7 @@
     {
         "region_name": "KF Links House",
         "scene": "KF Links House",
-        "room": "0",
+        "room": "00",
         "locations": {
             "KF Links House Cow": "is_adult and can_play(Eponas_Song) and 'Links Cow'"
         },
@@ -13,7 +13,7 @@
     {
         "region_name": "KF Know It All House",
         "scene": "KF Know It All House",
-        "room": "0",
+        "room": "00",
         "exits": {
             "Kokiri Forest": "True"
         }
@@ -21,7 +21,7 @@
     {
         "region_name": "KF House of Twins",
         "scene": "KF House of Twins",
-        "room": "0",
+        "room": "00",
         "exits": {
             "Kokiri Forest": "True"
         }
@@ -29,7 +29,7 @@
     {
         "region_name": "KF Midos House",
         "scene": "KF Midos House",
-        "room": "0",
+        "room": "00",
         "locations": {
             "KF Midos Top Left Chest": "True",
             "KF Midos Top Right Chest": "True",
@@ -43,7 +43,7 @@
     {
         "region_name": "KF Sarias House",
         "scene": "KF Sarias House",
-        "room": "0",
+        "room": "00",
         "exits": {
             "Kokiri Forest": "True"
         }
@@ -51,7 +51,7 @@
     {
         "region_name": "Kak Carpenter Boss House",
         "scene": "Kak Carpenter Boss House",
-        "room": "0",
+        "room": "00",
         "events": {
             "Wake Up Adult Talon": "is_adult and (Pocket_Egg or Pocket_Cucco)"
         },
@@ -62,7 +62,7 @@
     {
         "region_name": "Kak Impas House",
         "scene": "Kak Impas House",
-        "room": "0",
+        "room": "00",
         "exits": {
             "Kakariko Village": "True",
             "Kak Impas House Near Cow": "True"
@@ -71,7 +71,7 @@
     {
         "region_name": "Kak Impas House Back",
         "scene": "Kak Impas House",
-        "room": "0",
+        "room": "00",
         "locations": {
             "Kak Impas House Freestanding PoH": "True"
         },
@@ -82,7 +82,7 @@
     },
     {
         "region_name": "Kak Impas House Near Cow",
-        "room": "0",
+        "room": "00",
         "locations": {
             "Kak Impas House Cow": "can_play(Eponas_Song)"
         },
@@ -94,7 +94,7 @@
     {
         "region_name": "Kak House of Skulltula",
         "scene": "Kak House of Skulltula",
-        "room": "0",
+        "room": "00",
         "locations": {
             "Kak 10 Gold Skulltula Reward": "(Gold_Skulltula_Token, 10)",
             "Kak 20 Gold Skulltula Reward": "(Gold_Skulltula_Token, 20)",
@@ -109,7 +109,7 @@
     {
         "region_name": "Graveyard Dampes House",
         "scene": "Graveyard Dampes House",
-        "room": "0",
+        "room": "00",
         "exits": {
             "Graveyard": "True"
         }
@@ -117,7 +117,7 @@
     {
         "region_name": "Market Guard House",
         "scene": "Market Guard House",
-        "room": "0",
+        "room": "00",
         "events": {
             "Sell Big Poe": "is_adult and Bottle_with_Big_Poe"
         },
@@ -134,17 +134,17 @@
     {
         "region_name": "Market Man in Green House",
         "scene": "Market Man in Green House",
-        "room": "0",
+        "room": "00",
         "exits": {
             "Market": "True"
         }
     },
     {
-        "region_name": "Market Market Dog Lady",
-        "scene": "Market Market Dog Lady",
-        "room": "0",
+        "region_name": "Market Dog Lady House",
+        "scene": "Market Dog Lady House",
+        "room": "00",
         "locations": {
-            "Market Dog Lady": "is_child and at_night"
+            "Market Lost Dog": "is_child and at_night"
         },
         "exits": {
             "Market": "True"
@@ -153,7 +153,7 @@
     {
         "region_name": "LLR Stables",
         "scene": "LLR Stables",
-        "room": "0",
+        "room": "00",
         "locations": {
             "LLR Stables Left Cow": "can_play(Eponas_Song)",
             "LLR Stables Right Cow": "can_play(Eponas_Song)"
@@ -166,7 +166,7 @@
         "region_name": "LLR Tower",
         "scene": "LLR Tower",
         #Technically the same scene as Talon's House
-        "room": "0",
+        "room": "00",
         "locations": {
             "LLR Freestanding PoH": "is_child",
             "LLR Tower Left Cow": "can_play(Eponas_Song)",
@@ -179,7 +179,7 @@
     {
         "region_name": "LLR Talons House",
         "scene": "LLR Talons House",
-        "room": "1",
+        "room": "01",
         "locations": {
             "LLR Talons Chickens": "is_child and at_day and Zeldas_Letter"
         },
@@ -191,7 +191,7 @@
     {
         "region_name": "LLR Talons Room",
         "scene": "LLR Talons House",
-        "room": "2",
+        "room": "02",
         "exits": {
             "LLR Talons House": "True"
         }
@@ -199,7 +199,7 @@
     {
         "region_name": "GV Carpenter Tent",
         "scene": "GV Carpenter Tent",
-        "room": "0",
+        "room": "00",
         "exits": {
             "GV Fortress Side": "True"
         }

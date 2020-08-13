@@ -2,7 +2,7 @@
     {
         "region_name": "Kokiri Forest",
         "scene": "Kokiri Forest",
-        "room": "0",
+        "room": "00",
         "hint": "Kokiri Forest",
         "events": {
             "Showed Mido Sword & Shield": "is_child and Kokiri_Sword and Buy_Deku_Shield"
@@ -37,7 +37,7 @@
     {
         "region_name": "KF Outside Deku Tree",
         "scene": "Kokiri Forest",
-        "room": "1",
+        "room": "01",
         "hint": "Kokiri Forest",
         "locations": {
             #The Babas despawn for Adult on forest temple completion. For vanilla forest temple
@@ -60,7 +60,7 @@
     {
         "region_name": "KF Training Area",
         "scene": "Kokiri Forest",
-        "room": "2",
+        "room": "02",
         "hint": "Kokiri Forest",
         "locations": {
             "KF Kokiri Sword Chest": "True"

@@ -2,7 +2,7 @@
     {
         "region_name": "KF Storms Grotto",
         "scene": "KF Storms Grotto",
-        "room": "0",
+        "room": "00",
         "locations": {
             "KF Storms Grotto Chest": "True",
             "KF Storms Grotto Gossip Stone": "True",
@@ -18,7 +18,7 @@
     {
         "region_name": "LW Near Shortcuts Grotto",
         "scene": "LW Near Shortcuts Grotto",
-        "room": "0",
+        "room": "00",
         "locations": {
             "LW Near Shortcuts Grotto Chest": "True",
             "LW Near Shortcuts Grotto Gossip Stone": "True",
@@ -34,7 +34,7 @@
     {
         "region_name": "LW Scrubs Grotto",
         "scene": "LW Scrubs Grotto",
-        "room": "6",
+        "room": "06",
         "locations": {
             "LW Deku Scrub Grotto Rear": "can_stun_deku",
             "LW Deku Scrub Grotto Front": "can_stun_deku"
@@ -58,7 +58,7 @@
     {
         "region_name": "SFM Storms Grotto",
         "scene": "SFM Storms Grotto",
-        "room": "9",
+        "room": "09",
         "locations": {
             "SFM Deku Scrub Grotto Rear": "can_stun_deku",
             "SFM Deku Scrub Grotto Front": "can_stun_deku"
@@ -70,7 +70,7 @@
     {
         "region_name": "SFM Wolfos Grotto",
         "scene": "SFM Wolfos Grotto",
-        "room": "7",
+        "room": "07",
         "locations": {
             "SFM Wolfos Grotto Chest": "
                 is_adult or Slingshot or Sticks or 
@@ -96,7 +96,7 @@
     {
         "region_name": "HF Southeast Grotto",
         "scene": "HF Southeast Grotto",
-        "room": "0",
+        "room": "00",
         "locations": {
             "HF Southeast Grotto Chest": "True",
             "HF Southeast Grotto Gossip Stone": "True",
@@ -112,7 +112,7 @@
     {
         "region_name": "HF Open Grotto",
         "scene": "HF Open Grotto",
-        "room": "0",
+        "room": "00",
         "locations": {
             "HF Open Grotto Chest": "True",
             "HF Open Grotto Gossip Stone": "True",
@@ -128,7 +128,7 @@
     {
         "region_name": "HF Inside Fence Grotto",
         "scene": "HF Inside Fence Grotto",
-        "room": "1",
+        "room": "01",
         "locations": {
             "HF Deku Scrub Grotto": "can_stun_deku"
         },
@@ -139,7 +139,7 @@
     {
         "region_name": "HF Cow Grotto",
         "scene": "HF Cow Grotto",
-        "room": "4",
+        "room": "04",
         "locations": {
             "HF GS Cow Grotto": "
                 has_fire_source and (can_use(Hookshot) or can_use(Boomerang))",
@@ -156,7 +156,7 @@
     {
         "region_name": "HF Near Market Grotto",
         "scene": "HF Near Market Grotto",
-        "room": "0",
+        "room": "00",
         "locations": {
             "HF Near Market Grotto Chest": "True",
             "HF Near Market Grotto Gossip Stone": "True",
@@ -196,7 +196,7 @@
     {
         "region_name": "HC Storms Grotto",
         "scene": "HC Storms Grotto",
-        "room": "8",
+        "room": "08",
         "locations": {
             "HC GS Storms Grotto": "can_blast_or_smash and (can_use(Boomerang) or can_use(Hookshot))",
             "HC Storms Grotto Gossip Stone": "can_blast_or_smash",
@@ -211,7 +211,7 @@
     {
         "region_name": "Kak Redead Grotto",
         "scene": "Kak Redead Grotto",
-        "room": "2",
+        "room": "02",
         "locations": {
             "Kak Redead Grotto Chest": "
                 is_adult or 
@@ -224,7 +224,7 @@
     {
         "region_name": "Kak Open Grotto",
         "scene": "Kak Open Grotto",
-        "room": "0",
+        "room": "00",
         "locations": {
             "Kak Open Grotto Chest": "True",
             "Kak Open Grotto Gossip Stone": "True",
@@ -240,7 +240,7 @@
     {
         "region_name": "DMT Cow Grotto",
         "scene": "DMT Cow Grotto",
-        "room": "3",
+        "room": "03",
         "locations": {
             "DMT Cow Grotto Cow": "can_play(Eponas_Song)"
         },
@@ -251,7 +251,7 @@
     {
         "region_name": "DMT Storms Grotto",
         "scene": "DMT Storms Grotto",
-        "room": "0",
+        "room": "00",
         "locations": {
             "DMT Storms Grotto Chest": "True",
             "DMT Storms Grotto Gossip Stone": "True",
@@ -280,7 +280,7 @@
     {
         "region_name": "DMC Upper Grotto",
         "scene": "DMC Upper Grotto",
-        "room": "0",
+        "room": "00",
         "locations": {
             "DMC Upper Grotto Chest": "True",
             "DMC Upper Grotto Gossip Stone": "True",
@@ -309,7 +309,7 @@
     {
         "region_name": "ZR Open Grotto",
         "scene": "ZR Open Grotto",
-        "room": "0",
+        "room": "00",
         "locations": {
             "ZR Open Grotto Chest": "True",
             "ZR Open Grotto Gossip Stone": "True",
@@ -326,7 +326,7 @@
     {
         "region_name": "ZR Storms Grotto",
         "scene": "ZR Storms Grotto",
-        "room": "9",
+        "room": "09",
         "locations": {
             "ZR Deku Scrub Grotto Rear": "can_stun_deku",
             "ZR Deku Scrub Grotto Front": "can_stun_deku"
@@ -351,7 +351,7 @@
     {
         "region_name": "Colossus Grotto",
         "scene": "Colossus Grotto",
-        "room": "9",
+        "room": "09",
         "locations": {
             "Colossus Deku Scrub Grotto Rear": "can_stun_deku",
             "Colossus Deku Scrub Grotto Front": "can_stun_deku"
@@ -363,7 +363,7 @@
     {
         "region_name": "GV Octorok Grotto",
         "scene": "GV Octorok Grotto",
-        "room": "5",
+        "room": "05",
         "exits": {
             "GV Grotto Ledge": "True"
         }
@@ -371,7 +371,7 @@
     {
         "region_name": "GV Storms Grotto",
         "scene": "GV Storms Grotto",
-        "room": "9",
+        "room": "09",
         "locations": {
             "GV Deku Scrub Grotto Rear": "can_stun_deku",
             "GV Deku Scrub Grotto Front": "can_stun_deku"

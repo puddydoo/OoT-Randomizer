@@ -2,7 +2,7 @@
     {
         "region_name": "HC Great Fairy Fountain",
         "scene": "HC Great Fairy Fountain",
-        "room": "0",
+        "room": "00",
         "locations": {
             "HC Great Fairy Reward": "can_play(Zeldas_Lullaby)"
         },
@@ -13,7 +13,7 @@
     {
         "region_name": "ZF Great Fairy Fountain",
         "scene": "ZF Great Fairy Fountain",
-        "room": "0",
+        "room": "00",
         "locations": {
             "ZF Great Fairy Reward": "can_play(Zeldas_Lullaby)"
         },
@@ -24,7 +24,7 @@
     {
         "region_name": "Colossus Great Fairy Fountain",
         "scene": "Colossus Great Fairy Fountain",
-        "room": "0",
+        "room": "00",
         "locations": {
             "Colossus Great Fairy Reward": "can_play(Zeldas_Lullaby)"
         },

@@ -2,7 +2,7 @@
     {
         "region_name": "Goron City",
         "scene": "Goron City",
-        "room": "3",
+        "room": "03",
         "hint": "Goron City",
         "events": {
             "Goron City Child Fire": "is_child and can_use(Dins_Fire)",
@@ -49,7 +49,7 @@
     {
         "region_name": "GC Grotto Platform",
         "scene": "Goron City",
-        "room": "3",
+        "room": "03",
         "hint": "Goron City",
         "exits": {
             "GC Grotto": "True",
@@ -62,7 +62,7 @@
     {
         "region_name": "GC Woods Warp",
         "scene": "Goron City",
-        "room": "3",
+        "room": "03",
         "hint": "Goron City",
         "events": {
             "GC Woods Warp Open": "can_blast_or_smash or can_use(Dins_Fire)"
@@ -75,7 +75,7 @@
     {
         "region_name": "GC Boulder Maze",
         "scene": "Goron City",
-        "room": "0",
+        "room": "00",
         "hint": "Goron City",
         "locations": {
             "GC Maze Left Chest": "
@@ -100,7 +100,7 @@
     {
         "region_name": "GC Medigorons Shop",
         "scene": "Goron City",
-        "room": "2",
+        "room": "02",
         "hint": "Goron City",
         "locations": {
             #The room begins before two of the mud walls
@@ -121,7 +121,7 @@
     {
         "region_name": "GC Darunias Chamber",
         "scene": "Goron City",
-        "room": "1",
+        "room": "01",
         "hint": "Goron City",
         "events": {
             "Goron City Child Fire": "can_use(Sticks)"

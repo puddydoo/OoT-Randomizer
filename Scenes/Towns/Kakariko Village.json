@@ -2,7 +2,7 @@
     {
         "region_name": "Kakariko Village",
         "scene": "Kakariko Village",
-        "room": "0",
+        "room": "00",
         "hint": "Kakariko Village",
         "events": {
             "Cojiro Access": "is_adult and 'Wake Up Adult Talon'",
@@ -52,7 +52,7 @@
     {
         "region_name": "Kak Impas Ledge",
         "scene": "Kakariko Village",
-        "room": "0",
+        "room": "00",
         "hint": "Kakariko Village",
         "exits": {
             "Kak Impas House Back": "True",
@@ -62,7 +62,7 @@
     {
         "region_name": "Kak Odd Medicine Rooftop",
         "scene": "Kakariko Village",
-        "room": "0",
+        "room": "00",
         "hint": "Kakariko Village",
         "locations": {
             "Kak Man on Roof": "True"
@@ -75,7 +75,7 @@
     {
         "region_name": "Kak Backyard",
         "scene": "Kakariko Village",
-        "room": "0",
+        "room": "00",
         "hint": "Kakariko Village",
         "exits": {
             "Kakariko Village": "True",
@@ -87,7 +87,7 @@
     {
         "region_name": "Kak Behind Gate",
         "scene": "Kakariko Village",
-        "room": "0",
+        "room": "00",
         "exits": {
             "Kakariko Village": "
                 is_adult or logic_visible_collisions or 'Kakariko Village Gate Open'",
