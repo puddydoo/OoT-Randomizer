@@ -19,11 +19,11 @@
         },
         "exits": {
             "Ganons Tower 1F Entrance": "
-			    transition('Ganons Tower T04',
-				'Ganons Tower Room 00 Enemies' or 'Ganons Tower Room 00 T04 Unbar')",
+                transition('Ganons Tower T04',
+                'Ganons Tower Room 00 Enemies' or 'Ganons Tower Room 00 T04 Unbar')",
             "Ganons Tower Stairs to Boss Key Room": "
-			    transition('Ganons Tower T03',
-				'Ganons Tower Room 00 Enemies' or 'Ganons Tower Room 00 T03 Unbar')"
+                transition('Ganons Tower T03',
+                'Ganons Tower Room 00 Enemies' or 'Ganons Tower Room 00 T03 Unbar')"
         }
     },
     {
@@ -49,11 +49,11 @@
         },
         "exits": {
             "Ganons Tower Stairs to Boss Key Room": "
-			    transition('Ganons Tower T05',
-				'Ganons Tower Room 02 Enemies' or 'Ganons Tower Room 02 T05 Unbar')",
+                transition('Ganons Tower T05',
+                'Ganons Tower Room 02 Enemies' or 'Ganons Tower Room 02 T05 Unbar')",
             "Ganons Tower Stairs to Iron Knuckle Room": "
-			    transition('Ganons Tower T01',
-				'Ganons Tower Room 02 Enemies' or 'Ganons Tower Room 02 T01 Unbar')"
+                transition('Ganons Tower T01',
+                'Ganons Tower Room 02 Enemies' or 'Ganons Tower Room 02 T01 Unbar')"
         }
     },
     {
@@ -76,11 +76,11 @@
         },
         "exits": {
             "Ganons Tower Stairs to Iron Knuckle Room": "
-			    transition('Ganons Tower T06', 
-				'Ganons Tower Room 04 Enemies' or 'Ganons Tower Room 04 T06 Unbar')",
+                transition('Ganons Tower T06', 
+                'Ganons Tower Room 04 Enemies' or 'Ganons Tower Room 04 T06 Unbar')",
             "Ganons Tower Stairs to Lower Ganondorfs Lair": "
-			    transition('Ganons Tower T02', 
-				'Ganons Tower Room 04 Enemies' or 'Ganons Tower Room 04 T02 Unbar')"
+                transition('Ganons Tower T02', 
+                'Ganons Tower Room 04 Enemies' or 'Ganons Tower Room 04 T02 Unbar')"
         }
     },
     {

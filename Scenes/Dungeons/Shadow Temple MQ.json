@@ -54,10 +54,10 @@
                 (logic_lens_shadow_mq or can_use(Lens_of_Truth) or Shadow_Temple_Dungeon_Map)",
             "Shadow Temple Lobby": "
                 (logic_lens_shadow_mq or can_use(Lens_of_Truth) or Shadow_Temple_Dungeon_Map)
-				and transition('Shadow Temple T03', True)",
+                and transition('Shadow Temple T03', True)",
             "Shadow Temple Dungeon Map Room": "
                 (logic_lens_shadow_mq or can_use(Lens_of_Truth) or Shadow_Temple_Dungeon_Map)
-				and transition('Shadow Temple T02', True)"
+                and transition('Shadow Temple T02', True)"
         }
     },
     {
@@ -99,8 +99,8 @@
         },
         "exits": {
             "Shadow Temple Whispering Wall Maze East": "
-			    transition('Shadow Temple T02', 'Shadow Temple Room 01 Enemies'
-				or 'Shadow Temple MQ Room 01 T02 Unbar')"
+                transition('Shadow Temple T02', 'Shadow Temple Room 01 Enemies'
+                or 'Shadow Temple MQ Room 01 T02 Unbar')"
         }
     },
     {
@@ -117,8 +117,8 @@
         },
         "exits": {
             "Shadow Temple Whispering Wall Maze West": "
-			    transition('Shadow Temple T01', 'Shadow Temple Room 04 Enemies'
-				or 'Shadow Temple MQ Room 04 T01 Unbar')"
+                transition('Shadow Temple T01', 'Shadow Temple Room 04 Enemies'
+                or 'Shadow Temple MQ Room 04 T01 Unbar')"
         }
     },
     {
@@ -129,12 +129,12 @@
             "Shadow Temple Lobby East": "transition('Shadow Temple T??', True)",
             "Shadow Temple Spinning Scythe Silver Rupee Room": "
                 (logic_lens_shadow_mq or can_use(Lens_of_Truth))
-				and transition('Shadow Temple T06', True)",
+                and transition('Shadow Temple T06', True)",
             "Shadow Temple Compass Room": "
                 (logic_lens_shadow_mq or can_use(Lens_of_Truth))
-				and transition('Shadow Temple T07', True)",
+                and transition('Shadow Temple T07', True)",
             "Shadow Temple Guillotine Corridor": "
-			    has_explosives and transition('Shadow Temple T05', True)"
+                has_explosives and transition('Shadow Temple T05', True)"
         }
     },
     {
@@ -155,8 +155,8 @@
         },
         "exits": {
             "Shadow Temple First Beamos Room": "
-			    transition('Shadow Temple T06',
-				'Shadow Temple Room 06 Enemies' or 'Shadow Temple MQ Room 06 T06 Unbar'",
+                transition('Shadow Temple T06',
+                'Shadow Temple Room 06 Enemies' or 'Shadow Temple MQ Room 06 T06 Unbar'",
             "Shadow Temple River Styx Shortcut": "transition('Shadow Temple T23', True)"
         }
     },
@@ -170,7 +170,7 @@
         },
         "exits": {
             "Shadow Temple Spinning Scythe Silver Rupee Room": "
-			    transition('Shadow Temple T23', True)",
+                transition('Shadow Temple T23', True)",
             "Shadow Temple River Styx East": "'Shadow Temple Room 21 Pushblock'"
         }
     },
@@ -188,8 +188,8 @@
         },
         "exits": {
             "Shadow Temple First Beamos Room": "
-			    transition('Shadow Temple T07', 'Shadow Temple Room 07 Enemies'
-				or 'Shadow Temple MQ Room 07 T07 Unbar')"
+                transition('Shadow Temple T07', 'Shadow Temple Room 07 Enemies'
+                or 'Shadow Temple MQ Room 07 T07 Unbar')"
         }
     },
     {
@@ -276,7 +276,7 @@
         "room": "09",
         "exits": {
             "Shadow Temple Invisible Spike Room": "
-			    can_use(Hover_Boots) and transition('Shadow Temple T09', True)",
+                can_use(Hover_Boots) and transition('Shadow Temple T09', True)",
             "Shadow Temple Huge Pit West": "
                 (logic_lens_shadow_mq_back or can_use(Lens_of_Truth)) and can_use(Hover_Boots)",
             "Shadow Temple Huge Pit Upper": "
@@ -328,14 +328,14 @@
         "exits": {
             "Shadow Temple Huge Pit Northwest": "
                 (logic_lens_shadow_mq_back or can_use(Lens_of_Truth))
-				and transition('Shadow Temple T19', True)",
+                and transition('Shadow Temple T19', True)",
             "Shadow Temple Singular Skull Jar Room": "
                 transition('Shadow Temple T11', 'Shadow Temple Room 11 Silver Rupees'
-				or 'Shadow Temple MQ Room 11 T11 Unbar')",
+                or 'Shadow Temple MQ Room 11 T11 Unbar')",
             #I think regular Hookshot only works here if you backflip onto chest.
             "Shadow Temple Fan Trap Room": "
                 (logic_lens_shadow_mq_back or can_use(Lens_of_Truth) and can_use(Longshot))
-				and transition('Shadow Temple T10', True)"
+                and transition('Shadow Temple T10', True)"
         }
     },
     {
@@ -370,8 +370,8 @@
         "room": "14",
         "exits": {
             "Shadow Temple Invisible Spike Room": "
-			    transition('Shadow Temple T11', 'Shadow Temple Room 14 Enemies'
-				or 'Shadow Temple MQ Room 14 T11 Unbar')",
+                transition('Shadow Temple T11', 'Shadow Temple Room 14 Enemies'
+                or 'Shadow Temple MQ Room 14 T11 Unbar')",
             "Shadow Temple Singular Skull Jar Room Upper": "can_climb(70)"
         }
     },
@@ -482,8 +482,8 @@
                 'Shadow Temple Shadow Statue' or ('Shadow Temple Room 21 Eye Switch' and can_use(Longshot))",
             "Shadow Temple River Styx West Ledge": "'Shadow Temple Room 21 Eye Switch' and can_use(Longshot)",
             "Shadow Temple Invisible Maze": "
-			    transition('Shadow Temple T15',
-				'Shadow Temple Room 21 Floor Switch' or 'Shadow Temple MQ Room 21 T15 Unbar'"
+                transition('Shadow Temple T15',
+                'Shadow Temple Room 21 Floor Switch' or 'Shadow Temple MQ Room 21 T15 Unbar'"
         }
     },
     {

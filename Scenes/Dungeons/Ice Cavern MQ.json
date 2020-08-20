@@ -16,7 +16,7 @@
             "Ice Cavern Entrance Corridor": "transition('Ice Cavern T??', True)",
             "Ice Cavern Lobby Back": "can_use_projectile",
             "Ice Cavern Underwater Hall to Lobby": "
-			    can_climb(230) and transition('Ice Cavern T??', True)"
+                can_climb(230) and transition('Ice Cavern T??', True)"
         }
     },
     {
@@ -65,8 +65,8 @@
         "exits": {
             "Ice Cavern Central Room": "Can break icicles",
             "Ice Cavern Side Room": "
-			    ('Ice Cavern Room 03 Enemies' or barred_door)
-				and transition('Ice Cavern T??', True)"
+                ('Ice Cavern Room 03 Enemies' or barred_door)
+                and transition('Ice Cavern T??', True)"
         }
     },
     {
@@ -109,7 +109,7 @@
         },
         "exits": {
             "Ice Cavern Hall to Square Pit Room": "
-			    can_climb(60) and transition('Ice Cavern T??', True)",
+                can_climb(60) and transition('Ice Cavern T??', True)",
             "Ice Cavern Square Pit Room South": "can_climb(100) and Blue_Fire"
         }
     },
@@ -158,12 +158,12 @@
         },
         "exits": {
             "Ice Cavern Hall to Iron Boots": "
-			    transition('Ice Cavern T12',
-				'Ice Cavern Room 07 Enemies' or 'Ice Cavern MQ Room 07 T12 Unbar')",
+                transition('Ice Cavern T12',
+                'Ice Cavern Room 07 Enemies' or 'Ice Cavern MQ Room 07 T12 Unbar')",
             #There is a barred floor blocking the exit before the enemies are defeated, but not a barred door
             "Ice Cavern Underwater Hall to Lobby": "
                 'Ice Cavern Room 07 Enemies' and can_use(Iron_Boots)
-				and transition('Ice Cavern T??', True)"
+                and transition('Ice Cavern T??', True)"
         }
     },
     {
@@ -188,7 +188,7 @@
         },
         "exits": {
             "Ice Cavern Hall to Ice Bridge Room": "
-			    can_climb(60) and transition('Ice Cavern T??', True)"
+                can_climb(60) and transition('Ice Cavern T??', True)"
         }
     },
     {
@@ -198,7 +198,7 @@
         "exits": {
             "Ice Cavern Lobby": "transition('Ice Cavern T??', True)",
             "Ice Cavern Iron Boots Icefield": "
-			    can_use(Iron_Boots) and transition('Ice Cavern T??', True)"
+                can_use(Iron_Boots) and transition('Ice Cavern T??', True)"
         }
     },
     {
@@ -214,7 +214,7 @@
         },
         "exits": {
             "Ice Cavern Central Room East": "
-			    can_climb(20) and transition('Ice Cavern T??', True)"
+                can_climb(20) and transition('Ice Cavern T??', True)"
         }
     }
 ]

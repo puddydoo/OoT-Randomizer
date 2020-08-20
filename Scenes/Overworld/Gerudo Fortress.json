@@ -45,7 +45,7 @@
         "room": "00",
         "hint": "Gerudo's Fortress",
         "locations": {
-            "GF Glitch Freestanding PoH": "is_child"
+            #"GF Glitch Freestanding PoH": "is_child"
         },
         "exits": {
             "Gerudo Fortress": "True",
@@ -106,13 +106,12 @@
             "Thieves Hideout Exit 9": "True",
             "GF Entrances Behind Crates": "True",
             "Gerudo Fortress": "True",
-            #There is a trick that Adult Link is tall enough to use a cleverly angled autojump off the ledge and get up there
-            "GF Southeast Roof": "(Trick and can_climb(101.5)) or can_climb(130)",
+            "GF Southeast Roof": "(logic_gf_roof_jump and autojump_climb(101.5)) or can_climb(130)",
             "GF Green Jail Exterior": "can_climb(120)",
             "GF Kitchen Roof Access Ledge": "can_climb(194)",
             "GF Empty Roof": "can_climb(301)"
         }
-    },
+    },8
     {
         "region_name": "GF Green Jail Exterior",
         "scene": "Gerudo Fortress",
@@ -138,7 +137,9 @@
             "GF Kitchen Roof Access Ledge": "can_climb(80)",
             "GF Empty Roof": "can_use(Hover_Boots)",
             "GF Roof Entrance Cluster": "True",
-            "GF Chest Roof": "can_use(Distant_Scarecrow)",
+            "GF Chest Roof": "
+			    can_use(Distant_Scarecrow)
+				or (can_climb(208) and can_autojump or can_use(Hover_Boots))",
             "GF Southeast Roof": "can_climb(251)"
         }
     },
@@ -164,7 +165,7 @@
         "room": "00",
         "hint": "Gerudo's Fortress",
         "exits": {
-            "GF Southeast Roof": "True",
+            "GF Southeast Roof": "can_autojump or can_climb(132)",
             "GF Kitchen Roof Access": "True",
             "GF Roof Entrance Cluster": "True"
         }
@@ -179,7 +180,7 @@
         },
         "exits": {
             "GF Chest Roof": "
-                can_use(Hover_Boots) or can_use(Scarecrow) or can_use(Longshot)",
+                can_use(Hover_Boots) or can_use(Scarecrow) or can_use(Longshot) or can_climb(208)",
             "GF Kitchen Roof Access Ledge": "True",
             "GF Kitchen Roof Access": "True",
             "GF Roof Entrance Cluster": "True",
@@ -230,5 +231,5 @@
         "exits": {
             "Gerudo Fortress": "True"
         }
-    },
+    }
 ]

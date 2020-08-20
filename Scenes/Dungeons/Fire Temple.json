@@ -7,7 +7,7 @@
             "DMC Fire Temple Entrance": "True",
             "Fire Temple Entrance Chamber North": "True",
             "Fire Temple Combat Room": "
-			    here(can_use(Megaton_Hammer)) and transition('Fire Temple T35', True)",
+                here(can_use(Megaton_Hammer)) and transition('Fire Temple T35', True)",
             "Fire Temple Two-Sided Cell South": "transition('Fire Temple T18', True)"
         }
     },
@@ -40,13 +40,13 @@
             "Fire Temple Entrance Chamber North": "transition('Fire Temple T37', True)",
             "Fire Temple Flame Pillar Elevator Room": "transition('Fire Temple T15', True)",
             "Fire Temple Southern Cell": "
-			    can_climb(83) and has_explosives and transition('Fire Temple T16', True)",
+                can_climb(83) and has_explosives and transition('Fire Temple T16', True)",
             "Fire Temple Northern Cell": "transition('Fire Temple T14', True)",
             "Fire Temple High Floor Tile Room": "
                 ((can_play(Song_of_Time) and can_climb(96))
                 or (logic_fire_song_of_time and is_adult)
                 or can_climb(136))
-				and transition('Fire Temple T13', True)",
+                and transition('Fire Temple T13', True)",
             "Fire Temple Eastern Shaft": "False and transition('Fire Temple T03', True)"
         }
     },
@@ -127,11 +127,11 @@
         },
         "exits": {
             "Fire Temple Lower Floor Tile Room": "
-			    transition('Fire Temple T30',
-				'Fire Temple Room 03 Enemies' or 'Fire Temple Room 03 T30 Unbar')",
+                transition('Fire Temple T30',
+                'Fire Temple Room 03 Enemies' or 'Fire Temple Room 03 T30 Unbar')",
             "Fire Temple Two-Sided Cell": "
-			    transition('Fire Temple T26',
-				'Fire Temple Room 03 Enemies' or 'Fire Temple Room 03 T26 Unbar')"
+                transition('Fire Temple T26',
+                'Fire Temple Room 03 Enemies' or 'Fire Temple Room 03 T26 Unbar')"
         }
     },
     {
@@ -233,8 +233,8 @@
             "Fire Temple Stone Maze": "transition('Fire Temple T22', True)",
             "Fire Temple Lava Grate Room South": "transition('Fire Temple T20', True)",
             "Fire Temple Lava Grate Room East": "
-			    transition('Fire Temple T21',
-				can_use(Bow) or can_use(Slingshot) or 'Fire Temple Room 06 T21 Unbar')",
+                transition('Fire Temple T21',
+                can_use(Bow) or can_use(Slingshot) or 'Fire Temple Room 06 T21 Unbar')",
             "Fire Temple Big Lava Room": "can_fall and transition('Fire Temple T03', True)",
             "Fire Temple Eastern Tower": "False and transition('Fire Temple T04', True)"
         }
@@ -289,7 +289,7 @@
         "room": "10",
         "exits": {
             "Fire Temple Boss Door Room": "
-			    'Fire Temple Boss Door Stone' and can_fall and transition('Fire Temple T02', True)",
+                'Fire Temple Boss Door Stone' and can_fall and transition('Fire Temple T02', True)",
             "Fire Temple Center of Flame Maze": "transition('Fire Temple T10', True)",
             "Fire Temple Flame Maze Side Room": "transition('Fire Temple T34', True)",
             "Fire Temple Flame Maze East": "can_climb(70)",
@@ -318,8 +318,8 @@
         }
         "exits": {
             "Fire Temple Center of Flame Maze East": "
-			    transition('Fire Temple T25',
-				can_use(Megaton_Hammer) or 'Fire Temple Room 10 T25 Unbar')",
+                transition('Fire Temple T25',
+                can_use(Megaton_Hammer) or 'Fire Temple Room 10 T25 Unbar')",
             "Fire Temple Flame Maze": "True",
             "Fire Temple Flame Maze Northeast": "True"
         }
@@ -342,7 +342,7 @@
         "exits": {
             "Fire Temple Flame Maze North": "False",
             "Fire Temple Flare Dancer Elevator Room": "
-			    has_explosives and transition('Fire Temple T27', True)"
+                has_explosives and transition('Fire Temple T27', True)"
         }
     },
     {
@@ -431,7 +431,7 @@
             "Fire Temple Western Tower": "can_climb(220) and
                 at('Fire Temple Western Tower', can_use(Megaton_Hammer))",
             "Fire Temple Stone Stairway": "
-			    can_use(Megaton_Hammer) and transition('Fire Temple T32', True)"
+                can_use(Megaton_Hammer) and transition('Fire Temple T32', True)"
         }
     },
     {
@@ -445,8 +445,8 @@
             "Fire Temple Western Tower Under Stone": "transition('Fire Temple T32', True)",
             "Fire Temple Stone Stairway Bottom": "'Fire Temple Stone Stairs'"
             "Fire Temple Flame Maze Ceiling": "
-			    'Fire Temple Stone Stairs' and
-				transition('Fire Temple T31', True or 'Fire Temple Room 14 T31 Unbar')"
+                'Fire Temple Stone Stairs' and
+                transition('Fire Temple T31', True or 'Fire Temple Room 14 T31 Unbar')"
         }
     },
     {
@@ -457,8 +457,8 @@
         "exits": {
             "Fire Temple Stone Stairway": "'Fire Temple Stone Stairs' and can_climb(100)",
             "Fire Temple Flame Maze Ceiling": "
-			    transition('Fire Temple T31',
-				can_hold_down_switch or 'Fire Temple Room 14 T31 Unbar')"
+                transition('Fire Temple T31',
+                can_hold_down_switch or 'Fire Temple Room 14 T31 Unbar')"
         }
     },
     {
@@ -474,7 +474,7 @@
             "Fire Temple Entrance Chamber": "transition('Fire Temple T35', True)",
             "Fire Temple Lower Floor Tile Room": "
                 transition('Fire Temple T33',
-				'Fire Temple Room 15 Enemies' or 'Fire Temple Room 15 T33 Unbar')"
+                'Fire Temple Room 15 Enemies' or 'Fire Temple Room 15 T33 Unbar')"
         }
     },
     {
@@ -665,8 +665,8 @@
         },
         "exits": {
             "Fire Temple Flame Maze West": "
-			    transition('Fire Temple T27',
-				'Fire Temple Room 24 Enemies' or 'Fire Temple Room 24 T27 Unbar')",
+                transition('Fire Temple T27',
+                'Fire Temple Room 24 Enemies' or 'Fire Temple Room 24 T27 Unbar')",
             "Fire Temple Flare Dancer Elevator Top": "'Fire Temple Room 24 Enemies'"
         }
     },

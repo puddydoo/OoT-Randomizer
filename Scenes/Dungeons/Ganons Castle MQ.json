@@ -11,8 +11,8 @@
         "exits": {
             "Ganons Castle Grounds": "True",
             "Ganons Castle Barrier Chamber": "
-			    transition('Ganons Castle T00', 'Ganons Castle Room 00 Enemies'
-				or 'Ganons Castle MQ Room 00 T03 Unbar')"
+                transition('Ganons Castle T00', 'Ganons Castle Room 00 Enemies'
+                or 'Ganons Castle MQ Room 00 T03 Unbar')"
         }
     },
     {
@@ -27,7 +27,7 @@
             "Ganons Castle Shadow Trial": "transition('Ganons Castle T13', True)",
             "Ganons Castle Spirit Trial Danger Room": "transition('Ganons Castle T17', True)",
             "Ganons Castle Light Trial Enemy Room": "
-			    can_use(Golden_Gauntlets) and transition('Ganons Castle T11', True)",
+                can_use(Golden_Gauntlets) and transition('Ganons Castle T11', True)",
             "Ganons Tower 1F Entrance": "
                 (skipped_trials[Forest] or 'Forest Trial Clear') and 
                 (skipped_trials[Fire] or 'Fire Trial Clear') and 
@@ -36,8 +36,8 @@
                 (skipped_trials[Spirit] or 'Spirit Trial Clear') and 
                 (skipped_trials[Light] or 'Light Trial Clear')",
             "Ganons Castle Deku Scrubs": "
-			    (logic_lens_castle_mq or can_use(Lens_of_Truth))
-				and transition('Ganons Castle T01', True)"
+                (logic_lens_castle_mq or can_use(Lens_of_Truth))
+                and transition('Ganons Castle T01', True)"
         }
     },
     {
@@ -71,7 +71,7 @@
         },
         "exits": {
             "Ganons Castle Water Trial Red Ice Room Rear": "
-			    can_climb(70) and transition('Ganons Castle T05', True)",
+                can_climb(70) and transition('Ganons Castle T05', True)",
             "Ganons Castle Water Trial Block Puzzle Room Rear": "can_climb(100) and Blue_Fire"
         }
     },
@@ -82,8 +82,8 @@
         "exits": {
             "Ganons Castle Water Trial Block Puzzle Room": "Blue_Fire",
             "Ganons Castle Water Barrier": "
-			    transition('Ganons Castle T14',
-				'Ganons Castle Room 03 Silver Rupees' or 'Ganons Castle MQ Room 03 T14 Unbar')"
+                transition('Ganons Castle T14',
+                'Ganons Castle Room 03 Silver Rupees' or 'Ganons Castle MQ Room 03 T14 Unbar')"
         }
     },
     {
@@ -112,8 +112,8 @@
         "exits": {
             "Ganons Castle Barrier Chamber": "transition('Ganons Castle T09', True)",
             "Ganons Castle Forest Trial Wind Room Front": "
-			    transition('Ganons Castle T07',
-				'Ganons Castle Room 05 Enemies' or 'Ganons Castle MQ Room 05 T07 Unbar')"
+                transition('Ganons Castle T07',
+                'Ganons Castle Room 05 Enemies' or 'Ganons Castle MQ Room 05 T07 Unbar')"
         }
     },
     {
@@ -162,8 +162,8 @@
         "exits": {
             "Ganons Castle Forest Trial Wind Room": "True",
             "Ganons Castle Forest Barrier": "
-			    transition('Ganons Castle T08',
-				can_play(Song_of_Time) or can_hold_down_switch or 'Ganons Castle MQ Room 06 T08 Unbar')"
+                transition('Ganons Castle T08',
+                can_play(Song_of_Time) or can_hold_down_switch or 'Ganons Castle MQ Room 06 T08 Unbar')"
         }
     },
     {
@@ -185,11 +185,11 @@
             "Ganons Castle Light Trial Lullaby Room": "
                 (can_use(Hookshot) or can_climb(120) or
                 (logic_light_trial_mq and (damage_multiplier != 'ohko' or Fairy or can_use(Nayrus_Love))))
-				and transition('Ganons Castle T20', True)",
+                and transition('Ganons Castle T20', True)",
             "Ganons Castle Light Trial Fake Barrier": "
                 (can_use(Hookshot) or can_climb(120) or
                 (logic_light_trial_mq and (damage_multiplier != 'ohko' or Fairy or can_use(Nayrus_Love))))
-				and transition('Ganons Castle T06', True)"
+                and transition('Ganons Castle T06', True)"
         },
     },
     {
@@ -199,13 +199,13 @@
         "events": {
             "Ganons Castle Room 09 Enemies": "
                 "
-				#
+                #
         },
         "exits": {
             "Ganons Castle Barrier Chamber": "transition('Ganons Castle T11', True)",
             "Ganons Castle Light Trial Lullaby Room": "
-			    transition('Ganons Castle T04',
-				'Ganons Castle Room 09 Enemies' or 'Ganons Castle MQ Room 09 T04 Unbar')"
+                transition('Ganons Castle T04',
+                'Ganons Castle Room 09 Enemies' or 'Ganons Castle MQ Room 09 T04 Unbar')"
         }
     },
     {
@@ -226,8 +226,8 @@
         "room": "10",
         "exits": {
             "Ganons Castle Light Barrier": "
-			    (logic_lens_castle or can_use(Lens_of_Truth))
-				and transition('Ganons Castle T02', True)",
+                (logic_lens_castle or can_use(Lens_of_Truth))
+                and transition('Ganons Castle T02', True)",
             "Ganons Castle Light Trial Boulder Room": "transition('Ganons Castle T06', True)"
         }
     },
@@ -296,7 +296,7 @@
                 logic_lens_castle_mq or can_use(Lens_of_Truth)",
             "Ganons Castle Shadow Barrier": "
                 transition('Ganons Castle T15',
-				'Ganons Castle Room 12 Silver Rupees' or 'Ganons Castle MQ Room 12 T15 Unbar')"
+                'Ganons Castle Room 12 Silver Rupees' or 'Ganons Castle MQ Room 12 T15 Unbar')"
         }
     },
     {
@@ -326,7 +326,7 @@
                 can_use(Goron_Tunic) and can_use(Golden_Gauntlets) and 
                 (can_use(Longshot) or can_use(Hover_Boots)) and 
                 transition('Ganons Castle T16',
-				'Ganons Castle Room 14 Silver Rupees' or 'Ganons Castle MQ Room 14 T16 Unbar')"
+                'Ganons Castle Room 14 Silver Rupees' or 'Ganons Castle MQ Room 14 T16 Unbar')"
         }
     },
     {
@@ -360,15 +360,15 @@
         "region_name": "Ganons Castle Spirit Trial Danger Room",
         "dungeon": "Ganons Castle",
         "room": "17",
-		"events": {
+        "events": {
             "Ganons Castle Room 17 Rusted Switch": "
-			    (can_use(Bow) or logic_rusted_switches) and can_use(Megaton_Hammer)"
+                (can_use(Bow) or logic_rusted_switches) and can_use(Megaton_Hammer)"
         },
         "exits": {
             "Ganons Castle Barrier Chamber": "transition('Ganons Castle T17', True)",
             "Ganons Castle Spirit Trial Sun Switch Room Front": "
                 transition('Ganons Castle T18',
-				'Ganons Castle Room 17 Rusted Switch' or 'Ganons Castle MQ Room 17 T18 Unbar')"
+                'Ganons Castle Room 17 Rusted Switch' or 'Ganons Castle MQ Room 17 T18 Unbar')"
         }
     },
     {
@@ -385,7 +385,7 @@
             "Ganons Castle Spirit Trial Danger Room": "transition('Ganons Castle T18', True)",
             "Ganons Castle Spirit Trial Sun Switch Room": "
                 transition('Ganons Castle T21',
-				'Ganons Castle Room 18 Door Crystal Switch' or 'Ganons Castle MQ Room 18 T21 Unbar')"
+                'Ganons Castle Room 18 Door Crystal Switch' or 'Ganons Castle MQ Room 18 T21 Unbar')"
         }
     },
     {
@@ -394,7 +394,7 @@
         "room": "18",
         "events": {
             "Ganons Castle Room 18 Door Crystal Switch": "
-			    Can hit crystal switch"
+                Can hit crystal switch"
         }
         "locations": {
             "Ganons Castle MQ Spirit Trial Invisible Chest": "logic_lens_castle_mq or can_use(Lens_of_Truth)",
@@ -414,12 +414,12 @@
         "exits": {
             "Ganons Castle Spirit Trial Sun Switch Room Front": "
                 transition('Ganons Castle T21',
-				'Ganons Castle Room 18 Door Crystal Switch' or 'Ganons Castle MQ Room 18 T21 Unbar')",
+                'Ganons Castle Room 18 Door Crystal Switch' or 'Ganons Castle MQ Room 18 T21 Unbar')",
             "Ganons Castle Spirit Barrier": "
-			    transition('Ganons Castle T19',
+                transition('Ganons Castle T19',
                     here((can_use(Fire_Arrows) and can_use(Mirror_Shield))
                     or (mm_light_arrows and can_use(Light_Arrows)))
-					or 'Ganons Castle MQ Room 18 T19 Unbar')"
+                    or 'Ganons Castle MQ Room 18 T19 Unbar')"
         }
     },
     {

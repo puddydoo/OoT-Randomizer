@@ -47,7 +47,7 @@
             "Water Temple Ruto Meeting Room 1F H": "
                 logic_water_temple_torch_longshot and can_use(Longshot)
                 and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)
-				and transition('Water Temple T01', True)"
+                and transition('Water Temple T01', True)"
         }
     },
     {
@@ -69,7 +69,7 @@
             "Water Temple Ruto Meeting Room 1F M": "
                 logic_water_temple_torch_longshot and can_use(Longshot)
                 and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)
-				and transition('Water Temple T01', True)"
+                and transition('Water Temple T01', True)"
         }
     },
     {
@@ -89,7 +89,7 @@
                 logic_water_central_bow and (can_use(Bow) or can_use(Slingshot))",
             "Water Temple Lobby Outer Floating Platform L": "True",
             "Water Temple Ruto Meeting Room 1F L": "
-			    can_use(Longshot) and transition('Water Temple T01', True)"
+                can_use(Longshot) and transition('Water Temple T01', True)"
         }
     },
     {
@@ -134,7 +134,7 @@
         "exits": {
             "Water Temple Lobby 3F H": "True",
             "Water Temple Water Elevator 3F H": "
-			    transition('Water Temple T25', 'Water Temple Room 00 T25 Unbar')"
+                transition('Water Temple T25', 'Water Temple Room 00 T25 Unbar')"
         }
     },
     {
@@ -150,7 +150,7 @@
             "Water Temple Lobby 3F Lullaby Ledge H": "can_play(Zeldas_Lullaby)",
             "Water Temple Lobby 3F M": "True",
             "Water Temple Water Elevator 3F M": "
-			    transition('Water Temple T25', 'Water Temple Room 00 T25 Unbar')"
+                transition('Water Temple T25', 'Water Temple Room 00 T25 Unbar')"
         }
     },
     {
@@ -166,7 +166,7 @@
             "Water Temple Lobby 3F Lullaby Ledge H": "can_play(Zeldas_Lullaby)",
             "Water Temple Lobby 3F L": "True",
             "Water Temple Water Elevator 3F L": "
-			    transition('Water Temple T25', 'Water Temple Room 00 T25 Unbar')"
+                transition('Water Temple T25', 'Water Temple Room 00 T25 Unbar')"
         }
     },
     {
@@ -242,8 +242,8 @@
             "Water Temple Lobby 3F H": "True"
             "Water Temple Lobby 1F H": "can_use(Iron_Boots)"
             "Water Temple Inner Tower 2F H": "
-			    can_use(Iron_Boots) and transition('Water Temple T16',
-				'Water Temple Room 00 T16 Unbar')",
+                can_use(Iron_Boots) and transition('Water Temple T16',
+                'Water Temple Room 00 T16 Unbar')",
             "Water Temple Inner Tower 1F H": "False and transition('Water Temple T15', True)",
             "Water Temple Lobby 3F Lullaby Ledge H": "False",
             "Water Temple Lobby 2F East Tunnel H": "can_use(Iron_Boots)",
@@ -259,8 +259,8 @@
             "Water Temple Lobby 3F M": "False",
             "Water Temple Lobby 1F M": "can_use(Iron_Boots)",
             "Water Temple Inner Tower 2F M": "
-			    transition('Water Temple T16', has_fire_source_with_torch or can_use(Bow)
-				or 'Water Temple Room 00 T16 Unbar')",
+                transition('Water Temple T16', has_fire_source_with_torch or can_use(Bow)
+                or 'Water Temple Room 00 T16 Unbar')",
             "Water Temple Inner Tower 1F M": "False and transition('Water Temple T15', True)",
             "Water Temple Lobby 3F Lullaby Ledge M": "False",
             "Water Temple Lobby 2F East Tunnel M": "True",
@@ -278,8 +278,8 @@
             "Water Temple Lobby 3F L": "False",
             "Water Temple Lobby 1F L": "True",
             "Water Temple Inner Tower 2F L": "
-			    transition('Water Temple T16', has_fire_source_with_torch or can_use(Bow)
-				or 'Water Temple Room 00 T16 Unbar')",
+                transition('Water Temple T16', has_fire_source_with_torch or can_use(Bow)
+                or 'Water Temple Room 00 T16 Unbar')",
             "Water Temple Inner Tower 1F L": "transition('Water Temple T15', True)",
             "Water Temple Lobby 3F Lullaby Ledge L": "False",
             "Water Temple Lobby 2F East Tunnel L": "True",
@@ -359,7 +359,7 @@
             "Water Temple Inner Tower 1F H": "False and transition('Water Temple T15', True)",
             "Water Temple Ruto Meeting Room 1F H": "
                 can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)
-				and transition('Water Temple T01', True)",
+                and transition('Water Temple T01', True)",
             "Water Temple Lobby 1F West Corridor H": "
                 'Water Temple Room 00 Pushblock' and can_use(Iron_Boots)
                 and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)",
@@ -380,7 +380,7 @@
             "Water Temple Inner Tower 1F M": "False and transition('Water Temple T15', True)",
             "Water Temple Ruto Meeting Room 1F M": "
                 can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)
-				and transition('Water Temple T01', True)",
+                and transition('Water Temple T01', True)",
             "Water Temple Lobby 1F West Corridor M": "
                 'Water Temple Room 00 Pushblock' and can_use(Iron_Boots)
                 and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)",
@@ -523,7 +523,7 @@
         "room": "01",
         "locations": {
             "Water Temple GS Central Pillar": "'Water Temple H' and can_use(Hookshot) or can_use(Boomerang)"
-			#Note: The original logic used Farore's Wind as a way to get here but I didn't account for Farore's Wind.
+            #Note: The original logic used Farore's Wind as a way to get here but I didn't account for Farore's Wind.
         },
         "exits": {
             "Water Temple Inner Tower 2F H": "can_use(Iron_Boots)"
@@ -808,7 +808,7 @@
         "room": "10",
         "exits": 
             "Water Temple Lobby Outer Floating Platform H": "
-			    can_use(Iron_Boots) and transition('Water Temple T18', True)",
+                can_use(Iron_Boots) and transition('Water Temple T18', True)",
             "Water Temple Water Elevator 3F H": "False"
         }
     },
@@ -866,10 +866,10 @@
         "exits": {
             "Water Temple Lobby 1F H": "
                 can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)
-				and transition('Water Temple T01', True)",
+                and transition('Water Temple T01', True)",
             "Water Temple Submerged Combat Room H": "
-			    can_use(Iron_Boots) and transition('Water Temple T24',
-				'Water Temple Room 17 T24 Unbar')",
+                can_use(Iron_Boots) and transition('Water Temple T24',
+                'Water Temple Room 17 T24 Unbar')",
             "Water Temple Ruto Meeting Room 2F H": "can_use(Iron_Boots)",
             "Water Temple Ruto Meeting Room 3F H": "True"
         }
@@ -881,10 +881,10 @@
         "exits": {
             "Water Temple Lobby 1F M": "
                 can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)
-				and transition('Water Temple T01', True)",
+                and transition('Water Temple T01', True)",
             "Water Temple Submerged Combat Room M": "
-			    can_use(Iron_Boots) and transition('Water Temple T24',
-				'Water Temple Room 17 T24 Unbar')",
+                can_use(Iron_Boots) and transition('Water Temple T24',
+                'Water Temple Room 17 T24 Unbar')",
             "Water Temple Ruto Meeting Room 2F M": "True",
             "Water Temple Ruto Meeting Room 3F M": "False"
         }
@@ -901,8 +901,8 @@
             "Water Temple Lobby 1F L": "transition('Water Temple T01', True)",
             "Water Temple Submerged Combat Room L": "
                 transition('Water Temple T24',
-				can_use(Bow) or has_fire_source_with_torch 
-				or 'Water Temple Room 17 T24 Unbar')",
+                can_use(Bow) or has_fire_source_with_torch 
+                or 'Water Temple Room 17 T24 Unbar')",
             "Water Temple Ruto Meeting Room 2F L": "False",
             "Water Temple Ruto Meeting Room 3F L": "False"
         }
@@ -1024,7 +1024,7 @@
         "exits": {
             "Water Temple Ruto Meeting Room 1F H": "
                 can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)
-				and transition('Water Temple T24', True)"
+                and transition('Water Temple T24', True)"
         }
     },
     {
@@ -1044,7 +1044,7 @@
         "exits": {
             "Water Temple Ruto Meeting Room 1F M": "
                 can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)
-				and transition('Water Temple T24', True)"
+                and transition('Water Temple T24', True)"
         }
     },
     {
@@ -1088,7 +1088,7 @@
         }
         "exits": {
             "Water Temple Lobby 3F East Ledge M": "
-			    can_use(Hookshot) and transition('Water Temple T03', True)",
+                can_use(Hookshot) and transition('Water Temple T03', True)",
             "Water Temple Grate Passage West M": "'Water Temple Room 20 Pushblock Moved Twice'"
         }
     },
@@ -1102,7 +1102,7 @@
         }
         "exits": {
             "Water Temple Lobby 3F East Ledge L": "
-			    can_use(Hookshot) and transition('Water Temple T03', True)",
+                can_use(Hookshot) and transition('Water Temple T03', True)",
             "Water Temple Grate Passage West L": "'Water Temple Room 20 Pushblock Moved Twice'"
         }
     },
@@ -1173,8 +1173,8 @@
         },
         "exits": {
             "Water Temple Ruto Meeting Room 3F": "
-			    transition('Water Temple T14', 'Water Temple Room 19 Enemies'
-				or 'Water Temple Room 19 T14 Unbar')"
+                transition('Water Temple T14', 'Water Temple Room 19 Enemies'
+                or 'Water Temple Room 19 T14 Unbar')"
         }
     },
     {
@@ -1188,9 +1188,9 @@
         },
         "exits": {
             "Water Temple Lobby Outer Floating Platform": "
-			    can_use(Hookshot) and transition('Water Temple T09', True)",
+                can_use(Hookshot) and transition('Water Temple T09', True)",
             "Water Temple Triple Serpent Head Room": "
-			    can_use(Hookshot) and transition('Water Temple T11', True)"
+                can_use(Hookshot) and transition('Water Temple T11', True)"
         }
     },
     {
@@ -1199,11 +1199,11 @@
         "room": "06",
         "exits": {
             "Water Temple Falling Platform Room": "
-			    can_use_projectile and transition('Water Temple T11', True)",
+                can_use_projectile and transition('Water Temple T11', True)",
             "Water Temple Dark Link Room": "can_use(Hookshot) and
                 (can_use(Iron_Boots) or can_use(Longshot) or can_use(Bow) or can_use(Hover_Boots)
                 or can_use(Slingshot) or can_use(Boomerang))
-				and transition('Water Temple T19', True)"
+                and transition('Water Temple T19', True)"
         }
     },
     {
@@ -1212,16 +1212,16 @@
         "room": "13",
         "events": {
             "Water Temple Room 13 Enemies": "
-			    "
-				#Dark Link
+                "
+                #Dark Link
         }
         "exits": {
             "Water Temple Triple Serpent Head Room": "
-			    transition('Water Temple T19', 'Water Temple Room 13 Enemies'
-				or 'Water Temple Room 13 T19 Unbar')",
+                transition('Water Temple T19', 'Water Temple Room 13 Enemies'
+                or 'Water Temple Room 13 T19 Unbar')",
             "Water Temple River Drop Room": "
-			    transition('Water Temple T20', 'Water Temple Room 13 Enemies'
-				or 'Water Temple Room 13 T20 Unbar')"
+                transition('Water Temple T20', 'Water Temple Room 13 Enemies'
+                or 'Water Temple Room 13 T20 Unbar')"
         }
     },
     {
@@ -1234,7 +1234,7 @@
         "exits": {
             "Water Temple Dark Link Room": "transition('Water Temple T20', True)",
             "Water Temple Serpent River": "
-			    (is_child or can_play(Song_of_Time)) and transition('Water Temple T27', True)"
+                (is_child or can_play(Song_of_Time)) and transition('Water Temple T27', True)"
         }
     },
     {
@@ -1317,10 +1317,10 @@
         "room": "09",
         "exits": {
             "Water Temple Lobby B1 West Corridor": "
-			    (can_use(Iron_Boots) or can_dive) and transition('Water Temple T08', True)",
+                (can_use(Iron_Boots) or can_dive) and transition('Water Temple T08', True)",
             "Water Temple Single Water Jet Gap Room North": "
-			    Can hit crystal switch
-				or can_use(Hover_Boots)"
+                Can hit crystal switch
+                or can_use(Hover_Boots)"
         }
     },
     {
@@ -1357,7 +1357,7 @@
             "Water Temple Whirlpool Room": "True",
             "Water Temple Triple Water Jet Gap Room": "transition('Water Temple T23', True)",
             "Water Temple Whirlpool Room Water Corridor Rear": "
-			    logic_water_bk_jump_dive or can_use(Iron_Boots)"
+                logic_water_bk_jump_dive or can_use(Iron_Boots)"
         }
     },
     {
@@ -1375,11 +1375,11 @@
         "room": "14",
         "exits": {
             "Water Temple Whirlpool Room Rear": "
-			    (can_use(Hookshot) or can_use(Hover_Boots)) and transition('Water Temple T12', True)",
+                (can_use(Hookshot) or can_use(Hover_Boots)) and transition('Water Temple T12', True)",
             "Water Temple Triple Water Jet Gap Room": "
                 (can_use(Hover_Boots) or (logic_water_bk_chest and can_use(Iron_Boots))
                 or (has_explosives and Progressive_Strength_Upgrade))
-				and transition('Water Temple T13', True)"
+                and transition('Water Temple T13', True)"
         }
     },
     {
@@ -1389,10 +1389,10 @@
         "exits": {
             "Water Temple Dropdown Room": "
                 transition('Water Temple T13', (can_use(Hookshot) and can_press_floor_switch)
-				or 'Water Temple Room 15 T13 Unbar')",
+                or 'Water Temple Room 15 T13 Unbar')",
             "Water Temple Whirlpool Room Water Corridor": "
-			    transition('Water Temple T23', can_press_floor_switch
-				or 'Water Temple Room 15 T23 Unbar')"
+                transition('Water Temple T23', can_press_floor_switch
+                or 'Water Temple Room 15 T23 Unbar')"
         }
     },
     {
@@ -1405,7 +1405,7 @@
         }
         "exits": {
             "Water Temple Whirlpool Room Water Corridor Rear": "
-			    transition('Water Temple T22', True)"
+                transition('Water Temple T22', True)"
         }
     },
     {

@@ -22,7 +22,7 @@
             "Ice Cavern Lobby Back": "
                 'Ice Cavern Room 01 Enemies' or barred_door",
             "Ice Cavern Underwater Hall to Lobby": "
-			    can_climb(230) and transition('Ice Cavern T??', True)"
+                can_climb(230) and transition('Ice Cavern T??', True)"
         }
     },
     {
@@ -160,12 +160,12 @@
         }
         "exits": {
             "Ice Cavern Hall to Iron Boots": "
-			    transition('Ice Cavern T12',
-				'Ice Cavern Room 07 Enemies' or 'Ice Cavern Room 07 T12 Unbar')",
+                transition('Ice Cavern T12',
+                'Ice Cavern Room 07 Enemies' or 'Ice Cavern Room 07 T12 Unbar')",
             #There is a barred floor blocking the exit before the enemies are defeated, but not a barred door
             "Ice Cavern Underwater Hall to Lobby": "
                 'Ice Cavern Room 07 Enemies' and can_use(Iron_Boots)
-				and transition('Ice Cavern T??', True)"
+                and transition('Ice Cavern T??', True)"
         }
     },
     {

@@ -15,11 +15,11 @@
             "KF Outside Deku Tree": "True",
             "Deku Tree 2F Passage": "
                 here(has_fire_source or (can_press_floor_switch and (can_use(Sticks) or can_use(Bow))))
-				and transition('Deku Tree T01', True)",
+                and transition('Deku Tree T01', True)",
             "Deku Tree Basement River Room": "transition('Deku Tree T10', True)",
             "Deku Tree 3F Room": "
-			    here(can_press_floor_switch or has_fire_source)
-				and transition('Deku Tree T07', True)"
+                here(can_press_floor_switch or has_fire_source)
+                and transition('Deku Tree T07', True)"
         }
     },
     {
@@ -35,9 +35,9 @@
         "exits": {
             "Deku Tree Lobby": "transition('Deku Tree T01', True)",
             "Deku Tree 2F Room": "
-			    transition('Deku Tree T06',
+                transition('Deku Tree T06',
                 here(can_use(Slingshot) or can_use(Bow))
-				or 'Deku Tree MQ Room 01 T06 Unbar')"
+                or 'Deku Tree MQ Room 01 T06 Unbar')"
         }
     },
     {
@@ -69,9 +69,9 @@
         "exits": {
             "Deku Tree Lobby": "transition('Deku Tree T10', True)",
             "Deku Tree Basement Hint Scrub Room": "
-			    transition('Deku Tree T03',
+                transition('Deku Tree T03',
                 here(can_use(Slingshot) or can_use(Bow))
-				or 'Deku Tree MQ Room 03 T03 Unbar')",
+                or 'Deku Tree MQ Room 03 T03 Unbar')",
             "Deku Tree Basement River Room Ledge": "
                 can_climb(60) and
                 (at('Deku Tree Basement River Room Ledge', True)
@@ -95,7 +95,7 @@
             "Deku Tree Three Scrub Room": "
                 here(has_fire_source or
                 (can_climb(60) and can_press_floor_switch and can_use(Sticks))
-				and transition('Deku Tree T11', True)"
+                and transition('Deku Tree T11', True)"
         }
     },
     {
@@ -109,11 +109,11 @@
         }
         "exits": {
             "Deku Tree Basement River Room": "
-			    transition('Deku Tree T03',
-				'Deku Tree Room 04 Enemies' or 'Deku Tree MQ Room 04 T03 Unbar'",
+                transition('Deku Tree T03',
+                'Deku Tree Room 04 Enemies' or 'Deku Tree MQ Room 04 T03 Unbar'",
             "Deku Tree Spiked Log Room East": "
-			    transition('Deku Tree T09',
-				here(has_fire_source_with_torch) or 'Deku Tree MQ Room 04 T09 Unbar')"
+                transition('Deku Tree T09',
+                here(has_fire_source_with_torch) or 'Deku Tree MQ Room 04 T09 Unbar')"
                 #The torch is actually in the previous room.
         }
     },
@@ -139,7 +139,7 @@
         "exits": {
             "Deku Tree Spiked Log Room East": "can_swim or can_crouch",
             "Deku Tree Torch Deku Baba Room": "
-			    can_climb(60) and transition('Deku Tree T02',
+                can_climb(60) and transition('Deku Tree T02',
                 here(has_fire_source or 
                     (can_press_floor_switch and can_crouch and can_use(Sticks)))
                 or 'Deku Tree MQ Room 05 T02 Unbar')"
@@ -156,11 +156,11 @@
         }
         "exits": {
             "Deku Tree Spiked Log Room West": "
-			    transition('Deku Tree T02',
-				'Deku Tree Room 06 Enemies' or 'Deku Tree MQ Room 06 T02 Unbar')",
+                transition('Deku Tree T02',
+                'Deku Tree Room 06 Enemies' or 'Deku Tree MQ Room 06 T02 Unbar')",
             "Deku Tree Basement Back Room": "
-			    transition('Deku Tree T08',
-				'Deku Tree Room 06 Enemies' or 'Deku Tree MQ Room 06 T08 Unbar')"
+                transition('Deku Tree T08',
+                'Deku Tree Room 06 Enemies' or 'Deku Tree MQ Room 06 T08 Unbar')"
         }
     },
     {
@@ -180,10 +180,10 @@
             "Deku Tree Torch Deku Baba Room": "transition('Deku Tree T08', True)",
             "Deku Tree Basement River Room Ledge": "
                 here(has_fire_source or (can_press_floor_switch and can_use(Sticks) or can_use(Bow)))
-				and is_child and transition('Deku Tree T12', True)",
+                and is_child and transition('Deku Tree T12', True)",
             "Deku Tree Gold Skulltula Room": "
                 here(has_fire_source or (can_press_floor_switch and can_use(Sticks) or can_use(Bow)))
-				and transition('Deku Tree T04', True)"
+                and transition('Deku Tree T04', True)"
         }
     },
     {
@@ -213,8 +213,8 @@
         "exits": {
             "Deku Tree Basement River Room Ledge": "transition('Deku Tree T11', True)",
             "Gohma Entrance": "
-			    transition('Deku Tree T05',
-				'Deku Tree Room 09 Enemies' or 'Deku Tree MQ Room 09 T05 Unbar'))"
+                transition('Deku Tree T05',
+                'Deku Tree Room 09 Enemies' or 'Deku Tree MQ Room 09 T05 Unbar'))"
         }
     },
     {
@@ -233,8 +233,8 @@
         },
         "exits": {
             "Deku Tree Lobby": "
-			    transition('Deku Tree T07', 'Deku Tree Room 10 Enemies'
-				or 'Deku Tree MQ Room 10 T07 Unbar')"
+                transition('Deku Tree T07', 'Deku Tree Room 10 Enemies'
+                or 'Deku Tree MQ Room 10 T07 Unbar')"
         }
     }
 ]

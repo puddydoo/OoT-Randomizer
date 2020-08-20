@@ -28,14 +28,14 @@
                 at('Dodongos Cavern Lobby North Bridge', can_press_floor_switch)",
             "Dodongos Cavern Lobby South Bridge": "False",
             "Dodongos Cavern Baby Dodongo Corridor": "
-			    here(can_blast_or_smash) and transition('Dodongos Cavern T01', True)",
+                here(can_blast_or_smash) and transition('Dodongos Cavern T01', True)",
             "Dodongos Cavern Bomb Flower Staircase Room": "
                 transition('Dodongos Cavern T22',
-				at('Dodongos Cavern Lobby East Ledge', can_press_floor_switch)
-				or 'Dodongos Cavern Room 00 T22 Unbar')",
+                at('Dodongos Cavern Lobby East Ledge', can_press_floor_switch)
+                or 'Dodongos Cavern Room 00 T22 Unbar')",
             "Dodongos Cavern Floor Hole Switch Room": "
                 at('Dodongos Cavern Lobby North Bridge', has_explosives)
-				and transition('Dodongos Cavern T08', True)"
+                and transition('Dodongos Cavern T08', True)"
         }
     },
     {
@@ -79,7 +79,7 @@
             "Dodongos Cavern Lobby": "True",
             "Dodongos Cavern Bomb Bag Room": "transition('Dodongos Cavern T02', True)",
             "Dodongos Cavern Platform Switch with 2 Armos Room": "
-			    transition('Dodongos Cavern T19', True)"
+                transition('Dodongos Cavern T19', True)"
         }
     },
     {
@@ -94,12 +94,12 @@
         "exits": {
             "Dodongos Cavern Lobby": "transition('Dodongos Cavern T01', True)",
             "Dodongos Cavern Baby Dodongo Corridor North": "
-			    can_climb(60) and transition('Dodongos Cavern T20', True
-				or 'Dodongos Cavern Room 01 T20 Unbar')",
+                can_climb(60) and transition('Dodongos Cavern T20', True
+                or 'Dodongos Cavern Room 01 T20 Unbar')",
             "Dodongos Cavern Gold Skulltula Torch Room": "
                 (has_explosives or is_adult or Slingshot or 
                 Boomerang or Sticks or Kokiri_Sword)
-				and transition('Dodongos Cavern T13', True)"
+                and transition('Dodongos Cavern T13', True)"
         }
     },
     {
@@ -139,7 +139,7 @@
         "exits": {
             "Dodongos Cavern Bomb Flower Staircase Room": "True",
             "Dodongos Cavern Platform Switch with 2 Armos Room": "
-			    transition('Dodongos Cavern T18', True)"
+                transition('Dodongos Cavern T18', True)"
         }
     },
     {
@@ -160,21 +160,21 @@
         }
         "exits": {
             "Dodongos Cavern Baby Dodongo Corridor North": "
-			    transition('Dodongos Cavern T10', 'Dodongos Cavern Room 03 Enemies Wave 1'
-				or 'Dodongos Cavern Room 03 T10 Unbar')",
+                transition('Dodongos Cavern T10', 'Dodongos Cavern Room 03 Enemies Wave 1'
+                or 'Dodongos Cavern Room 03 T10 Unbar')",
             "Dodongos Cavern Blue Dodongo Cavern": "
-			    transition('Dodongos Cavern T09', 'Dodongos Cavern Room 03 Enemies Wave 1'
-				or 'Dodongos Cavern Room 03 T09 Unbar'",
+                transition('Dodongos Cavern T09', 'Dodongos Cavern Room 03 Enemies Wave 1'
+                or 'Dodongos Cavern Room 03 T09 Unbar'",
             "Dodongos Cavern Single Flame Trap Room East": "
-			    False and transition('Dodongos Cavern T11',
-				('Dodongos Cavern Room 03 Enemies Wave 1'
-				and 'Dodongos Cavern Room 03 Enemies Wave 2')
-				or 'Dodongos Cavern Room 03 T11 Unbar')",
+                False and transition('Dodongos Cavern T11',
+                ('Dodongos Cavern Room 03 Enemies Wave 1'
+                and 'Dodongos Cavern Room 03 Enemies Wave 2')
+                or 'Dodongos Cavern Room 03 T11 Unbar')",
             "Dodongos Cavern Double Flame Trap Room": "
-			    False and transition('Dodongos Cavern T12',
-				('Dodongos Cavern Room 03 Enemies Wave 1'
-				and 'Dodongos Cavern Room 03 Enemies Wave 2')
-				or 'Dodongos Cavern Room 03 T12 Unbar')"
+                False and transition('Dodongos Cavern T12',
+                ('Dodongos Cavern Room 03 Enemies Wave 1'
+                and 'Dodongos Cavern Room 03 Enemies Wave 2')
+                or 'Dodongos Cavern Room 03 T12 Unbar')"
         }
     },
     {
@@ -186,21 +186,21 @@
         }
         "exits": {
             "Dodongos Cavern Single Flame Trap Room East": "
-			    transition('Dodongos Cavern T11', 'Dodongos Cavern Room 03 Enemies Wave 2'
-				or 'Dodongos Cavern Room 03 T11 Unbar')",
+                transition('Dodongos Cavern T11', 'Dodongos Cavern Room 03 Enemies Wave 2'
+                or 'Dodongos Cavern Room 03 T11 Unbar')",
             "Dodongos Cavern Double Flame Trap Room": "
-			    transition('Dodongos Cavern T12', 'Dodongos Cavern Room 03 Enemies Wave 2'
-				or 'Dodongos Cavern Room 03 T12 Unbar')",
+                transition('Dodongos Cavern T12', 'Dodongos Cavern Room 03 Enemies Wave 2'
+                or 'Dodongos Cavern Room 03 T12 Unbar')",
             "Dodongos Cavern Baby Dodongo Corridor North": "
-			    transition('Dodongos Cavern T10',
-				('Dodongos Cavern Room 03 Enemies Wave 1'
-				and 'Dodongos Cavern Room 03 Enemies Wave 2')
-				or 'Dodongos Cavern Room 03 T10 Unbar')",
+                transition('Dodongos Cavern T10',
+                ('Dodongos Cavern Room 03 Enemies Wave 1'
+                and 'Dodongos Cavern Room 03 Enemies Wave 2')
+                or 'Dodongos Cavern Room 03 T10 Unbar')",
             "Dodongos Cavern Blue Dodongo Cavern": "
-			    transition('Dodongos Cavern T09',
-				('Dodongos Cavern Room 03 Enemies Wave 1'
-				and 'Dodongos Cavern Room 03 Enemies Wave 2')
-				or 'Dodongos Cavern Room 03 T09 Unbar')"
+                transition('Dodongos Cavern T09',
+                ('Dodongos Cavern Room 03 Enemies Wave 1'
+                and 'Dodongos Cavern Room 03 Enemies Wave 2')
+                or 'Dodongos Cavern Room 03 T09 Unbar')"
         }
     },
     {
@@ -211,10 +211,10 @@
             "Dodongos Cavern Lizalfos Miniboss Room 1F": "transition('Dodongos Cavern T09', True)",
             "Dodongos Cavern Single Business Scrub Room": "
                 (Progressive_Strength_Upgrade or here(can_blast_or_smash))
-				and transition('Dodongos Cavern T15', True)",
+                and transition('Dodongos Cavern T15', True)",
             "Dodongos Cavern Lobby East Ledge": "
-			    transition('Dodongos Cavern T23', has_fire_source_with_torch
-				or 'Dodongos Cavern Room 04 T23 Unbar')"
+                transition('Dodongos Cavern T23', has_fire_source_with_torch
+                or 'Dodongos Cavern Room 04 T23 Unbar')"
         }
     },
     {
@@ -223,11 +223,11 @@
         "room": "05",
         "exits": {
             "Dodongos Cavern Bomb Flower Staircase Room Top": "
-			    transition('Dodongos Cavern T18', can_press_floor_switch
-				or 'Dodongos Cavern Room 05 T18 Unbar')",
+                transition('Dodongos Cavern T18', can_press_floor_switch
+                or 'Dodongos Cavern Room 05 T18 Unbar')",
             "Dodongos Cavern Lobby South Bridge": "
-			    transition('Dodongos Cavern T19', can_press_floor_switch
-				or 'Dodongos Cavern Room 05 T19 Unbar')"
+                transition('Dodongos Cavern T19', can_press_floor_switch
+                or 'Dodongos Cavern Room 05 T19 Unbar')"
         }
     },
     {
@@ -249,11 +249,11 @@
         "exits": {
             "Dodongos Cavern Lobby": "can_climb(60) and transition('Dodongos Cavern T08', True)",
             "Dodongos Cavern Fire Keese Pushblock Room": "
-			    can_climb(60) and transition('Dodongos Cavern T04', True)",
+                can_climb(60) and transition('Dodongos Cavern T04', True)",
             "Dodongos Cavern Floor Hole Switch Room Ledge": "can_climb(110)",
             "King Dodongo Entrance": "
-			    transition('Dodongos Cavern T21', can_hold_down_switch
-				or 'Dodongos Cavern Room 07 T21 Unbar')"
+                transition('Dodongos Cavern T21', can_hold_down_switch
+                or 'Dodongos Cavern Room 07 T21 Unbar')"
         }
     },
     {
@@ -264,8 +264,8 @@
             "Dodongos Cavern Floor Hole Switch Room": "True",
             "Dodongos Cavern Fire Keese Pushblock Room": "transition('Dodongos Cavern T05', True)",
             "King Dodongo Entrance": "
-			    transition('Dodongos Cavern T21', True
-				or 'Dodongos Cavern Room 07 T21 Unbar')"
+                transition('Dodongos Cavern T21', True
+                or 'Dodongos Cavern Room 07 T21 Unbar')"
         }
     },
     {
@@ -275,7 +275,7 @@
         "exits": {
             "Dodongos Cavern Fire Keese Pushblock Room North": "can_climb(60)",
             "Dodongos Cavern Floor Hole Switch Room": "
-			    can_climb(60) and transition('Dodongos Cavern T04', True)"
+                can_climb(60) and transition('Dodongos Cavern T04', True)"
         }
     },
     {
@@ -286,7 +286,7 @@
             "Dodongos Cavern Fire Keese Pushblock Room": "can_climb(60)",
             "Dodongos Cavern Fire Keese Pushblock Room West": "can_climb(60)",
             "Dodongos Cavern Gold Skulltula Armos Room": "
-			    can_climb(60) and here(can_blast_or_smash) and transition('Dodongos Cavern T14', True)"
+                can_climb(60) and here(can_blast_or_smash) and transition('Dodongos Cavern T14', True)"
         }
     },
     {
@@ -313,10 +313,10 @@
             "Dodongos Cavern Bomb Bag Room Upper": "
                 can_use(Longshot) or can_use(Hover_Boots) or (logic_dc_jump and is_adult) or can_climb(120)",
             "Dodongos Cavern Double Business Scrub Room": "
-			    can_climb(60) and here(can_blast_or_smash) and transition('Dodongos Cavern T17', True)",
+                can_climb(60) and here(can_blast_or_smash) and transition('Dodongos Cavern T17', True)",
             "Dodongos Cavern Single Flame Trap Room West": "
                 can_climb(60) and (Progressive_Strength_Upgrade or here(can_blast_or_smash))
-				and transition('Dodongos Cavern T07', True)"
+                and transition('Dodongos Cavern T07', True)"
         }
     },
     {
@@ -331,7 +331,7 @@
             "Dodongos Cavern Bomb Bag Room": "True",
             "Dodongos Cavern Double Flame Trap Room": "transition('Dodongos Cavern T06', True)",
             "Dodongos Cavern Double Business Scrub Room": "
-			    here(can_blast_or_smash) and transition('Dodongos Cavern T17', True)"
+                here(can_blast_or_smash) and transition('Dodongos Cavern T17', True)"
         }
     },
     {
@@ -380,11 +380,11 @@
         "room": "12",
         "exits": {
             "Dodongos Cavern Lizalfos Miniboss Room 2F": "
-			    can_climb(60) and transition('Dodongos Cavern T12', True)",
+                can_climb(60) and transition('Dodongos Cavern T12', True)",
             "Dodongos Cavern Bomb Bag Room Upper": "
                 (can_use(Slingshot) or (is_child and logic_dc_slingshot_skip)
-				or can_use(Bow) or can_climb(120))
-				and transition('Dodongos Cavern T06', True)"
+                or can_use(Bow) or can_climb(120))
+                and transition('Dodongos Cavern T06', True)"
         }
     },
     {
@@ -423,7 +423,7 @@
         "exits": {
             "Dodongos Cavern Bomb Flower Staircase Room South": "
                 transition('Dodongos Cavern T16', 'Dodongos Cavern Room 15 Enemies'
-				or 'Dodongos Cavern Room 15 T16 Unbar')"
+                or 'Dodongos Cavern Room 15 T16 Unbar')"
         }
     }
 ]

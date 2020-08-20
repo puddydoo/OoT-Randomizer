@@ -28,9 +28,9 @@
         "exits": {
             "Gerudo Training Grounds Lobby": "transition('Gerudo Training Grounds T07', True)",
             "Gerudo Training Grounds Flame Wall Maze": "
-			    transition('Gerudo Training Grounds T02',
-				'Gerudo Training Grounds Room 01 Enemies'
-				or 'Gerudo Training Grounds Room 01 T02 Unbar')"
+                transition('Gerudo Training Grounds T02',
+                'Gerudo Training Grounds Room 01 Enemies'
+                or 'Gerudo Training Grounds Room 01 T02 Unbar')"
         }
     },
     {
@@ -42,13 +42,13 @@
         },
         "exits": {
             "Gerudo Training Grounds Left Combat Room": "
-			    (can_use(Hookshot) or logic_gtg_without_hookshot) and
-				transition('Gerudo Training Grounds T02', True)",
+                (can_use(Hookshot) or logic_gtg_without_hookshot) and
+                transition('Gerudo Training Grounds T02', True)",
             "Gerudo Training Grounds Mystery Room": "
                 (can_use(Hookshot) or logic_gtg_without_hookshot) and
                 transition('Gerudo Training Grounds T03',
-				'Gerudo Training Grounds Room 02 Silver Rupees'
-				or 'Gerudo Training Grounds Room 02 T03 Unbar')"
+                'Gerudo Training Grounds Room 02 Silver Rupees'
+                or 'Gerudo Training Grounds Room 02 T03 Unbar')"
         }
     },
     {
@@ -80,7 +80,7 @@
             "Gerudo Training Grounds Mystery Room": "'Gerudo Training Grounds Heavy Block'",
             "Gerudo Training Grounds Room Behind Heavy Block": "
                 transition('Gerudo Training Grounds T04',
-				at('Gerudo Training Grounds Mystery Room Fake Wall Ledge', can_press_floor_switch)
+                at('Gerudo Training Grounds Mystery Room Fake Wall Ledge', can_press_floor_switch)
                 or 'Gerudo Training Grounds Room 03 T04 Unbar')"
         }
     },
@@ -116,11 +116,11 @@
         "exits": {
             "Gerudo Training Grounds Eye Statue Lower": "True",
             "Gerudo Training Grounds Mystery Room Fake Wall Ledge": "
-			    transition('Gerudo Training Grounds T08', True)",
+                transition('Gerudo Training Grounds T08', True)",
             "Gerudo Training Grounds Central Maze Ceiling": "
                 transition('Gerudo Training Grounds T13',
-				'Gerudo Training Grounds Eye Statue'
-				or 'Gerudo Training Grounds Room 04 T13 Unbar')",
+                'Gerudo Training Grounds Eye Statue'
+                or 'Gerudo Training Grounds Room 04 T13 Unbar')",
         }
     },
     {
@@ -140,12 +140,12 @@
         "exits": {
             "Gerudo Training Grounds Eye Statue Lower": "
                 transition('Gerudo Training Grounds T09',
-				here(can_use(Megaton_Hammer) and (can_use(Bow) or can_use(Slingshot)))
-				or 'Gerudo Training Grounds Room 05 T09 Unbar')",
+                here(can_use(Megaton_Hammer) and (can_use(Bow) or can_use(Slingshot)))
+                or 'Gerudo Training Grounds Room 05 T09 Unbar')",
             "Gerudo Training Grounds Lava Room Far Ledge": "
                 transition('Gerudo Training Grounds T10',
-				'Gerudo Training Grounds Room 05 Enemies'
-				or 'Gerudo Training Grounds Room 05 T10 Unbar')"
+                'Gerudo Training Grounds Room 05 Enemies'
+                or 'Gerudo Training Grounds Room 05 T10 Unbar')"
         }
     },
     {
@@ -191,8 +191,8 @@
                 can_use(Longshot) or (can_use(Hookshot) and can_use(Hover_Boots))",
             "Gerudo Training Grounds Water Room": "
                 transition('Gerudo Training Grounds T11',
-				'Gerudo Training Grounds Room 06 Silver Rupees'
-				or 'Gerudo Training Grounds Room 06 T11 Unbar')"
+                'Gerudo Training Grounds Room 06 Silver Rupees'
+                or 'Gerudo Training Grounds Room 06 T11 Unbar')"
         }
     },
     {
@@ -223,9 +223,9 @@
         "exits": {
             "Gerudo Training Grounds Lobby": "transition('Gerudo Training Grounds T06', True)",
             "Gerudo Training Grounds Lava Room": "
-			    transition('Gerudo Training Grounds T12',
-				'Gerudo Training Grounds Room 07 Enemies'
-				or 'Gerudo Training Grounds Room 07 T12 Unbar')"
+                transition('Gerudo Training Grounds T12',
+                'Gerudo Training Grounds Room 07 Enemies'
+                or 'Gerudo Training Grounds Room 07 T12 Unbar')"
         }
     },
     #445555RR

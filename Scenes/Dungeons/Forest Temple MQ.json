@@ -39,11 +39,11 @@
             "Forest Temple Hall to Miniboss Room": "can_climb(70) and transition('Forest Temple T02', True)",
             "Forest Temple Hall to Block Push Room": "can_climb(48) and transition('Forest Temple T15', True)",
             "Forest Temple East Courtyard": "
-			    transition('Forest Temple T17',
-				can_use(Bow) or can_use(Slingshot) or 'Forest Temple MQ Room 02 T17 Unbar')",
+                transition('Forest Temple T17',
+                can_use(Bow) or can_use(Slingshot) or 'Forest Temple MQ Room 02 T17 Unbar')",
             "Forest Temple West Courtyard": "
-			    transition('Forest Temple T16',
-				can_use(Bow) or can_use(Slingshot) or 'Forest Temple MQ Room 02 T16 Unbar')",
+                transition('Forest Temple T16',
+                can_use(Bow) or can_use(Slingshot) or 'Forest Temple MQ Room 02 T16 Unbar')",
             "Forest Temple Basement": "'Forest Temple Meg' and transition('Forest Temple T21', True)"
         }
     },
@@ -63,7 +63,7 @@
         "exits": {
             "Forest Temple Lobby": "transition('Forest Temple T02', True)",
             "Forest Temple Miniboss Room": "
-			    (is_child or can_play(Song_of_Time)) and transition('Forest Temple T09', True)"
+                (is_child or can_play(Song_of_Time)) and transition('Forest Temple T09', True)"
         }
     },
     {
@@ -77,11 +77,11 @@
         }
         "exits": {
             "Forest Temple Lobby": "
-			    transition('Forest Temple T15', 'Forest Temple Room 05 Enemies'
-				or 'Forest Temple MQ Room 05 T15 Unbar')",
+                transition('Forest Temple T15', 'Forest Temple Room 05 Enemies'
+                or 'Forest Temple MQ Room 05 T15 Unbar')",
             "Forest Temple Block Push Room": "
-			    transition('Forest Temple T03', 'Forest Temple Room 05 Enemies'
-				or 'Forest Temple MQ Room 05 T03 Unbar')"
+                transition('Forest Temple T03', 'Forest Temple Room 05 Enemies'
+                or 'Forest Temple MQ Room 05 T03 Unbar')"
         }
     },
     {
@@ -102,7 +102,7 @@
             "Forest Temple Hall to Miniboss Room": "
                 (is_child or can_play(Song_of_Time) and
                 transition('Forest Temple T09',
-				'Forest Temple Room 06 Enemies Wave 1' or 'Forest Temple MQ Room 06 T09 Unbar')"
+                'Forest Temple Room 06 Enemies Wave 1' or 'Forest Temple MQ Room 06 T09 Unbar')"
         }
     },
     {
@@ -119,11 +119,11 @@
         },
         "exits": {
             "Forest Temple Joelles Room": "
-			    transition('Forest Temple T08',
-				'Forest Temple Room 06 Enemies Wave 2 or 'Forest Temple MQ Room 06 T08 Unbar')",
+                transition('Forest Temple T08',
+                'Forest Temple Room 06 Enemies Wave 2 or 'Forest Temple MQ Room 06 T08 Unbar')",
             "Forest Temple Compass Room": "
-			    transition('Forest Temple T07',
-				'Forest Temple Room 06 Enemies Wave 2' or 'Forest Temple MQ Room 06 T07 Unbar')"
+                transition('Forest Temple T07',
+                'Forest Temple Room 06 Enemies Wave 2' or 'Forest Temple MQ Room 06 T07 Unbar')"
         }
     },
     {
@@ -144,7 +144,7 @@
             "Forest Temple Lobby": "transition('Forest Temple T17', True)",
             "Forest Temple Well Tunnel": "
                 ('Forest Temple Drain Well' or can_use(Iron_Boots) or (Progressive_Scale, 2))
-				and transition('Forest Temple T19', True)",
+                and transition('Forest Temple T19', True)",
             "Forest Temple East Courtyard Balcony": "
                 can_use(Hookshot) and 
                 (can_use(Longshot) or can_use(Hover_Boots) 
@@ -207,9 +207,9 @@
             "Forest Temple Well Tunnel": "
                 ('Forest Temple Drain Well' or can_use(Iron_Boots) or (Progressive_Scale, 2)
                 or (logic_forest_well_swim and can_use(Hookshot)))
-				and transition('Forest Temple T20', True)",
+                and transition('Forest Temple T20', True)",
             "Forest Temple Balcony Room": "
-			    can_use(Fire_Arrows) and transition('Forest Temple T10', True)",
+                can_use(Fire_Arrows) and transition('Forest Temple T10', True)",
             "Forest Temple West Courtyard Ledge": "False"
         }
     },
@@ -241,8 +241,8 @@
         },
         "exits": {
             "Forest Temple West Courtyard Ledge": "
-			    transition('Forest Temple T13',
-				'Forest Temple Room 18 Enemies' or 'Forest Temple MQ Room 18 T13 Unbar')"
+                transition('Forest Temple T13',
+                'Forest Temple Room 18 Enemies' or 'Forest Temple MQ Room 18 T13 Unbar')"
         }
     },
     {
@@ -266,7 +266,7 @@
         "room": "10",
         "exits": {
             "Forest Temple West Courtyard": "
-			    (has_fire_source_with_torch or can_use(Bow)) and transition('Forest Temple T10', True)"
+                (has_fire_source_with_torch or can_use(Bow)) and transition('Forest Temple T10', True)"
             "Forest Temple East Courtyard Balcony": "transition('Forest Temple T11', True)"
         }
     },
@@ -360,7 +360,7 @@
             "Forest Temple Joelles Room": "transition('Forest Temple T27', True)",
             "Forest Temple Blue Bubble Room under Boss Key Room": "
                 Straighten the room
-				and transition('Forest Temple T23', True)"
+                and transition('Forest Temple T23', True)"
         }
     },
     {
@@ -374,8 +374,8 @@
         }
         "exits": {
             "Forest Temple West Courtyard Ledge": "
-			    transition('Forest Temple T12',
-				'Forest Temple Room 21 Enemies' or 'Forest Temple MQ Room 21 T12 Unbar')",
+                transition('Forest Temple T12',
+                'Forest Temple Room 21 Enemies' or 'Forest Temple MQ Room 21 T12 Unbar')",
             "Forest Temple Boss Key Room": "False and transition('Forest Temple T23', True)"
         }
     },
@@ -420,7 +420,7 @@
             "Forest Temple Falling Room": "
                 Twist the room
                 at('Forest Temple Pink Lava Room', can_use(Bow) or can_use(Dins_Fire)
-				and transition('Forest Temple T22', True)"
+                and transition('Forest Temple T22', True)"
         }
     },
     {
@@ -429,7 +429,7 @@
         "room": "14",
         "exits": {
             "Forest Temple Green Bubble Hall and Turning Room": "
-			    transition('Forest Temple T28', True)"
+                transition('Forest Temple T28', True)"
         }
     },
     {
@@ -441,11 +441,11 @@
         },
         "exits": {
             "Forest Temple East Courtyard": "
-			    transition('Forest Temple T04',
-				can_press_floor_switch or 'Forest Temple MQ Room 15 T04 Unbar')",
+                transition('Forest Temple T04',
+                can_press_floor_switch or 'Forest Temple MQ Room 15 T04 Unbar')",
             "Forest Temple Poe Puzzle Room": "transition('Forest Temple T25', True)",
             "Forest Temple Green Bubble Hall and Turning Room": "
-			    False and transition('Forest Temple T22', True)"
+                False and transition('Forest Temple T22', True)"
         }
     },
     {
@@ -458,8 +458,8 @@
         "exits": {
             "Forest Temple Falling Room": "transition('Forest Temple T25', True)",
             "Forest Temple Hall to Poe Puzzle Room": "
-			    transition('Forest Temple T14',
-				'Forest Temple Amy' or 'Forest Temple MQ Room 16 T14 Unbar')"
+                transition('Forest Temple T14',
+                'Forest Temple Amy' or 'Forest Temple MQ Room 16 T14 Unbar')"
         }
     },
     {

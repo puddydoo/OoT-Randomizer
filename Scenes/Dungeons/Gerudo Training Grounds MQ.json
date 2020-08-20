@@ -10,12 +10,12 @@
         "exits": {
             "Gerudo Fortress": "True",
             "Gerudo Training Grounds Left Combat Room": "
-			    transition('Gerudo Training Grounds T07',
-				here(has_fire_source) or 'Gerudo Training Grounds MQ Room 00 T07 Unbar')",
+                transition('Gerudo Training Grounds T07',
+                here(has_fire_source) or 'Gerudo Training Grounds MQ Room 00 T07 Unbar')",
             "Gerudo Training Grounds Right Combat Room": "
-			    transition('Gerudo Training Grounds T06',
-				here(can_use(Bow) or can_use(Slingshot))
-				or 'Gerudo Training Grounds MQ Room 00 T06 Unbar')",
+                transition('Gerudo Training Grounds T06',
+                here(can_use(Bow) or can_use(Slingshot))
+                or 'Gerudo Training Grounds MQ Room 00 T06 Unbar')",
             "Gerudo Training Grounds Central Maze Entrance": "transition('Gerudo Training Grounds T05', True)"
         }
     },
@@ -33,9 +33,9 @@
         "exits": {
             "Gerudo Training Grounds Lobby": "transition('Gerudo Training Grounds T07', True)",
             "Gerudo Training Grounds Flame Wall Maze": "
-			    transition('Gerudo Training Grounds T02',
-				'Gerudo Training Grounds Room 01 Enemies'
-				or 'Gerudo Training Grounds MQ Room 01 T02 Unbar')"
+                transition('Gerudo Training Grounds T02',
+                'Gerudo Training Grounds Room 01 Enemies'
+                or 'Gerudo Training Grounds MQ Room 01 T02 Unbar')"
         }
     },
     {
@@ -50,9 +50,9 @@
         "exits": {
             "Gerudo Training Grounds Left Combat Room": "transition('Gerudo Training Grounds T02', True)",
             "Gerudo Training Grounds Mystery Room": "
-			    transition('Gerudo Training Grounds T03',
+                transition('Gerudo Training Grounds T03',
                 'Gerudo Training Grounds Room 02 Silver Rupees'
-				or 'Gerudo Training Grounds MQ Room 00 T03 Unbar')"
+                or 'Gerudo Training Grounds MQ Room 00 T03 Unbar')"
         }
     },
     {
@@ -84,9 +84,9 @@
         "exits": {
             "Gerudo Training Grounds Mystery Room": "'Gerudo Training Grounds Heavy Block'",
             "Gerudo Training Grounds Room Behind Heavy Block": "
-			    transition('Gerudo Training Grounds T04',
+                transition('Gerudo Training Grounds T04',
                 'Gerudo Training Grounds Room 03 Enemies'
-				or 'Gerudo Training Grounds MQ Room 03 T04 Unbar')"
+                or 'Gerudo Training Grounds MQ Room 03 T04 Unbar')"
         }
     },
     {
@@ -98,8 +98,8 @@
                 can_climb(40) and (logic_lens_gtg or can_use(Lens_of_Truth))",
             "Gerudo Training Grounds Eye Statue Upper": "
                 Blue_Fire and transition('Gerudo Training Grounds T08',
-				'Gerudo Training Grounds Room 03 Enemies'
-				or 'Gerudo Training Grounds MQ Room 03 T08 Unbar')"
+                'Gerudo Training Grounds Room 03 Enemies'
+                or 'Gerudo Training Grounds MQ Room 03 T08 Unbar')"
         }
     },
     {
@@ -128,11 +128,11 @@
         "exits": {
             "Gerudo Training Grounds Eye Statue Lower": "True",
             "Gerudo Training Grounds Mystery Room Fake Wall Ledge": "
-			    transition('Gerudo Training Grounds T08', True)",
+                transition('Gerudo Training Grounds T08', True)",
             "Gerudo Training Grounds Central Maze Ceiling": 
-			    transition('Gerudo Training Grounds T13',
+                transition('Gerudo Training Grounds T13',
                 'Gerudo Training Grounds Room 04 Crystal Switch'
-				or 'Gerudo Training Grounds MQ Room 04 T13 Unbar')"
+                or 'Gerudo Training Grounds MQ Room 04 T13 Unbar')"
         }
     },
     {
@@ -151,13 +151,13 @@
         },
         "exits": {
             "Gerudo Training Grounds Eye Statue Lower": "
-			    transition('Gerudo Training Grounds T09',
+                transition('Gerudo Training Grounds T09',
                 'Gerudo Training Grounds Room 05 Enemies'
-				or 'Gerudo Training Grounds MQ Room 05 T09 Unbar')",
+                or 'Gerudo Training Grounds MQ Room 05 T09 Unbar')",
             "Gerudo Training Grounds Lava Room Far Ledge": "
-			    transition('Gerudo Training Grounds T10',
+                transition('Gerudo Training Grounds T10',
                 'Gerudo Training Grounds Room 05 Enemies'
-				or 'Gerudo Training Grounds MQ Room 05 T10 Unbar')"
+                or 'Gerudo Training Grounds MQ Room 05 T10 Unbar')"
         }
     },
     {
@@ -205,9 +205,9 @@
                 or can_climb(159))",
             "Gerudo Training Grounds Lava Room Far Ledge": "False",
             "Gerudo Training Grounds Water Room": "
-			    transition('Gerudo Training Grounds T11',
+                transition('Gerudo Training Grounds T11',
                 'Gerudo Training Grounds Room 06 Silver Rupees'
-				or 'Gerudo Training Grounds MQ Room 06 T11 Unbar')"
+                or 'Gerudo Training Grounds MQ Room 06 T11 Unbar')"
         }
     },
     {
@@ -242,9 +242,9 @@
         "exits": {
             "Gerudo Training Grounds Lobby": "transition('Gerudo Training Grounds T06', True)",
             "Gerudo Training Grounds Lava Room": "
-			    transition('Gerudo Training Grounds T12',
-				'Gerudo Training Grounds Room 07 Enemies'
-				or 'Gerudo Training Grounds MQ Room 07 T12 Unbar')"
+                transition('Gerudo Training Grounds T12',
+                'Gerudo Training Grounds Room 07 Enemies'
+                or 'Gerudo Training Grounds MQ Room 07 T12 Unbar')"
         }
     },
     #445555RR
@@ -261,8 +261,8 @@
             "Gerudo Training Grounds Lobby": "transition('Gerudo Training Grounds T05', True)",
             "Gerudo Training Grounds Central Maze Path 1": "transition('Gerudo Training Grounds T15', True)",
             "Gerudo Training Grounds Central Maze Right Path": "
-			    transition('Gerudo Training Grounds T16',
-				'Gerudo Training Grounds MQ Room 08 T16 Unbar')",
+                transition('Gerudo Training Grounds T16',
+                'Gerudo Training Grounds MQ Room 08 T16 Unbar')",
             "Gerudo Training Grounds Central Maze Center": "False"
         }
     },
@@ -369,8 +369,8 @@
         "exits": {
             #One-way barred door
             "Gerudo Training Grounds Central Maze Entrance": "
-			    transition('Gerudo Training Grounds T16',
-				True or 'Gerudo Training Grounds MQ Room 08 T16 Unbar')",
+                transition('Gerudo Training Grounds T16',
+                True or 'Gerudo Training Grounds MQ Room 08 T16 Unbar')",
             "Gerudo Training Grounds Central Maze Right": "transition('Gerudo Training Grounds T17', True)"
         }
     },

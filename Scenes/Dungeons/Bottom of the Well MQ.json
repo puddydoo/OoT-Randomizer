@@ -49,12 +49,12 @@
             "Bottom of the Well Lobby Central West Cage": "can_use(Hover_Boots)",
             "Bottom of the Well Basement": "transition('Bottom of the Well T08', True)",
             "Bottom of the Well Basement Ceiling": "
-			    'Bottom of the Well East Cage Floor Switch' and transition('Bottom of the Well T10', True)",
+                'Bottom of the Well East Cage Floor Switch' and transition('Bottom of the Well T10', True)",
             "Bottom of the Well East Inner Room": "
                 transition('Bottom of the Well T04',
-				here(can_use_projectile) or 'Bottom of the Well MQ Room 00 T04 Unbar')",
+                here(can_use_projectile) or 'Bottom of the Well MQ Room 00 T04 Unbar')",
             "Bottom of the Well West Inner Room": "
-			    transition('Bottom of the Well T05',
+                transition('Bottom of the Well T05',
                 'Bottom of the Well West Cage Floor Switch' or 'Bottom of the Well MQ Room 00 T05 Unbar')"
         }
     },
@@ -91,8 +91,8 @@
         "exits": {
             "Bottom of the Well Lobby Perimeter": "is_child",
             "Bottom of the Well Beamos Room": "
-			    transition('Bottom of the Well T03',
-				can_use_projectile or 'Bottom of the Well MQ Room 00 T03 Unbar')"
+                transition('Bottom of the Well T03',
+                can_use_projectile or 'Bottom of the Well MQ Room 00 T03 Unbar')"
         }
     },
     {
@@ -111,7 +111,7 @@
         "exits": {
             "Bottom of the Well Lobby Perimeter": "True",
             "Bottom of the Well Basement": "
-			    transition('Bottom of the Well T01', 'Bottom of the Well MQ Room 00 T01 Unbar')"
+                transition('Bottom of the Well T01', 'Bottom of the Well MQ Room 00 T01 Unbar')"
         }
     },
     {
@@ -173,9 +173,9 @@
         "exits": {
             "Bottom of the Well Basement": "True",
             "Bottom of the Well Beamos Room": "
-			    False and (transition('Bottom of the Well T13', True)
-				or transition('Bottom of the Well T14', True)
-				or transition('Bottom of the Well T15', True))"
+                False and (transition('Bottom of the Well T13', True)
+                or transition('Bottom of the Well T14', True)
+                or transition('Bottom of the Well T15', True))"
         }
     },
     {
@@ -197,9 +197,9 @@
             "Bottom of the Well Lobby NE Crawl Space": "transition('Bottom of the Well T03', True)",
             "Bottom of the Well East Cage": "transition('Bottom of the Well T02', True)",
             "Bottom of the Well Basement Third Finger": "
-			    False and (transition('Bottom of the Well T13', True)
-				or transition('Bottom of the Well T14', True)
-				or transition('Bottom of the Well T15', True))"
+                False and (transition('Bottom of the Well T13', True)
+                or transition('Bottom of the Well T14', True)
+                or transition('Bottom of the Well T15', True))"
         }
     },
     {
@@ -220,8 +220,8 @@
         },
         "exits": {
             "Bottom of the Well Lobby SE Crawl Space": "
-			    transition('Bottom of the Well T07',
-				'Bottom of the Well Room 04 Enemies' or 'Bottom of the Well MQ Room 04 T07 Unbar')"
+                transition('Bottom of the Well T07',
+                'Bottom of the Well Room 04 Enemies' or 'Bottom of the Well MQ Room 04 T07 Unbar')"
         }
     },
     {
