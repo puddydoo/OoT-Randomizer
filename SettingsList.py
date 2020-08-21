@@ -187,9 +187,16 @@ logic_tricks = {
         'tooltip' : '''\
                     Jump is adult only.
                     '''},
-    'Gerudo Fortress "Kitchen" with No Additional Items': {
-        'name'    : 'logic_gerudo_kitchen',
+    'Gerudo Fortress Roof Ledge Jump': {
+        'name'    : 'logic_gf_roof_jump',
         'tags'    : ("Gerudo's Fortress",),
+        'tooltip' : '''\
+                    Adult can use an autojump to climb onto the roof
+                    without going through the upper "Kitchen".
+                    '''},
+    'Thieves\' Hideout "Kitchen" with No Additional Items': {
+        'name'    : 'logic_gerudo_kitchen',
+        'tags'    : ("Thieves' Hideout", "Gerudo's Fortress",),
         'tooltip' : '''\
                     The logic normally guarantees one of Bow, Hookshot,
                     or Hover Boots.
@@ -1631,7 +1638,7 @@ setting_infos = [
         },
         gui_tooltip    = '''\
             'Rescue One Carpenter': Only the bottom left
-            carpenter must be rescued.
+            carpenter, in the cell with the red flag, must be rescued.
 
             'Open Gerudo Fortress': The carpenters are rescued from
             the start of the game, and if 'Shuffle Gerudo Card' is disabled,

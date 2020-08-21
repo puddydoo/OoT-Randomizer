@@ -60,6 +60,7 @@ def assume_entrance_pool(entrance_pool):
 #       LW      Lost Woods
 #       OGC     Outside Ganon's Castle
 #       SFM     Sacred Forest Meadow
+#       TH      Thieves' Hideout
 #       ToT     Temple of Time
 #       ZD      Zora's Domain
 #       ZF      Zora's Fountain
@@ -96,6 +97,33 @@ entrance_shuffle_table = [
                         ('Ice Cavern Beginning -> ZF Ice Ledge',                            { 'index': 0x03D4 })),
     ('Dungeon',         ('Gerudo Fortress -> Gerudo Training Grounds Lobby',                { 'index': 0x0008 }),
                         ('Gerudo Training Grounds Lobby -> Gerudo Fortress',                { 'index': 0x03A8 })),
+                        
+    ('Fortress',        ('Gerudo Fortress -> TH Red Jail Exit 1',                           { 'index': 0x???? }),
+                        ('TH Red Jail Exit 1 -> Gerudo Fortress',                           { 'index': 0x???? })),
+    ('Fortress',        ('GF Entrances Behind Crates -> TH Red Jail Exit 2',                { 'index': 0x???? }),
+                        ('TH Red Jail Exit 2 -> GF Entrances Behind Crates',                { 'index': 0x???? })),
+    ('Fortress',        ('GF Entrances Behind Crates -> TH Kitchen Exit 3',                 { 'index': 0x???? }),
+                        ('TH Kitchen Exit 3 -> GF Entrances Behind Crates',                 { 'index': 0x???? })),
+    ('Fortress',        ('GF Guarded Roof -> TH Kitchen Exit 4',                            { 'index': 0x???? }),
+                        ('TH Kitchen Exit 4 -> GF Guarded Roof',                            { 'index': 0x???? })),
+    ('Fortress',        ('Gerudo Fortress -> TH Olive Jail Exit 5',                         { 'index': 0x???? }),
+                        ('TH Olive Jail Exit 5 -> Gerudo Fortress',                         { 'index': 0x???? })),
+    ('Fortress',        ('GF Roof Entrance Cluster -> TH Olive Jail Exit 6',                { 'index': 0x???? }),
+                        ('TH Olive Jail Exit 6 -> GF Roof Entrance Cluster',                { 'index': 0x???? })),
+    ('Fortress',        ('GF Guarded Roof -> TH Blue Jail Exit 7',                          { 'index': 0x???? }),
+                        ('TH Blue Jail Exit 7 -> GF Guarded Roof',                          { 'index': 0x???? })),
+    ('Fortress',        ('GF Roof Entrance Cluster -> TH Blue Jail Exit 8',                 { 'index': 0x???? }),
+                        ('TH Blue Jail Exit 8 -> GF Roof Entrance Cluster',                 { 'index': 0x???? })),
+    ('Fortress',        ('GF Roof Entrance Cluster -> TH Kitchen Exit 9',                   { 'index': 0x???? }),
+                        ('TH Kitchen Exit 9 -> GF Roof Entrance Cluster',                   { 'index': 0x???? })),
+    ('Fortress',        ('GF Kitchen Roof Access -> TH Kitchen Exit 10',                    { 'index': 0x???? }),
+                        ('TH Kitchen Exit 10 -> GF Kitchen Roof Access',                    { 'index': 0x???? })),
+    ('Fortress',        ('GF Hall to Balcony Entrance -> TH Hall to Balcony Exit 11',       { 'index': 0x???? }),
+                        ('TH Hall to Balcony Exit 11 -> GF Hall to Balcony Entrance',       { 'index': 0x???? })),
+    ('Fortress',        ('GF Balcony -> TH Hall to Balcony Exit 12',                        { 'index': 0x???? }),
+                        ('TH Hall to Balcony Exit 12 -> GF Balcony',                        { 'index': 0x???? })),
+    ('Fortress',        ('GF Green Jail Exterior -> TH Green Jail Exit 13',                 { 'index': 0x???? }),
+                        ('TH Green Jail Exit 13 -> GF Green Jail Exterior',                 { 'index': 0x???? })),
 
     ('Interior',        ('Kokiri Forest -> KF Midos House',                                 { 'index': 0x0433 }),
                         ('KF Midos House -> Kokiri Forest',                                 { 'index': 0x0443 })),
@@ -239,8 +267,8 @@ entrance_shuffle_table = [
                         ('KF Storms Grotto -> Kokiri Forest',                               { 'grotto_id': 0x1B, 'entrance': 0x0286, 'room': 0x00, 'angle': 0x4000, 'pos': (0xC3FD8856, 0x43BE0000, 0xC4988DA8) })),
     ('Grotto',          ('Zoras Domain -> ZD Storms Grotto',                                { 'grotto_id': 0x1C, 'entrance': 0x036D, 'content': 0xFF, 'scene': 0x58 }),
                         ('ZD Storms Grotto -> Zoras Domain',                                { 'grotto_id': 0x1C, 'entrance': 0x0108, 'room': 0x01, 'angle': 0xD555, 'pos': (0xC455EB8D, 0x41600000, 0xC3ED3602) })),
-    ('Grotto',          ('Gerudo Fortress -> GF Storms Grotto',                             { 'grotto_id': 0x1D, 'entrance': 0x036D, 'content': 0xFF, 'scene': 0x5D }),
-                        ('GF Storms Grotto -> Gerudo Fortress',                             { 'grotto_id': 0x1D, 'entrance': 0x0129, 'room': 0x00, 'angle': 0x4000, 'pos': (0x43BE42C0, 0x43A68000, 0xC4C317B1) })),
+    ('Grotto',          ('GF Entrances Behind Crates -> GF Storms Grotto',                  { 'grotto_id': 0x1D, 'entrance': 0x036D, 'content': 0xFF, 'scene': 0x5D }),
+                        ('GF Storms Grotto -> GF Entrances Behind Crates',                  { 'grotto_id': 0x1D, 'entrance': 0x0129, 'room': 0x00, 'angle': 0x4000, 'pos': (0x43BE42C0, 0x43A68000, 0xC4C317B1) })),
     ('Grotto',          ('GV Fortress Side -> GV Storms Grotto',                            { 'grotto_id': 0x1E, 'entrance': 0x05BC, 'content': 0xF0, 'scene': 0x5A }),
                         ('GV Storms Grotto -> GV Fortress Side',                            { 'grotto_id': 0x1E, 'entrance': 0x022D, 'room': 0x00, 'angle': 0x9555, 'pos': (0xC4A5CAD2, 0x41700000, 0xC475FF9B) })),
     ('Grotto',          ('GV Grotto Ledge -> GV Octorok Grotto',                            { 'grotto_id': 0x1F, 'entrance': 0x05AC, 'content': 0xF2, 'scene': 0x5A }),
