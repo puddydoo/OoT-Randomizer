@@ -623,7 +623,7 @@
             "TH Red Jail Exit 2": "True",
             "TH Kitchen Exit 3": "True",
             "GF Roof Entrance Cluster": "can_use(Longshot)", #or can_climb(200)
-            "GF Storms Grotto": "is_adult and can_open_storm_grotto" # Not there as child
+            "GF Storms Grotto": "is_adult and can_open_storm_grotto", # Not there as child
             "GF Guarded Roof": "False" #can_climb(200)
         }
     },
@@ -739,7 +739,7 @@
         "scene": "Gerudo Fortress",
         #"room": 00,
         "hint": "Gerudo's Fortress",
-        "locations": 
+        "locations": {
             "GF Chest": "True",
             "GF GS Top Floor": "is_adult and at_night"
         },
@@ -827,7 +827,7 @@
         #"room": 03,
         "hint": "Thieves' Hideout",
         "exits": {
-            "GF Entrances Behind Crates": "True"
+            "GF Entrances Behind Crates": "True",
             "TH Kitchen Exit 4": "True",
             "Thieves Hideout Kitchen": "Gerudo_Membership_Card or can_use(Bow) or logic_gerudo_kitchen"
         }
@@ -849,7 +849,7 @@
         #"room": 03,
         "hint": "Thieves' Hideout",
         "exits": {
-            "GF Roof Entrance Cluster": "True"
+            "GF Roof Entrance Cluster": "True",
             "TH Kitchen Exit 10": "can_use(Hookshot) or can_use(Hover_Boots)",
             "Thieves Hideout Kitchen": "Gerudo_Membership_Card or can_use(Bow) or logic_gerudo_kitchen"
         }
