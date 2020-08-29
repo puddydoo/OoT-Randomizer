@@ -2,7 +2,7 @@
     {
         "region_name": "Hyrule Field",
         "scene": "Hyrule Field",
-        "room": "0",
+        "room": 00,
         "hint": "Hyrule Field",
         "time_passes": true,
         "locations": {

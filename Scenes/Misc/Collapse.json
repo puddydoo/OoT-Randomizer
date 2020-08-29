@@ -1,0 +1,334 @@
+[
+    #All barred doors opened by Zelda reset when changing scene
+	#In vanilla, going normally between the collapse scenes keeps the bars open
+	#Tower interior
+    {
+        "region_name": "Collapsing Tower 2F",
+        "room": 00,
+        "exits": {
+            "Collapsing Tower 2F Upper Exit": "True",
+            "Collapsing Tower 2F Behind Bars": "barred_door"
+        }
+    },
+	{
+        "region_name": "Collapsing Tower 2F with Zelda",
+        "room": 00,
+        "exits": {
+            "Collapsing Tower 2F Upper Exit": "True",
+            "Collapsing Tower 2F Behind Bars with Zelda": "True or barred_door"
+        }
+    },
+	{
+        "region_name": "Collapsing Tower 2F Upper Exit",
+        "room": 00,
+        "exits": {
+            "Collapsing Tower Exterior 4 Below Ledge": "True"
+        }
+    },
+	{
+        "region_name": "Collapsing Tower 2F Behind Bars",
+        "room": 00,
+        "exits": {
+            "Collapsing Tower 2F": "True",
+            "Collapsing Tower Stairs": "True"
+        }
+    },
+	{
+        "region_name": "Collapsing Tower 2F Behind Bars with Zelda",
+        "room": 00,
+        "exits": {
+            "Collapsing Tower 2F with Zelda": "True",
+            "Collapsing Tower Stairs with Zelda": "True"
+        }
+    },
+	{
+        "region_name": "Collapsing Tower 3F",
+        "room": 01,
+        "exits": {
+            "Collapsing Tower 3F Upper Exit": "True",
+            "Collapsing Tower 3F Lower Exit": "barred_door"
+        }
+    },
+    {
+        "region_name": "Collapsing Tower 3F with Zelda",
+        "room": 01,
+        "exits": {
+            "Collapsing Tower 3F Upper Exit": "True",
+            "Collapsing Tower 3F Lower Exit": "
+                is_adult or Kokiri_Sword or barred_door"
+                #Must defeat 2 Stalfos
+        }
+    },
+	{
+        "region_name": "Collapsing Tower 3F Upper Exit",
+        "room": 01,
+        "exits": {
+            "Collapsing Tower Exterior 3": "True"
+        }
+    },
+	{
+        "region_name": "Collapsing Tower 3F Lower Exit",
+        "room": 01,
+        "exits": {
+            "Collapsing Tower Exterior 4 with Zelda": "True"
+        }
+    },
+    {
+        "region_name": "Collapsing Tower 4F",
+        "room": 02,
+        "exits": {
+            "Collapsing Tower 4F Upper Exit": "True",
+            "Collapsing Tower 4F Lower Exit": "barred_door"
+        }
+    },
+	{
+        "region_name": "Collapsing Tower 4F with Zelda",
+        "room": 02,
+        "exits": {
+            "Collapsing Tower 4F Upper Exit": "True",
+            "Collapsing Tower 4F Lower Exit": "True or barred_door"
+        }
+    },
+	{
+        "region_name": "Collapsing Tower 4F Upper Exit",
+        "room": 02,
+        "exits": {
+            "Collapsing Tower Exterior 2": "True"
+        }
+    },
+	{
+        "region_name": "Collapsing Tower 4F Lower Exit",
+        "room": 02,
+        "exits": {
+            "Collapsing Tower Exterior 3 with Zelda": "True"
+        }
+    },
+    {
+        "region_name": "Collapsing Tower Stairs",
+        "room": 03,
+        "exits": {
+            "Collapsing Tower 2F Behind Bars": "True",
+            "Collapsing Tower Stairs Lower Exit": "barred_door"
+        }
+    },
+	{
+        "region_name": "Collapsing Tower Stairs with Zelda",
+        "room": 03,
+        "exits": {
+            "Collapsing Tower 2F Behind Bars with Zelda": "True",
+            "Collapsing Tower Stairs Lower Exit": "True or barred_door"
+        }
+    },
+	{
+        "region_name": "Collapsing Tower Stairs Lower Exit",
+        "room": 03,
+        "exits": {
+            "Collapsing Tower Castle Barrier Chamber": "True"
+        }
+    },
+    {
+        "region_name": "Collapsing Tower 5F",
+        "room": 04,
+        "exits": {
+            "Collapsing Tower 5F Upper Exit": "True",
+            "Collapsing Tower 5F Lower Exit": "False"
+        }
+    },
+	{
+        "region_name": "Collapsing Tower 5F with Zelda",
+        "room": 04,
+        "exits": {
+            "Collapsing Tower 5F Upper Exit": "True",
+            "Collapsing Tower 5F Lower Exit": "True or barred_door"
+        }
+    },
+	{
+        "region_name": "Collapsing Tower 5F Upper Exit",
+        "room": 04,
+        "exits": {
+            "Collapsing Tower Exterior 1": "True"
+        }
+    },
+	{
+        "region_name": "Collapsing Tower 5F Lower Exit",
+        "room": 04,
+        "exits": {
+            "Collapsing Tower Exterior 2 with Zelda": "True"
+        }
+    },
+    #Tower exterior
+    {
+        "region_name": "Collapsing Tower Exterior 1",
+        "room": 00,
+        "exits": {
+            "Collapsing Tower Exterior 1 5F Entrance": "barred_door"
+        }
+    },
+	#Actually this makes me think that all the entrances should be patched to spawn Zelda, because coming out of the top of the tower without Zelda would just make you stuck.
+	{
+        "region_name": "Collapsing Tower Exterior 1 with Zelda",
+        "room": 00,
+        "exits": {
+            "Collapsing Tower Exterior 1 5F Entrance": "True or barred_door"
+        }
+    },
+	{
+        "region_name": "Collapsing Tower Exterior 1 5F Entrance",
+        "room": 00,
+        "exits": {
+            "Collapsing Tower 5F with Zelda": "True"
+        }
+    },
+    {
+        "region_name": "Collapsing Tower Exterior 2",
+        "room": 00,
+        "exits": {
+            "Collapsing Tower Exterior 2 5F Entrance": "True",
+            "Collapsing Tower Exterior 2 4F Entrance": "barred_door",
+            "Collapsing Tower Exterior 1": "False"
+        }
+    },
+	{
+        "region_name": "Collapsing Tower Exterior 2 with Zelda",
+        "room": 00,
+        "exits": {
+            "Collapsing Tower Exterior 2 5F Entrance": "True",
+            "Collapsing Tower Exterior 2 4F Entrance": "True or barred_door",
+            "Collapsing Tower Exterior 1": "False"
+        }
+    },
+	{
+        "region_name": "Collapsing Tower Exterior 2 5F Entrance",
+        "room": 00,
+        "exits": {
+            "Collapsing Tower 5F": "True"
+        }
+    },
+	{
+        "region_name": "Collapsing Tower Exterior 2 4F Entrance",
+        "room": 00,
+        "exits": {
+            "Collapsing Tower 4F with Zelda": "True"
+        }
+    },
+    {
+        "region_name": "Collapsing Tower Exterior 3",
+        "room": 00,
+        "exits": {
+            "Collapsing Tower Exterior 3 4F Entrance": "True",
+            "Collapsing Tower Exterior 3 3F Entrance": "barred_door",
+            "Collapsing Tower Exterior 2": "False",
+            "Collapsing Tower Exterior 1": "False"
+        }
+    },
+	{
+        "region_name": "Collapsing Tower Exterior 3 with Zelda",
+        "room": 00,
+        "exits": {
+            "Collapsing Tower Exterior 3 4F Entrance": "True",
+            "Collapsing Tower Exterior 3 3F Entrance": "True or barred_door",
+            "Collapsing Tower Exterior 2": "False",
+            "Collapsing Tower Exterior 1": "False"
+        }
+    },
+	{
+        "region_name": "Collapsing Tower Exterior 3 4F Entrance",
+        "room": 00,
+        "exits": {
+            "Collapsing Tower 4F": "True"
+        }
+    },
+	{
+        "region_name": "Collapsing Tower Exterior 3 3F Entrance",
+        "room": 00,
+        "exits": {
+            "Collapsing Tower 3F with Zelda": "True"
+        }
+    },
+    {
+        "region_name": "Collapsing Tower Exterior 4",
+        "room": 00,
+        "exits": {
+            "Collapsing Tower Exterior 4 3F Entrance": "True",
+            "Collapsing Tower Exterior 4 Below Ledge": "True"
+            "Collapsing Tower Exterior 3": "False",
+            "Collapsing Tower Exterior 2": "False",
+            "Collapsing Tower Exterior 1": "False"
+        }
+    },
+	{
+        "region_name": "Collapsing Tower Exterior 4 with Zelda",
+        "room": 00,
+        "exits": {
+            "Collapsing Tower Exterior 4 3F Entrance": "True",
+            "Collapsing Tower Exterior 4 Below Ledge with Zelda": "True"
+            "Collapsing Tower Exterior 3": "False",
+            "Collapsing Tower Exterior 2": "False",
+            "Collapsing Tower Exterior 1": "False"
+        }
+    },
+    {
+        "region_name": "Collapsing Tower Exterior 4 Below Ledge",
+        "room": 00,
+        "exits": {
+            "Collapsing Tower Exterior 4": "can_climb(66)",
+            "Collapsing Tower Exterior 4 2F Entrance": "barred_door"
+        }
+    },
+	{
+        "region_name": "Collapsing Tower Exterior 4 Below Ledge with Zelda",
+        "room": 00,
+        "exits": {
+            "Collapsing Tower Exterior 4": "can_climb(66)",
+            "Collapsing Tower Exterior 4 2F Entrance": "True or barred_door"
+        }
+    },
+	{
+        "region_name": "Collapsing Tower Exterior 4 3F Entrance",
+        "room": 00,
+        "exits": {
+            "Collapsing Tower 3F": "True"
+        }
+    },
+	{
+        "region_name": "Collapsing Tower Exterior 4 2F Entrance",
+        "room": 00,
+        "exits": {
+            "Collapsing Tower 2F with Zelda": "True"
+        }
+    },
+    #Castle interior
+    {
+        "region_name": "Collapsing Castle Barrier Chamber",
+        "room": 00,
+        "exits": {
+            "Collapsing Tower Stairs": "True",
+            #Zelda is always here
+            "Collapsing Castle Barrier Chamber Behind Bars": "True or barred_door"
+        }
+    },
+	{
+        "region_name": "Collapsing Castle Barrier Chamber Behind Bars",
+        "room": 00,
+        "exits": {
+            "Collapsing Castle Barrier Chamber": "True",
+            "Collapsing Castle Entrance": "True"
+        }
+    },
+    {
+        "region_name": "Collapsing Castle Entrance",
+        "room": 01,
+        "exits": {
+            "Collapsing Castle Barrier Chamber Behind Bars": "True",
+			#Zelda is always here and is a separate Zelda from the previous room
+            "Collapsing Castle Final Exit": "True"
+        }
+    },
+	{
+        "region_name": "Collapsing Castle Final Exit",
+        "exits": {
+            "Ganon Arena": "not no_escape_sequence",
+			"Collapsing Tower Exterior 1 with Zelda": "no_escape_sequence"
+        }
+    }
+]

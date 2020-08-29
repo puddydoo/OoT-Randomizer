@@ -10,7 +10,7 @@
     {
         "region_name": "LW Start Square",
         "scene": "Lost Woods",
-        "room": "00",
+        "room": 00,
         "hint": "the Lost Woods",
         "exits": {
             "LW Forest Exit": "True",
@@ -20,7 +20,7 @@
     {
         "region_name": "LW Grog Meadow",
         "scene": "Lost Woods",
-        "room": "09",
+        "room": 09,
         "hint": "the Lost Woods",
         "events": {
             "Odd Mushroom Access": "is_adult and ('Cojiro Access' or Cojiro)",
@@ -37,7 +37,7 @@
     {
         "region_name": "Lost Woods Mushroom Timeout",
         "scene": "Lost Woods",
-        "room": "09",
+        "room": 09,
         "hint": "the Lost Woods",
         "exits": {
             "LW Grog Meadow": "True"
@@ -57,7 +57,7 @@
     {
         "region_name": "LW Bridge",
         "scene": "Lost Woods",
-        "room": "05",
+        "room": 05,
         "hint": "the Lost Woods",
         "exits": {
             "Kokiri Forest": "True",
@@ -68,7 +68,7 @@
     {
         "region_name": "LW Around Bridge",
         "scene": "Lost Woods",
-        "room": "05",
+        "room": 05,
         "hint": "the Lost Woods",
         "locations": {
             "LW Deku Scrub Near Bridge": "is_child and can_stun_deku",
@@ -88,7 +88,7 @@
     {
         "region_name": "LW Game Square",
         "scene": "Lost Woods",
-        "room": "01",
+        "room": 01,
         "hint": "the Lost Woods",
         "locations": {
             "LW Ocarina Memory Game": "is_child and Ocarina",
@@ -103,7 +103,7 @@
     {
         "region_name": "LW Goron Square",
         "scene": "Lost Woods",
-        "room": "02",
+        "room": 02,
         "hint": "the Lost Woods",
         "locations": {
             "Bug Shrub": "is_child and can_cut_shrubs and has_bottle"
@@ -119,7 +119,7 @@
     {
         "region_name": "LW Zora Square",
         "scene": "Lost Woods",
-        "room": "03",
+        "room": 03,
         "hint": "the Lost Woods",
         "exits": {
             "LW Forest Exit": "True",
@@ -131,7 +131,7 @@
     {
         "region_name": "LW Behind Mido",
         "scene": "Lost Woods",
-        "room": "03",
+        "room": 03,
         "hint": "the Lost Woods",
         "exits": {
             "LW Zora Square": "is_child or can_play(Sarias_Song)",
@@ -141,7 +141,7 @@
     {
         "region_name": "LW Blank Square",
         "scene": "Lost Woods",
-        "room": "04",
+        "room": 04,
         "hint": "the Lost Woods",
         "exits": {
             "LW Forest Exit": "True",
@@ -153,7 +153,7 @@
     {
         "region_name": "LW Theater Meadow",
         "scene": "Lost Woods",
-        "room": "06",
+        "room": 06,
         "hint": "the Lost Woods",
         "locations": {
             "LW Deku Scrub Near Deku Theater Right": "is_child and can_stun_deku",
@@ -177,7 +177,7 @@
     {
         "region_name": "LW Blupee Square",
         "scene": "Lost Woods",
-        "room": "07",
+        "room": 07,
         "hint": "the Lost Woods",
         "locations": {
             "Bug Shrub": "is_child and can_cut_shrubs and has_bottle"
@@ -191,7 +191,7 @@
     {
         "region_name": "LW End Square",
         "scene": "Lost Woods",
-        "room": "08",
+        "room": 08,
         "hint": "the Lost Woods",
         "exits": {
             "LW Forest Exit": "True",

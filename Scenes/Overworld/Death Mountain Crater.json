@@ -2,7 +2,7 @@
     {
         "region_name": "DMC Upper Nearby",
         "scene": "Death Mountain Crater",
-        "room": "1",
+        "room": 01,
         "hint": "Death Mountain Crater",
         "exits": {
             "DMC Upper Local": "can_use(Goron_Tunic)",
@@ -13,7 +13,7 @@
     {
         "region_name": "DMC Upper Local",
         "scene": "Death Mountain Crater",
-        "room": "1",
+        "room": 01,
         "hint": "Death Mountain Crater",
         "locations": {
             "DMC Wall Freestanding PoH": "True",
@@ -34,7 +34,7 @@
     {
         "region_name": "DMC Ladder Area Nearby",
         "scene": "Death Mountain Crater",
-        "room": "1",
+        "room": 01,
         "hint": "Death Mountain Crater",
         "locations": {
             "DMC Deku Scrub": "is_child and can_stun_deku"
@@ -49,7 +49,7 @@
     {
         "region_name": "DMC Lower Nearby",
         "scene": "Death Mountain Crater",
-        "room": "1",
+        "room": 01,
         "hint": "Death Mountain Crater",
         "exits": {
             "DMC Lower Local": "can_use(Goron_Tunic)",
@@ -61,7 +61,7 @@
     {
         "region_name": "DMC Lower Local",
         "scene": "Death Mountain Crater",
-        "room": "1",
+        "room": 01,
         "hint": "Death Mountain Crater",
         "exits": {
             "DMC Lower Nearby": "True",
@@ -75,7 +75,7 @@
     {
         "region_name": "DMC Central Nearby",
         "scene": "Death Mountain Crater",
-        "room": "1",
+        "room": 01,
         "hint": "Death Mountain Crater",
         "locations": {
             "DMC Volcano Freestanding PoH": "
@@ -91,7 +91,7 @@
     {
         "region_name": "DMC Central Local",
         "scene": "Death Mountain Crater",
-        "room": "1",
+        "room": 01,
         "hint": "Death Mountain Crater",
         "locations": {
             "DMC GS Bean Patch": "can_plant_bugs and can_child_attack",
@@ -111,7 +111,7 @@
 	{
         "region_name": "DMC Outside Fire Temple Entrance",
         "scene": "Death Mountain Crater",
-        "room": "1",
+        "room": 01,
         "hint": "Death Mountain Crater",
         "exits": {
             "DMC Fire Temple Entrance Top": "True",
@@ -121,7 +121,7 @@
 	{
         "region_name": "DMC Fire Temple Entrance Top",
         "scene": "Death Mountain Crater",
-        "room": "0",
+        "room": 00,
         "hint": "Death Mountain Crater",
         "exits": {
             "DMC Fire Temple Entrance": "True",
@@ -131,7 +131,7 @@
     {
         "region_name": "DMC Fire Temple Entrance",
         "scene": "Death Mountain Crater",
-        "room": "0",
+        "room": 00,
         "hint": "Death Mountain Crater",
         "exits": {
             "Fire Temple Entrance Chamber": "True",

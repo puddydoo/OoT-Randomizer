@@ -2,7 +2,7 @@
     {
         "region_name": "Lon Lon Ranch",
         "scene": "Lon Lon Ranch",
-        "room": "00",
+        "room": 00,
         "hint": "Lon Lon Ranch",
         "events": {
             "Epona": "can_play(Eponas_Song) and is_adult and at_day",

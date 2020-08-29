@@ -2,7 +2,7 @@
     {
         "region_name": "Lake Hylia",
         "scene": "Lake Hylia",
-        "room": "0",
+        "room": 00,
         "hint": "Lake Hylia",
         "time_passes": true,
         "events": {
@@ -46,7 +46,7 @@
     {
         "region_name": "LH Owl Flight",
         "scene": "Lake Hylia",
-        "room": "0",
+        "room": 00,
         "hint": "Lake Hylia",
         "exits": {
             "Hyrule Field": "True"
@@ -55,7 +55,7 @@
     {
         "region_name": "LH Fishing Hole Entrance",
         "scene": "Lake Hylia",
-        "room": "0",
+        "room": 00,
         "hint": "Lake Hylia",
         "time_passes": true,
         "exits": {
@@ -66,7 +66,7 @@
     {
         "region_name": "LH Sun Island",
         "scene": "Lake Hylia",
-        "room": "0",
+        "room": 00,
         "hint": "Lake Hylia",
         "time_passes": true,
         "locations": {
@@ -80,7 +80,7 @@
     {
         "region_name": "LH Lab Roof",
         "scene": "Lake Hylia",
-        "room": "0",
+        "room": 00,
         "hint": "Lake Hylia",
         "time_passes": true,
         "locations": {
@@ -93,7 +93,7 @@
     {
         "region_name": "LH Tree",
         "scene": "Lake Hylia",
-        "room": "0",
+        "room": 00,
         "hint": "Lake Hylia",
         "time_passes": true,
         "locations": {

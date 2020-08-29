@@ -2,7 +2,7 @@
     {
         "region_name": "Spirit Temple Lobby",
         "dungeon": "Spirit Temple",
-        "room": "00",
+        "room": 00,
         "events": {
             "Spirit Temple Room 00 Heavy Block": "can_use(Silver_Gauntlets)"
         },
@@ -17,7 +17,7 @@
     {
         "region_name": "Spirit Temple Lobby East",
         "dungeon": "Spirit Temple",
-        "room": "00",
+        "room": 00,
         "events": {
             #requires a very specific Bombchu use
             "Spirit Temple Room 00 Crystal Switch": "
@@ -38,10 +38,11 @@
     {
         "region_name": "Spirit Temple First Child Room",
         "dungeon": "Spirit Temple",
-        "room": "01",
+        "room": 01,
         "events": {
             "Spirit Temple Room 01 Enemies": "
-                Defeat all enemies"
+                "
+                #
         },
         "exits": {
             "Spirit Temple Lobby": "is_child and transition('Spirit Temple T30', True)",
@@ -57,7 +58,7 @@
     {
         "region_name": "Spirit Temple First Child Room Rear",
         "dungeon": "Spirit Temple",
-        "room": "01",
+        "room": 01,
         "locations": {
             "Nut Crate": "True"
         },
@@ -69,7 +70,7 @@
     {
         "region_name": "Spirit Temple Cage Crossing Room Front",
         "dungeon": "Spirit Temple",
-        "room": "02",
+        "room": 02,
         "events": {
             "Spirit Temple Room 02 Torches": "
                 has_fire_source or 'Spirit Temple Room 02 Silver Rupees' and can_use(Sticks)"
@@ -83,7 +84,7 @@
     {
         "region_name": "Spirit Temple Cage Crossing Room",
         "dungeon": "Spirit Temple",
-        "room": "02",
+        "room": 02,
         "locations": {
             "Spirit Temple Child Early Torches Chest": "
                 'Spirit Temple Room 02 Torches'",
@@ -105,7 +106,7 @@
     {
         "region_name": "Spirit Temple Crystal Bridge Room Front",
         "dungeon": "Spirit Temple",
-        "room": "03",
+        "room": 03,
         "events": {
             "Spirit Temple Room 03 Bridge": "
                 can_use(Boomerang) or can_use(Slingshot) or can_use(Bow)
@@ -121,7 +122,7 @@
     {
         "region_name": "Spirit Temple Crystal Bridge Room",
         "dungeon": "Spirit Temple",
-        "room": "03",
+        "room": 03,
         "events": {
             "Spirit Temple Room 03 Bridge": "
                 is_adult or can_child_attack"
@@ -139,7 +140,7 @@
     {
         "region_name": "Spirit Temple Child Enemy Pit Room West",
         "dungeon": "Spirit Temple",
-        "room": "27",
+        "room": 27,
         "exits": {
             "Spirit Temple Child Enemy Pit Room": "True",
             "Spirit Temple Crystal Bridge Room": "
@@ -150,7 +151,7 @@
     {
         "region_name": "Spirit Temple Child Enemy Pit Room",
         "dungeon": "Spirit Temple",
-        "room": "27",
+        "room": 27,
         "events": {
             "Spirit Temple Room 27 Enemies": "
                 is_adult or can_child_attack"
@@ -166,7 +167,7 @@
     {
         "region_name": "Spirit Temple Rock Light Room 1F",
         "dungeon": "Spirit Temple",
-        "room": "04",
+        "room": 04,
         "exits": {
             "Spirit Temple First Child Room Rear": "transition('Spirit Temple T10', True)",
             "Spirit Temple Rock Light Room 2F": "True"
@@ -175,7 +176,7 @@
     {
         "region_name": "Spirit Temple Rock Light Room 2F",
         "dungeon": "Spirit Temple",
-        "room": "04",
+        "room": 04,
         "locations": {
             "Spirit Temple Child Climb North Chest": "can_use_projectile",
             "Spirit Temple Child Climb East Chest": "can_use_projectile",
@@ -194,7 +195,7 @@
     {
         "region_name": "Spirit Temple Central Chamber",
         "dungeon": "Spirit Temple",
-        "room": "05",
+        "room": 05,
         "events": {
             "Spirit Temple Statue Face": "mm_light_arrows and can_use(Light_Arrows)"
         },
@@ -221,7 +222,7 @@
     {
         "region_name": "Spirit Temple Central Chamber Northwest Ledge",
         "dungeon": "Spirit Temple",
-        "room": "05",
+        "room": 05,
         "events": {
             "Spirit Temple Statue Face": "mm_light_arrows and can_use(Light_Arrows)"
         },
@@ -238,7 +239,7 @@
     {
         "region_name": "Spirit Temple Central Chamber Right Arm",
         "dungeon": "Spirit Temple",
-        "room": "05",
+        "room": 05,
         "events": {
             "Spirit Temple Statue Face": "mm_light_arrows and can_use(Light_Arrows)"
         },
@@ -258,7 +259,7 @@
     {
         "region_name": "Spirit Temple Central Chamber Adult Stairs",
         "dungeon": "Spirit Temple",
-        "room": "05",
+        "room": 05,
         "events": {
             "Spirit Temple Statue Face": "mm_light_arrows and can_use(Light_Arrows)"
         },
@@ -276,7 +277,7 @@
     {
         "region_name": "Spirit Temple Central Chamber Northeast Ledge",
         "dungeon": "Spirit Temple",
-        "room": "05",
+        "room": 05,
         "events": {
             "Spirit Temple Room 05 Rusted Switch": "can_use(Megaton_Hammer)",
             "Spirit Temple Statue Face": "mm_light_arrows and can_use(Light_Arrows)"
@@ -295,7 +296,7 @@
     {
         "region_name": "Spirit Temple Central Chamber Left Arm",
         "dungeon": "Spirit Temple",
-        "room": "05",
+        "room": 05,
         "events": {
             "Spirit Temple Room 05 Lullaby": "can_play(Zeldas_Lullaby)",
             "Spirit Temple Statue Face": "mm_light_arrows and can_use(Light_Arrows)"
@@ -316,7 +317,7 @@
     {
         "region_name": "Spirit Temple Shortcut Room",
         "dungeon": "Spirit Temple",
-        "room": "06",
+        "room": 06,
         "events": {
             "Spirit Temple Room 06 Heavy Blocks": "can_use(Silver_Gauntlets)"
         },
@@ -328,7 +329,7 @@
     {
         "region_name": "Spirit Temple Shortcut Room South",
         "dungeon": "Spirit Temple",
-        "room": "06",
+        "room": 06,
         "events": {
             "Spirit Temple Elevator": "can_use(Megaton_Hammer)"
         },
@@ -342,7 +343,7 @@
     {
         "region_name": "Spirit Temple Western 3F Corridor",
         "dungeon": "Spirit Temple",
-        "room": "07",
+        "room": 07,
         "exits": {
             "Spirit Temple Central Chamber": "transition('Spirit Temple T26', True)",
             "Spirit Temple Sun Block Room": "transition('Spirit Temple T23', True)"
@@ -351,7 +352,7 @@
     {
         "region_name": "Spirit Temple Sun Block Room",
         "dungeon": "Spirit Temple",
-        "room": "08",
+        "room": 08,
         "locations": {
             "Spirit Temple Sun Block Room Chest": "
                 can_use_fire_source_with_torch or (logic_spirit_sun_chest and can_use(Bow))"
@@ -369,7 +370,7 @@
     {
         "region_name": "Spirit Temple Hall to Child Iron Knuckle Room",
         "dungeon": "Spirit Temple",
-        "room": "09",
+        "room": 09,
         "locations": {
             "Spirit Temple GS Hall After Sun Block Room": "can_use(Boomerang) or can_use(Hookshot)"
         },
@@ -381,7 +382,7 @@
     {
         "region_name": "Spirit Temple Child Iron Knuckle Room",
         "dungeon": "Spirit Temple",
-        "room": "10",
+        "room": 10,
         "events": {
             "Spirit Temple Room 10 Enemies": "
                 "
@@ -397,7 +398,7 @@
     {
         "region_name": "Spirit Temple Exit to Right Hand",
         "dungeon": "Spirit Temple",
-        "room": "11",
+        "room": 11,
         "exits": {
             "Spirit Temple Outdoor Right Hand": "True",
             "Spirit Temple Child Iron Knuckle Room": "transition('Spirit Temple T08', True)"
@@ -419,7 +420,7 @@
     {
         "region_name": "Spirit Temple Rolling Boulder Room",
         "dungeon": "Spirit Temple",
-        "room": "13",
+        "room": 13,
         "locations": {
             #I don't know if this block is there as a child
             "Spirit Temple GS Boulder Room": "can_play(Song_of_Time)"
@@ -435,7 +436,7 @@
     {
         "region_name": "Spirit Temple 1F Treasure Room",
         "dungeon": "Spirit Temple",
-        "room": "12",
+        "room": 12,
         "locations": {
             "Spirit Temple Early Adult Right Chest": "True"
         },
@@ -446,7 +447,7 @@
     {
         "region_name": "Spirit Temple Sandy Lullaby Room",
         "dungeon": "Spirit Temple",
-        "room": "14",
+        "room": 14,
         "locations": {
             "Spirit Temple Compass Chest": "
                 can_play(Zeldas_Lullaby) and (can_use(Hookshot) or can_climb(167))"
@@ -458,7 +459,7 @@
     {
         "region_name": "Spirit Temple Wallmaster Room 1F",
         "dungeon": "Spirit Temple",
-        "room": "15",
+        "room": 15,
         "exits": {
             "Spirit Temple Lobby East": "transition('Spirit Temple T04', True)",
             "Spirit Temple Wallmaster Room 2F": "True"
@@ -467,7 +468,7 @@
     {
         "region_name": "Spirit Temple Wallmaster Room 2F",
         "dungeon": "Spirit Temple",
-        "room": "15",
+        "room": 15,
         "locations": {
             "Spirit Temple First Mirror Left Chest": "True",
             "Spirit Temple First Mirror Right Chest": "True"
@@ -482,7 +483,7 @@
     {
         "region_name": "Spirit Temple Eastern 3F Corridor",
         "dungeon": "Spirit Temple",
-        "room": "16",
+        "room": 16,
         "exits": {
             "Spirit Temple Central Chamber": "transition('Spirit Temple T21', True)",
             "Spirit Temple Adult Enemy Pit Room": "transition('Spirit Temple T20', True)"
@@ -491,7 +492,7 @@
     {
         "region_name": "Spirit Temple Adult Enemy Pit Room",
         "dungeon": "Spirit Temple",
-        "room": "17",
+        "room": 17,
         "events": {
             "Spirit Temple Room 17 Enemies": "
                 has_explosives"
@@ -510,7 +511,7 @@
     {
         "region_name": "Spirit Temple Funny Switch Room",
         "dungeon": "Spirit Temple",
-        "room": "18",
+        "room": 18,
         "events": {
             "Spirit Temple Room 18 Sun Switch": "
                 can_use(Mirror_Shield)
@@ -529,7 +530,7 @@
     {
         "region_name": "Spirit Temple Hall to Adult Iron Knuckle Room",
         "dungeon": "Spirit Temple",
-        "room": "19",
+        "room": 19,
         "locations": {
             "Spirit Temple Hallway Left Invisible Chest": "logic_lens_spirit or can_use(Lens_of_Truth)",
             "Spirit Temple Hallway Right Invisible Chest": "logic_lens_spirit or can_use(Lens_of_Truth)"
@@ -542,7 +543,7 @@
     {
         "region_name": "Spirit Temple Adult Iron Knuckle Room",
         "dungeon": "Spirit Temple",
-        "room": "20",
+        "room": 20,
         "events": {
             "Spirit Temple Room 20 Enemies": "
                 "
@@ -560,7 +561,7 @@
     {
         "region_name": "Spirit Temple Exit to Left Hand",
         "dungeon": "Spirit Temple",
-        "room": "11",
+        "room": 11,
         "exits": {
             "Spirit Temple Outdoor Left Hand": "True",
             "Spirit Temple Adult Iron Knuckle Room": "transition('Spirit Temple T07', True)"
@@ -585,7 +586,7 @@
     {
         "region_name": "Spirit Temple Key Room",
         "dungeon": "Spirit Temple",
-        "room": "21",
+        "room": 21,
         "locations": {
             "Spirit Temple Near Four Armos Chest": "True"
         },
@@ -596,7 +597,7 @@
     {
         "region_name": "Spirit Temple Shifting Wall Room",
         "dungeon": "Spirit Temple",
-        "room": "23",
+        "room": 23,
         "exits": {
             "Spirit Temple Adult Enemy Pit Room": "transition('Spirit Temple T15', True)",
             "Spirit Temple Lullaby Landing": "
@@ -610,7 +611,7 @@
     {
         "region_name": "Spirit Temple Lullaby Landing",
         "dungeon": "Spirit Temple",
-        "room": "24",
+        "room": 24,
         "exits": {
             "Spirit Temple Furniture Room": "
                 transition('Spirit Temple T13', can_play(Zeldas_Lullaby)
@@ -622,7 +623,7 @@
     {
         "region_name": "Spirit Temple Furniture Room",
         "dungeon": "Spirit Temple",
-        "room": "22",
+        "room": 22,
         "locations": {
             "Spirit Temple Boss Key Chest": "
                 here(can_use(Bow) or can_use(Slingshot)) and can_use(Hookshot)"
@@ -634,7 +635,7 @@
     {
         "region_name": "Spirit Temple Ceiling Mirror Room",
         "dungeon": "Spirit Temple",
-        "room": "25",
+        "room": 25,
         "events": {
             "Spirit Temple Room 25 Crystal Switch": "hit the crystal switch",
             "Spirit Temple Room 25 Sun Switch": "
@@ -653,7 +654,7 @@
     {
         "region_name": "Spirit Temple Snake Mirror Rooms",
         "dungeon": "Spirit Temple",
-        "room": "26",
+        "room": 26,
         "events": {
             "Spirit Temple Room 25 Crystal Switch": "has_explosives",
             #I just put this as an event but I don't know, the mirrors reset upon leaving the dungeon by any means including Farore's Wind
@@ -669,7 +670,7 @@
     {
         "region_name": "Spirit Temple Central Chamber Hanging Platform",
         "dungeon": "Spirit Temple",
-        "room": "05",
+        "room": 05,
         "events": {
             "Spirit Temple Statue Face": "
                 ('Spirit Temple 4F Mirrors' and can_use(Mirror_Shield))
@@ -694,7 +695,7 @@
     {
         "region_name": "Spirit Temple Central Chamber Inside Statue",
         "dungeon": "Spirit Temple",
-        "room": "05",
+        "room": 05,
         "events": {
             "Spirit Temple Statue Face": "mm_light_arrows and can_use(Light_Arrows)"
         },

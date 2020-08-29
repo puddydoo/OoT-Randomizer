@@ -11,7 +11,7 @@
     {
         "region_name": "Hyrule Castle Grounds",
         "scene": "Castle Grounds",
-        "room": "0",
+        "room": 00,
         "hint": "Hyrule Castle",
         "time_passes": true,
         "locations": {
@@ -41,7 +41,7 @@
     {
         "region_name": "HC Garden",
         "scene": "Castle Grounds",
-        "room": "0",
+        "room": 00,
         "hint": "Hyrule Castle",
         "locations": {
             "HC Zeldas Letter": "True",
@@ -54,7 +54,7 @@
     {
         "region_name": "Ganons Castle Grounds",
         "scene": "Castle Grounds",
-        "room": "0",
+        "room": 00,
         "hint": "outside Ganon's Castle",
         "locations": {
             "OGC GS": "True"

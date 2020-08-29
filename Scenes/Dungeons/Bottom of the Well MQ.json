@@ -2,7 +2,7 @@
     {
         "region_name": "Bottom of the Well Lobby Entrance",
         "dungeon": "Bottom of the Well",
-        "room": "00",
+        "room": 00,
         "exits": {
             "Kakariko Village": "True",
             "Bottom of the Well Lobby Perimeter": "is_child"
@@ -11,7 +11,7 @@
     {
         "region_name": "Bottom of the Well Lobby Perimeter",
         "dungeon": "Bottom of the Well",
-        "room": "00",
+        "room": 00,
         "events": {
             "Bottom of the Well Lower Water": "can_use_projectile",
             "Bottom of the Well West Cage Rocks": "can_blast_or_smash",
@@ -34,13 +34,13 @@
             "Bottom of the Well Lobby SW Fake Wall": "True",
             "Bottom of the Well Basement": "transition('Bottom of the Well T12', True)",
             "Bottom of the Well Basement First Finger": "False and transition('Bottom of the Well T09', True)",
-            "Bottom of the Well East Cage": "False"
+            "Bottom of the Well Lobby East Cage": "False"
         }
     },
     {
         "region_name": "Bottom of the Well Lobby Central",
         "dungeon": "Bottom of the Well",
-        "room": "00",
+        "room": 00,
         "locations": {
             "Bottom of the Well MQ Map Chest": "True"
         },
@@ -49,7 +49,7 @@
             "Bottom of the Well Lobby Central West Cage": "can_use(Hover_Boots)",
             "Bottom of the Well Basement": "transition('Bottom of the Well T08', True)",
             "Bottom of the Well Basement Ceiling": "
-                'Bottom of the Well East Cage Floor Switch' and transition('Bottom of the Well T10', True)",
+                'Bottom of the Well Lobby East Cage Floor Switch' and transition('Bottom of the Well T10', True)",
             "Bottom of the Well East Inner Room": "
                 transition('Bottom of the Well T04',
                 here(can_use_projectile) or 'Bottom of the Well MQ Room 00 T04 Unbar')",
@@ -61,7 +61,7 @@
     {
         "region_name": "Bottom of the Well Lobby Central West Cage",
         "dungeon": "Bottom of the Well",
-        "room": "00",
+        "room": 00,
         "events": {
             "Bottom of the Well West Cage Floor Switch": "can_press_floor_switch",
             "Bottom of the Well West Cage Rocks": "can_blast_or_smash"
@@ -74,23 +74,23 @@
         }
     },
     {
-        "region_name": "Bottom of the Well East Cage",
+        "region_name": "Bottom of the Well Lobby East Cage",
         "dungeon": "Bottom of the Well",
-        "room": "00",
+        "room": 00,
         "events": {
-            "Bottom of the Well East Cage Floor Switch": "has_explosives and can_press_floor_switch"
+            "Bottom of the Well Lobby East Cage Floor Switch": "has_explosives and can_press_floor_switch"
         },
         "exits": {
-            "Bottom of the Well Beamos Room": "transition('Bottom of the Well T02', True)"
+            "Bottom of the Well Northeast Room": "transition('Bottom of the Well T02', True)"
         }
     },
     {
         "region_name": "Bottom of the Well Lobby NE Crawl Space",
         "dungeon": "Bottom of the Well",
-        "room": "00",
+        "room": 00,
         "exits": {
             "Bottom of the Well Lobby Perimeter": "is_child",
-            "Bottom of the Well Beamos Room": "
+            "Bottom of the Well Northeast Room": "
                 transition('Bottom of the Well T03',
                 can_use_projectile or 'Bottom of the Well MQ Room 00 T03 Unbar')"
         }
@@ -98,7 +98,7 @@
     {
         "region_name": "Bottom of the Well Lobby SE Crawl Space",
         "dungeon": "Bottom of the Well",
-        "room": "00",
+        "room": 00,
         "exits": {
             "Bottom of the Well Lobby Perimeter": "is_child",
             "Bottom of the Well Dead Hand Room": "transition('Bottom of the Well T07', True)"
@@ -107,7 +107,7 @@
     {
         "region_name": "Bottom of the Well Lobby SW Fake Wall",
         "dungeon": "Bottom of the Well",
-        "room": "00",
+        "room": 00,
         "exits": {
             "Bottom of the Well Lobby Perimeter": "True",
             "Bottom of the Well Basement": "
@@ -117,7 +117,7 @@
     {
         "region_name": "Bottom of the Well Lobby Water Grate",
         "dungeon": "Bottom of the Well",
-        "room": "00",
+        "room": 00,
         "exits": {
             "Bottom of the Well Lobby Perimeter": "
                 'Bottom of the Well Lower Water' or is_child or can_dive or can_use(Iron_Boots)",
@@ -127,7 +127,7 @@
     {
         "region_name": "Bottom of the Well Basement",
         "dungeon": "Bottom of the Well",
-        "room": "01",
+        "room": 01,
         "locations": {
             "Bottom of the Well MQ Lens of Truth Chest": "'Bottom of the Well Room 01 Floor Switch'"
         },
@@ -145,7 +145,7 @@
     {
         "region_name": "Bottom of the Well Basement Ceiling",
         "dungeon": "Bottom of the Well",
-        "room": "01",
+        "room": 01,
         "events": {
             "Bottom of the Well Room 01 Floor Switch": "can_press_floor_switch"
         },
@@ -157,7 +157,7 @@
     {
         "region_name": "Bottom of the Well Basement First Finger",
         "dungeon": "Bottom of the Well",
-        "room": "01",
+        "room": 01,
         "locations": {
             "Bottom of the Well MQ GS Basement": "is_adult or can_child_attack"
         },
@@ -169,10 +169,10 @@
     {
         "region_name": "Bottom of the Well Basement Third Finger",
         "dungeon": "Bottom of the Well",
-        "room": "01",
+        "room": 01,
         "exits": {
             "Bottom of the Well Basement": "True",
-            "Bottom of the Well Beamos Room": "
+            "Bottom of the Well Northeast Room": "
                 False and (transition('Bottom of the Well T13', True)
                 or transition('Bottom of the Well T14', True)
                 or transition('Bottom of the Well T15', True))"
@@ -181,7 +181,7 @@
     {
         "region_name": "Bottom of the Well Coffin Room",
         "dungeon": "Bottom of the Well",
-        "room": "02",
+        "room": 02,
         "locations": {
             "Bottom of the Well MQ GS Coffin Room": "is_adult or can_child_attack"
         },
@@ -190,12 +190,12 @@
         }
     },
     {
-        "region_name": "Bottom of the Well Beamos Room",
+        "region_name": "Bottom of the Well Northeast Room",
         "dungeon": "Bottom of the Well",
-        "room": "03",
+        "room": 03,
         "exits": {
             "Bottom of the Well Lobby NE Crawl Space": "transition('Bottom of the Well T03', True)",
-            "Bottom of the Well East Cage": "transition('Bottom of the Well T02', True)",
+            "Bottom of the Well Lobby East Cage": "transition('Bottom of the Well T02', True)",
             "Bottom of the Well Basement Third Finger": "
                 False and (transition('Bottom of the Well T13', True)
                 or transition('Bottom of the Well T14', True)
@@ -205,7 +205,7 @@
     {
         "region_name": "Bottom of the Well Dead Hand Room",
         "dungeon": "Bottom of the Well",
-        "room": "04",
+        "room": 04,
         "events": {
             "Bottom of the Well Room 04 Enemies": "
                 is_adult or Kokiri_Sword or (Sticks and logic_child_deadhand)"
@@ -227,7 +227,7 @@
     {
         "region_name": "Bottom of the Well East Inner Room",
         "dungeon": "Bottom of the Well",
-        "room": "05",
+        "room": 05,
         "locations": {
             "Bottom of the Well MQ East Inner Room Freestanding Key": "True"
         },
@@ -239,7 +239,7 @@
     {
         "region_name": "Bottom of the Well West Inner Room",
         "dungeon": "Bottom of the Well",
-        "room": "06",
+        "room": 06,
         "locations": {
             "Bottom of the Well MQ GS West Inner Room": "
                 is_adult or can_child_attack"

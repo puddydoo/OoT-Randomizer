@@ -2,52 +2,52 @@
     {
         "region_name": "Ice Cavern Entrance Corridor",
         "dungeon": "Ice Cavern",
-        "room": "00",
+        "room": 00,
         "exits": {
             "ZF Ice Ledge": "True",
-            "Ice Cavern Lobby": "transition('Ice Cavern T??', True)"
+            "Ice Cavern Lobby": "transition('Ice Cavern T05', True)"
         }
     },
     {
         "region_name": "Ice Cavern Lobby",
         "dungeon": "Ice Cavern",
-        "room": "01",
+        "room": 01,
         "events": {
             "Ice Cavern Room 01 Enemies": "
                 is_adult or has_explosives or can_use(Dins_Fire)"
                 #Freezards are weird, they are immune to KS completely. Leave sticks out as 8/10 is a lot
         }
         "exits": {
-            "Ice Cavern Entrance Corridor": "transition('Ice Cavern T??', True)",
+            "Ice Cavern Entrance Corridor": "transition('Ice Cavern T05', True)",
             "Ice Cavern Lobby Back": "
                 'Ice Cavern Room 01 Enemies' or barred_door",
             "Ice Cavern Underwater Hall to Lobby": "
-                can_climb(230) and transition('Ice Cavern T??', True)"
+                can_climb(230) and transition('Ice Cavern T01', True)"
         }
     },
     {
         "region_name": "Ice Cavern Lobby Back",
         "dungeon": "Ice Cavern",
-        "room": "01",
+        "room": 01,
         "exits": {
             "Ice Cavern Lobby Back": "True",
-            "Ice Cavern Hall to Central Room": "transition('Ice Cavern T??', True)"
+            "Ice Cavern Hall to Central Room": "transition('Ice Cavern T04', True)"
         }
     },
     {
         "region_name": "Ice Cavern Hall to Central Room",
         "dungeon": "Ice Cavern",
-        "room": "02",
+        "room": 02,
         #Child can walk between icicles while adult can break them with master sword
         "exits": {
-            "Ice Cavern Lobby Back": "(is_child or is_adult) and transition('Ice Cavern T??', True)",
-            "Ice Cavern Central Room": "(is_child or is_adult) and transition('Ice Cavern T??', True)"
+            "Ice Cavern Lobby Back": "(is_child or is_adult) and transition('Ice Cavern T04', True)",
+            "Ice Cavern Central Room": "(is_child or is_adult) and transition('Ice Cavern T03', True)"
         }
     },
     {
         "region_name": "Ice Cavern Central Room",
         "dungeon": "Ice Cavern",
-        "room": "03",
+        "room": 03,
         #One of the silver rupees is behind icicles that child can't slip through
         #Another is too high for child, as is the exit that the rupees unlock
         "events": {
@@ -57,7 +57,7 @@
             "Ice Cavern GS Central Room": "can_use(Hookshot) or can_use(Boomerang)"
         }
         "exits": {
-            "Ice Cavern Hall to Central Room": "transition('Ice Cavern T??', True)",
+            "Ice Cavern Hall to Central Room": "transition('Ice Cavern T03', True)",
             "Ice Cavern Central Room East": "Blue_Fire",
             "Ice Cavern Central Room West": "Blue_Fire",
             "Ice Cavern Central Room North": "
@@ -67,43 +67,43 @@
     {
         "region_name": "Ice Cavern Central Room East",
         "dungeon": "Ice Cavern",
-        "room": "03",
+        "room": 03,
         "exits": {
             "Ice Cavern Central Room": "True",
-            "Ice Cavern Side Room": "transition('Ice Cavern T??', True)"
+            "Ice Cavern Side Room": "transition('Ice Cavern T10', True)"
         }
     },
     {
         "region_name": "Ice Cavern Central Room West",
         "dungeon": "Ice Cavern",
-        "room": "03",
+        "room": 03,
         "exits": {
             "Ice Cavern Central Room": "True",
-            "Ice Cavern Hall to Square Pit Room": "transition('Ice Cavern T??', True)"
+            "Ice Cavern Hall to Square Pit Room": "transition('Ice Cavern T06', True)"
         }
     },
     {
         "region_name": "Ice Cavern Central Room North",
         "dungeon": "Ice Cavern",
-        "room": "03",
+        "room": 03,
         "exits": {
             "Ice Cavern Central Room": "True",
-            "Ice Cavern Hall to Ice Bridge Room": "transition('Ice Cavern T??', True)"
+            "Ice Cavern Hall to Ice Bridge Room": "transition('Ice Cavern T02', True)"
         }
     },
     {
         "region_name": "Ice Cavern Hall to Square Pit Room",
         "dungeon": "Ice Cavern",
-        "room": "04",
+        "room": 04,
         "exits": {
-            "Ice Cavern Central Room": "(is_child or is_adult) and transition('Ice Cavern T??', True)",
-            "Ice Cavern Square Pit Room": "(is_child or is_adult) and transition('Ice Cavern T??', True)"
+            "Ice Cavern Central Room West": "(is_child or is_adult) and transition('Ice Cavern T06', True)",
+            "Ice Cavern Square Pit Room": "(is_child or is_adult) and transition('Ice Cavern T07', True)"
         }
     },
     {
         "region_name": "Ice Cavern Square Pit Room",
         "dungeon": "Ice Cavern",
-        "room": "05",
+        "room": 05,
         "events": {
             "Ice Cavern Room 05 Silver Rupees": "Blue_Fire and can_climb(60)"
         }
@@ -112,7 +112,7 @@
             "Blue Fire": "has_bottle and can_climb(61)"
         }
         "exits": {
-            "Ice Cavern Hall to Square Pit Room": "can_climb(60) and transition('Ice Cavern T??', True)",
+            "Ice Cavern Hall to Square Pit Room": "can_climb(60) and transition('Ice Cavern T07', True)",
             "Ice Cavern Square Pit Room South": "
                 can_climb(60) and ('Ice Cavern Room 05 Silver Rupees' or barred_door)"
         }
@@ -120,25 +120,25 @@
     {
         "region_name": "Ice Cavern Square Pit Room South",
         "dungeon": "Ice Cavern",
-        "room": "05",
+        "room": 05,
         "exits": {
             "Ice Cavern Square Pit Room": "True",
-            "Ice Cavern Hall to Iron Boots North": "transition('Ice Cavern T??', True)"
+            "Ice Cavern Hall to Iron Boots North": "transition('Ice Cavern T08', True)"
         }
     },
     {
         "region_name": "Ice Cavern Hall to Iron Boots North",
         "dungeon": "Ice Cavern",
-        "room": "06",
+        "room": 06,
         "exits": {
-            "Ice Cavern Square Pit Room South": "transition('Ice Cavern T??', True)",
+            "Ice Cavern Square Pit Room South": "transition('Ice Cavern T08', True)",
             "Ice Cavern Hall to Iron Boots": "Blue_Fire"
         }
     },
     {
         "region_name": "Ice Cavern Hall to Iron Boots",
         "dungeon": "Ice Cavern",
-        "room": "06",
+        "room": 06,
         "exits": {
             "Ice Cavern Hall to Iron Boots North": "Blue_Fire",
             "Ice Cavern Iron Boots Icefield": "transition('Ice Cavern T12', True)"
@@ -147,7 +147,7 @@
     {
         "region_name": "Ice Cavern Iron Boots Icefield",
         "dungeon": "Ice Cavern",
-        "room": "07",
+        "room": 07,
         "events": {
             "Ice Cavern Room 07 Enemies": "
                 is_adult or Slingshot or Sticks or
@@ -165,43 +165,43 @@
             #There is a barred floor blocking the exit before the enemies are defeated, but not a barred door
             "Ice Cavern Underwater Hall to Lobby": "
                 'Ice Cavern Room 07 Enemies' and can_use(Iron_Boots)
-                and transition('Ice Cavern T??', True)"
+                and transition('Ice Cavern T11', True)"
         }
     },
     {
         "region_name": "Ice Cavern Hall to Ice Bridge Room",
         "dungeon": "Ice Cavern",
-        "room": "08",
+        "room": 08,
         "exits": {
-            "Ice Cavern Central Room North": "transition('Ice Cavern T??', True)",
-            "Ice Cavern Ice Bridge Room": "transition('Ice Cavern T??', True)"
+            "Ice Cavern Central Room North": "transition('Ice Cavern T02', True)",
+            "Ice Cavern Ice Bridge Room": "transition('Ice Cavern T09', True)"
         }
     },
     {
         "region_name": "Ice Cavern Ice Bridge Room",
         "dungeon": "Ice Cavern",
-        "room": "09",
+        "room": 09,
         "locations": {
             "Ice Cavern Map Chest": "can_climb(57) and Blue_Fire",
             "Blue Fire": "can_climb(57) and has_bottle"
         }
         "exits": {
-            "Ice Cavern Hall to Ice Bridge Room": "can_climb(60) and transition('Ice Cavern T??', True)"
+            "Ice Cavern Hall to Ice Bridge Room": "can_climb(60) and transition('Ice Cavern T09', True)"
         }
     },
     {
         "region_name": "Ice Cavern Underwater Hall to Lobby",
         "dungeon": "Ice Cavern",
-        "room": "10",
+        "room": 10,
         "exits": {
-            "Ice Cavern Lobby": "True and transition('Ice Cavern T??', True)",
-            "Ice Cavern Iron Boots Icefield": "can_use(Iron_Boots) and transition('Ice Cavern T??', True)"
+            "Ice Cavern Lobby": "True and transition('Ice Cavern T01', True)",
+            "Ice Cavern Iron Boots Icefield": "can_use(Iron_Boots) and transition('Ice Cavern T11', True)"
         }
     },
     {
         "region_name": "Ice Cavern Side Room",
         "dungeon": "Ice Cavern",
-        "room": "11",
+        "room": 11,
         #Icicles block most of the things in the room
         "locations": {
             "Ice Cavern Compass Chest": "(is_child or is_adult) and Blue_Fire",
@@ -210,7 +210,7 @@
             "Blue Fire": "(is_child or is_adult) and has_bottle"
         }
         "exits": {
-            "Ice Cavern Central Room East": "can_climb(20) and transition('Ice Cavern T??', True)"
+            "Ice Cavern Central Room East": "can_climb(20) and transition('Ice Cavern T10', True)"
         }
     }
 ]

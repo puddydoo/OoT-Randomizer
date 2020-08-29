@@ -2,7 +2,7 @@
     {
         "region_name": "Market Entrance",
         "scene": "Market Entrance",
-        "room": "00",
+        "room": 00,
         "hint": "the Market",
         "exits": {
             "Hyrule Field": "is_adult or at_day",
@@ -13,7 +13,7 @@
     {
         "region_name": "Market",
         "scene": "Market",
-        "room": "00",
+        "room": 00,
         "hint": "the Market",
         "exits": {
             "Market Entrance": "True",
@@ -31,7 +31,7 @@
     {
         "region_name": "Market Back Alley",
         "scene": "Market Back Alley",
-        "room": "00",
+        "room": 00,
         "hint": "the Market",
         "exits": {
             "Market": "True",
@@ -43,7 +43,7 @@
     {
         "region_name": "ToT Entrance",
         "scene": "ToT Entrance",
-        "room": "00",
+        "room": 00,
         "hint": "the Market",
         "locations": {
             "ToT Gossip Stone (Left)": "True",

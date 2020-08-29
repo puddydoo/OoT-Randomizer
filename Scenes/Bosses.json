@@ -3,7 +3,7 @@
     {
         "region_name": "Gohma Entrance",
         "dungeon": "Deku Tree",
-        "room": "01",
+        "room": 01,
         "exits": {
             "Deku Tree Three Scrub Room": "True",
             "Gohma Arena": "True"
@@ -12,7 +12,7 @@
     {
         "region_name": "Gohma Arena",
         "dungeon": "Deku Tree",
-        "room": "01",
+        "room": 01,
         "events": {
             "Queen Gohma": "is_adult or Kokiri_Sword or Sticks"
         },
@@ -40,7 +40,7 @@
     {
         "region_name": "King Dodongo Entrance",
         "dungeon": "Dodongos Cavern",
-        "room": "01",
+        "room": 01,
         "locations": {
             "Dodongos Cavern Boss Room Chest": "True"
         },
@@ -52,7 +52,7 @@
     {
         "region_name": "King Dodongo Arena",
         "dungeon": "Dodongos Cavern",
-        "room": "01",
+        "room": 01,
         "events": {
             "King Dodongo": "
                 (Bombs or Progressive_Strength_Upgrade) and 
@@ -79,7 +79,7 @@
     {
         "region_name": "Barinade Arena",
         "dungeon": "Jabu Jabus Belly",
-        "room": "01",
+        "room": 01,
         "events": {
             "Barinade": "can_use(Boomerang)"
         },
@@ -103,7 +103,7 @@
     {
         "region_name": "Phantom Ganon Arena",
         "dungeon": "Forest Temple",
-        "room": "01",
+        "room": 01,
         "events": {
             "Phantom Ganon": "
                 "
@@ -129,7 +129,7 @@
     {
         "region_name": "Volvagia Arena",
         "dungeon": "Fire Temple",
-        "room": "01",
+        "room": 01,
         "events": {
             "Volvagia": "can_use(Goron_Tunic) and can_use(Megaton_Hammer)"
         },
@@ -153,7 +153,7 @@
     {
         "region_name": "Morpha Arena",
         "dungeon": "Water Temple",
-        "room": "01",
+        "room": 01,
         "events": {
             "Morpha": "is_adult and can_use(Hookshot)"
         },
@@ -180,7 +180,7 @@
     {
         "region_name": "Iron Knuckle Arena",
         "dungeon": "Spirit Temple",
-        "room": "01",
+        "room": 01,
         "events": {
             "Nabooru Iron Knuckle": "
                 "
@@ -192,7 +192,7 @@
     {
         "region_name": "Twinrova Hallway",
         "dungeon": "Spirit Temple",
-        "room": "02",
+        "room": 02,
         "exits": {
             "Iron Knuckle Arena": "True",
             "Twinrova Arena": "True"
@@ -201,7 +201,7 @@
     {
         "region_name": "Twinrova Arena",
         "dungeon": "Spirit Temple",
-        "room": "03",
+        "room": 03,
         "events": {
             "Twinrova": "is_adult and can_use(Mirror_Shield)"
         }
@@ -225,7 +225,7 @@
     {
         "region_name": "Bongo Bongo Arena",
         "dungeon": "Shadow Temple",
-        "room": "01",
+        "room": 01,
         "events": {
             "Bongo Bongo": "
                 "
@@ -249,7 +249,7 @@
     },
     {
         "region_name": "Ganondorf Arena",
-        "room": "00",
+        "room": 00,
         "events": {
             "Ganondorf": "is_adult and can_use(Light_Arrows)"
         }
@@ -263,12 +263,13 @@
     {
         "region_name": "Ganons Tower Post Boss",
         "exits": {
-            "Collapsing Tower Exterior 1": "True"
+            "Collapsing Tower Exterior 1 with Zelda": "not no_escape_sequence",
+			"Ganon Arena": "no_escape_sequence"
         }
     },
     {
         "region_name": "Ganon Arena",
-        "room": "00",
+        "room": 00,
         #Even Child Link gets the Master Sword and can beat the second phase.
         #I don't know what the exact requirements should be for the first phase though.
         "events": {

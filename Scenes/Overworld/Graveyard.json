@@ -2,7 +2,7 @@
     {
         "region_name": "Graveyard",
         "scene": "Graveyard",
-        "room": "1",
+        "room": 01,
         "hint": "the Graveyard",
         "locations": {
             "Graveyard Freestanding PoH": "logic_graveyard_poh and can_use(Boomerang)",
@@ -27,7 +27,7 @@
     {
         "region_name": "Graveyard Bean Ledge",
         "scene": "Graveyard",
-        "room": "1",
+        "room": 01,
         "hint": "the Graveyard",
         "locations": {
             "Graveyard Freestanding PoH": "true"
@@ -41,7 +41,7 @@
     {
         "region_name": "Graveyard Warp Pad Region",
         "scene": "Graveyard",
-        "room": "1",
+        "room": 01,
         "hint": "the Graveyard",
         "locations": {
             "Graveyard Gossip Stone": "True",
@@ -55,7 +55,7 @@
     {
         "region_name": "Graveyard Temple Entrance",
         "scene": "Graveyard",
-        "room": "0",
+        "room": 00,
         "hint": "the Graveyard",
         "exits": {
             "Graveyard Warp Pad Region": "True",

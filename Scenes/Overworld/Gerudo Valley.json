@@ -2,7 +2,7 @@
     {
         "region_name": "Gerudo Valley",
         "scene": "Gerudo Valley",
-        "room": "0",
+        "room": 00,
         "hint": "Gerudo Valley",
         "time_passes": true,
         "locations": {
@@ -16,13 +16,14 @@
             "GV Grotto Ledge": "can_use(Silver_Gauntlets)",
             "GV Fortress Side": "
                 is_adult and 
-                (can_ride_epona or can_use(Longshot) or gerudo_fortress == 'open' or 'Carpenter Rescue')"
+                (can_ride_epona or can_use(Longshot) or
+                gerudo_fortress == 'open' or can_finish_GerudoFortress)"
         }
     },
     {
         "region_name": "GV Upper Stream",
         "scene": "Gerudo Valley",
-        "room": "0",
+        "room": 00,
         "hint": "Gerudo Valley",
         "time_passes": true,
         "locations": {
@@ -40,7 +41,7 @@
     {
         "region_name": "GV Lower Stream",
         "scene": "Gerudo Valley",
-        "room": "0",
+        "room": 00,
         "hint": "Gerudo Valley",
         "time_passes": true,
         "exits": {
@@ -50,6 +51,7 @@
     {
         "region_name": "GV Grotto Ledge",
         "scene": "Gerudo Valley",
+		"room": 00,
         "hint": "Gerudo Valley",
         "time_passes": true,
         "exits": {
@@ -61,7 +63,7 @@
     {
         "region_name": "GV Crate Ledge",
         "scene": "Gerudo Valley",
-        "room": "0",
+        "room": 00,
         "hint": "Gerudo Valley",
         "time_passes": true,
         "locations": {
@@ -74,7 +76,7 @@
     {
         "region_name": "GV Fortress Side",
         "scene": "Gerudo Valley",
-        "room": "0",
+        "room": 00,
         "hint": "Gerudo Valley",
         "time_passes": true,
         "events": {
@@ -93,7 +95,7 @@
                 (damage_multiplier != 'ohko' or Fairy or can_use(Nayrus_Love))",
             "Gerudo Valley": "
                 is_child or can_ride_epona or can_use(Longshot) or
-                gerudo_fortress == 'open' or 'Carpenter Rescue'",
+                gerudo_fortress == 'open' or can_finish_GerudoFortress",
             "GV Carpenter Tent": "is_adult", # Invisible as child so not in logic
             "GV Storms Grotto": "is_adult and can_open_storm_grotto" # Not there as child
         }

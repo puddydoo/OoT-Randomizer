@@ -2,7 +2,7 @@
     {
         "region_name": "Zoras Domain",
         "scene": "Zoras Domain",
-        "room": "01",
+        "room": 01,
         "hint": "Zora's Domain",
         "locations": {
             "ZD Diving Minigame": "is_child",
@@ -24,7 +24,7 @@
     {
         "region_name": "ZD King Zoras Chamber",
         "scene": "Zoras Domain",
-        "room": "00",
+        "room": 00,
         "hint": "Zora's Domain",
         "events": {
             "King Zora Thawed": "is_adult and Blue_Fire",
@@ -49,7 +49,7 @@
     {
         "region_name": "ZD Behind King Zora",
         "scene": "Zoras Domain",
-        "room": "00",
+        "room": 00,
         "hint": "Zora's Domain",
         "exits": {
             "ZD King Zoras Chamber": "
@@ -61,7 +61,7 @@
     {
         "region_name": "ZD Eyeball Frog Timeout",
         "scene": "Zoras Domain",
-        "room": "00",
+        "room": 00,
         "hint": "Zora's Domain",
         "exits": {
             "ZD King Zoras Chamber": "True"

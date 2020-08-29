@@ -2,7 +2,7 @@
     {
         "region_name": "Zoras Fountain",
         "scene": "Zoras Fountain",
-        "room": "0",
+        "room": 00,
         "hint": "Zora's Fountain",
         "locations": {
             "ZF Iceberg Freestanding PoH": "is_adult",
@@ -27,7 +27,7 @@
     {
         "region_name": "ZF Ice Ledge",
         "scene": "Zoras Fountain",
-        "room": "0",
+        "room": 00,
         "hint": "Zora's Fountain",
         "exits": {
             "Zoras Fountain": "True",
@@ -37,7 +37,7 @@
     {
         "region_name": "ZF Cave Hole",
         "scene": "Zoras Fountain",
-        "room": "0",
+        "room": 00,
         "hint": "Zora's Fountain",
         "exits": {
             "ZF Cave Ledge": "True",
@@ -49,7 +49,7 @@
     {
         "region_name": "ZF Cave Ledge",
         "scene": "Zoras Fountain",
-        "room": "0",
+        "room": 00,
         "hint": "Zora's Fountain",
         "locations": {
             "ZF GS Hidden Cave": "is_adult and can_use(Hookshot) and at_night"

@@ -2,7 +2,7 @@
     {
         "region_name": "ZR Front",
         "scene": "Zora River",
-        "room": "0",
+        "room": 00,
         "hint": "Zora's River",
         "time_passes": true,
         "locations": {
@@ -17,7 +17,7 @@
     {
         "region_name": "Zora River",
         "scene": "Zora River",
-        "room": "0",
+        "room": 00,
         "hint": "Zora's River",
         "time_passes": true,
         "locations": {
@@ -47,7 +47,7 @@
     {
         "region_name": "ZR Waterfall Area",
         "scene": "Zora River",
-        "room": "1",
+        "room": 01,
         "hint": "Zora's River",
         "time_passes": true,
         "locations": {
@@ -73,7 +73,7 @@
     {
         "region_name": "ZR Behind Waterfall",
         "scene": "Zora River",
-        "room": "1",
+        "room": 01,
         "hint": "Zora's River",
         "time_passes": true,
         "exits": {
@@ -84,7 +84,7 @@
     {
         "region_name": "ZR Top of Waterfall",
         "scene": "Zora River",
-        "room": "1",
+        "room": 01,
         "hint": "Zora's River",
         "exits": {
             "ZR Waterfall Area": "True"

@@ -2,7 +2,7 @@
     {
         "region_name": "SFM Entryway",
         "scene": "Sacred Forest Meadow",
-        "room": "0",
+        "room": 00,
         "hint": "Sacred Forest Meadow",
         "exits": {
             "LW End Square": "True",
@@ -15,7 +15,7 @@
     {
         "region_name": "Sacred Forest Meadow",
         "scene": "Sacred Forest Meadow",
-        "room": "0",
+        "room": 00,
         "hint": "Sacred Forest Meadow",
         "locations": {
             "Song from Saria": "is_child and Zeldas_Letter",
@@ -36,7 +36,7 @@
     {
         "region_name": "SFM Forest Temple Entrance Ledge",
         "scene": "Sacred Forest Meadow",
-        "room": "0",
+        "room": 00,
         "hint": "Sacred Forest Meadow",
         "exits": {
             "Sacred Forest Meadow": "True",

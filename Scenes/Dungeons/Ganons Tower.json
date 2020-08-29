@@ -2,7 +2,7 @@
     {
         "region_name": "Ganons Tower 1F Entrance",
         "dungeon": "Ganons Castle",
-        "room": "07",
+        "room": 07,
         "exits": {
             "Ganons Castle Barrier Chamber": "True",
             "Ganons Tower 2F Dinolfos Room": "transition('Ganons Tower T04', True)"
@@ -11,7 +11,7 @@
     {
         "region_name": "Ganons Tower 2F Dinolfos Room",
         "dungeon": "Ganons Castle",
-        "room": "00",
+        "room": 00,
         "events": {
             "Ganons Tower Room 00 Enemies": "
                 "
@@ -29,7 +29,7 @@
     {
         "region_name": "Ganons Tower Stairs to Boss Key Room",
         "dungeon": "Ganons Castle",
-        "room": "01",
+        "room": 01,
         "exits": {
             "Ganons Tower 2F Dinolfos Room": "transition('Ganons Tower T03', True)",
             "Ganons Tower 3F Boss Key Room": "transition('Ganons Tower T05', True)"
@@ -38,11 +38,11 @@
     {
         "region_name": "Ganons Tower 3F Boss Key Room",
         "dungeon": "Ganons Castle",
-        "room": "02",
+        "room": 02,
         "events": {
             "Ganons Tower Room 02 Enemies": "
-                "
-                #2 Stalfos
+                is_adult or Kokiri_Sword"
+                #Stalfos x2
         },
         "locations": {
             "Ganons Tower Boss Key Chest": "'Ganons Tower Room 02 Enemies'",
@@ -59,7 +59,7 @@
     {
         "region_name": "Ganons Tower Stairs to Iron Knuckle Room",
         "dungeon": "Ganons Castle",
-        "room": "03",
+        "room": 03,
         "exits": {
             "Ganons Tower 3F Boss Key Room": "transition('Ganons Tower T01', True)",
             "Ganons Tower 4F Iron Knuckle Room": "transition('Ganons Tower T06', True)"
@@ -68,11 +68,11 @@
     {
         "region_name": "Ganons Tower 4F Iron Knuckle Room",
         "dungeon": "Ganons Castle",
-        "room": "04",
+        "room": 04,
         "events": {
             "Ganons Tower Room 04 Enemies": "
                 "
-                #2 Iron Knuckles
+                #Iron Knuckle x2
         },
         "exits": {
             "Ganons Tower Stairs to Iron Knuckle Room": "
@@ -86,7 +86,7 @@
     {
         "region_name": "Ganons Tower Stairs to Lower Ganondorfs Lair",
         "dungeon": "Ganons Castle",
-        "room": "05",
+        "room": 05,
         "exits": {
             "Ganons Tower 4F Iron Knuckle Room": "transition('Ganons Tower T02', True)",
             "Ganons Tower 5F Lower Ganondorfs Lair": "transition('Ganons Tower T07', True)"
@@ -95,7 +95,7 @@
     {
         "region_name": "Ganons Tower 5F Lower Ganondorfs Lair",
         "dungeon": "Ganons Castle",
-        "room": "08",
+        "room": 08,
         "exits": {
             "Ganons Tower Stairs to Ganondorfs Lair": "transition('Ganons Tower T08', True)"
         }
@@ -103,7 +103,7 @@
     {
         "region_name": "Ganons Tower Stairs to Ganondorfs Lair",
         "dungeon": "Ganons Castle",
-        "room": "06",
+        "room": 06,
         "exits": {
             "Ganondorf Boss Arena": "transition('Ganons Tower T09', True)"
         }

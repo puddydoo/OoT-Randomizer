@@ -2,7 +2,7 @@
     {
         "region_name": "Gerudo Training Grounds Lobby",
         "dungeon": "Gerudo Training Grounds",
-        "room": "00",
+        "room": 00,
         "locations": {
             "Gerudo Training Grounds MQ Lobby Left Chest": "True",
             "Gerudo Training Grounds MQ Lobby Right Chest": "True"
@@ -22,7 +22,7 @@
     {
         "region_name": "Gerudo Training Grounds Left Combat Room",
         "dungeon": "Gerudo Training Grounds",
-        "room": "01",
+        "room": 01,
         "events": {
             "Gerudo Training Grounds Room 01 Enemies": "is_adult or Kokiri_Sword or has_explosives"
                 #Iron Knuckle (limited time)
@@ -41,7 +41,7 @@
     {
         "region_name": "Gerudo Training Grounds Flame Wall Maze",
         "dungeon": "Gerudo Training Grounds",
-        "room": "02",
+        "room": 02,
         "events": {
             "Gerudo Training Grounds Room 02 Silver Rupees": "
                 can_use(Longshot) or logic_gtg_mq_without_hookshot or
@@ -58,9 +58,9 @@
     {
         "region_name": "Gerudo Training Grounds Mystery Room",
         "dungeon": "Gerudo Training Grounds",
-        "room": "03",
+        "room": 03,
         "events": {
-            # Very difficult to fight the Stalfos and Stulltulas under the time limit as child.
+            # Very difficult to fight the Stalfos and Skulltulas under the time limit as child.
             "Gerudo Training Grounds Room 03 Enemies": "is_adult",
             "Gerudo Training Grounds Heavy Block": "can_use(Silver_Gauntlets)"
         },
@@ -80,7 +80,7 @@
     {
         "region_name": "Gerudo Training Grounds Mystery Room Behind Block",
         "dungeon": "Gerudo Training Grounds",
-        "room": "03",
+        "room": 03,
         "exits": {
             "Gerudo Training Grounds Mystery Room": "'Gerudo Training Grounds Heavy Block'",
             "Gerudo Training Grounds Room Behind Heavy Block": "
@@ -92,7 +92,7 @@
     {
         "region_name": "Gerudo Training Grounds Mystery Room Fake Wall Ledge",
         "dungeon": "Gerudo Training Grounds",
-        "room": "03",
+        "room": 03,
         "exits": {
             "Gerudo Training Grounds Mystery Room": "
                 can_climb(40) and (logic_lens_gtg or can_use(Lens_of_Truth))",
@@ -105,7 +105,7 @@
     {
         "region_name": "Gerudo Training Grounds Eye Statue Lower",
         "dungeon": "Gerudo Training Grounds",
-        "room": "04",
+        "room": 04,
         "locations": {
             "Gerudo Training Grounds MQ Eye Statue Chest": "'Gerudo Training Grounds Eye Statue'"
         },
@@ -121,7 +121,7 @@
     {
         "region_name": "Gerudo Training Grounds Eye Statue Upper",
         "dungeon": "Gerudo Training Grounds",
-        "room": "04",
+        "room": 04,
         "events": {
             "Gerudo Training Grounds Room 04 Crystal Switch": "can hit the crystal switch from far away"
         },
@@ -138,9 +138,10 @@
     {
         "region_name": "Gerudo Training Grounds Hammer Room",
         "dungeon": "Gerudo Training Grounds",
-        "room": "05",
+        "room": 05,
         "events": {
-            "Gerudo Training Grounds Room 05 Enemies": ""
+            "Gerudo Training Grounds Room 05 Enemies": "
+			    "
                 #Torch Slugs and Iron Knuckle
         },
         "locations": {
@@ -163,7 +164,7 @@
     {
         "region_name": "Gerudo Training Grounds Lava Room",
         "dungeon": "Gerudo Training Grounds",
-        "room": "06",
+        "room": 06,
         "events": {
             "Gerudo Training Grounds Room 06 Silver Rupees": "
                 can_use(Bow) and can_use(Hover_Boots)"
@@ -181,7 +182,7 @@
     {
         "region_name": "Gerudo Training Grounds Lava Room Ledge",
         "dungeon": "Gerudo Training Grounds",
-        "room": "06",
+        "room": 06,
         "exits": {
             "Gerudo Training Grounds Lava Room": "can_use(Fire_Arrows) or can_use(Hookshot)",
             "Gerudo Training Grounds Lava Room Door Ledge": "can_use(Fire_Arrows) or can_use(Longshot)",
@@ -192,7 +193,7 @@
     {
         "region_name": "Gerudo Training Grounds Lava Room Door Ledge",
         "dungeon": "Gerudo Training Grounds",
-        "room": "06",
+        "room": 06,
         "events": {
             "Gerudo Training Grounds Room 06 Silver Rupees": "
                 has_fire_source and can_use(Hover_Boots)"
@@ -213,7 +214,7 @@
     {
         "region_name": "Gerudo Training Grounds Lava Room Far Ledge",
         "dungeon": "Gerudo Training Grounds",
-        "room": "06",
+        "room": 06,
         "events": {
             "Gerudo Training Grounds Lava Room Rusted Switch": "can_use(Megaton_Hammer)"
         },
@@ -231,7 +232,7 @@
     {
         "region_name": "Gerudo Training Grounds Right Combat Room",
         "dungeon": "Gerudo Training Grounds",
-        "room": "07",
+        "room": 07,
         "events": {
             "Gerudo Training Grounds Room 07 Enemies": "is_adult"
                 #A bunch of enemies (limited time)
@@ -256,7 +257,7 @@
     {
         "region_name": "Gerudo Training Grounds Central Maze Entrance",
         "dungeon": "Gerudo Training Grounds",
-        "room": "08",
+        "room": 08,
         "exits": {
             "Gerudo Training Grounds Lobby": "transition('Gerudo Training Grounds T05', True)",
             "Gerudo Training Grounds Central Maze Path 1": "transition('Gerudo Training Grounds T15', True)",
@@ -269,7 +270,7 @@
     {
         "region_name": "Gerudo Training Grounds Central Maze Path 1",
         "dungeon": "Gerudo Training Grounds",
-        "room": "08",
+        "room": 08,
         "exits": {
             "Gerudo Training Grounds Central Maze Entrance": "transition('Gerudo Training Grounds T15', True)",
             "Gerudo Training Grounds Central Maze Path 2": "transition('Gerudo Training Grounds T14', True)",
@@ -279,7 +280,7 @@
     {
         "region_name": "Gerudo Training Grounds Central Maze Hidden Ceiling",
         "dungeon": "Gerudo Training Grounds",
-        "room": "08",
+        "room": 08,
         "locations": {
             "Gerudo Training Grounds MQ Hidden Ceiling Chest": "True"
         },
@@ -291,7 +292,7 @@
     {
         "region_name": "Gerudo Training Grounds Central Maze Path 2",
         "dungeon": "Gerudo Training Grounds",
-        "room": "08",
+        "room": 08,
         "locations": {
             "Gerudo Training Grounds MQ Maze Path First Chest": "True"
         },
@@ -304,7 +305,7 @@
     {
         "region_name": "Gerudo Training Grounds Central Maze Path 3",
         "dungeon": "Gerudo Training Grounds",
-        "room": "08",
+        "room": 08,
         "exits": {
             "Gerudo Training Grounds Central Maze Path 2": "transition('Gerudo Training Grounds T18', True)",
             "Gerudo Training Grounds Central Maze Path 4": "transition('Gerudo Training Grounds T19', True)",
@@ -314,7 +315,7 @@
     {
         "region_name": "Gerudo Training Grounds Central Maze Path 4",
         "dungeon": "Gerudo Training Grounds",
-        "room": "08",
+        "room": 08,
         "locations": {
             "Gerudo Training Grounds MQ Maze Path Second Chest": "True"
         },
@@ -327,7 +328,7 @@
     {
         "region_name": "Gerudo Training Grounds Central Maze Path 5",
         "dungeon": "Gerudo Training Grounds",
-        "room": "08",
+        "room": 08,
         "locations": {
             "Gerudo Training Grounds MQ Maze Path Third Chest": "True"
         },
@@ -341,7 +342,7 @@
     {
         "region_name": "Gerudo Training Grounds Central Maze Path 6",
         "dungeon": "Gerudo Training Grounds",
-        "room": "08",
+        "room": 08,
         "exits": {
             "Gerudo Training Grounds Central Maze Path 5": "transition('Gerudo Training Grounds T21', True)",
             "Gerudo Training Grounds Central Maze Center": "transition('Gerudo Training Grounds T22', True)",
@@ -351,7 +352,7 @@
     {
         "region_name": "Gerudo Training Grounds Central Maze Center",
         "dungeon": "Gerudo Training Grounds",
-        "room": "08",
+        "room": 08,
         "exits": {
             "Gerudo Training Grounds Central Maze Path 6": "transition('Gerudo Training Grounds T22', True)",
             "Gerudo Training Grounds Central Maze Entrance": "False",
@@ -365,7 +366,7 @@
     {
         "region_name": "Gerudo Training Grounds Central Maze Right Path",
         "dungeon": "Gerudo Training Grounds",
-        "room": "08",
+        "room": 08,
         "exits": {
             #One-way barred door
             "Gerudo Training Grounds Central Maze Entrance": "
@@ -377,7 +378,7 @@
     {
         "region_name": "Gerudo Training Grounds Central Maze Right",
         "dungeon": "Gerudo Training Grounds",
-        "room": "08",
+        "room": 08,
         "locations": {
             "Gerudo Training Grounds MQ Maze Right Central Chest": "True",
             "Gerudo Training Grounds MQ Maze Right Side Chest": "True"
@@ -393,7 +394,7 @@
     {
         "region_name": "Gerudo Training Grounds Central Maze Ceiling",
         "dungeon": "Gerudo Training Grounds",
-        "room": "08",
+        "room": 08,
         "locations": {
             # The switch that opens the door to the Ice Arrows chest can be hit with a precise jumpslash.
             "Gerudo Training Grounds MQ Ice Arrows Chest": "
@@ -407,7 +408,7 @@
     {
         "region_name": "Gerudo Training Grounds Water Room",
         "dungeon": "Gerudo Training Grounds",
-        "room": "09",
+        "room": 09,
         "locations": {
             "Gerudo Training Grounds MQ Underwater Silver Rupee Chest": "
                 has_fire_source and can_use(Iron_Boots) and
@@ -421,7 +422,7 @@
     {
         "region_name": "Gerudo Training Grounds Room Behind Heavy Block",
         "dungeon": "Gerudo Training Grounds",
-        "room": "10",
+        "room": 10,
         "events": {
             "Gerudo Training Grounds Room 10 Enemies": ""
                 #Freezards and Spikes

@@ -3,12 +3,12 @@ Only the JSON files have been rewritten and they contain some problems. So if yo
 
 They pave way for such features as lock rando, door rando, hybridized Vanilla/MQ dungeons, and MM integration to be accounted for in logic, although these features are unlikely to be added and they do not completely account for them either. In general, it makes it simple to account for more requirements of traversing each room if you can look at each room individually. It makes requirements for complex dungeons like Spirit Temple less confusing. Also, if the randomizer ever eventually becomes a mod, then this would make it easier to add a logical component to the scene data itself.
 
-* All regions, including overworld regions, have been split into rooms and numbered. For the sake of door rando, I treated each room as if it was in a vacuum and went through them both ways to provide conditions regardless of what is required to access the room in vanilla. And even regardless of whether the transition to that room consists of a door. In dungeons, I made it so that the original and Master Quest versions have the same regions with the same names. I gave the regions names that made sense for both versions (haven't done this yet in Dodongo's Cavern or Bottom of the Well for some reason)
+* All regions, including overworld regions, have been split into rooms and numbered. For the sake of door rando, I treated each room as if it was in a vacuum and went through them both ways to provide conditions regardless of what is required to access the room in vanilla. And even regardless of whether the transition to that room consists of a door. In dungeons, I made it so that the original and Master Quest versions have the same regions with the same names. I gave the regions names that made sense for both versions (haven't done this yet in Dodongo's Cavern for some reason)
   * This also allows for separating boss doors from boss rooms and allowing backwards entrance into dungeons, although this would be a strange feature, and you can't fly across the river in Shadow Temple.
 * I did not change the names of any item locations. I did add stones/medallions as locations although that doesn't mean they have to be shuffled.
 * Most dungeon rooms with enemies that unlock something have been made into events which will make swordless easier to add. Did the same for silver rupees for convenience.
 * Made logic for Gerudo's Fortress/Thieves' Hideout, Ganon's Tower collapse, and boss rooms so they can be included in ER.
-  * There is a glitch heart piece at the top of Gerudo's Fortress as child which I added as a location but maybe it would be removed from the game since it would be ER only.
+  * There is a glitch heart piece at the top of Gerudo's Fortress as child which I added as a location but commented out since it would be ER only.
 
 ### Logic helpers
 
@@ -37,14 +37,135 @@ They pave way for such features as lock rando, door rando, hybridized Vanilla/MQ
 
 ### Problems
 
-* In general, many things that I didn't bother to figure out all the conditions for I went bleh.
+* In general, many things that I didn't bother to figure out all the conditions for I went bleh. See "Missing Conditions" below.
 * All these conditions will slow down generation.
 * The `transition()` condition is meant to check the key status of each door on a separate json but I have written no such json, much less provided a way to handle lock rando logic without softlocks.
 * Deku Tree MQ has requirements of using torch from outside the room. Though this might not matter without Door Rando.
-* Jabu-Jabu has Ruto and I couldn't decide how to handle this as a condition since she goes away so that would be technically NRA as far as I know. Not as much of a problem without door rando though.
+* Jabu-Jabu non-MQ requires bringing Ruto to the branching hallways room to open some doors, although this is not NRA because the randomizer uses a patch to keep her from going away after the boss.
 * Forest Temple twisting rooms hurt me especially when they both turned out to be a permanent flag in MQ only.
 * Fire Temple has those hot rooms and if you go from one into another with Door Rando you absolutely need Goron Tunic but I didn't know how to represent this in a way that could work in door rando.
 * Water Temple has the water levels which I split into 3 different regions for my sanity... This needs a lot of work to even work. Though maybe randomizing the starting water level might become a possibility?
 * Spirit Temple top floor mirrors wouldn't work in Door Rando since they would just reset.
-* Though even if we did have door rando some of those things that would be problems there could be worked around simply by not rando-ing those specific adjacent rooms and keeping them together always.
+* In the collapsing Ganon's Tower escape sequence, room 3 is the stairway that leads to the castle and room 0 is the room before it, but normally the bars in room 3 can only be opened when room 0 is entered the "proper" way. If room 3 was entered through cross-scene door rando then there would be no Zelda to open the bars. (Not a problem for non-cross-scene door rando because there are no other doors within the scene)
+* Though even if we did have door rando some of those things that would be problems there could be worked around simply by not rando-ing those specific adjacent rooms and keeping them together always. And some may work in non-cross-scene door rando if it doesn't reload the scene and keeps flags.
 * Did not yet integrate Glitched logic.
+
+### Missing Conditions
+* Deku Tree: None
+* Deku Tree MQ
+  * Room 4: Kill enemies
+  * Room 6: Kill enemies
+  * Room 10: Kill enemies
+* Dodongo's Cavern
+  * Room 3: Kill Lizalfos
+  * Room 15: Kill Armos without Goron's Bracelet
+* Dodongo's Cavern MQ
+  * Room 3: Kill Lizalfos
+  * Room 5: Kill Dodongos
+  * Room 6: Kill Gohma Larvae
+  * Room 8: Hit crystal switches
+  * Room 12: Hit crystal switch
+  * Room 13: Kill enemies
+  * Room 14: Kill Poe
+* Jabu-Jabu
+  * Room 5: Kill Gold Skulltula
+  * Room 6: Ruto and Big Octo
+  * Room 7: Ruto
+  * Room 9: Kill enemies
+  * Room 12: Kill Shaboms
+* Jabu-Jabu MQ
+  * Room 6: Ruto and Big Octo
+  * Room 14: Kill enemies
+* Forest Temple
+  * Room 18: Kill enemies
+  * Room 21: Kill enemies
+* Forest Temple MQ
+  * Room 11: Hit crystal switch
+  * Room 17: Hit crystal switch
+  * Room 18: Kill ReDeads
+  * Room 19: Straightening room
+  * Room 20: Twisting room
+  * Room 21: Kill enemies
+* Fire Temple
+  * Room 3: Kill Flare Dancer
+  * Room 7: Kill Gold Skulltula
+  * Room 15: Kill enemies
+  * Room 18: Kill Gold Skulltula
+  * Room 24: Kill Flare Dancer
+* Fire Temple MQ
+  * Room 3: Kill Flare Dancer
+  * Room 15: Kill enemies
+  * Room 18: Kill Iron Knuckle
+  * Room 24: Kill Flare Dancer
+* Water Temple
+  * Room 8: Hit crystal switch
+  * Room 9: Hit crystal switch
+  * Room 13: Kill Dark Link
+  * Room 18: Kill Shell Blades
+  * Room 19: Kill enemies
+* Water Temple MQ
+  * Room 9: Hit crystal switch
+  * Room 13: Kill Dark Link
+  * Room 14: Kill Dodongos
+  * Room 15: Hit crystal switch
+  * Room 18: Kill enemies
+* Spirit Temple
+  * Room 1: Kill enemies
+  * Room 5: Kill Gold Skulltula
+  * Room 10: Kill Iron Knuckle
+  * Room 20: Kill Iron Knuckle
+  * Room 25: Hit crystal switch
+* Spirit Temple MQ
+  * Room 2: Kill Gibdos
+  * Room 3: Kill Keese
+  * Room 4: Hit crystal switch and kill enemies
+  * Room 5: Kill Gold Skulltula
+  * Room 10: Kill Iron Knuckle
+  * Room 14: Kill Leevers
+  * Room 18: Chest switch
+  * Room 19: Kill invisible Floormaster
+  * Room 20: Kill Iron Knuckle
+* Shadow Temple
+  * Room 1: Kill Keese and ReDead
+  * Room 7: Kill Gibdos
+  * Room 11: Kill ReDeads
+  * Room 12: Get Gold Skulltula of this room
+  * Room 14: Kill Keese and Gold Skulltula
+  * Room 16: Kill enemies
+  * Room 17: Kill invisible Floormasters
+  * Room 19: Kill ReDeads
+  * Room 20: Kill Gibdos
+* Shadow Temple MQ
+  * Room 1: Kill ReDead
+  * Room 6: Kill Skulltulas
+  * Room 7: Kill Gibdos
+  * Room 9: Hit crystal switch
+  * Room 11: Kill ReDeads
+  * Room 20: Kill Gibdos
+* Ice Cavern
+  * Room 3: Break icicles
+* Ice Cavern MQ
+  * Room 3: Break icicles
+  * Room 9: Kill Gold Skulltula
+* Bottom of the Well: None
+* Bottom of the Well MQ: None
+* Gerudo Training Ground
+  * Room 3: Kill Wolfos and White Wolfos
+  * Room 5: Kill Torch Slugs and Keese
+  * Room 10: Kill Like Likes
+* Gerudo Training Ground MQ
+  * Room 4: Hit crystal switch
+  * Room 5: Kill Torch Slugs and Iron Knuckle
+  * Room 10: Kill Freezards and Spikes
+* Ganon's Castle
+  * Room 2: Break icicles
+  * Room 5: Kill Wolfos
+  * Room 18: Hit crystal switches
+* Ganon's Castle MQ
+  * Room 0: Kill enemies
+  * Room 2: Hit switch
+  * Room 9: Kill enemies
+  * Room 18: Hit crystal switch
+* Ganon's Tower
+  * Room 0: Kill Dinolfos
+  * Room 4: Kill Iron Knuckles

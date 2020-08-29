@@ -1,7 +1,7 @@
 [
     {
         "region_name": "LH Fishing Hole",
-        "room": "0",
+        "room": 00,
         "locations": {
             "LH Child Fishing": "is_child",
             "LH Adult Fishing": "is_adult"

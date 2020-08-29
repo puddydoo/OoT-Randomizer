@@ -2,7 +2,7 @@
     {
         "region_name": "Shadow Temple Lobby Entryway",
         "dungeon": "Shadow Temple",
-        "room": "02",
+        "room": 02,
         "exits": {
             "Graveyard Temple Entrance": "True",
             "Shadow Temple Lobby": "
@@ -12,7 +12,7 @@
     {
         "region_name": "Shadow Temple Lobby",
         "dungeon": "Shadow Temple",
-        "room": "02",
+        "room": 02,
         "events": {
             "Shadow Temple Room 02 Torches": "can_use(Fire_Arrows)"
         },
@@ -32,7 +32,7 @@
     {
         "region_name": "Shadow Temple Lobby East",
         "dungeon": "Shadow Temple",
-        "room": "02",
+        "room": 02,
         "events": {
             "Shadow Temple Room 02 Torches": "has_fire_source"
         },
@@ -44,7 +44,7 @@
     {
         "region_name": "Shadow Temple Whispering Wall Maze East",
         "dungeon": "Shadow Temple",
-        "room": "00",
+        "room": 00,
         "locations": {
             "Nut Pot": "True"
         },
@@ -63,7 +63,7 @@
     {
         "region_name": "Shadow Temple Whispering Wall Maze",
         "dungeon": "Shadow Temple",
-        "room": "00",
+        "room": 00,
         "events": {
             "Shadow Temple Room 00 Eye Switch": "can_use(Bow) or can_use(Slingshot)"
         },
@@ -79,7 +79,7 @@
     {
         "region_name": "Shadow Temple Whispering Wall Maze West",
         "dungeon": "Shadow Temple",
-        "room": "00",
+        "room": 00,
         "exits": {
             "Shadow Temple Dead Hand Room": "transition('Shadow Temple T01', True)",
             "Shadow Temple Whispering Wall Maze": "'Shadow Temple Room 00 Eye Switch'"
@@ -88,7 +88,7 @@
     {
         "region_name": "Shadow Temple Dungeon Map Room",
         "dungeon": "Shadow Temple",
-        "room": "01",
+        "room": 01,
         "events": {
             "Shadow Temple Room 01 Enemies": "
                 "
@@ -106,7 +106,7 @@
     {
         "region_name": "Shadow Temple Dead Hand Room",
         "dungeon": "Shadow Temple",
-        "room": "04",
+        "room": 04,
         "events": {
             "Shadow Temple Room 04 Enemies": "
                 is_adult or Kokiri_Sword or (Sticks and logic_child_deadhand)"
@@ -124,7 +124,7 @@
     {
         "region_name": "Shadow Temple First Beamos Room",
         "dungeon": "Shadow Temple",
-        "room": "05",
+        "room": 05,
         "exits": {
             "Shadow Temple Lobby East": "transition('Shadow Temple T??', True)",
             "Shadow Temple Spinning Scythe Silver Rupee Room": "
@@ -140,7 +140,7 @@
     {
         "region_name": "Shadow Temple Spinning Scythe Silver Rupee Room",
         "dungeon": "Shadow Temple",
-        "room": "06",
+        "room": 06,
         "events": {
             "Shadow Temple Room 06 Silver Rupees": "can_use(Hookshot) or can_climb(120)",
                 #Opens a grate in the room where there is an enemy and chest.
@@ -163,7 +163,7 @@
     {
         "region_name": "Shadow Temple River Styx Shortcut",
         "dungeon": "Shadow Temple",
-        "room": "21",
+        "room": 21,
         "locations": {
             "Shadow Temple MQ Near Ship Invisible Chest": "
                 logic_lens_shadow_mq or can_use(Lens_of_Truth)"
@@ -177,11 +177,11 @@
     {
         "region_name": "Shadow Temple Compass Room",
         "dungeon": "Shadow Temple",
-        "room": "07",
+        "room": 07,
         "events": {
             "Shadow Temple Room 07 Enemies": "
                 "
-                #2 Gibdos
+                #Gibdo x2
         },
         "locations": {
             "Shadow Temple MQ Early Gibdos Chest": "'Shadow Temple Room 07 Enemies'"
@@ -195,7 +195,7 @@
     {
         "region_name": "Shadow Temple Guillotine Corridor",
         "dungeon": "Shadow Temple",
-        "room": "08",
+        "room": 08,
         "exits": {
             "Shadow Temple First Beamos Room": "transition('Shadow Temple T05', True)",
             "Shadow Temple Guillotine Corridor After Ledge": "True"
@@ -204,7 +204,7 @@
     {
         "region_name": "Shadow Temple Guillotine Corridor After Ledge",
         "dungeon": "Shadow Temple",
-        "room": "08",
+        "room": 08,
         "exits": {
             "Shadow Temple Guillotine Corridor": "can_use(Hookshot) or can_climb(160)",
             "Shadow Temple Huge Pit Upper": "transition('Shadow Temple T21', True)"
@@ -213,7 +213,7 @@
     {
         "region_name": "Shadow Temple Huge Pit Upper",
         "dungeon": "Shadow Temple",
-        "room": "09",
+        "room": 09,
         "exits": {
             "Shadow Temple Guillotine Corridor After Ledge": "transition('Shadow Temple T21', True)",
             "Shadow Temple Huge Pit": "True"
@@ -222,7 +222,7 @@
     {
         "region_name": "Shadow Temple Huge Pit",
         "dungeon": "Shadow Temple",
-        "room": "09",
+        "room": 09,
         "exits": {
             "Shadow Temple Huge Pit East": "logic_lens_shadow_mq_back or can_use(Lens_of_Truth)",
             "Shadow Temple Huge Pit West": "'Shadow Temple Room 09 Frozen Eye' or logic_shadow_mq_huge_pit"
@@ -231,7 +231,7 @@
     {
         "region_name": "Shadow Temple Huge Pit East",
         "dungeon": "Shadow Temple",
-        "room": "09",
+        "room": 09,
         "events": {
             "Shadow Temple Room 09 Frozen Eye": "
                 has_fire_source and (logic_lens_shadow_mq_back or can_use(Lens_of_Truth))"
@@ -244,7 +244,7 @@
     {
         "region_name": "Shadow Temple Huge Pit West",
         "dungeon": "Shadow Temple",
-        "room": "09",
+        "room": 09,
         "events": {
             "Shadow Temple Room 06 Silver Rupees": "can_use(Longshot)",
             "Shadow Temple Room 06 Crystal Switch": "is_adult or Kokiri_Sword or has_explosives"
@@ -261,7 +261,7 @@
     {
         "region_name": "Shadow Temple Huge Pit West Hall",
         "dungeon": "Shadow Temple",
-        "room": "09",
+        "room": 09,
         "events": {
             "Shadow Temple Room 06 Crystal Switch": "can hit crystal switch"
         },
@@ -273,7 +273,7 @@
     {
         "region_name": "Shadow Temple Huge Pit Northwest",
         "dungeon": "Shadow Temple",
-        "room": "09",
+        "room": 09,
         "exits": {
             "Shadow Temple Invisible Spike Room": "
                 can_use(Hover_Boots) and transition('Shadow Temple T09', True)",
@@ -286,7 +286,7 @@
     {
         "region_name": "Shadow Temple Falling Spikes Room",
         "dungeon": "Shadow Temple",
-        "room": "10",
+        "room": 10,
         "locations": {
             "Shadow Temple MQ Falling Spikes Lower Chest": "True",
             "Shadow Temple MQ GS Falling Spikes Room": "can_use(Hookshot) or can_use(Boomerang)"
@@ -302,7 +302,7 @@
     {
         "region_name": "Shadow Temple Falling Spikes Room Upper",
         "dungeon": "Shadow Temple",
-        "room": "10",
+        "room": 10,
         "locations": {
             "Shadow Temple MQ Falling Spikes Upper Chest": "True",
             "Shadow Temple MQ Falling Spikes Switch Chest": "can_press_floor_switch"
@@ -314,12 +314,13 @@
     {
         "region_name": "Shadow Temple Invisible Spike Room",
         "dungeon": "Shadow Temple",
-        "room": "11",
+        "room": 11,
         "events": {
             "Shadow Temple Room 11 Silver Rupees": "
                 (logic_lens_shadow_mq_back or can_use(Lens_of_Truth) and can_use(Hookshot)",
             "Shadow Temple Room 11 Enemies": "
-                (logic_lens_shadow_mq_back or can_use(Lens_of_Truth) and defeat ReDeads"
+                (logic_lens_shadow_mq_back or can_use(Lens_of_Truth) and
+				defeat ReDeads"
                 #ReDeads
         },
         "locations": {
@@ -341,7 +342,7 @@
     {
         "region_name": "Shadow Temple Invisible Scythe Statue Room",
         "dungeon": "Shadow Temple",
-        "room": "16",
+        "room": 16,
         "events": {
             "Shadow Temple Room 16 Silver Rupees": "
                 (logic_lens_shadow_mq_back or can_use(Lens_of_Truth))
@@ -355,7 +356,7 @@
     {
         "region_name": "Shadow Temple Invisible Scythe Statue Room Cage",
         "dungeon": "Shadow Temple",
-        "room": "16",
+        "room": 16,
         "locations": {
             "Shadow Temple Invisible Blades Visible Chest": "True",
             "Shadow Temple Invisible Blades Invisible Chest": "logic_lens_shadow_mq_back or can_use(Lens_of_Truth)"
@@ -367,7 +368,7 @@
     {
         "region_name": "Shadow Temple Singular Skull Jar Room",
         "dungeon": "Shadow Temple",
-        "room": "14",
+        "room": 14,
         "exits": {
             "Shadow Temple Invisible Spike Room": "
                 transition('Shadow Temple T11', 'Shadow Temple Room 14 Enemies'
@@ -378,10 +379,10 @@
     {
         "region_name": "Shadow Temple Singular Skull Jar Room Upper",
         "dungeon": "Shadow Temple",
-        "room": "14",
+        "room": 14,
         "events": {
             "Shadow Temple Room 14 Enemies": "
-                "
+                is_adult or Kokiri_Sword"
                 #Stalfos
         },
         "locations": {
@@ -394,7 +395,7 @@
     {
         "region_name": "Shadow Temple Fan Trap Room",
         "dungeon": "Shadow Temple",
-        "room": "18",
+        "room": 18,
         "exits": {
             "Shadow Temple Invisible Spike Room": "transition('Shadow Temple T10', True)",
             "Shadow Temple Fan Trap Room Lower": "can_use(Hookshot) or can_use(Hover_Boots)"
@@ -403,7 +404,7 @@
     {
         "region_name": "Shadow Temple Fan Trap Room Lower",
         "dungeon": "Shadow Temple",
-        "room": "18",
+        "room": 18,
         "exits": {
             "Shadow Temple Fan Trap Room": "can_use(Hookshot) or can_climb(160)",
             "Shadow Temple Wind Hint Room": "transition('Shadow Temple T17', True)",
@@ -413,7 +414,7 @@
     {
         "region_name": "Shadow Temple Wind Hint Room",
         "dungeon": "Shadow Temple",
-        "room": "19",
+        "room": 19,
         "locations": {
             "Shadow Temple MQ Wind Hint Chest": "logic_lens_shadow_mq_back or can_use(Lens_of_Truth)",
             "Shadow Temple MQ GS Wind Hint Room": "can_use(Hookshot) or can_use(Boomerang)"
@@ -425,11 +426,11 @@
     {
         "region_name": "Shadow Temple Gibdo Room",
         "dungeon": "Shadow Temple",
-        "room": "20",
+        "room": 20,
         "events": {
             "Shadow Temple Room 20 Enemies": "
                 "
-                #2 Gibdos
+                #Gibdo x2
         },
         "locations": {
             "Shadow Temple MQ After Wind Enemy Chest": "'Shadow Temple Room 20 Enemies'",
@@ -446,7 +447,7 @@
     {
         "region_name": "Shadow Temple River Styx East",
         "dungeon": "Shadow Temple",
-        "room": "21",
+        "room": 21,
         "events": {
             "Shadow Temple Room 21 Pushblock": "Progressive_Strength_Upgrade"
         },
@@ -460,7 +461,7 @@
     {
         "region_name": "Shadow Temple River Styx East Dock",
         "dungeon": "Shadow Temple",
-        "room": "21",
+        "room": 21,
         "exits": {
             "Shadow Temple River Styx East": "True",
             "Shadow Temple River Styx West Dock": "can_play(Zeldas_Lullaby)"
@@ -469,7 +470,7 @@
     {
         "region_name": "Shadow Temple River Styx West Dock",
         "dungeon": "Shadow Temple",
-        "room": "21",
+        "room": 21,
         "events": {
             "Shadow Temple Shadow Statue": "can_use(Bow) or (logic_shadow_statue and has_bombchus)"
         },
@@ -489,7 +490,7 @@
     {
         "region_name": "Shadow Temple River Styx West Ledge",
         "dungeon": "Shadow Temple",
-        "room": "21",
+        "room": 21,
         "events": {
             "Shadow Temple Room 21 Floor Switch": "can_press_floor_switch"
         },
@@ -500,7 +501,7 @@
     {
         "region_name": "Shadow Temple River Styx West",
         "dungeon": "Shadow Temple",
-        "room": "21",
+        "room": 21,
         "events": {
             "Shadow Temple Shadow Statue": "
                 has_explosives or can_use(Bow) or Progressive_Strength_Upgrade or can_use(Dins_Fire)",
@@ -517,7 +518,7 @@
     {
         "region_name": "Shadow Temple Invisible Maze",
         "dungeon": "Shadow Temple",
-        "room": "15",
+        "room": 15,
         "exits": {
             "Shadow Temple Triplicate Skull Jar Room": "transition('Shadow Temple T12', True)",
             "Shadow Temple Boss Key Room": "transition('Shadow Temple T13', True)",
@@ -528,7 +529,7 @@
     {
         "region_name": "Shadow Temple Triplicate Skull Jar Room",
         "dungeon": "Shadow Temple",
-        "room": "12",
+        "room": 12,
         "locations": {
             "Shadow Temple MQ Freestanding Key": "True"
         },
@@ -540,7 +541,7 @@
     {
         "region_name": "Shadow Temple Triplicate Skull Jar Room Upper",
         "dungeon": "Shadow Temple",
-        "room": "12",
+        "room": 12,
         "exits": {
             "Shadow Temple Triplicate Skull Jar Room": "True"
         }
@@ -548,7 +549,7 @@
     {
         "region_name": "Shadow Temple Boss Key Room",
         "dungeon": "Shadow Temple",
-        "room": "13",
+        "room": 13,
         "locations": {
             "Shadow Temple MQ Spike Walls Left Chest": "can_use(Dins_Fire)",
             "Shadow Temple MQ Boss Key Chest": "can_use(Dins_Fire)"
@@ -560,7 +561,7 @@
     {
         "region_name": "Shadow Temple Invisible Floormaster Room",
         "dungeon": "Shadow Temple",
-        "room": "17",
+        "room": 17,
         "events": {
             "Shadow Temple Room 17 Enemies": "
                 (logic_lens_shadow_mq_back or can_use(Lens_of_Truth))
@@ -578,7 +579,7 @@
     {
         "region_name": "Shadow Temple Invisible Platforms Room",
         "dungeon": "Shadow Temple",
-        "room": "03",
+        "room": 03,
         "exits": {
             "Shadow Temple River Styx West": "transition('Shadow Temple T04', True)",
             "Shadow Temple Invisible Platforms Room Rear": "
@@ -588,7 +589,7 @@
     {
         "region_name": "Shadow Temple Invisible Platforms Room Rear",
         "dungeon": "Shadow Temple",
-        "room": "03",
+        "room": 03,
         "locations": {
             "Shadow Temple MQ GS Near Boss": "
                 (logic_lens_shadow_mq_back or can_use(Lens_of_Truth)) and can_use_projectile"

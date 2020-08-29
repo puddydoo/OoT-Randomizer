@@ -2,7 +2,7 @@
     {
         "region_name": "Death Mountain",
         "scene": "Death Mountain",
-        "room": "0",
+        "room": 00,
         "hint": "Death Mountain Trail",
         "time_passes": true,
         "locations": {
@@ -38,7 +38,7 @@
     {
         "region_name": "Dodongos Cavern Entryway",
         "scene": "Death Mountain",
-        "room": "0",
+        "room": 00,
         "exits": {
             "Dodongos Cavern Lobby Beginning": "True",
             "Death Mountain": "True"
@@ -47,7 +47,7 @@
     {
         "region_name": "Death Mountain Summit",
         "scene": "Death Mountain",
-        "room": "0",
+        "room": 00,
         "hint": "Death Mountain Trail",
         "time_passes": true,
         "events": {

@@ -2,7 +2,7 @@
     {
         "region_name": "Desert Colossus",
         "scene": "Desert Colossus",
-        "room": "0",
+        "room": 00,
         "hint": "Desert Colossus",
         "time_passes": true,
         "locations": {

@@ -1,0 +1,572 @@
+Assuming vanilla front and back for this ordering:
+1. Front Vanilla/Back Vanilla
+2. Front MQ     /Back MQ
+3. Front Vanilla/Back MQ
+4. Front MQ     /Back Vanilla
+
+MQ often flips the directions of doors to allow a different type of flag. Though MQ flips some doors for no reason despite not having bars in either version. This list treats such doors as if they didn't flip because I don't think it makes a difference.
+
+Vanilla Lifting
+MQ Locked Lifting
+01-02 Lifting
+01-02 Locked Lifting
+??? (Lock)
+
+Vanilla Locked Lifting
+MQ Lifting
+01-02 Locked Lifting
+01-02 Lifting
+??? (Lock)
+
+Vanilla Locked Lifting
+MQ Front Clear
+01-02 Locked Lifting
+01-02 Front Clear
+??? (Lock)
+
+Vanilla Locked Lifting
+MQ Front Switch
+01-02 Locked Lifting
+01-02 Front Switch
+??? (Lock)
+
+Vanilla Knob
+MQ Locked Lifting
+01-02 Knob
+01-02 Locked Lifting
+??? (Lock)
+
+Vanilla Knob
+MQ Locked Knob
+01-02 Knob
+01-02 Locked Knob
+??? (Lock)
+
+Vanilla Locked Knob
+MQ Lifting
+01-02 Locked Knob
+01-02 Lifting
+??? (Lock)
+
+Vanilla Locked Knob
+MQ Knob
+01-02 Locked Knob
+01-02 Knob
+??? (Lock)
+
+Vanilla Locked Knob
+MQ Flipped Front Clear
+01-02 Locked Knob
+02-01 Front Clear
+??? (Lock)
+
+Vanilla Locked Knob
+MQ Front Switch
+01-02 Locked Knob
+01-02 Front Switch
+??? (Lock)
+
+Vanilla Front Clear
+MQ Locked Lifting
+01-02 Front Clear
+01-02 Locked Lifting
+??? (Lock)
+
+Vanilla Front Switch
+MQ Locked Lifting
+01-02 Front Switch
+01-02 Locked Lifting
+??? (Lock)
+
+Vanilla Front Switch
+MQ Locked Knob
+01-02 Front Switch
+01-02 Locked Knob
+??? (Lock)
+
+Vanilla Lifting
+MQ Front Clear
+01-02 Lifting
+01-02 Front Clear
+01-02 Lifting
+01-02 Front Clear
+
+Vanilla Lifting
+MQ Flipped Front Clear
+01-02 Lifting
+02-01 Front Clear
+02-01 Front Clear
+01-02 Lifting
+
+Vanilla Lifting
+MQ Front Switch
+01-02 Lifting
+01-02 Front Switch
+01-02 Lifting
+01-02 Front Switch
+
+Vanilla Lifting
+MQ Flipped Front Switch
+01-02 Lifting
+02-01 Front Switch
+02-01 Front Switch
+01-02 Lifting
+
+Vanilla Lifting
+MQ Flipped FSBC
+01-02 Lifting
+02-01 Front Switch Back Clear
+02-01 Front Switch
+01-02 Front Clear
+
+Vanilla Knob
+MQ Front Clear
+01-02 Knob
+01-02 Front Clear
+01-02 Knob
+01-02 Front Clear
+
+Vanilla Knob
+MQ Flipped Front Clear
+01-02 Knob
+02-01 Front Clear
+02-01 Front Clear
+01-02 Knob
+
+Vanilla Knob
+MQ Front Switch
+01-02 Knob
+01-02 Front Switch
+01-02 Knob
+01-02 Front Switch
+
+Vanilla Knob
+MQ Flipped Front Switch
+01-02 Knob
+02-01 Front Switch
+02-01 Front Switch
+01-02 Knob
+
+Vanilla Knob
+MQ Flipped FSBC
+01-02 Knob
+02-01 Front Switch Back Clear
+02-01 Front Switch
+01-02 Front Clear
+
+Vanilla Front Clear
+MQ Lifting
+01-02 Front Clear
+01-02 Lifting
+01-02 Front Clear
+01-02 Lifting
+
+Vanilla Front Clear
+MQ Front Switch
+01-02 Front Clear
+01-02 Front Switch
+01-02 Front Clear
+01-02 Front Switch
+
+Vanilla Front Clear
+MQ Flipped Front Switch
+01-02 Front Clear
+02-01 Front Switch
+02-01 Front Switch Back Clear
+01-02 Lifting
+
+Vanilla Front Clear
+MQ Flipped FSBC
+01-02 Front Clear
+02-01 Front Switch Back Clear
+02-01 Front Switch Back Clear
+01-02 Front Clear
+
+Vanilla Front Switch
+MQ Lifting
+01-02 Front Switch
+01-02 Lifting
+01-02 Front Switch
+01-02 Lifting
+
+Vanilla Front Switch
+MQ Knob
+01-02 Front Switch
+01-02 Knob
+01-02 Front Switch
+01-02 Knob
+
+Vanilla Front Switch
+MQ Front Clear
+01-02 Front Switch
+01-02 Front Clear
+01-02 Front Switch
+01-02 Front Clear
+
+Vanilla Front Switch
+MQ Flipped Front Clear
+01-02 Front Switch
+02-01 Front Clear
+01-02 Front Switch Back Clear
+01-02 Lifting
+
+Vanilla Front Switch
+MQ FSBC
+01-02 Front Switch
+01-02 Front Switch Back Clear
+01-02 Front Switch Back Clear
+01-02 Front Switch
+
+The "both" ones will have one of the barred sides unbarred and the other one made into the front
+
+Vanilla Front Clear
+MQ Flipped Front Clear
+01-02 Front Clear
+02-01 Front Clear
+??-?? Both Clear
+01-02 Lifting
+
+Vanilla Front Switch
+MQ Flipped Front Switch
+01-02 Front Switch
+02-01 Front Switch
+??-?? Both Switch
+01-02 Lifting
+
+Vanilla Front Switch
+MQ Flipped FSBC
+01-02 Front Switch
+02-01 Front Switch Back Clear
+??-?? Both Switch
+01-02 Front Clear
+
+Vanilla FSBC
+MQ Flipped Front Switch
+01-02 Front Switch Back Clear
+02-01 Front Switch
+??-?? Both Switch
+02-01 Front Clear
+
+Deku Tree
+
+T01 01-00 Vanilla Front Clear, MQ Lifting
+T02 06-05 Vanilla Front Switch, MQ Flipped FSBC
+T03 04-03 Vanilla Lifting, MQ Flipped FSBC
+T04 07-08 Lifting Door
+T05 09-11 Front Clear Door
+T06 01-02 Vanilla Front Clear, MQ Front Switch
+T07 10-00 Vanilla Front Switch, MQ Front Clear
+T08 06-07 Vanilla Front Switch, MQ Front Clear
+T09 04-05 Front Switch Door
+T10 03-00 Transition Plane
+T11 09-03 Transition Plane
+T12 03-07 Transition Plane
+
+Dodongo's Cavern
+
+T01 01-00 Transition Plane
+T02 09-00 Transition Plane
+T03 09-00 Transition Plane
+T04 08-07 Transition Plane
+T05 08-07 Transition Plane
+T06 12-09 Transition Plane
+T07 10-09 Transition Plane
+T08 00-07 Lifting Door
+T09 03-04 Front Switch Door
+T10 03-01 Front Switch Door
+T11 03-10 Front Switch Door
+T12 03-12 Front Switch Door
+T13 11-01 Lifting Door
+T14 14-08 Vanilla Lifting, MQ Front Clear
+T15 13-04 Vanilla Lifting, MQ Flipped FSBC
+T16 15-02 Vanilla Front Clear, MQ Lifting
+T17 06-09 Vanilla Lifting, MQ Flipped FSBC
+T18 05-02 Vanilla Front Switch, MQ Flipped Front Switch
+T19 05-00 Vanilla Front Switch, MQ Front Clear
+T20 01-01 Front Switch Door
+T21 07-16 Front Switch Door
+T22 00-02 Front Switch Door
+T23 04-00 Front Switch Door
+
+Jabu-Jabu
+
+T01 05-15 Front Switch Door
+T02 00-01 Front Switch Door
+T03 01-02 Vanilla Lifting, MQ Front Switch
+T04 04-06 Vanilla Lifting, MQ Flipped Front Switch
+T05 02-07 Vanilla Lifting, MQ Front Switch
+T06 12-07 Vanilla Front Switch, MQ Lifting
+T07 08-07 Vanilla Front Clear, MQ Flipped Front Switch
+T08 11-07 Vanilla Front Clear, MQ Front Switch
+T09 01-04 Vanilla Lifting, MQ Flipped Front Switch
+T10 01-05 Vanilla Front Switch, MQ Lifting
+T11 07-10 Vanilla Front Switch, MQ Lifting
+T12 07-09 Vanilla Front Switch, MQ Lifting
+T13 03-14 Vanilla Lifting, MQ Front Switch
+T14 13-03 Vanilla Lifting, MQ Front Switch
+T15 14-01 Vanilla Front Switch, MQ Lifting
+T16 03-02 Transition Plane
+T17 03-02 Transition Plane
+T18 03-02 Transition Plane
+T19 03-02 Transition Plane
+T20 03-02 Transition Plane
+T21 03-02 Transition Plane
+T22 06-03 Front Switch Door
+
+Forest Temple
+
+T01 00-01 Knob Door
+T02 02-04 Knob Door
+T03 05-11 Vanilla Knob, MQ Front Clear
+T04 07-15 Vanilla Knob, MQ Flipped Front Switch
+T05 08-11 Knob Door
+T06 13-20 Locked Lifting Door
+T07 06-13 Front Switch Door
+T08 06-12 Front Switch Door
+T09 06-04 Front Clear Door
+T10 10-08 Vanilla Front Clear, MQ Lifting
+T11 10-07 Vanilla Front Clear, MQ Lifting
+T12 21-08 Front Clear Door
+T13 18-08 Front Clear Door
+T14 16-03 Front Clear Door
+T15 02-05 Vanilla Locked Knob, MQ Flipped Front Clear
+T16 02-08 Vanilla Knob, MQ Front Switch
+T17 02-07 Front Switch Door
+T18 02-03 Knob Door
+T19 09-07 Transition Plane
+T20 09-08 Transition Plane
+T21 17-02 Transition Plane
+T22 15-20 Transition Plane
+T23 21-19 Transition Plane
+T24 01-02 Vanilla Knob, MQ Locked Knob
+T25 15-16 Vanilla Front Switch, MQ Locked Knob
+T26 11-19 Locked Lifting Door
+T27 12-19 Locked Lifting Door
+T28 20-14 Locked Lifting Door
+T29 17-22 Boss Door
+
+Fire Temple
+
+T01 04-05 Transition Plane
+T02 02-10 Transition Plane
+T03 01-06 Transition Plane
+T04 06-08 Transition Plane
+T05 11-13 Transition Plane
+T06 16-09 Vanilla Locked Knob, MQ Front Switch
+T07 21-04 Vanilla Locked Knob, MQ Knob
+T08 09-10 Knob Door
+T09 11-10 Vanilla Knob, MQ Front Switch
+T10 10-11 Vanilla Locked Knob, MQ Knob
+T11 12-13 Vanilla Knob, MQ Locked Knob
+T12 24-12 Knob Door
+T13 01-19 Vanilla Knob, MQ Front Switch
+T14 01-20 Knob Door
+T15 01-21 Locked Knob Door
+T16 01-22 Knob Door
+T17 00-02 Vanilla Knob, MQ Flipped Front Switch
+T18 00-17 Vanilla Knob, MQ Flipped Front Clear
+T19 05-23 Vanilla Knob, MQ Front Switch
+T20 06-16 Vanilla Locked Knob, MQ Front Switch
+T21 06-16 Front Switch Door
+T22 05-06 Vanilla Locked Knob, MQ Front Switch
+T23 05-07 Knob Door
+T24 08-07 Vanilla Knob, MQ Flipped Front Switch
+T25 10-11 Vanilla Front Switch, MQ Knob
+T26 03-17 Front Clear Door
+T27 24-10 Front Clear Door
+T28 04-05 Knob Door
+T29 05-16 Vanilla Knob, MQ Locked Knob
+T30 03-18 Vanilla Front Clear, MQ Flipped Front Clear
+T31 14-10 Front Switch Door
+T32 13-14 Vanilla Knob, MQ Locked Knob
+T33 15-18 Front Clear Door
+T34 10-25 Knob Door
+T35 00-15 Locked Knob Door
+T36 02-26 Boss Door
+T37 00-01 Vanilla Locked Knob, MQ Knob
+
+Water Temple
+
+T01 17-00 Transition Plane
+T02 00-04 Transition Plane
+T03 20-00 Transition Plane
+T04 03-00 Transition Plane
+T05 00-20 Transition Plane
+T06 01-02 Transition Plane
+T07 08-21 Transition Plane
+T08 00-09 Transition Plane
+T09 00-05 Locked Knob Door
+T10 00-12 Vanilla Locked Knob, MQ Lifting
+T11 05-06 Vanilla Locked Knob, MQ Flipped Front Clear
+T12 12-14 Vanilla Knob, MQ Flipped Front Clear
+T13 15-14 Vanilla Front Switch, MQ FSBC
+T14 19-17 Vanilla Front Clear, MQ Flipped FSBC
+T15 00-01 Vanilla Locked Knob, MQ Lifting
+T16 00-01 Vanilla Front Switch, MQ Lifting
+T17 00-11 Knob Door
+T18 00-10 Vanilla Locked Knob, MQ Front Switch
+T19 13-06 Front Clear Door
+T20 13-07 Front Clear Door
+T21 08-09 Vanilla Knob, MQ Front Switch
+T22 12-16 Vanilla Locked Knob, MQ Flipped Front Clear
+T23 15-12 Vanilla Front Switch, MQ Locked Knob
+T24 17-18 Front Switch Door
+T25 00-10 Front Switch Door
+T26 11-22 Boss Door
+T27 21-07 Transition Plane
+
+Spirit Temple
+
+T01 25-24 Vanilla Lifting, MQ Flipped Front Switch
+T02 25-26 Front Switch Door
+T03 15-05 Vanilla Front Switch, MQ Flipped Front Switch
+T04 00-15 Vanilla Locked Lifting, MQ Lifting
+T05 00-13 Vanilla Front Switch, MQ Locked Lifting
+T06 00-14 Vanilla Front Switch, MQ Flipped Front Switch
+T07 20-11 Front Clear Door
+T08 10-11 Front Clear Door
+T09 08-09 Front Switch Door
+T10 01-04 Locked Lifting Door
+T11 01-03 Front Clear Door
+T12 01-02 Front Clear Door
+T13 24-22 Vanilla Front Switch, MQ Locked Lifting
+T14 23-24 Vanilla Lifting, MQ Front Switch
+T15 17-23 Locked Lifting Door
+T16 18-21 Front Switch Door
+T17 20-19 Vanilla Front Clear, MQ Flipped Front Clear
+T18 18-19 Front Switch Door
+T19 17-18 Vanilla Front Clear, MQ Front Switch
+T20 17-16 Front Clear Door
+T21 05-16 Locked Lifting Door
+T22 09-10 Locked Lifting Door
+T23 08-07 Front Switch Door
+T24 05-06 Front Switch Door
+T25 04-05 Vanilla Front Switch, MQ Locked Lifting
+T26 05-07 Front Switch Door
+T27 27-03 Front Clear Door
+T28 27-02 Vanilla Front Clear, MQ Flipped Front Clear
+T29 13-12 Front Switch Door
+T30 01-00 Transition Plane
+T31 05-28 Boss Door
+T32 00-06 Transition Plane
+T33 05-25 Transition Plane
+
+Shadow Temple
+
+T01 04-00 Front Clear Door
+T02 01-00 Front Clear Door
+T03 00-02 Vanilla Knob, MQ Locked Knob
+T04 21-03 Vanilla Locked Knob, MQ Knob
+T05 05-08 Locked Knob Door
+T06 05-06 Vanilla Knob, MQ Flipped Front Clear
+T07 07-05 Front Clear Door
+T08 09-16 Knob Door
+T09 09-11 Locked Knob Door
+T10 11-18 Locked Knob Door
+T11 11-14 Front Switch Back Clear Door
+T12 12-15 Knob Door
+T13 13-15 Vanilla Knob, MQ Locked Lifting
+T14 17-15 Vanilla Front Clear, MQ Lifting
+T15 15-21 Vanilla Knob, MQ Flipped Front Switch
+T16 20-18 Vanilla Front Clear, MQ Knob
+T17 19-18 Vanilla Front Clear, MQ Knob
+T18 20-21 Locked Knob Door
+T19 09-10 Transition Plane
+T20 02-05 Transition Plane
+T21 09-08 Transition Plane
+T22 03-22 Boss Door
+T23 21-06 Transition Plane
+
+Bottom of the Well
+
+T01 01-00 Vanilla FSBC, MQ Flipped Front Switch
+T02 00-03 Vanilla Knob, MQ Locked Lifting
+T03 00-03 Vanilla Locked Knob, MQ Front Switch
+T04 00-05 Vanilla Locked Knob, MQ Front Switch
+T05 00-06 Vanilla Locked Knob, MQ Front Switch
+T06 02-00 Vanilla Knob, MQ Locked Lifting
+T07 04-00 Front Clear Door
+T08 01-00 Transition Plane
+T09 01-00 Transition Plane
+T10 01-00 Transition Plane
+T11 01-05 Transition Plane
+T12 01-00 Transition Plane
+T13 01-03 Transition Plane
+T14 01-03 Transition Plane
+T15 01-03 Transition Plane
+
+Ice Cavern
+
+T01 10-01 Transition Plane
+T02 08-03 Transition Plane
+T03 03-02 Transition Plane
+T04 02-01 Transition Plane
+T05 00-01 Transition Plane
+T06 04-03 Transition Plane
+T07 05-04 Transition Plane
+T08 05-06 Transition Plane
+T09 09-08 Transition Plane
+T10 11-03 Transition Plane
+T11 10-07 Lifting Door
+T12 07-06 Front Clear Door
+
+Gerudo Training Ground
+
+T01 08-06 Transition Plane
+T02 01-02 Front Switch Door
+T03 02-03 Front Switch Door
+T04 03-10 Vanilla Front Switch, MQ Front Clear
+T05 00-08 Lifting Door
+T06 07-00 Vanilla Lifting, MQ Flipped Front Switch
+T07 00-01 Vanilla Lifting, MQ Front Switch
+T08 04-03 Vanilla Lifting, MQ Flipped Front Clear
+T09 05-04 Front Switch Door
+T10 05-06 Vanilla Front Clear, MQ Front Switch
+T11 06-09 Front Switch Door
+T12 07-06 Front Switch Door
+T13 04-08 Front Switch Door
+T14 08-08 Vanilla Locked Lifting, MQ Lifting
+T15 08-08 Vanilla Locked Lifting, MQ Lifting
+T16 08-08 Vanilla Locked Lifting, MQ Front Switch
+T17 08-08 Vanilla Locked Lifting, MQ Lifting
+T18 08-08 Vanilla Locked Lifting, MQ Lifting
+T19 08-08 Vanilla Locked Lifting, MQ Lifting
+T20 08-08 Locked Lifting Door
+T21 08-08 Locked Lifting Door
+T22 08-08 Locked Lifting Door
+
+Inside Ganon's Castle
+
+T01 01-16 Transition Plane
+T02 10-11 Transition Plane
+T03 00-01 Vanilla Lifting, MQ Front Clear
+T04 09-09 Vanilla Locked Lifting, MQ Front Clear
+T05 02-03 Vanilla Front Clear, MQ Locked Lifting
+T06 08-10 Vanilla Front Switch, MQ Locked Lifting
+T07 05-06 Vanilla Front Switch, MQ Front Clear
+T08 06-07 Front Switch Door
+T09 05-01 Lifting Door
+T10 01-02 Lifting Door
+T11 09-01 Lifting Door
+T12 14-01 Lifting Door
+T13 01-12 Lifting Door
+T14 03-04 Front Switch Door
+T15 12-13 Front Switch Door
+T16 14-15 Front Switch Door
+T17 17-01 Lifting Door
+T18 17-18 Front Switch Door
+T19 18-19 Front Switch Door
+T20 09-08 Locked Lifting Door
+T21 18-18 Front Switch Door
+
+Ganon's Tower
+
+T01 02-03 Front Switch Door Perm 0A
+T02 04-05 Front Clear Door
+T03 00-01 Front Clear Door
+T04 00-07 Front Clear Door
+T05 02-01 Front Switch Door Perm 0A
+T06 04-03 Front Clear Door
+T07 05-08 Boss Door Perm 14
+T08 08-06 Boss Door Perm 14
+T09 06-09 Boss Door Perm 14

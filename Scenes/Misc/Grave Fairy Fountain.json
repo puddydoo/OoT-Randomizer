@@ -2,7 +2,7 @@
     {
         "region_name": "Graveyard Shield Grave",
         "scene": "Graveyard Shield Grave",
-        "room": "00",
+        "room": 00,
         "locations": {
             "Graveyard Shield Grave Chest": "True",
             "Free Fairies": "can_blast_or_smash and has_bottle"

@@ -2,7 +2,7 @@
     {
         "region_name": "Wasteland Near Fortress",
         "scene": "Haunted Wasteland",
-        "room": "1",
+        "room": 01,
         "hint": "Haunted Wasteland",
         "exits": {
             "GF Outside Gate": "True",
@@ -13,7 +13,7 @@
     {
         "region_name": "Haunted Wasteland",
         "scene": "Haunted Wasteland",
-        "room": "1",
+        "room": 01,
         "hint": "Haunted Wasteland",
         "locations": {
             "Wasteland Bombchu Salesman": "
@@ -30,7 +30,7 @@
     {
         "region_name": "Wasteland Near Colossus",
         "scene": "Haunted Wasteland",
-        "room": "1",
+        "room": 01,
         "hint": "Haunted Wasteland",
         "exits": {
             "Desert Colossus": "True",
@@ -40,7 +40,7 @@
     {
         "region_name": "Wasteland Underground",
         "scene": "Haunted Wasteland",
-        "room": "0",
+        "room": 00,
         "hint": "Haunted Wasteland",
         "locations": {
             "Wasteland Chest": "has_fire_source",

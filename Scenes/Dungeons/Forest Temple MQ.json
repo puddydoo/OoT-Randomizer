@@ -2,7 +2,7 @@
     {
         "region_name": "Forest Temple Entrance",
         "dungeon": "Forest Temple",
-        "room": "00",
+        "room": 00,
         "locations": {
             "Forest Temple MQ First Room Chest": "
                 can_press_floor_switch and
@@ -17,7 +17,7 @@
     {
         "region_name": "Forest Temple Hall to Lobby",
         "dungeon": "Forest Temple",
-        "room": "01",
+        "room": 01,
         "locations": {
             "Forest Temple MQ GS First Hallway": "can_use(Hookshot) or can_use(Boomerang)"
         },
@@ -29,7 +29,7 @@
     {
         "region_name": "Forest Temple Lobby",
         "dungeon": "Forest Temple",
-        "room": "02",
+        "room": 02,
         "events": {
             "Forest Temple Meg": "'Forest Temple Amy' and 'Forest Temple Joelle' and 'Forest Temple Beth' and can_use(Bow)"
         },
@@ -50,7 +50,7 @@
     {
         "region_name": "Forest Temple Lobby East",
         "dungeon": "Forest Temple",
-        "room": "02",
+        "room": 02,
         "exits": {
             "Forest Temple Lobby": "True",
             "Forest Temple Hall to Poe Puzzle Room": "transition('Forest Temple T18', True)"
@@ -59,7 +59,7 @@
     {
         "region_name": "Forest Temple Hall to Miniboss Room",
         "dungeon": "Forest Temple",
-        "room": "04",
+        "room": 04,
         "exits": {
             "Forest Temple Lobby": "transition('Forest Temple T02', True)",
             "Forest Temple Miniboss Room": "
@@ -69,10 +69,10 @@
     {
         "region_name": "Forest Temple Hall to Block Push Room",
         "dungeon": "Forest Temple",
-        "room": "05",
+        "room": 05,
         "events": {
             "Forest Temple Room 05 Enemies": "
-                "
+                is_adult or Kokiri_Sword"
                 #Stalfos
         }
         "exits": {
@@ -87,7 +87,7 @@
     {
         "region_name": "Forest Temple Miniboss Room",
         "dungeon": "Forest Temple",
-        "room": "06",
+        "room": 06,
         "events": {
             "Forest Temple Room 06 Enemies Wave 1": "
                 is_adult or can_use(Dins_Fire) or
@@ -108,7 +108,7 @@
     {
         "region_name": "Forest Temple Miniboss Room Upper",
         "dungeon": "Forest Temple",
-        "room": "06",
+        "room": 06,
         "events": {
             "Forest Temple Room 06 Enemies Wave 2": "
                 is_adult or Kokiri_Sword"
@@ -129,7 +129,7 @@
     {
         "region_name": "Forest Temple East Courtyard",
         "dungeon": "Forest Temple",
-        "room": "07",
+        "room": 07,
         "events": {
             "Forest Temple Drain Well": "can_use(Bow) or can_use(Slingshot)"
         },
@@ -157,7 +157,7 @@
     {
         "region_name": "Forest Temple East Courtyard Raised Island",
         "dungeon": "Forest Temple",
-        "room": "07",
+        "room": 07,
         "locations": {
             "Forest Temple MQ Raised Island Courtyard Lower Chest": "True",
             "Deku Baba Sticks": "is_adult or Kokiri_Sword or Boomerang",
@@ -173,7 +173,7 @@
     {
         "region_name": "Forest Temple East Courtyard Door Ledge",
         "dungeon": "Forest Temple",
-        "room": "07",
+        "room": 07,
         "exits": {
             "Forest Temple Falling Room": "transition('Forest Temple T04', True)",
             "Forest Temple East Courtyard Raised Island": "True",
@@ -183,7 +183,7 @@
     {
         "region_name": "Forest Temple East Courtyard Balcony",
         "dungeon": "Forest Temple",
-        "room": "07",
+        "room": 07,
         "locations": {
             "Forest Temple MQ Raised Island Courtyard Upper Chest": "True"
         },
@@ -198,7 +198,7 @@
     {
         "region_name": "Forest Temple West Courtyard",
         "dungeon": "Forest Temple",
-        "room": "08",
+        "room": 08,
         "locations": {
             "Forest Temple MQ GS Level Island Courtyard": "is_adult or can_child_attack"
         },
@@ -216,7 +216,7 @@
     {
         "region_name": "Forest Temple West Courtyard Ledge",
         "dungeon": "Forest Temple",
-        "room": "08",
+        "room": 08,
         "locations": {
             "Forest Temple GS Level Island Courtyard": "can_use(Hookshot) or can_use(Boomerang)"
         },
@@ -230,10 +230,10 @@
     {
         "region_name": "Forest Temple Enemy Side Room",
         "dungeon": "Forest Temple",
-        "room": "18",
+        "room": 18,
         "events": {
             "Forest Temple Room 18 Enemies": "
-                Defeat all enemies"
+                "
                 #ReDead
         }
         "locations": {
@@ -248,7 +248,7 @@
     {
         "region_name": "Forest Temple Well Tunnel",
         "dungeon": "Forest Temple",
-        "room": "09",
+        "room": 09,
         "locations": {
             "Forest Temple MQ Well Chest": "'Forest Temple Drain Well'",
             "Forest Temple MQ GS Well": "
@@ -263,7 +263,7 @@
     {
         "region_name": "Forest Temple Balcony Room",
         "dungeon": "Forest Temple",
-        "room": "10",
+        "room": 10,
         "exits": {
             "Forest Temple West Courtyard": "
                 (has_fire_source_with_torch or can_use(Bow)) and transition('Forest Temple T10', True)"
@@ -273,7 +273,7 @@
     {
         "region_name": "Forest Temple Block Push Room",
         "dungeon": "Forest Temple",
-        "room": "11",
+        "room": 11,
         "events": {
             "Forest Temple Room 06 Crystal Switch": "logic_forest_mq_block_puzzle and has_bombchus"
         }
@@ -296,7 +296,7 @@
     {
         "region_name": "Forest Temple Block Push Room Lower Ledge",
         "dungeon": "Forest Temple",
-        "room": "11",
+        "room": 11,
         "exits": {
             "Forest Temple Block Push Room": "True",
             "Forest Temple Block Push Room Upper Ledge": "Progressive_Strength_Upgrade",
@@ -309,7 +309,7 @@
     {
         "region_name": "Forest Temple Block Push Room Upper Ledge",
         "dungeon": "Forest Temple",
-        "room": "11",
+        "room": 11,
         "events": {
             "Forest Temple Room 06 Crystal Switch": "
                 can_use(Bow) or can_use(Slingshot) or can_use(Longshot)"
@@ -327,7 +327,7 @@
     {
         "region_name": "Forest Temple Block Push Room North Ledge",
         "dungeon": "Forest Temple",
-        "room": "11",
+        "room": 11,
         "exits": {
             "Forest Temple West Courtyard Ledge": "transition('Forest Temple T05', True)",
             "Forest Temple Block Push Room": "True"
@@ -336,7 +336,7 @@
     {
         "region_name": "Forest Temple Block Push Room Top",
         "dungeon": "Forest Temple",
-        "room": "11",
+        "room": 11,
         "events": {
             "Forest Temple Room 06 Crystal Switch": "can hit crystal switch"
         }
@@ -349,7 +349,7 @@
     {
         "region_name": "Forest Temple Boss Key Room",
         "dungeon": "Forest Temple",
-        "room": "19",
+        "room": 19,
         #Note: In MQ the twisting flag is permanent, unlike vanilla.
         "locations": {
             "Forest Temple MQ Boss Key Chest": "
@@ -366,7 +366,7 @@
     {
         "region_name": "Forest Temple Blue Bubble Room under Boss Key Room",
         "dungeon": "Forest Temple",
-        "room": "21",
+        "room": 21,
         "events": {
             "Forest Temple Room 21 Enemies": "
                 "
@@ -382,7 +382,7 @@
     {
         "region_name": "Forest Temple Joelles Room",
         "dungeon": "Forest Temple",
-        "room": "12",
+        "room": 12,
         "events": {
             "Forest Temple Joelle": "can_use(Bow)",
         },
@@ -397,7 +397,7 @@
     {
         "region_name": "Forest Temple Compass Room",
         "dungeon": "Forest Temple",
-        "room": "13",
+        "room": 13,
         "events": {
             "Forest Temple Beth": "can_use(Bow)"
         },
@@ -412,7 +412,7 @@
     {
         "region_name": "Forest Temple Green Bubble Hall and Turning Room",
         "dungeon": "Forest Temple",
-        "room": "20",
+        "room": 20,
         "exits": {
             "Forest Temple Compass Room": "transition('Forest Temple T06', True)",
             "Forest Temple Pink Lava Room": "transition('Forest Temple T28', True)",
@@ -426,7 +426,7 @@
     {
         "region_name": "Forest Temple Pink Lava Room",
         "dungeon": "Forest Temple",
-        "room": "14",
+        "room": 14,
         "exits": {
             "Forest Temple Green Bubble Hall and Turning Room": "
                 transition('Forest Temple T28', True)"
@@ -435,7 +435,7 @@
     {
         "region_name": "Forest Temple Falling Room",
         "dungeon": "Forest Temple",
-        "room": "15",
+        "room": 15,
         "locations": {
             "Forest Temple MQ Falling Ceiling Room Chest": "can_press_floor_switch"
         },
@@ -451,7 +451,7 @@
     {
         "region_name": "Forest Temple Poe Puzzle Room",
         "dungeon": "Forest Temple",
-        "room": "16",
+        "room": 16,
         "events": {
             "Forest Temple Amy": "can_use(Bow)"
         },
@@ -465,7 +465,7 @@
     {
         "region_name": "Forest Temple Hall to Poe Puzzle Room",
         "dungeon": "Forest Temple",
-        "room": "03",
+        "room": 03,
         "exits": {
             "Forest Temple Poe Puzzle Room": "transition('Forest Temple T14', True)",
             "Forest Temple Lobby East": "transition('Forest Temple T18', True)"
@@ -474,7 +474,7 @@
     {
         "region_name": "Forest Temple Basement",
         "dungeon": "Forest Temple",
-        "room": "17",
+        "room": 17,
         "locations": {
             "Forest Temple MQ Basement Chest": "True"
         }
@@ -486,7 +486,7 @@
     {
         "region_name": "Forest Temple Basement Hall",
         "dungeon": "Forest Temple",
-        "room": "17",
+        "room": 17,
         "exits": {
             "Forest Temple Basement": "
                 at('Forest Temple Basement', can_press_floor_switch)",

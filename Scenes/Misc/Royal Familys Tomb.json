@@ -2,7 +2,7 @@
     {
         "region_name": "Royal Familys Tomb",
         "scene": "Royal Familys Tomb",
-        "room": "00",
+        "room": 00,
         "locations": {
             "Graveyard Composers Grave Chest": "has_fire_source"
         },
@@ -17,7 +17,7 @@
     {
         "region_name": "Royal Familys Tomb Acid Room",
         "scene": "Royal Familys Tomb",
-        "room": "01",
+        "room": 01,
         "exits": {
             "Royal Familys Tomb": "True",
             "Royal Familys Tomb Suns Song Room": "True"
@@ -26,7 +26,7 @@
     {
         "region_name": "Royal Familys Tomb Suns Song Room",
         "scene": "Royal Familys Tomb",
-        "room": "02",
+        "room": 02,
         "locations": {
             "Song from Composers Grave": "True"
         },

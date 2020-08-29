@@ -2,7 +2,7 @@
     {
         "region_name": "LH Lab",
         "scene": "LH Lab",
-        "room": "00",
+        "room": 00,
         "events": {
             "Eyedrops Access": "
                 is_adult and 
