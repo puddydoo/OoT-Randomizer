@@ -627,7 +627,7 @@
         "locations": {
             "Spirit Temple Boss Key Chest": "
                 here(can_use(Bow) or can_use(Slingshot)) and can_use(Hookshot)"
-        }
+        },
         "exits": {
             "Spirit Temple Lullaby Landing": "transition('Spirit Temple T13', True)"
         }
@@ -662,7 +662,7 @@
         },
         "locations": {
             "Spirit Temple Topmost Chest": "can_use(Mirror_Shield) or (mm_light_arrows and can_use(Light_Arrows))"
-        }
+        },
         "exits": {
             "Spirit Temple Ceiling Mirror Room": "transition('Spirit Temple T02', True)"
         }

@@ -1,0 +1,948 @@
+Listing requirements for each door:
+Assume every door is locked and unbarred and the player has infinite keys.
+For each door, list all of the doors that the player could open without opening this one. (No need to list boss doors or planes)
+Then a script can check how many of the required doors have keys to determine the total amount of keys the logic requires for each door. This would ensure the player can't run out of keys.
+If a door can be bypassed by going through other doors, but doing so would completely remove any possible need to go through the door in the first place, then those doors do not need to be listed as requirements.
+For example, Forest Temple T03 and T15 (the doors of Room 05 Hall to Block Push Room) can be bypassed by going into Room 11 (Block Push Room) from T05 (by hovering onto West Courtyard Ledge), but because T03 and T15 serve no other purpose but to access Room 11, there would be no reason to ever open those doors if you already had access to Room 11. So T03 and T15 would not require T05, although T05 and most other doors in Forest Temple would still require T03 and T15.
+Dungeons with multiple entrances have multiple requirements for each door. "Reqs from front" should be prioritized.
+"Reqs from boss" would only apply if the rear entrance for the dungeon was shuffled. IGC has equivalent "Reqs from tower".
+	JJB: Add T10 to all requirements, but T10 itself now only requires T01
+    Forest: Same except for T01 and T24. This also only applies if the game is modified to allow the player to go from the boss door to the elevator otherwise the player can't access any of the doors from there.
+    Fire: Same but T17 requires nothing. If the player can fly up to the room above the boss room then this would complicate things.
+    Water: Add T17 to all requirements, but T17 itself requires nothing
+	Other dungeons have very different sets of requirements.
+	Shadow Temple is special because the boss door has access to T04, T12, T13, T14, and T15, but can't open any other doors at all because there is no way to cross the river backwards.
+There might be extra sets of requirements under the conditions that hovering or other glitches are allowed. (For example more doors in Forest Temple would require T18, the door on the raised platform on the east side of the lobby)
+If door rando is ever added, it would be necessary to either disable keys, or replace this system with a script that can crawl through the world and automatically determine the exact amount of required keys.
+
+Deku Tree
+(No keys in this dungeon)
+
+T01
+Reqs from both: All other doors except T06
+T02
+Reqs from front:
+Reqs from boss:
+T03
+Reqs from front:
+Reqs from boss:
+T04
+Reqs from both: All other doors
+T05
+Reqs from both: All other doors
+T06
+Reqs from both: All other doors
+T07
+Reqs from both: All other doors
+T08
+Reqs from front:
+Reqs from boss:
+T09
+Reqs from front:
+Reqs from boss:
+T10 (Transition Plane)
+T11 (Transition Plane)
+T12 (Transition Plane)
+
+Dodongo's Cavern
+(No keys in this dungeon)
+
+T01 (Transition Plane)
+T02 (Transition Plane)
+T03 (Transition Plane)
+T04 (Transition Plane)
+T05 (Transition Plane)
+T06 (Transition Plane)
+T07 (Transition Plane)
+T08
+Reqs from front:
+Reqs from boss:
+T09
+Reqs from front:
+Reqs from boss:
+T10
+Reqs from front:
+Reqs from boss:
+T11
+Reqs from front:
+Reqs from boss:
+T12
+Reqs from front:
+Reqs from boss:
+T13
+Reqs from both: All other doors
+T14
+Reqs from both: All other doors
+T15
+Reqs from both: All other doors
+T16
+Reqs from both: All other doors
+T17
+Reqs from both: All other doors
+T18
+Reqs from front:
+Reqs from boss:
+T19
+Reqs from front:
+Reqs from boss:
+T20
+Reqs from front:
+Reqs from boss:
+T21
+Reqs from front:
+Reqs from boss:
+T22
+Reqs from front:
+Reqs from boss:
+T23
+Reqs from front:
+Reqs from boss:
+
+Jabu-Jabu
+(No keys in this dungeon)
+
+T01
+Reqs from front: All other doors
+Reqs from boss:
+T02
+Reqs from front: None
+Reqs from boss: All other doors
+T03
+Reqs from front:
+Reqs from boss:
+T04
+Reqs from front:
+Reqs from boss:
+T05
+Reqs from front:
+Reqs from boss:
+T06
+Reqs from front:
+Reqs from boss:
+T07
+Reqs from front:
+Reqs from boss:
+T08
+Reqs from front:
+Reqs from boss:
+T09
+Reqs from front:
+Reqs from boss:
+T10
+Reqs from front: All other doors except T01
+Reqs from boss: T01
+T11
+Reqs from front:
+Reqs from boss:
+T12
+Reqs from front:
+Reqs from boss:
+T13
+Reqs from front:
+Reqs from boss:
+T14
+Reqs from front:
+Reqs from boss:
+T15
+Reqs from front:
+Reqs from boss:
+T16 (Transition Plane)
+T17 (Transition Plane)
+T18 (Transition Plane)
+T19 (Transition Plane)
+T20 (Transition Plane)
+T21 (Transition Plane)
+T22
+Reqs from front:
+Reqs from boss:
+
+Forest Temple
+
+T01
+Reqs from front: None
+Reqs from boss:
+Key: Vanilla No, MQ No
+T02
+Reqs from both:
+Key: Vanilla No, MQ No
+T03
+Reqs from both:
+Key: Vanilla No, MQ No
+T04
+Reqs from both:
+Key: Vanilla No, MQ No
+T05
+Reqs from both:
+Key: Vanilla No, MQ No
+T06
+Reqs from both:
+Key: Vanilla Yes, MQ Yes
+T07
+Reqs from both:
+Key: Vanilla No, MQ No
+T08
+Reqs from both:
+Key: Vanilla No, MQ No
+T09
+Reqs from both:
+Key: Vanilla No, MQ No
+T10
+Reqs from both:
+Key: Vanilla No, MQ No
+T11
+Reqs from both:
+Key: Vanilla No, MQ No
+T12
+Reqs from both:
+Key: Vanilla No, MQ No
+T13
+Reqs from both: All other doors
+Key: Vanilla No, MQ No
+T14
+Reqs from both:
+Key: Vanilla No, MQ No
+T15
+Reqs from both:
+Key: Vanilla Yes, MQ No
+T16
+Reqs from both:
+Key: Vanilla No, MQ No
+T17
+Reqs from both:
+Key: Vanilla No, MQ No
+T18
+Reqs from both:
+Key: Vanilla No, MQ No
+T19 (Transition Plane)
+T20 (Transition Plane)
+T21 (Transition Plane)
+T22 (Transition Plane)
+T23 (Transition Plane)
+T24
+Reqs from front: T01
+Reqs from boss:
+Key: Vanilla No, MQ Yes
+T25
+Reqs from both:
+Key: Vanilla No, MQ Yes
+T26
+Reqs from both:
+Key: Vanilla Yes, MQ Yes
+T27
+Reqs from both:
+Key: Vanilla Yes, MQ Yes
+T28
+Reqs from both: All other doors
+Key: Vanilla Yes, MQ Yes
+T29 (Boss Key)
+
+Fire Temple
+
+T01 (Transition Plane)
+T02 (Transition Plane)
+T03 (Transition Plane)
+T04 (Transition Plane)
+T05 (Transition Plane)
+T06
+Reqs from front:
+Reqs from boss:
+Key: Vanilla Yes, MQ No
+T07
+Reqs from front:
+Reqs from boss:
+Key: Vanilla Yes, MQ No
+T08
+Reqs from front:
+Reqs from boss:
+Key: Vanilla No, MQ No
+T09
+Reqs from front:
+Reqs from boss:
+Key: Vanilla No, MQ No
+T10
+Reqs from front:
+Reqs from boss:
+Key: Vanilla Yes, MQ No
+T11
+Reqs from front:
+Reqs from boss:
+Key: Vanilla No, MQ Yes
+T12
+Reqs from front:
+Reqs from boss:
+Key: Vanilla No, MQ No
+T13
+Reqs from both: All other doors
+Key: Vanilla No, MQ No
+T14
+Reqs from both: All other doors
+Key: Vanilla No, MQ No
+T15
+Reqs from front:
+Reqs from boss:
+Key: Vanilla Yes, MQ Yes
+T16
+Reqs from both: All other doors
+Key: Vanilla No, MQ No
+T17
+Reqs from front: All other doors
+Reqs from boss: None
+Key: Vanilla No, MQ No
+T18
+Reqs from front:
+Reqs from boss:
+Key: Vanilla No, MQ No
+T19
+Reqs from both: All other doors
+Key: Vanilla No, MQ No
+T20
+Reqs from front:
+Reqs from boss:
+Key: Vanilla Yes, MQ No
+T21
+Reqs from front:
+Reqs from boss:
+Key: Vanilla No, MQ No
+T22
+Reqs from front:
+Reqs from boss:
+Key: Vanilla Yes, MQ No
+T23
+Reqs from front:
+Reqs from boss:
+Key: Vanilla No, MQ No
+T24
+Reqs from front:
+Reqs from boss:
+Key: Vanilla No, MQ No
+T25
+Reqs from front:
+Reqs from boss:
+Key: Vanilla No, MQ No
+T26
+Reqs from front:
+Reqs from boss:
+Key: Vanilla No, MQ No
+T27
+Reqs from front:
+Reqs from boss:
+Key: Vanilla No, MQ No
+T28
+Reqs from front:
+Reqs from boss:
+Key: Vanilla No, MQ No
+T29
+Reqs from front:
+Reqs from boss:
+Key: Vanilla No, MQ Yes
+T30
+Reqs from front:
+Reqs from boss:
+Key: Vanilla No, MQ No
+T31
+Reqs from front:
+Reqs from boss:
+Key: Vanilla No, MQ No
+T32
+Reqs from front:
+Reqs from boss:
+Key: Vanilla No, MQ Yes
+T33
+Reqs from front:
+Reqs from boss:
+Key: Vanilla No, MQ No
+T34
+Reqs from both: All other doors
+Key: Vanilla No, MQ No
+T35
+Reqs from front:
+Reqs from boss:
+Key: Vanilla Yes, MQ Yes
+Note: Randomizer has removed the key from T35 outside of Keysanity.
+T36 (Boss Key)
+T37
+Reqs from front:
+Reqs from boss:
+Key: Vanilla Yes, MQ No
+
+Water Temple
+
+T01 (Transition Plane)
+T02 (Transition Plane)
+T03 (Transition Plane)
+T04 (Transition Plane)
+T05 (Transition Plane)
+T06 (Transition Plane)
+T07 (Transition Plane)
+T08 (Transition Plane)
+T09
+Reqs from front:
+Reqs from boss:
+Key: Vanilla Yes, MQ Yes
+T10
+Reqs from front:
+Reqs from boss:
+Key: Vanilla Yes, MQ No
+T11
+Reqs from front:
+Reqs from boss:
+Key: Vanilla Yes, MQ No
+T12
+Reqs from front:
+Reqs from boss:
+Key: Vanilla No, MQ No
+T13
+Reqs from front:
+Reqs from boss:
+Key: Vanilla No, MQ No
+T14
+Reqs from front: All other doors
+Reqs from boss: All other doors
+Key: Vanilla No, MQ No
+T15
+Reqs from front:
+Reqs from boss:
+Key: Vanilla Yes, MQ No
+T16
+Reqs from front:
+Reqs from boss:
+Key: Vanilla No, MQ No
+T17
+Reqs from front: All other doors
+Reqs from boss: None
+Key: Vanilla No, MQ No
+T18
+Reqs from front:
+Reqs from boss:
+Key: Vanilla Yes, MQ No
+Note: Randomizer has removed the key from T18.
+T19
+Reqs from front:
+Reqs from boss:
+Key: Vanilla No, MQ No
+T20
+Reqs from front: All other doors
+Reqs from boss: All other doors
+Key: Vanilla No, MQ No
+T21
+Reqs from front:
+Reqs from boss:
+Key: Vanilla No, MQ No
+T22
+Reqs from front: All other doors
+Reqs from boss: All other doors
+Key: Vanilla Yes, MQ No
+T23
+Reqs from front:
+Reqs from boss:
+Key: Vanilla No, MQ Yes
+T24
+Reqs from front: All other doors
+Reqs from boss: All other doors
+Key: Vanilla No, MQ No
+T25
+Reqs from front:
+Reqs from boss:
+Key: Vanilla No, MQ No
+T26 (Boss Key)
+T27 (Transition Plane)
+
+Spirit Temple
+
+T01
+Reqs from front:
+Reqs from boss:
+Reqs from front (shuffled hands):
+Reqs from boss (shuffled hands):
+Reqs from right hand:
+Reqs from left hand:
+Key: Vanilla No, MQ No
+T02
+Reqs from any: All other doors
+Key: Vanilla No, MQ No
+T03
+Reqs from front:
+Reqs from boss:
+Reqs from front (shuffled hands):
+Reqs from boss (shuffled hands):
+Reqs from right hand:
+Reqs from left hand:
+Key: Vanilla No, MQ No
+T04
+Reqs from front:
+Reqs from boss:
+Reqs from front (shuffled hands):
+Reqs from boss (shuffled hands):
+Reqs from right hand:
+Reqs from left hand:
+Key: Vanilla Yes, MQ No
+T05
+Reqs from front:
+Reqs from boss:
+Reqs from front (shuffled hands):
+Reqs from boss (shuffled hands):
+Reqs from right hand:
+Reqs from left hand:
+Key: Vanilla No, MQ Yes
+T06
+Reqs from any: All other doors
+Key: Vanilla No, MQ No
+T07
+Reqs from front:
+Reqs from boss:
+Reqs from front (shuffled hands): All other doors
+Reqs from boss (shuffled hands): All other doors
+Reqs from right hand: All other doors
+Reqs from left hand: None
+Key: Vanilla No, MQ No
+T08
+Reqs from front:
+Reqs from boss:
+Reqs from front (shuffled hands): All other doors
+Reqs from boss (shuffled hands): All other doors
+Reqs from right hand: None
+Reqs from left hand: All other doors
+Key: Vanilla No, MQ No
+T09
+Reqs from front:
+Reqs from boss:
+Reqs from front (shuffled hands): All other doors except T08, T22
+Reqs from boss (shuffled hands): All other doors except T08, T22
+Reqs from right hand: T08, T22
+Reqs from left hand: All other doors except T08, T22
+Key: Vanilla No, MQ No
+T10
+Reqs from front:
+Reqs from boss:
+Reqs from front (shuffled hands):
+Reqs from boss (shuffled hands):
+Reqs from right hand:
+Reqs from left hand:
+Key: Vanilla Yes, MQ Yes
+T11
+Reqs from front:
+Reqs from boss:
+Reqs from front (shuffled hands):
+Reqs from boss (shuffled hands):
+Reqs from right hand:
+Reqs from left hand:
+Key: Vanilla No, MQ No
+T12
+Reqs from front:
+Reqs from boss:
+Reqs from front (shuffled hands):
+Reqs from boss (shuffled hands):
+Reqs from right hand:
+Reqs from left hand:
+Key: Vanilla No, MQ No
+T13
+Reqs from any: All other doors
+Key: Vanilla No, MQ Yes
+T14
+Reqs from front:
+Reqs from boss:
+Reqs from front (shuffled hands):
+Reqs from boss (shuffled hands):
+Reqs from right hand:
+Reqs from left hand:
+Key: Vanilla No, MQ No
+T15
+Reqs from front:
+Reqs from boss:
+Reqs from front (shuffled hands):
+Reqs from boss (shuffled hands):
+Reqs from right hand:
+Reqs from left hand:
+Key: Vanilla Yes, MQ Yes
+T16
+Reqs from any: All other doors
+Key: Vanilla No, MQ No
+T17
+Reqs from front:
+Reqs from boss:
+Reqs from front (shuffled hands): All other doors except T07
+Reqs from boss (shuffled hands): All other doors except T07
+Reqs from right hand: All other doors except T07
+Reqs from left hand: T07
+Key: Vanilla No, MQ No
+T18
+Reqs from front:
+Reqs from boss:
+Reqs from front (shuffled hands): All other doors except T07, T17
+Reqs from boss (shuffled hands): All other doors except T07, T17
+Reqs from right hand: All other doors except T07, T17
+Reqs from left hand: T07, T17
+Key: Vanilla No, MQ No
+T19
+Reqs from front:
+Reqs from boss:
+Reqs from front (shuffled hands): All other doors except T07, T16, T17, T18
+Reqs from boss (shuffled hands): All other doors except T07, T16, T17, T18
+Reqs from right hand: All other doors except T07, T16, T17, T18
+Reqs from left hand: T07, T16, T17, T18
+Key: Vanilla No, MQ No
+T20
+Reqs from front:
+Reqs from boss:
+Reqs from front (shuffled hands):
+Reqs from boss (shuffled hands):
+Reqs from right hand:
+Reqs from left hand:
+Key: Vanilla No, MQ No
+T21
+Reqs from front:
+Reqs from boss:
+Reqs from front (shuffled hands):
+Reqs from boss (shuffled hands):
+Reqs from right hand:
+Reqs from left hand:
+Key: Vanilla Yes, MQ Yes
+T22
+Reqs from front:
+Reqs from boss:
+Reqs from front (shuffled hands): All other doors except T08
+Reqs from boss (shuffled hands): All other doors except T08
+Reqs from right hand: T08
+Reqs from left hand: All other doors except T08
+Key: Vanilla Yes, MQ Yes
+T23
+Reqs from front:
+Reqs from boss:
+Reqs from front (shuffled hands): All other doors except T08, T09, T22
+Reqs from boss (shuffled hands): All other doors except T08, T09, T22
+Reqs from right hand: T08, T09, T22
+Reqs from left hand: All other doors except T08, T09, T22
+Key: Vanilla No, MQ No
+T24
+Reqs from front:
+Reqs from boss:
+Reqs from front (shuffled hands):
+Reqs from boss (shuffled hands):
+Reqs from right hand:
+Reqs from left hand:
+Key: Vanilla No, MQ No
+T25
+Reqs from front:
+Reqs from boss:
+Reqs from front (shuffled hands):
+Reqs from boss (shuffled hands):
+Reqs from right hand:
+Reqs from left hand:
+Key: Vanilla No, MQ Yes
+T26
+Reqs from front:
+Reqs from boss:
+Reqs from front (shuffled hands): All other doors except T08, T09, T22, T23
+Reqs from boss (shuffled hands): All other doors except T08, T09, T22, T23
+Reqs from right hand: T08, T09, T22, T23
+Reqs from left hand: All other doors except T08, T09, T22, T23
+Key: Vanilla No, MQ No
+T27
+Reqs from front:
+Reqs from boss:
+Reqs from front (shuffled hands):
+Reqs from boss (shuffled hands):
+Reqs from right hand:
+Reqs from left hand:
+Key: Vanilla No, MQ No
+T28
+Reqs from front:
+Reqs from boss:
+Reqs from front (shuffled hands):
+Reqs from boss (shuffled hands):
+Reqs from right hand:
+Reqs from left hand:
+Key: Vanilla No, MQ No
+T29
+Reqs from any: All other doors
+Key: Vanilla No, MQ No
+T30 (Transition Plane)
+T31 (Boss Key)
+T32 (Transition Plane)
+T33 (Transition Plane)
+
+Shadow Temple
+
+T01
+Reqs from front: All other doors
+Reqs from boss:
+Key: Vanilla No, MQ No
+T02
+Reqs from front: All other doors
+Reqs from boss:
+Key: Vanilla No, MQ No
+T03
+Reqs from front: All other doors except T01, T02
+Reqs from boss:
+Key: Vanilla No, MQ Yes
+T04
+Reqs from front: All other doors
+Reqs from boss: None
+Key: Vanilla Yes, MQ No
+T05
+Reqs from front: T01, T02, T03, T06, T07
+Reqs from boss:
+Key: Vanilla Yes, MQ Yes
+T06
+Reqs from front: T01, T02, T03, T05, T07, T08, T09, T10, T11, T16, T17, T18
+    and ((T04, T12, T13, T14, T15) or 'Shadow Temple Room 21 Pushblock')
+Reqs from boss:
+Key: Vanilla No, MQ No
+T07
+Reqs from front: All other doors
+Reqs from boss:
+Key: Vanilla No, MQ No
+T08
+Reqs from front: All other doors
+Reqs from boss:
+Key: Vanilla No, MQ No
+T09
+Reqs from front: T01, T02, T03, T05, T06, T07
+Reqs from boss:
+Key: Vanilla Yes, MQ Yes
+T10
+Reqs from front: All other doors except T04, T12, T13, T14, T15, T16, T17, T18
+Reqs from boss:
+Key: Vanilla Yes, MQ Yes
+T11
+Reqs from front: All other doors
+Reqs from boss:
+Key: Vanilla No, MQ No
+T12
+Reqs from front: All other doors
+Reqs from boss:
+Key: Vanilla No, MQ No
+T13
+Reqs from front: All other doors
+Reqs from boss:
+Key: Vanilla No, MQ Yes
+T14
+Reqs from front: All other doors
+Reqs from boss:
+Key: Vanilla No, MQ No
+T15
+Reqs from front: All other doors except T12, T13, T14
+Reqs from boss:
+Key: Vanilla No, MQ No
+T16
+Reqs from front: All other doors except T04, T12, T13, T14, T15, T18
+Reqs from boss:
+Key: Vanilla No, MQ No
+T17
+Reqs from front: All other doors
+Reqs from boss:
+Key: Vanilla No, MQ No
+T18
+Reqs from front: All other doors except T04, T12, T13, T14, T15
+Reqs from boss:
+Key: Vanilla Yes, MQ Yes
+T19 (Transition Plane)
+T20 (Transition Plane)
+T21 (Transition Plane)
+T22 (Boss Key)
+T23 (Transition Plane)
+
+Bottom of the Well
+
+T01
+Reqs: T02, T03, T04, T05, T06, T07
+Key: Vanilla No, MQ No
+T02
+Reqs: T01, T03, T04, T05, T06, T07
+Key: Vanilla No, MQ Yes
+T03
+Reqs: T01, T04, T05, T06, T07
+Key: Vanilla Yes, MQ No
+T04
+Reqs: T01, T02, T03, T05, T06, T07
+Key: Vanilla Yes, MQ No
+T05
+Reqs: T01, T02, T03, T04, T06, T07
+Key: Vanilla Yes, MQ No
+T06
+Reqs: T01, T02, T03, T04, T05, T07
+Key: Vanilla No, MQ Yes
+T07
+Reqs: T01, T02, T03, T04, T05, T06
+Key: Vanilla No, MQ No
+T08 (Transition Plane)
+T09 (Transition Plane)
+T10 (Transition Plane)
+T11 (Transition Plane)
+T12 (Transition Plane)
+T13 (Transition Plane)
+T14 (Transition Plane)
+T15 (Transition Plane)
+
+Ice Cavern
+(No keys in this dungeon)
+
+T01 (Transition Plane)
+T02 (Transition Plane)
+T03 (Transition Plane)
+T04 (Transition Plane)
+T05 (Transition Plane)
+T06 (Transition Plane)
+T07 (Transition Plane)
+T08 (Transition Plane)
+T09 (Transition Plane)
+T10 (Transition Plane)
+T11
+Reqs: T12
+T12
+Reqs: None
+
+Gerudo Training Ground
+
+T01 (Transition Plane)
+T02
+Reqs: All other doors
+Key: Vanilla No, MQ No
+T03
+Reqs: All other doors
+Key: Vanilla No, MQ No
+T04
+Reqs: All other doors
+Key: Vanilla No, MQ No
+T05
+Reqs: All other doors
+Key: Vanilla No, MQ No
+T06
+Reqs: All other doors
+Key: Vanilla No, MQ No
+T07
+Reqs: All other doors
+Key: Vanilla No, MQ No
+T08
+Reqs: All other doors
+Key: Vanilla No, MQ No
+T09
+Reqs: All other doors
+Key: Vanilla No, MQ No
+T10
+Reqs: All other doors
+Key: Vanilla No, MQ No
+T11
+Reqs: All other doors
+Key: Vanilla No, MQ No
+T12
+Reqs: All other doors
+Key: Vanilla No, MQ No
+T13
+Reqs: All other doors
+Key: Vanilla No, MQ No
+T14
+Reqs: All other doors except T18, T19, T20, T21, T22
+Key: Vanilla Yes, MQ No
+T15
+Reqs: All other doors except T14, T18, T19, T20, T21, T22
+Key: Vanilla Yes, MQ No
+T16
+Reqs: All other doors
+Key: Vanilla Yes, MQ No
+T17
+Reqs: All other doors
+Key: Vanilla Yes, MQ No
+T18
+Reqs: All other doors except T19, T20, T21, T22
+Key: Vanilla Yes, MQ No
+T19
+Reqs: All other doors except T20, T21, T22
+Key: Vanilla Yes, MQ No
+T20
+Reqs: All other doors except T21, T22
+Key: Vanilla Yes, MQ Yes
+T21
+Reqs: All other doors except T22
+Key: Vanilla Yes, MQ Yes
+T22
+Reqs: All other doors
+Key: Vanilla Yes, MQ Yes
+
+Inside Ganon's Castle
+
+T01 (Transition Plane)
+T02 (Transition Plane)
+T03
+Reqs from front: None
+Reqs from tower: T04, T05, T06, T07, T08, T09, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21
+Key: Vanilla No, MQ No
+T04
+Reqs from both: T03, T05, T07, T08, T09, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T21
+Key: Vanilla Yes, MQ No
+T05
+Reqs from both: T03, T04, T06, T07, T08, T09, T10, T11, T12, T13, T15, T16, T17, T18, T19, T20, T21
+Key: Vanilla No, MQ Yes
+T06
+Reqs from both: T03, T04, T05, T07, T08, T09, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21
+Key: Vanilla No, MQ Yes
+T07
+Reqs from both: T03, T04, T05, T06, T09, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21
+Key: Vanilla No, MQ No
+T08
+Reqs from both: T03, T04, T05, T06, T07, T09, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21
+Key: Vanilla No, MQ No
+T09
+Reqs from both: T03, T04, T05, T06, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21
+Key: Vanilla No, MQ No
+T10
+Reqs from both: T03, T04, T06, T07, T08, T09, T11, T12, T13, T15, T16, T17, T18, T19, T20, T21
+Key: Vanilla No, MQ No
+T11
+Reqs from both: T03, T05, T07, T08, T09, T10, T12, T13, T14, T15, T16, T17, T18, T19, T21
+Key: Vanilla No, MQ No
+T12
+Reqs from both: T03, T04, T05, T06, T07, T08, T09, T10, T11, T13, T14, T15, T17, T18, T19, T20, T21
+Key: Vanilla No, MQ No
+T13
+Reqs from both: T03, T04, T05, T06, T07, T08, T09, T10, T11, T12, T14, T16, T17, T18, T19, T20, T21
+Key: Vanilla No, MQ No
+T14
+Reqs from both: T03, T04, T05, T06, T07, T08, T09, T10, T11, T12, T13, T15, T16, T17, T18, T19, T20, T21
+Key: Vanilla No, MQ No
+T15
+Reqs from both: T03, T04, T05, T06, T07, T08, T09, T10, T11, T12, T13, T14, T16, T17, T18, T19, T20, T21
+Key: Vanilla No, MQ No
+T16
+Reqs from both: T03, T04, T05, T06, T07, T08, T09, T10, T11, T12, T13, T14, T15, T17, T18, T19, T20, T21
+Key: Vanilla No, MQ No
+T17
+Reqs from both: T03, T04, T05, T06, T07, T08, T09, T10, T11, T12, T13, T14, T15, T16, T20
+Key: Vanilla No, MQ No
+T18
+Reqs from both: T03, T04, T05, T06, T07, T08, T09, T10, T11, T12, T13, T14, T15, T16, T17, T18, T20
+Key: Vanilla No, MQ No
+T19
+Reqs from both: T03, T04, T05, T06, T07, T08, T09, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21
+Key: Vanilla No, MQ No
+T20
+Reqs from both: T03, T04, T05, T07, T08, T09, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T21
+Key: Vanilla Yes, MQ Yes
+T21
+Reqs from both: T03, T04, T05, T06, T07, T08, T09, T10, T11, T12, T13, T14, T15, T16, T17, T18, T20
+Key: Vanilla No, MQ No
+
+Ganon's Tower
+(Boss key, no small key)
+
+T01
+Reqs from front: T03, T04, T05
+Reqs from boss: T02, T06
+T02
+Reqs from front: T01, T03, T04, T05, T06
+Reqs from boss: None
+T03
+Reqs from front: T04
+Reqs from boss: T01, T02, T05, T06
+T04
+Reqs from front: None
+Reqs from boss: T01, T02, T03, T05, T06
+T05
+Reqs from front: T03, T04
+Reqs from boss: T01, T02, T06
+T06
+Reqs from front: T01, T03, T04, T05
+Reqs from boss: T02
+T07 (Boss Key)
+T08 (Boss Key)
+T09 (Boss Key)
