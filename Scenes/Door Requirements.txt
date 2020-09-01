@@ -160,58 +160,85 @@ Forest Temple
 
 T01
 Reqs from front: None
-Reqs from boss:
+Reqs from boss: All other doors
 Key: Vanilla No, MQ No
 T02
-Reqs from both:
+Reqs from both: T01, T03, T05, T06, T07, T08, T10, T11, T12, T13, T15, T16, T17, T24, T26, T27, T28
+Door Ledge or East Lobby: T04, T14, T18, T25
 Key: Vanilla No, MQ No
 T03
-Reqs from both:
+Reqs from both: T01, T02, T09, T10, T11, T15, T16, T17, T24
+Door Ledge or East Lobby: T04, T14, T18, T25
+West Courtyard Ledge: T12, T13
+Fall up west twisting room: T06, T07, T08, T26, T27, T28
+Fall up east twisting room: T06, T07, T08, T26, T27, T28
+Not required due to bypassing the room: T05
 Key: Vanilla No, MQ No
 T04
-Reqs from both:
+Reqs from both: T01, T02, T03, T05, T06, T07, T08, T09, T10, T11, T12, T13, T15, T16, T17, T24, T26, T27, T28
+East Lobby: T14, T18, T25
 Key: Vanilla No, MQ No
 T05
-Reqs from both:
+Reqs from both: T01, T02, T03, T06, T07, T08, T09, T10, T11, T15, T16, T17, T24, T26, T27, T28
+Door Ledge or East Lobby: T04, T14, T18, T25
+West Courtyard Ledge: T12, T13
 Key: Vanilla No, MQ No
 T06
-Reqs from both:
+Reqs from both: T01, T02, T03, T05, T07, T08, T09, T10, T11, T12, T13, T15, T16, T17, T24, T26, T27
+Door Ledge or East Lobby: T04, T14, T18
+Fall up east twisting room: T25, T28
 Key: Vanilla Yes, MQ Yes
 T07
-Reqs from both:
+Reqs from both: T01, T02, T03, T05, T08, T09, T10, T11, T12, T13, T15, T16, T17, T24, T26, T27
+Door Ledge or East Lobby: T04, T14, T18, T25
+Fall up east twisting room: T06, T28
 Key: Vanilla No, MQ No
 T08
-Reqs from both:
+Reqs from both: T01, T02, T03, T05, T09, T10, T11, T12, T13, T15, T16, T17, T24, T26, T27
+Door Ledge or East Lobby: T04, T14, T18, T25
+Fall up east twisting room: T06, T07, T28
 Key: Vanilla No, MQ No
 T09
-Reqs from both:
+Reqs from both: T01, T02, T03, T05, T06, T07, T08, T09, T10, T11, T12, T13, T15, T16, T17, T24, T26, T27, T28
+Door Ledge or East Lobby: T04, T14, T18, T25
 Key: Vanilla No, MQ No
 T10
-Reqs from both:
+Reqs from both: T01, T02, T03, T05, T06, T07, T08, T09, T11, T12, T13, T15, T16, T17, T24, T26, T27, T28
+Door Ledge or East Lobby: T04, T14, T18, T25
 Key: Vanilla No, MQ No
 T11
-Reqs from both:
+Reqs from both: T01, T02, T03, T05, T06, T07, T08, T09, T10, T12, T13, T15, T16, T17, T24, T26, T27, T28
+Door Ledge or East Lobby: T04, T14, T18, T25
 Key: Vanilla No, MQ No
 T12
-Reqs from both:
+Reqs from both: T01, T02, T03, T05, T06, T07, T08, T09, T10, T11, T13, T15, T16, T17, T24, T26, T27, T28
+Door Ledge or East Lobby: T04, T14, T18, T25
 Key: Vanilla No, MQ No
 T13
 Reqs from both: All other doors
 Key: Vanilla No, MQ No
 T14
-Reqs from both:
+Reqs from both: T01, T02, T03, T04, T05, T06, T07, T08, T09, T10, T11, T12, T13, T15, T16, T17, T24, T26, T27, T28
+East Lobby: T18
+Not required due to bypassing the room: T25
 Key: Vanilla No, MQ No
 T15
-Reqs from both:
+Reqs from both: T01, T02, T09, T10, T11, T16, T17, T24
+Door Ledge or East Lobby: T04, T14, T18, T25
+West Courtyard Ledge: T12, T13
+Not required due to bypassing the room: T03, T05, T06, T07, T08, T26, T27, T28
 Key: Vanilla Yes, MQ No
 T16
-Reqs from both:
+Reqs from both: T01, T02, T03, T05, T06, T07, T08, T09, T10, T11, T12, T13, T15, T17, T24, T26, T27, T28
+Door Ledge or East Lobby: T04, T14, T18, T25
 Key: Vanilla No, MQ No
 T17
-Reqs from both:
+Reqs from both: T01, T02, T03, T05, T06, T07, T08, T09, T10, T11, T12, T13, T15, T16, T24, T26, T27, T28
+Door Ledge or East Lobby: T04, T14, T18, T25
 Key: Vanilla No, MQ No
 T18
-Reqs from both:
+Reqs from both: T01, T02, T03, T04, T05, T06, T07, T08, T09, T10, T11, T12, T13, T15, T16, T17, T24, T26, T27, T28
+Not required due to bypassing the room: T14, T25
 Key: Vanilla No, MQ No
 T19 (Transition Plane)
 T20 (Transition Plane)
@@ -220,19 +247,26 @@ T22 (Transition Plane)
 T23 (Transition Plane)
 T24
 Reqs from front: T01
-Reqs from boss:
+Reqs from boss: All other doors except T01
 Key: Vanilla No, MQ Yes
 T25
-Reqs from both:
+Reqs from both: T01, T02, T03, T04, T05, T06, T07, T08, T09, T10, T11, T12, T13, T15, T16, T17, T24, T26, T27, T28
+East Lobby: T14, T18
 Key: Vanilla No, MQ Yes
 T26
-Reqs from both:
+Reqs from both: T01, T02, T03, T05, T09, T10, T11, T12, T13, T15, T16, T17, T24
+Door Ledge or East Lobby: T04, T14, T18, T25
+Fall up west twisting room: T06, T07, T08, T27, T28
+Fall up east twisting room: T06, T07, T08, T27, T28
 Key: Vanilla Yes, MQ Yes
 T27
-Reqs from both:
+Reqs from both: T01, T02, T03, T05, T09, T10, T11, T12, T13, T15, T16, T17, T24, T26
+Door Ledge or East Lobby: T04, T14, T18, T25
+Fall up east twisting room: T06, T07, T08, T28
 Key: Vanilla Yes, MQ Yes
 T28
-Reqs from both: All other doors
+Reqs from both: All other doors except T25
+Not required due to bypassing the room: T25
 Key: Vanilla Yes, MQ Yes
 T29 (Boss Key)
 
