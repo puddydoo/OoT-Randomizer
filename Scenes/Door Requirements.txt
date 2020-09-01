@@ -8,8 +8,9 @@ Dungeons with multiple entrances have multiple requirements for each door. "Reqs
 "Reqs from boss" would only apply if the rear entrance for the dungeon was shuffled. IGC has equivalent "Reqs from tower".
 	JJB: Add T10 to all requirements, but T10 itself now only requires T01
     Forest: Same except for T01 and T24. This also only applies if the game is modified to allow the player to go from the boss door to the elevator otherwise the player can't access any of the doors from there.
-    Fire: Same but T17 requires nothing. If the player can fly up to the room above the boss room then this would complicate things.
-    Water: Add T17 to all requirements, but T17 itself requires nothing
+    Fire: Same but T17 requires nothing
+    Water: Same but T17 requires nothing
+	Ganon's Tower: Shuffling the rear entrance of this wouldn't work because the series of boss doors at the end is one-way.
 	Other dungeons have very different sets of requirements.
 	Shadow Temple is special because the boss door has access to T04, T12, T13, T14, and T15, but can't open any other doors at all because there is no way to cross the river backwards.
 There might be extra sets of requirements under the conditions that hovering or other glitches are allowed. (For example more doors in Forest Temple would require T18, the door on the raised platform on the east side of the lobby)
@@ -18,26 +19,26 @@ If door rando is ever added, it would be necessary to either disable keys, or re
 Deku Tree
 (No keys in this dungeon)
 
-T01
+T01:		Lobby <-> 2F passage
 Reqs from both: All other doors except T06
-T02
+T02:		Spiked log room <-> torch deku baba room
 Reqs from front:
 Reqs from boss:
-T03
+T03:		Basement river room <-> basement hint scrub room
 Reqs from front:
 Reqs from boss:
-T04
+T04:		Basement back room <-> gold skulltula room
 Reqs from both: All other doors
-T05
+T05:		Three scrub room <-> gohma entrance
 Reqs from both: All other doors
-T06
+T06:		2F passage <-> 2F room
 Reqs from both: All other doors
-T07
+T07:		Lobby <-> 3F room
 Reqs from both: All other doors
-T08
+T08:		Torch deku baba room <-> basement back room
 Reqs from front:
 Reqs from boss:
-T09
+T09:		Basement hint scrub room <-> spiked log room
 Reqs from front:
 Reqs from boss:
 T10 (Transition Plane)
@@ -54,96 +55,115 @@ T04 (Transition Plane)
 T05 (Transition Plane)
 T06 (Transition Plane)
 T07 (Transition Plane)
-T08
+T08:		Lobby <-> floor hole switch room
+Reqs from front: All other doors except T14, T21
+Reqs from boss: T14, T21
+T09:		Lizalfos miniboss room <-> blue dodongo cavern
 Reqs from front:
 Reqs from boss:
-T09
+T10:		Baby dodongo corridor <-> lizalfos miniboss room
 Reqs from front:
 Reqs from boss:
-T10
+T11:		Single flame trap room <-> lizalfos miniboss room
 Reqs from front:
 Reqs from boss:
-T11
+T12:		Lizalfos miniboss room <-> double flame trap room
 Reqs from front:
 Reqs from boss:
-T12
-Reqs from front:
-Reqs from boss:
-T13
+T13:		Baby dodongo corridor <-> gold skulltula torch room
 Reqs from both: All other doors
-T14
+T14:		Fire keese pushblock room <-> gold skulltula armos room
 Reqs from both: All other doors
-T15
+T15:		Blue dodongo cavern <-> single business scrub room
 Reqs from both: All other doors
-T16
+T16:		Bomb flower staircase room <-> compass room
 Reqs from both: All other doors
-T17
+T17:		Bomb bag room <-> double business scrub room
 Reqs from both: All other doors
-T18
+T18:		Bomb flower staircase room <-> platform switch with 2 armos room
 Reqs from front:
 Reqs from boss:
-T19
+T19:		Platform switch with 2 armos room <-> lobby (south bridge)
 Reqs from front:
 Reqs from boss:
-T20
+T20:		Baby dodongo corridor internal door
 Reqs from front:
 Reqs from boss:
-T21
+T21:		Floor hole switch room <-> king dodongo entrance
+Reqs from both: All other doors
+T22:		Lobby <-> bomb flower staircase room
 Reqs from front:
 Reqs from boss:
-T22
-Reqs from front:
-Reqs from boss:
-T23
+T23:		Blue dodongo cavern <-> lobby
 Reqs from front:
 Reqs from boss:
 
 Jabu-Jabu
 (No keys in this dungeon)
 
-T01
-Reqs from front: All other doors
-Reqs from boss:
-T02
+I don't know how tentacles would factor into this or in hybrid dungeon but here is what they block:
+Vanilla:
+T11 to Red Tentacle
+	T06 NW chamber
+	T08 to Blue Tentacle
+		T07 to Green Tentacle
+			Pit to miniboss areas (T18)
+				T22 -> T04 -> T09 miniboss areas
+					T10 -> T01 boss areas
+MQ:
+T07 to Red Tentacle
+	T14 under pit side room
+	T10 -> T01 boss areas
+T12 to Blue Tentacle
+	T06 NW chamber
+	T11 to Green Tentacle
+		T22 -> T04 -> T09 miniboss areas
+			T10 -> T01 boss areas
+
+T01:		Pre-boss room <-> barinade arena
+Reqs from both: All other doors
+T02:		Mouth <-> lobby
 Reqs from front: None
 Reqs from boss: All other doors
-T03
+T03:		Lobby <-> pit room
 Reqs from front:
 Reqs from boss:
-T04
+T04:		Miniboss room <-> post-miniboss room
+Reqs from front: All other doors except T01, T09, T10
+Reqs from boss: All other doors except T09
++Adult access, fly across lobby, or child hovers/hookshot: T01, T10
++Fly up lobby: T01, T09, T10
+T05:		Pit room <-> branching hallways
 Reqs from front:
 Reqs from boss:
-T05
+T06:		Branching hallways <-> northwest chamber
+Reqs from both: All other doors
+T07:		Branching hallways <-> north chamber
 Reqs from front:
 Reqs from boss:
-T06
+T08:		Branching hallways <-> northeast chamber
 Reqs from front:
 Reqs from boss:
-T07
-Reqs from front:
-Reqs from boss:
-T08
-Reqs from front:
-Reqs from boss:
-T09
-Reqs from front:
-Reqs from boss:
-T10
+T09:		Post-miniboss room <-> lobby
+Reqs from front: All other doors except T01, T10
+Reqs from boss: All other doors
++Adult access, fly across lobby, or child hovers/hookshot: T01, T10
++Fly up lobby: T01, T10
+T10:		Lobby <-> pre-boss room
 Reqs from front: All other doors except T01
 Reqs from boss: T01
-T11
+T11:		Branching hallways <-> west chamber
 Reqs from front:
 Reqs from boss:
-T12
+T12:		Branching hallways <-> east chamber
 Reqs from front:
 Reqs from boss:
-T13
+T13:		Under pit <-> water switch room
 Reqs from front:
 Reqs from boss:
-T14
-Reqs from front:
-Reqs from boss:
-T15
+T14:		Under pit <-> under pit side room
+Reqs from both: All other doors
+T15:		Water switch room <-> lobby
 Reqs from front:
 Reqs from boss:
 T16 (Transition Plane)
@@ -152,254 +172,279 @@ T18 (Transition Plane)
 T19 (Transition Plane)
 T20 (Transition Plane)
 T21 (Transition Plane)
-T22
-Reqs from front:
-Reqs from boss:
+T22:		Under pit <-> miniboss room
+Reqs from front: All other doors except T01, T04, T09, T10
+Reqs from boss: All other doors except T04, T09
++Adult access, fly across lobby, or child hovers/hookshot: T01, T10
++Fly up lobby: T01, T04, T09, T10
 
 Forest Temple
 
-T01
+T01:		Entrance <-> hall to lobby
 Reqs from front: None
 Reqs from boss: All other doors
 Key: Vanilla No, MQ No
-T02
-Reqs from both: T01, T03, T05, T06, T07, T08, T10, T11, T12, T13, T15, T16, T17, T24, T26, T27, T28
-Door Ledge or East Lobby: T04, T14, T18, T25
+T02:		Lobby <-> hall to miniboss room
+Reqs from both: All other doors except T09
 Key: Vanilla No, MQ No
-T03
-Reqs from both: T01, T02, T09, T10, T11, T15, T16, T17, T24
-Door Ledge or East Lobby: T04, T14, T18, T25
-West Courtyard Ledge: T12, T13
-Fall up west twisting room: T06, T07, T08, T26, T27, T28
-Fall up east twisting room: T06, T07, T08, T26, T27, T28
-Not required due to bypassing the room: T05
+T03:		Hall to block push room <-> block push room
+Reqs from both: T01, T02, T04, T09, T10, T11, T14, T15, T16, T17, T18, T24, T25
++Fly to West Courtyard Ledge: T12, T13
++Fall up west twisting room: T06, T07, T08, T26, T27, T28
++Fall up east twisting room: T06, T07, T08, T26, T27, T28
+-Not required due to bypassing the room: T05
 Key: Vanilla No, MQ No
-T04
-Reqs from both: T01, T02, T03, T05, T06, T07, T08, T09, T10, T11, T12, T13, T15, T16, T17, T24, T26, T27, T28
-East Lobby: T14, T18, T25
-Key: Vanilla No, MQ No
-T05
-Reqs from both: T01, T02, T03, T06, T07, T08, T09, T10, T11, T15, T16, T17, T24, T26, T27, T28
-Door Ledge or East Lobby: T04, T14, T18, T25
-West Courtyard Ledge: T12, T13
-Key: Vanilla No, MQ No
-T06
-Reqs from both: T01, T02, T03, T05, T07, T08, T09, T10, T11, T12, T13, T15, T16, T17, T24, T26, T27
-Door Ledge or East Lobby: T04, T14, T18
-Fall up east twisting room: T25, T28
-Key: Vanilla Yes, MQ Yes
-T07
-Reqs from both: T01, T02, T03, T05, T08, T09, T10, T11, T12, T13, T15, T16, T17, T24, T26, T27
-Door Ledge or East Lobby: T04, T14, T18, T25
-Fall up east twisting room: T06, T28
-Key: Vanilla No, MQ No
-T08
-Reqs from both: T01, T02, T03, T05, T09, T10, T11, T12, T13, T15, T16, T17, T24, T26, T27
-Door Ledge or East Lobby: T04, T14, T18, T25
-Fall up east twisting room: T06, T07, T28
-Key: Vanilla No, MQ No
-T09
-Reqs from both: T01, T02, T03, T05, T06, T07, T08, T09, T10, T11, T12, T13, T15, T16, T17, T24, T26, T27, T28
-Door Ledge or East Lobby: T04, T14, T18, T25
-Key: Vanilla No, MQ No
-T10
-Reqs from both: T01, T02, T03, T05, T06, T07, T08, T09, T11, T12, T13, T15, T16, T17, T24, T26, T27, T28
-Door Ledge or East Lobby: T04, T14, T18, T25
-Key: Vanilla No, MQ No
-T11
-Reqs from both: T01, T02, T03, T05, T06, T07, T08, T09, T10, T12, T13, T15, T16, T17, T24, T26, T27, T28
-Door Ledge or East Lobby: T04, T14, T18, T25
-Key: Vanilla No, MQ No
-T12
-Reqs from both: T01, T02, T03, T05, T06, T07, T08, T09, T10, T11, T13, T15, T16, T17, T24, T26, T27, T28
-Door Ledge or East Lobby: T04, T14, T18, T25
-Key: Vanilla No, MQ No
-T13
+T04:		Falling room <-> east courtyard
 Reqs from both: All other doors
 Key: Vanilla No, MQ No
-T14
-Reqs from both: T01, T02, T03, T04, T05, T06, T07, T08, T09, T10, T11, T12, T13, T15, T16, T17, T24, T26, T27, T28
-East Lobby: T18
-Not required due to bypassing the room: T25
+T05:		Block push room <-> west courtyard
+Reqs from both: T01, T02, T03, T04, T06, T07, T08, T09, T10, T11, T14, T15, T16, T17, T18, T24, T25, T26, T27, T28
++Fly to West Courtyard Ledge: T12, T13
 Key: Vanilla No, MQ No
-T15
-Reqs from both: T01, T02, T09, T10, T11, T16, T17, T24
-Door Ledge or East Lobby: T04, T14, T18, T25
-West Courtyard Ledge: T12, T13
-Not required due to bypassing the room: T03, T05, T06, T07, T08, T26, T27, T28
+T06:		Compass room <-> green bubble hall and turning room
+Reqs from both: T01, T02, T03, T04, T05, T07, T08, T09, T10, T11, T12, T13, T14, T15, T16, T17, T18, T24, T26, T27
++Fall up east twisting room: T25, T28
+Key: Vanilla Yes, MQ Yes
+T07:		Miniboss room upper <-> compass room
+Reqs from both: T01, T02, T03, T04, T05, T08, T09, T10, T11, T12, T13, T14, T15, T16, T17, T18, T24, T25, T26, T27
++Fall up east twisting room: T28
+Key: Vanilla No, MQ No
+T08:		Joelle's room <-> miniboss room upper
+Reqs from both: T01, T02, T03, T04, T05, T09, T10, T11, T12, T13, T14, T15, T16, T17, T18, T24, T25, T26, T27
++Fall up east twisting room: T06, T28
+Key: Vanilla No, MQ No
+T09:		Hall to miniboss room <-> miniboss room
+Reqs from both: All other doors
+Key: Vanilla No, MQ No
+T10:		West courtyard <-> balcony room
+Reqs from both: All other doors
+Key: Vanilla No, MQ No
+T11:		Balcony room <-> east courtyard
+Reqs from both: All other doors
+Key: Vanilla No, MQ No
+T12:		Blue bubble room under boss key room <-> west courtyard
+Reqs from both: All other doors
+Key: Vanilla No, MQ No
+T13:		West courtyard <-> enemy side room
+Reqs from both: All other doors
+Key: Vanilla No, MQ No
+T14:		Poe puzzle room <-> hall to poe puzzle room
+Reqs from both: T01, T02, T03, T04, T05, T06, T07, T08, T09, T10, T11, T12, T13, T15, T16, T17, T24, T26, T27, T28
++Fly to East Lobby: T18
+-Not required due to bypassing the room: T25
+Key: Vanilla No, MQ No
+T15:		Lobby <-> hall to block push room
+Reqs from both: T01, T02, T04, T09, T10, T11, T14, T16, T17, T18, T24, T25
++Fly to West Courtyard Ledge: T12, T13
+-Not required due to bypassing the room: T03, T05, T06, T07, T08, T26, T27, T28
 Key: Vanilla Yes, MQ No
-T16
-Reqs from both: T01, T02, T03, T05, T06, T07, T08, T09, T10, T11, T12, T13, T15, T17, T24, T26, T27, T28
-Door Ledge or East Lobby: T04, T14, T18, T25
+T16:		Lobby <-> west courtyard
+Reqs from both: All other doors except T05, T10, T13
 Key: Vanilla No, MQ No
-T17
-Reqs from both: T01, T02, T03, T05, T06, T07, T08, T09, T10, T11, T12, T13, T15, T16, T24, T26, T27, T28
-Door Ledge or East Lobby: T04, T14, T18, T25
+T17:		Lobby <-> east courtyard
+Reqs from both: All other doors except T04, T11
 Key: Vanilla No, MQ No
-T18
+T18:		Hall to poe puzzle room <-> lobby (high)
 Reqs from both: T01, T02, T03, T04, T05, T06, T07, T08, T09, T10, T11, T12, T13, T15, T16, T17, T24, T26, T27, T28
-Not required due to bypassing the room: T14, T25
+-Not required due to bypassing the room: T14, T25
 Key: Vanilla No, MQ No
 T19 (Transition Plane)
 T20 (Transition Plane)
 T21 (Transition Plane)
 T22 (Transition Plane)
 T23 (Transition Plane)
-T24
+T24:		Hall to lobby <-> lobby
 Reqs from front: T01
 Reqs from boss: All other doors except T01
 Key: Vanilla No, MQ Yes
-T25
+T25:		Falling room <-> poe puzzle room
 Reqs from both: T01, T02, T03, T04, T05, T06, T07, T08, T09, T10, T11, T12, T13, T15, T16, T17, T24, T26, T27, T28
-East Lobby: T14, T18
++Fly to East Lobby: T14, T18
 Key: Vanilla No, MQ Yes
-T26
-Reqs from both: T01, T02, T03, T05, T09, T10, T11, T12, T13, T15, T16, T17, T24
-Door Ledge or East Lobby: T04, T14, T18, T25
-Fall up west twisting room: T06, T07, T08, T27, T28
-Fall up east twisting room: T06, T07, T08, T27, T28
+T26:		Block push room <-> boss key room
+Reqs from both: T01, T02, T03, T04, T05, T09, T10, T11, T12, T13, T14, T15, T16, T17, T18, T24, T25
++Fall up west twisting room: T06, T07, T08, T27, T28
++Fall up east twisting room: T06, T07, T08, T27, T28
 Key: Vanilla Yes, MQ Yes
-T27
-Reqs from both: T01, T02, T03, T05, T09, T10, T11, T12, T13, T15, T16, T17, T24, T26
-Door Ledge or East Lobby: T04, T14, T18, T25
-Fall up east twisting room: T06, T07, T08, T28
+T27:		Boss key room <-> joelle's room
+Reqs from both: T01, T02, T03, T04, T05, T09, T10, T11, T12, T13, T14, T15, T16, T17, T18, T24, T25, T26
++Fall up east twisting room: T06, T07, T08, T28
 Key: Vanilla Yes, MQ Yes
-T28
+T28:		Green bubble hall and turning room <-> pink lava room
 Reqs from both: All other doors except T25
-Not required due to bypassing the room: T25
+-Not required due to bypassing the room: T25
 Key: Vanilla Yes, MQ Yes
 T29 (Boss Key)
 
 Fire Temple
+
+Doors near big lava room / entrance chamber: T13, T14, T15, T16, / T17, T18, T26, T30, T33, T35, T37
+Doors in stone maze: T19, T22, T23, T28, T29
+Doors in eastern shaft: T20, T21, T22
+Stone Maze Top T23 -> T24 Eastern Tower
+T19, T20, T21, T22, T23, T28, T29
+Doors after hall to flame maze: T08, T09, T10, T11, T12, T25, T27, T31, T32, T34
+
+T20: Eastern shaft <-> lava grate room south
+T21: Eastern shaft <-> lava grate room east
+T22: Eastern shaft <-> stone maze
+T29: Stone maze upper <-> lava grate room north
+
+Vanilla:
+T06, 7 keys  CHECK
+T07, 4 keys  CHECK
+T10, 8 keys  CHECK
+T15, 3 keys  CHECK
+T20, 6 keys  CHECK
+T22, 5 keys  CHECK
+T35 (8 keys) CHECK
+T37, 2 keys  CHECK
+
+MQ:
+T11, 4 keys  CHECK
+T15, 2 keys  CHECK
+T29, 3 keys  CHECK
+T32, 5 keys  CHECK
+T35 (5 keys) CHECK
 
 T01 (Transition Plane)
 T02 (Transition Plane)
 T03 (Transition Plane)
 T04 (Transition Plane)
 T05 (Transition Plane)
-T06
-Reqs from front:
-Reqs from boss:
+T06:		Lava grate room <-> hallway to flame maze
+Reqs from both: T07, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T26, T28, T29, T30, T33, T35, T37
++Fly up boss door room: All other doors
 Key: Vanilla Yes, MQ No
-T07
-Reqs from front:
-Reqs from boss:
+T07:		Flame pillar elevator <-> ascent to stone maze
+Reqs from both: T13, T14, T15, T16, T17, T18, T26, T30, T33, T35, T37
++Fly up boss door room: All other doors
++Fly up big lava room: All other doors
 Key: Vanilla Yes, MQ No
-T08
-Reqs from front:
-Reqs from boss:
+T08:		Hallway to flame maze <-> flame maze
+Reqs from both: T06, T07, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T26, T28, T29, T30, T33, T35, T37
++Fly up boss door room: All other doors
 Key: Vanilla No, MQ No
-T09
-Reqs from front:
-Reqs from boss:
+T09:		Flame maze north <-> center of flame maze
+Reqs from both: All other doors except T10, T25
++logic_fire_mq_flame_maze false: T10, T25
 Key: Vanilla No, MQ No
-T10
-Reqs from front:
-Reqs from boss:
+T10:		Flame maze (front) <-> center of flame maze
+Reqs from both: All other doors except T09, T25, T34
++Room 10 is non-MQ layout: T34
++logic_fire_mq_flame_maze is true: T34
 Key: Vanilla Yes, MQ No
-T11
-Reqs from front:
-Reqs from boss:
+T11:		Ascent to western tower <-> western tower
+Reqs from both: All other doors except T31, T32
++Fly up flame maze and go up stairs backwards: T31
 Key: Vanilla No, MQ Yes
-T12
-Reqs from front:
-Reqs from boss:
+T12:		Flame dancer elevator <-> ascent to western tower
+Reqs from both: All other doors except T11, T31, T32
 Key: Vanilla No, MQ No
-T13
+T13:		Big lava room <-> high floor tile room
 Reqs from both: All other doors
 Key: Vanilla No, MQ No
-T14
+T14:		Big lava room <-> northern cell
 Reqs from both: All other doors
 Key: Vanilla No, MQ No
-T15
-Reqs from front:
-Reqs from boss:
+T15:		Big lava room <-> flame pillar elevator
+Reqs from both: T13, T14, T16, T17, T18, T26, T30, T33, T35, T37
++Fly up boss door room: All other doors
++Fly up big lava room: All other doors
 Key: Vanilla Yes, MQ Yes
-T16
+T16:		Big lava room <-> southern cell
 Reqs from both: All other doors
 Key: Vanilla No, MQ No
-T17
-Reqs from front: All other doors
+T17: 		Entrance chamber <-> boss door room
+Reqs from front: All other doors except T08, T09, T10, T11, T12, T25, T27, T31, T32, T34
 Reqs from boss: None
++Fly up boss door room: All other doors
 Key: Vanilla No, MQ No
-T18
-Reqs from front:
-Reqs from boss:
-Key: Vanilla No, MQ No
-T19
+T18: 		Entrance chamber <-> two-sided cell south
 Reqs from both: All other doors
 Key: Vanilla No, MQ No
-T20
-Reqs from front:
-Reqs from boss:
-Key: Vanilla Yes, MQ No
-T21
-Reqs from front:
-Reqs from boss:
-Key: Vanilla No, MQ No
-T22
-Reqs from front:
-Reqs from boss:
-Key: Vanilla Yes, MQ No
-T23
-Reqs from front:
-Reqs from boss:
-Key: Vanilla No, MQ No
-T24
-Reqs from front:
-Reqs from boss:
-Key: Vanilla No, MQ No
-T25
-Reqs from front:
-Reqs from boss:
-Key: Vanilla No, MQ No
-T26
-Reqs from front:
-Reqs from boss:
-Key: Vanilla No, MQ No
-T27
-Reqs from front:
-Reqs from boss:
-Key: Vanilla No, MQ No
-T28
-Reqs from front:
-Reqs from boss:
-Key: Vanilla No, MQ No
-T29
-Reqs from front:
-Reqs from boss:
-Key: Vanilla No, MQ Yes
-T30
-Reqs from front:
-Reqs from boss:
-Key: Vanilla No, MQ No
-T31
-Reqs from front:
-Reqs from boss:
-Key: Vanilla No, MQ No
-T32
-Reqs from front:
-Reqs from boss:
-Key: Vanilla No, MQ Yes
-T33
-Reqs from front:
-Reqs from boss:
-Key: Vanilla No, MQ No
-T34
+T19: 		Stone maze <-> stone maze side room
 Reqs from both: All other doors
 Key: Vanilla No, MQ No
-T35
-Reqs from front:
-Reqs from boss:
+T20: 		Eastern shaft <-> lava grate room south
+Reqs from both: All other doors except T06, T08, T09, T10, T11, T12, T25, T27, T29, T31, T32, T34
++Fly up boss door room: All other doors except T06
+Key: Vanilla Yes, MQ No
+T21: 		Eastern shaft <-> lava grate room east
+Reqs from both: All other doors except T06, T20, T29
+Key: Vanilla No, MQ No
+T22: 		Eastern shaft <-> stone maze
+Reqs from both: All other doors except T06, T08, T09, T10, T11, T12, T20, T21, T24, T25, T27, T29, T31, T32, T34
++Fly up boss door room: All other doors except T20, T29
+Key: Vanilla Yes, MQ No
+T23:		Stone maze top <-> ascent to eastern tower
+Reqs from both: All other doors except T24
+Key: Vanilla No, MQ No
+T24:		Ascent to eastern tower <-> eastern tower
+Reqs from both: All other doors
+Key: Vanilla No, MQ No
+T25:		Flame maze ledge <-> center of flame maze
+Reqs from both: All other doors
+Key: Vanilla No, MQ No
+T26:		Flare dancer treasure room <-> two-sided cell
+Reqs from both: All other doors
+Key: Vanilla No, MQ No
+T27:		Flame maze <-> flare dancer elevator
+Reqs from both: All other doors except T11, T12, T31, T32
++Fly up center of flame maze: T11, T31, T32
++Fly up flame maze and go up stairs backwards: T11, T31, T32
+Key: Vanilla No, MQ No
+T28:		Ascent to stone maze <-> stone maze
+Reqs from both: T07, T13, T14, T15, T16, T17, T18, T26, T30, T33, T35, T37
++Fly up boss door room: All other doors
++Fly up big lava room: All other doors
++Clip through ascent to stone maze: All other doors
+Key: Vanilla No, MQ No
+T29: 		Stone maze upper <-> lava grate room north
+Reqs from both: All other doors except T08, T09, T10, T11, T12, T25, T27, T31, T32, T34
++Fly up boss door room: All other doors
+Key: Vanilla No, MQ Yes
+T30:		Lower floor tile room <-> flare dancer treasure room
+Reqs from both: All other doors except T26
+Key: Vanilla No, MQ No
+T31:		Stone stairway <-> flame maze ceiling
+Reqs from both: All other doors
+Key: Vanilla No, MQ No
+T32:		Western tower <-> stone stairway
+Reqs from both: All other doors except T31
++Fly up flame maze and go up stairs backwards: T31
+Key: Vanilla No, MQ Yes
+T33:		Combat room <-> lower floor tile room
+Reqs from both: All other doors except T26, T30
++Clip through two-sided cell: T26
+Key: Vanilla No, MQ No
+T34:		Flame maze <-> flame maze side room
+Reqs from both: All other doors
+Key: Vanilla No, MQ No
+T35:		Entrance chamber <-> combat room
+Reqs from both: All other doors except T26, T30, T33
++Clip through two-sided cell: T26, T30
 Key: Vanilla Yes, MQ Yes
 Note: Randomizer has removed the key from T35 outside of Keysanity.
 T36 (Boss Key)
-T37
-Reqs from front:
-Reqs from boss:
+T37:		Entrance chamber <-> big lava room
+Reqs from both: T17, T18, T26, T30, T33, T35
++Fly up boss door room: All other doors
 Key: Vanilla Yes, MQ No
 
 Water Temple
+
+Vanilla:
+T09, 5 keys  CHECK
+T10, 5 keys  CHECK
+T11, 6 keys  CHECK
+T15, 6 keys  CHECK
+T18 (6 keys) CHECK
+T22, 6 keys  CHECK
+
+MQ:
+T09, 2 keys  Should be 1 but this doesn't distinguish between required keys and wastable keys
+T23, 2 keys  CHECK
 
 T01 (Transition Plane)
 T02 (Transition Plane)
@@ -409,92 +454,92 @@ T05 (Transition Plane)
 T06 (Transition Plane)
 T07 (Transition Plane)
 T08 (Transition Plane)
-T09
-Reqs from front:
-Reqs from boss:
+T09:		Lobby (floating platform) <-> falling platform room
+Reqs from both: All other doors except T11, T19, T20
++Serpent river backwards: T19, T20
 Key: Vanilla Yes, MQ Yes
-T10
-Reqs from front:
-Reqs from boss:
+T10:		Lobby <-> whirlpool room
+Reqs from both: All other doors except T12, T13, T22, T23
 Key: Vanilla Yes, MQ No
-T11
-Reqs from front:
-Reqs from boss:
+T11:		Falling platform room <-> triple serpent head room
+Reqs from both: All other doors except T19, T20
++Serpent river backwards: T20
 Key: Vanilla Yes, MQ No
-T12
-Reqs from front:
-Reqs from boss:
+T12:		Whirlpool room (rear) <-> dropdown room
+Reqs from both: All other doors except T13
++Room 12 has MQ layout and cannot bypass cage: T13
 Key: Vanilla No, MQ No
-T13
-Reqs from front:
-Reqs from boss:
+T13:		Dropdown room <-> triple water jet gap room
+Reqs from both: All other doors except T12
++Room 12 has non-MQ layout or bypass cage in MQ: T12
 Key: Vanilla No, MQ No
-T14
-Reqs from front: All other doors
-Reqs from boss: All other doors
+T14:		Ruto meeting room <-> dungeon map room
+Reqs from both: All other doors
 Key: Vanilla No, MQ No
-T15
-Reqs from front:
-Reqs from boss:
+T15:		Lobby <-> inner tower 1F
+Reqs from both: All other doors except T16
 Key: Vanilla Yes, MQ No
-T16
-Reqs from front:
-Reqs from boss:
+T16:		Lobby <-> inner tower 2F
+Reqs from both: All other doors
 Key: Vanilla No, MQ No
-T17
+T17:		Lobby <-> hall to boss
 Reqs from front: All other doors
 Reqs from boss: None
 Key: Vanilla No, MQ No
-T18
-Reqs from front:
-Reqs from boss:
+T18:		Lobby (floating platform) <-> water elevator 2F
+Reqs from both: All other doors
 Key: Vanilla Yes, MQ No
 Note: Randomizer has removed the key from T18.
-T19
-Reqs from front:
-Reqs from boss:
+T19:		Triple serpent head room <-> dark link room
+Reqs from both: All other doors except T20
 Key: Vanilla No, MQ No
-T20
-Reqs from front: All other doors
-Reqs from boss: All other doors
+T20:		Dark link room <-> river drop room
+Reqs from both: All other doors
 Key: Vanilla No, MQ No
-T21
-Reqs from front:
-Reqs from boss:
+T21:		Single water jet gap room <-> dragon statue room
+Reqs from both: All other doors except T20
 Key: Vanilla No, MQ No
-T22
-Reqs from front: All other doors
-Reqs from boss: All other doors
+T22:		Whirlpool room <-> north basement treasure room
+Reqs from both: All other doors
 Key: Vanilla Yes, MQ No
-T23
-Reqs from front:
-Reqs from boss:
+T23:		Whirlpool room <-> triple water jet gap room
+Reqs from both: All other doors except T12, T13
++Room 12 has non-MQ layout or bypass cage in MQ: T12
 Key: Vanilla No, MQ Yes
-T24
-Reqs from front: All other doors
-Reqs from boss: All other doors
+T24:		Ruto meeting room <-> submerged combat room
+Reqs from both: All other doors
 Key: Vanilla No, MQ No
-T25
-Reqs from front:
-Reqs from boss:
+T25:		Lobby <-> water elevator 3F
+Reqs from both: All other doors
 Key: Vanilla No, MQ No
 T26 (Boss Key)
 T27 (Transition Plane)
 
 Spirit Temple
 
-T01
-Reqs from front:
-Reqs from boss:
-Reqs from front (shuffled hands):
-Reqs from boss (shuffled hands):
-Reqs from right hand:
-Reqs from left hand:
+Vanilla:
+T04, 		 Should be 3
+T10, 		 Should be 5
+T15, 5 keys  CHECK
+T21, 		 Should be 4
+T22, 		 Should be 5
+
+MQ:
+T05, 7 keys  CHECK
+T10, 		 Should be ?
+T13, 7 keys  CHECK
+T15, 6 keys  CHECK
+T21, 		 Should be 5
+T22, 		 Should be ??7 or 4?? idk
+T25, 		 Should be ?
+
+T01:		Lullaby landing <-> ceiling mirror room
+Reqs from any: All other doors except T02
 Key: Vanilla No, MQ No
-T02
+T02:		Ceiling mirror room <-> snake mirror rooms
 Reqs from any: All other doors
 Key: Vanilla No, MQ No
-T03
+T03:		Wallmaster room <-> central chamber
 Reqs from front:
 Reqs from boss:
 Reqs from front (shuffled hands):
@@ -502,7 +547,7 @@ Reqs from boss (shuffled hands):
 Reqs from right hand:
 Reqs from left hand:
 Key: Vanilla No, MQ No
-T04
+T04:		Lobby <-> wallmaster room
 Reqs from front:
 Reqs from boss:
 Reqs from front (shuffled hands):
@@ -510,18 +555,13 @@ Reqs from boss (shuffled hands):
 Reqs from right hand:
 Reqs from left hand:
 Key: Vanilla Yes, MQ No
-T05
-Reqs from front:
-Reqs from boss:
-Reqs from front (shuffled hands):
-Reqs from boss (shuffled hands):
-Reqs from right hand:
-Reqs from left hand:
+T05:		Lobby <-> rolling boulder room
+Reqs from any: All other doors except T29
 Key: Vanilla No, MQ Yes
-T06
+T06:		Lobby <-> sandy lullaby room
 Reqs from any: All other doors
 Key: Vanilla No, MQ No
-T07
+T07:		Adult iron knuckle room <-> exit to left hand
 Reqs from front:
 Reqs from boss:
 Reqs from front (shuffled hands): All other doors
@@ -529,7 +569,7 @@ Reqs from boss (shuffled hands): All other doors
 Reqs from right hand: All other doors
 Reqs from left hand: None
 Key: Vanilla No, MQ No
-T08
+T08:		Child iron knuckle room <-> exit to right hand
 Reqs from front:
 Reqs from boss:
 Reqs from front (shuffled hands): All other doors
@@ -537,7 +577,7 @@ Reqs from boss (shuffled hands): All other doors
 Reqs from right hand: None
 Reqs from left hand: All other doors
 Key: Vanilla No, MQ No
-T09
+T09:		Sun block room <-> hall to child iron knuckle
 Reqs from front:
 Reqs from boss:
 Reqs from front (shuffled hands): All other doors except T08, T22
@@ -545,7 +585,7 @@ Reqs from boss (shuffled hands): All other doors except T08, T22
 Reqs from right hand: T08, T22
 Reqs from left hand: All other doors except T08, T22
 Key: Vanilla No, MQ No
-T10
+T10:		First child room <-> rock light room
 Reqs from front:
 Reqs from boss:
 Reqs from front (shuffled hands):
@@ -553,45 +593,26 @@ Reqs from boss (shuffled hands):
 Reqs from right hand:
 Reqs from left hand:
 Key: Vanilla Yes, MQ Yes
-T11
-Reqs from front:
-Reqs from boss:
-Reqs from front (shuffled hands):
-Reqs from boss (shuffled hands):
-Reqs from right hand:
-Reqs from left hand:
+T11:		First child room <-> crystal bridge room
+Reqs from any: All other doors except T27, T28
++Room 2 has MQ layout or cage is bypassed: T28
 Key: Vanilla No, MQ No
-T12
-Reqs from front:
-Reqs from boss:
-Reqs from front (shuffled hands):
-Reqs from boss (shuffled hands):
-Reqs from right hand:
-Reqs from left hand:
+T12:		First child room <-> cage crossing room
+Reqs from any: All other doors except T28
 Key: Vanilla No, MQ No
-T13
+T13:		Lullaby landing <-> furniture room
 Reqs from any: All other doors
 Key: Vanilla No, MQ Yes
-T14
-Reqs from front:
-Reqs from boss:
-Reqs from front (shuffled hands):
-Reqs from boss (shuffled hands):
-Reqs from right hand:
-Reqs from left hand:
+T14:		Shifting wall room <-> lullaby landing
+Reqs from any: All other doors except T01, T02, T13
 Key: Vanilla No, MQ No
-T15
-Reqs from front:
-Reqs from boss:
-Reqs from front (shuffled hands):
-Reqs from boss (shuffled hands):
-Reqs from right hand:
-Reqs from left hand:
+T15:		Adult enemy pit room <-> shifting wall room
+Reqs from any: All other doors except T01, T02, T13, T14
 Key: Vanilla Yes, MQ Yes
-T16
+T16:		Funny switch room <-> key room
 Reqs from any: All other doors
 Key: Vanilla No, MQ No
-T17
+T17:		Hall to adult iron knuckle <-> adult iron knuckle room
 Reqs from front:
 Reqs from boss:
 Reqs from front (shuffled hands): All other doors except T07
@@ -599,7 +620,7 @@ Reqs from boss (shuffled hands): All other doors except T07
 Reqs from right hand: All other doors except T07
 Reqs from left hand: T07
 Key: Vanilla No, MQ No
-T18
+T18:		Funny switch room <-> hall to adult iron knuckle
 Reqs from front:
 Reqs from boss:
 Reqs from front (shuffled hands): All other doors except T07, T17
@@ -607,7 +628,7 @@ Reqs from boss (shuffled hands): All other doors except T07, T17
 Reqs from right hand: All other doors except T07, T17
 Reqs from left hand: T07, T17
 Key: Vanilla No, MQ No
-T19
+T19:		Adult enemy pit room <-> funny switch room
 Reqs from front:
 Reqs from boss:
 Reqs from front (shuffled hands): All other doors except T07, T16, T17, T18
@@ -615,23 +636,23 @@ Reqs from boss (shuffled hands): All other doors except T07, T16, T17, T18
 Reqs from right hand: All other doors except T07, T16, T17, T18
 Reqs from left hand: T07, T16, T17, T18
 Key: Vanilla No, MQ No
-T20
+T20:		Eastern 3F corridor <-> adult enemy pit room
 Reqs from front:
 Reqs from boss:
-Reqs from front (shuffled hands):
-Reqs from boss (shuffled hands):
-Reqs from right hand:
-Reqs from left hand:
+Reqs from front (shuffled hands): All other doors except T01, T02, T07, T13, T14, T15, T16, T17, T18, T19
+Reqs from boss (shuffled hands): All other doors except T01, T02, T07, T13, T14, T15, T16, T17, T18, T19
+Reqs from right hand: All other doors except T01, T02, T07, T13, T14, T15, T16, T17, T18, T19
+Reqs from left hand: All other doors? (central chamber can be reached from mirror room)
 Key: Vanilla No, MQ No
-T21
+T21:		Central chamber <-> eastern 3F corridor
 Reqs from front:
 Reqs from boss:
-Reqs from front (shuffled hands):
-Reqs from boss (shuffled hands):
-Reqs from right hand:
-Reqs from left hand:
+Reqs from front (shuffled hands): All other doors except T01, T02, T07, T13, T14, T15, T16, T17, T18, T19, T20
+Reqs from boss (shuffled hands): All other doors except T01, T02, T07, T13, T14, T15, T16, T17, T18, T19, T20
+Reqs from right hand: All other doors except T01, T02, T07, T13, T14, T15, T16, T17, T18, T19, T20
+Reqs from left hand: All other doors? (central chamber can be reached from mirror room)
 Key: Vanilla Yes, MQ Yes
-T22
+T22:		Hall to child iron knuckle <-> child iron knuckle room
 Reqs from front:
 Reqs from boss:
 Reqs from front (shuffled hands): All other doors except T08
@@ -639,7 +660,7 @@ Reqs from boss (shuffled hands): All other doors except T08
 Reqs from right hand: T08
 Reqs from left hand: All other doors except T08
 Key: Vanilla Yes, MQ Yes
-T23
+T23:		Western 3F corridor <-> sun block room
 Reqs from front:
 Reqs from boss:
 Reqs from front (shuffled hands): All other doors except T08, T09, T22
@@ -647,7 +668,7 @@ Reqs from boss (shuffled hands): All other doors except T08, T09, T22
 Reqs from right hand: T08, T09, T22
 Reqs from left hand: All other doors except T08, T09, T22
 Key: Vanilla No, MQ No
-T24
+T24:		Central chamber <-> shortcut room
 Reqs from front:
 Reqs from boss:
 Reqs from front (shuffled hands):
@@ -655,7 +676,7 @@ Reqs from boss (shuffled hands):
 Reqs from right hand:
 Reqs from left hand:
 Key: Vanilla No, MQ No
-T25
+T25:		Rock light room <-> central chamber
 Reqs from front:
 Reqs from boss:
 Reqs from front (shuffled hands):
@@ -663,7 +684,7 @@ Reqs from boss (shuffled hands):
 Reqs from right hand:
 Reqs from left hand:
 Key: Vanilla No, MQ Yes
-T26
+T26:		Central chamber <-> western 3F corridor
 Reqs from front:
 Reqs from boss:
 Reqs from front (shuffled hands): All other doors except T08, T09, T22, T23
@@ -671,23 +692,14 @@ Reqs from boss (shuffled hands): All other doors except T08, T09, T22, T23
 Reqs from right hand: T08, T09, T22, T23
 Reqs from left hand: All other doors except T08, T09, T22, T23
 Key: Vanilla No, MQ No
-T27
-Reqs from front:
-Reqs from boss:
-Reqs from front (shuffled hands):
-Reqs from boss (shuffled hands):
-Reqs from right hand:
-Reqs from left hand:
+T27:		Crystal bridge room <-> child enemy pit room
+Reqs from any: All other doors except T28
++Room 3 has MQ layout and player cannot cross gap: T28
 Key: Vanilla No, MQ No
-T28
-Reqs from front:
-Reqs from boss:
-Reqs from front (shuffled hands):
-Reqs from boss (shuffled hands):
-Reqs from right hand:
-Reqs from left hand:
+T28:		Child enemy pit room <-> cage crossing room
+Reqs from any: All other doors
 Key: Vanilla No, MQ No
-T29
+T29:		Rolling boulder room <-> 1F treasure room
 Reqs from any: All other doors
 Key: Vanilla No, MQ No
 T30 (Transition Plane)
@@ -697,78 +709,94 @@ T33 (Transition Plane)
 
 Shadow Temple
 
-T01
+T01:		Whispering wall maze <-> dead hand room
 Reqs from front: All other doors
-Reqs from boss:
+Reqs from boss: N/A
++River Styx backwards: All other doors
 Key: Vanilla No, MQ No
-T02
+T02:		Whispering wall maze <-> dungeon map room
 Reqs from front: All other doors
-Reqs from boss:
+Reqs from boss: N/A
++River Styx backwards: All other doors
 Key: Vanilla No, MQ No
-T03
+T03:		Lobby <-> whispering wall maze
 Reqs from front: All other doors except T01, T02
-Reqs from boss:
+Reqs from boss: N/A
++River Styx backwards: All other doors except T01, T02
 Key: Vanilla No, MQ Yes
-T04
+T04:		River styx <-> invisible platforms room
 Reqs from front: All other doors
 Reqs from boss: None
 Key: Vanilla Yes, MQ No
-T05
+T05:		First beamos room <-> guillotine corridor
 Reqs from front: T01, T02, T03, T06, T07
-Reqs from boss:
+Reqs from boss: N/A
++River Styx backwards: All other doors except T06
 Key: Vanilla Yes, MQ Yes
-T06
-Reqs from front: T01, T02, T03, T05, T07, T08, T09, T10, T11, T16, T17, T18
-    and ((T04, T12, T13, T14, T15) or 'Shadow Temple Room 21 Pushblock')
-Reqs from boss:
+T06:		First beamos room <-> spinning scythe silver rupee room
+Reqs from front: All other doors except T18
+Reqs from boss: N/A
++River Styx backwards: All other doors except T05
 Key: Vanilla No, MQ No
-T07
+T07:		First beamos room <-> compass room
 Reqs from front: All other doors
-Reqs from boss:
+Reqs from boss: N/A
++River Styx backwards: All other doors
 Key: Vanilla No, MQ No
-T08
+T08:		Huge pit <-> invisible scythe statue room
 Reqs from front: All other doors
-Reqs from boss:
+Reqs from boss: N/A
++River Styx backwards: All other doors
 Key: Vanilla No, MQ No
-T09
+T09:		Huge pit <-> invisible spike room
 Reqs from front: T01, T02, T03, T05, T06, T07
-Reqs from boss:
+Reqs from boss: N/A
++River Styx backwards: All other doors except T05
 Key: Vanilla Yes, MQ Yes
-T10
+T10:		Invisible spike room <-> fan trap room
 Reqs from front: All other doors except T04, T12, T13, T14, T15, T16, T17, T18
-Reqs from boss:
+Reqs from boss: N/A
++River Styx backwards: All other doors except T09
 Key: Vanilla Yes, MQ Yes
-T11
+T11:		Invisible spike room <-> singular skull jar room
 Reqs from front: All other doors
-Reqs from boss:
+Reqs from boss: N/A
++River Styx backwards: All other doors
 Key: Vanilla No, MQ No
-T12
+T12:		Invisible maze <-> triplicate skull jar room
 Reqs from front: All other doors
-Reqs from boss:
+Reqs from boss: T04, T13, T14
++River Styx backwards: All other doors
 Key: Vanilla No, MQ No
-T13
+T13:		Invisible maze <-> boss key room
 Reqs from front: All other doors
-Reqs from boss:
+Reqs from boss: T04, T12, T14
++River Styx backwards: All other doors
 Key: Vanilla No, MQ Yes
-T14
+T14:		Invisible maze <-> invisible floormaster room
 Reqs from front: All other doors
-Reqs from boss:
+Reqs from boss: T04, T12, T13
++River Styx backwards: All other doors
 Key: Vanilla No, MQ No
-T15
+T15:		River styx <-> invisible maze
 Reqs from front: All other doors except T12, T13, T14
-Reqs from boss:
+Reqs from boss: T04
++River Styx backwards: All other doors except T12, T13, T14
 Key: Vanilla No, MQ No
-T16
+T16:		Fan trap room <-> gibdo room
 Reqs from front: All other doors except T04, T12, T13, T14, T15, T18
-Reqs from boss:
+Reqs from boss: N/A
++River Styx backwards: All other doors except T10
 Key: Vanilla No, MQ No
-T17
+T17:		Fan trap room <-> wind hint room
 Reqs from front: All other doors
-Reqs from boss:
+Reqs from boss: N/A
++River Styx backwards: All other doors
 Key: Vanilla No, MQ No
-T18
+T18:		Gibdo room <-> river styx
 Reqs from front: All other doors except T04, T12, T13, T14, T15
-Reqs from boss:
+Reqs from boss: N/A
++River Styx backwards: All other doors except T16
 Key: Vanilla Yes, MQ Yes
 T19 (Transition Plane)
 T20 (Transition Plane)
@@ -778,25 +806,25 @@ T23 (Transition Plane)
 
 Bottom of the Well
 
-T01
+T01:		Basement <-> lobby
 Reqs: T02, T03, T04, T05, T06, T07
 Key: Vanilla No, MQ No
-T02
+T02:		Northeast room <-> lobby (cage)
 Reqs: T01, T03, T04, T05, T06, T07
 Key: Vanilla No, MQ Yes
-T03
+T03:		Lobby <-> northeast room
 Reqs: T01, T04, T05, T06, T07
 Key: Vanilla Yes, MQ No
-T04
+T04:		Lobby <-> east inner room
 Reqs: T01, T02, T03, T05, T06, T07
 Key: Vanilla Yes, MQ No
-T05
+T05:		Lobby <-> west inner room
 Reqs: T01, T02, T03, T04, T06, T07
 Key: Vanilla Yes, MQ No
-T06
+T06:		Lobby <-> coffin room
 Reqs: T01, T02, T03, T04, T05, T07
 Key: Vanilla No, MQ Yes
-T07
+T07:		Lobby <-> dead hand room
 Reqs: T01, T02, T03, T04, T05, T06
 Key: Vanilla No, MQ No
 T08 (Transition Plane)
@@ -821,75 +849,76 @@ T07 (Transition Plane)
 T08 (Transition Plane)
 T09 (Transition Plane)
 T10 (Transition Plane)
-T11
+T11:		Iron boots icefield <-> underwater hall to lobby
 Reqs: T12
-T12
+T12:		Hall to iron boots <-> iron boots icefield
 Reqs: None
 
 Gerudo Training Ground
 
 T01 (Transition Plane)
-T02
+T02:		Left combat room <-> flame wall maze
+Reqs: All other doors except T03
+Key: Vanilla No, MQ No
+T03:		Flame wall maze <-> mystery room
+Reqs: All other doors except T04, T08
+Key: Vanilla No, MQ No
+T04:		Mystery room <-> room behind heavy block
 Reqs: All other doors
 Key: Vanilla No, MQ No
-T03
+T05:		Lobby <-> central maze entrance
+Reqs: All other doors except T14, T15, T16, T17, T18, T19, T20, T21, T22
+Key: Vanilla No, MQ No
+T06:		Lobby <-> right combat room
+Reqs: All other doors except T12
+Key: Vanilla No, MQ No
+T07:		Lobby <-> left combat room
+Reqs: All other doors except T02
+Key: Vanilla No, MQ No
+T08:		Mystery room <-> eye statue
+Reqs: All other doors except T09, T13
++Room 04 has non-MQ layout: T09
+Key: Vanilla No, MQ No
+T09:		Eye statue <-> hammer room
+Reqs: All other doors except T10
+Key: Vanilla No, MQ No
+T10:		Hammer room <-> lava room
 Reqs: All other doors
 Key: Vanilla No, MQ No
-T04
+T11:		Lava room <-> water room
 Reqs: All other doors
 Key: Vanilla No, MQ No
-T05
+T12:		Right combat room <-> lava room
+Reqs: All other doors except T11
+Key: Vanilla No, MQ No
+T13:		Eye statue <-> central maze
 Reqs: All other doors
 Key: Vanilla No, MQ No
-T06
-Reqs: All other doors
-Key: Vanilla No, MQ No
-T07
-Reqs: All other doors
-Key: Vanilla No, MQ No
-T08
-Reqs: All other doors
-Key: Vanilla No, MQ No
-T09
-Reqs: All other doors
-Key: Vanilla No, MQ No
-T10
-Reqs: All other doors
-Key: Vanilla No, MQ No
-T11
-Reqs: All other doors
-Key: Vanilla No, MQ No
-T12
-Reqs: All other doors
-Key: Vanilla No, MQ No
-T13
-Reqs: All other doors
-Key: Vanilla No, MQ No
-T14
+T14:		Central maze left path door 2
 Reqs: All other doors except T18, T19, T20, T21, T22
 Key: Vanilla Yes, MQ No
-T15
+T15:		Central maze left path door 1
 Reqs: All other doors except T14, T18, T19, T20, T21, T22
 Key: Vanilla Yes, MQ No
-T16
+T16:		Central maze right path door 1
 Reqs: All other doors
 Key: Vanilla Yes, MQ No
-T17
+T17:		Central maze right path door 2
 Reqs: All other doors
 Key: Vanilla Yes, MQ No
-T18
+T18:		Central maze left path door 3
 Reqs: All other doors except T19, T20, T21, T22
 Key: Vanilla Yes, MQ No
-T19
+T19:		Central maze left path door 4
 Reqs: All other doors except T20, T21, T22
 Key: Vanilla Yes, MQ No
-T20
+T20:		Central maze left path door 5
 Reqs: All other doors except T21, T22
 Key: Vanilla Yes, MQ Yes
-T21
+T21:		Central maze left path door 6
 Reqs: All other doors except T22
 Key: Vanilla Yes, MQ Yes
-T22
+T22:		Central maze left path door 7
 Reqs: All other doors
 Key: Vanilla Yes, MQ Yes
 
@@ -897,84 +926,84 @@ Inside Ganon's Castle
 
 T01 (Transition Plane)
 T02 (Transition Plane)
-T03
+T03:		Entrance <-> barrier chamber
 Reqs from front: None
 Reqs from tower: T04, T05, T06, T07, T08, T09, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21
 Key: Vanilla No, MQ No
-T04
+T04:		Light trial 1 internal door
 Reqs from both: T03, T05, T07, T08, T09, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T21
 Key: Vanilla Yes, MQ No
-T05
+T05:		Water trial 1 <-> water trial 2
 Reqs from both: T03, T04, T06, T07, T08, T09, T10, T11, T12, T13, T15, T16, T17, T18, T19, T20, T21
 Key: Vanilla No, MQ Yes
-T06
+T06:		Light trial 2 <-> light trial 3
 Reqs from both: T03, T04, T05, T07, T08, T09, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21
 Key: Vanilla No, MQ Yes
-T07
+T07:		Forest trial 1 <-> forest trial 2
 Reqs from both: T03, T04, T05, T06, T09, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21
 Key: Vanilla No, MQ No
-T08
+T08:		Forest trial 2 <-> forest barrier
 Reqs from both: T03, T04, T05, T06, T07, T09, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21
 Key: Vanilla No, MQ No
-T09
+T09:		Barrier chamber <-> forest trial 1
 Reqs from both: T03, T04, T05, T06, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21
 Key: Vanilla No, MQ No
-T10
+T10:		Barrier chamber <-> water trial 1
 Reqs from both: T03, T04, T06, T07, T08, T09, T11, T12, T13, T15, T16, T17, T18, T19, T20, T21
 Key: Vanilla No, MQ No
-T11
+T11:		Barrier chamber <-> light trial 1
 Reqs from both: T03, T05, T07, T08, T09, T10, T12, T13, T14, T15, T16, T17, T18, T19, T21
 Key: Vanilla No, MQ No
-T12
+T12:		Barrier chamber <-> fire trial
 Reqs from both: T03, T04, T05, T06, T07, T08, T09, T10, T11, T13, T14, T15, T17, T18, T19, T20, T21
 Key: Vanilla No, MQ No
-T13
+T13:		Barrier chamber <-> shadow trial
 Reqs from both: T03, T04, T05, T06, T07, T08, T09, T10, T11, T12, T14, T16, T17, T18, T19, T20, T21
 Key: Vanilla No, MQ No
-T14
+T14:		Water trial 2 <-> water barrier
 Reqs from both: T03, T04, T05, T06, T07, T08, T09, T10, T11, T12, T13, T15, T16, T17, T18, T19, T20, T21
 Key: Vanilla No, MQ No
-T15
+T15:		Shadow trial <-> shadow barrier
 Reqs from both: T03, T04, T05, T06, T07, T08, T09, T10, T11, T12, T13, T14, T16, T17, T18, T19, T20, T21
 Key: Vanilla No, MQ No
-T16
+T16:		Fire trial <-> fire barrier
 Reqs from both: T03, T04, T05, T06, T07, T08, T09, T10, T11, T12, T13, T14, T15, T17, T18, T19, T20, T21
 Key: Vanilla No, MQ No
-T17
+T17:		Barrier chamber <-> spirit trial 1
 Reqs from both: T03, T04, T05, T06, T07, T08, T09, T10, T11, T12, T13, T14, T15, T16, T20
 Key: Vanilla No, MQ No
-T18
+T18:		Spirit trial 1 <-> spirit trial 2
 Reqs from both: T03, T04, T05, T06, T07, T08, T09, T10, T11, T12, T13, T14, T15, T16, T17, T18, T20
 Key: Vanilla No, MQ No
-T19
+T19:		Spirit trial 2 <-> spirit barrier
 Reqs from both: T03, T04, T05, T06, T07, T08, T09, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21
 Key: Vanilla No, MQ No
-T20
+T20:		Light trial 1 <-> light trial 2
 Reqs from both: T03, T04, T05, T07, T08, T09, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T21
 Key: Vanilla Yes, MQ Yes
-T21
+T21:		Spirit trial 2 internal door
 Reqs from both: T03, T04, T05, T06, T07, T08, T09, T10, T11, T12, T13, T14, T15, T16, T17, T18, T20
 Key: Vanilla No, MQ No
 
 Ganon's Tower
 (Boss key, no small key)
 
-T01
+T01:		3F boss key room <-> stairs to iron knuckle room
 Reqs from front: T03, T04, T05
 Reqs from boss: T02, T06
-T02
+T02:		4F iron knuckle room <-> stairs to lower ganondorf's lair
 Reqs from front: T01, T03, T04, T05, T06
 Reqs from boss: None
-T03
+T03:		2F dinolfos room <-> stairs to boss key room
 Reqs from front: T04
 Reqs from boss: T01, T02, T05, T06
-T04
+T04:		1F entrance <-> 2F dinolfos room
 Reqs from front: None
 Reqs from boss: T01, T02, T03, T05, T06
-T05
+T05:		Stairs to boss key room <-> 3F boss key room
 Reqs from front: T03, T04
 Reqs from boss: T01, T02, T06
-T06
+T06:		Stairs to iron knuckle room <-> 4F iron knuckle room
 Reqs from front: T01, T03, T04, T05
 Reqs from boss: T02
 T07 (Boss Key)

@@ -192,7 +192,7 @@
         "room": 05,
         "events": {
             "Fire Temple Room 05 Upper Cage": "can_press_floor_switch"
-        }
+        },
         "locations": {
             "Fire Temple Boulder Maze Upper Chest": "'Fire Temple Room 05 Upper Cage'"
         },
@@ -245,7 +245,7 @@
         "room": 07,
         "locations": {
             "Fire Temple GS Scarecrow Climb": "Kill the skulltula"
-        }
+        },
         "exits": {
             "Fire Temple Stone Maze Top": "transition('Fire Temple T23', True)",
             "Fire Temple Eastern Tower": "transition('Fire Temple T24', True)"
@@ -315,7 +315,7 @@
         "room": 10,
         "events": {
             "Fire Temple Boss Door Stone": "can_use(Megaton_Hammer)"
-        }
+        },
         "exits": {
             "Fire Temple Center of Flame Maze East": "
                 transition('Fire Temple T25',
@@ -351,7 +351,7 @@
         "room": 10,
         "events": {
             "Fire Temple Flame Maze Ceiling Stone": "can_use(Megaton_Hammer)"
-        }
+        },
         "exits": {
             "Fire Temple Flame Maze": "'Fire Temple Flame Maze Ceiling Stone' and can_fall",
             "Fire Temple Stone Stairway Bottom": "transition('Fire Temple T31', True)"
@@ -363,7 +363,7 @@
         "room": 11,
         "locations": {
             "Fire Temple Highest Goron Chest": "'Fire Temple Room 11 Rusted Switch'"
-        }
+        },
         "exits": {
             "Fire Temple Flame Maze": "transition('Fire Temple T10', True)",
             "Fire Temple Flame Maze North": "transition('Fire Temple T09', True)",
@@ -378,7 +378,7 @@
         "events": {
             "Fire Temple Room 11 Rusted Switch": "
                 can_use(Megaton_Hammer) and (can_play(Song_of_Time or logic_rusted_switches)"
-        }
+        },
         "exits": {
             "Fire Temple Center of Flame Maze": "True",
             "Fire Temple Center of Flame Maze East": "
@@ -413,7 +413,7 @@
         "room": 13,
         "locations": {
             "Fire Temple Megaton Hammer Chest": "can_press_floor_switch and can_climb(60)"
-        }
+        },
         "exits": {
             "Fire Temple Ascent to Western Tower": "transition('Fire Temple T11', True)",
             "Fire Temple Western Tower Under Stone": "can_use(Megaton_Hammer)",
@@ -440,7 +440,7 @@
         "room": 14,
         "events": {
             "Fire Temple Stone Stairs": "can_use(Megaton_Hammer)"
-        }
+        },
         "exits": {
             "Fire Temple Western Tower Under Stone": "transition('Fire Temple T32', True)",
             "Fire Temple Stone Stairway Bottom": "'Fire Temple Stone Stairs'"
@@ -495,7 +495,7 @@
             "Fire Temple Lava Grate Room South": "True",
             "Fire Temple Lava Grate Room North": "can_climb(100)",
             "Fire Temple Lava Grate Room West": "can_climb(100)",
-            "Fire Temple Lava Grate Room Map Cage": "can_climb(100)"
+            "Fire Temple Lava Grate Room Cage": "can_climb(100)"
         }
     },
     {
@@ -505,12 +505,12 @@
         "hot": "true",
         "exits": {
             "Fire Temple Stone Maze Upper": "transition('Fire Temple T29', True)",
-            "Fire Temple Lava Grate Room Map Cage": "can_climb(100)",
+            "Fire Temple Lava Grate Room Cage": "can_climb(100)",
             "Fire Temple Lava Grate Room": "(logic_fewer_tunic_requirements or can_use(Goron_Tunic))"
         }
     },
     {
-        "region_name": "Fire Temple Lava Grate Room Map Cage",
+        "region_name": "Fire Temple Lava Grate Room Cage",
         "dungeon": "Fire Temple",
         "room": 16,
         "locations": {
@@ -529,7 +529,7 @@
         "hot": "true",
         "exits": {
             "Fire Temple Eastern Shaft": "transition('Fire Temple T21', True)",
-            "Fire Temple Lava Grate Room Map Cage", "True"
+            "Fire Temple Lava Grate Room Cage", "True"
         }
     },
     {
@@ -685,7 +685,7 @@
         "room": 25,
         "locations": {
             "Fire Temple Compass Chest": "True"
-        }
+        },
         "exits": {
             "Fire Temple Flame Maze Northeast": "transition('Fire Temple T34', True)"
         }

@@ -226,9 +226,7 @@
         },
         "locations": {
             "Spirit Temple MQ Compass Chest": "can_use(Bow) or can_use(Slingshot)",
-            "Spirit Temple MQ Statue Room Lullaby Chest": "'Spirit Temple Room 05 Lullaby'",
-            "Spirit Temple Map Chest": "can_use_fire_source_with_torch or (logic_spirit_map_chest and can_use(Bow))",
-            "Spirit Temple GS Lobby": "can_use(Longshot)"
+            "Spirit Temple MQ Statue Room Lullaby Chest": "'Spirit Temple Room 05 Lullaby'"
         },
         "exits": {
             "Spirit Temple Rock Light Room 2F": "transition('Spirit Temple T25', True)",
@@ -388,13 +386,13 @@
             "Spirit Temple Western 3F Corridor": "
                 transition('Spirit Temple T23', True
                 or 'Spirit Temple MQ Room 08 T23 Unbar')",
-            "Spirit Temple Hall to Child Iron Knuckle Room": "
+            "Spirit Temple Hall to Child Iron Knuckle": "
                 transition('Spirit Temple T09', True
                 or 'Spirit Temple MQ Room 08 T09 Unbar')"
         }
     },
     {
-        "region_name": "Spirit Temple Hall to Child Iron Knuckle Room",
+        "region_name": "Spirit Temple Hall to Child Iron Knuckle",
         "dungeon": "Spirit Temple",
         "room": 09,
         "exits": {
@@ -412,7 +410,7 @@
                 #Iron Knuckle
         },
         "exits": {
-            "Spirit Temple Hall to Child Iron Knuckle Room": "transition('Spirit Temple T22', True)",
+            "Spirit Temple Hall to Child Iron Knuckle": "transition('Spirit Temple T22', True)",
             "Spirit Temple Exit to Right Hand": "
                 transition('Spirit Temple T08', 'Spirit Temple Room 10 Enemies'
                 or 'Spirit Temple MQ Room 10 T08 Unbar')"
@@ -557,7 +555,7 @@
         },
         "exits": {
             "Spirit Temple Adult Enemy Pit Room": "transition('Spirit Temple T19', True)",
-            "Spirit Temple Hall to Adult Iron Knuckle Room": "
+            "Spirit Temple Hall to Adult Iron Knuckle": "
                 transition('Spirit Temple T18',
                 Hit chest (does this require sword?)
                 or 'Spirit Temple MQ Room 18 T18 Unbar')",
@@ -567,7 +565,7 @@
         }
     },
     {
-        "region_name": "Spirit Temple Hall to Adult Iron Knuckle Room",
+        "region_name": "Spirit Temple Hall to Adult Iron Knuckle",
         "dungeon": "Spirit Temple",
         "room": 19,
         "events": {
@@ -597,7 +595,7 @@
                 #Iron Knuckle
         },
         "exits": {
-            "Spirit Temple Hall to Adult Iron Knuckle Room": "
+            "Spirit Temple Hall to Adult Iron Knuckle": "
                 transition('Spirit Temple T17', True)",
             "Spirit Temple Exit to Left Hand": "
                 transition('Spirit Temple T07', 'Spirit Temple Room 20 Enemies'
