@@ -246,15 +246,15 @@
         "dungeon": "Shadow Temple",
         "room": 09,
         "events": {
-            "Shadow Temple Room 06 Silver Rupees": "can_use(Longshot)",
-            "Shadow Temple Room 06 Crystal Switch": "is_adult or Kokiri_Sword or has_explosives"
+            "Shadow Temple Room 09 Silver Rupees": "can_use(Longshot)",
+            "Shadow Temple Room 09 Crystal Switch": "is_adult or Kokiri_Sword or Sticks or has_explosives"
         },
         "locations": {
-            "Shadow Temple MQ Beamos Silver Rupees Chest": "'Shadow Temple Room 06 Silver Rupees'"
+            "Shadow Temple MQ Beamos Silver Rupees Chest": "'Shadow Temple Room 09 Silver Rupees'"
         },
         "exits": {
             "Shadow Temple Huge Pit": "'Shadow Temple Room 09 Frozen Eye' and can_climb(54)",
-            "Shadow Temple Huge Pit West Hall": "'Shadow Temple Room 06 Crystal Switch'",
+            "Shadow Temple Huge Pit West Hall": "'Shadow Temple Room 09 Crystal Switch'",
             "Shadow Temple Huge Pit Northwest": "logic_lens_shadow_mq_back or can_use(Lens_of_Truth)"
         }
     },
@@ -263,7 +263,7 @@
         "dungeon": "Shadow Temple",
         "room": 09,
         "events": {
-            "Shadow Temple Room 06 Crystal Switch": "can hit crystal switch"
+            "Shadow Temple Room 09 Crystal Switch": "is_adult or can_use_projectile or Kokiri_Sword or Sticks"
         },
         "exits": {
             "Shadow Temple Falling Spikes Room": "transition('Shadow Temple T19', True)",
@@ -320,7 +320,7 @@
                 (logic_lens_shadow_mq_back or can_use(Lens_of_Truth) and can_use(Hookshot)",
             "Shadow Temple Room 11 Enemies": "
                 (logic_lens_shadow_mq_back or can_use(Lens_of_Truth) and
-				defeat ReDeads"
+                defeat ReDeads"
                 #ReDeads
         },
         "locations": {

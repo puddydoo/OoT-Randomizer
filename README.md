@@ -53,10 +53,7 @@ They pave way for such features as lock rando, door rando, hybridized Vanilla/MQ
 
 ### Missing Conditions
 * Deku Tree: None
-* Deku Tree MQ
-  * Room 4: Kill enemies
-  * Room 6: Kill enemies
-  * Room 10: Kill enemies
+* Deku Tree MQ: None
 * Dodongo's Cavern
   * Room 3: Kill Lizalfos
   * Room 15: Kill Armos without Goron's Bracelet
@@ -64,62 +61,53 @@ They pave way for such features as lock rando, door rando, hybridized Vanilla/MQ
   * Room 3: Kill Lizalfos
   * Room 5: Kill Dodongos
   * Room 6: Kill Gohma Larvae
-  * Room 8: Hit crystal switches
-  * Room 12: Hit crystal switch
-  * Room 13: Kill enemies
+  * Room 8: Kill Armos as child to blow up wall bombs
+  * Room 13: Kill Mad Scrubs and Keese
   * Room 14: Kill Poe
 * Jabu-Jabu
   * Room 5: Kill Gold Skulltula
   * Room 6: Ruto and Big Octo
   * Room 7: Ruto
-  * Room 9: Kill enemies
+  * Room 9: Kill Stingers
   * Room 12: Kill Shaboms
 * Jabu-Jabu MQ
   * Room 6: Ruto and Big Octo
-  * Room 14: Kill enemies
+  * Room 14: Kill Like Like and Stingers
 * Forest Temple
-  * Room 18: Kill enemies
-  * Room 21: Kill enemies
+  * Room 18: Kill Floormaster
+  * Room 21: Kill Blue Bubbles
 * Forest Temple MQ
-  * Room 11: Hit crystal switch
-  * Room 17: Hit crystal switch
   * Room 18: Kill ReDeads
   * Room 19: Straightening room
   * Room 20: Twisting room
-  * Room 21: Kill enemies
+  * Room 21: Kill Floormaster
 * Fire Temple
   * Room 3: Kill Flare Dancer
   * Room 7: Kill Gold Skulltula
-  * Room 15: Kill enemies
+  * Room 15: Kill Torch SLugs and Fire Keese
   * Room 18: Kill Gold Skulltula
   * Room 24: Kill Flare Dancer
 * Fire Temple MQ
   * Room 3: Kill Flare Dancer
-  * Room 15: Kill enemies
   * Room 18: Kill Iron Knuckle
   * Room 24: Kill Flare Dancer
 * Water Temple
-  * Room 8: Hit crystal switch
-  * Room 9: Hit crystal switch
   * Room 13: Kill Dark Link
   * Room 18: Kill Shell Blades
-  * Room 19: Kill enemies
+  * Room 19: Kill Spikes
 * Water Temple MQ
-  * Room 9: Hit crystal switch
   * Room 13: Kill Dark Link
   * Room 14: Kill Dodongos
-  * Room 15: Hit crystal switch
-  * Room 18: Kill enemies
+  * Room 18: Kill Spike and Lizalfos
 * Spirit Temple
-  * Room 1: Kill enemies
+  * Room 1: Kill Keese, Fire Keese, and Armos
   * Room 5: Kill Gold Skulltula
   * Room 10: Kill Iron Knuckle
   * Room 20: Kill Iron Knuckle
-  * Room 25: Hit crystal switch
 * Spirit Temple MQ
   * Room 2: Kill Gibdos
   * Room 3: Kill Keese
-  * Room 4: Hit crystal switch and kill enemies
+  * Room 4: Kill Like like, Baby Dodongos, and Beamos
   * Room 5: Kill Gold Skulltula
   * Room 10: Kill Iron Knuckle
   * Room 14: Kill Leevers
@@ -132,7 +120,7 @@ They pave way for such features as lock rando, door rando, hybridized Vanilla/MQ
   * Room 11: Kill ReDeads
   * Room 12: Get Gold Skulltula of this room
   * Room 14: Kill Keese and Gold Skulltula
-  * Room 16: Kill enemies
+  * Room 16: Kill Like Like and Keese
   * Room 17: Kill invisible Floormasters
   * Room 19: Kill ReDeads
   * Room 20: Kill Gibdos
@@ -140,7 +128,6 @@ They pave way for such features as lock rando, door rando, hybridized Vanilla/MQ
   * Room 1: Kill ReDead
   * Room 6: Kill Skulltulas
   * Room 7: Kill Gibdos
-  * Room 9: Hit crystal switch
   * Room 11: Kill ReDeads
   * Room 20: Kill Gibdos
 * Ice Cavern
@@ -155,18 +142,14 @@ They pave way for such features as lock rando, door rando, hybridized Vanilla/MQ
   * Room 5: Kill Torch Slugs and Keese
   * Room 10: Kill Like Likes
 * Gerudo Training Ground MQ
-  * Room 4: Hit crystal switch
   * Room 5: Kill Torch Slugs and Iron Knuckle
   * Room 10: Kill Freezards and Spikes
 * Ganon's Castle
   * Room 2: Break icicles
   * Room 5: Kill Wolfos
-  * Room 18: Hit crystal switches
 * Ganon's Castle MQ
-  * Room 0: Kill enemies
-  * Room 2: Hit switch
-  * Room 9: Kill enemies
-  * Room 18: Hit crystal switch
+  * Room 0: Kill Green Bubbles, Armos, and Iron Knuckle
+  * Room 9: Kill Dinolfos and Torch Slugs
 * Ganon's Tower
   * Room 0: Kill Dinolfos
   * Room 4: Kill Iron Knuckles

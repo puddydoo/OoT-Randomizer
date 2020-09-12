@@ -1,251 +1,137 @@
-Assuming vanilla front and back for this ordering:
-1. Front Vanilla/Back Vanilla
-2. Front MQ     /Back MQ
-3. Front Vanilla/Back MQ
-4. Front MQ     /Back Vanilla
+This is a guide to how hybridized vanilla/MQ dungeons would handle doors if the feature is ever added.
+Many doors in MQ are changed to a different type of door than in vanilla.
+Therefore, every door that connects a vanilla room with an MQ room must be edited.
 
-MQ often flips the directions of doors to allow a different type of flag. Though MQ flips some doors for no reason despite not having bars in either version. This list treats such doors as if they didn't flip because I don't think it makes a difference.
+This first section describes all combinations of mismatched door types between OoT and MQ.
+There are four possible ways that a door in a hybrid dungeon could end up:
+1. Both rooms have vanilla layouts
+2. Both rooms have MQ layouts
+3. The "front" room has the vanilla layout and the back is MQ
+4. The "front" room has the MQ layout and the back is vanilla
 
-Vanilla Lifting
-MQ Locked Lifting
-01-02 Lifting
-01-02 Locked Lifting
-??? (Lock)
-
-Vanilla Locked Lifting
-MQ Lifting
-01-02 Locked Lifting
-01-02 Lifting
-??? (Lock)
-
-Vanilla Locked Lifting
-MQ Front Clear
-01-02 Locked Lifting
-01-02 Front Clear
-??? (Lock)
-
-Vanilla Locked Lifting
-MQ Front Switch
-01-02 Locked Lifting
-01-02 Front Switch
-??? (Lock)
-
-Vanilla Knob
-MQ Locked Lifting
-01-02 Knob
-01-02 Locked Lifting
-??? (Lock)
-
-Vanilla Knob
-MQ Locked Knob
-01-02 Knob
-01-02 Locked Knob
-??? (Lock)
-
-Vanilla Locked Knob
-MQ Lifting
-01-02 Locked Knob
-01-02 Lifting
-??? (Lock)
-
-Vanilla Locked Knob
-MQ Knob
-01-02 Locked Knob
-01-02 Knob
-??? (Lock)
-
-Vanilla Locked Knob
-MQ Flipped Front Clear
-01-02 Locked Knob
-02-01 Front Clear
-??? (Lock)
-
-Vanilla Locked Knob
-MQ Front Switch
-01-02 Locked Knob
-01-02 Front Switch
-??? (Lock)
-
-Vanilla Front Clear
-MQ Locked Lifting
-01-02 Front Clear
-01-02 Locked Lifting
-??? (Lock)
-
-Vanilla Front Switch
-MQ Locked Lifting
-01-02 Front Switch
-01-02 Locked Lifting
-??? (Lock)
-
-Vanilla Front Switch
-MQ Locked Knob
-01-02 Front Switch
-01-02 Locked Knob
-??? (Lock)
+Locked doors should be treated the same as unlocked ones because the original lock layouts can't be used in a hybrid dungeon anyway.
+If a lock is added afterward then it will just overwrite whatever is there.
 
 Vanilla Lifting
 MQ Front Clear
-01-02 Lifting
-01-02 Front Clear
-01-02 Lifting
-01-02 Front Clear
+Vanilla/MQ: Lifting
+MQ/Vanilla: Front Clear
 
 Vanilla Lifting
 MQ Flipped Front Clear
-01-02 Lifting
-02-01 Front Clear
-02-01 Front Clear
-01-02 Lifting
+Vanilla/MQ: Flipped Front Clear
+MQ/Vanilla: Lifting
 
 Vanilla Lifting
 MQ Front Switch
-01-02 Lifting
-01-02 Front Switch
-01-02 Lifting
-01-02 Front Switch
+Vanilla/MQ: Lifting
+MQ/Vanilla: Front Switch
 
 Vanilla Lifting
 MQ Flipped Front Switch
-01-02 Lifting
-02-01 Front Switch
-02-01 Front Switch
-01-02 Lifting
+Vanilla/MQ: Flipped Front Switch
+MQ/Vanilla: Lifting
 
 Vanilla Lifting
 MQ Flipped FSBC
-01-02 Lifting
-02-01 Front Switch Back Clear
-02-01 Front Switch
-01-02 Front Clear
+Vanilla/MQ: Flipped Front Switch
+MQ/Vanilla: Front Clear
 
 Vanilla Knob
 MQ Front Clear
-01-02 Knob
-01-02 Front Clear
-01-02 Knob
-01-02 Front Clear
+Vanilla/MQ: Knob
+MQ/Vanilla: Front Clear
 
 Vanilla Knob
 MQ Flipped Front Clear
-01-02 Knob
-02-01 Front Clear
-02-01 Front Clear
-01-02 Knob
+Vanilla/MQ: Flipped Front Clear
+MQ/Vanilla: Knob
 
 Vanilla Knob
 MQ Front Switch
-01-02 Knob
-01-02 Front Switch
-01-02 Knob
-01-02 Front Switch
+Vanilla/MQ: Knob
+MQ/Vanilla: Front Switch
 
 Vanilla Knob
 MQ Flipped Front Switch
-01-02 Knob
-02-01 Front Switch
-02-01 Front Switch
-01-02 Knob
+Vanilla/MQ: Flipped Front Switch
+MQ/Vanilla: Knob
 
 Vanilla Knob
 MQ Flipped FSBC
-01-02 Knob
-02-01 Front Switch Back Clear
-02-01 Front Switch
-01-02 Front Clear
+Vanilla/MQ: Flipped Front Switch
+MQ/Vanilla: Front Clear
 
 Vanilla Front Clear
 MQ Lifting
-01-02 Front Clear
-01-02 Lifting
-01-02 Front Clear
-01-02 Lifting
+Vanilla/MQ: Front Clear
+MQ/Vanilla: Lifting
 
 Vanilla Front Clear
 MQ Front Switch
-01-02 Front Clear
-01-02 Front Switch
-01-02 Front Clear
-01-02 Front Switch
+Vanilla/MQ: Front Clear
+MQ/Vanilla: Front Switch
 
 Vanilla Front Clear
 MQ Flipped Front Switch
-01-02 Front Clear
-02-01 Front Switch
-02-01 Front Switch Back Clear
-01-02 Lifting
+Vanilla/MQ: Flipped Front Switch Back Clear
+MQ/Vanilla: Lifting
 
 Vanilla Front Clear
 MQ Flipped FSBC
-01-02 Front Clear
-02-01 Front Switch Back Clear
-02-01 Front Switch Back Clear
-01-02 Front Clear
+Vanilla/MQ: Flipped Front Switch Back Clear
+MQ/Vanilla: Front Clear
 
 Vanilla Front Switch
 MQ Lifting
-01-02 Front Switch
-01-02 Lifting
-01-02 Front Switch
-01-02 Lifting
+Vanilla/MQ: Front Switch
+MQ/Vanilla: Lifting
 
 Vanilla Front Switch
 MQ Knob
-01-02 Front Switch
-01-02 Knob
-01-02 Front Switch
-01-02 Knob
+Vanilla/MQ: Front Switch
+MQ/Vanilla: Knob
 
 Vanilla Front Switch
 MQ Front Clear
-01-02 Front Switch
-01-02 Front Clear
-01-02 Front Switch
-01-02 Front Clear
+Vanilla/MQ: Front Switch
+MQ/Vanilla: Front Clear
 
 Vanilla Front Switch
 MQ Flipped Front Clear
-01-02 Front Switch
-02-01 Front Clear
-01-02 Front Switch Back Clear
-01-02 Lifting
+Vanilla/MQ: Front Switch Back Clear
+MQ/Vanilla: Lifting
 
 Vanilla Front Switch
-MQ FSBC
-01-02 Front Switch
-01-02 Front Switch Back Clear
-01-02 Front Switch Back Clear
-01-02 Front Switch
+MQ Front Switch Back Clear
+Vanilla/MQ: Front Switch Back Clear
+MQ/Vanilla: Front Switch
 
-The "both" ones will have one of the barred sides unbarred and the other one made into the front
-
-Vanilla Front Clear
-MQ Flipped Front Clear
-01-02 Front Clear
-02-01 Front Clear
-??-?? Both Clear
-01-02 Lifting
+It is impossible to have a door use a switch on both sides, or a clear on both sides.
+If both sides of a door would require this, it is necessary to pick one side to leave unbarred.
 
 Vanilla Front Switch
 MQ Flipped Front Switch
-01-02 Front Switch
-02-01 Front Switch
-??-?? Both Switch
-01-02 Lifting
+Vanilla/MQ: Front Switch Conflict
+MQ/Vanilla: Lifting
 
 Vanilla Front Switch
 MQ Flipped FSBC
-01-02 Front Switch
-02-01 Front Switch Back Clear
-??-?? Both Switch
-01-02 Front Clear
+Vanilla/MQ: Front Switch Conflict
+MQ/Vanilla: Front Clear
 
 Vanilla FSBC
 MQ Flipped Front Switch
-01-02 Front Switch Back Clear
-02-01 Front Switch
-??-?? Both Switch
-02-01 Front Clear
+Vanilla/MQ: Front Switch Conflict
+MQ/Vanilla: Flipped Front Clear
+
+Vanilla Front Clear
+MQ Flipped Front Clear
+Vanilla/MQ: Front Clear Conflict
+MQ/Vanilla: Lifting
+
+The doors are numbered in the order of "front room - back room" the way it is in vanilla even if the MQ version of the door flips it.
+MQ often flips the directions of doors to allow a different type of flag. Though MQ flips some doors for no reason despite not having bars in either version. This list treats such doors as if they didn't flip because I don't think it makes a difference.
 
 Deku Tree
 
@@ -561,12 +447,28 @@ T21 18-18 Front Switch Door
 
 Ganon's Tower
 
-T01 02-03 Front Switch Door Perm 0A
+T01 02-03 Front Switch Door
 T02 04-05 Front Clear Door
 T03 00-01 Front Clear Door
 T04 00-07 Front Clear Door
-T05 02-01 Front Switch Door Perm 0A
+T05 02-01 Front Switch Door
 T06 04-03 Front Clear Door
 T07 05-08 Boss Door Perm 14
 T08 08-06 Boss Door Perm 14
 T09 06-09 Boss Door Perm 14
+
+Some dungeons would have other problems with combinations of certain rooms besides door conflicts.
+Particularly Jabu-Jabu because of Ruto and the tentacles.
+
+There is a conflict with Vanilla Room 7 (branching hallways) and MQ Room 3 (under the pit). Vanilla Room 7 needs Ruto to access Room 10 and Room 11 but MQ Room 3 needs the green tentacle to be killed before Ruto can be brought out of the basement.
+	1. 'Jabu Jabus Belly MQ Room 03 T13 Unbar' so that Ruto can be brought up the vanilla way
+	2. 'Jabu Jabus Belly Room 07 T11 Unbar' so that Room 10 can be opened without Ruto which allows green tentacle to be killed
+	3. MQ Room 9, Vanilla Room 10, Vanilla Room 8, and 'Jabu Jabus Belly Room 07 T12 Unbar' so that Room 9 is unbarred and contains the blue tentacle which opens up Room 10 with the green tentacle and the red tentacle can be reached in Room 8 with Ruto
+		Alternatively: The green tentacle could be removed from MQ Room 3.
+If Room 10 is vanilla and Room 8 is MQ, then both of them will contain the red tentacle, but no green tentacle. Without any way to kill the green tentacle, Room 3 must be vanilla and Room 2 must be MQ so that nothing is blocked by the green tentacle.
+	Alternatively: The green tentacle could be removed from Room 2 or 3, or one of the red tentacles could be replaced.
+If Room 8 is vanilla and Room 10 is MQ, then both of them will contain the green tentacle, but no red tentacle. Without any way to kill the red tentacle, Room 1 and Room 3 must both be vanilla. Room 7 must also be MQ because in vanilla the red tentacle blocks off Room 12 which has an item in it.
+	Alternatively: The red tentacle could be removed from these rooms, or one of the green tentacles could be replaced.
+If Room 12 is vanilla and Room 9 is MQ, then both of them will contain the blue tentacle. I don't think this would be much of a problem though.
+If Room 9 is vanilla and Room 12 is MQ, then neither of them will contain the blue tentacle. Without any way to kill the blue tentacle, Room 7 must be vanilla, because in MQ the blue tentacle blocks off Room 12. The blue tentacle still blocks off Room 8 in vanilla, but that contains nothing but either the red or green tentacle. This does mean though that Room 10 has to be vanilla and contain the red tentacle, leaving no way to kill the green tentacle. So Room 3 must be vanilla and Room 2 must be MQ.
+If Room 7 is vanilla and Room 10 is MQ, then the green tentacle will replace the red tentacle. Vanilla Room 7 needs the red tentacle so Room 8 and Room 9 must be MQ; MQ Room 9 has the blue tentacle which opens up MQ Room 8 with the red tentacle.

@@ -468,7 +468,7 @@
         "events": {
             "Fire Temple Room 15 Enemies": "
                 "
-                #
+                #Torch Slugs and Fire Keese
         },
         "exits": {
             "Fire Temple Entrance Chamber": "transition('Fire Temple T35', True)",

@@ -5,8 +5,8 @@
         "room": 00,
         "events": {
             "Ganons Castle Room 00 Enemies": "
-                "
-                #A bunch of enemies
+                is_adult or "
+                #Green Bubble x2, Armos x2, Iron Knuckle x1
         },
         "exits": {
             "Ganons Castle Grounds": "True",
@@ -46,8 +46,8 @@
         "room": 02,
         "locations": {
             "Ganons Castle MQ Water Trial Chest": "Blue_Fire",
-            "Blue Fire": "has_bottle and can hit that switch"
-        }
+            "Blue Fire": "has_bottle and (is_adult or can_use_projectile or Kokiri_Sword or Sticks)" #Crystal switch
+        },
         "exits": {
             "Ganons Castle Barrier Chamber": "transition('Ganons Castle T10', True)",
             "Ganons Castle Water Trial Red Ice Room Rear": "Blue_Fire"
@@ -108,7 +108,7 @@
         },
         "locations": {
             "Ganons Castle MQ Forest Trial Freestanding Key": "can_use(Boomerang) or can_use(Hookshot)"
-        }
+        },
         "exits": {
             "Ganons Castle Barrier Chamber": "transition('Ganons Castle T09', True)",
             "Ganons Castle Forest Trial Wind Room Front": "
@@ -143,7 +143,7 @@
         "locations": {
             "Ganons Castle MQ Forest Trial Eye Switch Chest": "'Ganons Castle Room 06 Eye Switch'",
             "Ganons Castle MQ Forest Trial Frozen Eye Switch Chest": "'Ganons Castle Room 06 Frozen Eye Switch'"
-        }
+        },
         "exits": {
             "Ganons Castle Forest Trial Wind Room Front": "
                 ('Ganons Castle Room 06 Eye Switch' and can_use(Longshot))
@@ -199,7 +199,7 @@
         "events": {
             "Ganons Castle Room 09 Enemies": "
                 "
-                #
+                #Dinolfos x1, Torch Slug x2
         },
         "exits": {
             "Ganons Castle Barrier Chamber": "transition('Ganons Castle T11', True)",
@@ -214,7 +214,7 @@
         "room": 09,
         "locations": {
             "Ganons Castle MQ Light Trial Lullaby Chest": "can_play(Zeldas_Lullaby)"
-        }
+        },
         "exits": {
             "Ganons Castle Light Trial Enemy Room": "transition('Ganons Castle T04', True)",
             "Ganons Castle Light Trial Boulder Room": "transition('Ganons Castle T20', True)"
@@ -351,7 +351,7 @@
             "Ganons Castle MQ Deku Scrub Left": "can_stun_deku",
             "Ganons Castle MQ Deku Scrub Right": "can_stun_deku",
             "Free Fairies": "has_bottle"
-        }
+        },
         "exits": {
             "Ganons Castle Barrier Chamber": "transition('Ganons Castle T01', True)"
         }
@@ -377,10 +377,10 @@
         "room": 18,
         "events": {
             "Ganons Castle Room 18 Door Crystal Switch": "has_bombchus"
-        }
+        },
         "locations": {
             "Ganons Castle MQ Spirit Trial First Chest": "True"
-        }
+        },
         "exits": {
             "Ganons Castle Spirit Trial Danger Room": "transition('Ganons Castle T18', True)",
             "Ganons Castle Spirit Trial Sun Switch Room": "
@@ -393,9 +393,8 @@
         "dungeon": "Ganons Castle",
         "room": 18,
         "events": {
-            "Ganons Castle Room 18 Door Crystal Switch": "
-                Can hit crystal switch"
-        }
+            "Ganons Castle Room 18 Door Crystal Switch": "can_use_projectile"
+        },
         "locations": {
             "Ganons Castle MQ Spirit Trial Invisible Chest": "logic_lens_castle_mq or can_use(Lens_of_Truth)",
             "Ganons Castle MQ Spirit Trial Sun Front Left Chest": "
@@ -410,7 +409,7 @@
             "Ganons Castle MQ Spirit Trial Sun Back Right Chest": "
                 (can_use(Fire_Arrows) and can_use(Mirror_Shield))
                 or (mm_light_arrows and can_use(Light_Arrows))"
-        }
+        },
         "exits": {
             "Ganons Castle Spirit Trial Sun Switch Room Front": "
                 transition('Ganons Castle T21',
@@ -431,7 +430,7 @@
         },
         "locations": {
             "Nut Pot": "True"
-        }
+        },
         "exits": {
             "Ganons Castle Spirit Trial Sun Switch Room": "transition('Ganons Castle T19', True)"
         }

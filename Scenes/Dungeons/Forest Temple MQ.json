@@ -74,7 +74,7 @@
             "Forest Temple Room 05 Enemies": "
                 is_adult or Kokiri_Sword"
                 #Stalfos
-        }
+        },
         "exits": {
             "Forest Temple Lobby": "
                 transition('Forest Temple T15', 'Forest Temple Room 05 Enemies'
@@ -93,7 +93,7 @@
                 is_adult or can_use(Dins_Fire) or
                 can_use(Sticks) or can_use(Slingshot) or Kokiri_Sword"
                 #Wolfos
-        }
+        },
         "locations": {
             "Forest Temple MQ Wolfos Chest": "'Forest Temple Room 06 Enemies Wave 1'",
             "Fairy Pot": "has_bottle"
@@ -113,7 +113,7 @@
             "Forest Temple Room 06 Enemies Wave 2": "
                 is_adult or Kokiri_Sword"
                 #Stalfos
-        }
+        },
         "locations": {
             "Forest Temple MQ Bow Chest": "'Forest Temple Room 06 Enemies Wave 2'"
         },
@@ -224,7 +224,7 @@
             "Forest Temple West Courtyard": "True",
             "Forest Temple Block Push Room North Ledge": "transition('Forest Temple T05', True)",
             "Forest Temple Enemy Side Room": "transition('Forest Temple T13', True)",
-            "Forest Temple Blue Bubble Room under Boss Key Room": "transition('Forest Temple T12', True)"
+            "Forest Temple Room under Boss Key Room": "transition('Forest Temple T12', True)"
         }
     },
     {
@@ -276,7 +276,7 @@
         "room": 11,
         "events": {
             "Forest Temple Room 06 Crystal Switch": "logic_forest_mq_block_puzzle and has_bombchus"
-        }
+        },
         "locations": {
             "Forest Temple MQ GS Block Push Room": "is_adult or can_child_attack"
         },
@@ -313,7 +313,7 @@
         "events": {
             "Forest Temple Room 06 Crystal Switch": "
                 can_use(Bow) or can_use(Slingshot) or can_use(Longshot)"
-        }
+        },
         "exits": {
             "Forest Temple Block Push Room": "True",
             #Not sure if the jumpslash could be done as child if child was up there somehow
@@ -338,8 +338,8 @@
         "dungeon": "Forest Temple",
         "room": 11,
         "events": {
-            "Forest Temple Room 06 Crystal Switch": "can hit crystal switch"
-        }
+            "Forest Temple Room 06 Crystal Switch": "is_adult or can_use_projectile or Kokiri_Sword or Sticks"
+        },
         "exits": {
             "Forest Temple Block Push Room": "True",
             "Forest Temple Block Push Room Upper Ledge": "True",
@@ -358,20 +358,20 @@
         "exits": {
             "Forest Temple Block Push Room": "transition('Forest Temple T26', True)",
             "Forest Temple Joelles Room": "transition('Forest Temple T27', True)",
-            "Forest Temple Blue Bubble Room under Boss Key Room": "
+            "Forest Temple Room under Boss Key Room": "
                 Straighten the room
                 and transition('Forest Temple T23', True)"
         }
     },
     {
-        "region_name": "Forest Temple Blue Bubble Room under Boss Key Room",
+        "region_name": "Forest Temple Room under Boss Key Room",
         "dungeon": "Forest Temple",
         "room": 21,
         "events": {
             "Forest Temple Room 21 Enemies": "
                 "
-                #
-        }
+                #Floormaster
+        },
         "exits": {
             "Forest Temple West Courtyard Ledge": "
                 transition('Forest Temple T12',
@@ -475,12 +475,19 @@
         "region_name": "Forest Temple Basement",
         "dungeon": "Forest Temple",
         "room": 17,
+        "events": {
+            "Forest Temple Room 17 Crystal Switch": "
+                is_adult or can_use(Sticks) or can_use_projectile",
+                #Kokiri Sword (and broken knife) can't jumpslash it
+            "Forest Temple Room 17 Floor Switch": "can_press_floor_switch and 'Forest Temple Room 17 Crystal Switch'",
+            "Forest Temple Room 17 Eye Switch": "can_use(Bow) and 'Forest Temple Room 17 Floor Switch'"
+        },
         "locations": {
             "Forest Temple MQ Basement Chest": "True"
-        }
+        },
         "exits": {
             "Forest Temple Lobby": "transition('Forest Temple T21', True)",
-            "Forest Temple Basement Hall": "can_press_floor_switch and can hit a crystal switch on the ceiling"
+            "Forest Temple Basement Hall": "'Forest Temple Room 17 Eye Switch'"
         }
     },
     {
@@ -488,8 +495,7 @@
         "dungeon": "Forest Temple",
         "room": 17,
         "exits": {
-            "Forest Temple Basement": "
-                at('Forest Temple Basement', can_press_floor_switch)",
+            "Forest Temple Basement": "'Forest Temple Room 17 Eye Switch'",
             "Phantom Ganon Arena": "transition('Forest Temple T29', True)"
         }
     }

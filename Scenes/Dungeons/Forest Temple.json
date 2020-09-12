@@ -221,7 +221,7 @@
             "Forest Temple West Courtyard": "True",
             "Forest Temple Block Push Room North Ledge": "transition('Forest Temple T05', True)",
             "Forest Temple Enemy Side Room": "transition('Forest Temple T13', True)",
-            "Forest Temple Blue Bubble Room under Boss Key Room": "transition('Forest Temple T12', True)"
+            "Forest Temple Room under Boss Key Room": "transition('Forest Temple T12', True)"
         }
     },
     {
@@ -231,7 +231,7 @@
         "events": {
             "Forest Temple Room 18 Enemies": "
                 "
-                #
+                #Floormaster
         },
         "locations": {
             "Forest Temple Floormaster Chest": "'Forest Temple Room 18 Enemies'"
@@ -346,19 +346,19 @@
         "exits": {
             "Forest Temple Block Push Room": "transition('Forest Temple T26', True)",
             "Forest Temple Joelles Room": "transition('Forest Temple T27', True)",
-            "Forest Temple Blue Bubble Room under Boss Key Room": "
+            "Forest Temple Room under Boss Key Room": "
                 at('Forest Temple Block Push Room Top', can_use(Bow) or can_use(Slingshot))
                 and transition('Forest Temple T23', True)"
         }
     },
     {
-        "region_name": "Forest Temple Blue Bubble Room under Boss Key Room",
+        "region_name": "Forest Temple Room under Boss Key Room",
         "dungeon": "Forest Temple",
         "room": 21,
         "events": {
             "Forest Temple Room 21 Enemies": "
                 "
-                #
+                #Blue Bubble x2
         },
         "exits": {
             "Forest Temple West Courtyard Ledge": "

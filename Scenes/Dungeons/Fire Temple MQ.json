@@ -501,8 +501,8 @@
         "room": 15,
         "events": {
             "Fire Temple Room 15 Enemies": "
-                "
-                #
+                is_adult or Kokiri_Sword"
+                #Stalfos x2, Keese x1
         },
         "exits": {
             "Fire Temple Entrance Chamber": "transition('Fire Temple T35', True)",

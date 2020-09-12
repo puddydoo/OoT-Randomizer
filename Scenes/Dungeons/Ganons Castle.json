@@ -356,12 +356,12 @@
         "dungeon": "Ganons Castle",
         "room": 18,
         "events": {
-            "Ganons Castle Room 18 First Crystal Switch": "has_explosives",
+            "Ganons Castle Room 18 Chest Crystal Switch": "has_explosives",
             "Ganons Castle Room 18 Door Crystal Switch": "has_bombchus"
         },
         "locations": {
             "Ganons Castle Spirit Trial Crystal Switch Chest": "
-                'Ganons Castle Room 18 First Crystal Switch'"
+                'Ganons Castle Room 18 Chest Crystal Switch'"
         },
         "exits": {
             "Ganons Castle Spirit Trial Danger Room": "transition('Ganons Castle T18', True)",
@@ -375,8 +375,8 @@
         "dungeon": "Ganons Castle",
         "room": 18,
         "events": {
-            "Ganons Castle Room 18 First Crystal Switch": "Can hit crystal switch",
-            "Ganons Castle Room 18 Door Crystal Switch": "Can hit crystal switch"
+            "Ganons Castle Room 18 Chest Crystal Switch": "is_adult or can_use_projectile or Kokiri_Sword or Sticks",
+            "Ganons Castle Room 18 Door Crystal Switch": "is_adult or can_use_projectile or Kokiri_Sword or Sticks"
         },
         "locations": {
             "Ganons Castle Spirit Trial Invisible Chest": "logic_lens_castle or can_use(Lens_of_Truth)"

@@ -104,9 +104,9 @@
         "room": 04,
         "events": {
             "Deku Tree Room 04 Enemies": "
-                "
-                #
-        }
+                is_adult or can_use(Kokiri_Sword) or can_use_projectile or (Nuts and can_use(Sticks))"
+                #Gohma Larvae, Mad Scrub
+        },
         "exits": {
             "Deku Tree Basement River Room": "
                 transition('Deku Tree T03',
@@ -152,8 +152,8 @@
         "events": {
             "Deku Tree Room 06 Enemies": "
                 is_adult or can_use(Kokiri_Sword) or can_use_projectile or (Nuts and can_use(Sticks))"
-                #
-        }
+                #Gohma Larvae, Mad Scrub
+        },
         "exits": {
             "Deku Tree Spiked Log Room West": "
                 transition('Deku Tree T02',
@@ -209,7 +209,7 @@
             "Deku Tree Room 09 Enemies": "
                 has_shield"
                 #Hint Scrub x3
-        }
+        },
         "exits": {
             "Deku Tree Basement River Room Ledge": "transition('Deku Tree T11', True)",
             "Gohma Entrance": "
@@ -224,8 +224,8 @@
         "events": {
             "Deku Tree Room 10 Enemies": "
                 is_adult or can_child_attack"
-                #
-        }
+                #Gohma Larva x6, Deku Baba x1
+        },
         "locations": {
             "Deku Tree MQ Slingshot Chest": "'Deku Tree Room 10 Enemies'",
             "Deku Tree MQ Slingshot Room Back Chest": "

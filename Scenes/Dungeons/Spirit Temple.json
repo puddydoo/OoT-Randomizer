@@ -42,7 +42,7 @@
         "events": {
             "Spirit Temple Room 01 Enemies": "
                 "
-                #
+                #Keese x2, Fire Keese x2, Armos x1
         },
         "exits": {
             "Spirit Temple Lobby": "is_child and transition('Spirit Temple T30', True)",
@@ -637,7 +637,7 @@
         "dungeon": "Spirit Temple",
         "room": 25,
         "events": {
-            "Spirit Temple Room 25 Crystal Switch": "hit the crystal switch",
+            "Spirit Temple Room 25 Crystal Switch": "is_adult or Kokiri_Sword or Sticks or has_explosives",
             "Spirit Temple Room 25 Sun Switch": "
                 ('Spirit Temple 4F Mirrors' and can_use(Mirror_Shield))
                 or (mm_light_arrows and can_use(Light_Arrows))"

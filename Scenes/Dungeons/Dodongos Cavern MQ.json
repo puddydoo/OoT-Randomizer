@@ -57,7 +57,7 @@
         "room": 00,
         "events": {
             "Dodongos Cavern Lobby North Bridge Rocks": "can_blast_or_smash"
-        }
+        },
         "locations": {
             "Dodongos Cavern End of Bridge Chest": "can_blast_or_smash"
         },
@@ -76,7 +76,7 @@
         "events": {
             "Dodongos Cavern Lobby North Bridge Rocks": "
                 can_blast_or_smash or Progressive_Strength_Upgrade or can_use(Bow)"
-        }
+        },
         "exits": {
             "Dodongos Cavern Lobby North Bridge": "'Dodongos Cavern Lobby North Bridge Rocks'",
             "Dodongos Cavern Bomb Bag Room Upper": "transition('Dodongos Cavern T03', True)"
@@ -131,7 +131,7 @@
                 has_explosives or Progressive_Strength_Upgrade 
                 or can_use(Dins_Fire) or (logic_dc_staircase and can_use(Bow))",
             "Dodongos Cavern Room 02 Silver Rupees": "'Dodongos Cavern Room 02 Staircase' and can_climb(40)"
-        }
+        },
         "exits": {
             "Dodongos Cavern Lobby": "transition('Dodongos Cavern T22', True)",
             "Dodongos Cavern Bomb Flower Staircase Room Top": "
@@ -146,7 +146,7 @@
         "room": 02,
         "events": {
             "Dodongos Cavern Room 02 Silver Rupees": "True"
-        }
+        },
         "locations": {
             "Dodongos Cavern MQ Deku Scrub Staircase": "can_stun_deku"
         },
@@ -175,9 +175,9 @@
         "room": 03,
         "events": {
             "Dodongos Cavern Room 03 Enemies Wave 1": "
-			    
-				#Lizalfos x2"
-        }
+                
+                #Lizalfos x2"
+        },
         "locations": {
             "Dodongos Cavern MQ GS Lizalfos Room": "can_blast_or_smash"
         },
@@ -206,9 +206,9 @@
         "room": 03,
         "events": {
             "Dodongos Cavern Room 03 Enemies Wave 2": "
-			    
-				#Lizalfos x2"
-        }
+                
+                #Lizalfos x2"
+        },
         "exits": {
             "Dodongos Cavern Single Flame Trap Room East": "
                 transition('Dodongos Cavern T11', 'Dodongos Cavern Room 03 Enemies Wave 2'
@@ -253,9 +253,9 @@
         "events": {
             "Dodongos Cavern Room 05 Enemies": "
                 is_adult or Progressive_Strength_Upgrade
-				or can kill dodongos"
+                or can kill dodongos"
                 #Dodongo x?
-        }
+        },
         "locations": {
             "Dodongos Cavern MQ Compass Chest": "'Dodongos Cavern Room 05 Enemies'"
         },
@@ -275,7 +275,7 @@
             "Dodongos Cavern Room 06 Enemies": "
                 is_adult or can kill the enemies"
                 #Gohma Larva x5
-        }
+        },
         "locations": {
             "Dodongos Cavern MQ Larvae Room Chest": "'Dodongos Cavern Room 06 Enemies'",
             "Dodongos Cavern MQ GS Larvae Room": "is_adult or can_child_attack"
@@ -317,8 +317,8 @@
         "dungeon": "Dodongos Cavern",
         "room": 08,
         "exits": {
-            "Dodongos Cavern Fire Keese Pushblock Room North": "
-                can_climb(60) and (has_explosives or can_use(Hookshot) or (is_adult and can_use(Bow)))",
+            "Dodongos Cavern Fire Keese Pushblock Room North": "can_climb(60)",
+                #The crystal switch that removes the fire can be hit by a pot
             "Dodongos Cavern Floor Hole Switch Room": "
                 can_climb(60) and transition('Dodongos Cavern T04', True)"
         }
@@ -329,11 +329,12 @@
         "room": 08,
         "events": {
             "Dodongos Cavern Room 08 Crystal Switch": "
-                Can blow up the wall flower or make the Armos blow up"
-        }
+                is_adult or Can kill armos as child"
+        },
         "exits": {
             "Dodongos Cavern Fire Keese Pushblock Room": "
-			    can_climb(60) and can hit the crystal switch that removes the fire",
+                can_climb(60) and (is_adult or can_use_projectile or Kokiri_Sword or Sticks)",
+                #Hit crystal switch to remove the fire
             "Dodongos Cavern Fire Keese Pushblock Room West": "
                 can_climb(100) or ('Dodongos Cavern Room 08 Crystal Switch' and can_climb(50))",
             "Dodongos Cavern Gold Skulltula Armos Room": "
@@ -345,15 +346,16 @@
         "dungeon": "Dodongos Cavern",
         "room": 08,
         "events": {
-            "Dodongos Cavern Room 08 Crystal Switch": "
-                Can hit the crystal switch"
-        }
+            "Dodongos Cavern Room 08 Crystal Switch": "True"
+            #Can throw a pot at it
+        },
         "locations": {
             "Dodongos Cavern MQ GS Back Area": "is_adult or can_child_attack",
             "Fairy Pot": "has_bottle"
         },
         "exits": {
             "Dodongos Cavern Fire Keese Pushblock Room North": "can_climb(40)",
+            "Dodongos Cavern Fire Keese Pushblock Room": "can_climb(80)",
             "Dodongos Cavern Floor Hole Switch Room Ledge": "transition('Dodongos Cavern T05', True)"
         }
     },
@@ -434,9 +436,9 @@
         "dungeon": "Dodongos Cavern",
         "room": 12,
         "events": {
-            "Dodongos Cavern Room 12 Crystal Switch": "Can hit crystal switch",
+            "Dodongos Cavern Room 12 Crystal Switch": "True", #Pot
             "Dodongos Cavern Room 12 Floor Switch": "can_blast_or_smash and can_press_floor_switch"
-        }
+        },
         "exits": {
             "Dodongos Cavern Lizalfos Miniboss Room 2F": "
                 can_climb(60) and transition('Dodongos Cavern T12', True)",
@@ -453,7 +455,7 @@
             "Dodongos Cavern Room 13 Enemies": "
                 "
                 #Mad Scrubs and Keese
-        }
+        },
         "locations": {
             "Dodongos Cavern MQ GS Scrub Room": "can_use(Hookshot) or can_use(Boomerang)"
         },
@@ -471,7 +473,7 @@
             "Dodongos Cavern Room 14 Enemies": "
                 "
                 #Poe
-        }
+        },
         "locations": {
             "Dodongos Cavern MQ Under Grave Chest": "True"
         },

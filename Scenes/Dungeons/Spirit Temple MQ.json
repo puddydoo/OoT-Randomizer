@@ -188,7 +188,8 @@
         "room": 04,
         "exits": {
             "Spirit Temple First Child Room Rear": "transition('Spirit Temple T10', True)",
-            "Spirit Temple Rock Light Room 2F": "Can hit crystal switch"
+            "Spirit Temple Rock Light Room 2F": "is_adult or can_use_projectile or Kokiri_Sword or Sticks"
+            #Crystal switch which is near a pot but there isn't enough space to throw the pot at it
         }
     },
     {
@@ -198,7 +199,7 @@
         "events": {
             "Spirit Temple Room 04 Enemies": "
                 "
-                #
+                #Like Like, Baby Dodongos, Beamos
         },
         "locations": {
             "Spirit Temple MQ Child Climb North Chest": "'Spirit Temple Room 04 Enemies'",
@@ -207,7 +208,7 @@
                 and (can_use(Hookshot) or can_climb(126))"
         },
         "exits": {
-            "Spirit Temple Rock Light Room 1F": "Can hit crystal switch",
+            "Spirit Temple Rock Light Room 1F": "is_adult or can_use_projectile or Kokiri_Sword or Sticks", #Crystal switch
             "Spirit Temple Central Chamber": "transition('Spirit Temple T25', True)"
         }
     },

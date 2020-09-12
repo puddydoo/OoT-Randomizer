@@ -295,8 +295,8 @@
         "events": {
             "Jabu Jabus Belly Room 09 Enemies": "
                 "
-				#
-        }
+				#Stinger x4
+        },
         "locations": {
             "Jabu Jabus Belly Boomerang Chest": "'Jabu Jabus Belly Room 09 Enemies'"
         },
@@ -339,7 +339,7 @@
             "Jabu Jabus Belly Room 12 Enemies": "
                 "
 				#Shabom
-        }
+        },
         "locations": {
             "Jabu Jabus Belly Compass Chest": "'Jabu Jabus Belly Room 12 Enemies'"
         },

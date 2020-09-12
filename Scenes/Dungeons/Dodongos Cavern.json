@@ -157,8 +157,8 @@
         "room": 03,
         "events": {
             "Dodongos Cavern Room 03 Enemies Wave 1": "
-			    
-				#Lizalfos x2"
+                
+                #Lizalfos x2"
         }
         "exits": {
             "Dodongos Cavern Baby Dodongo Corridor North": "
@@ -185,8 +185,8 @@
         "room": 03,
         "events": {
             "Dodongos Cavern Room 03 Enemies Wave 2": ""
-			    
-				#Lizalfos x2"
+                
+                #Lizalfos x2"
         }
         "exits": {
             "Dodongos Cavern Single Flame Trap Room East": "
@@ -302,6 +302,7 @@
         },
         "exits": {
             "Dodongos Cavern Fire Keese Pushblock Room North": "True",
+            "Dodongos Cavern Fire Keese Pushblock Room": "can_climb(60)",
             "Dodongos Cavern Floor Hole Switch Room Ledge": "transition('Dodongos Cavern T05', True)"
         }
     },
@@ -420,7 +421,7 @@
         "events": {
             "Dodongos Cavern Room 15 Enemies": "
                 Progressive_Strength_Upgrade or
-				have a way to kill armos"
+                have a way to kill armos"
         }
         "locations": {
             "Dodongos Cavern Compass Chest": "True"

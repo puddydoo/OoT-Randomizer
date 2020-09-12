@@ -978,7 +978,7 @@
             "Water Temple Room 18 Enemies": "
                 False and 'Water Temple H' and can_use(Iron_Boots)
                 and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)"
-                #Hookshot can't kill Lizalfos
+                #Spike x1, Lizalfos x2 (Hookshot can't kill Lizalfos)
         },
         "locations": {
             "Water Temple MQ Compass Chest": "
@@ -999,7 +999,7 @@
             "Water Temple Room 18 Enemies": "
                 False and 'Water Temple M' and can_use(Iron_Boots)
                 and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)"
-                #Hookshot can't kill Lizalfos
+                #Spike x1, Lizalfos x2 (Hookshot can't kill Lizalfos)
         },
         "locations": {
             "Water Temple MQ Compass Chest": "
@@ -1019,7 +1019,7 @@
         "events": {
             "Water Temple Room 18 Enemies": "
                 'Water Temple L' and Beat the enemies"
-				#
+                #Spike x1, Lizalfos x2
         },
         "locations": {
             "Water Temple MQ Compass Chest": "'Water Temple L' and 'Water Temple Room 18 Enemies'"
@@ -1244,9 +1244,9 @@
             "Water Temple Room 09 Torches": "can_use(Dins_Fire)"
         },
         "exits": {
-            "Water Temple Single Water Jet Gap Room": "
-                'Water Temple Room 09 Torches' and
-                (can hit crystal switch or can_use(Hookshot) or can_use(Hover_Boots))",
+            "Water Temple Single Water Jet Gap Room": "'Water Temple Room 09 Torches'",
+                #Can just use pot to hit crystal switch and raise water jet
+                #Though without the crystal switch, hookshot or hover boots could cross the gap
             "Water Temple Dragon Statue Room": "transition('Water Temple T21', True)"
         }
     },
@@ -1297,7 +1297,7 @@
         "room": 12,
         "exits": {
             "Water Temple Whirlpool Room": "True",
-            "Water Temple Triple Water Jet Gap Room": "transition('Water Temple T23', True)",
+            "Water Temple Triple Water Jet Gap Room South": "transition('Water Temple T23', True)",
             "Water Temple Whirlpool Room Water Corridor Rear": "logic_water_bk_jump_dive or can_use(Iron_Boots)"
         }
     },
@@ -1340,12 +1340,41 @@
             "Water Temple Dropdown Room": "
                 can hit crystal switch
                 and transition('Water Temple T13',
-                can_use(Dins_Fire)
-                or 'Water Temple MQ Room 15 T13 Unbar')",
+                    can_use(Dins_Fire)
+                    or 'Water Temple MQ Room 15 T13 Unbar')",
                 #I can't seem to get fire arrows to work here for some reason
             "Water Temple Whirlpool Room Water Corridor": "
                 (can_use(Hookshot) or can_use(Slingshot) or can_use(Bow) or has_bombchus)
                 and transition('Water Temple T23', True)"
+        }
+    },
+    {
+        "region_name": "Water Temple Triple Water Jet Gap Room",
+        "dungeon": "Water Temple",
+        "room": 15,
+        "exits": {
+            "Water Temple Dropdown Room": "
+                transition('Water Temple T13', 
+                ((can_use(Hookshot) or can_use(Bow) or can_use(Slingshot) or has_bombchus) and can_use(Dins_Fire))
+                or (can_use(Fire_Arrows))
+                or 'Water Temple MQ Room 15 T13 Unbar')",
+                #Fire arrows are broken here I think
+            "Water Temple Triple Water Jet Gap Room South": "
+                can_use(Hookshot) or can_use(Slingshot) or can_use(Bow) or has_bombchus or can_climb(360)"
+        }
+    },
+    {
+        "region_name": "Water Temple Triple Water Jet Gap Room South",
+        "dungeon": "Water Temple",
+        "room": 15,
+        "exits": {
+            "Water Temple Triple Water Jet Gap Room": "
+                can_use_projectile or is_adult or Kokiri_Sword or Sticks or can_climb(360)",
+            "Water Temple Dropdown Room": "
+                transition('Water Temple T13', 
+                (can_use_projectile or is_adult or Kokiri_Sword or Sticks)
+                and (can_use(Dins_Fire) or 'Water Temple MQ Room 15 T13 Unbar'))",
+            "Water Temple Whirlpool Room Water Corridor": "transition('Water Temple T23', True)"
         }
     },
     {

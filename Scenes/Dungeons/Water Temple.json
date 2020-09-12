@@ -1171,7 +1171,7 @@
         "events": {
             "Water Temple Room 19 Enemies": "
                 "
-                #
+                #Spike x4
         },
         "locations": {
             "Water Temple Map Chest": "'Water Temple Room 19 Enemies'"
@@ -1303,7 +1303,9 @@
             "Water Temple Dragon Chest": "True"
         },
         "exits": {
-            "Water Temple Dragon Statue Room": "can hit crystal and (can_dive or can_use(Iron_Boots))"
+            "Water Temple Dragon Statue Room": "
+                (is_adult or can_use_projectile or Kokiri_Sword or Sticks)
+                and (can_dive or can_use(Iron_Boots))"
         }
     },
     {
@@ -1324,8 +1326,7 @@
             "Water Temple Lobby B1 West Corridor": "
                 (can_use(Iron_Boots) or can_dive) and transition('Water Temple T08', True)",
             "Water Temple Single Water Jet Gap Room North": "
-                Can hit crystal switch
-                or can_use(Hover_Boots)"
+                is_adult or can_use_projectile or Kokiri_Sword or Sticks or can_use(Hover_Boots)"
         }
     },
     {
@@ -1360,7 +1361,7 @@
         },
         "exits": {
             "Water Temple Whirlpool Room": "True",
-            "Water Temple Triple Water Jet Gap Room": "transition('Water Temple T23', True)",
+            "Water Temple Triple Water Jet Gap Room South": "transition('Water Temple T23', True)",
             "Water Temple Whirlpool Room Water Corridor Rear": "
                 logic_water_bk_jump_dive or can_use(Iron_Boots)"
         }
@@ -1393,10 +1394,22 @@
         "room": 15,
         "exits": {
             "Water Temple Dropdown Room": "
-                transition('Water Temple T13', (can_use(Hookshot) and can_press_floor_switch)
-                or 'Water Temple Room 15 T13 Unbar')",
+                transition('Water Temple T13', can_press_floor_switch or 'Water Temple Room 15 T13 Unbar')",
             "Water Temple Whirlpool Room Water Corridor": "
                 transition('Water Temple T23', can_press_floor_switch
+                or ('Water Temple Room 15 T23 Unbar' and (can_use(Hookshot) or can_climb(360))))",
+            "Water Temple Triple Water Jet Gap Room South": "
+                can_press_floor_switch or can_use(Hookshot) or can_climb(360)"
+        }
+    },
+    {
+        "region_name": "Water Temple Triple Water Jet Gap Room South",
+        "dungeon": "Water Temple",
+        "room": 15,
+        "exits": {
+            "Water Temple Triple Water Jet Gap Room": "can_use(Hookshot) or can_climb(360)",
+            "Water Temple Whirlpool Room Water Corridor": "
+                transition('Water Temple T23', (can_climb(360) and can_press_floor_switch)
                 or 'Water Temple Room 15 T23 Unbar')"
         }
     },
