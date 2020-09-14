@@ -1,500 +1,214 @@
 [    
     {
-        "region_name": "Water Temple Lobby 3F Entrance Ledge H",
+        "region_name": "Water Temple Lobby 3F Entrance Ledge",
         "dungeon": "Water Temple",
         "room": 00,
         "exits": {
             "Lake Hylia": "True",
-            "Water Temple Lobby 3F H": "True"
+            "Water Temple Lobby 3F": "Water=high or can_use(Hookshot) or can_use(Hover_Boots)"
         }
     },
     {
-        "region_name": "Water Temple Lobby 3F Entrance Ledge M",
+        "region_name": "Water Temple Lobby 3F",
         "dungeon": "Water Temple",
         "room": 00,
         "exits": {
-            "Lake Hylia": "True",
-            "Water Temple Lobby 3F M": "can_use(Hookshot) or can_use(Hover_Boots)"
-        }
-    },
-    {
-        "region_name": "Water Temple Lobby 3F Entrance Ledge L",
-        "dungeon": "Water Temple",
-        "room": 00,
-        "exits": {
-            "Lake Hylia": "True",
-            "Water Temple Lobby 3F L": "can_use(Hookshot) or can_use(Hover_Boots)"
-        }
-    },
-    {
-        "region_name": "Water Temple Lobby 3F H",
-        "dungeon": "Water Temple",
-        "room": 00,
-        "exits": {
-            "Water Temple Lobby 2F H": "can_use(Iron_Boots)",
-            "Water Temple Lobby 1F H": "can_use(Iron_Boots)",
-            "Water Temple Lobby 3F Entrance Ledge H": "True",
-            "Water Temple Lobby 3F Boss Ledge H": "
-                can_use(Longshot) or (mm_ice_arrows and can_use(Ice_Arrows))",
-            "Water Temple Lobby 3F Lullaby Ledge H": "
+            "Water Temple Lobby 2F": "Water=middle or Water=low or can_use(Iron_Boots)",
+            "Water Temple Lobby 1F": "Water=low or can_use(Iron_Boots)",
+            "Water Temple Lobby 3F Entrance Ledge": "Water=high or can_use(Longshot) or can_use(Hover_Boots)",
+            "Water Temple Lobby 3F Boss Ledge": "
+                Water=high and (can_use(Longshot) or (mm_ice_arrows and can_use(Ice_Arrows)))",
+            "Water Temple Lobby 3F Lullaby Ledge": "
                 can_use(Scarecrow) or (can_use(Hover_Boots) and can_climb(89))
-                or (mm_ice_arrows and can_use(Ice_Arrows))",
-            "Water Temple Lobby 3F East Ledge H": "True",
-            "Water Temple Lobby 2F East Tunnel H": "
+                or (mm_ice_arrows and Water=high and can_use(Ice_Arrows))",
+            "Water Temple Lobby 3F East Ledge": "Water=high or can_use(Hover_Boots)",
+            "Water Temple Lobby 2F East Tunnel": "
+                Water=middle or Water=low or
                 can_dive or can_use(Iron_Boots) or (logic_water_temple_torch_longshot and can_use(Longshot))",
-            "Water Temple Lobby 2F Behind Grate H": "False",
-            "Water Temple Lobby Outer Floating Platform H": "True",
-            "Water Temple Ruto Meeting Room 1F H": "
-                logic_water_temple_torch_longshot and can_use(Longshot)
-                and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)
+            "Water Temple Lobby 2F Behind Grate": "
+                (Water=middle or Water=low) and
+                logic_water_central_bow and (can_use(Bow) or can_use(Slingshot))",
+            "Water Temple Lobby Outer Floating Platform": "True",
+            "Water Temple Ruto Meeting Room 1F": "
+                (Water=low or (logic_water_temple_torch_longshot and can_use(Longshot)
+                and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)))
                 and transition('Water Temple T01', True)"
         }
     },
     {
-        "region_name": "Water Temple Lobby 3F M",
-        "dungeon": "Water Temple",
-        "room": 00,
-        "exits": {
-            "Water Temple Lobby 2F M": "True",
-            "Water Temple Lobby 1F M": "can_use(Iron_Boots)",
-            "Water Temple Lobby 3F Entrance Ledge M": "can_use(Longshot) or can_use(Hover_Boots)",
-            "Water Temple Lobby 3F Boss Ledge M": "False",
-            "Water Temple Lobby 3F Lullaby Ledge M": "
-                can_use(Scarecrow) or (can_use(Hover_Boots) and can_climb(89))",
-            "Water Temple Lobby 3F East Ledge M": "can_use(Hover_Boots)",
-            "Water Temple Lobby 2F East Tunnel M": "True",
-            "Water Temple Lobby 2F Behind Grate M": "
-                logic_water_central_bow and (can_use(Bow) or can_use(Slingshot))",
-            "Water Temple Lobby Outer Floating Platform M": "True",
-            "Water Temple Ruto Meeting Room 1F M": "
-                logic_water_temple_torch_longshot and can_use(Longshot)
-                and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)
-                and transition('Water Temple T01', True)"
-        }
-    },
-    {
-        "region_name": "Water Temple Lobby 3F L",
-        "dungeon": "Water Temple",
-        "room": 00,
-        "exits": {
-            "Water Temple Lobby 2F L": "True",
-            "Water Temple Lobby 1F L": "True",
-            "Water Temple Lobby 3F Entrance Ledge L": "can_use(Longshot) or can_use(Hover_Boots)",
-            "Water Temple Lobby 3F Boss Ledge L": "False",
-            "Water Temple Lobby 3F Lullaby Ledge L": "
-                can_use(Scarecrow) or (can_use(Hover_Boots) and can_climb(89))",
-            "Water Temple Lobby 3F East Ledge L": "can_use(Hover_Boots)",
-            "Water Temple Lobby 2F East Tunnel L": "True",
-            "Water Temple Lobby 2F Behind Grate L": "
-                logic_water_central_bow and (can_use(Bow) or can_use(Slingshot))",
-            "Water Temple Lobby Outer Floating Platform L": "True",
-            "Water Temple Ruto Meeting Room 1F L": "
-                can_use(Longshot) and transition('Water Temple T01', True)"
-        }
-    },
-    {
-        "region_name": "Water Temple Lobby Outer Floating Platform H",
-        "dungeon": "Water Temple",
-        "room": 00,
-        "exits": {
-            "Water Temple Falling Platform Room": "transition('Water Temple T09', True)",
-            "Water Temple Lobby 3F H": "True"
-        }
-    },
-    {
-        "region_name": "Water Temple Lobby Outer Floating Platform M",
-        "dungeon": "Water Temple",
-        "room": 00,
-        "exits": {
-            "Water Temple Water Elevator 2F M": "transition('Water Temple T18', True)",
-            "Water Temple Lobby 2F M": "True"
-        }
-    },
-    {
-        "region_name": "Water Temple Lobby Outer Floating Platform L",
+        "region_name": "Water Temple Lobby Outer Floating Platform",
         "dungeon": "Water Temple",
         "room": 00,
         "events": {
-            "Water Temple Room 00 Pushblock": "'Water Temple L' and Progressive_Strength_Upgrade"
+            "Water Temple Room 00 Pushblock": "
+                Water=low and 'Water Temple L' and Progressive_Strength_Upgrade"
         },
         "exits": {
-            "Water Temple Lobby 1F West Corridor L": "'Water Temple Room 00 Pushblock'",
-            "Water Temple Lobby 1F L": "True"
+            "Water Temple Falling Platform Room": "Water=high and transition('Water Temple T09', True)",
+            "Water Temple Lobby 2F Outer Floating Platform Area": "Water=middle",
+            "Water Temple Lobby 1F West Corridor": "Water=low and 'Water Temple Room 00 Pushblock'",
+            "Water Temple Lobby 3F": "Water=high",
+            "Water Temple Lobby 2F": "Water=middle",
+            "Water Temple Lobby 1F": "Water=low"
         }
     },
     {
-        "region_name": "Water Temple Lobby 3F Lullaby Ledge H",
+        "region_name": "Water Temple Lobby 2F Outer Floating Platform Area",
+        "dungeon": "Water Temple",
+        "room": 00,
+        "exits": {
+            "Water Temple Water Elevator 2F": "Water=middle and transition('Water Temple T18', True)",
+            "Water Temple Lobby Outer Floating Platform": "Water=middle or Water=low or can_swim"
+        }
+    },
+    {
+        "region_name": "Water Temple Lobby 3F Lullaby Ledge",
         "dungeon": "Water Temple",
         "room": 00,
         "events": {
             "Water Temple H": "
-                'Water Temple HML Loop' or 'Water Temple LMH Loop' or
-                'Water Temple HM Loop' or 'Water Temple HL Loop'"
+                Water=high and
+                ('Water Temple HML Loop' or 'Water Temple LMH Loop' or
+                'Water Temple HM Loop' or 'Water Temple HL Loop')",
+            "Water Temple MH": "Water=middle and can_play(Zeldas_Lullaby)",
+            "Water Temple HM Loop": "Water=middle and 'Water Temple MH' and 'Water Temple HM'",
+            "Water Temple LMH Loop": "Water=middle and 'Water Temple MH' and 'Water Temple HL' and 'Water Temple LM'",
+            "Water Temple LH": "Water=low and can_play(Zeldas_Lullaby)",
+            "Water Temple HL Loop": "Water=low and 'Water Temple LH' and 'Water Temple HL'",
+            "Water Temple HML Loop": "Water=low and 'Water Temple LH' and 'Water Temple HM' and 'Water Temple ML'"      
         },
         "exits": {
-            "Water Temple Lobby 3F H": "True",
-            "Water Temple Water Elevator 3F H": "
+            "Water Temple Lobby 3F": "True",
+            "Water Temple Water Elevator 3F": "
                 transition('Water Temple T25', 'Water Temple Room 00 T25 Unbar')"
         }
     },
     {
-        "region_name": "Water Temple Lobby 3F Lullaby Ledge M",
-        "dungeon": "Water Temple",
-        "room": 00,
-        "events": {
-            "Water Temple MH": "can_play(Zeldas_Lullaby)",
-            "Water Temple HM Loop": "'Water Temple MH' and 'Water Temple HM'",
-            "Water Temple LMH Loop": "'Water Temple MH' and 'Water Temple HL' and 'Water Temple LM'"
-        },
-        "exits": {
-            "Water Temple Lobby 3F Lullaby Ledge H": "can_play(Zeldas_Lullaby)",
-            "Water Temple Lobby 3F M": "True",
-            "Water Temple Water Elevator 3F M": "
-                transition('Water Temple T25', 'Water Temple Room 00 T25 Unbar')"
-        }
-    },
-    {
-        "region_name": "Water Temple Lobby 3F Lullaby Ledge L",
-        "dungeon": "Water Temple",
-        "room": 00,
-        "events": {
-            "Water Temple LH": "can_play(Zeldas_Lullaby)",
-            "Water Temple HL Loop": "'Water Temple LH' and 'Water Temple HL'",
-            "Water Temple HML Loop": "'Water Temple LH' and 'Water Temple HM' and 'Water Temple ML'"
-        },
-        "exits": {
-            "Water Temple Lobby 3F Lullaby Ledge H": "can_play(Zeldas_Lullaby)",
-            "Water Temple Lobby 3F L": "True",
-            "Water Temple Water Elevator 3F L": "
-                transition('Water Temple T25', 'Water Temple Room 00 T25 Unbar')"
-        }
-    },
-    {
-        "region_name": "Water Temple Lobby 3F Boss Ledge H",
+        "region_name": "Water Temple Lobby 3F Boss Ledge",
         "dungeon": "Water Temple",
         "room": 00,
         "locations": {
-            "Fairy Pot": "'Water Temple H' and has_bottle"
+            "Fairy Pot": "has_bottle"
         },
         "exits": {
-            "Water Temple Lobby 3F H": "True",
+            "Water Temple Lobby 3F": "Water=high or can_use(Longshot)",
             "Water Temple Hall to Boss": "transition('Water Temple T17', True)"
         }
     },
     {
-        "region_name": "Water Temple Lobby 3F Boss Ledge M",
+        "region_name": "Water Temple Lobby 3F East Ledge",
         "dungeon": "Water Temple",
         "room": 00,
-        "locations": {
-            "Fairy Pot": "'Water Temple M' and has_bottle"
-        },
         "exits": {
-            "Water Temple Lobby 3F M": "can_use(Longshot)",
-            "Water Temple Hall to Boss": "transition('Water Temple T17', True)"
+            "Water Temple Lobby 3F": "Water=high or can_use(Hover_Boots)",
+            "Water Temple Lobby 2F": "Water=middle or Water=low",
+            "Water Temple Grate Passage North": "transition('Water Temple T03', True)"
         }
     },
     {
-        "region_name": "Water Temple Lobby 3F Boss Ledge L",
-        "dungeon": "Water Temple",
-        "room": 00,
-        "locations": {
-            "Fairy Pot": "'Water Temple L' and has_bottle"
-        },
-        "exits": {
-            "Water Temple Lobby 3F L": "can_use(Longshot)",
-            "Water Temple Hall to Boss": "transition('Water Temple T17', True)"
-        }
-    },
-    {
-        "region_name": "Water Temple Lobby 3F East Ledge H",
+        "region_name": "Water Temple Lobby 2F",
         "dungeon": "Water Temple",
         "room": 00,
         "exits": {
-            "Water Temple Lobby 3F H": "True",
-            "Water Temple Grate Passage North H": "transition('Water Temple T03', True)"
-        }
-    },
-    {
-        "region_name": "Water Temple Lobby 3F East Ledge M",
-        "dungeon": "Water Temple",
-        "room": 00,
-        "exits": {
-            "Water Temple Lobby 3F M": "can_use(Hover_Boots)",
-            "Water Temple Lobby 2F M": "True",
-            "Water Temple Grate Passage North M": "transition('Water Temple T03', True)"
-        }
-    },
-    {
-        "region_name": "Water Temple Lobby 3F East Ledge L",
-        "dungeon": "Water Temple",
-        "room": 00,
-        "exits": {
-            "Water Temple Lobby 3F L": "can_use(Hover_Boots)",
-            "Water Temple Lobby 2F L": "True",
-            "Water Temple Grate Passage North L": "transition('Water Temple T03', True)"
-        }
-    },
-    {
-        "region_name": "Water Temple Lobby 2F H",
-        "dungeon": "Water Temple",
-        "room": 00,
-        "exits": {
-            "Water Temple Lobby 3F H": "True"
-            "Water Temple Lobby 1F H": "can_use(Iron_Boots)"
-            "Water Temple Inner Tower 2F H": "
-                can_use(Iron_Boots) and transition('Water Temple T16',
-                'Water Temple Room 00 T16 Unbar')",
-            "Water Temple Inner Tower 1F H": "False and transition('Water Temple T15', True)",
-            "Water Temple Lobby 3F Lullaby Ledge H": "False",
-            "Water Temple Lobby 2F East Tunnel H": "can_use(Iron_Boots)",
-            "Water Temple Lobby 2F Behind Grate H": "False",
-            "Water Temple Lobby Outer Floating Platform H": "False"
-        }
-    },
-    {
-        "region_name": "Water Temple Lobby 2F M",
-        "dungeon": "Water Temple",
-        "room": 00,
-        "exits": {
-            "Water Temple Lobby 3F M": "False",
-            "Water Temple Lobby 1F M": "can_use(Iron_Boots)",
-            "Water Temple Inner Tower 2F M": "
-                transition('Water Temple T16', has_fire_source_with_torch or can_use(Bow)
-                or 'Water Temple Room 00 T16 Unbar')",
-            "Water Temple Inner Tower 1F M": "False and transition('Water Temple T15', True)",
-            "Water Temple Lobby 3F Lullaby Ledge M": "False",
-            "Water Temple Lobby 2F East Tunnel M": "True",
-            "Water Temple Lobby 2F Behind Grate M": "
+            "Water Temple Lobby 3F": "Water=high"
+            "Water Temple Lobby 1F": "Water=low or can_use(Iron_Boots)"
+            "Water Temple Inner Tower 2F": "
+                (Water=high and can_use(Iron_Boots) and transition('Water Temple T16',
+                    'Water Temple Room 00 T16 Unbar'))
+                or ((Water=middle or Water=low) and transition('Water Temple T16',
+                    has_fire_source_with_torch or can_use(Bow) or 'Water Temple Room 00 T16 Unbar')",
+            "Water Temple Inner Tower 1F": "Water=low and transition('Water Temple T15', True)",
+            "Water Temple Lobby 3F Lullaby Ledge": "False",
+            "Water Temple Lobby 2F East Tunnel": "Water=middle or Water=low or can_use(Iron_Boots)",
+            "Water Temple Lobby 2F Behind Grate": "
+                (Water=middle or Water=low) and
                 (can_use(Bow) or can_use(Slingshot)) and (can_use(Hover_Boots) or can_use(Longshot)
-                    or (mm_ice_arrows and can_use(Ice_Arrows)))",
-            "Water Temple Lobby Outer Floating Platform M": "True"
+                    or (mm_ice_arrows and Water=middle and can_use(Ice_Arrows)))",
+            "Water Temple Lobby Outer Floating Platform": "Water=middle or Water=low"
         }
     },
     {
-        "region_name": "Water Temple Lobby 2F L",
+        "region_name": "Water Temple Lobby 2F East Tunnel",
         "dungeon": "Water Temple",
         "room": 00,
         "exits": {
-            "Water Temple Lobby 3F L": "False",
-            "Water Temple Lobby 1F L": "True",
-            "Water Temple Inner Tower 2F L": "
-                transition('Water Temple T16', has_fire_source_with_torch or can_use(Bow)
-                or 'Water Temple Room 00 T16 Unbar')",
-            "Water Temple Inner Tower 1F L": "transition('Water Temple T15', True)",
-            "Water Temple Lobby 3F Lullaby Ledge L": "False",
-            "Water Temple Lobby 2F East Tunnel L": "True",
-            "Water Temple Lobby 2F Behind Grate L": "
-                (can_use(Bow) or can_use(Slingshot)) and (can_use(Hover_Boots) or can_use(Longshot)",
-            "Water Temple Lobby Outer Floating Platform L": "True"
+            "Water Temple Spike Tunnel": "transition('Water Temple T02', True)"
+            "Water Temple Lobby 2F": "
+                Water=middle or Water=low or
+                (can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements))",
+                    #When the water is high, Room 0 can access the tunnel with just Silver Scale.
+                    #However, the ceiling raises shortly before the transition to Room 4.
+                    #This means that when "entering" Room 0 from the Room 4 exit at high water,
+                    #you start in a flooded nook and need Iron Boots to access the rest of Room 0.
+            "Water Temple Lobby 3F": "False"
         }
     },
     {
-        #When the water is high, Room 00 can access the tunnel with just Silver Scale.
-        #However, the ceiling raises shortly before the transition to Room 4.
-        #This means that when "entering" Room 00 from the Room 04 exit at high water,
-        #you start in a flooded nook and need Iron Boots to access the rest of Room 0.
-        "region_name": "Water Temple Lobby 2F East Tunnel H",
+        "region_name": "Water Temple Lobby 2F Behind Grate",
         "dungeon": "Water Temple",
         "room": 00,
         "exits": {
-            "Water Temple Spike Tunnel H": "transition('Water Temple T02', True)"
-            "Water Temple Lobby 2F H": "
-                can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)"
+            "Water Temple Grate Passage West": "transition('Water Temple T05', True)",
+            "Water Temple Lobby 2F": "False"
         }
     },
     {
-        "region_name": "Water Temple Lobby 2F East Tunnel M",
+        "region_name": "Water Temple Lobby 1F",
         "dungeon": "Water Temple",
         "room": 00,
         "exits": {
-            "Water Temple Spike Tunnel M": "transition('Water Temple T02', True)",
-            "Water Temple Lobby 2F M": "True",
-            "Water Temple Lobby 3F M": "False"
-        }
-    },
-    {
-        "region_name": "Water Temple Lobby 2F East Tunnel L",
-        "dungeon": "Water Temple",
-        "room": 00,
-        "exits": {
-            "Water Temple Spike Tunnel L": "transition('Water Temple T02', True)",
-            "Water Temple Lobby 2F L": "True",
-            "Water Temple Lobby 3F L": "False"
-        }
-    },
-    {
-        "region_name": "Water Temple Lobby 2F Behind Grate H",
-        "dungeon": "Water Temple",
-        "room": 00,
-        "exits": {
-            "Water Temple Grate Passage West H": "transition('Water Temple T05', True)",
-            "Water Temple Lobby 2F H": "False"
-        }
-    },
-    {
-        "region_name": "Water Temple Lobby 2F Behind Grate M",
-        "dungeon": "Water Temple",
-        "room": 00,
-        "exits": {
-            "Water Temple Grate Passage West M": "transition('Water Temple T05', True)",
-            "Water Temple Lobby 2F L": "False"
-        }
-    },
-    {
-        "region_name": "Water Temple Lobby 2F Behind Grate L",
-        "dungeon": "Water Temple",
-        "room": 00,
-        "exits": {
-            "Water Temple Grate Passage West L": "transition('Water Temple T05', True)",
-            "Water Temple Lobby 2F L": "False"
-        }
-    },
-    {
-        "region_name": "Water Temple Lobby 1F H",
-        "dungeon": "Water Temple",
-        "room": 00,
-        "exits": {
-            "Water Temple Lobby 3F H": "True",
-            "Water Temple Lobby 2F H": "can_use(Iron_Boots)",
-            "Water Temple Inner Tower 1F H": "False and transition('Water Temple T15', True)",
-            "Water Temple Ruto Meeting Room 1F H": "
-                can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)
+            "Water Temple Lobby 3F": "Water=high",
+            "Water Temple Lobby 2F": "Water=middle or (Water=high and can_use(Iron_Boots))",
+            "Water Temple Inner Tower 1F": "
+                Water=low and can_climb(50) and transition('Water Temple T15', True)",
+            "Water Temple Ruto Meeting Room 1F": "
+                (Water=low or (can_use(Iron_Boots)
+                and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)))
                 and transition('Water Temple T01', True)",
-            "Water Temple Lobby 1F West Corridor H": "
+            "Water Temple Lobby 1F West Corridor": "
+                (Water=high or Water=middle) and
                 'Water Temple Room 00 Pushblock' and can_use(Iron_Boots)
                 and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)",
-            "Water Temple Lobby 1F South Corridor H": "
-                can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)",
-            "Water Temple Lobby 1F North Basement Access H": "
-                can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)",
-            "Water Temple Lobby Outer Floating Platform H": "False"
+            "Water Temple Lobby 1F South Corridor": "
+                Water=low or
+                (can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements))",
+            "Water Temple Lobby 1F North Basement Access": "
+                Water=low or
+                (can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements))",
+            "Water Temple Lobby Outer Floating Platform": "Water=low and can_climb(70)"
         }
     },
     {
-        "region_name": "Water Temple Lobby 1F M",
+        "region_name": "Water Temple Lobby 1F West Corridor",
         "dungeon": "Water Temple",
         "room": 00,
         "exits": {
-            "Water Temple Lobby 3F M": "False",
-            "Water Temple Lobby 2F M": "True",
-            "Water Temple Inner Tower 1F M": "False and transition('Water Temple T15', True)",
-            "Water Temple Ruto Meeting Room 1F M": "
-                can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)
-                and transition('Water Temple T01', True)",
-            "Water Temple Lobby 1F West Corridor M": "
-                'Water Temple Room 00 Pushblock' and can_use(Iron_Boots)
-                and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)",
-            "Water Temple Lobby 1F South Corridor M": "
-                can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)",
-            "Water Temple Lobby 1F North Basement Access M": "
-                'Water Temple Room 00 Pushblock' and can_use(Iron_Boots)
-                and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)",
-            "Water Temple Lobby Outer Floating Platform M": "False"
-        }
-    },
-    {
-        "region_name": "Water Temple Lobby 1F L",
-        "dungeon": "Water Temple",
-        "room": 00,
-        "exits": {
-            "Water Temple Lobby 3F L": "False",
-            "Water Temple Lobby 2F L": "False",
-            "Water Temple Inner Tower 1F L": "can_climb(50) and transition('Water Temple T15', True)",
-            "Water Temple Ruto Meeting Room 1F L": "transition('Water Temple T01', True)",
-            "Water Temple Lobby 1F West Corridor L": "False",
-            "Water Temple Lobby 1F South Corridor L": "True",
-            "Water Temple Lobby 1F North Basement Access L": "True",
-            "Water Temple Lobby Outer Floating Platform L": "can_climb(70)"
-        }
-    },
-    {
-        "region_name": "Water Temple Lobby 1F West Corridor H",
-        "dungeon": "Water Temple",
-        "room": 00,
-        "exits": {
-            "Water Temple Lobby Outer Floating Platform H": "
+            "Water Temple Lobby 1F": "
                 'Water Temple Room 00 Pushblock' or
-                (Progressive_Strength_Upgrade and can_use(Iron_Boots)
-                and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements))",
-            "Water Temple Lobby B1 West Corridor H": "can_use(Iron_Boots)"
+                (Progressive_Strength_Upgrade and (Water=low or (can_use(Iron_Boots)
+                and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements))))",
+            "Water Temple Lobby B1 West Corridor": "
+                can_use(Iron_Boots) or (Water=low and (can_dive or is_child))"
+                #Child can dive under without Silver Scale but Adult can't because of height
         }
     },
     {
-        "region_name": "Water Temple Lobby 1F West Corridor M",
+        "region_name": "Water Temple Lobby B1 West Corridor",
         "dungeon": "Water Temple",
         "room": 00,
         "exits": {
-            "Water Temple Lobby Outer Floating Platform M": "
-                'Water Temple Room 00 Pushblock' or
-                (Progressive_Strength_Upgrade and can_use(Iron_Boots)
-                and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements))",
-            "Water Temple Lobby B1 West Corridor M": "can_use(Iron_Boots)"
-        }
-    },
-    {
-        "region_name": "Water Temple Lobby 1F West Corridor L",
-        "dungeon": "Water Temple",
-        "room": 00,
-        "exits": {
-            "Water Temple Lobby Outer Floating Platform L": "
-                'Water Temple Room 00 Pushblock' or Progressive_Strength_Upgrade",
-            #Child can dive under without Silver Scale but Adult can't because of height
-            "Water Temple Lobby B1 West Corridor L": "
-                can_use(Iron_Boots) or can_dive or is_child"
-        }
-    },
-    {
-        "region_name": "Water Temple Lobby B1 West Corridor H",
-        "dungeon": "Water Temple",
-        "room": 00,
-        "exits": {
-            "Water Temple Lobby 1F West Corridor H": "True",
+            "Water Temple Lobby 1F West Corridor": "
+                Water=high or (can_use(Iron_Boots) and can_use(Hookshot))",
             "Water Temple Single Water Jet Gap Room": "transition('Water Temple T08', True)"
         }
     },
     {
-        "region_name": "Water Temple Lobby B1 West Corridor M",
+        "region_name": "Water Temple Lobby 1F South Corridor",
         "dungeon": "Water Temple",
         "room": 00,
         "exits": {
-            "Water Temple Lobby 1F West Corridor M": "can_use(Iron_Boots) and can_use(Hookshot)",
-            "Water Temple Single Water Jet Gap Room": "transition('Water Temple T08', True)"
-        }
-    },
-    {
-        "region_name": "Water Temple Lobby B1 West Corridor L",
-        "dungeon": "Water Temple",
-        "room": 00,
-        "exits": {
-            "Water Temple Lobby 1F West Corridor L": "can_use(Iron_Boots) and can_use(Hookshot)",
-            "Water Temple Single Water Jet Gap Room": "transition('Water Temple T08', True)"
-        }
-    },
-    {
-        "region_name": "Water Temple Lobby 1F South Corridor H",
-        "dungeon": "Water Temple",
-        "room": 00,
-        "exits": {
-            "Water Temple Lobby 1F H": "True",
-            "Water Temple South Basement Tunnel H": "transition('Water Temple T04', True)"
-        }
-    },
-    {
-        "region_name": "Water Temple Lobby 1F South Corridor M",
-        "dungeon": "Water Temple",
-        "room": 00,
-        "exits": {
-            "Water Temple Lobby 1F M": "True",
-            "Water Temple South Basement Tunnel M": "transition('Water Temple T04', True)"
-        }
-    },
-    {
-        "region_name": "Water Temple Lobby 1F South Corridor L",
-        "dungeon": "Water Temple",
-        "room": 00,
-        "exits": {
-            "Water Temple Lobby 1F L": "True",
-            "Water Temple South Basement Tunnel L": "transition('Water Temple T04', True)"
+            "Water Temple Lobby 1F": "True",
+            "Water Temple South Basement Tunnel": "transition('Water Temple T04', True)"
         }
     },
     {
@@ -518,191 +232,83 @@
         }
     },
     {
-        "region_name": "Water Temple Inner Tower 3F H",
+        "region_name": "Water Temple Inner Tower 3F",
         "dungeon": "Water Temple",
         "room": 01,
         "locations": {
-            "Water Temple GS Central Pillar": "'Water Temple H' and can_use(Hookshot) or can_use(Boomerang)"
-            #Note: The original logic used Farore's Wind as a way to get here but I didn't account for Farore's Wind.
+            "Water Temple GS Central Pillar": "can_use(Hookshot) or can_use(Boomerang)"
+            #Note: The original logic used Farore's Wind as a way to get here at high water.
+            #I did not account for Farore's Wind though.
         },
         "exits": {
-            "Water Temple Inner Tower 2F H": "can_use(Iron_Boots)"
+            "Water Temple Inner Tower 2F H": "Water=middle or Water=low or can_use(Iron_Boots)"
         }
     },
     {
-        "region_name": "Water Temple Inner Tower 3F M",
+        "region_name": "Water Temple Inner Tower 2F",
         "dungeon": "Water Temple",
         "room": 01,
         "locations": {
-            "Water Temple GS Central Pillar": "'Water Temple M' and can_use(Hookshot) or can_use(Boomerang)"
+            "Water Temple GS Central Pillar": "
+                can_use(Longshot) and (Water=middle or Water=low or can_use(Iron_Boots))"
         },
         "exits": {
-            "Water Temple Inner Tower 2F M": "True"
+            "Water Temple Lobby 2F": "
+                (Water=middle or Water=low or can_use(Iron_Boots)) and transition('Water Temple T16', True)",
+            "Water Temple Inner Tower 2F Lullaby Platform": "Water=low or can_use(Iron_Boots)",
+            "Water Temple Inner Tower 3F": "Water=high or can_use(Longshot)",
+            "Water Temple Inner Tower 1F": "Water=low or can_use(Iron_Boots)"
         }
     },
     {
-        "region_name": "Water Temple Inner Tower 3F L",
-        "dungeon": "Water Temple",
-        "room": 01,
-        "locations": {
-            "Water Temple GS Central Pillar": "'Water Temple L' and can_use(Hookshot) or can_use(Boomerang)"
-        },
-        "exits": {
-            "Water Temple Inner Tower 2F L": "True"
-        }
-    },
-    {
-        "region_name": "Water Temple Inner Tower 2F H",
-        "dungeon": "Water Temple",
-        "room": 01,
-        "locations": {
-            "Water Temple GS Central Pillar": "'Water Temple H' and can_use(Iron_Boots) and can_use(Longshot)"
-        },
-        "exits": {
-            "Water Temple Lobby 2F H": "can_use(Iron_Boots) and transition('Water Temple T16', True)",
-            "Water Temple Inner Tower 2F Lullaby Platform H": "can_use(Iron_Boots)",
-            "Water Temple Inner Tower 3F H": "True",
-            "Water Temple Inner Tower 1F H": "can_use(Iron_Boots)"
-        }
-    },
-    {
-        "region_name": "Water Temple Inner Tower 2F M",
-        "dungeon": "Water Temple",
-        "room": 01,
-        "locations": {
-            "Water Temple GS Central Pillar": "'Water Temple M' and can_use(Longshot)"
-        },
-        "exits": {
-            "Water Temple Lobby 2F M": "transition('Water Temple T16', True)",
-            "Water Temple Inner Tower 2F Lullaby Platform M": "can_use(Iron_Boots)",
-            "Water Temple Inner Tower 3F M": "can_use(Longshot)",
-            "Water Temple Inner Tower 1F M": "can_use(Iron_Boots)"
-        }
-    },
-    {
-        "region_name": "Water Temple Inner Tower 2F L",
-        "dungeon": "Water Temple",
-        "room": 01,
-        "locations": {
-            "Water Temple GS Central Pillar": "'Water Temple L' and can_use(Longshot)"
-        },
-        "exits": {
-            "Water Temple Lobby 2F L": "transition('Water Temple T16', True)",
-            "Water Temple Inner Tower 2F Lullaby Platform L": "True",
-            "Water Temple Inner Tower 3F L": "can_use(Longshot)",
-            "Water Temple Inner Tower 1F L": "True"
-        }
-    },
-    {
-        "region_name": "Water Temple Inner Tower 2F Lullaby Platform H",
+        "region_name": "Water Temple Inner Tower 2F Lullaby Platform",
         "dungeon": "Water Temple",
         "room": 01,
         "events": {
-            "Water Temple HM": "can_play_underwater and can_play(Zeldas_Lullaby)",
-            "Water Temple HM Loop": "'Water Temple HM' and 'Water Temple MH'",
-            "Water Temple HML Loop": "'Water Temple HM' and 'Water Temple ML' and 'Water Temple LH'"
-        },
-        "exits": {
-            "Water Temple Inner Tower 2F Lullaby Platform M": "
-                can_play_underwater and can_play(Zeldas_Lullaby)",
-            "Water Temple Inner Tower 2F H": "can_use(Iron_Boots)",
-            "Water Temple Inner Tower 3F H": "True",
-            "Water Temple Inner Tower 1F H": "can_use(Iron_Boots)"
-        }
-    },
-    {
-        "region_name": "Water Temple Inner Tower 2F Lullaby Platform M",
-        "dungeon": "Water Temple",
-        "room": 01,
-        "events": {
+            "Water Temple HM": "Water=high and can_play_underwater and can_play(Zeldas_Lullaby)",
+            "Water Temple HM Loop": "Water=high and 'Water Temple HM' and 'Water Temple MH'",
+            "Water Temple HML Loop": "Water=high and 'Water Temple HM' and 'Water Temple ML' and 'Water Temple LH'",
             "Water Temple M": "
-                'Water Temple HML Loop' or 'Water Temple LMH Loop' or
-                'Water Temple HM Loop' or 'Water Temple ML Loop'"
+                Water=middle and ('Water Temple HML Loop' or 'Water Temple LMH Loop' or
+                'Water Temple HM Loop' or 'Water Temple ML Loop')",
+            "Water Temple LM": "Water=low and can_play(Zeldas_Lullaby)",
+            "Water Temple ML Loop": "Water=low and 'Water Temple LM' and 'Water Temple ML'",
+            "Water Temple LMH Loop": "Water=low and 'Water Temple LM' and 'Water Temple MH' and 'Water Temple HL'"
         },
         "exits": {
-            "Water Temple Inner Tower 2F M": "True",
-            "Water Temple Inner Tower 3F M": "can_use(Longshot) and can_use(Iron_Boots)",
-            "Water Temple Inner Tower 1F M": "can_use(Iron_Boots)"
+            #Child can't jump climb to door at low water
+            "Water Temple Inner Tower 2F": "
+                Water=middle or (Water=high and can_use(Iron_Boots))
+                or (Water=low and (can_use(Hookshot) or is_adult))",
+            "Water Temple Inner Tower 3F": "
+                Water=high or (can_use(Longshot) and (Water=low or can_use(Iron_Boots)))",
+            "Water Temple Inner Tower 1F": "Water=low or can_use(Iron_Boots)"
         }
     },
     {
-        "region_name": "Water Temple Inner Tower 2F Lullaby Platform L",
+        "region_name": "Water Temple Inner Tower 1F",
         "dungeon": "Water Temple",
         "room": 01,
-        "events": {
-            "Water Temple LM": "can_play(Zeldas_Lullaby)",
-            "Water Temple ML Loop": "'Water Temple LM' and 'Water Temple ML'",
-            "Water Temple LMH Loop": "'Water Temple LM' and 'Water Temple MH' and 'Water Temple HL'"
-        },
         "exits": {
-            "Water Temple Inner Tower 2F Lullaby Platform M": "can_play(Zeldas_Lullaby)",
-            #Child can't jump climb to door
-            "Water Temple Inner Tower 2F L": "can_use(Hookshot) or is_adult",
-            "Water Temple Inner Tower 3F L": "can_use(Longshot)",
-            "Water Temple Inner Tower 1F L": "True"
+            "Water Temple Lobby 1F": "Water=low and transition('Water Temple T15', True)",
+            "Water Temple Inner Tower 2F": "
+                Water=middle or (Water=low and can_use(Longshot))
+                or (Water=high and can_use(Iron_Boots)
+                and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements))",
+            "Water Temple Inner Tower 2F Lullaby Platform": "
+                (Water=low and can_use(Hookshot)) or (can_use(Iron_Boots)
+                and (Water=middle or can_use(Zora_Tunic) or logic_fewer_tunic_requirements))",
+            "Water Temple Inner Tower B1": "
+                (Water=middle or Water=high) and
+                can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)"
         }
     },
     {
-        "region_name": "Water Temple Inner Tower 1F H",
+        "region_name": "Water Temple Inner Tower B1",
         "dungeon": "Water Temple",
         "room": 01,
         "exits": {
-            "Water Temple Lobby 1F H": "False and transition('Water Temple T15', True)",
-            "Water Temple Inner Tower 2F H": "
-                can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)",
-            "Water Temple Inner Tower 2F Lullaby Platform H": "
-                can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)",
-            "Water Temple Inner Tower B1 H": "
-                can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)",
-        }
-    },
-    {
-        "region_name": "Water Temple Inner Tower 1F M",
-        "dungeon": "Water Temple",
-        "room": 01,
-        "exits": {
-            "Water Temple Lobby 1F M": "False and transition('Water Temple T15', True)",
-            "Water Temple Inner Tower 2F M": "True",
-            "Water Temple Inner Tower 2F Lullaby Platform M": "can_use(Iron_Boots)",
-            "Water Temple Inner Tower B1 M": "
-                can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)",
-        }
-    },
-    {
-        "region_name": "Water Temple Inner Tower 1F L",
-        "dungeon": "Water Temple",
-        "room": 01,
-        "exits": {
-            "Water Temple Lobby 1F L": "transition('Water Temple T15', True)",
-            "Water Temple Inner Tower 2F L": "can_use(Longshot)",
-            "Water Temple Inner Tower 2F Lullaby Platform L": "can_use(Hookshot)",
-            "Water Temple Inner Tower B1 L": "False"
-        }
-    },
-    {
-        "region_name": "Water Temple Inner Tower B1 H",
-        "dungeon": "Water Temple",
-        "room": 01,
-        "exits": {
-            "Water Temple Inner Tower 1F H": "True",
-            "Water Temple Underwater Storage": "transition('Water Temple T06', True)"
-        }
-    },
-    {
-        "region_name": "Water Temple Inner Tower B1 M",
-        "dungeon": "Water Temple",
-        "room": 01,
-        "exits": {
-            "Water Temple Inner Tower 1F M": "True",
-            "Water Temple Underwater Storage": "transition('Water Temple T06', True)"
-        }
-    },
-    {
-        "region_name": "Water Temple Inner Tower B1 L",
-        "dungeon": "Water Temple",
-        "room": 01,
-        "exits": {
-            "Water Temple Inner Tower 1F L": "False",
+            "Water Temple Inner Tower 1F": "Water=middle or Water=high",
             "Water Temple Underwater Storage": "transition('Water Temple T06', True)"
         }
     },
@@ -719,36 +325,16 @@
         }
     },
     {
-        "region_name": "Water Temple South Basement Tunnel H",
-        "dungeon": "Water Temple",
-        "room": 03,
-        "exits": {
-            "Water Temple Lobby 1F South Corridor H": "transition('Water Temple T04', True)",
-            "Water Temple South Basement": "
-                'Water Temple Cracked Floor' and can_use(Iron_Boots)"
-        }
-    },
-    {
-        "region_name": "Water Temple South Basement Tunnel M",
-        "dungeon": "Water Temple",
-        "room": 03,
-        "exits": {
-            "Water Temple Lobby 1F South Corridor M": "transition('Water Temple T04', True)",
-            "Water Temple South Basement": "
-                'Water Temple Cracked Floor' and can_use(Iron_Boots)"
-        }
-    },
-    {
-        "region_name": "Water Temple South Basement Tunnel L",
+        "region_name": "Water Temple South Basement Tunnel",
         "dungeon": "Water Temple",
         "room": 03,
         "events": {
-            "Water Temple Cracked Floor": "'Water Temple L' and has_explosives"
+            "Water Temple Cracked Floor": "Water=low and has_explosives"
         },
         "exits": {
-            "Water Temple Lobby 1F South Corridor L": "transition('Water Temple T04', True)",
+            "Water Temple Lobby 1F South Corridor": "transition('Water Temple T04', True)",
             "Water Temple South Basement": "
-                'Water Temple Cracked Floor' and (can_use(Iron_Boots) or can_dive)"
+                'Water Temple Cracked Floor' and (can_use(Iron_Boots) or (Water=low and can_dive))"
         }
     },
     {
@@ -762,406 +348,168 @@
                 or (mm_ice_arrows and can_use(Ice_Arrows)))"
         },
         "exits": {
-            "Water Temple South Basement Tunnel H": "Water=high",
-            "Water Temple South Basement Tunnel M": "Water=middle",
-            "Water Temple South Basement Tunnel L": "Water=low"
+            "Water Temple South Basement Tunnel": "True"
         }
     },
     {
-        "region_name": "Water Temple Spike Tunnel H",
+        "region_name": "Water Temple Spike Tunnel",
         "dungeon": "Water Temple",
         "room": 04,
         "locations": {
             "Water Temple Compass Chest": "
-                'Water Temple H' and can_use(Hookshot) and can_use(Iron_Boots)
-                and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)"
+                can_use(Hookshot) and (Water=middle or Water=low or
+                (can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)))"
         },
         "exits": {
-            "Water Temple Lobby 2F East Tunnel H": "transition('Water Temple T02', True)"
+            "Water Temple Lobby 2F East Tunnel": "transition('Water Temple T02', True)"
         }
     },
     {
-        "region_name": "Water Temple Spike Tunnel M",
-        "dungeon": "Water Temple",
-        "room": 04,
-        "locations": {
-            "Water Temple Compass Chest": "'Water Temple M' and can_use(Hookshot)"
-        },
-        "exits": {
-            "Water Temple Lobby 2F East Tunnel M": "transition('Water Temple T02', True)"
-        }
-    },
-    {
-        "region_name": "Water Temple Spike Tunnel L",
-        "dungeon": "Water Temple",
-        "room": 04,
-        "locations": {
-            "Water Temple Compass Chest": "'Water Temple L' and can_use(Hookshot)"
-        },
-        "exits": {
-            "Water Temple Lobby 2F East Tunnel L": "transition('Water Temple T02', True)"
-        }
-    },
-    {
-        "region_name": "Water Temple Water Elevator 2F H",
+        "region_name": "Water Temple Water Elevator 2F",
         "dungeon": "Water Temple",
         "room": 10,
         "exits": 
-            "Water Temple Lobby Outer Floating Platform H": "
-                can_use(Iron_Boots) and transition('Water Temple T18', True)",
-            "Water Temple Water Elevator 3F H": "False"
+            "Water Temple Lobby 2F Outer Floating Platform Area": "
+                (Water=middle or Water=low or can_use(Iron_Boots)) and transition('Water Temple T18', True)",
+            "Water Temple Water Elevator 3F": "
+                (Water=middle or Water=low) and
+                (has_explosives or can_use(Bow) or can_use(Slingshot) or can_use(Boomerang) or can_use(Longshot))"
         }
     },
     {
-        "region_name": "Water Temple Water Elevator 2F M",
+        "region_name": "Water Temple Water Elevator 3F",
         "dungeon": "Water Temple",
         "room": 10,
         "exits": 
-            "Water Temple Lobby Outer Floating Platform M": "transition('Water Temple T18', True)",
-            "Water Temple Water Elevator 3F M": "
-                has_explosives or can_use(Bow) or can_use(Slingshot) or can_use(Boomerang) or can_use(Longshot)"
+            "Water Temple Water Elevator 2F": "Water=middle or Water=low or can_use(Iron_Boots)",
+            "Water Temple Lobby 3F Lullaby Ledge": "transition('Water Temple T25', True)"
         }
     },
     {
-        "region_name": "Water Temple Water Elevator 2F L",
-        "dungeon": "Water Temple",
-        "room": 10,
-        "exits": 
-            "Water Temple Lobby Outer Floating Platform L": "transition('Water Temple T18', True)",
-            "Water Temple Water Elevator 3F L": "
-                has_explosives or can_use(Bow) or can_use(Slingshot) or can_use(Boomerang) or can_use(Longshot)"
-        }
-    },
-    {
-        "region_name": "Water Temple Water Elevator 3F H",
-        "dungeon": "Water Temple",
-        "room": 10,
-        "exits": 
-            "Water Temple Water Elevator 2F H": "can_use(Iron_Boots)",
-            "Water Temple Lobby 3F Lullaby Ledge H": "transition('Water Temple T25', True)"
-        }
-    },
-    {
-        "region_name": "Water Temple Water Elevator 3F M",
-        "dungeon": "Water Temple",
-        "room": 10,
-        "exits": 
-            "Water Temple Water Elevator 2F M": "True",
-            "Water Temple Lobby 3F Lullaby Ledge M": "transition('Water Temple T25', True)"
-        }
-    },
-    {
-        "region_name": "Water Temple Water Elevator 3F L",
-        "dungeon": "Water Temple",
-        "room": 10,
-        "exits": 
-            "Water Temple Water Elevator 2F L": "True",
-            "Water Temple Lobby 3F Lullaby Ledge L": "transition('Water Temple T25', True)"
-        }
-    },
-    {
-        "region_name": "Water Temple Ruto Meeting Room 1F H",
-        "dungeon": "Water Temple",
-        "room": 17,
-        "exits": {
-            "Water Temple Lobby 1F H": "
-                can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)
-                and transition('Water Temple T01', True)",
-            "Water Temple Submerged Combat Room H": "
-                can_use(Iron_Boots) and transition('Water Temple T24',
-                'Water Temple Room 17 T24 Unbar')",
-            "Water Temple Ruto Meeting Room 2F H": "can_use(Iron_Boots)",
-            "Water Temple Ruto Meeting Room 3F H": "True"
-        }
-    },
-    {
-        "region_name": "Water Temple Ruto Meeting Room 1F M",
-        "dungeon": "Water Temple",
-        "room": 17,
-        "exits": {
-            "Water Temple Lobby 1F M": "
-                can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)
-                and transition('Water Temple T01', True)",
-            "Water Temple Submerged Combat Room M": "
-                can_use(Iron_Boots) and transition('Water Temple T24',
-                'Water Temple Room 17 T24 Unbar')",
-            "Water Temple Ruto Meeting Room 2F M": "True",
-            "Water Temple Ruto Meeting Room 3F M": "False"
-        }
-    },
-    {
-        "region_name": "Water Temple Ruto Meeting Room 1F L",
+        "region_name": "Water Temple Ruto Meeting Room 1F",
         "dungeon": "Water Temple",
         "room": 17,
         "events": {
             "Water Temple Cracked Wall": "
-                'Water Temple L' and logic_water_cracked_wall_bombchu and has_bombchus"
+                Water=low and logic_water_cracked_wall_bombchu and has_bombchus"
         },
         "exits": {
-            "Water Temple Lobby 1F L": "transition('Water Temple T01', True)",
-            "Water Temple Submerged Combat Room L": "
-                transition('Water Temple T24',
-                can_use(Bow) or has_fire_source_with_torch 
-                or 'Water Temple Room 17 T24 Unbar')",
-            "Water Temple Ruto Meeting Room 2F L": "False",
-            "Water Temple Ruto Meeting Room 3F L": "False"
+            "Water Temple Lobby 1F": "
+                (Water=low or (can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)))
+                and transition('Water Temple T01', True)",
+            "Water Temple Submerged Combat Room": "
+                (Water=low and transition('Water Temple T24',
+                    can_use(Bow) or has_fire_source_with_torch 
+                    or 'Water Temple Room 17 T24 Unbar'))
+                or (can_use(Iron_Boots) and transition('Water Temple T24',
+                    'Water Temple Room 17 T24 Unbar'))",
+            "Water Temple Ruto Meeting Room 2F": "Water=middle or (Water=high and can_use(Iron_Boots))",
+            "Water Temple Ruto Meeting Room 3F": "Water=high"
         }
     },
     {
-        "region_name": "Water Temple Ruto Meeting Room 2F H",
+        "region_name": "Water Temple Ruto Meeting Room 2F",
         "dungeon": "Water Temple",
         "room": 17,
+        "events": {
+            "Water Temple Cracked Wall": "(Water=middle or Water=low) and has_explosives"
+        },
         "locations": {
             "Water Temple Cracked Wall Chest": "
-                'Water Temple H' and 'Water Temple Cracked Wall' and can_use(Iron_Boots) 
-                and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)"
+                'Water Temple Cracked Wall' and (Water=middle or Water=low or
+                (can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)))"
         },
         "exits": {
-            "Water Temple Ruto Meeting Room 1F H": "can_use(Iron_Boots)",
-            "Water Temple Ruto Meeting Room 3F H": "True"
+            "Water Temple Lobby 1F": "
+                Water=middle and (Progressive_Scale, 2) and transition('Water Temple T01', True)",
+            "Water Temple Ruto Meeting Room 1F": "Water=low or can_use(Iron_Boots)",
+            "Water Temple Ruto Meeting Room 3F": "Water=high"
         }
     },
     {
-        "region_name": "Water Temple Ruto Meeting Room 2F M",
+        "region_name": "Water Temple Ruto Meeting Room 3F",
         "dungeon": "Water Temple",
         "room": 17,
         "events": {
-            "Water Temple Cracked Wall": "'Water Temple M' and has_explosives"
-        },
-        "locations": {
-            "Water Temple Cracked Wall Chest": "'Water Temple M' and 'Water Temple Cracked Wall'"
-        },
-        "exits": {
-            "Water Temple Lobby 1F M": "(Progressive_Scale, 2) and transition('Water Temple T01', True)",
-            "Water Temple Ruto Meeting Room 1F M": "can_use(Iron_Boots)",
-            "Water Temple Ruto Meeting Room 3F M": "False"
-        }
-    },
-    {
-        "region_name": "Water Temple Ruto Meeting Room 2F L",
-        "dungeon": "Water Temple",
-        "room": 17,
-        "events": {
-            "Water Temple Cracked Wall": "'Water Temple L' and has_explosives"
-        },
-        "locations": {
-            "Water Temple Cracked Wall Chest": "'Water Temple L' and 'Water Temple Cracked Wall'"
-        },
-        "exits": {
-            "Water Temple Ruto Meeting Room 1F L": "True",
-            "Water Temple Ruto Meeting Room 3F L": "False"
-        }
-    },
-    {
-        "region_name": "Water Temple Ruto Meeting Room 3F H",
-        "dungeon": "Water Temple",
-        "room": 17,
-        "events": {
-            "Water Temple HL": "can_play(Zeldas_Lullaby)",
-            "Water Temple HL Loop": "'Water Temple HL' and 'Water Temple LH'",
-            "Water Temple LMH Loop": "'Water Temple HL' and 'Water Temple LM' and 'Water Temple MH'",
-            "Water Temple Cracked Wall": "
-                'Water Temple H' and logic_water_cracked_wall_bombchu and has_bombchus"
-        },
-        "exits": {
-            "Water Temple Ruto Meeting Room 3F L": "can_play(Zeldas_Lullaby)",
-            "Water Temple Dungeon Map Room": "transition('Water Temple T14', True)",
-            "Water Temple Ruto Meeting Room 1F H": "can_use(Iron_Boots)",
-            "Water Temple Ruto Meeting Room 2F H": "can_use(Iron_Boots)"
-        }
-    },
-    {
-        "region_name": "Water Temple Ruto Meeting Room 3F M",
-        "dungeon": "Water Temple",
-        "room": 17,
-        "events": {
-            "Water Temple ML": "can_play(Zeldas_Lullaby)",
-            "Water Temple ML Loop": "'Water Temple ML' and 'Water Temple LM'",
-            "Water Temple HML Loop": "'Water Temple ML' and 'Water Temple LH' and 'Water Temple HM'",
-            "Water Temple Cracked Wall": "
-                'Water Temple M' and logic_water_cracked_wall_bombchu and has_bombchus"
-        },
-        "exits": {
-            "Water Temple Ruto Meeting Room 3F L": "can_play(Zeldas_Lullaby)",
-            "Water Temple Dungeon Map Room": "transition('Water Temple T14', True)",
-            "Water Temple Ruto Meeting Room 1F": "can_use(Iron_Boots)",
-            "Water Temple Ruto Meeting Room 2F": "True"
-        }
-    },
-    {
-        "region_name": "Water Temple Ruto Meeting Room 3F L",
-        "dungeon": "Water Temple",
-        "room": 17,
-        "events": {
+            "Water Temple HL": "Water=high and can_play(Zeldas_Lullaby)",
+            "Water Temple HL Loop": "Water=high and 'Water Temple HL' and 'Water Temple LH'",
+            "Water Temple LMH Loop": "Water=high and 'Water Temple HL' and 'Water Temple LM' and 'Water Temple MH'",
+            "Water Temple ML": "Water=middle and can_play(Zeldas_Lullaby)",
+            "Water Temple ML Loop": "Water=middle and 'Water Temple ML' and 'Water Temple LM'",
+            "Water Temple HML Loop": "Water=middle and 'Water Temple ML' and 'Water Temple LH' and 'Water Temple HM'",
             "Water Temple L": "
-                'Water Temple HML Loop' or 'Water Temple LMH Loop' or
-                'Water Temple ML Loop' or 'Water Temple HL Loop'",
-            "Water Temple Cracked Wall": "
-                'Water Temple L' and logic_water_cracked_wall_bombchu and has_bombchus"
+                Water=low and ('Water Temple HML Loop' or 'Water Temple LMH Loop' or
+                'Water Temple ML Loop' or 'Water Temple HL Loop')",
+            "Water Temple Cracked Wall": "logic_water_cracked_wall_bombchu and has_bombchus"
         },
         "exits": {
             "Water Temple Dungeon Map Room": "transition('Water Temple T14', True)",
-            "Water Temple Ruto Meeting Room 1F": "True",
+            "Water Temple Ruto Meeting Room 1F": "Water=low or can_use(Iron_Boots)",
             "Water Temple Ruto Meeting Room 2F": "
-                logic_water_cracked_wall_nothing or 
-                (logic_water_cracked_wall_hovers and can_use(Hover_Boots))"
+                Water=middle or (Water=high and can_use(Iron_Boots)) or
+                (Water=low and (logic_water_cracked_wall_nothing or 
+                (logic_water_cracked_wall_hovers and can_use(Hover_Boots))))"
         }
     },
     {
-        "region_name": "Water Temple Submerged Combat Room H",
+        "region_name": "Water Temple Submerged Combat Room",
         "dungeon": "Water Temple",
         "room": 18,
         "events": {
             "Water Temple Room 18 Enemies": "
-                'Water Temple H' and can_use(Hookshot) and can_use(Iron_Boots)
-                and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)"
+                (Water=low and (Beat the clams))
+                or (can_use(Hookshot) and can_use(Iron_Boots)
+                and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements))"
                 #Shell Blades
         },
         "locations": {
             "Water Temple Torches Chest": "
-                'Water Temple H' and 'Water Temple Room 18 Enemies' and can_use(Iron_Boots)
-                and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)"
+                'Water Temple Room 18 Enemies' and (Water=low or (can_use(Iron_Boots)
+                and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)))"
         },
         "exits": {
-            "Water Temple Ruto Meeting Room 1F H": "
-                can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)
+            "Water Temple Ruto Meeting Room 1F": "
+                (Water=low or (can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)))
                 and transition('Water Temple T24', True)"
         }
     },
     {
-        "region_name": "Water Temple Submerged Combat Room M",
-        "dungeon": "Water Temple",
-        "room": 18,
-        "events": {
-            "Water Temple Room 18 Enemies": "
-                'Water Temple M' and can_use(Hookshot) and can_use(Iron_Boots)
-                and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)"
-                #Shell Blades
-        },
-        "locations": {
-            "Water Temple Torches Chest": "
-                'Water Temple M' and 'Water Temple Room 18 Enemies' and can_use(Iron_Boots)
-                and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)"
-        },
-        "exits": {
-            "Water Temple Ruto Meeting Room 1F M": "
-                can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)
-                and transition('Water Temple T24', True)"
-        }
-    },
-    {
-        "region_name": "Water Temple Submerged Combat Room L",
-        "dungeon": "Water Temple",
-        "room": 18,
-        "events": {
-            "Water Temple Room 18 Enemies": "
-                'Water Temple L' and Beat the clams"
-                #Shell Blades
-        },
-        "locations": {
-            "Water Temple Torches Chest": "'Water Temple L' and 'Water Temple Room 18 Enemies'"
-        },
-        "exits": {
-            "Water Temple Ruto Meeting Room 1F L": "transition('Water Temple T24', True)"
-        }
-    },
-    {
-        "region_name": "Water Temple Grate Passage North H",
+        "region_name": "Water Temple Grate Passage North",
         "dungeon": "Water Temple",
         "room": 20,
         "events": {
             "Water Temple Room 20 Pushblock Moved Once": "
-                'Water Temple H' and Progressive_Strength_Upgrade and can_use(Iron_Boots)
-                and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)"
+                Progressive_Strength_Upgrade and (Water=middle or Water=low or
+                (can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)))"
         },
         "exits": {
-            "Water Temple Lobby 3F East Ledge H": "transition('Water Temple T03', True)",
-            "Water Temple Grate Passage West H": "
-                'Water Temple Room 20 Pushblock Moved Twice' and (can_dive or can_use(Iron_Boots))
-                and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)"
+            "Water Temple Lobby 3F East Ledge": "
+                (Water=high or can_use(Hookshot)) and transition('Water Temple T03', True)",
+            "Water Temple Grate Passage West": "
+                'Water Temple Room 20 Pushblock Moved Twice' and 
+                (Water=middle or Water=low or ((can_dive or can_use(Iron_Boots))
+                and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)))"
         }
     },
     {
-        "region_name": "Water Temple Grate Passage North M",
-        "dungeon": "Water Temple",
-        "room": 20,
-        "events": {
-            "Water Temple Room 20 Pushblock Moved Once": "
-                'Water Temple M' and Progressive_Strength_Upgrade"
-        },
-        "exits": {
-            "Water Temple Lobby 3F East Ledge M": "
-                can_use(Hookshot) and transition('Water Temple T03', True)",
-            "Water Temple Grate Passage West M": "'Water Temple Room 20 Pushblock Moved Twice'"
-        }
-    },
-    {
-        "region_name": "Water Temple Grate Passage North L",
-        "dungeon": "Water Temple",
-        "room": 20,
-        "events": {
-            "Water Temple Room 20 Pushblock Moved Once": "
-                'Water Temple L' and Progressive_Strength_Upgrade"
-        },
-        "exits": {
-            "Water Temple Lobby 3F East Ledge L": "
-                can_use(Hookshot) and transition('Water Temple T03', True)",
-            "Water Temple Grate Passage West L": "'Water Temple Room 20 Pushblock Moved Twice'"
-        }
-    },
-    {
-        "region_name": "Water Temple Grate Passage West H",
+        "region_name": "Water Temple Grate Passage West",
         "dungeon": "Water Temple",
         "room": 20,
         "events": {
             "Water Temple Room 20 Pushblock Moved Twice": "
-                'Water Temple H' and 'Water Temple Room 20 Pushblock Moved Once'
-                and can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)"
+                'Water Temple Room 20 Pushblock Moved Once' and (Water=middle or Water=low or
+                (can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)))"
         },
         "locations": {
             "Water Temple Central Bow Target Chest": "
-                'Water Temple H' and 'Water Temple Room 20 Pushblock Moved Twice' 
-                and can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)"
+                'Water Temple Room 20 Pushblock Moved Twice' and (Water=middle or Water=low or
+                (can_use(Iron_Boots) and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)))"
         },
         "exits": {
-            "Water Temple Lobby 2F Behind Grate H": "transition('Water Temple T05', True)",
+            "Water Temple Lobby 2F Behind Grate": "transition('Water Temple T05', True)",
             "Water Temple Grate Passage North H": "
                 'Water Temple Room 20 Pushblock Moved Twice'
-                and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)""
-        }
-    },
-    {
-        "region_name": "Water Temple Grate Passage West M",
-        "dungeon": "Water Temple",
-        "room": 20,
-        "events": {
-            "Water Temple Room 20 Pushblock Moved Twice": "
-                'Water Temple M' and 'Water Temple Room 20 Pushblock Moved Once'"
-        },
-        "locations": {
-            "Water Temple Central Bow Target Chest": "
-                'Water Temple M' and 'Water Temple Room 20 Pushblock Moved Twice'"
-        },
-        "exits": {
-            "Water Temple Lobby 2F Behind Grate M": "transition('Water Temple T05', True)",
-            "Water Temple Grate Passage North M": "'Water Temple Room 20 Pushblock Moved Twice'"
-        }
-    },
-    {
-        "region_name": "Water Temple Grate Passage West L",
-        "dungeon": "Water Temple",
-        "room": 20,
-        "events": {
-            "Water Temple Room 20 Pushblock Moved Twice": "
-                'Water Temple L' and 'Water Temple Room 20 Pushblock Moved Once'"
-        },
-        "locations": {
-            "Water Temple Central Bow Target Chest": "
-                'Water Temple L' and 'Water Temple Room 20 Pushblock Moved Twice'"
-        },
-        "exits": {
-            "Water Temple Lobby 2F Behind Grate L": "transition('Water Temple T05', True)",
-            "Water Temple Grate Passage North L": "'Water Temple Room 20 Pushblock Moved Twice'"
+                and (Water=middle or Water=low or can_use(Zora_Tunic) or logic_fewer_tunic_requirements)"
         }
     },
     {

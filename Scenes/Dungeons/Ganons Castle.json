@@ -40,7 +40,7 @@
         "locations": {
             "Ganons Castle Water Trial Left Chest": "True",
             "Ganons Castle Water Trial Right Chest": "True",
-            "Blue Fire": "has_bottle and can break icicles"
+            "Blue Fire": "has_bottle and can_break_icicles"
         },
         "exits": {
             "Ganons Castle Barrier Chamber": "transition('Ganons Castle T10', True)",

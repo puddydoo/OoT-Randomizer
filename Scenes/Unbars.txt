@@ -109,7 +109,6 @@
 'Water Temple Room 15 T23 Unbar'
 'Water Temple Room 17 T24 Unbar'
 'Water Temple Room 19 T14 Unbar'
-'Water Temple MQ Room 00 T16 Unbar'
 'Water Temple MQ Room 00 T18 Unbar'
 'Water Temple MQ Room 00 T25 Unbar'
 'Water Temple MQ Room 06 T11 Unbar'

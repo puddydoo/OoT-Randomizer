@@ -38,10 +38,10 @@
         "region_name": "Ice Cavern Hall to Central Room",
         "dungeon": "Ice Cavern",
         "room": 02,
-        #Child can walk between icicles while adult can break them with master sword
+        #Child can walk between icicles
         "exits": {
-            "Ice Cavern Lobby Back": "(is_child or is_adult) and transition('Ice Cavern T04', True)",
-            "Ice Cavern Central Room": "(is_child or is_adult) and transition('Ice Cavern T03', True)"
+            "Ice Cavern Lobby Back": "(is_child or can_break_icicles) and transition('Ice Cavern T04', True)",
+            "Ice Cavern Central Room": "(is_child or can_break_icicles) and transition('Ice Cavern T03', True)"
         }
     },
     {
@@ -51,7 +51,7 @@
         #One of the silver rupees is behind icicles that child can't slip through
         #Another is too high for child, as is the exit that the rupees unlock
         "events": {
-            "Ice Cavern Room 03 Silver Rupees": "can_climb(92) and can break icicles"
+            "Ice Cavern Room 03 Silver Rupees": "can_climb(92) and can_break_icicles"
         }
         "locations": {
             "Ice Cavern GS Central Room": "can_use(Hookshot) or can_use(Boomerang)"
@@ -204,10 +204,10 @@
         "room": 11,
         #Icicles block most of the things in the room
         "locations": {
-            "Ice Cavern Compass Chest": "(is_child or is_adult) and Blue_Fire",
-            "Ice Cavern Freestanding PoH": "(is_child or is_adult) and Blue_Fire",
+            "Ice Cavern Compass Chest": "(is_child or can_break_icicles) and Blue_Fire",
+            "Ice Cavern Freestanding PoH": "(is_child or can_break_icicles) and Blue_Fire",
             "Ice Cavern GS Heart Piece Room": "can_use(Hookshot) or can_use(Boomerang)",
-            "Blue Fire": "(is_child or is_adult) and has_bottle"
+            "Blue Fire": "(is_child or can_break_icicles) and has_bottle"
         }
         "exits": {
             "Ice Cavern Central Room East": "can_climb(20) and transition('Ice Cavern T10', True)"

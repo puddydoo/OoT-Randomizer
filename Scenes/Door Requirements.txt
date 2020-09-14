@@ -16,6 +16,8 @@ Dungeons with multiple entrances have multiple requirements for each door. "Reqs
 There might be extra sets of requirements under the conditions that hovering or other glitches are allowed. (For example more doors in Forest Temple would require T18, the door on the raised platform on the east side of the lobby)
 If door rando is ever added, it would be necessary to either disable keys, or replace this system with a script that can crawl through the world and automatically determine the exact amount of required keys.
 
+Unfortunately Spirit Temple doesn't work because even with the default layouts, the different routes through the dungeon make too many keys wastable and it can't match the amount required for items in the original logic. So outside of keysy/keysanity, it would require the same key logic rewrite that door rando does.
+
 Deku Tree
 (No keys in this dungeon)
 
@@ -302,7 +304,7 @@ T11, 4 keys  CHECK
 T15, 2 keys  CHECK
 T29, 3 keys  CHECK
 T32, 5 keys  CHECK
-T35 (5 keys) CHECK
+T35, 5 keys  CHECK
 
 T01 (Transition Plane)
 T02 (Transition Plane)
@@ -422,7 +424,7 @@ T35:		Entrance chamber <-> combat room
 Reqs from both: All other doors except T26, T30, T33
 +Clip through two-sided cell: T26, T30
 Key: Vanilla Yes, MQ Yes
-Note: Randomizer has removed the key from T35 outside of Keysanity.
+Note: Randomizer has removed the key from Vanilla T35 outside of Keysanity.
 T36 (Boss Key)
 T37:		Entrance chamber <-> big lava room
 Reqs from both: T17, T18, T26, T30, T33, T35
@@ -527,19 +529,20 @@ T22, 7 keys	 / Should be 4?	(Hall to child iron knuckle <-> child iron knuckle r
 T25, 7 keys	 / Should be 2?	(Rock light room <-> central chamber)
 
 Adult doors (vanilla):
-T03 (Wallmaster room <-> central chamber)
-	T21 (Central chamber <-> eastern 3F corridor)
-		T20 (Eastern 3F corridor <-> adult enemy pit room)
-			T19 (Adult enemy pit room <-> funny switch room)
-				T16 (Funny switch room <-> key room)
-				T18 (Funny switch room <-> hall to adult iron knuckle)
-					T17 (Hall to adult iron knuckle <-> adult iron knuckle room)
-						T07 (Adult iron knuckle room <-> exit to left hand)
-			T15 (Adult enemy pit room <-> shifting wall room)
-				T14 (Shifting wall room <-> lullaby landing)
-					T13	(Lullaby landing <-> furniture room)
-					T01 (Lullaby landing <-> ceiling mirror room)
-						T02 (Ceiling mirror room <-> snake mirror rooms)
+T04 (Lobby <-> wallmaster room) (Locked)
+	T03 (Wallmaster room <-> central chamber)
+		T21 (Central chamber <-> eastern 3F corridor) (Locked) (MQ LOCKED)
+			T20 (Eastern 3F corridor <-> adult enemy pit room)
+				T19 (Adult enemy pit room <-> funny switch room)
+					T16 (Funny switch room <-> key room)
+					T18 (Funny switch room <-> hall to adult iron knuckle)
+						T17 (Hall to adult iron knuckle <-> adult iron knuckle room)
+							T07 (Adult iron knuckle room <-> exit to left hand)
+				T15 (Adult enemy pit room <-> shifting wall room) (Locked) (MQ LOCKED)
+					T14 (Shifting wall room <-> lullaby landing)
+						T13	(Lullaby landing <-> furniture room) (MQ LOCKED)
+						T01 (Lullaby landing <-> ceiling mirror room)
+							T02 (Ceiling mirror room <-> snake mirror rooms)
 T01, T02, T03, T07, T13, T14, T15, T16, T17, T18, T19, T20, T21
 From lobby: T04, T05, T06, T29
 

@@ -511,8 +511,7 @@
         "dungeon": "Shadow Temple",
         "room": 12,
         "locations": {
-            "Shadow Temple GS Triple Giant Pot": "
-                As long as you can hit it or have Progressive_Strength_Upgrade"
+            "Shadow Temple GS Triple Giant Pot": "is_adult or Progressive_Strength_Upgrade or can_child_attack"
         },
         "exits": {
             "Shadow Temple Triplicate Skull Jar Room": "True"

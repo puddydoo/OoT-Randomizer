@@ -175,7 +175,8 @@
         "dungeon": "Jabu Jabus Belly",
         "room": 05,
         "locations": {
-            "Jabu Jabus Belly GS Near Boss": "Can kill this skulltula"
+            "Jabu Jabus Belly GS Near Boss": "can_use_projectile or can_use(Dins_Fire)"
+			#Can also use Ruto to kill it if you have Hover Boots or can get her into this room otherwise
         },
         "exits": {
             "Jabu Jabus Belly Lobby East": "transition('Jabu Jabus Belly T10', True)",
@@ -219,7 +220,7 @@
             "Jabu Jabus Belly Branching Hallways N": "'Jabu Jabus Belly Blue Tentacle'"
         }
     },
-    #I'm not sure how to represent Ruto in the conditions
+    #These depend on being able to bring Ruto up
     {
         "region_name": "Jabu Jabus Belly Branching Hallways W",
         "dungeon": "Jabu Jabus Belly",
@@ -228,7 +229,7 @@
             "Jabu Jabus Belly Branching Hallways": "True",
             "Jabu Jabus Belly West Chamber": "
                 transition('Jabu Jabus Belly T11',
-                Ruto or can_hold_down_switch or 'Jabu Jabus Belly Room 07 T11 Unbar')"
+                True or can_hold_down_switch or 'Jabu Jabus Belly Room 07 T11 Unbar')"
         }
     },
     {
@@ -239,7 +240,7 @@
             "Jabu Jabus Belly Branching Hallways": "True",
             "Jabu Jabus Belly East Chamber": "
                 transition('Jabu Jabus Belly T12',
-                Ruto or can_hold_down_switch or 'Jabu Jabus Belly Room 07 T12 Unbar')"
+                True or can_hold_down_switch or 'Jabu Jabus Belly Room 07 T12 Unbar')"
         }
     },
     {

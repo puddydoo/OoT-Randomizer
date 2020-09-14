@@ -244,7 +244,7 @@
         "dungeon": "Fire Temple",
         "room": 07,
         "locations": {
-            "Fire Temple GS Scarecrow Climb": "Kill the skulltula"
+            "Fire Temple GS Scarecrow Climb": "is_adult or can_child_attack"
         },
         "exits": {
             "Fire Temple Stone Maze Top": "transition('Fire Temple T23', True)",
@@ -571,7 +571,7 @@
         "dungeon": "Fire Temple",
         "room": 18,
         "locations": {
-            "Fire Temple GS Boss Key Loop": "Kill the skulltula",
+            "Fire Temple GS Boss Key Loop": "is_adult or can_child_attack",
         },
         "exits": {
             "Fire Temple Flare Dancer Treasure Room": "transition('Fire Temple T30', True)",

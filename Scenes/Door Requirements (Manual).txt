@@ -1,0 +1,676 @@
+Deku Tree
+
+"Deku Tree T01" True
+"Deku Tree T02" True
+"Deku Tree T03" True
+"Deku Tree T04" True
+"Deku Tree T05" True
+"Deku Tree T06" True
+"Deku Tree T07" True
+"Deku Tree T08" True
+"Deku Tree T09" True
+"Deku Tree T10" True
+"Deku Tree T11" True
+"Deku Tree T12" True
+
+Deku Tree MQ
+
+"Deku Tree T01" True
+"Deku Tree T02" True
+"Deku Tree T03" True
+"Deku Tree T04" True
+"Deku Tree T05" True
+"Deku Tree T06" True
+"Deku Tree T07" True
+"Deku Tree T08" True
+"Deku Tree T09" True
+"Deku Tree T10" True
+"Deku Tree T11" True
+"Deku Tree T12" True
+
+Dodongo's Cavern
+
+"Dodongos Cavern T01" True
+"Dodongos Cavern T02" True
+"Dodongos Cavern T03" True
+"Dodongos Cavern T04" True
+"Dodongos Cavern T05" True
+"Dodongos Cavern T06" True
+"Dodongos Cavern T07" True
+"Dodongos Cavern T08" True
+"Dodongos Cavern T09" True
+"Dodongos Cavern T10" True
+"Dodongos Cavern T11" True
+"Dodongos Cavern T12" True
+"Dodongos Cavern T13" True
+"Dodongos Cavern T14" True
+"Dodongos Cavern T15" True
+"Dodongos Cavern T16" True
+"Dodongos Cavern T17" True
+"Dodongos Cavern T18" True
+"Dodongos Cavern T19" True
+"Dodongos Cavern T20" True
+"Dodongos Cavern T21" True
+"Dodongos Cavern T22" True
+"Dodongos Cavern T23" True
+
+Dodongo's Cavern MQ
+
+"Dodongos Cavern T01" True
+"Dodongos Cavern T02" True
+"Dodongos Cavern T03" True
+"Dodongos Cavern T04" True
+"Dodongos Cavern T05" True
+"Dodongos Cavern T06" True
+"Dodongos Cavern T07" True
+"Dodongos Cavern T08" True
+"Dodongos Cavern T09" True
+"Dodongos Cavern T10" True
+"Dodongos Cavern T11" True
+"Dodongos Cavern T12" True
+"Dodongos Cavern T13" True
+"Dodongos Cavern T14" True
+"Dodongos Cavern T15" True
+"Dodongos Cavern T16" True
+"Dodongos Cavern T17" True
+"Dodongos Cavern T18" True
+"Dodongos Cavern T19" True
+"Dodongos Cavern T20" True
+"Dodongos Cavern T21" True
+"Dodongos Cavern T22" True
+"Dodongos Cavern T23" True
+
+Jabu-Jabu
+
+"Jabu-Jabu T01" True
+"Jabu-Jabu T02" True
+"Jabu-Jabu T03" True
+"Jabu-Jabu T04" True
+"Jabu-Jabu T05" True
+"Jabu-Jabu T06" True
+"Jabu-Jabu T07" True
+"Jabu-Jabu T08" True
+"Jabu-Jabu T09" True
+"Jabu-Jabu T10" True
+"Jabu-Jabu T11" True
+"Jabu-Jabu T12" True
+"Jabu-Jabu T13" True
+"Jabu-Jabu T14" True
+"Jabu-Jabu T15" True
+"Jabu-Jabu T16" True
+"Jabu-Jabu T17" True
+"Jabu-Jabu T18" True
+"Jabu-Jabu T19" True
+"Jabu-Jabu T20" True
+"Jabu-Jabu T21" True
+"Jabu-Jabu T22" True
+
+Jabu-Jabu MQ
+
+"Jabu-Jabu T01" True
+"Jabu-Jabu T02" True
+"Jabu-Jabu T03" True
+"Jabu-Jabu T04" True
+"Jabu-Jabu T05" True
+"Jabu-Jabu T06" True
+"Jabu-Jabu T07" True
+"Jabu-Jabu T08" True
+"Jabu-Jabu T09" True
+"Jabu-Jabu T10" True
+"Jabu-Jabu T11" True
+"Jabu-Jabu T12" True
+"Jabu-Jabu T13" True
+"Jabu-Jabu T14" True
+"Jabu-Jabu T15" True
+"Jabu-Jabu T16" True
+"Jabu-Jabu T17" True
+"Jabu-Jabu T18" True
+"Jabu-Jabu T19" True
+"Jabu-Jabu T20" True
+"Jabu-Jabu T21" True
+"Jabu-Jabu T22" True
+
+Forest Temple
+
+"Forest Temple T01" True
+"Forest Temple T02" True
+"Forest Temple T03" True
+"Forest Temple T04" True
+"Forest Temple T05" True
+"Forest Temple T06" (Small_Key_Forest_Temple, 4)
+"Forest Temple T07" True
+"Forest Temple T08" True
+"Forest Temple T09" True
+"Forest Temple T10" True
+"Forest Temple T11" True
+"Forest Temple T12" True
+"Forest Temple T13" True
+"Forest Temple T14" True
+"Forest Temple T15" (Small_Key_Forest_Temple, 1)
+"Forest Temple T16" True
+"Forest Temple T17" True
+"Forest Temple T18" True
+"Forest Temple T19" True
+"Forest Temple T20" True
+"Forest Temple T21" True
+"Forest Temple T22" True
+"Forest Temple T23" True
+"Forest Temple T24" True
+"Forest Temple T25" True
+"Forest Temple T26" (Small_Key_Forest_Temple, 2)
+"Forest Temple T27" (Small_Key_Forest_Temple, 3)
+"Forest Temple T28" (Small_Key_Forest_Temple, 5)
+"Forest Temple T29" Boss_Key_Forest_Temple
+
+Forest Temple MQ
+
+"Forest Temple T01" True
+"Forest Temple T02" True
+"Forest Temple T03" True
+"Forest Temple T04" True
+"Forest Temple T05" True
+"Forest Temple T06" (Small_Key_Forest_Temple, 4)
+"Forest Temple T07" True
+"Forest Temple T08" True
+"Forest Temple T09" True
+"Forest Temple T10" True
+"Forest Temple T11" True
+"Forest Temple T12" True
+"Forest Temple T13" True
+"Forest Temple T14" True
+"Forest Temple T15" True
+"Forest Temple T16" True
+"Forest Temple T17" True
+"Forest Temple T18" True
+"Forest Temple T19" True
+"Forest Temple T20" True
+"Forest Temple T21" True
+"Forest Temple T22" True
+"Forest Temple T23" True
+"Forest Temple T24" (Small_Key_Forest_Temple, 1)
+"Forest Temple T25" (Small_Key_Forest_Temple, 6)
+"Forest Temple T26" (Small_Key_Forest_Temple, 3)
+"Forest Temple T27" (Small_Key_Forest_Temple, 4)
+"Forest Temple T28" (Small_Key_Forest_Temple, 5)
+"Forest Temple T29" Boss_Key_Forest_Temple
+
+Fire Temple
+
+"Fire Temple T01" True
+"Fire Temple T02" True
+"Fire Temple T03" True
+"Fire Temple T04" True
+"Fire Temple T05" True
+"Fire Temple T06" (Small_Key_Fire_Temple, 7)
+"Fire Temple T07" (Small_Key_Fire_Temple, 4)
+"Fire Temple T08" True
+"Fire Temple T09" True
+"Fire Temple T10" (Small_Key_Fire_Temple, 8)
+"Fire Temple T11" True
+"Fire Temple T12" True
+"Fire Temple T13" True
+"Fire Temple T14" True
+"Fire Temple T15" (Small_Key_Fire_Temple, 3)
+"Fire Temple T16" True
+"Fire Temple T17" True
+"Fire Temple T18" True
+"Fire Temple T19" True
+"Fire Temple T20" (Small_Key_Fire_Temple, 6)
+"Fire Temple T21" True
+"Fire Temple T22" (Small_Key_Fire_Temple, 5)
+"Fire Temple T23" True
+"Fire Temple T24" True
+"Fire Temple T25" True
+"Fire Temple T26" True
+"Fire Temple T27" True
+"Fire Temple T28" True
+"Fire Temple T29" True
+"Fire Temple T30" True
+"Fire Temple T31" True
+"Fire Temple T32" True
+"Fire Temple T33" True
+"Fire Temple T34" True
+"Fire Temple T35" (Small_Key_Fire_Temple, 8) or not keysanity
+"Fire Temple T36" Boss_Key_Fire_Temple
+"Fire Temple T37" (Small_Key_Fire_Temple, 2)
+
+Fire Temple MQ
+
+"Fire Temple T01" True
+"Fire Temple T02" True
+"Fire Temple T03" True
+"Fire Temple T04" True
+"Fire Temple T05" True
+"Fire Temple T06" True
+"Fire Temple T07" True
+"Fire Temple T08" True
+"Fire Temple T09" True
+"Fire Temple T10" True
+"Fire Temple T11" (Small_Key_Fire_Temple, 4)
+"Fire Temple T12" True
+"Fire Temple T13" True
+"Fire Temple T14" True
+"Fire Temple T15" (Small_Key_Fire_Temple, 2)
+"Fire Temple T16" True
+"Fire Temple T17" True
+"Fire Temple T18" True
+"Fire Temple T19" True
+"Fire Temple T20" True
+"Fire Temple T21" True
+"Fire Temple T22" True
+"Fire Temple T23" True
+"Fire Temple T24" True
+"Fire Temple T25" True
+"Fire Temple T26" True
+"Fire Temple T27" True
+"Fire Temple T28" True
+"Fire Temple T29" (Small_Key_Fire_Temple, 3)
+"Fire Temple T30" True
+"Fire Temple T31" True
+"Fire Temple T32" (Small_Key_Fire_Temple, 5)
+"Fire Temple T33" True
+"Fire Temple T34" True
+"Fire Temple T35" (Small_Key_Fire_Temple, 5)
+"Fire Temple T36" Boss_Key_Fire_Temple
+"Fire Temple T37" True
+
+Water Temple
+
+"Water Temple T01" True
+"Water Temple T02" True
+"Water Temple T03" True
+"Water Temple T04" True
+"Water Temple T05" True
+"Water Temple T06" True
+"Water Temple T07" True
+"Water Temple T08" True
+"Water Temple T09" (Small_Key_Water_Temple, 5)
+"Water Temple T10" (Small_Key_Water_Temple, 5)
+"Water Temple T11" (Small_Key_Water_Temple, 6)
+"Water Temple T12" True
+"Water Temple T13" True
+"Water Temple T14" True
+"Water Temple T15" (Small_Key_Water_Temple, 6)
+"Water Temple T16" True
+"Water Temple T17" True
+"Water Temple T18" True or (Small_Key_Water_Temple, 6) #Removed
+"Water Temple T19" True
+"Water Temple T20" True
+"Water Temple T21" True
+"Water Temple T22" (Small_Key_Water_Temple, 6)
+"Water Temple T23" True
+"Water Temple T24" True
+"Water Temple T25" True
+"Water Temple T26" Boss_Key_Water_Temple
+"Water Temple T27" True
+
+Water Temple MQ
+
+"Water Temple T01" True
+"Water Temple T02" True
+"Water Temple T03" True
+"Water Temple T04" True
+"Water Temple T05" True
+"Water Temple T06" True
+"Water Temple T07" True
+"Water Temple T08" True
+"Water Temple T09" (Small_Key_Water_Temple, 1)
+"Water Temple T10" True
+"Water Temple T11" True
+"Water Temple T12" True
+"Water Temple T13" True
+"Water Temple T14" True
+"Water Temple T15" True
+"Water Temple T16" True
+"Water Temple T17" True
+"Water Temple T18" True
+"Water Temple T19" True
+"Water Temple T20" True
+"Water Temple T21" True
+"Water Temple T22" True
+"Water Temple T23" (Small_Key_Water_Temple, 2)
+"Water Temple T24" True
+"Water Temple T25" True
+"Water Temple T26" Boss_Key_Water_Temple
+"Water Temple T27" True
+
+Spirit Temple
+
+"Spirit Temple T01" True
+"Spirit Temple T02" True
+"Spirit Temple T03" True
+"Spirit Temple T04"
+	((Small_Key_Spirit_Temple, 1) and not shuffle_spirit_hands and not glitch_hover) or
+	((Small_Key_Spirit_Temple, 2) and not shuffle_spirit_hands and glitch_hover) or
+	(Small_Key_Spirit_Temple, 5)
+	#Items require more
+	#Assuming it's just hovering that allows 2 keys
+"Spirit Temple T05" True
+"Spirit Temple T06" True
+"Spirit Temple T07" True
+"Spirit Temple T08" True
+"Spirit Temple T09" True
+"Spirit Temple T10"
+	((Small_Key_Spirit_Temple, 1) and not shuffle_spirit_hands and not glitch_hover) or
+	((Small_Key_Spirit_Temple, 2) and not shuffle_spirit_hands and glitch_hover) or
+	(Small_Key_Spirit_Temple, 5)
+	#Items require more
+	#Assuming it's just hovering that allows 2 keys
+"Spirit Temple T11" True
+"Spirit Temple T12" True
+"Spirit Temple T13" True
+"Spirit Temple T14" True
+"Spirit Temple T15" (Small_Key_Spirit_Temple, 5)
+"Spirit Temple T16" True
+"Spirit Temple T17" True
+"Spirit Temple T18" True
+"Spirit Temple T19" True
+"Spirit Temple T20" True
+"Spirit Temple T21"
+	((Small_Key_Spirit_Temple, 2) and glitch_hover and not shuffle_spirit_hands) or
+	((Small_Key_Spirit_Temple, 3) and not glitch_hover and not shuffle_spirit_hands) or
+	((Small_Key_Spirit_Temple, 4) and not glitch_hover and at('Spirit Temple Eastern 3F Corridor', is_adult)) or
+	(Small_Key_Spirit_Temple, 5)
+	#Unsure about the first one but it seems to match current glitched logic
+	#3 is so Link can reach silver gauntlets. Otherwise Mirror Shield and the 3 items before it require 4
+	#From the left hand, the 5th key is T04 which only adult can otherwise open so it would make T21 redundant unless child hovers in statue room
+	#From the entrance, the 5th key is T15 so adult needs to make T21 redundant by having access to the other side of it from left hand or else child could waste the key by entering through left hand before adult can
+"Spirit Temple T22"
+	((Small_Key_Spirit_Temple, 2) and glitch_hover and not shuffle_spirit_hands) or
+	(Small_Key_Spirit_Temple, 5)
+"Spirit Temple T23" True
+"Spirit Temple T24" True
+"Spirit Temple T25" True
+"Spirit Temple T26" True
+"Spirit Temple T27" True
+"Spirit Temple T28" True
+"Spirit Temple T29" True
+"Spirit Temple T30" True
+"Spirit Temple T31" Boss_Key_Spirit_Temple
+"Spirit Temple T32" True
+"Spirit Temple T33" True
+
+Spirit Temple MQ
+
+"Spirit Temple T01" True
+"Spirit Temple T02" True
+"Spirit Temple T03" True
+"Spirit Temple T04" True
+"Spirit Temple T05" (Small_Key_Spirit_Temple, 7)
+"Spirit Temple T06" True
+"Spirit Temple T07" True
+"Spirit Temple T08" True
+"Spirit Temple T09" True
+"Spirit Temple T10" (First child room <-> rock light room)
+	((Small_Key_Spirit_Temple, 1) and not glitch_hover and not shuffle_spirit_hands) or
+	(Small_Key_Spirit_Temple, 7)
+	#Child normally enters Room 4 through here although the items inside cost more keys.
+	#For adult this is normally a dead end with nothing but a hammer switch so that switch costs 7 keys.
+	#With shuffled hands or hovering this door is low priority for child as well.
+"Spirit Temple T11" True
+"Spirit Temple T12" True
+"Spirit Temple T13" (Small_Key_Spirit_Temple, 7)
+"Spirit Temple T14" True
+"Spirit Temple T15" (Small_Key_Spirit_Temple, 6)
+"Spirit Temple T16" True
+"Spirit Temple T17" True
+"Spirit Temple T18" True
+"Spirit Temple T19" True
+"Spirit Temple T20" True
+"Spirit Temple T21" (Central chamber <-> eastern 3F corridor)
+	((Small_Key_Spirit_Temple, 4) and not glitch_hover and not shuffle_spirit_hands) or
+	((Small_Key_Spirit_Temple, 5) and not glitch_hover and at('Spirit Temple Eastern 3F Corridor', is_adult)) or
+	(Small_Key_Spirit_Temple, 7)
+	#4 is so Link can reach silver gauntlets. Otherwise Mirror Shield and the 3 items before it require 5
+	#T13 and T15 are inaccessible without shuffled hands or hovering, T05 is behind T21 as child without hovering
+	#If the player can waste a key on T13 or T15 as adult then this door is redundant
+"Spirit Temple T22" (Hall to child iron knuckle <-> child iron knuckle room)
+	((Small_Key_Spirit_Temple, 1) and (shuffle_spirit_hands or glitch_hover) and at('Spirit Temple Child Iron Knuckle Room'," True)) or
+	(Small_Key_Spirit_Temple, 7)
+	#With shuffled hands or hovering, all other doors cost too many keys so this can become a convenient entrance for child to use.
+	#At least I hope this works out. Maybe it might need more logic
+"Spirit Temple T23" True
+"Spirit Temple T24" True
+"Spirit Temple T25" (Rock light room <-> central chamber)
+	((Small_Key_Spirit_Temple, 2) and not glitch_hover and not shuffle_spirit_hands) or
+	((Small_Key_Spirit_Temple, 6) and at('Spirit Temple First Child Room Rear'," True)) or
+	(Small_Key_Spirit_Temple, 7)
+	#Normally allows child to access central chamber with 2 keys but the items in Room 4 cost more keys.
+	#With hovering or shuffled hands, if Link can enter Room 4 through T10 then this door is redundant to get the items inside. This requires going through crawlspaces which either child can do or adult by glitching through them.
+	#One of the items requires adult so needs 7 keys if adult can't glitch through that crawlspace.
+"Spirit Temple T26" True
+"Spirit Temple T27" True
+"Spirit Temple T28" True
+"Spirit Temple T29" True
+"Spirit Temple T30" True
+"Spirit Temple T31" Boss_Key_Spirit_Temple
+"Spirit Temple T32" True
+"Spirit Temple T33" True
+
+Shadow Temple
+
+"Shadow Temple T01" True
+"Shadow Temple T02" True
+"Shadow Temple T03" True
+"Shadow Temple T04" (Small_Key_Shadow_Temple, 5)
+"Shadow Temple T05" (Small_Key_Shadow_Temple, 1)
+"Shadow Temple T06" True
+"Shadow Temple T07" True
+"Shadow Temple T08" True
+"Shadow Temple T09" (Small_Key_Shadow_Temple, 2)
+"Shadow Temple T10" (Small_Key_Shadow_Temple, 3)
+"Shadow Temple T11" True
+"Shadow Temple T12" True
+"Shadow Temple T13" True
+"Shadow Temple T14" True
+"Shadow Temple T15" True
+"Shadow Temple T16" True
+"Shadow Temple T17" True
+"Shadow Temple T18" (Small_Key_Shadow_Temple, 4)
+"Shadow Temple T19" True
+"Shadow Temple T20" True
+"Shadow Temple T21" True
+"Shadow Temple T22" Boss_Key_Shadow_Temple
+"Shadow Temple T23" True
+
+Shadow Temple MQ
+
+"Shadow Temple T01" True
+"Shadow Temple T02" True
+"Shadow Temple T03" (Small_Key_Shadow_Temple, 6) 
+"Shadow Temple T04" True
+"Shadow Temple T05" (Small_Key_Shadow_Temple, 2)
+"Shadow Temple T06" True
+"Shadow Temple T07" True
+"Shadow Temple T08" True
+"Shadow Temple T09" (Small_Key_Shadow_Temple, 3)
+"Shadow Temple T10" (Small_Key_Shadow_Temple, 4)
+"Shadow Temple T11" True
+"Shadow Temple T12" True
+"Shadow Temple T13" (Small_Key_Shadow_Temple, 6)
+"Shadow Temple T14" True
+"Shadow Temple T15" True
+"Shadow Temple T16" True
+"Shadow Temple T17" True
+"Shadow Temple T18" (Small_Key_Shadow_Temple, 5)
+"Shadow Temple T19" True
+"Shadow Temple T20" True
+"Shadow Temple T21" True
+"Shadow Temple T22" Boss_Key_Shadow_Temple
+"Shadow Temple T23" True
+
+Bottom of the Well
+
+"Bottom of the Well T01" True
+"Bottom of the Well T02" True
+"Bottom of the Well T03" (Small_Key_Bottom_of_the_Well, 3)
+"Bottom of the Well T04" (Small_Key_Bottom_of_the_Well, 3)
+"Bottom of the Well T05" (Small_Key_Bottom_of_the_Well, 3)
+"Bottom of the Well T06" True
+"Bottom of the Well T07" True
+"Bottom of the Well T08" True
+"Bottom of the Well T09" True
+"Bottom of the Well T10" True
+"Bottom of the Well T11" True
+"Bottom of the Well T12" True
+"Bottom of the Well T13" True
+"Bottom of the Well T14" True
+"Bottom of the Well T15" True
+
+Bottom of the Well MQ
+
+"Bottom of the Well T01" True
+"Bottom of the Well T02" (Small_Key_Bottom_of_the_Well, 2)
+"Bottom of the Well T03" True
+"Bottom of the Well T04" True
+"Bottom of the Well T05" True
+"Bottom of the Well T06" (Small_Key_Bottom_of_the_Well, 2)
+"Bottom of the Well T07" True
+"Bottom of the Well T08" True
+"Bottom of the Well T09" True
+"Bottom of the Well T10" True
+"Bottom of the Well T11" True
+"Bottom of the Well T12" True
+"Bottom of the Well T13" True
+"Bottom of the Well T14" True
+"Bottom of the Well T15" True
+
+Ice Cavern
+
+"Ice Cavern T01" True
+"Ice Cavern T02" True
+"Ice Cavern T03" True
+"Ice Cavern T04" True
+"Ice Cavern T05" True
+"Ice Cavern T06" True
+"Ice Cavern T07" True
+"Ice Cavern T08" True
+"Ice Cavern T09" True
+"Ice Cavern T10" True
+"Ice Cavern T11" True
+"Ice Cavern T12" True
+
+Ice Cavern MQ
+
+"Ice Cavern T01" True
+"Ice Cavern T02" True
+"Ice Cavern T03" True
+"Ice Cavern T04" True
+"Ice Cavern T05" True
+"Ice Cavern T06" True
+"Ice Cavern T07" True
+"Ice Cavern T08" True
+"Ice Cavern T09" True
+"Ice Cavern T10" True
+"Ice Cavern T11" True
+"Ice Cavern T12" True
+
+Gerudo Training Ground
+
+"Gerudo Training Ground T01" True
+"Gerudo Training Ground T02" True
+"Gerudo Training Ground T03" True
+"Gerudo Training Ground T04" True
+"Gerudo Training Ground T05" True
+"Gerudo Training Ground T06" True
+"Gerudo Training Ground T07" True
+"Gerudo Training Ground T08" True
+"Gerudo Training Ground T09" True
+"Gerudo Training Ground T10" True
+"Gerudo Training Ground T11" True
+"Gerudo Training Ground T12" True
+"Gerudo Training Ground T13" True
+"Gerudo Training Ground T14" (Small_Key_Gerudo_Training_Grounds, 4)
+"Gerudo Training Ground T15" (Small_Key_Gerudo_Training_Grounds, 3)
+"Gerudo Training Ground T16" (Small_Key_Gerudo_Training_Grounds, 9)
+"Gerudo Training Ground T17" (Small_Key_Gerudo_Training_Grounds, 9)
+"Gerudo Training Ground T18" (Small_Key_Gerudo_Training_Grounds, 5)
+"Gerudo Training Ground T19" (Small_Key_Gerudo_Training_Grounds, 6)
+"Gerudo Training Ground T20" (Small_Key_Gerudo_Training_Grounds, 7)
+"Gerudo Training Ground T21" (Small_Key_Gerudo_Training_Grounds, 8)
+"Gerudo Training Ground T22" (Small_Key_Gerudo_Training_Grounds, 9)
+
+Gerudo Training Ground MQ
+
+"Gerudo Training Ground T01" True
+"Gerudo Training Ground T02" True
+"Gerudo Training Ground T03" True
+"Gerudo Training Ground T04" True
+"Gerudo Training Ground T05" True
+"Gerudo Training Ground T06" True
+"Gerudo Training Ground T07" True
+"Gerudo Training Ground T08" True
+"Gerudo Training Ground T09" True
+"Gerudo Training Ground T10" True
+"Gerudo Training Ground T11" True
+"Gerudo Training Ground T12" True
+"Gerudo Training Ground T13" True
+"Gerudo Training Ground T14" True
+"Gerudo Training Ground T15" True
+"Gerudo Training Ground T16" True
+"Gerudo Training Ground T17" True
+"Gerudo Training Ground T18" True
+"Gerudo Training Ground T19" True
+"Gerudo Training Ground T20" (Small_Key_Gerudo_Training_Grounds, 1)
+"Gerudo Training Ground T21" (Small_Key_Gerudo_Training_Grounds, 2)
+"Gerudo Training Ground T22" (Small_Key_Gerudo_Training_Grounds, 3)
+
+Inside Ganon's Castle
+
+"Ganons Castle T01" True
+"Ganons Castle T02" True
+"Ganons Castle T03" True
+"Ganons Castle T04" (Small_Key_Ganons_Castle, 1)
+"Ganons Castle T05" True
+"Ganons Castle T06" True
+"Ganons Castle T07" True
+"Ganons Castle T08" True
+"Ganons Castle T09" True
+"Ganons Castle T10" True
+"Ganons Castle T11" True
+"Ganons Castle T12" True
+"Ganons Castle T13" True
+"Ganons Castle T14" True
+"Ganons Castle T15" True
+"Ganons Castle T16" True
+"Ganons Castle T17" True
+"Ganons Castle T18" True
+"Ganons Castle T19" True
+"Ganons Castle T20" (Small_Key_Ganons_Castle, 2)
+"Ganons Castle T21" True
+
+Inside Ganon's Castle MQ
+
+"Ganons Castle T01" True
+"Ganons Castle T02" True
+"Ganons Castle T03" True
+"Ganons Castle T04" True
+"Ganons Castle T05" (Small_Key_Ganons_Castle, 3)
+"Ganons Castle T06" (Small_Key_Ganons_Castle, 3)
+"Ganons Castle T07" True
+"Ganons Castle T08" True
+"Ganons Castle T09" True
+"Ganons Castle T10" True
+"Ganons Castle T11" True
+"Ganons Castle T12" True
+"Ganons Castle T13" True
+"Ganons Castle T14" True
+"Ganons Castle T15" True
+"Ganons Castle T16" True
+"Ganons Castle T17" True
+"Ganons Castle T18" True
+"Ganons Castle T19" True
+"Ganons Castle T20" (Small_Key_Ganons_Castle, 2)
+"Ganons Castle T21" True
+
+Ganon's Tower
+
+"Ganons Tower T01" True
+"Ganons Tower T02" True
+"Ganons Tower T03" True
+"Ganons Tower T04" True
+"Ganons Tower T05" True
+"Ganons Tower T06" True
+"Ganons Tower T07" Boss_Key_Ganons_Castle
+"Ganons Tower T08" Boss_Key_Ganons_Castle
+"Ganons Tower T09" Boss_Key_Ganons_Castle

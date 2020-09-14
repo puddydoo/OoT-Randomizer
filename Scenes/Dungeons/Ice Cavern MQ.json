@@ -53,7 +53,8 @@
         },
         "exits": {
             "Ice Cavern Hall to Central Room": "transition('Ice Cavern T03', True)",
-            "Ice Cavern Central Room East": "Can break icicles",
+            "Ice Cavern Central Room East": "can_break_icicles or is_child",
+			#Child can roll through icicles
             "Ice Cavern Central Room West": "Blue_Fire",
             "Ice Cavern Central Room North": "can_climb(92) and Blue_Fire"
         }
@@ -63,7 +64,8 @@
         "dungeon": "Ice Cavern",
         "room": 03,
         "exits": {
-            "Ice Cavern Central Room": "Can break icicles",
+            "Ice Cavern Central Room": "can_break_icicles or is_child",
+			#Child can roll through icicles
             "Ice Cavern Side Room": "
                 ('Ice Cavern Room 03 Enemies' or barred_door)
                 and transition('Ice Cavern T10', True)"
@@ -183,7 +185,7 @@
             "Ice Cavern MQ Compass Chest": "can_climb(57)",
             "Ice Cavern MQ Freestanding PoH": "can_climb(57) and has_explosives",
             "Ice Cavern MQ GS Red Ice": "
-                can_climb(57) and can_play(Song_of_Time) and Blue_Fire and can kill skulltula"
+                can_climb(57) and can_play(Song_of_Time) and Blue_Fire and (is_adult or can_child_attack)"
             "Blue Fire": "can_climb(57) and has_bottle"
         },
         "exits": {
@@ -210,7 +212,7 @@
             "Ice Cavern MQ Map Chest": "
                 Blue_Fire and
                 (is_adult or can_use(Sticks) or Kokiri_Sword or can_use_projectile)",
-            "Blue Fire": "(is_child or is_adult) and has_bottle"
+            "Blue Fire": "(is_child or can_break_icicles) and has_bottle"
         },
         "exits": {
             "Ice Cavern Central Room East": "
