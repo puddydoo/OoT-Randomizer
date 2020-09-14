@@ -67,8 +67,8 @@
         "room": 01,
         "events": {
             "Spirit Temple Room 01 Rusted Switch": "
-			    ((Small_Key_Spirit_Temple, 7) or glitch_unknown) and can_use(Megaton_Hammer)"
-				#Adult doesn't need keys to get here if he can glitch through the crawlspace
+                ((Small_Key_Spirit_Temple, 7) or glitch_unknown) and can_use(Megaton_Hammer)"
+                #Adult doesn't need keys to get here if he can glitch through the crawlspace
         },
         "exits": {
             "Spirit Temple First Child Room": "is_child",
@@ -205,12 +205,12 @@
         },
         "locations": {
             "Spirit Temple MQ Child Climb North Chest": "
-			    (Small_Key_Spirit_Temple, 6) and 'Spirit Temple Room 04 Enemies'",
+                (Small_Key_Spirit_Temple, 6) and 'Spirit Temple Room 04 Enemies'",
             "Spirit Temple MQ Child Climb South Chest": "
                 ((Small_Key_Spirit_Temple, 7) or (glitch_unknown and (Small_Key_Spirit_Temple, 6))) and
-				(has_explosives or (mm_light_arrows and can_use(Light_Arrows))) and
+                (has_explosives or (mm_light_arrows and can_use(Light_Arrows))) and
                 (can_use(Hookshot) or can_climb(126))"
-			#If adult can glitch through the crawlspace in Room 3 then he can enter this room through either door
+            #If adult can glitch through the crawlspace in Room 3 then he can enter this room through either door
         },
         "exits": {
             "Spirit Temple Rock Light Room 1F": "is_adult or can_use_projectile or Kokiri_Sword or Sticks", #Crystal switch
@@ -223,13 +223,13 @@
         "room": 05,
         "events": {
             "Spirit Temple Statue Face": "mm_light_arrows and can_use(Light_Arrows)",
-			"Spirit Temple Room 05 Eye Switch": "
-            #Child
-				(can_use(Slingshot) 
-					and ((Small_Key_Spirit_Temple, 7) or shuffle_spirit_hands or glitch_hover)) or
-			#Adult
+            "Spirit Temple Room 05 Eye Switch": "
+             #Child
+                (can_use(Slingshot) 
+                    and ((Small_Key_Spirit_Temple, 7) or shuffle_spirit_hands or glitch_hover)) or
+             #Adult
                 can_use(Bow) or
-			#Both ages
+             #Both ages
                 (Bow and Slingshot)",
             "Spirit Temple Room 05 Frozen Eye": "
                 has_fire_source or
@@ -352,10 +352,10 @@
         "region_name": "Spirit Temple Shortcut Room",
         "dungeon": "Spirit Temple",
         "room": 06,
-		"events": {
+        "events": {
             "Spirit Temple Room 06 Eye Switch": "
                 ((Small_Key_Spirit_Temple, 7) or shuffle_spirit_hands or glitch_hover) and
-				can_use(Slingshot) and ('Spirit Temple Room 05 Frozen Eye' or 'Spirit Temple MQ Room 05 T24 Unbar')"
+                can_use(Slingshot) and ('Spirit Temple Room 05 Frozen Eye' or 'Spirit Temple MQ Room 05 T24 Unbar')"
         },
         "locations": {
             "Spirit Temple MQ Silver Block Hallway Chest": "'Spirit Temple Room 06 Eye Switch'"
@@ -451,7 +451,7 @@
             "Spirit Temple Exit to Right Hand": "True",
             "Desert Colossus": "True",
             "Spirit Temple Outdoor Left Hand": "
-			    'Spirit Temple Mirror Shield Chest Spawn' and can_use(Longshot)"
+                'Spirit Temple Mirror Shield Chest Spawn' and can_use(Longshot)"
         }
     },
     {
@@ -547,8 +547,8 @@
         },
         "locations": {
             "Spirit Temple MQ Beamos Room Chest": "
-			    ((Small_Key_Spirit_Temple, 5) or shuffle_spirit_hands or can_hover) and
-				'Spirit Temple Room 17 Enemies'"
+                ((Small_Key_Spirit_Temple, 5) or shuffle_spirit_hands or can_hover) and
+                'Spirit Temple Room 17 Enemies'"
         },
         "exits": {
             "Spirit Temple Eastern 3F Corridor": "
@@ -570,7 +570,7 @@
         },
         "locations": {
             "Spirit Temple MQ Chest Switch Chest": "
-				((Small_Key_Spirit_Temple, 5) or shuffle_spirit_hands or can_hover)"
+                ((Small_Key_Spirit_Temple, 5) or shuffle_spirit_hands or can_hover)"
         },
         "exits": {
             "Spirit Temple Adult Enemy Pit Room": "transition('Spirit Temple T19', True)",
@@ -632,7 +632,7 @@
         "time_passes": true,
         "events": {
             "Spirit Temple Mirror Shield Chest Spawn": "
-			    (Small_Key_Spirit_Temple, 5) or shuffle_spirit_hands or glitch_hover"
+                (Small_Key_Spirit_Temple, 5) or shuffle_spirit_hands or glitch_hover"
         },
         "locations": {
             "Spirit Temple Mirror Shield Chest": "'Spirit Temple Mirror Shield Chest Spawn'"
@@ -649,7 +649,7 @@
         "room": 21,
         "locations": {
             "Spirit Temple MQ Boss Key Chest": "
-				((Small_Key_Spirit_Temple, 5) or shuffle_spirit_hands or can_hover)"
+                ((Small_Key_Spirit_Temple, 5) or shuffle_spirit_hands or can_hover)"
         },
         "exits": {
             "Spirit Temple Funny Switch Room": "transition('Spirit Temple T16', True)"
@@ -719,7 +719,7 @@
         "room": 26,
         "events": {
             #Door rando warning: The mirrors are not a permanent flag.
-			#They are only usable if Link can go through T02 and then T33 without resetting the scene.
+            #They are only usable if Link can go through T02 and then T33 without resetting the scene.
             "Spirit Temple 4F Mirrors": "
                 can_use(Mirror_Shield)
                 or (mm_light_arrows and can_use(Light_Arrows))"

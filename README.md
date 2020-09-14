@@ -13,8 +13,8 @@ They pave way for such features as lock rando, door rando, hybridized Vanilla/MQ
 ### Logic helpers
 
 * I did not edit `LogicHelpers.json` but have used these in the files.
-* `transition()`: Represents doors and other room transitions in dungeons. The first argument is the name of the door (so it can check for key requirements) and the second is the conditions required to unbar it. If lock rando were to place a lock on a barred door then the "unbars" for both sides of the door would be applied.
-* Unbars: There are many "Unbar" conditions listed in Unbars.txt for each barred door in the dungeons, that if set to true, would allow going through that door without completing the normal requirements to unbar it (if the flag on the door is edited)
+* `transition()`: Represents doors and other room transitions in dungeons. The first argument is the name of the door (so it can check for key requirements) and the second is the conditions required to unbar it. If lock rando were to place a lock on a barred door then the "unbars" for both sides of the door would be applied. The key requirements are listed in `Door Requirements (Manual).txt`.
+* Unbars: There are many "Unbar" conditions listed in `Unbars.txt` for each barred door in the dungeons, that if set to true, would allow going through that door without completing the normal requirements to unbar it (if the flag on the door is edited)
 * `barred_door`: I put this as an alternate condition on barred doors (meant to be false) before labeling the individual transitions. It remains on certain barred doors which turned out not to be actual transition actors such as in Ice Cavern. I might remove it.
 * `can_break_icicles`: The ability to break icicles. I don't know exactly what it requires, though.
 * `can_climb()`: For every ledge that I could think to add it I counted the change in Link's Y coordinate and put it as a condition. I even included ledges that are too high for Link to ever climb. Why do this instead of just `is_adult` for those ledges that child cannot climb? Because the forms of Link in MM have different heights. Deku Link is very short and Fierce Deity Link is very tall. But I do not even know the exact heights or maximum climbing heights of any of the forms in OoT or MM. Also, in Glitched, ground jumps can be calculated into this because they allow Link to climb higher than normal.
@@ -30,6 +30,7 @@ They pave way for such features as lock rando, door rando, hybridized Vanilla/MQ
 * `can_jumpslash_except_kokiri`: I put this on one gold skulltula in Spirit Temple because I could jumpslash it with everything else but not Kokiri Sword. I'm not sure if this needs to be its own condition really.
 * `can_autojump`: It wasn't until after I wrote all this logic that I found out that Goron Link in fact cannot autojump. This condition is currently included only in Gerudo's Fortress. Technically this condition wouldn't be entirely meaningless without MM because the Kokiri Boots could be shuffled, but who would want to start with Iron or Hover Boots?
 * `autojump_climb`: Similar to can_climb but only applies to ledges that Link can climb onto from an autojump. This also requires `can_autojump` to be true. This is separate from `can_climb` because the former instead allows other forms of "jumping" like ground jumps. But except in Gerudo's Fortress, no instances of `can_climb` have been replaced with this yet.
+* `shuffle_spirit_hands`: Condition that logically allows the hands of Spirit Temple to be shuffled in ER. This is (I think fully) covered in vanilla spirit temple logic including glitched, but MQ is incomplete.
 
 ### Glitch conditions
 As part of an effort to integrate glitched logic with the regular logic, there must be conditions that enable certain glitches.
@@ -54,6 +55,7 @@ As part of an effort to integrate glitched logic with the regular logic, there m
 * Must implement manual key logic for Spirit Temple MQ (Already done for vanilla).
 * Dungeons have missing conditions that aren't completely filled out, mainly enemies. See "Missing Conditions" below.
 * All these conditions will slow down generation.
+* Every once in a while I find a formatting error or something from vanilla accidentally copied in MQ and there are probably some left in the ones I haven't revisited in a while.
 * Door rando, lock rando, and hybrid dungeons are not logically possible without either removing keys or rewriting key logic to be automatic. But until that ever happens, I am making a list of manual door requirements in `Door Requirements (Manual).txt` so that the `transition()` condition might work without those features.
 * Deku Tree MQ has requirements of using torch from outside the room. Though this might not matter without Door Rando.
 * Jabu-Jabu non-MQ requires bringing Ruto to the branching hallways room to open some doors, although this is not NRA because the randomizer uses a patch to keep her from going away after the boss.

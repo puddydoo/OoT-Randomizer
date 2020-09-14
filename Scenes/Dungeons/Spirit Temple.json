@@ -189,19 +189,19 @@
         "events": {
             "Spirit Temple Room 04 Crystal Switch": "
                 #If not for key logic, would just be can_use_projectile.
-            #Can hit switch at either age:
+             #Can hit switch at either age:
                 has_projectile(both) or
-            #Can enter room from hands and hit switch with no more than 1 key:
+             #Can enter room from hands and hit switch with no more than 1 key:
                 ((shuffle_spirit_hands or can_hover) and
                 at('Spirit Temple Central Chamber', can_use_projectile)) or
-            #Enter room as adult through the heavy block route:
+             #Enter room as adult through the heavy block route:
                 (((Small_Key_Spirit_Temple, 3) or 
                     ((Small_Key_Spirit_Temple, 2) and bombchus_in_logic and not shuffle_dungeon_entrances)) and 
                 ('Spirit Temple Room 00 Heavy Block' or
                     (glitch_spirit_block_hover_boots_skip and can_use(Hover_Boots)) or
                     (glitch_unk_spirit_block_adult_shield_skip and is_adult and can_shield)) and
                 has_projectile(adult)) or
-            #All keys collected so can hit switch without softlock:
+             #All keys collected so can hit switch without softlock:
                 ((Small_Key_Spirit_Temple, 5) and is_child and 
                     has_projectile(child))"
         },
@@ -210,19 +210,19 @@
             "Spirit Temple Child Climb East Chest": "'Spirit Temple Room 04 Crystal Switch'",
             "Spirit Temple GS Sun on Floor Room": "
                 #If not for key logic, would just need projectile, Din's Fire, or self-damaging jumpslash.
-            #Kill skulltula as either age:
+             #Kill skulltula as either age:
                 can_use(Dins_Fire) or has_projectile(both) or 
-            #Can enter room from hands and kill skulltula with no more than 1 key:
+             #Can enter room from hands and kill skulltula with no more than 1 key:
                 ((shuffle_spirit_hands or can_hover) and
                 (at('Spirit Temple Central Chamber', (can_use_projectile or
                     ((can_live_dmg(0.5) or Fairy or can_use(Nayrus_Love)) and is_adult))))) or
-            #Kill skulltula as child while taking damage:
+             #Kill skulltula as child while taking damage:
                 ((can_live_dmg(0.5) or Fairy or can_use(Nayrus_Love)) and 
                     (Sticks or Kokiri_Sword or has_projectile(child))) or
-            #If all keys collected, can kill skulltula as child without softlock:
+             #If all keys collected, can kill skulltula as child without softlock:
                 (is_child and 
                     (Small_Key_Spirit_Temple, 5) and has_projectile(child)) or
-            #Kill skulltula as adult after reaching central chamber through adult path:
+             #Kill skulltula as adult after reaching central chamber through adult path:
                 (((Small_Key_Spirit_Temple, 3) or 
                     ((Small_Key_Spirit_Temple, 2) and bombchus_in_logic and not shuffle_dungeon_entrances)) and 
                 ('Spirit Temple Room 00 Heavy Block' or
@@ -248,24 +248,24 @@
         },
         "locations": {
             "Spirit Temple Map Chest": "
-            #Can enter room from hands and light torches, bypassing key logic:
+             #Can enter room from hands and light torches, bypassing key logic:
                 ((shuffle_spirit_hands or can_hover) and
                 (has_fire_source_with_torch or (logic_spirit_map_chest and can_use(Bow)))) or
-            #Light torches as either child or adult:
+             #Light torches as either child or adult:
                 ((has_explosives or 'Spirit Temple Room 04 T25 Unbar' or (Small_Key_Spirit_Temple, 3) or ((Small_Key_Spirit_Temple, 2) and bombchus_in_logic and not shuffle_dungeon_entrances)) and 
                     (can_use(Dins_Fire) or
                         (((Magic_Meter and Fire_Arrows) or logic_spirit_map_chest) and Bow and Sticks))) or 
-            #Enter through child path and light torches with only sticks:
+             #Enter through child path and light torches with only sticks:
                 ((Small_Key_Spirit_Temple, 5) and (has_explosives or 'Spirit Temple Room 04 T25 Unbar') and 
                     can_use(Sticks)) or
-            #Enter through adult path and light torches:
+             #Enter through adult path and light torches:
                 ((Small_Key_Spirit_Temple, 3) and
                     (can_use(Fire_Arrows) or (logic_spirit_map_chest and Bow)) and 
                     ('Spirit Temple Room 00 Heavy Block' or
                         (glitch_spirit_block_hover_boots_skip and can_use(Hover_Boots)) or
                         (glitch_unk_spirit_block_adult_shield_skip and is_adult and can_shield)))",
             "Spirit Temple GS Lobby": "
-            #Obtainable from various regions, here with longshot from ground. 
+             #Obtainable from various regions, here with longshot from ground. 
                 can_use(Longshot) and (shuffle_spirit_hands or can_hover or
                 ((Small_Key_Spirit_Temple, 3) and
                     ('Spirit Temple Room 00 Heavy Block' or
@@ -298,14 +298,14 @@
         },
         "locations": {
             "Spirit Temple GS Lobby": "
-            #Bypass key logic by entering from hands
+             #Bypass key logic by entering from hands
                 ((shuffle_spirit_hands or can_hover) and (is_adult or can_child_attack)) or
-            #Both ages
+             #Both ages
                 ((has_explosives or 'Spirit Temple Room 04 T25 Unbar' or (Small_Key_Spirit_Temple, 3) or ((Small_Key_Spirit_Temple, 2) and bombchus_in_logic and not shuffle_dungeon_entrances)) and 
                     (is_adult and here(can_child_attack))) or
-            #Child
+             #Child
                 ((Small_Key_Spirit_Temple, 5) and (has_explosives or 'Spirit Temple Room 04 T25 Unbar') and can_child_attack) or
-            #Adult
+             #Adult
                 ((Small_Key_Spirit_Temple, 3) and is_adult and
                     ('Spirit Temple Room 00 Heavy Block' or
                     (glitch_spirit_block_hover_boots_skip and can_use(Hover_Boots)) or
@@ -328,15 +328,15 @@
         "locations": {
             "Spirit Temple Statue Room Hand Chest": "'Spirit Temple Room 05 Lullaby'",
             "Spirit Temple GS Lobby": "
-            #Bypass key logic by entering through hands
+             #Bypass key logic by entering through hands
                 ((shuffle_spirit_hands or can_hover)
                     and (can_use(Hookshot) or (logic_spirit_lobby_gs and can_use(Boomerang)))) or
-            #Both ages
+             #Both ages
                 ((has_explosives or 'Spirit Temple Room 04 T25 Unbar' or (Small_Key_Spirit_Temple, 3) or ((Small_Key_Spirit_Temple, 2) and bombchus_in_logic and not shuffle_dungeon_entrances)) and 
                     logic_spirit_lobby_gs and Boomerang and Progressive_Hookshot) or
-            #Child
+             #Child
                 (logic_spirit_lobby_gs and (Small_Key_Spirit_Temple, 5) and (has_explosives or 'Spirit Temple Room 04 T25 Unbar') and can_use(Boomerang)) or
-            #Adult
+             #Adult
                 ((Small_Key_Spirit_Temple, 3) and can_use(Hookshot) and
                     ('Spirit Temple Room 00 Heavy Block' or
                     (glitch_spirit_block_hover_boots_skip and can_use(Hover_Boots)) or
@@ -456,17 +456,17 @@
         "room": 08,
         "locations": {
             "Spirit Temple Sun Block Room Chest": "
-            #Can enter room from hands and light torches, bypassing key logic:
+             #Can enter room from hands and light torches, bypassing key logic:
                 ((shuffle_spirit_hands or can_hover) and
                 (has_fire_source_with_torch or (logic_spirit_sun_chest and can_use(Bow)))) or
-            #Light torches as either child or adult:
+             #Light torches as either child or adult:
                 ((has_explosives or 'Spirit Temple Room 04 T25 Unbar' or (Small_Key_Spirit_Temple, 3) or ((Small_Key_Spirit_Temple, 2) and bombchus_in_logic and not shuffle_dungeon_entrances)) and 
                     (can_use(Dins_Fire) or
                         (((Magic_Meter and Fire_Arrows) or logic_spirit_sun_chest) and Bow and Sticks))) or 
-            #Enter through child path and light torches with only sticks:
+             #Enter through child path and light torches with only sticks:
                 ((Small_Key_Spirit_Temple, 5) and (has_explosives or 'Spirit Temple Room 04 T25 Unbar') and 
                     can_use(Sticks)) or
-            #Enter through adult path and light torches:
+             #Enter through adult path and light torches:
                 ((Small_Key_Spirit_Temple, 3) and
                     (can_use(Fire_Arrows) or (logic_spirit_sun_chest and Bow)) and 
                     ('Spirit Temple Room 00 Heavy Block' or
@@ -489,15 +489,15 @@
         "room": 09,
         "locations": {
             "Spirit Temple GS Hall After Sun Block Room": "
-            #Bypass key logic by entering through hands (hovering also lets you use the bombs to get it)
+             #Bypass key logic by entering through hands (hovering also lets you use the bombs to get it)
                 (can_hover or (shuffle_spirit_hands and (can_use(Boomerang) or can_use(Hookshot)))) or
-            #Both ages
+             #Both ages
                 ((has_explosives or 'Spirit Temple Room 04 T25 Unbar') and
                     Boomerang and Progressive_Hookshot) or 
-            #Child
+             #Child
                 (can_use(Boomerang) and (Small_Key_Spirit_Temple, 5) and
                     (has_explosives or 'Spirit Temple Room 04 T25 Unbar')) or 
-            #Adult    
+             #Adult    
                 (can_use(Hookshot) and ('Spirit Temple Room 00 Heavy Block' or
                     (glitch_spirit_block_hover_boots_skip and can_use(Hover_Boots)) or
                     (glitch_unk_spirit_block_adult_shield_skip and is_adult and can_shield)) and 
@@ -605,14 +605,14 @@
         "events": {
             "Spirit Temple Room 15 Sun Switch Chests": "
                 #Chests have no requirements but event used for key logic
-            #Both ages with glitch but without being able to enter through the hands
-			#(IDK who would use these settings though)
+             #Both ages with glitch but without being able to enter through the hands
+             #(IDK who would use these settings though)
                 (glitch_spirit_statue_climb and not glitch_hover and
                 not shuffle_spirit_hands and can_jumpslash) or
-            #Entering through hands
+             #Entering through hands
                 ((shuffle_spirit_hands or can_hover) and
                     (Small_Key_Spirit_Temple, 2)) or
-            #Normal way (adult only)
+             #Normal way (adult only)
                 (Small_Key_Spirit_Temple, 3)"
         },
         "locations": {
@@ -818,7 +818,7 @@
         "events": {
             "Spirit Temple Room 25 Crystal Switch": "has_explosives",
             #Door rando warning: The mirrors are not a permanent flag.
-			#They are only usable if Link can go through T02 and then T33 without resetting the scene.
+            #They are only usable if Link can go through T02 and then T33 without resetting the scene.
             "Spirit Temple 4F Mirrors": "has_explosives"
         },
         "locations": {

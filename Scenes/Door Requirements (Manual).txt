@@ -401,7 +401,7 @@ Spirit Temple MQ
 "Spirit Temple T07" True
 "Spirit Temple T08" True
 "Spirit Temple T09" True
-"Spirit Temple T10" (First child room <-> rock light room)
+"Spirit Temple T10" #(First child room <-> rock light room)
 	((Small_Key_Spirit_Temple, 1) and not glitch_hover and not shuffle_spirit_hands) or
 	(Small_Key_Spirit_Temple, 7)
 	#Child normally enters Room 4 through here although the items inside cost more keys.
@@ -417,21 +417,21 @@ Spirit Temple MQ
 "Spirit Temple T18" True
 "Spirit Temple T19" True
 "Spirit Temple T20" True
-"Spirit Temple T21" (Central chamber <-> eastern 3F corridor)
+"Spirit Temple T21" #(Central chamber <-> eastern 3F corridor)
 	((Small_Key_Spirit_Temple, 4) and not glitch_hover and not shuffle_spirit_hands) or
 	((Small_Key_Spirit_Temple, 5) and not glitch_hover and at('Spirit Temple Eastern 3F Corridor', is_adult)) or
 	(Small_Key_Spirit_Temple, 7)
 	#4 is so Link can reach silver gauntlets. Otherwise Mirror Shield and the 3 items before it require 5
 	#T13 and T15 are inaccessible without shuffled hands or hovering, T05 is behind T21 as child without hovering
 	#If the player can waste a key on T13 or T15 as adult then this door is redundant
-"Spirit Temple T22" (Hall to child iron knuckle <-> child iron knuckle room)
+"Spirit Temple T22" #(Hall to child iron knuckle <-> child iron knuckle room)
 	((Small_Key_Spirit_Temple, 1) and (shuffle_spirit_hands or glitch_hover) and at('Spirit Temple Child Iron Knuckle Room'," True)) or
 	(Small_Key_Spirit_Temple, 7)
 	#With shuffled hands or hovering, all other doors cost too many keys so this can become a convenient entrance for child to use.
 	#At least I hope this works out. Maybe it might need more logic
 "Spirit Temple T23" True
 "Spirit Temple T24" True
-"Spirit Temple T25" (Rock light room <-> central chamber)
+"Spirit Temple T25" #(Rock light room <-> central chamber)
 	((Small_Key_Spirit_Temple, 2) and not glitch_hover and not shuffle_spirit_hands) or
 	((Small_Key_Spirit_Temple, 6) and at('Spirit Temple First Child Room Rear'," True)) or
 	(Small_Key_Spirit_Temple, 7)
