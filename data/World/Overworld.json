@@ -571,7 +571,9 @@
         "exits": {
             #All guards become friendly and no thieves respawn so nothing exits to this
             #OHKO does not require fairy because you die in the jail and continue there
-            "GF Jail": "True"
+            #Without hookshot you are sent to GV Fortress Side as adult and GV Lower Stream as child
+            #This is also NRA though
+            "GF Jail": "Progressive_Hookshot"
         }
     },
     {
@@ -830,7 +832,8 @@
             "GF Entrances Behind Crates": "True",
             "GF Guarded Roof": "True",
             "Thieves Hideout Kitchen Front": "Gerudo_Membership_Card or can_use(Bow) or logic_gerudo_kitchen",
-            "Thieves Hideout Kitchen Rear": "Gerudo_Membership_Card or can_use(Bow) or logic_gerudo_kitchen"
+            "Thieves Hideout Kitchen Rear": "Gerudo_Membership_Card or can_use(Bow) or logic_gerudo_kitchen",
+            "Thieves Hideout Red Jail": "True"
         }
     },
     {
@@ -843,7 +846,8 @@
             "Thieves Hideout Kitchen Rear": "
                 can_use(Hookshot) or can_use(Hover_Boots) or
                 Gerudo_Membership_Card or can_use(Bow) or logic_gerudo_kitchen",
-            "Thieves Hideout Kitchen Hallway": "Gerudo_Membership_Card or can_use(Bow) or logic_gerudo_kitchen"
+            "Thieves Hideout Kitchen Hallway": "Gerudo_Membership_Card or can_use(Bow) or logic_gerudo_kitchen",
+            "Thieves Hideout Red Jail": "True"
         }
     },
     {
@@ -856,7 +860,8 @@
             "Thieves Hideout Kitchen Front": "
                 can_use(Hookshot) or can_use(Hover_Boots) or
                 Gerudo_Membership_Card or can_use(Bow) or logic_gerudo_kitchen",
-            "Thieves Hideout Kitchen Hallway": "Gerudo_Membership_Card or can_use(Bow) or logic_gerudo_kitchen"
+            "Thieves Hideout Kitchen Hallway": "Gerudo_Membership_Card or can_use(Bow) or logic_gerudo_kitchen",
+            "Thieves Hideout Red Jail": "True"
         }
     },
     {
@@ -879,7 +884,8 @@
             "Thieves Hideout Gerudo Warrior": "
                 gerudo_fortress == 'normal' and
                 'TH North 1F Red Jail Carpenter' and 'TH South 1F Olive Jail Carpenter' and
-                'TH South 2F Blue Jail Carpenter' and 'TH North 2F Green Jail Carpenter'"
+                'TH South 2F Blue Jail Carpenter' and 'TH North 2F Green Jail Carpenter'",
+            "Thieves Hideout Red Jail": "True"
         }
     },
     {
@@ -902,7 +908,8 @@
             "Thieves Hideout Gerudo Warrior": "
                 gerudo_fortress == 'normal' and
                 'TH North 1F Red Jail Carpenter' and 'TH South 1F Olive Jail Carpenter' and
-                'TH South 2F Blue Jail Carpenter' and 'TH North 2F Green Jail Carpenter'"
+                'TH South 2F Blue Jail Carpenter' and 'TH North 2F Green Jail Carpenter'",
+            "Thieves Hideout Red Jail": "True"
         }
     },
     {
@@ -912,7 +919,8 @@
         "hint": "Thieves' Hideout",
         "exits": {
             "GF Hall to Balcony Entrance": "True",
-            "TH Hall to Balcony Upper": "can_use(Hookshot)"
+            "TH Hall to Balcony Upper": "can_use(Hookshot)",
+            "Thieves Hideout Red Jail": "True"
         }
     },
     {
@@ -922,7 +930,8 @@
         "hint": "Thieves' Hideout",
         "exits": {
             "TH Hall to Balcony Lower": "can_use(Hookshot)",
-            "GF Balcony": "True"
+            "GF Balcony": "True",
+            "Thieves Hideout Red Jail": "True"
         }
     },
     {
@@ -944,7 +953,8 @@
             "Thieves Hideout Gerudo Warrior": "
                 gerudo_fortress == 'normal' and
                 'TH North 1F Red Jail Carpenter' and 'TH South 1F Olive Jail Carpenter' and
-                'TH South 2F Blue Jail Carpenter' and 'TH North 2F Green Jail Carpenter'"
+                'TH South 2F Blue Jail Carpenter' and 'TH North 2F Green Jail Carpenter'",
+            "Thieves Hideout Red Jail": "True"
         }
     },
     {
