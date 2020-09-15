@@ -2262,6 +2262,9 @@ setting_infos = [
         gui_text       = 'Shuffle Thieves\' Hideout Entrances',
         gui_tooltip    = '''\
             Shuffle the pool of entrances to Thieves' Hideout.
+            
+            Note that savewarping in any room of Thieves' Hideout
+            always takes you to the first room (with the red flag).
         ''',
         default        = False,
         shared         = True,
