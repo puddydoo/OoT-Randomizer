@@ -98,31 +98,31 @@ entrance_shuffle_table = [
     ('Dungeon',         ('Gerudo Fortress -> Gerudo Training Grounds Lobby',                { 'index': 0x0008 }),
                         ('Gerudo Training Grounds Lobby -> Gerudo Fortress',                { 'index': 0x03A8 })),
                         
-    ('Fortress',        ('Gerudo Fortress -> TH Red Jail Exit 1',                           { 'index': 0x0486 }),
+    ('Hideout',         ('Gerudo Fortress -> TH Red Jail Exit 1',                           { 'index': 0x0486 }),
                         ('TH Red Jail Exit 1 -> Gerudo Fortress',                           { 'index': 0x0231 })),
-    ('Fortress',        ('GF Entrances Behind Crates -> TH Red Jail Exit 2',                { 'index': 0x048A }),
+    ('Hideout',         ('GF Entrances Behind Crates -> TH Red Jail Exit 2',                { 'index': 0x048A }),
                         ('TH Red Jail Exit 2 -> GF Entrances Behind Crates',                { 'index': 0x0235 })),
-    ('Fortress',        ('GF Entrances Behind Crates -> TH Kitchen Exit 3',                 { 'index': 0x048E }),
+    ('Hideout',         ('GF Entrances Behind Crates -> TH Kitchen Exit 3',                 { 'index': 0x048E }),
                         ('TH Kitchen Exit 3 -> GF Entrances Behind Crates',                 { 'index': 0x0239 })),
-    ('Fortress',        ('GF Guarded Roof -> TH Kitchen Exit 4',                            { 'index': 0x0492 }),
+    ('Hideout',         ('GF Guarded Roof -> TH Kitchen Exit 4',                            { 'index': 0x0492 }),
                         ('TH Kitchen Exit 4 -> GF Guarded Roof',                            { 'index': 0x02AA })),
-    ('Fortress',        ('Gerudo Fortress -> TH Olive Jail Exit 5',                         { 'index': 0x0496 }),
+    ('Hideout',         ('Gerudo Fortress -> TH Olive Jail Exit 5',                         { 'index': 0x0496 }),
                         ('TH Olive Jail Exit 5 -> Gerudo Fortress',                         { 'index': 0x02BA })),
-    ('Fortress',        ('GF Roof Entrance Cluster -> TH Olive Jail Exit 6',                { 'index': 0x049A }),
+    ('Hideout',         ('GF Roof Entrance Cluster -> TH Olive Jail Exit 6',                { 'index': 0x049A }),
                         ('TH Olive Jail Exit 6 -> GF Roof Entrance Cluster',                { 'index': 0x02BE })),
-    ('Fortress',        ('GF Guarded Roof -> TH Blue Jail Exit 7',                          { 'index': 0x049E }),
+    ('Hideout',         ('GF Guarded Roof -> TH Blue Jail Exit 7',                          { 'index': 0x049E }),
                         ('TH Blue Jail Exit 7 -> GF Guarded Roof',                          { 'index': 0x02C2 })),
-    ('Fortress',        ('GF Roof Entrance Cluster -> TH Blue Jail Exit 8',                 { 'index': 0x04A2 }),
+    ('Hideout',         ('GF Roof Entrance Cluster -> TH Blue Jail Exit 8',                 { 'index': 0x04A2 }),
                         ('TH Blue Jail Exit 8 -> GF Roof Entrance Cluster',                 { 'index': 0x02C6 })),
-    ('Fortress',        ('GF Roof Entrance Cluster -> TH Kitchen Exit 9',                   { 'index': 0x04A6 }),
+    ('Hideout',         ('GF Roof Entrance Cluster -> TH Kitchen Exit 9',                   { 'index': 0x04A6 }),
                         ('TH Kitchen Exit 9 -> GF Roof Entrance Cluster',                   { 'index': 0x02D2 })),
-    ('Fortress',        ('GF Kitchen Roof Access -> TH Kitchen Exit 10',                    { 'index': 0x04AA }),
+    ('Hideout',         ('GF Kitchen Roof Access -> TH Kitchen Exit 10',                    { 'index': 0x04AA }),
                         ('TH Kitchen Exit 10 -> GF Kitchen Roof Access',                    { 'index': 0x02D6 })),
-    ('Fortress',        ('GF Hall to Balcony Entrance -> TH Hall to Balcony Exit 11',       { 'index': 0x04AE }),
+    ('Hideout',         ('GF Hall to Balcony Entrance -> TH Hall to Balcony Exit 11',       { 'index': 0x04AE }),
                         ('TH Hall to Balcony Exit 11 -> GF Hall to Balcony Entrance',       { 'index': 0x02DA })),
-    ('Fortress',        ('GF Balcony -> TH Hall to Balcony Exit 12',                        { 'index': 0x04B2 }),
+    ('Hideout',         ('GF Balcony -> TH Hall to Balcony Exit 12',                        { 'index': 0x04B2 }),
                         ('TH Hall to Balcony Exit 12 -> GF Balcony',                        { 'index': 0x02DE })),
-    ('Fortress',        ('GF Green Jail Exterior -> TH Green Jail Exit 13',                 { 'index': 0x0570 }),
+    ('Hideout',         ('GF Green Jail Exterior -> TH Green Jail Exit 13',                 { 'index': 0x0570 }),
                         ('TH Green Jail Exit 13 -> GF Green Jail Exterior',                 { 'index': 0x03A4 })),
 
     ('Interior',        ('Kokiri Forest -> KF Midos House',                                 { 'index': 0x0433 }),
@@ -419,6 +419,11 @@ def shuffle_random_entrances(worlds):
             if worlds[0].decouple_entrances:
                 entrance_pools['InteriorReverse'] = [entrance.reverse for entrance in entrance_pools['Interior']]
 
+        if worlds[0].shuffle_hideout_entrances:
+            entrance_pools['Hideout'] = world.get_shufflable_entrances(type='Hideout', only_primary=True)
+            if worlds[0].decouple_entrances:
+                entrance_pools['HideoutReverse'] = [entrance.reverse for entrance in entrance_pools['Hideout']]
+        
         if worlds[0].shuffle_grotto_entrances:
             entrance_pools['GrottoGrave'] = world.get_shufflable_entrances(type='Grotto', only_primary=True)
             entrance_pools['GrottoGrave'] += world.get_shufflable_entrances(type='Grave', only_primary=True)

@@ -535,7 +535,7 @@
                 is_child or can_ride_epona or can_use(Longshot) or
                 gerudo_fortress == 'open' or can_finish_GerudoFortress",
             "GV Carpenter Tent": "is_adult", # Invisible as child so not in logic
-            "GV Storms Grotto": "is_adult and can_open_storm_grotto" # Not there as child
+            "GV Storms Grotto": "is_adult and can_open_storm_grotto" # Future only/Not there as child
         }
     },
     {
@@ -670,7 +670,8 @@
             "GF Roof Entrance Cluster": "True",
             "GF Empty Roof": "False", #can_climb(181)
             "GF Kitchen Roof Access": "False", #can_climb(181)
-            "GF Chest Roof": "False" #can_climb(389)
+            "GF Chest Roof": "False", #can_climb(389)
+            "GF Roof Gold Skulltula": "is_adult and can_use(Longshot) and at_night" #Future only
         }
     },
     {
@@ -686,7 +687,8 @@
             "GF Roof Entrance Cluster": "True",
             "GF Chest Roof": "can_use(Distant_Scarecrow)",
                 #or (can_climb(208) and (can_autojump or can_use(Hover_Boots)))
-            "GF Southeast Roof": "False" #can_climb(251)
+            "GF Southeast Roof": "False", #can_climb(251)
+            "GF Roof Gold Skulltula": "is_adult and (can_use(Hookshot) or can_use(Boomerang)) and at_night" #Future only
         }
     },
     {
@@ -702,7 +704,8 @@
             "Gerudo Fortress": "True",
             "GF Chest Roof": "can_use(Distant_Scarecrow)", #or can_climb(208)
             "GF Jail": "can_use(Longshot)",
-            "GF Balcony": "False"
+            "GF Balcony": "False",
+            "GF Roof Gold Skulltula": "is_adult and can_use(Longshot) and at_night" #Future only
         }
     },
     {
@@ -721,9 +724,6 @@
         "scene": "Gerudo Fortress",
         #"room": 00,
         "hint": "Gerudo's Fortress",
-        "locations": {
-            "GF GS Top Floor": "is_adult and at_night"
-        },
         "exits": {
             "GF Chest Roof": "
                 can_use(Hover_Boots) or can_use(Scarecrow) or can_use(Longshot)", #or can_climb(208)
@@ -731,7 +731,8 @@
             "GF Kitchen Roof Access": "True",
             "GF Roof Entrance Cluster": "True",
             "GF Guarded Roof": "True",
-            "Gerudo Fortress": "True"
+            "Gerudo Fortress": "True",
+            "GF Roof Gold Skulltula": "is_adult and at_night" #Future only
         }
     },
     {
@@ -740,8 +741,7 @@
         #"room": 00,
         "hint": "Gerudo's Fortress",
         "locations": {
-            "GF Chest": "True",
-            "GF GS Top Floor": "is_adult and at_night"
+            "GF Chest": "True"
         },
         "exits": {
             "GF Green Jail Exterior": "True",
@@ -749,7 +749,17 @@
             "GF Kitchen Roof Access": "True",
             "GF Empty Roof": "True",
             "GF Roof Entrance Cluster": "True",
-            "GF Balcony": "False"
+            "GF Balcony": "False",
+            "GF Roof Gold Skulltula": "is_adult and at_night" #Future only
+        }
+    },
+    {
+        "region_name": "GF Roof Gold Skulltula",
+        "scene": "Gerudo Fortress",
+        #"room": 00,
+        "hint": "Gerudo's Fortress",
+        "locations": {
+            "GF GS Top Floor": "True"
         }
     },
     {
@@ -779,6 +789,14 @@
         }
     },
     {
+        "region_name": "Thieves Hideout Gerudo Warrior",
+        "scene": "Thieves Hideout",
+        "hint": "Thieves' Hideout",
+        "locations": {
+            "TH Gerudo Membership Card": "True"
+        }
+    },
+    {
         "region_name": "TH Red Jail Exit 1",
         "scene": "Thieves Hideout",
         #"room": 02,
@@ -799,16 +817,16 @@
                     or (gerudo_fortress == 'fast' and Small_Key_Thieves_Hideout)"
         },
         "locations": {
-            "TH North 1F Red Jail Gerudo": "is_adult or Kokiri_Sword",
-            "TH Gerudo Membership Card": "
+            "TH North 1F Red Jail Gerudo": "is_adult or Kokiri_Sword"
+        },
+        "exits": {
+            "TH Red Jail Exit 1": "True",
+            "TH Red Jail Exit 2": "True",
+            "Thieves Hideout Gerudo Warrior": "
                 (gerudo_fortress == 'normal' and 
                 'TH North 1F Red Jail Carpenter' and 'TH South 1F Olive Jail Carpenter'
                 and 'TH South 2F Blue Jail Carpenter' and 'TH North 2F Green Jail Carpenter')
                     or (gerudo_fortress == 'fast' and 'TH North 1F Red Jail Carpenter')"
-        },
-        "exits": {
-            "TH Red Jail Exit 1": "True",
-            "TH Red Jail Exit 2": "True"
         }
     },
     {
@@ -897,15 +915,15 @@
                 (gerudo_fortress == 'normal' and (Small_Key_Thieves_Hideout, 4))"
         },
         "locations": {
-            "TH South 1F Olive Jail Gerudo": "is_adult or Kokiri_Sword",
-            "TH Gerudo Membership Card": "
-                gerudo_fortress == 'normal' and
-                'TH North 1F Red Jail Carpenter' and 'TH South 1F Olive Jail Carpenter' and
-                'TH South 2F Blue Jail Carpenter' and 'TH North 2F Green Jail Carpenter'"
+            "TH South 1F Olive Jail Gerudo": "is_adult or Kokiri_Sword"
         },
         "exits": {
             "TH Olive Jail Exit 5": "True",
-            "TH Olive Jail Exit 6": "True"
+            "TH Olive Jail Exit 6": "True",
+            "Thieves Hideout Gerudo Warrior": "
+                gerudo_fortress == 'normal' and
+                'TH North 1F Red Jail Carpenter' and 'TH South 1F Olive Jail Carpenter' and
+                'TH South 2F Blue Jail Carpenter' and 'TH North 2F Green Jail Carpenter'"
         }
     },
     {
@@ -938,15 +956,15 @@
                 (gerudo_fortress == 'normal' and (Small_Key_Thieves_Hideout, 4))"
         },
         "locations": {
-            "TH South 2F Blue Jail Gerudo": "is_adult or Kokiri_Sword",
-            "TH Gerudo Membership Card": "
-                gerudo_fortress == 'normal' and
-                'TH North 1F Red Jail Carpenter' and 'TH South 1F Olive Jail Carpenter' and
-                'TH South 2F Blue Jail Carpenter' and 'TH North 2F Green Jail Carpenter'"
+            "TH South 2F Blue Jail Gerudo": "is_adult or Kokiri_Sword"
         },
         "exits": {
             "TH Blue Jail Exit 7": "True",
-            "TH Blue Jail Exit 8": "True"
+            "TH Blue Jail Exit 8": "True",
+            "Thieves Hideout Gerudo Warrior": "
+                gerudo_fortress == 'normal' and
+                'TH North 1F Red Jail Carpenter' and 'TH South 1F Olive Jail Carpenter' and
+                'TH South 2F Blue Jail Carpenter' and 'TH North 2F Green Jail Carpenter'"
         }
     },
     {
@@ -1009,14 +1027,14 @@
                 (gerudo_fortress == 'normal' and (Small_Key_Thieves_Hideout, 4))"
         },
         "locations": {
-            "TH North 2F Green Jail Gerudo": "is_adult or Kokiri_Sword",
-            "TH Gerudo Membership Card": "
+            "TH North 2F Green Jail Gerudo": "is_adult or Kokiri_Sword"
+        },
+        "exits": {
+            "TH Green Jail Exit 13": "True",
+            "Thieves Hideout Gerudo Warrior": "
                 gerudo_fortress == 'normal' and
                 'TH North 1F Red Jail Carpenter' and 'TH South 1F Olive Jail Carpenter' and
                 'TH South 2F Blue Jail Carpenter' and 'TH North 2F Green Jail Carpenter'"
-        },
-        "exits": {
-            "TH Green Jail Exit 13": "True"
         }
     },
     {

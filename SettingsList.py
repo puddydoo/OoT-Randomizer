@@ -1513,7 +1513,7 @@ setting_infos = [
         disable        = {
             True : {
                 'sections' : ['various_section', 'shuffle_section', 'shuffle_dungeon_section'],
-                'settings': ['starting_age', 'shuffle_interior_entrances', 'shuffle_grotto_entrances', 'shuffle_dungeon_entrances', 'shuffle_overworld_entrances', 'mix_entrance_pools', 'decouple_entrances', 'owl_drops', 'warp_songs', 'spawn_positions'],
+                'settings': ['starting_age', 'shuffle_interior_entrances', 'shuffle_grotto_entrances', 'shuffle_dungeon_entrances', 'shuffle_overworld_entrances', 'shuffle_hideout_entrances', 'mix_entrance_pools', 'decouple_entrances', 'owl_drops', 'warp_songs', 'spawn_positions'],
             }
         },
         shared         = True,
@@ -1657,7 +1657,7 @@ setting_infos = [
         choices        = {
             'open':       'Always Open',
             'vanilla':    'Vanilla Requirements',
-            'stones':	  'All Spiritual Stones',
+            'stones':     'All Spiritual Stones',
             'medallions': 'All Medallions',
             'dungeons':   'All Dungeons',
             'tokens':     'Gold Skulltula Tokens'
@@ -1773,7 +1773,7 @@ setting_infos = [
             considered available. MAY BE IMPOSSIBLE TO BEAT.
         ''',
         disable        = {
-            'glitched'  : {'settings' : ['allowed_tricks', 'mq_dungeons_random', 'mq_dungeons', 'shuffle_interior_entrances', 'shuffle_grotto_entrances', 'shuffle_dungeon_entrances', 'shuffle_overworld_entrances', 'mix_entrance_pools', 'decouple_entrances', 'owl_drops', 'warp_songs', 'spawn_positions']},
+            'glitched'  : {'settings' : ['allowed_tricks', 'mq_dungeons_random', 'mq_dungeons', 'shuffle_interior_entrances', 'shuffle_grotto_entrances', 'shuffle_dungeon_entrances', 'shuffle_overworld_entrances', 'shuffle_hideout_entrances', 'mix_entrance_pools', 'decouple_entrances', 'owl_drops', 'warp_songs', 'spawn_positions']},
             'none'      : {'tabs'     : ['detailed_tab']},
         },
         shared         = True,
@@ -2250,6 +2250,18 @@ setting_infos = [
             Just like when shuffling interior entrances, shuffling overworld 
             entrances disables trade timers and trade items never revert, 
             even when dying or loading a save.
+        ''',
+        default        = False,
+        shared         = True,
+        gui_params     = {
+            'randomize_key': 'randomize_settings',
+        },
+    ), 
+    Checkbutton(
+        name           = 'shuffle_hideout_entrances',
+        gui_text       = 'Shuffle Thieves\' Hideout Entrances',
+        gui_tooltip    = '''\
+            Shuffle the pool of entrances to Thieves' Hideout.
         ''',
         default        = False,
         shared         = True,
