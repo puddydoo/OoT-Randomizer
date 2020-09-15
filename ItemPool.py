@@ -1047,31 +1047,31 @@ def get_pool_core(world):
         pool.extend(['Ice Trap'] * 4)
 
     if world.gerudo_fortress == 'open':
-        placed_items['TH North 1F Red Jail Gerudo'] = 'Recovery Heart'
-        placed_items['TH North 2F Green Jail Gerudo'] = 'Recovery Heart'
-        placed_items['TH South 1F Olive Jail Gerudo'] = 'Recovery Heart'
-        placed_items['TH South 2F Blue Jail Gerudo'] = 'Recovery Heart'
+        placed_items['TH North 1F Red Jail Gerudo Key'] = 'Recovery Heart'
+        placed_items['TH North 2F Green Jail Gerudo Key'] = 'Recovery Heart'
+        placed_items['TH South 1F Olive Jail Gerudo Key'] = 'Recovery Heart'
+        placed_items['TH South 2F Blue Jail Gerudo Key'] = 'Recovery Heart'
     elif world.shuffle_smallkeys == 'keysanity':
         if world.gerudo_fortress == 'fast':
             pool.append('Small Key (Thieves Hideout)')
-            placed_items['TH North 2F Green Jail Gerudo'] = 'Recovery Heart'
-            placed_items['TH South 1F Olive Jail Gerudo'] = 'Recovery Heart'
-            placed_items['TH South 2F Blue Jail Gerudo'] = 'Recovery Heart'
+            placed_items['TH North 2F Green Jail Gerudo Key'] = 'Recovery Heart'
+            placed_items['TH South 1F Olive Jail Gerudo Key'] = 'Recovery Heart'
+            placed_items['TH South 2F Blue Jail Gerudo Key'] = 'Recovery Heart'
         else:
             pool.extend(['Small Key (Thieves Hideout)'] * 4)
         if world.item_pool_value == 'plentiful':
             pending_junk_pool.append('Small Key (Thieves Hideout)')
     else:
         if world.gerudo_fortress == 'fast':
-            placed_items['TH North 1F Red Jail Gerudo'] = 'Small Key (Thieves Hideout)'
-            placed_items['TH North 2F Green Jail Gerudo'] = 'Recovery Heart'
-            placed_items['TH South 1F Olive Jail Gerudo'] = 'Recovery Heart'
-            placed_items['TH South 2F Blue Jail Gerudo'] = 'Recovery Heart'
+            placed_items['TH North 1F Red Jail Gerudo Key'] = 'Small Key (Thieves Hideout)'
+            placed_items['TH North 2F Green Jail Gerudo Key'] = 'Recovery Heart'
+            placed_items['TH South 1F Olive Jail Gerudo Key'] = 'Recovery Heart'
+            placed_items['TH South 2F Blue Jail Gerudo Key'] = 'Recovery Heart'
         else:
-            placed_items['TH North 1F Red Jail Gerudo'] = 'Small Key (Thieves Hideout)'
-            placed_items['TH North 2F Green Jail Gerudo'] = 'Small Key (Thieves Hideout)'
-            placed_items['TH South 1F Olive Jail Gerudo'] = 'Small Key (Thieves Hideout)'
-            placed_items['TH South 2F Blue Jail Gerudo'] = 'Small Key (Thieves Hideout)'
+            placed_items['TH North 1F Red Jail Gerudo Key'] = 'Small Key (Thieves Hideout)'
+            placed_items['TH North 2F Green Jail Gerudo Key'] = 'Small Key (Thieves Hideout)'
+            placed_items['TH South 1F Olive Jail Gerudo Key'] = 'Small Key (Thieves Hideout)'
+            placed_items['TH South 2F Blue Jail Gerudo Key'] = 'Small Key (Thieves Hideout)'
 
     if world.shuffle_gerudo_card and world.gerudo_fortress != 'open':
         pool.append('Gerudo Membership Card')

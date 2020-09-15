@@ -812,12 +812,14 @@
         #"room": 02,
         "hint": "Thieves' Hideout",
         "events": {
+            "TH North 1F Red Jail Gerudo": "is_adult or Kokiri_Sword",
             "TH North 1F Red Jail Carpenter": "
-                (gerudo_fortress == 'normal' and (Small_Key_Thieves_Hideout, 4))
-                    or (gerudo_fortress == 'fast' and Small_Key_Thieves_Hideout)"
+                'TH North 1F Red Jail Gerudo' and
+                ((gerudo_fortress == 'normal' and (Small_Key_Thieves_Hideout, 4))
+                    or (gerudo_fortress == 'fast' and Small_Key_Thieves_Hideout))"
         },
         "locations": {
-            "TH North 1F Red Jail Gerudo": "is_adult or Kokiri_Sword"
+            "TH North 1F Red Jail Gerudo Key": "'TH North 1F Red Jail Gerudo'"
         },
         "exits": {
             "TH Red Jail Exit 1": "True",
@@ -911,11 +913,13 @@
         #"room": 04,
         "hint": "Thieves' Hideout",
         "events": {
+            "TH South 1F Olive Jail Gerudo": "is_adult or Kokiri_Sword",
             "TH South 1F Olive Jail Carpenter": "
+                'TH South 1F Olive Jail Gerudo' and
                 (gerudo_fortress == 'normal' and (Small_Key_Thieves_Hideout, 4))"
         },
         "locations": {
-            "TH South 1F Olive Jail Gerudo": "is_adult or Kokiri_Sword"
+            "TH South 1F Olive Jail Gerudo Key": "'TH South 1F Olive Jail Gerudo'"
         },
         "exits": {
             "TH Olive Jail Exit 5": "True",
@@ -952,11 +956,13 @@
         #"room": 05,
         "hint": "Thieves' Hideout",
         "events": {
+            "TH South 2F Blue Jail Gerudo": "is_adult or Kokiri_Sword",
             "TH South 2F Blue Jail Carpenter": "
+                'TH South 2F Blue Jail Gerudo' and
                 (gerudo_fortress == 'normal' and (Small_Key_Thieves_Hideout, 4))"
         },
         "locations": {
-            "TH South 2F Blue Jail Gerudo": "is_adult or Kokiri_Sword"
+            "TH South 2F Blue Jail Gerudo Key": "'TH South 2F Blue Jail Gerudo'"
         },
         "exits": {
             "TH Blue Jail Exit 7": "True",
@@ -1023,11 +1029,13 @@
         #"room": 01,
         "hint": "Thieves' Hideout",
         "events": {
+            "TH North 2F Green Jail Gerudo": "is_adult or Kokiri_Sword",
             "TH North 2F Green Jail Carpenter": "
+                'TH North 2F Green Jail Gerudo' and
                 (gerudo_fortress == 'normal' and (Small_Key_Thieves_Hideout, 4))"
         },
         "locations": {
-            "TH North 2F Green Jail Gerudo": "is_adult or Kokiri_Sword"
+            "TH North 2F Green Jail Gerudo Key": "'TH North 2F Green Jail Gerudo'"
         },
         "exits": {
             "TH Green Jail Exit 13": "True",
