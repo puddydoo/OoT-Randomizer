@@ -1,0 +1,6 @@
+Setup 1
+	{ ACTOR_EN_ISHI, 1222, -1218, 3953, 0, 0, 0, 0x0200 }, //0x000001DC 
+Setup 2
+	{ ACTOR_EN_ISHI, 1222, -1218, 3953, 0, 0, 0, 0x0700 }, //0x00000760
+
+Just a small rock.

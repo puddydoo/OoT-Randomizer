@@ -229,7 +229,7 @@
         "events": {
             "Bongo Bongo": "
                 "
-        }
+        },
         "locations": {
             "Shadow Temple Bongo Bongo Heart": "'Bongo Bongo'"
         },
@@ -252,10 +252,10 @@
         "room": 00,
         "events": {
             "Ganondorf": "is_adult and can_use(Light_Arrows)"
-        }
+        },
         "locations": {
             "Ganondorf Hint": "True"
-        }
+        },
         "exits": {
             "Ganons Tower Post Boss": "'Ganondorf'"
         }

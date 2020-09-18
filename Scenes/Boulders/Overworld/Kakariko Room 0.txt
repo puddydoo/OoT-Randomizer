@@ -1,0 +1,9 @@
+Setup 1
+	{ ACTOR_EN_ISHI, 220, 400, -1236, 0, 0, 0, 0x0200 }, //0x00000284 
+	{ ACTOR_EN_ISHI, -664, 80, 1288, 0, 0, 0, 0x0210 }, //0x00000294 
+Setup 2
+	{ ACTOR_EN_ISHI, 220, 400, -1236, 0, 0, 0, 0x0700 }, //0x0000071C 
+	{ ACTOR_EN_ISHI, -664, 80, 1288, 0, 0, 0, 0x0710 }, //0x0000072C 
+	{ ACTOR_EN_ISHI, 1436, 400, 1361, 0, 0, 0, 0xFF01 }, //0x000008CC
+
+I think these are all just small rocks though.

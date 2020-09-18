@@ -20,8 +20,9 @@ They pave way for such features as lock rando, door rando, hybridized Vanilla/MQ
 * `can_climb()`: For every ledge that I could think to add it I counted the change in Link's Y coordinate and put it as a condition. I even included ledges that are too high for Link to ever climb. Why do this instead of just `is_adult` for those ledges that child cannot climb? Because the forms of Link in MM have different heights. Deku Link is very short and Fierce Deity Link is very tall. But I do not even know the exact heights or maximum climbing heights of any of the forms in OoT or MM. Also, in Glitched, ground jumps can be calculated into this because they allow Link to climb higher than normal.
 * `can_fall`: I put this for some instances in which the player is required to fall a distance that they cannot roll out of. I don't know if this is necessary to put it as its own term or just use the regular assortment of no OHKO or Fairy or Nayru's Love (if that prevents fall damage) or use another condition like can_live_dmg but I put that there and I couldn't be bothered to change it before forking.
 * `can_press_floor_switch`: Every time that Link has to step on a floor switch I put this condition, which is always true. What is the point? Because Deku Link in MM is too light to do so.
-* `can_swim`: I only thought to add this condition late on and did not put it in most of the places where it belongs. It is always true although it would not be for Deku and Goron Link. I also did not account for the distances that Deku Link can skip across, or for Zora's ability to survive underwater, but I don't really care about those now.
-* `can_wade()`: Not used anywhere but would be used for the height Link would have to be to walk in the water without swimming, which would be important for Goron Link who cannot swim. Or maybe this could be handled with parentheses after `can_swim`.
+* `can_swim`: I only thought to add this condition late on and did not put it in most of the places where it belongs. It is always true although it would not be for Deku and Goron Link, or if Link only had Iron Boots and no way to go back to floating.
+* `can_wade()`: Uses the depth of the water to check whether Link can wade in it without swimming or using Iron Boots. Deku and Goron Link can wade across water that is shallow enough. This does not account for Deku Link's ability to skip across a given body of water. Used less than `can_swim` so far. Child Link's limit seems to be around 32.
+* `can_sink`: Equivalent to can_use(Iron_Boots) though it could also be used for Zora.
 * `can_crouch`: I don't know if this is required in any other place than Deku Tree MQ basement but Link can lower his hitbox by guarding with sticks, hammer, or Giant's Knife/Biggoron's Sword, or with Hylian Shield as child.
 * `can_play_underwater`: This would make it possible to lower Water Temple's water from high to medium. This is always false although Zora Link can do this and it also happens to be an option in MM randomizer for human Link.
 * `can_hold_down_switch`: This refers to the ability to hold down blue switches without anything that exists in the room including Ruto. Always false, but examples of situations where this could be true include shared-world multiplayer, Elegy of Emptiness in MM, and Cane of Somaria in other games.
@@ -29,8 +30,10 @@ They pave way for such features as lock rando, door rando, hybridized Vanilla/MQ
 * `mm_light_arrows`: Similar to the above, always false. Note that this might be a greater violation of Vanilla by allowing you to give the Breath of the Wild treatment to a puzzle in Ganon's Castle where you would actually have Light Arrows.
 * `can_jumpslash_except_kokiri`: I put this on one gold skulltula in Spirit Temple because I could jumpslash it with everything else but not Kokiri Sword. I'm not sure if this needs to be its own condition really.
 * `can_autojump`: It wasn't until after I wrote all this logic that I found out that Goron Link in fact cannot autojump. This condition is currently included only in Gerudo's Fortress. Technically this condition wouldn't be entirely meaningless without MM because the Kokiri Boots could be shuffled, but who would want to start with Iron or Hover Boots?
-* `autojump_climb`: Similar to can_climb but only applies to ledges that Link can climb onto from an autojump. This also requires `can_autojump` to be true. This is separate from `can_climb` because the former instead allows other forms of "jumping" like ground jumps. But except in Gerudo's Fortress, no instances of `can_climb` have been replaced with this yet.
+* `autojump_climb()`: Similar to `can_climb` but only applies to ledges that Link can climb onto from an autojump. This also requires `can_autojump` to be true. This is separate from `can_climb` because the former instead allows other forms of "jumping" like ground jumps. But except in Gerudo's Fortress, no instances of `can_climb` have been replaced with this yet.
+* `can_climb_with_flower()`: Similar to can_climb but there is a bomb flower that Link can use to do a ground jump without bombs. Not used anywhere yet.
 * `shuffle_spirit_hands`: Condition that logically allows the hands of Spirit Temple to be shuffled in ER. This is (I think fully) covered in vanilla spirit temple logic including glitched, but MQ is incomplete.
+* `is_past`, `is_future`: I had the idea to replace many instances of `is_child` and `is_adult` to distinguish age restrictions that are related to the scene setup, but have only done so in a few places so far.
 
 ### Glitch conditions
 As part of an effort to integrate glitched logic with the regular logic, there must be conditions that enable certain glitches.
@@ -49,10 +52,13 @@ As part of an effort to integrate glitched logic with the regular logic, there m
 * `logic_gf_roof_jump`: In Gerudo's Fortress, the wall of the lower southeast roof is too high for to climb onto from the lower roof with two doors, but Adult Link can jump off the roof from an angle and climb up with the increased height of the jump. This would be important in ER.
 * `logic_zf_fairy_without_bombs`: In Zora's Fountain, Silver Gauntlets plus Hammer allows you to reveal a hole that you can jump into and grab onto the other edge of the hole and climb into the Great Fairy Fountain without blowing up the wall.
 * `logic_water_cracked_wall_bombchu`: In the Water Temple, the cracked wall can be blown up with bombchus from the third floor, at any water level.
+* `logic_zd_gs_bombs`: The Gold Skulltula in Zora's Domain can be killed with a carefully aimed bomb or bombchu.
+* `logic_zd_dins_fire`: The torches in Zora's Domain can be lit with Din's Fire by making the most of its range.
 
 ### Problems
 
-* Must implement manual key logic for Spirit Temple MQ (Already done for vanilla).
+* Many locations are in multiple regions.
+* Spitit Temple logic with shuffled hands should be changed due to the fact that savewarping takes you to the normal entrance.
 * Dungeons have missing conditions that aren't completely filled out, mainly enemies. See "Missing Conditions" below.
 * All these conditions will slow down generation.
 * Every once in a while I find a formatting error or something from vanilla accidentally copied in MQ and there are probably some left in the ones I haven't revisited in a while.

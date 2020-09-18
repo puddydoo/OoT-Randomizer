@@ -1,0 +1,6 @@
+0127:800C Brown Boulder, Perm: 0C Puzzle Solved Sound, (312, -720, 64) (0000, 160B, 0000)
+0127:8013 Brown Boulder, Perm: 13 Puzzle Solved Sound, (334, -720, -8) (0000, CEEF, 0000)
+0127:0014 Brown Boulder, Perm: 14, (409, -720, -637) (0000, 0000, 0000)
+0127:0015 Brown Boulder, Perm: 15, (333, -720, -681) (0000, 8FA5, 0000)
+0127:0019 Brown Boulder, Perm: 19, (-632, -720, -805) (0000, 0000, 0000)
+0127:001A Brown Boulder, Perm: 1A, (-684, -720, -734) (0000, 22D8, 0000)

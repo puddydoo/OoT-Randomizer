@@ -1,0 +1,10 @@
+Setup 1
+	{ ACTOR_EN_ISHI, -1361, 120, 145, 0, 0, 0, 0x0200 }, //0x00000374 
+	{ ACTOR_EN_ISHI, -672, 0, -623, 0, 0, 0, 0x0200 }, //0x00000384 
+	{ ACTOR_EN_ISHI, 248, 0, 601, 0, 0, 0, 0x0200 }, //0x00000394 
+	{ ACTOR_EN_ISHI, 726, 0, 961, 0, 0, 0, 0x0200 }, //0x000003A4 
+Setup 2
+    None?
+
+I'm clearly looking at the wrong setups, there are a lot more of them.
+None of them matter though since they're not boulders.

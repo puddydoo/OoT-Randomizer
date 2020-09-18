@@ -472,3 +472,6 @@ If Room 8 is vanilla and Room 10 is MQ, then both of them will contain the green
 If Room 12 is vanilla and Room 9 is MQ, then both of them will contain the blue tentacle. I don't think this would be much of a problem though.
 If Room 9 is vanilla and Room 12 is MQ, then neither of them will contain the blue tentacle. Without any way to kill the blue tentacle, Room 7 must be vanilla, because in MQ the blue tentacle blocks off Room 12. The blue tentacle still blocks off Room 8 in vanilla, but that contains nothing but either the red or green tentacle. This does mean though that Room 10 has to be vanilla and contain the red tentacle, leaving no way to kill the green tentacle. So Room 3 must be vanilla and Room 2 must be MQ.
 If Room 7 is vanilla and Room 10 is MQ, then the green tentacle will replace the red tentacle. Vanilla Room 7 needs the red tentacle so Room 8 and Room 9 must be MQ; MQ Room 9 has the blue tentacle which opens up MQ Room 8 with the red tentacle.
+
+Spirit Temple:
+Vanilla Room 0 and MQ Room 6 have the conflict that the elevator in Room 0 can never be turned on because the switch doesn't exist in MQ. Though this just means that going from Room 6 to Room 0 is one-way. And Room 0 being vanilla means that there is still a way to go to the east side of the lobby.

@@ -9,8 +9,8 @@
         },
         "exits": {
             "GV Fortress Side": "True",
-            "TH Red Jail Exit 1": "True",
-            "TH Olive Jail Exit 5": "True",
+            "Thieves Hideout Red Jail": "True",
+            "Thieves Hideout Olive Jail": "True",
             "GF Entrances Behind Crates": "True",
             "GF Guarded Roof": "True",
             "GF Jail": "can_use(Longshot)",
@@ -25,7 +25,9 @@
         "exits": {
             #All guards become friendly and no thieves respawn so nothing exits to this
             #OHKO does not require fairy because you die in the jail and continue there
-            "GF Jail": "True"
+            #Without hookshot you are sent to GV Fortress Side as adult and GV Lower Stream as child
+            #This is also NRA though
+            "GF Jail": "Progressive_Hookshot"
         }
     },
     {
@@ -36,7 +38,8 @@
         "exits": {
             "Gerudo Fortress": "can_use(Hookshot) or can_climb(219)",
             "GF Hall to Balcony Entrance": "can_use(Hookshot) or can_climb(219)",
-            "GF Balcony": "False"
+            "GF Balcony": "False",
+            "GF Chest Roof": "False"
         }
     },
     {
@@ -45,12 +48,12 @@
         "room": 00,
         "hint": "Gerudo's Fortress",
         "locations": {
-            #"GF Glitch Freestanding PoH": "is_child"
+            #"GF Glitch Freestanding PoH": "is_past"
         },
         "exits": {
             "Gerudo Fortress": "True",
             "GF Jail": "True",
-            "TH Hall to Balcony Exit 12": "True",
+            "TH Hall to Balcony Upper": "True",
             "GF Hall to Balcony Entrance": "True"
         }
     },
@@ -61,7 +64,7 @@
         "hint": "Gerudo's Fortress",
         "exits": {
             "Gerudo Fortress": "True",
-            "TH Hall to Balcony Exit 11": "True",
+            "TH Hall to Balcony Lower": "True",
             "GF Jail": "can_use(Longshot)",
             "GF Empty Roof": "can_climb(194)",
             "GF Chest Roof": "can_climb(402)"
@@ -74,10 +77,10 @@
         "hint": "Gerudo's Fortress",
         "exits": {
             "Gerudo Fortress": "True",
-            "TH Red Jail Exit 2": "True",
-            "TH Kitchen Exit 3": "True",
+            "Thieves Hideout Red Jail": "True",
+            "Thieves Hideout Kitchen Hallway": "True",
             "GF Roof Entrance Cluster": "can_use(Longshot) or can_climb(200)",
-            "GF Storms Grotto": "is_adult and can_open_storm_grotto", # Not there as child
+            "GF Storms Grotto": "is_future and can_open_storm_grotto", # Not there as child
             "GF Guarded Roof": "can_climb(200)"
         }
     },
@@ -87,8 +90,8 @@
         "room": 00,
         "hint": "Gerudo's Fortress",
         "exits": {
-            "TH Kitchen Exit 4": "True",
-            "TH Blue Jail Exit 7": "True",
+            "Thieves Hideout Kitchen Hallway": "True",
+            "Thieves Hideout Blue Jail": "True",
             "Gerudo Fortress": "True",
             "GF Entrances Behind Crates": "True",
             "GF Roof Entrance Cluster": "can_use(Hover_Boots)",
@@ -101,9 +104,9 @@
         "room": 00,
         "hint": "Gerudo's Fortress",
         "exits": {
-            "TH Olive Jail Exit 6": "True",
-            "TH Blue Jail Exit 8": "True",
-            "TH Kitchen Exit 9": "True",
+            "Thieves Hideout Olive Jail": "True",
+            "Thieves Hideout Blue Jail": "True",
+            "Thieves Hideout Kitchen Front": "True",
             "GF Entrances Behind Crates": "True",
             "Gerudo Fortress": "True",
             "GF Southeast Roof": "(logic_gf_roof_jump and autojump_climb(101.5)) or can_climb(130)",
@@ -118,12 +121,13 @@
         "room": 00,
         "hint": "Gerudo's Fortress",
         "exits": {
-            "TH Green Jail Exit 13": "True",
+            "Thieves Hideout Green Jail": "True",
             "Gerudo Fortress": "True",
             "GF Roof Entrance Cluster": "True",
             "GF Empty Roof": "can_climb(181)",
             "GF Kitchen Roof Access": "can_climb(181)",
-            "GF Chest Roof": "can_climb(389)"
+            "GF Chest Roof": "can_climb(389)",
+            "GF Roof Gold Skulltula": "is_future and can_use(Longshot) and at_night"
         }
     },
     {
@@ -132,15 +136,16 @@
         "room": 00,
         "hint": "Gerudo's Fortress",
         "exits": {
-            "TH Kitchen Exit 10": "True",
+            "Thieves Hideout Kitchen Rear": "True",
             "GF Green Jail Exterior": "True",
             "GF Kitchen Roof Access Ledge": "can_climb(80)",
             "GF Empty Roof": "can_use(Hover_Boots)",
             "GF Roof Entrance Cluster": "True",
             "GF Chest Roof": "
-			    can_use(Distant_Scarecrow)
-				or (can_climb(208) and (can_autojump or can_use(Hover_Boots)))",
-            "GF Southeast Roof": "can_climb(251)"
+                can_use(Distant_Scarecrow)
+                or (can_climb(208) and (can_autojump or can_use(Hover_Boots)))",
+            "GF Southeast Roof": "can_climb(251)",
+            "GF Roof Gold Skulltula": "is_future and (can_use(Hookshot) or can_use(Boomerang)) and at_night"
         }
     },
     {
@@ -156,7 +161,8 @@
             "Gerudo Fortress": "True",
             "GF Chest Roof": "can_use(Distant_Scarecrow) or can_climb(208)",
             "GF Jail": "can_use(Longshot)",
-            "GF Balcony": "False"
+            "GF Balcony": "False",
+            "GF Roof Gold Skulltula": "is_future and can_use(Longshot) and at_night"
         }
     },
     {
@@ -175,9 +181,6 @@
         "scene": "Gerudo Fortress",
         "room": 00,
         "hint": "Gerudo's Fortress",
-        "locations": {
-            "GF GS Top Floor": "is_adult and at_night"
-        },
         "exits": {
             "GF Chest Roof": "
                 can_use(Hover_Boots) or can_use(Scarecrow) or can_use(Longshot) or can_climb(208)",
@@ -185,7 +188,8 @@
             "GF Kitchen Roof Access": "True",
             "GF Roof Entrance Cluster": "True",
             "GF Guarded Roof": "True",
-            "Gerudo Fortress": "True"
+            "Gerudo Fortress": "True",
+            "GF Roof Gold Skulltula": "is_future and at_night"
         }
     },
     {
@@ -194,8 +198,7 @@
         "room": 00,
         "hint": "Gerudo's Fortress",
         "locations": {
-            "GF Chest": "True",
-            "GF GS Top Floor": "is_adult and at_night"
+            "GF Chest": "True"
         },
         "exits": {
             "GF Green Jail Exterior": "True",
@@ -203,7 +206,17 @@
             "GF Kitchen Roof Access": "True",
             "GF Empty Roof": "True",
             "GF Roof Entrance Cluster": "True",
-            "GF Balcony": "False"
+            "GF Balcony": "False",
+            "GF Roof Gold Skulltula": "is_future and at_night"
+        }
+    },
+    {
+        "region_name": "GF Roof Gold Skulltula",
+        "scene": "Gerudo Fortress",
+        "room": 00,
+        "hint": "Gerudo's Fortress",
+        "locations": {
+            "GF GS Top Floor": "True"
         }
     },
     {

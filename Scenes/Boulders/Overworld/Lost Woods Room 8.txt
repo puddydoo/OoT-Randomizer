@@ -1,0 +1,4 @@
+Past
+	{ ACTOR_OBJ_BOMBIWA, 670, 0, -2520, 0, 0, 0, 0x801F }, //0x000000F0 
+Future
+	{ ACTOR_OBJ_BOMBIWA, 670, 0, -2520, 0, 0, 0, 0x801F }, //0x000001E8 

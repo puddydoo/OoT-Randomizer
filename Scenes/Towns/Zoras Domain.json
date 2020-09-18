@@ -4,21 +4,108 @@
         "scene": "Zoras Domain",
         "room": 01,
         "hint": "Zora's Domain",
+        "events": {
+            "Zoras Domain Room 01 Torch": "
+                is_past and (has_fire_source or can_use(Sticks))",
+            #Sticks can bring fire from the King Zora room up the stairs
+            "Zoras Domain Room 01 Chest Torches": "
+                is_past and can_use(Fire_Arrows)"
+        },
         "locations": {
-            "ZD Diving Minigame": "is_child",
-            "ZD Chest": "can_use(Sticks)",
-            "ZD GS Frozen Waterfall": "
-                is_adult and at_night and (Progressive_Hookshot or Bow or Magic_Meter)",
-            "Fish Group": "is_child and has_bottle",
-            "Stick Pot": "is_child",
+            "Stick Pot": "is_past",
             "Nut Pot": "True"
         },
         "exits": {
             "ZR Behind Waterfall": "True",
             "ZD King Zoras Chamber": "True",
-            "Lake Hylia": "is_child and can_dive",
-            "ZD Shop": "is_child or Blue_Fire",
-            "ZD Storms Grotto": "can_open_storm_grotto"
+            "ZD Shop": "is_past or Blue_Fire",
+            "ZD Water": "can_swim or can_wade(20) or is_future",
+            "ZD Grotto Island": "
+                can_autojump or is_future or can_swim or
+                can_use(Hover_Boots) or
+                (mm_ice_arrows and can_use(Ice_Arrows))",
+            "ZD High Dive Practice Spot": "False"
+        }
+    },
+    {
+        "region_name": "ZD Water",
+        "scene": "Zoras Domain",
+        "room": 01,
+        "hint": "Zora's Domain",
+        "events": {
+            "Zoras Domain Room 01 Chest Torches": "
+                is_past and
+                ((can_use(Sticks) and
+                ('Zoras Domain Room 01 Torch' or has_fire_source)) or
+                (can_use(Dins_Fire) and
+                (logic_zd_dins_fire or (is_adult and Bow))))"
+                #Even if child Link could use Bow, child is not tall enough
+                #to shoot the torch near the shop through the one in the water.
+        },
+        "locations": {
+            "ZD Chest": "is_past and 'Zoras Domain Room 01 Chest Torches'",
+            "Fish Group": "is_past and has_bottle"
+        },
+        "exits": {
+            "Zoras Domain": "True",
+            "ZD Lake Hylia Shortcut": "is_past and (can_dive or can_sink)",
+            "ZD Grotto Island": "
+                can_swim or is_future or can_wade(120) or
+                (mm_ice_arrows and can_use(Ice_Arrows))"
+        }
+    },
+    {
+        "region_name": "ZD Underwater",
+        "scene": "Zoras Domain",
+        "room": 01,
+        "hint": "Zora's Domain",
+        "exits": {
+            "ZD Water": "can_swim or can_sink",
+            "ZD Lake Hylia Shortcut": "can_sink"
+        }
+    },
+    {
+        "region_name": "ZD Lake Hylia Shortcut",
+        "scene": "Zoras Domain",
+        "room": 01,
+        "hint": "Zora's Domain",
+        "exits": {
+            "Lake Hylia": "True"
+        }
+    },
+    {
+        "region_name": "ZD Grotto Island",
+        "scene": "Zoras Domain",
+        "room": 01,
+        "hint": "Zora's Domain",
+        "exits": {
+            "Zoras Domain": "
+                can_swim or is_future or can_use(Hover_Boots) or
+                (mm_ice_arrows and can_use(Ice_Arrows)",
+            "ZD Water": "can_swim or can_sink or is_future or can_wade(120)",
+            "ZD Storms Grotto": "can_open_storm_grotto",
+            "ZD High Dive Practice Spot": "False"
+        }
+    },
+    {
+        "region_name": "ZD High Dive Practice Spot",
+        "scene": "Zoras Domain",
+        "room": 01,
+        "hint": "Zora's Domain",
+        "locations": {
+            "ZD Diving Minigame": "
+                is_past and (can_swim or can_sink or can_wade(120))",
+            "ZD GS Frozen Waterfall": "
+                is_future and at_night and
+                (can_use(Hookshot) or can_use(Bow) or Magic_Meter
+                or can_use(Dins_Fire) or can_use(Slingshot)
+                or (logic_zd_gs_bombs and has_explosives))"
+        },
+        "exits": {
+            "ZD King Zoras Water": "
+                can_swim or can_sink or can_wade(20) or is_future",
+            "ZD Water": "is_future or can_swim or can_sink or can_wade(120)"
+            #Link can make a damageless landing at the base of the frozen waterfall
         }
     },
     {
@@ -27,23 +114,57 @@
         "room": 00,
         "hint": "Zora's Domain",
         "events": {
-            "King Zora Thawed": "is_adult and Blue_Fire",
+            "King Zora Thawed": "is_future and Blue_Fire",
             "Eyeball Frog Access": "
-                is_adult and 'King Zora Thawed' and 
+                is_future and 'King Zora Thawed' and 
                 (Eyedrops or Eyeball_Frog or Prescription or 'Prescription Access')"
         },
         "locations": {
             "Deliver Ruto's Letter": "
-                is_child and Rutos_Letter and zora_fountain != 'open'",
-            "ZD King Zora Thawed": "'King Zora Thawed'",
-            "ZD Gossip Stone": "True",
-            "Gossip Stone Fairy": "can_summon_gossip_fairy_without_suns and has_bottle",
+                is_past and Rutos_Letter and zora_fountain != 'open'",
+            "ZD King Zora Thawed": "'King Zora Thawed'"
         },
         "exits": {
             "Zoras Domain": "True",
+            "ZD King Zoras Water": "True",
+            "ZD King Zoras Throne": "True"
+        }
+    },
+    {
+        "region_name": "ZD King Zoras Water",
+        "scene": "Zoras Domain",
+        "room": 00,
+        "hint": "Zora's Domain",
+        "locations": {
+            "ZD Gossip Stone": "can_swim or can_sink or can_wade(20) or is_future",
+            "Gossip Stone Fairy": "
+                (can_swim or can_wade(20) or is_future) and
+                can_summon_gossip_fairy_without_suns and has_bottle"
+        },
+        "exits": {
+            "ZD King Zoras Chamber": "
+                ((can_swim or can_sink or can_wade(20)) and can_climb(30)) or
+                is_future",
+            "ZD High Dive Practice Spot": "
+                can_swim or can_sink or can_wade(20) or is_future"
+        }
+    },
+    {
+        "region_name": "ZD King Zoras Throne",
+        "scene": "Zoras Domain",
+        "room": 00,
+        "hint": "Zora's Domain",
+        "exits": {
+            "ZD King Zoras Water": "True",
             "ZD Behind King Zora": "
-                Deliver_Letter or zora_fountain == 'open' or
-                (zora_fountain == 'adult' and is_adult)",
+                (can_swim or can_sink or can_wade(10) or is_future) and
+                (Deliver_Letter or zora_fountain == 'open' or
+                (zora_fountain == 'adult' and is_future) or
+                (is_future and can_climb(145)) or can_climb(160))",
+            "ZD King Zoras Chamber": "
+                (can_swim or can_sink or can_wade(10) and can_climb(30)) or
+                is_future",
+            #I don't know if Deku could make it through here
         }
     },
     {
@@ -52,10 +173,13 @@
         "room": 00,
         "hint": "Zora's Domain",
         "exits": {
-            "ZD King Zoras Chamber": "
-                Deliver_Letter or zora_fountain == 'open' or
-                (zora_fountain == 'adult' and is_adult)",
-            "Zoras Fountain": "True"
+            "ZD King Zoras Throne": "
+                (can_swim or can_sink or can_wade(10) or is_future) and
+                (Deliver_Letter or zora_fountain == 'open' or
+                (zora_fountain == 'adult' and is_future) or
+                (is_future and can_climb(144)) or can_climb(160))",
+            "Zoras Fountain": "can_swim or can_sink or can_wade(10) or is_future"
+            #Future does have some water before ZF exit but it's very shallow
         }
     },
     {

@@ -4,7 +4,8 @@
         "dungeon": "Spirit Temple",
         "room": 00,
         "events": {
-            "Spirit Temple Room 00 Heavy Block": "can_use(Silver_Gauntlets)"
+            "Spirit Temple Room 00 Heavy Block": "can_use(Silver_Gauntlets)",
+            "Spirit Temple Elevator": "False"
         },
         "exits": {
             "Desert Colossus From Spirit Lobby": "True",
@@ -12,11 +13,19 @@
                 (is_child or (is_adult and (can_mega or (glitch_unk_spirit_crawl_hover_boots and Hover_Boots))) and
                 transition('Spirit Temple T30', True)",
             "Spirit Temple Lobby East": "
-                (is_adult and 'Spirit Temple Room 00 Heavy Block') or
+                (is_future and 'Spirit Temple Room 00 Heavy Block') or
                 (glitch_spirit_block_hover_boots_skip and can_use(Hover_Boots)) or
                 (glitch_unk_spirit_block_adult_shield_skip and is_adult and can_shield)",
             "Spirit Temple Shortcut Room South": "
-                is_adult and 'Spirit Temple Elevator' and transition('Spirit Temple T32', True)"
+                is_future and 'Spirit Temple Elevator' and transition('Spirit Temple T32', True)"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Lobby Ceiling",
+        "dungeon": "Spirit Temple",
+        "room": 00,
+        "exits": {
+            "Spirit Temple Lobby": "True"
         }
     },
     {
@@ -31,7 +40,7 @@
         },
         "exits": {
             #I don't know if possible to glitch backwards behind heavy block
-            "Spirit Temple Lobby": "is_adult and 'Spirit Temple Room 00 Heavy Block'",
+            "Spirit Temple Lobby": "is_future and 'Spirit Temple Room 00 Heavy Block'",
             "Spirit Temple Rolling Boulder Room": "
                 transition('Spirit Temple T05', 'Spirit Temple Room 00 Crystal Switch' or
                 'Spirit Temple Room 00 T05 Unbar')",
@@ -197,7 +206,7 @@
              #Enter room as adult through the heavy block route:
                 (((Small_Key_Spirit_Temple, 3) or 
                     ((Small_Key_Spirit_Temple, 2) and bombchus_in_logic and not shuffle_dungeon_entrances)) and 
-                ('Spirit Temple Room 00 Heavy Block' or
+                ((is_future and 'Spirit Temple Room 00 Heavy Block') or
                     (glitch_spirit_block_hover_boots_skip and can_use(Hover_Boots)) or
                     (glitch_unk_spirit_block_adult_shield_skip and is_adult and can_shield)) and
                 has_projectile(adult)) or
@@ -225,7 +234,7 @@
              #Kill skulltula as adult after reaching central chamber through adult path:
                 (((Small_Key_Spirit_Temple, 3) or 
                     ((Small_Key_Spirit_Temple, 2) and bombchus_in_logic and not shuffle_dungeon_entrances)) and 
-                ('Spirit Temple Room 00 Heavy Block' or
+                ((is_future and 'Spirit Temple Room 00 Heavy Block') or
                     (glitch_spirit_block_hover_boots_skip and can_use(Hover_Boots)) or
                     (glitch_unk_spirit_block_adult_shield_skip and is_adult and can_shield)) and
                 (has_projectile(adult) or damage_multiplier != 'ohko' or 
@@ -261,14 +270,14 @@
              #Enter through adult path and light torches:
                 ((Small_Key_Spirit_Temple, 3) and
                     (can_use(Fire_Arrows) or (logic_spirit_map_chest and Bow)) and 
-                    ('Spirit Temple Room 00 Heavy Block' or
+                    ((is_future and 'Spirit Temple Room 00 Heavy Block') or
                         (glitch_spirit_block_hover_boots_skip and can_use(Hover_Boots)) or
                         (glitch_unk_spirit_block_adult_shield_skip and is_adult and can_shield)))",
             "Spirit Temple GS Lobby": "
-             #Obtainable from various regions, here with longshot from ground. 
+             #Obtainable from various regions, here with longshot from the western staircase. 
                 can_use(Longshot) and (shuffle_spirit_hands or can_hover or
                 ((Small_Key_Spirit_Temple, 3) and
-                    ('Spirit Temple Room 00 Heavy Block' or
+                    ((is_future and 'Spirit Temple Room 00 Heavy Block') or
                     (glitch_spirit_block_hover_boots_skip and can_use(Hover_Boots)) or
                     (glitch_unk_spirit_block_adult_shield_skip and is_adult and can_shield)))"
         },
@@ -307,9 +316,9 @@
                 ((Small_Key_Spirit_Temple, 5) and (has_explosives or 'Spirit Temple Room 04 T25 Unbar') and can_child_attack) or
              #Adult
                 ((Small_Key_Spirit_Temple, 3) and is_adult and
-                    ('Spirit Temple Room 00 Heavy Block' or
+                    ((is_future and 'Spirit Temple Room 00 Heavy Block') or
                     (glitch_spirit_block_hover_boots_skip and can_use(Hover_Boots)) or
-                    (glitch_unk_spirit_block_adult_shield_skip and can_shield)))"
+                    (glitch_unk_spirit_block_adult_shield_skip and is_adult and can_shield)))"
         },
         "exits": {
             "Spirit Temple Central Chamber": "True",
@@ -338,7 +347,7 @@
                 (logic_spirit_lobby_gs and (Small_Key_Spirit_Temple, 5) and (has_explosives or 'Spirit Temple Room 04 T25 Unbar') and can_use(Boomerang)) or
              #Adult
                 ((Small_Key_Spirit_Temple, 3) and can_use(Hookshot) and
-                    ('Spirit Temple Room 00 Heavy Block' or
+                    ((is_future and 'Spirit Temple Room 00 Heavy Block') or
                     (glitch_spirit_block_hover_boots_skip and can_use(Hover_Boots)) or
                     (glitch_unk_spirit_block_adult_shield_skip and is_adult and can_shield)))"
         },
@@ -423,7 +432,7 @@
             "Spirit Temple Room 06 Heavy Blocks": "can_use(Silver_Gauntlets)"
         },
         "exits": {
-            "Spirit Temple Shortcut Room South": "is_adult and 'Spirit Temple Room 06 Heavy Blocks'",
+            "Spirit Temple Shortcut Room South": "is_future and 'Spirit Temple Room 06 Heavy Blocks'",
             "Spirit Temple Central Chamber": "transition('Spirit Temple T24', True)"
         }
     },
@@ -435,10 +444,11 @@
             "Spirit Temple Elevator": "can_use(Megaton_Hammer)"
         },
         "exits": {
-            "Spirit Temple Lobby": "
-                is_adult and 'Spirit Temple Elevator' and transition('Spirit Temple T32', True)",
+            "Spirit Temple Lobby Ceiling": "
+                is_future and 'Spirit Temple Elevator' and transition('Spirit Temple T32', True)",
+            #Non-repeatable access to lobby if the hammer switch is triggered in the past
             "Spirit Temple Shortcut Room": "
-                is_adult and 'Spirit Temple Room 06 Heavy Blocks'"
+                is_future and 'Spirit Temple Room 06 Heavy Blocks'"
         }
     },
     {
@@ -469,7 +479,7 @@
              #Enter through adult path and light torches:
                 ((Small_Key_Spirit_Temple, 3) and
                     (can_use(Fire_Arrows) or (logic_spirit_sun_chest and Bow)) and 
-                    ('Spirit Temple Room 00 Heavy Block' or
+                    ((is_future and 'Spirit Temple Room 00 Heavy Block') or
                         (glitch_spirit_block_hover_boots_skip and can_use(Hover_Boots)) or
                         (glitch_unk_spirit_block_adult_shield_skip and is_adult and can_shield)))"
         },
@@ -498,7 +508,7 @@
                 (can_use(Boomerang) and (Small_Key_Spirit_Temple, 5) and
                     (has_explosives or 'Spirit Temple Room 04 T25 Unbar')) or 
              #Adult    
-                (can_use(Hookshot) and ('Spirit Temple Room 00 Heavy Block' or
+                (can_use(Hookshot) and ((is_future and 'Spirit Temple Room 00 Heavy Block') or
                     (glitch_spirit_block_hover_boots_skip and can_use(Hover_Boots)) or
                     (glitch_unk_spirit_block_adult_shield_skip and is_adult and can_shield)) and 
                 ((Small_Key_Spirit_Temple, 3) or 

@@ -1,0 +1,6 @@
+Past
+    { ACTOR_EN_ISHI, 61, -32, -1301, 0, 0, 0, 0xFF01 }, //0x000001A0
+Future
+	{ ACTOR_EN_ISHI, 61, -32, -1301, 0, 0, 0, 0xFF01 }, //0x000005C4
+
+(Other rock is just a small rock)

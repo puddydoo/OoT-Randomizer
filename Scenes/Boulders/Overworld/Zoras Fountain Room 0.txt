@@ -1,0 +1,11 @@
+Setup 1
+	{ ACTOR_EN_ISHI, 316, 50, 2634, 0, 31676, 0, 0xFF21 }, //0x000000C4 
+	{ ACTOR_OBJ_BOMBIWA, 189, 35, 2586, 0, 0, 0, 0x0015 }, //0x00000174 
+	{ ACTOR_OBJ_BOMBIWA, 317, 1, 2631, 0, 0, 0, 0x0016 }, //0x00000184 
+Setup 2
+	{ ACTOR_EN_ISHI, 316, 50, 2634, 0, 31676, 0, 0xFF21 }, //0x00000684 
+	{ ACTOR_OBJ_BOMBIWA, 189, 35, 2586, 0, 0, 0, 0x0015 }, //0x000006C4 
+	{ ACTOR_OBJ_BOMBIWA, 317, 1, 2631, 0, 0, 0, 0x0016 }, //0x000006D4 
+
+I think there's a third setup with these things in it too.
+I don't know what's going on with these 3 setups.

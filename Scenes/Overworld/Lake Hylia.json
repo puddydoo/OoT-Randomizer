@@ -25,7 +25,7 @@
         },
         "exits": {
             "Hyrule Field": "True",
-            "Zoras Domain": "is_child and can_dive",
+            "ZD Underwater": "is_child and can_dive",
             "LH Owl Flight": "is_child",
             "LH Lab": "True",
             "LH Lab Roof": "
