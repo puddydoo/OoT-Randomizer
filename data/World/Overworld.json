@@ -584,7 +584,8 @@
         "exits": {
             "Gerudo Fortress": "can_use(Hookshot)", #or can_climb(219)
             "GF Hall to Balcony Entrance": "can_use(Hookshot)", #or can_climb(219)
-            "GF Balcony": "False"
+            "GF Balcony": "False",
+            "GF Chest Roof": "False"
         }
     },
     {
