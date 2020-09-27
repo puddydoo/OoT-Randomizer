@@ -187,8 +187,15 @@ logic_tricks = {
         'tooltip' : '''\
                     Jump is adult only.
                     '''},
+    'Gerudo Fortress Ledge Jump': {
+        'name'    : 'logic_gf_jump',
+        'tags'    : ("Gerudo's Fortress",),
+        'tooltip' : '''\
+                    From the southern roof with the guard, a jump
+                    can reach the second floor of the fortress.
+                    '''},
     'Gerudo Fortress Roof Ledge Jump': {
-        'name'    : 'logic_gf_roof_jump',
+        'name'    : 'logic_gf_jump_roof',
         'tags'    : ("Gerudo's Fortress",),
         'tooltip' : '''\
                     Adult can use an autojump to climb onto the roof

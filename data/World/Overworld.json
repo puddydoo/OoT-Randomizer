@@ -641,7 +641,8 @@
             "Thieves Hideout Blue Jail": "True",
             "Gerudo Fortress": "True",
             "GF Entrances Behind Crates": "True",
-            "GF Roof Entrance Cluster": "can_use(Hover_Boots)",
+            "GF Roof Entrance Cluster": "can_use(Hover_Boots) or logic_gf_jump",
+                #(logic_gf_jump and autojump_climb(???)) or can_use(Hover_Boots)
             "GF Southeast Roof": "False" #can_climb(330)
         }
     },
@@ -656,8 +657,8 @@
             "Thieves Hideout Kitchen Front": "True",
             "GF Entrances Behind Crates": "True",
             "Gerudo Fortress": "True",
-            "GF Southeast Roof": "logic_gf_roof_jump and is_adult",
-                #(logic_gf_roof_jump and autojump_climb(101.5)) or can_climb(130)
+            "GF Southeast Roof": "logic_gf_jump_roof and is_adult",
+                #(logic_gf_jump_roof and autojump_climb(101.5)) or can_climb(130)
             "GF Green Jail Exterior": "False", #can_climb(120)
             "GF Kitchen Roof Access Ledge": "False", #can_climb(194)
             "GF Empty Roof": "False" #can_climb(301)
