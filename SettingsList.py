@@ -170,6 +170,14 @@ logic_tricks = {
                     Can be reached by side-hopping off
                     the watchtower.
                     '''},
+    'Wasteland at Night without Song of Storms': {
+        'name'    : 'logic_wasteland_night',
+        'tags'    : ("Haunted Wasteland",),
+        'tooltip' : '''\
+                    The poles are difficult to see at night.
+                    Logic normally requires Song of Storms because
+                    the lightning makes the poles clearly visible.
+                    '''},
     'Dodongo\'s Cavern Staircase with Bow': {
         'name'    : 'logic_dc_staircase',
         'tags'    : ("Dodongo's Cavern",),
@@ -1615,7 +1623,7 @@ setting_infos = [
         choices        = {
             'open':       'Always Open',
             'vanilla':    'Vanilla Requirements',
-            'stones':	  'All Spiritual Stones',
+            'stones':     'All Spiritual Stones',
             'medallions': 'All Medallions',
             'dungeons':   'All Dungeons',
             'tokens':     'Gold Skulltula Tokens'
