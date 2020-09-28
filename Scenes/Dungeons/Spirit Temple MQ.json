@@ -154,7 +154,7 @@
         "events": {
             "Spirit Temple Room 03 Bridge": "can_press_floor_switch",
             "Spirit Temple Room 03 Enemies": "
-                (Can kill all the Keese and has_fire_source_with_torch) or can_use(Bow)"
+                (Can kill all the Keese and has_fire_source) or can_use(Bow)"
                 #Keese and Anubis
         },
         "locations": {

@@ -49,7 +49,8 @@ As part of an effort to integrate glitched logic with the regular logic, there m
 
 ### New Tricks
 
-* `logic_gf_roof_jump`: In Gerudo's Fortress, the wall of the lower southeast roof is too high for to climb onto from the lower roof with two doors, but Adult Link can jump off the roof from an angle and climb up with the increased height of the jump. This would be important in ER.
+* `logic_gf_jump_roof`: In Gerudo's Fortress, the wall of the lower southeast roof is too high for to climb onto from the lower roof with two doors, but Adult Link can jump off the roof from an angle and climb up with the increased height of the jump. This would be important in ER.
+* `logic_gf_jump`
 * `logic_zf_fairy_without_bombs`: In Zora's Fountain, Silver Gauntlets plus Hammer allows you to reveal a hole that you can jump into and grab onto the other edge of the hole and climb into the Great Fairy Fountain without blowing up the wall.
 * `logic_water_cracked_wall_bombchu`: In the Water Temple, the cracked wall can be blown up with bombchus from the third floor, at any water level.
 * `logic_zd_gs_bombs`: The Gold Skulltula in Zora's Domain can be killed with a carefully aimed bomb or bombchu.

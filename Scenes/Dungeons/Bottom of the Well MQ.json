@@ -16,7 +16,7 @@
             "Bottom of the Well Lower Water": "can_use_projectile",
             "Bottom of the Well West Cage Rocks": "can_blast_or_smash",
             "Bottom of the Well Central Gate": "
-                can_play(Zeldas_Lullaby)"
+                can_play(Zeldas_Lullaby)",
             "Bottom of the Well Room 00 Eye Switch": "
                 here(can_blast_or_smash) and (can_use(Slingshot) or can_use(Bow)",
         },

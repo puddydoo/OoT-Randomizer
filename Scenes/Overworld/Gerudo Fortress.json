@@ -25,9 +25,10 @@
         "exits": {
             #All guards become friendly and no thieves respawn so nothing exits to this
             #OHKO does not require fairy because you die in the jail and continue there
-            #Without hookshot you are sent to GV Fortress Side as adult and GV Lower Stream as child
-            #This is also NRA though
-            "GF Jail": "Progressive_Hookshot"
+            #Without hookshot you are sent to GV Fortress Side as adult, this is also NRA though
+            #Game is patched so you are always sent to GV Lower Stream as child
+            "GF Jail": "is_adult and Progressive_Hookshot",
+            "GV Lower Stream": "is_child"
         }
     },
     {
@@ -94,7 +95,8 @@
             "Thieves Hideout Blue Jail": "True",
             "Gerudo Fortress": "True",
             "GF Entrances Behind Crates": "True",
-            "GF Roof Entrance Cluster": "can_use(Hover_Boots)",
+            "GF Roof Entrance Cluster": "
+                (logic_gf_jump and autojump_climb(???)) or can_use(Hover_Boots)",
             "GF Southeast Roof": "can_climb(330)"
         }
     },
@@ -109,7 +111,7 @@
             "Thieves Hideout Kitchen Front": "True",
             "GF Entrances Behind Crates": "True",
             "Gerudo Fortress": "True",
-            "GF Southeast Roof": "(logic_gf_roof_jump and autojump_climb(101.5)) or can_climb(130)",
+            "GF Southeast Roof": "(logic_gf_jump_roof and autojump_climb(101.5)) or can_climb(130)",
             "GF Green Jail Exterior": "can_climb(120)",
             "GF Kitchen Roof Access Ledge": "can_climb(194)",
             "GF Empty Roof": "can_climb(301)"
