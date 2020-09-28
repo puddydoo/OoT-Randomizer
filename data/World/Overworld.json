@@ -572,7 +572,9 @@
             #All guards become friendly and no thieves respawn so nothing exits to this
             #OHKO does not require fairy because you die in the jail and continue there
             #Without hookshot you are sent to GV Fortress Side as adult, this is also NRA though
-            #Game is patched so you are always sent to GV Lower Stream as child
+            #Game is patched so you are never sent to jail as child
+            #These locations could be wrong because I don't know where you actually go in rando
+            #But it doesn't matter because this isn't used
             "GF Jail": "is_adult and Progressive_Hookshot",
             "GV Lower Stream": "is_child"
         }
