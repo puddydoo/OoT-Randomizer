@@ -498,18 +498,29 @@
         "scene": "Haunted Wasteland",
         "hint": "Haunted Wasteland",
         "locations": {
-            "Wasteland Chest": "has_fire_source",
             "Wasteland Bombchu Salesman": "
                 Progressive_Wallet and 
-                (is_adult or Sticks or Kokiri_Sword)",
+                (is_adult or Sticks or Kokiri_Sword)"
+        },
+        "exits": {
+            "Wasteland Monument": "at_day or can_play(Song_of_Storms) or logic_wasteland_night",
+            "Wasteland Near Fortress": "
+                logic_wasteland_crossing or can_use(Hover_Boots) or can_use(Longshot)"
+        }
+    },
+	{
+        "region_name": "Wasteland Monument",
+        "scene": "Haunted Wasteland",
+        "hint": "Haunted Wasteland",
+        "locations": {
+            "Wasteland Chest": "has_fire_source",
             "Wasteland GS": "can_use(Hookshot) or can_use(Boomerang)",
             "Fairy Pot": "has_bottle",
             "Nut Pot": "True"
         },
         "exits": {
             "Wasteland Near Colossus": "logic_lens_wasteland or can_use(Lens_of_Truth)",
-            "Wasteland Near Fortress": "
-                logic_wasteland_crossing or can_use(Hover_Boots) or can_use(Longshot)"
+            "Haunted Wasteland": "at_day or can_play(Song_of_Storms) or logic_wasteland_night"
         }
     },
     {
@@ -517,7 +528,7 @@
         "scene": "Haunted Wasteland",
         "exits": {
             "Desert Colossus": "True",
-            "Haunted Wasteland": "logic_reverse_wasteland"
+            "Wasteland Monument": "logic_reverse_wasteland"
         }
     },
     {
@@ -1614,7 +1625,7 @@
     },
     {
         "region_name": "LLR Stables",
-		"locations": {
+        "locations": {
             "LLR Stables Left Cow": "can_play(Eponas_Song)",
             "LLR Stables Right Cow": "can_play(Eponas_Song)"
         },
@@ -1883,7 +1894,7 @@
     },
     {
         "region_name": "DMT Cow Grotto",
-		 "locations": {
+         "locations": {
             "DMT Cow Grotto Cow": "can_play(Eponas_Song)"
         },
         "exits": {
