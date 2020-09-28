@@ -2272,6 +2272,9 @@ setting_infos = [
             
             Note that savewarping in any room of Thieves' Hideout
             always takes you to the first room (with the red flag).
+            
+            There is an extra heart piece on the balcony above the jail in
+            Gerudo's Fortress if accessed as child. This is not shuffled.
         ''',
         default        = False,
         shared         = True,
