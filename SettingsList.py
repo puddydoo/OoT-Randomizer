@@ -170,13 +170,14 @@ logic_tricks = {
                     Can be reached by side-hopping off
                     the watchtower.
                     '''},
-    'Wasteland at Night without Song of Storms or Spin Attack': {
+    'Wasteland at Night without Sword or Song of Storms': {
         'name'    : 'logic_wasteland_night',
         'tags'    : ("Haunted Wasteland",),
         'tooltip' : '''\
                     The poles are difficult to see at night.
-                    Logic normally requires Song of Storms or
-                    spin attack because they improve visibility.
+                    Logic normally requires either a sword,
+                    or Song of Storms, because standard spin
+                    attacks or lightning improve visibility.
                     '''},
     'Dodongo\'s Cavern Staircase with Bow': {
         'name'    : 'logic_dc_staircase',
