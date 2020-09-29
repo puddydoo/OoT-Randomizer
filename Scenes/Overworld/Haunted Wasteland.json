@@ -20,11 +20,26 @@
                 Progressive_Wallet and 
                 (is_adult or Sticks or Kokiri_Sword)"
         },
-        "exits": {]
-            "Wasteland Underground": "True",
+        "exits": {
+            "Wasteland Monument": "
+                at_day or is_adult or Kokiri_Sword or
+                can_play(Song_of_Storms) or logic_wasteland_night",
             "Wasteland Near Colossus": "logic_lens_wasteland or can_use(Lens_of_Truth)",
             "Wasteland Near Fortress": "
                 logic_wasteland_crossing or can_use(Hover_Boots) or can_use(Longshot)"
+        }
+    },
+    {
+        "region_name": "Wasteland Monument",
+        "scene": "Haunted Wasteland",
+        "room": 01,
+        "hint": "Haunted Wasteland",
+        "exits": {
+            "Wasteland Underground": "True",
+            "Wasteland Near Colossus": "logic_lens_wasteland or can_use(Lens_of_Truth)",
+            "Haunted Wasteland": "
+                at_day or is_adult or Kokiri_Sword or
+                can_play(Song_of_Storms) or logic_wasteland_night"
         }
     },
     {
@@ -49,7 +64,7 @@
             "Nut Pot": "True"
         },
         "exits": {
-            "Haunted Wasteland": "True"
+            "Wasteland Monument": "True"
         }
     }
 ]
