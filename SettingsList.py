@@ -170,13 +170,13 @@ logic_tricks = {
                     Can be reached by side-hopping off
                     the watchtower.
                     '''},
-    'Wasteland at Night without Song of Storms': {
+    'Wasteland at Night without Song of Storms or Spin Attack': {
         'name'    : 'logic_wasteland_night',
         'tags'    : ("Haunted Wasteland",),
         'tooltip' : '''\
                     The poles are difficult to see at night.
-                    Logic normally requires Song of Storms because
-                    the lightning makes the poles clearly visible.
+                    Logic normally requires Song of Storms or
+                    spin attack because they improve visibility.
                     '''},
     'Dodongo\'s Cavern Staircase with Bow': {
         'name'    : 'logic_dc_staircase',

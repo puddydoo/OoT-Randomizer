@@ -503,12 +503,14 @@
                 (is_adult or Sticks or Kokiri_Sword)"
         },
         "exits": {
-            "Wasteland Monument": "at_day or can_play(Song_of_Storms) or logic_wasteland_night",
+            "Wasteland Monument": "
+                at_day or ((is_adult or Kokiri_Sword) and Magic_Meter) or
+                can_play(Song_of_Storms) or logic_wasteland_night",
             "Wasteland Near Fortress": "
                 logic_wasteland_crossing or can_use(Hover_Boots) or can_use(Longshot)"
         }
     },
-	{
+    {
         "region_name": "Wasteland Monument",
         "scene": "Haunted Wasteland",
         "hint": "Haunted Wasteland",
@@ -520,7 +522,9 @@
         },
         "exits": {
             "Wasteland Near Colossus": "logic_lens_wasteland or can_use(Lens_of_Truth)",
-            "Haunted Wasteland": "at_day or can_play(Song_of_Storms) or logic_wasteland_night"
+            "Haunted Wasteland": "
+                at_day or ((is_adult or Kokiri_Sword) and Magic_Meter) or
+                can_play(Song_of_Storms) or logic_wasteland_night"
         }
     },
     {
