@@ -16,7 +16,7 @@
         "exits": {
             "Shadow Temple Entryway": "True",
             "Shadow Temple First Beamos": "can_use(Hover_Boots) or can_mega",
-            "Shadow Boss": "can_hover and has_explosives and can_use(Hover_Boots) and 
+            "Bongo Bongos Lair": "can_hover and has_explosives and can_use(Hover_Boots) and 
                 can_live_dmg(2.0)"
         }
     },
@@ -95,14 +95,6 @@
                 (can_mega and can_use(Hover_Boots)) or can_hover) and 
                 (Boss_Key_Shadow_Temple or (has_explosives and is_adult)) and
                 (can_mega or can_use(Hover_Boots)) and (Small_Key_Shadow_Temple, 5)"
-        }
-    },
-    {
-        "region_name": "Shadow Boss",
-        "dungeon": "Shadow Temple",
-        "locations": {
-            "Shadow Temple Bongo Bongo Heart": "True",
-            "Bongo Bongo": "True"
         }
     }
 ]
