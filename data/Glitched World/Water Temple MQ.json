@@ -17,7 +17,7 @@
             # they won't be able to come back without Iron Boots.
             # If it is the Iron Boots or an item required to get them, it means a soft-lock.
             "Morphas Lair": "
-                Boss_Key_Water_Temple and can_use(Longshot) and Iron_Boots",
+                Boss_Key_Water_Temple and can_use(Longshot) and Iron_Boots"
         }
     },
     {
