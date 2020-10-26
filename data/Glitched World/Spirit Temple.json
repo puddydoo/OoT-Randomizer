@@ -99,39 +99,6 @@
         }
     },
     {
-        "region_name": "Mirror Shield Hand",
-        "dungeon": "Spirit Temple",
-        "locations": {
-            "Spirit Temple Mirror Shield Chest": "True"
-        },
-        "exits": {
-            "Desert Colossus": "True",
-            "Silver Gauntlets Hand": "
-                can_hover or can_use(Hookshot) or (can_use(Hover_Boots) and can_mega)",
-            "Spirit Temple Beyond Central Locked Door": "True"
-        }
-    },
-    {
-        "region_name": "Silver Gauntlets Hand",
-        "dungeon": "Spirit Temple",
-        "locations": {
-            "Spirit Temple Silver Gauntlets Chest": "True"
-        },
-        "exits": {
-            "Desert Colossus": "True",
-            "Mirror Shield Hand": "can_hover or (can_use(Hover_Boots) and can_mega)",
-            "Spirit Temple Central Chamber": "(Small_Key_Spirit_Temple, 2)"
-        }
-    },
-    {
-        "region_name": "Spirit Temple Outdoor Hands",
-        "dungeon": "Spirit Temple",
-        "exits": {
-            "Silver Gauntlets Hand": "True",
-            "Mirror Shield Hand": "True"
-        }
-    },
-    {
         "region_name": "Spirit Temple Beyond Central Locked Door",
         "dungeon": "Spirit Temple",
         "locations": {
@@ -156,16 +123,22 @@
             "Spirit Temple Topmost Chest": "can_use(Mirror_Shield)"
         },
         "exits": {
-            "Spirit Temple Boss": "can_use(Mirror_Shield)",
+            "Twinrovas Lair": "can_use(Mirror_Shield)",
             "Spirit Temple Central Chamber": "can_use(Mirror_Shield) or can_use(Hookshot)"
         }
     },
     {
-        "region_name": "Spirit Temple Boss",
+        "region_name": "Spirit Temple Right Hand",
         "dungeon": "Spirit Temple",
-        "locations": {
-            "Spirit Temple Twinrova Heart": "True",
-            "Twinrova": "True"
+        "exits": {
+            "Spirit Temple Central Chamber": "True"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Left Hand",
+        "dungeon": "Spirit Temple",
+        "exits": {
+            "Spirit Temple Beyond Central Locked Door": "True"
         }
     }
 ]

@@ -22,16 +22,12 @@
     {
         "region_name": "Water Temple Highest Water Level",
         "dungeon":  "Water Temple",
-        "events": {
-            "Water Temple Clear": "Boss_Key_Water_Temple and can_use(Longshot)"
-        },
         "locations": {
-            "Morpha": "Boss_Key_Water_Temple and can_use(Longshot)",
-            "Water Temple Morpha Heart": "Boss_Key_Water_Temple and can_use(Longshot)",
             "Fairy Pot": "has_bottle and can_use(Longshot)"
         },
         "exits": {
-            "Water Temple Falling Platform Room": "(Small_Key_Water_Temple, 5)"
+            "Water Temple Falling Platform Room": "(Small_Key_Water_Temple, 5)",
+            "Morphas Lair": "Boss_Key_Water_Temple and can_use(Longshot)"
         }
     },
     {

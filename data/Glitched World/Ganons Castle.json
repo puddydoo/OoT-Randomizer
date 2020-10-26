@@ -10,7 +10,7 @@
             "Ganons Castle Shadow Trial": "True",
             "Ganons Castle Spirit Trial": "True",
             "Ganons Castle Light Trial": "can_use(Golden_Gauntlets) or (Bombs and can_shield) or (can_mega and can_use(Hover_Boots))",
-            "Ganons Castle Tower": "True",
+            "Ganons Tower": "True",
             "Ganons Castle Deku Scrubs": "True"
         }
     },

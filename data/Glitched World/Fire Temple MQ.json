@@ -13,7 +13,7 @@
         },
         "exits": {
             "DMC Central": "True",
-            "Fire Boss Room": "
+            "Volvagias Lair": "
                 has_fire_source and can_use(Goron_Tunic) and Megaton_Hammer and Boss_Key_Fire_Temple and
                 (logic_fire_boss_door_jump or Hover_Boots or at('Fire Temple Upper', True))",
             "Fire Lower Locked Door": "
@@ -82,14 +82,6 @@
                 can_play(Song_of_Time) or Hover_Boots",
             "Fire Temple MQ GS Fire Wall Maze Center": "has_explosives",
             "Fire Temple MQ GS Above Fire Wall Maze": "(Small_Key_Fire_Temple, 5)"
-        }
-    },
-    {
-        "region_name": "Fire Boss Room",
-        "dungeon": "Fire Temple",
-        "locations": {
-            "Fire Temple Volvagia Heart": "True",
-            "Volvagia": "True"
         }
     }
 ]

@@ -30,20 +30,16 @@
     {
         "region_name": "Deku Tree Boss Room",
         "dungeon": "Deku Tree",
-        "events": {
-            "Deku Tree Clear": "Buy_Deku_Shield and (Kokiri_Sword or Sticks)"
-        },
         "locations": {
             "Deku Tree MQ Before Spinning Log Chest": "True",
             "Deku Tree MQ After Spinning Log Chest": "can_play(Song_of_Time)",
             "Deku Tree MQ GS Basement Graves Room": "Boomerang and can_play(Song_of_Time)",
             "Deku Tree MQ GS Basement Back Room": "Boomerang",
-            "Deku Tree MQ Deku Scrub": "True",
-            "Deku Tree Queen Gohma Heart": "Buy_Deku_Shield and (Kokiri_Sword or Sticks)",
-            "Queen Gohma": "Buy_Deku_Shield and (Kokiri_Sword or Sticks)"
+            "Deku Tree MQ Deku Scrub": "True"
         },
         "exits": {
-            "Deku Tree Lobby": "True"
+            "Deku Tree Lobby": "True",
+            "Queen Gohmas Lair": "Buy_Deku_Shield"
         }
     }
 ]

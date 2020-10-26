@@ -119,23 +119,10 @@
         "region_name": "Spirit Temple Boss Area",
         "dungeon": "Spirit Temple",
         "locations": {
-            "Spirit Temple MQ Mirror Puzzle Invisible Chest": "logic_lens_spirit_mq or can_use(Lens_of_Truth)",
-            "Spirit Temple Twinrova Heart": "Mirror_Shield and Boss_Key_Spirit_Temple",
-            "Twinrova": "Mirror_Shield and Boss_Key_Spirit_Temple"
-        }
-    },
-    {
-        "region_name": "Mirror Shield Hand",
-        "dungeon": "Spirit Temple",
-        "locations": {
-            "Spirit Temple Mirror Shield Chest": "True"
-        }
-    },
-    {
-        "region_name": "Silver Gauntlets Hand",
-        "dungeon": "Spirit Temple",
-        "locations": {
-            "Spirit Temple Silver Gauntlets Chest": "True"
+            "Spirit Temple MQ Mirror Puzzle Invisible Chest": "logic_lens_spirit_mq or can_use(Lens_of_Truth)"
+        },
+        "exits": {
+            "Twinrovas Lair": "Mirror_Shield and Boss_Key_Spirit_Temple"
         }
     }
 ]

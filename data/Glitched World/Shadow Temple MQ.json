@@ -76,14 +76,13 @@
         "region_name": "Shadow Temple Beyond Boat",
         "dungeon": "Shadow Temple",
         "locations": {
-            "Shadow Temple Bongo Bongo Heart": "Bow and Boss_Key_Shadow_Temple",
-            "Bongo Bongo": "Bow and Boss_Key_Shadow_Temple",
             "Shadow Temple MQ GS After Ship": "True",
             "Shadow Temple MQ GS Near Boss": "Bow"
         },
         "exits": {
             "Shadow Temple Invisible Maze": "
-                Bow and can_play(Song_of_Time) and can_use(Longshot)"
+                Bow and can_play(Song_of_Time) and can_use(Longshot)",
+            "Bongo Bongos Lair": "Bow and Boss_Key_Shadow_Temple"
         }
     },
     {

@@ -71,6 +71,162 @@
         }
     },
     {
+        "region_name": "Deku Tree Savewarp",
+        "exits": {
+            "Deku Tree Lobby": "True"
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Savewarp",
+        "exits": {
+            "Dodongos Cavern Beginning": "True"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Savewarp",
+        "exits": {
+            "Jabu Jabus Belly Beginning": "True"
+        }
+    },
+    {
+        "region_name": "Forest Temple Savewarp",
+        "exits": {
+            "Forest Temple Lobby": "True"
+        }
+    },
+    {
+        "region_name": "Fire Temple Savewarp",
+        "exits": {
+            "Fire Temple Lower": "True"
+        }
+    },
+    {
+        "region_name": "Water Temple Savewarp",
+        "exits": {
+            "Water Temple Lobby": "True"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Savewarp",
+        "exits": {
+            "Spirit Temple Lobby": "True"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Savewarp",
+        "exits": {
+            "Shadow Temple Entryway": "True"
+        }
+    },
+    {
+        "region_name": "Ice Cavern Savewarp",
+        "exits": {
+            "Ice Cavern Beginning": "True"
+        }
+    },
+    {
+        "region_name": "Bottom of the Well Savewarp",
+        "exits": {
+            "Bottom of the Well": "True"
+        }
+    },
+    {
+        "region_name": "Gerudo Training Grounds Savewarp",
+        "exits": {
+            "Gerudo Training Grounds Lobby": "True"
+        }
+    },
+    {
+        "region_name": "Ganons Castle Savewarp",
+        "exits": {
+            "Ganons Castle Lobby": "True"
+        }
+    },
+    {
+        "region_name": "Ganons Tower Savewarp",
+        "exits": {
+            "Ganons Tower": "True"
+        }
+    },
+    {
+        "region_name": "Queen Gohmas Lair Savewarp",
+        "exits": {
+            "Deku Tree Savewarp": "True"
+        }
+    },
+    {
+        "region_name": "King Dodongos Lair Savewarp",
+        "exits": {
+            "Dodongos Cavern Savewarp": "True"
+        }
+    },
+    {
+        "region_name": "Barinades Lair Savewarp",
+        "exits": {
+            "Jabu Jabus Belly Savewarp": "True"
+        }
+    },
+    {
+        "region_name": "Phantom Ganons Lair Savewarp",
+        "exits": {
+            "Forest Temple Savewarp": "True"
+        }
+    },
+    {
+        "region_name": "Volvagias Lair Savewarp",
+        "exits": {
+            "Fire Temple Savewarp": "True"
+        }
+    },
+    {
+        "region_name": "Morphas Lair Savewarp",
+        "exits": {
+            "Water Temple Savewarp": "True"
+        }
+    },
+    {
+        "region_name": "Twinrovas Lair Savewarp",
+        "exits": {
+            "Spirit Temple Savewarp": "True"
+        }
+    },
+    {
+        "region_name": "Bongo Bongos Lair Savewarp",
+        "exits": {
+            "Shadow Temple Savewarp": "True"
+        }
+    },
+    {
+        "region_name": "Ganondorfs Lair Savewarp",
+        "exits": {
+            "Ganons Tower Savewarp": "True"
+        }
+    },
+    {
+        "region_name": "Collapse Exterior Savewarp",
+        "exits": {
+            "Ganons Tower Savewarp": "True"
+        }
+    },
+    {
+        "region_name": "Collapse Interior Savewarp",
+        "exits": {
+            "Ganons Tower Savewarp": "True"
+        }
+    },
+    {
+        "region_name": "Collapse Exit Savewarp",
+        "exits": {
+            "Ganons Tower Savewarp": "True"
+        }
+    },
+    {
+        "region_name": "Ganons Lair Savewarp",
+        "exits": {
+            "Ganons Tower Savewarp": "True"
+        }
+    },
+    {
         "region_name": "Kokiri Forest",
         "scene": "Kokiri Forest",
         "hint": "Kokiri Forest",
@@ -1820,7 +1976,7 @@
     {
         "region_name": "LLR Stables",
         "scene": "LLR Stables",
-		"locations": {
+        "locations": {
             "LLR Stables Left Cow": "can_play(Eponas_Song)",
             "LLR Stables Right Cow": "can_play(Eponas_Song)"
         },
@@ -1838,15 +1994,6 @@
         },
         "exits": {
             "Lon Lon Ranch": "True"
-        }
-    },
-    {
-        "region_name": "Ganons Castle Tower",
-        "dungeon": "Ganons Castle",
-        "locations": {
-            "Ganons Tower Boss Key Chest": "True",
-            "Ganondorf Hint": "Boss_Key_Ganons_Castle",
-            "Ganon": "Boss_Key_Ganons_Castle and can_use(Light_Arrows)"
         }
     },
     {
@@ -2114,7 +2261,7 @@
     {
         "region_name": "DMT Cow Grotto",
         "scene": "DMT Cow Grotto",
-		 "locations": {
+        "locations": {
             "DMT Cow Grotto Cow": "can_play(Eponas_Song)"
         },
         "exits": {

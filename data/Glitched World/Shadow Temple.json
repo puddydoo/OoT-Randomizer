@@ -91,7 +91,7 @@
             "Shadow Temple GS Triple Giant Pot": "True"
         },
         "exits": {
-            "Shadow Boss": "(has_bombchus or can_use(Distant_Scarecrow) or Bow or 
+            "Bongo Bongos Lair": "(has_bombchus or can_use(Distant_Scarecrow) or Bow or 
                 (can_mega and can_use(Hover_Boots)) or can_hover) and 
                 (Boss_Key_Shadow_Temple or (has_explosives and is_adult)) and
                 (can_mega or can_use(Hover_Boots)) and (Small_Key_Shadow_Temple, 5)"

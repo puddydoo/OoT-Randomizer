@@ -143,23 +143,6 @@
         }
     },
     {
-        "region_name": "Spirit Temple Outdoor Hands",
-        "dungeon": "Spirit Temple",
-        "locations": {
-            "Spirit Temple Silver Gauntlets Chest": "
-                ((Small_Key_Spirit_Temple, 3) and (Progressive_Hookshot, 2) and has_explosives) or 
-                (Small_Key_Spirit_Temple, 5)",
-            "Spirit Temple Mirror Shield Chest": "
-                (Small_Key_Spirit_Temple, 4) and can_use(Silver_Gauntlets) and has_explosives"
-        },
-        "exits": {
-            "Desert Colossus": "
-                (is_child and (Small_Key_Spirit_Temple, 5)) or
-                (can_use(Silver_Gauntlets) and
-                    (((Small_Key_Spirit_Temple, 3) and has_explosives) or (Small_Key_Spirit_Temple, 5)))"
-        }
-    },
-    {
         "region_name": "Spirit Temple Beyond Central Locked Door",
         "dungeon": "Spirit Temple",
         "locations": {
@@ -182,14 +165,12 @@
             "Spirit Temple Boss Key Chest": "
                 can_play(Zeldas_Lullaby) and Bow and 
                 Progressive_Hookshot",
-            "Spirit Temple Topmost Chest": "Mirror_Shield",
-            "Spirit Temple Twinrova Heart": "
-                Mirror_Shield and has_explosives and 
-                Progressive_Hookshot and Boss_Key_Spirit_Temple",
-            "Twinrova": "
+            "Spirit Temple Topmost Chest": "Mirror_Shield"
+        },
+        "exits": {
+            "Twinrovas Lair": "
                 Mirror_Shield and has_explosives and 
                 Progressive_Hookshot and Boss_Key_Spirit_Temple"
         }
     }
 ]
-

@@ -8,17 +8,14 @@
                 ((Small_Key_Fire_Temple, 8) or not keysanity) and (can_use(Megaton_Hammer) or can_use(Hookshot) or has_explosives)",
             "Fire Temple Boss Key Chest": "(
                 ((Small_Key_Fire_Temple, 8) or not keysanity) and can_use(Megaton_Hammer)) or (can_mega and can_use(Hookshot))",
-            "Fire Temple Volvagia Heart": "
-                (can_use(Goron_Tunic) or (Fairy and has_explosives)) and can_use(Megaton_Hammer) and 
-                (Boss_Key_Fire_Temple or at('Fire Temple Flame Maze', True))",
-            "Volvagia": "
-                (can_use(Goron_Tunic) or (Fairy and has_explosives)) and can_use(Megaton_Hammer) and 
-                (Boss_Key_Fire_Temple or at('Fire Temple Flame Maze', True))",
             "Fire Temple GS Boss Key Loop": "
                 ((Small_Key_Fire_Temple, 8) or not keysanity)"
         },
         "exits": {
-            "Fire Temple Big Lava Room":"(Small_Key_Fire_Temple, 2)"
+            "Fire Temple Big Lava Room":"(Small_Key_Fire_Temple, 2)",
+            "Volvagias Lair": "
+                (can_use(Goron_Tunic) or (Fairy and has_explosives)) and can_use(Megaton_Hammer) and 
+                (Boss_Key_Fire_Temple or at('Fire Temple Flame Maze', True))"
         }
     },
     {
