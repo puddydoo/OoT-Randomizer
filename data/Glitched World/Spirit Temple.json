@@ -94,7 +94,7 @@
                 can_hover or
                 can_use(Hookshot)) and has_explosives",
             "Child Spirit Temple Climb": "True",
-            "Spirit Temple Boss": "can_use(Hookshot) and can_live_dmg(0.5) and Mirror_Shield and has_explosives",
+            "Twinrovas Lair": "can_use(Hookshot) and can_live_dmg(0.5) and Mirror_Shield and has_explosives",
             "Early Adult Spirit Temple": "can_jumpslash or can_hover or can_use(Hookshot)"
         }
     },
