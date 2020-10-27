@@ -269,7 +269,7 @@
     "world_count": 1,
     "randomize_settings": false,
     "logic_rules": "glitchless",
-    "open_forest": "closed_deku",
+    "open_forest": "vanilla",
     "open_kakariko": "closed",
     "open_door_of_time": false,
     "zora_fountain": "closed",

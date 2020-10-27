@@ -100,8 +100,23 @@
             "KF Kokiri Shop": "True",
             "KF Outside Deku Tree": "is_adult or open_forest == 'open' or 'Showed Mido Sword & Shield'",
             "Lost Woods": "True",
-            "LW Bridge From Forest": "can_leave_forest",
+            "LW Bridge From Forest": "
+                can_leave_forest and
+                (open_forest != 'vanilla' or is_adult or 'Deku Tree Clear')",
             "KF Storms Grotto": "can_open_storm_grotto"
+        }
+    },
+    {
+        "region_name": "Kokiri Forest From Bridge",
+        "scene": "Kokiri Forest",
+        "hint": "Kokiri Forest",
+        "exits": {
+            "Kokiri Forest": "
+                can_leave_forest and
+                (open_forest != 'vanilla' or is_adult or 'Deku Tree Clear')",
+            "LW Bridge From Forest": "
+                can_leave_forest and
+                (open_forest != 'vanilla' or is_adult or 'Deku Tree Clear')"
         }
     },
     {
@@ -318,7 +333,7 @@
         "scene": "Lost Woods",
         "hint": "the Lost Woods",
         "exits": {
-            "Kokiri Forest": "True",
+            "Kokiri Forest From Bridge": "True",
             "Hyrule Field": "True",
             "Lost Woods": "can_use(Longshot)"
         }
@@ -1820,7 +1835,7 @@
     {
         "region_name": "LLR Stables",
         "scene": "LLR Stables",
-		"locations": {
+        "locations": {
             "LLR Stables Left Cow": "can_play(Eponas_Song)",
             "LLR Stables Right Cow": "can_play(Eponas_Song)"
         },
@@ -2114,7 +2129,7 @@
     {
         "region_name": "DMT Cow Grotto",
         "scene": "DMT Cow Grotto",
-		 "locations": {
+        "locations": {
             "DMT Cow Grotto Cow": "can_play(Eponas_Song)"
         },
         "exits": {

@@ -1678,6 +1678,7 @@ setting_infos = [
             'open':        'Open Forest',
             'closed_deku': 'Closed Deku',
             'closed':      'Closed Forest',
+            'vanilla':     'Vanilla Forest',
             },
         gui_tooltip    = '''\
             'Open Forest': Mido no longer blocks the path to the
@@ -1690,14 +1691,20 @@ setting_infos = [
             the Deku Tree.
 
             'Closed Forest': The Kokiri Sword and Slingshot are always
-            available somewhere in the forest. This is incompatible with
-            Start as Adult and shuffling "All Indoors" and/or "Overworld"
-            entrances will force this to Closed Deku if selected.
+            available somewhere in the forest. If starting as adult, or
+            if overworld spawns or warp song destinations are randomized,
+            or if "All Indoors" or "Overworld" entrances are shuffled,
+            this will be forced to Vanilla Forest instead.
+            
+            'Vanilla Forest': The Kokiri boy still blocks the path
+            out of the forest until the Deku Tree dungeon is cleared,
+            and Mido still blocks the path to the Deku Tree, but the
+            logic accounts for other means of leaving the forest rather
+            than guaranteeing that the Deku Tree can be cleared first.
+            If starting as adult, this will be forced to Closed Deku
+            unless overworld spawns are randomized.
         ''',
         shared         = True,
-        disable        = {
-            'closed' : {'settings' : ['starting_age']}
-        },
         gui_params     = {
             'randomize_key': 'randomize_settings',
             'distribution': [
@@ -1812,7 +1819,7 @@ setting_infos = [
         choices        = {
             'open':       'Always Open',
             'vanilla':    'Vanilla Requirements',
-            'stones':	  'Spiritual Stones',
+            'stones':     'Spiritual Stones',
             'medallions': 'Medallions',
             'dungeons':   'Dungeons',
             'tokens':     'Gold Skulltula Tokens'
@@ -2767,10 +2774,10 @@ setting_infos = [
             that attack when trying to free the jailed carpenters.
             
             'Overworld Only': Gerudo Fortress Keys can only appear
-             outside of dungeons.
+            outside of dungeons.
             
             'Dungeons Only': Gerudo Fortress Keys can only appear
-             inside of dungeons.
+            inside of dungeons.
 
             'Anywhere': Gerudo Fortress Keys can appear anywhere
             in the world.
@@ -3418,10 +3425,7 @@ setting_infos = [
             Choose which age Link will start as.
 
             Starting as adult means you start with
-            the master sword in your inventory.
-
-            Only the child option is compatible with
-            Closed Forest.
+            the Master Sword in your inventory.
         ''',
         shared         = True,
         gui_params     = {

@@ -258,7 +258,7 @@ entrance_shuffle_table = [
                         ('Graveyard Dampes Grave -> Graveyard',                             { 'index': 0x0359 })),
 
     ('Overworld',       ('Kokiri Forest -> LW Bridge From Forest',                          { 'index': 0x05E0 }),
-                        ('LW Bridge -> Kokiri Forest',                                      { 'index': 0x020D })),
+                        ('LW Bridge -> Kokiri Forest From Bridge',                          { 'index': 0x020D })),
     ('Overworld',       ('Kokiri Forest -> Lost Woods',                                     { 'index': 0x011E }),
                         ('LW Forest Exit -> Kokiri Forest',                                 { 'index': 0x0286 })),
     ('Overworld',       ('Lost Woods -> GC Woods Warp',                                     { 'index': 0x04E2 }),
