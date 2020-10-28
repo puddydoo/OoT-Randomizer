@@ -310,6 +310,25 @@ entrance_shuffle_table = [
     ('Overworld',       ('ZD Behind King Zora -> Zoras Fountain',                           { 'index': 0x0225 }),
                         ('Zoras Fountain -> ZD Behind King Zora',                           { 'index': 0x01A1 })),
 
+    ('Collapse',        ('Collapse Exterior 1 -> Collapse Interior 5F',                     { 'index': 0x0179 }),
+                        ('Collapse Interior 5F -> Collapse Exterior 1',                     { 'index': 0x04BA })),
+    ('Collapse',        ('Collapse Interior 5F -> Collapse Exterior 2 Upper',               { 'index': 0x032C }),
+                        ('Collapse Exterior 2 Upper -> Collapse Interior 5F',               { 'index': 0x0134 })),
+    ('Collapse',        ('Collapse Exterior 2 Lower -> Collapse Interior 4F',               { 'index': 0x01B5 }),
+                        ('Collapse Interior 4F -> Collapse Exterior 2 Lower',               { 'index': 0x0330 })),
+    ('Collapse',        ('Collapse Interior 4F -> Collapse Exterior 3 Upper',               { 'index': 0x0334 }),
+                        ('Collapse Exterior 3 Upper -> Collapse Interior 4F',               { 'index': 0x0256 })),
+    ('Collapse',        ('Collapse Exterior 3 Lower -> Collapse Interior 3F',               { 'index': 0x03DC }),
+                        ('Collapse Interior 3F -> Collapse Exterior 3 Lower',               { 'index': 0x01C9 })),
+    ('Collapse',        ('Collapse Interior 3F -> Collapse Exterior 4 Upper',               { 'index': 0x051C }),
+                        ('Collapse Exterior 4 Upper -> Collapse Interior 3F',               { 'index': 0x03E0 })),
+    ('Collapse',        ('Collapse Exterior 4 Lower -> Collapse Interior 2F',               { 'index': 0x03E4 }),
+                        ('Collapse Interior 2F -> Collapse Exterior 4 Lower',               { 'index': 0x0524 })),
+    ('Collapse',        ('Collapse Interior 2F Stairs -> Collapse Castle',                  { 'index': 0x056C }),
+                        ('Collapse Castle -> Collapse Interior 2F Stairs',                  { 'index': 0x04B6 })),
+
+    ('CollapseEnd',     ('Collapse Castle Exit -> Collapse Exterior 1',                     { 'index': 0x043F })),
+
     ('OwlDrop',         ('LH Owl Flight -> Hyrule Field',                                   { 'index': 0x027E, 'addresses': [0xAC9F26] })),
     ('OwlDrop',         ('DMT Owl Flight -> Kak Impas Ledge',                               { 'index': 0x0554, 'addresses': [0xAC9EF2] })),
 
@@ -363,6 +382,9 @@ def shuffle_random_entrances(worlds):
         one_way_entrance_pools = OrderedDict()
         entrance_pools = OrderedDict()
 
+        if worlds[0].shuffle_collapse_entrances:
+            one_way_entrance_pools['CollapseEnd'] = world.get_shufflable_entrances(type='CollapseEnd')
+
         if worlds[0].owl_drops:
             one_way_entrance_pools['OwlDrop'] = world.get_shufflable_entrances(type='OwlDrop')
 
@@ -384,6 +406,8 @@ def shuffle_random_entrances(worlds):
             entrance_pools['Interior'] = world.get_shufflable_entrances(type='Interior', only_primary=True)
             if worlds[0].shuffle_special_interior_entrances:
                 entrance_pools['Interior'] += world.get_shufflable_entrances(type='SpecialInterior', only_primary=True)
+            if worlds[0].shuffle_collapse_entrances:
+                entrance_pools['Interior'] += world.get_shufflable_entrances(type='Collapse', only_primary=True)
 
         if worlds[0].shuffle_grotto_entrances:
             entrance_pools['GrottoGrave'] = world.get_shufflable_entrances(type='Grotto', only_primary=True)
@@ -402,16 +426,22 @@ def shuffle_random_entrances(worlds):
         one_way_target_entrance_pools = {}
         for pool_type, entrance_pool in one_way_entrance_pools.items():
             # One way entrances are extra entrances that will be connected to entrance positions from a selection of entrance pools
-            if pool_type == 'OwlDrop':
-                valid_target_types = ('WarpSong', 'OwlDrop', 'Overworld', 'Extra')
+            if pool_type == 'CollapseEnd':
+                valid_target_types = ('Spawn', 'WarpSong', 'OwlDrop', 'Overworld', 'Interior', 'SpecialInterior', 'Grave', 'Extra')
+                one_way_target_entrance_pools[pool_type] = build_one_way_targets(world, valid_target_types)
+            elif pool_type == 'OwlDrop':
+                valid_target_types = ('WarpSong', 'OwlDrop', 'Overworld', 'CollapseEnd', 'Extra')
                 one_way_target_entrance_pools[pool_type] = build_one_way_targets(world, valid_target_types, exclude=['Prelude of Light Warp -> Temple of Time'])
                 for target in one_way_target_entrance_pools[pool_type]:
                     target.set_rule(lambda state, age=None, **kwargs: age == 'child')
             elif pool_type == 'Spawn':
-                valid_target_types = ('Spawn', 'WarpSong', 'OwlDrop', 'Overworld', 'Interior', 'SpecialInterior', 'Extra')
+                valid_target_types = ('Spawn', 'WarpSong', 'OwlDrop', 'Overworld', 'Interior', 'SpecialInterior', 'CollapseEnd', 'Extra')
                 one_way_target_entrance_pools[pool_type] = build_one_way_targets(world, valid_target_types)
             elif pool_type == 'WarpSong':
-                valid_target_types = ('Spawn', 'WarpSong', 'OwlDrop', 'Overworld', 'Interior', 'SpecialInterior', 'Grave', 'Extra')
+                if worlds[0].shuffle_collapse_entrances:
+                    valid_target_types = ('Spawn', 'WarpSong', 'OwlDrop', 'Overworld', 'Interior', 'SpecialInterior', 'Grave', 'Collapse', 'CollapseEnd', 'Extra')
+                else:
+                    valid_target_types = ('Spawn', 'WarpSong', 'OwlDrop', 'Overworld', 'Interior', 'SpecialInterior', 'Grave', 'Extra')
                 one_way_target_entrance_pools[pool_type] = build_one_way_targets(world, valid_target_types)
             # Ensure that when trying to place the last entrance of a one way pool, we don't assume the rest of the targets are reachable
             for target in one_way_target_entrance_pools[pool_type]:

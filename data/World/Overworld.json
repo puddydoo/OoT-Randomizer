@@ -71,6 +71,45 @@
         }
     },
     {
+        "region_name": "Ganons Tower Savewarp",
+        "exits": {
+            "Ganons Castle Tower": "True"
+        }
+    },
+    {
+        "region_name": "Ganondorfs Lair Savewarp",
+        "exits": {
+            "Ganons Tower Savewarp": "True"
+        }
+    },
+    {
+        "region_name": "Collapse Exterior Savewarp",
+        "exits": {
+            "Ganons Tower Savewarp": "not shuffle_collapse_entrances",
+            "Collapse Exterior 1": "shuffle_collapse_entrances"
+        }
+    },
+    {
+        "region_name": "Collapse Interior Savewarp",
+        "exits": {
+            "Ganons Tower Savewarp": "not shuffle_collapse_entrances",
+            "Collapse Exterior 1": "shuffle_collapse_entrances"
+        }
+    },
+    {
+        "region_name": "Collapse Castle Savewarp",
+        "exits": {
+            "Ganons Tower Savewarp": "not shuffle_collapse_entrances",
+            "Collapse Exterior 1": "shuffle_collapse_entrances"
+        }
+    },
+    {
+        "region_name": "Ganons Lair Savewarp",
+        "exits": {
+            "Ganons Tower Savewarp": "True"
+        }
+    },
+    {
         "region_name": "Kokiri Forest",
         "scene": "Kokiri Forest",
         "hint": "Kokiri Forest",
@@ -1820,7 +1859,7 @@
     {
         "region_name": "LLR Stables",
         "scene": "LLR Stables",
-		"locations": {
+        "locations": {
             "LLR Stables Left Cow": "can_play(Eponas_Song)",
             "LLR Stables Right Cow": "can_play(Eponas_Song)"
         },
@@ -1843,10 +1882,167 @@
     {
         "region_name": "Ganons Castle Tower",
         "dungeon": "Ganons Castle",
+        "savewarp": "Ganons Tower Savewarp",
         "locations": {
-            "Ganons Tower Boss Key Chest": "True",
-            "Ganondorf Hint": "Boss_Key_Ganons_Castle",
-            "Ganon": "Boss_Key_Ganons_Castle and can_use(Light_Arrows)"
+            "Ganons Tower Boss Key Chest": "True"
+        },
+        "exits": {
+            "Ganondorfs Lair": "Boss_Key_Ganons_Castle"
+        }
+    },
+    {
+        "region_name": "Ganondorfs Lair",
+        "dungeon": "Ganons Castle",
+        "savewarp": "Ganondorfs Lair Savewarp",
+        "locations": {
+            "Ganondorf Hint": "True"
+        },
+        "exits": {
+            "Collapse Exterior 1": "
+                can_use(Light_Arrows) and not no_escape_sequence and not shuffle_collapse_entrances",
+            "Ganons Lair": "
+                can_use(Light_Arrows) and (no_escape_sequence or shuffle_collapse_entrances)"
+        }
+    },
+    {
+        "region_name": "Collapse Exterior 1",
+        #"room": 00,
+        "savewarp": "Collapse Exterior Savewarp",
+        "exits": {
+            "Collapse Interior 5F": "True"
+        }
+    },
+    {
+        "region_name": "Collapse Interior 5F",
+        #"room": 04,
+        "savewarp": "Collapse Interior Savewarp",
+        "exits": {
+            "Collapse Exterior 1": "True",
+            "Collapse Exterior 2 Upper": "True"
+        }
+    },
+    {
+        "region_name": "Collapse Exterior 2 Upper",
+        #"room": 00,
+        "savewarp": "Collapse Exterior Savewarp",
+        "exits": {
+            "Collapse Interior 5F": "True",
+            "Collapse Exterior 2 Lower": "True",
+            "Collapse Exterior 1": "False"
+        }
+    },
+	{
+        "region_name": "Collapse Exterior 2 Lower",
+        #"room": 00,
+        "savewarp": "Collapse Exterior Savewarp",
+        "exits": {
+            "Collapse Exterior 2 Upper": "True",
+            "Collapse Interior 4F": "True"
+        }
+    },
+    {
+        "region_name": "Collapse Interior 4F",
+        #"room": 02,
+        "savewarp": "Collapse Interior Savewarp",
+        "exits": {
+            "Collapse Exterior 2 Lower": "True",
+            "Collapse Exterior 3 Upper": "True"
+        }
+    },
+    {
+        "region_name": "Collapse Exterior 3 Upper",
+        #"room": 00,
+        "savewarp": "Collapse Exterior Savewarp",
+        "exits": {
+            "Collapse Interior 4F": "True",
+            "Collapse Exterior 3 Lower": "True",
+            "Collapse Exterior 2 Lower": "False",
+            "Collapse Exterior 1": "False"
+        }
+    },
+	{
+        "region_name": "Collapse Exterior 3 Lower",
+        #"room": 00,
+        "savewarp": "Collapse Exterior Savewarp",
+        "exits": {
+            "Collapse Exterior 3 Upper": "True",
+            "Collapse Interior 3F": "True"
+        }
+    },
+    {
+        "region_name": "Collapse Interior 3F",
+        #"room": 01,
+        "savewarp": "Collapse Interior Savewarp",
+        "exits": {
+            "Collapse Exterior 3 Lower": "True",
+            "Collapse Exterior 4 Upper": "shuffle_collapse_entrances or is_adult or Kokiri_Sword"
+                #Must defeat 2 Stalfos during escape sequence
+        }
+    },
+    {
+        "region_name": "Collapse Exterior 4 Upper",
+        #"room": 00,
+        "savewarp": "Collapse Exterior Savewarp",
+        "exits": {
+            "Collapse Interior 3F": "True",
+            "Collapse Exterior 4 Lower": "True",
+            "Collapse Exterior 3 Lower": "False",
+            "Collapse Exterior 2 Lower": "False",
+            "Collapse Exterior 1": "False"
+        }
+    },
+    {
+        "region_name": "Collapse Exterior 4 Lower",
+        #"room": 00,
+        "savewarp": "Collapse Exterior Savewarp",
+        "exits": {
+            "Collapse Exterior 4 Upper": "True", #can_climb(66)
+            "Collapse Interior 2F": "True"
+        }
+    },
+    {
+        "region_name": "Collapse Interior 2F",
+        #"room": 00,
+        "savewarp": "Collapse Interior Savewarp",
+        "exits": {
+            "Collapse Exterior 4 Lower": "True",
+            "Collapse Interior 2F Stairs": "True"
+        }
+    },
+    {
+        "region_name": "Collapse Interior 2F Stairs",
+        #"room": 03,
+        "savewarp": "Collapse Interior Savewarp",
+        "exits": {
+            "Collapse Interior 2F": "True",
+            "Collapse Castle": "True"
+        }
+    },
+    {
+        "region_name": "Collapse Castle",
+        #"room": 00,
+        "savewarp": "Collapse Castle Savewarp",
+        "exits": {
+            "Collapse Interior 2F Stairs": "True",
+            "Collapse Castle Exit": "True"
+        }
+    },
+    {
+        "region_name": "Collapse Castle Exit",
+        #"room": 01,
+        "savewarp": "Collapse Castle Savewarp",
+        "exits": {
+            "Collapse Castle": "True",
+            "Ganons Lair": "not shuffle_collapse_entrances",
+            "Collapse Exterior 1": "shuffle_collapse_entrances"
+        }
+    },
+    {
+        "region_name": "Ganons Lair",
+        "dungeon": "Ganons Castle",
+        "savewarp": "Ganons Lair Savewarp",
+        "locations": {
+            "Ganon": "True"
         }
     },
     {
@@ -2114,7 +2310,7 @@
     {
         "region_name": "DMT Cow Grotto",
         "scene": "DMT Cow Grotto",
-		 "locations": {
+         "locations": {
             "DMT Cow Grotto Cow": "can_play(Eponas_Song)"
         },
         "exits": {

@@ -1059,7 +1059,7 @@ def patch_rom(spoiler:Spoiler, world:World, rom:Rom):
 
     # "fast-ganon" stuff
     symbol = rom.sym('NO_ESCAPE_SEQUENCE')
-    if world.no_escape_sequence:
+    if world.no_escape_sequence or world.shuffle_collapse_entrances:
         rom.write_bytes(0xD82A12, [0x05, 0x17]) # Sets exit from Ganondorf fight to entrance to Ganon fight
         rom.write_bytes(0xB139A2, [0x05, 0x17]) # Sets Ganon deathwarp back to Ganon
         rom.write_byte(symbol, 0x01)

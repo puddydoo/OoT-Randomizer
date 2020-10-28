@@ -1664,7 +1664,7 @@ setting_infos = [
             True : {
                 'sections' : ['open_section', 'shuffle_section', 'shuffle_dungeon_section'],
                 'settings': ['starting_age', 'shuffle_interior_entrances', 'shuffle_grotto_entrances', 'shuffle_dungeon_entrances',
-                             'shuffle_overworld_entrances', 'owl_drops', 'warp_songs', 'spawn_positions',
+                             'shuffle_overworld_entrances', 'shuffle_collapse_entrances', 'owl_drops', 'warp_songs', 'spawn_positions',
                              'triforce_hunt', 'triforce_goal_per_world', 'bombchus_in_logic', 'one_item_per_dungeon'],
             }
         },
@@ -1976,7 +1976,7 @@ setting_infos = [
         ''',
         disable        = {
             'glitched'  : {'settings' : ['allowed_tricks', 'shuffle_interior_entrances', 'shuffle_grotto_entrances',
-                                         'shuffle_dungeon_entrances', 'shuffle_overworld_entrances', 'owl_drops',
+                                         'shuffle_dungeon_entrances', 'shuffle_overworld_entrances', 'shuffle_collapse_entrances', 'owl_drops',
                                          'warp_songs', 'spawn_positions', 'mq_dungeons_random', 'mq_dungeons', ]},
             'none'      : {'tabs'     : ['detailed_tab']},
         },
@@ -2080,7 +2080,9 @@ setting_infos = [
         gui_text       = 'Skip Tower Escape Sequence',
         gui_tooltip    = '''\
             The tower escape sequence between
-            Ganondorf and Ganon will be skipped.
+            Ganondorf and Ganon will be skipped,
+            regardless of whether or not "Shuffle
+            Collapse Entrances" is enabled.
         ''',
         shared         = True,
     ),
@@ -2428,6 +2430,9 @@ setting_infos = [
             and items never revert, even when dying or loading a save.
         ''',
         shared         = True,
+        disable        = {
+            'off' : {'settings' : ['shuffle_collapse_entrances']}
+        },
         gui_params     = {
             'randomize_key': 'randomize_settings',
             'distribution':  [
@@ -2482,6 +2487,27 @@ setting_infos = [
             Just like when shuffling interior entrances, shuffling overworld 
             entrances disables trade timers and trade items never revert, 
             even when dying or loading a save.
+        ''',
+        default        = False,
+        shared         = True,
+        gui_params     = {
+            'randomize_key': 'randomize_settings',
+        },
+    ),
+    Checkbutton(
+        name           = 'shuffle_collapse_entrances',
+        gui_text       = 'Shuffle Collapse Entrances',
+        gui_tooltip    = '''\
+            Shuffle the collapsing Ganon's Tower and Castle
+            segments into the pool of interior entrances.
+            The tower escape sequence between Ganondorf
+            and Ganon is skipped, and the final exit in the
+            collapsing castle leads to a random destination.
+            
+            When the tower collapse areas are shuffled, the
+            escape timer and the Zelda escort mission are
+            disabled, and savewarping in any of the areas
+            takes you to the top of the collapsing tower.
         ''',
         default        = False,
         shared         = True,
