@@ -1927,7 +1927,7 @@
         "savewarp": "Collapse Exterior Savewarp",
         "exits": {
             "Collapse Interior 5F": "True",
-            "Collapse Exterior 2 Lower": "True",
+            "Collapse Exterior 2 Lower": "True", #can_autojump or can_use(Hover_Boots)
             "Collapse Exterior 1": "False"
         }
     },
@@ -1936,7 +1936,7 @@
         #"room": 00,
         "savewarp": "Collapse Exterior Savewarp",
         "exits": {
-            "Collapse Exterior 2 Upper": "True",
+            "Collapse Exterior 2 Upper": "True", #can_autojump or can_use(Hover_Boots)
             "Collapse Interior 4F": "True"
         }
     },
