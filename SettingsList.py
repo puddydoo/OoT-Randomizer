@@ -2513,7 +2513,7 @@ setting_infos = [
         default        = False,
         shared         = True,
         disable        = {	
-            'True' : {'settings' : ['require_deku']}	
+            True: {'settings' : ['require_deku']}	
         },
         gui_params     = {
             'randomize_key': 'randomize_settings',
@@ -2542,7 +2542,7 @@ setting_infos = [
         default        = False,
         shared         = True,
         disable        = {	
-            'True' : {'settings' : ['require_deku']}	
+            True: {'settings' : ['require_deku']}	
         },
         gui_params     = {
             'randomize_key': 'randomize_settings',
@@ -2561,7 +2561,7 @@ setting_infos = [
         default        = False,
         shared         = True,
         disable        = {	
-            'True' : {'settings' : ['require_deku']}	
+            True: {'settings' : ['require_deku']}	
         },
         gui_params     = {
             'randomize_key': 'randomize_settings',
@@ -3457,6 +3457,9 @@ setting_infos = [
             the Master Sword in your inventory.
         ''',
         shared         = True,
+        disable        = {	
+            'adult' : {'settings' : ['require_deku']}	
+        },
         gui_params     = {
             'randomize_key': 'randomize_settings',
             'distribution': [
