@@ -40,6 +40,11 @@ def set_rules(world):
         if location.name == 'Forest Temple MQ First Room Chest' and world.shuffle_bosskeys == 'dungeon' and world.shuffle_smallkeys == 'dungeon' and world.tokensanity == 'off':
             # This location needs to be a small key. Make sure the boss key isn't placed here.
             forbid_item(location, 'Boss Key (Forest Temple)')
+                
+        if location.name == 'Spirit Temple Silver Gauntlets Chest':
+            # If a key is placed in this location, child can't logically open the door to reach it.
+            # As a result, it adds an unnecessary longshot requirement to open certain doors.
+            forbid_item(location, 'Small Key (Spirit Temple)')
 
         if location.type == 'GossipStone' and world.hints == 'mask':
             location.add_rule(is_child)
