@@ -1716,6 +1716,7 @@ setting_infos = [
     Checkbutton(
         name           = 'require_deku',
         gui_text       = 'Require Deku Tree',
+        default        = True,
         gui_tooltip    = '''\
             If enabled, beating the Deku Tree dungeon will be
             logically required to go outside the forest area
