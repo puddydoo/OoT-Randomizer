@@ -1043,9 +1043,9 @@ logic_tricks = {
                     A precise jump can be used to skip
                     needing to use the Slingshot to go
                     around B1 of the Deku Tree. If used
-                    with the "Closed Forest" setting, a
-                    Slingshot will not be guaranteed to
-                    exist somewhere inside the Forest.
+                    with the "Require Deku Tree" setting,
+                    a Slingshot will not be guaranteed
+                    to exist somewhere inside the Forest.
                     This trick applies to both Vanilla
                     and Master Quest.
                     '''},
@@ -1678,34 +1678,32 @@ setting_infos = [
             'open':        'Open Forest',
             'closed_deku': 'Closed Deku',
             'closed':      'Closed Forest',
-            'vanilla':     'Vanilla Forest',
             },
         gui_tooltip    = '''\
+            In the child era, Mido blocks the path to the Deku Tree,
+            and a Kokiri boy blocks the path out of the forest.
+            Mido requires Kokiri Sword and Deku Shield, and the
+            Kokiri boy moves after clearing the Deku Tree dungeon.
+            
             'Open Forest': Mido no longer blocks the path to the
             Deku Tree, and the Kokiri boy no longer blocks the path
             out of the forest.
             
             'Closed Deku': The Kokiri boy no longer blocks the path
             out of the forest, but Mido still blocks the path to the
-            Deku Tree, requiring Kokiri Sword and Deku Shield to access
-            the Deku Tree.
+            Deku Tree.
 
-            'Closed Forest': The Kokiri Sword and Slingshot are always
-            available somewhere in the forest. If starting as adult, or
-            if overworld spawns or warp song destinations are
-            randomized, or if "All Indoors" or "Overworld" entrances
-            are shuffled, this will be forced to Vanilla Forest instead.
-            
-            'Vanilla Forest': The Kokiri boy still blocks the path
-            out of the forest until the Deku Tree dungeon is cleared,
-            and Mido still blocks the path to the Deku Tree, but the
-            logic accounts for other means of leaving the forest rather
-            than guaranteeing that the Deku Tree can be cleared first.
-            If starting as adult, this will be forced to Closed Deku,
-            unless "All Indoors" or "Overworld" entrances are shuffled,
-            or overworld spawns are randomized.
+            'Closed Forest': The path to the Deku Tree and the path
+            out of the forest are both blocked. Starting as adult
+            without randomizing overworld spawns or shuffling
+            "All Indoors" or "Overworld" entrances will force this
+            to Closed Deku if selected.
         ''',
         shared         = True,
+        disable        = {	
+            'open' : {'settings' : ['require_deku']},
+            'closed_deku' : {'settings' : ['require_deku']}       
+        },
         gui_params     = {
             'randomize_key': 'randomize_settings',
             'distribution': [
@@ -1713,6 +1711,22 @@ setting_infos = [
                 ('closed_deku', 1),
                 ('closed', 1),
             ],
+        },
+    ),
+    Checkbutton(
+        name           = 'require_deku',
+        gui_text       = 'Require Deku Tree',
+        gui_tooltip    = '''\
+            If enabled, beating the Deku Tree dungeon will be
+            logically required to go outside the forest area
+            (Kokiri Forest/Lost Woods/Sacred Forest Meadow).
+            The Kokiri Sword, Deku Shield, and Slingshot needed
+            for this will be guaranteed within the forest area.
+        ''',
+        shared         = True,
+        disabled_default = False,
+        gui_params     = {
+            "hide_when_disabled" : True,
         },
     ),
     Combobox(
@@ -1983,7 +1997,8 @@ setting_infos = [
             considered available. MAY BE IMPOSSIBLE TO BEAT.
         ''',
         disable        = {
-            'glitched'  : {'settings' : ['allowed_tricks', 'shuffle_interior_entrances', 'shuffle_grotto_entrances',
+            'glitched'  : {'settings' : ['allowed_tricks', 'require_deku',
+                                         'shuffle_interior_entrances', 'shuffle_grotto_entrances',
                                          'shuffle_dungeon_entrances', 'shuffle_overworld_entrances', 'owl_drops',
                                          'warp_songs', 'spawn_positions', 'mq_dungeons_random', 'mq_dungeons', ]},
             'none'      : {'tabs'     : ['detailed_tab']},
@@ -2436,6 +2451,9 @@ setting_infos = [
             and items never revert, even when dying or loading a save.
         ''',
         shared         = True,
+        disable        = {	
+            'all' : {'settings' : ['require_deku']}	
+        },
         gui_params     = {
             'randomize_key': 'randomize_settings',
             'distribution':  [
@@ -2493,6 +2511,9 @@ setting_infos = [
         ''',
         default        = False,
         shared         = True,
+        disable        = {	
+            'True' : {'settings' : ['require_deku']}	
+        },
         gui_params     = {
             'randomize_key': 'randomize_settings',
         },
@@ -2519,6 +2540,9 @@ setting_infos = [
         ''',
         default        = False,
         shared         = True,
+        disable        = {	
+            'True' : {'settings' : ['require_deku']}	
+        },
         gui_params     = {
             'randomize_key': 'randomize_settings',
         },
@@ -2535,6 +2559,9 @@ setting_infos = [
         ''',
         default        = False,
         shared         = True,
+        disable        = {	
+            'True' : {'settings' : ['require_deku']}	
+        },
         gui_params     = {
             'randomize_key': 'randomize_settings',
         },

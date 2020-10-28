@@ -59,10 +59,6 @@ class World(object):
                                 self.shuffle_overworld_entrances or self.owl_drops or self.warp_songs or self.spawn_positions
 
         self.disable_trade_revert = self.shuffle_interior_entrances or self.shuffle_overworld_entrances or self.warp_songs
-        
-        if self.open_forest == 'closed' and (self.shuffle_special_interior_entrances or self.shuffle_overworld_entrances or 
-                                             self.warp_songs or self.spawn_positions):
-            self.open_forest = 'vanilla'
 
         self.triforce_goal = self.triforce_goal_per_world * settings.world_count
 
@@ -246,11 +242,10 @@ class World(object):
         if self.starting_age == 'random':
             self.starting_age = random.choice(['child', 'adult'])
             self.randomized_list.append('starting_age')
-        if self.starting_age == 'adult':
-            if self.settings.open_forest == 'closed':
-                # adult is not compatible with closed forest, use vanilla forest instead
-                self.settings.open_forest = 'vanilla'
-            if self.settings.open_forest == 'vanilla' and not self.shuffle_special_interior_entrances and not self.settings.shuffle_overworld_entrances and not self.settings.spawn_positions:
+        if self.settings.open_forest == 'closed' and self.starting_age == 'adult':
+            self.settings.require_deku = False
+            if not self.shuffle_special_interior_entrances and not self.settings.shuffle_overworld_entrances and not self.settings.spawn_positions:
+                # adult is not compatible with closed forest without ER
                 self.settings.open_forest = 'closed_deku'
         if self.chicken_count_random:
             self.chicken_count = random.randint(0, 7)

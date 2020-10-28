@@ -102,7 +102,7 @@
             "Lost Woods": "True",
             "LW Bridge From Forest": "
                 can_leave_forest and
-                (open_forest != 'vanilla' or is_adult or 'Deku Tree Clear')",
+                (open_forest != 'closed' or is_adult or 'Deku Tree Clear')",
             "KF Storms Grotto": "can_open_storm_grotto"
         }
     },
@@ -113,10 +113,10 @@
         "exits": {
             "Kokiri Forest": "
                 can_leave_forest and
-                (open_forest != 'vanilla' or is_adult or 'Deku Tree Clear')",
+                (open_forest != 'closed' or is_adult or 'Deku Tree Clear')",
             "LW Bridge From Forest": "
                 can_leave_forest and
-                (open_forest != 'vanilla' or is_adult or 'Deku Tree Clear')"
+                (open_forest != 'closed' or is_adult or 'Deku Tree Clear')"
         }
     },
     {
