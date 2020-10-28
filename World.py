@@ -250,8 +250,7 @@ class World(object):
             if self.settings.open_forest == 'closed':
                 # adult is not compatible with closed forest, use vanilla forest instead
                 self.settings.open_forest = 'vanilla'
-            if self.settings.open_forest == 'vanilla' and not self.settings.spawn_positions:
-                # adult only compatible with vanilla forest if spawn positions are randomized
+            if self.settings.open_forest == 'vanilla' and not self.shuffle_special_interior_entrances and not self.settings.shuffle_overworld_entrances and not self.settings.spawn_positions:
                 self.settings.open_forest = 'closed_deku'
         if self.chicken_count_random:
             self.chicken_count = random.randint(0, 7)

@@ -1692,17 +1692,18 @@ setting_infos = [
 
             'Closed Forest': The Kokiri Sword and Slingshot are always
             available somewhere in the forest. If starting as adult, or
-            if overworld spawns or warp song destinations are randomized,
-            or if "All Indoors" or "Overworld" entrances are shuffled,
-            this will be forced to Vanilla Forest instead.
+            if overworld spawns or warp song destinations are
+            randomized, or if "All Indoors" or "Overworld" entrances
+            are shuffled, this will be forced to Vanilla Forest instead.
             
             'Vanilla Forest': The Kokiri boy still blocks the path
             out of the forest until the Deku Tree dungeon is cleared,
             and Mido still blocks the path to the Deku Tree, but the
             logic accounts for other means of leaving the forest rather
             than guaranteeing that the Deku Tree can be cleared first.
-            If starting as adult, this will be forced to Closed Deku
-            unless overworld spawns are randomized.
+            If starting as adult, this will be forced to Closed Deku,
+            unless "All Indoors" or "Overworld" entrances are shuffled,
+            or overworld spawns are randomized.
         ''',
         shared         = True,
         gui_params     = {
