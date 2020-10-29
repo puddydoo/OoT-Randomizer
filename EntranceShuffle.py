@@ -326,6 +326,8 @@ entrance_shuffle_table = [
                         ('Collapse Interior 2F -> Collapse Exterior 4 Lower',               { 'index': 0x0524 })),
     ('Collapse',        ('Collapse Interior 2F Stairs -> Collapse Castle',                  { 'index': 0x056C }),
                         ('Collapse Castle -> Collapse Interior 2F Stairs',                  { 'index': 0x04B6 })),
+    # Note: If trade quest rework is added, Collapse Exterior should not be allowed to attach to
+    # the stealth area of Castle Courtyard because it sets a special time of day that is too late.
 
     ('CollapseEnd',     ('Collapse Castle Exit -> Collapse Exterior 1',                     { 'index': 0x043F })),
 

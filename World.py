@@ -344,6 +344,8 @@ class World(object):
                 new_exit = Entrance('%s -> %s' % (new_region.name, region['savewarp']), new_region)
                 new_exit.connected_region = region['savewarp']
                 new_region.exits.append(new_exit)
+                if region['savewarp'] == 'Collapse Exterior Savewarp':
+                    new_region.provides_time = TimeOfDay.DAY
             self.regions.append(new_region)
 
 
