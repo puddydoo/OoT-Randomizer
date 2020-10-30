@@ -180,16 +180,15 @@ class World(object):
                 item: value[3].get('progressive', 1) if value[3] else 1
                 for item, value in item_table.items()
         }
-        max_tokens = 0
+        self.max_tokens = 0
         if self.bridge == 'tokens':
-            max_tokens = max(max_tokens, self.bridge_tokens)
+            self.max_tokens = max(self.max_tokens, self.bridge_tokens)
         if self.lacs_condition == 'tokens':
-            max_tokens = max(max_tokens, self.lacs_tokens)
+            self.max_tokens = max(self.max_tokens, self.lacs_tokens)
         tokens = [50, 40, 30, 20, 10]
         for t in tokens:
             if f'{t} Gold Skulltula Reward' not in self.disabled_locations:
-                max_tokens = max(max_tokens, t)
-        self.max_progressions['Gold Skulltula Token'] = max_tokens
+                self.max_tokens = max(self.max_tokens, t)
         # Additional Ruto's Letter become Bottle, so we may have to collect two.
         self.max_progressions['Rutos Letter'] = 2
 
@@ -511,6 +510,8 @@ class World(object):
     # get a list of items that should stay in their proper dungeon
     def get_restricted_dungeon_items(self):
         itempool = []
+        if self.dungeon_tokens == 'dungeon':
+            itempool.extend([item for dungeon in self.dungeons for item in dungeon.gs_tokens])
         if self.shuffle_mapcompass == 'dungeon':
             itempool.extend([item for dungeon in self.dungeons for item in dungeon.dungeon_items])
         if self.shuffle_smallkeys == 'dungeon':
@@ -528,6 +529,8 @@ class World(object):
     # get a list of items that don't have to be in their proper dungeon
     def get_unrestricted_dungeon_items(self):
         itempool = []
+        if self.dungeon_tokens in ['any_dungeon', 'overworld', 'tokensanity']:
+            itempool.extend([item for dungeon in self.dungeons for item in dungeon.gs_tokens])
         if self.shuffle_mapcompass in ['any_dungeon', 'overworld', 'keysanity']:
             itempool.extend([item for dungeon in self.dungeons for item in dungeon.dungeon_items])
         if self.shuffle_smallkeys in ['any_dungeon', 'overworld', 'keysanity']:

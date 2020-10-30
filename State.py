@@ -86,6 +86,15 @@ class State(object):
             + 3 # starting hearts
         )
 
+
+    def has_tokens(self, count):
+        return self.token_count() >= count
+
+
+    def token_count(self):
+        return self.count_of(ItemInfo.tokens)
+
+
     def has_medallions(self, count):
         return self.count_of(ItemInfo.medallions) >= count
 

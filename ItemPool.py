@@ -225,6 +225,42 @@ normal_bottles = [
 bottle_count = 4
 
 
+tokens = [
+    'Gold Skulltula Token',
+    'Gold Skulltula Token (Kokiri Forest)',
+    'Gold Skulltula Token (Lost Woods)',
+    'Gold Skulltula Token (Sacred Forest Meadow)',
+    'Gold Skulltula Token (Market Guard House)',
+    'Gold Skulltula Token (Hyrule Castle Grounds)',
+    'Gold Skulltula Token (Grotto)',
+    'Gold Skulltula Token (Ganons Castle Grounds)',
+    'Gold Skulltula Token (Lon Lon Ranch)',
+    'Gold Skulltula Token (Kakariko Village)',
+    'Gold Skulltula Token (Graveyard)',
+    'Gold Skulltula Token (Death Mountain Trail)',
+    'Gold Skulltula Token (Goron City)',
+    'Gold Skulltula Token (Death Mountain Crater)',
+    'Gold Skulltula Token (Zoras River)',
+    'Gold Skulltula Token (Zoras Domain)',
+    'Gold Skulltula Token (Zoras Fountain)',
+    'Gold Skulltula Token (Lake Hylia)',
+    'Gold Skulltula Token (LH Lab)',
+    'Gold Skulltula Token (Gerudo Valley)',
+    'Gold Skulltula Token (Gerudo Fortress)',
+    'Gold Skulltula Token (Haunted Wasteland)',
+    'Gold Skulltula Token (Desert Colossus)',
+    'Gold Skulltula Token (Deku Tree)',
+    'Gold Skulltula Token (Dodongos Cavern)',
+    'Gold Skulltula Token (Jabu Jabus Belly)',
+    'Gold Skulltula Token (Forest Temple)',
+    'Gold Skulltula Token (Fire Temple)',
+    'Gold Skulltula Token (Water Temple)',
+    'Gold Skulltula Token (Spirit Temple)',
+    'Gold Skulltula Token (Shadow Temple)',
+    'Gold Skulltula Token (Bottom of the Well)',
+    'Gold Skulltula Token (Ice Cavern)']
+
+
 dungeon_rewards = [
     'Kokiri Emerald',
     'Goron Ruby',
@@ -388,66 +424,6 @@ songlist = [
     'Serenade of Water',
     'Nocturne of Shadow',
     'Requiem of Spirit']
-
-
-skulltula_locations = ([
-    'KF GS Know It All House',
-    'KF GS Bean Patch',
-    'KF GS House of Twins',
-    'LW GS Bean Patch Near Bridge',
-    'LW GS Bean Patch Near Theater',
-    'LW GS Above Theater',
-    'SFM GS',
-    'HF GS Near Kak Grotto',
-    'HF GS Cow Grotto',
-    'Market GS Guard House',
-    'HC GS Tree',
-    'HC GS Storms Grotto',
-    'OGC GS',
-    'LLR GS Tree',
-    'LLR GS Rain Shed',
-    'LLR GS House Window',
-    'LLR GS Back Wall',
-    'Kak GS House Under Construction',
-    'Kak GS Skulltula House',
-    'Kak GS Guards House',
-    'Kak GS Tree',
-    'Kak GS Watchtower',
-    'Kak GS Above Impas House',
-    'Graveyard GS Wall',
-    'Graveyard GS Bean Patch',
-    'DMT GS Bean Patch',
-    'DMT GS Near Kak',
-    'DMT GS Falling Rocks Path',
-    'DMT GS Above Dodongos Cavern',
-    'GC GS Boulder Maze',
-    'GC GS Center Platform',
-    'DMC GS Crate',
-    'DMC GS Bean Patch',
-    'ZR GS Ladder',
-    'ZR GS Tree',
-    'ZR GS Near Raised Grottos',
-    'ZR GS Above Bridge',
-    'ZD GS Frozen Waterfall',
-    'ZF GS Tree',
-    'ZF GS Above the Log',
-    'ZF GS Hidden Cave',
-    'LH GS Bean Patch',
-    'LH GS Lab Wall',
-    'LH GS Small Island',
-    'LH GS Tree',
-    'LH GS Lab Crate',
-    'GV GS Small Bridge',
-    'GV GS Bean Patch',
-    'GV GS Behind Tent',
-    'GV GS Pillar',
-    'GF GS Archery Range',
-    'GF GS Top Floor',
-    'Wasteland GS',
-    'Colossus GS Bean Patch',
-    'Colossus GS Tree',
-    'Colossus GS Hill'])
-
 
 tradeitems = (
     'Pocket Egg',
@@ -645,6 +621,157 @@ vanillaSK = {
     'Water Temple MQ Freestanding Key': 'Small Key (Water Temple)',    
 }
 
+vanillaoverworldGS = {
+    'KF GS Know It All House': 'Gold Skulltula Token (Kokiri Forest)',
+    'KF GS Bean Patch': 'Gold Skulltula Token (Kokiri Forest)',
+    'KF GS House of Twins': 'Gold Skulltula Token (Kokiri Forest)',
+    'LW GS Bean Patch Near Bridge': 'Gold Skulltula Token (Lost Woods)',
+    'LW GS Bean Patch Near Theater': 'Gold Skulltula Token (Lost Woods)',
+    'LW GS Above Theater': 'Gold Skulltula Token (Lost Woods)',
+    'SFM GS': 'Gold Skulltula Token (Sacred Forest Meadow)',
+    'HF GS Near Kak Grotto': 'Gold Skulltula Token (Grotto)',
+    'HF GS Cow Grotto': 'Gold Skulltula Token (Grotto)',
+    'Market GS Guard House': 'Gold Skulltula Token (Market Guard House)',
+    'HC GS Tree': 'Gold Skulltula Token (Hyrule Castle Grounds)',
+    'HC GS Storms Grotto': 'Gold Skulltula Token (Grotto)',
+    'OGC GS': 'Gold Skulltula Token (Ganons Castle Grounds)',
+    'LLR GS Tree': 'Gold Skulltula Token (Lon Lon Ranch)',
+    'LLR GS Rain Shed': 'Gold Skulltula Token (Lon Lon Ranch)',
+    'LLR GS House Window': 'Gold Skulltula Token (Lon Lon Ranch)',
+    'LLR GS Back Wall': 'Gold Skulltula Token (Lon Lon Ranch)',
+    'Kak GS House Under Construction': 'Gold Skulltula Token (Kakariko Village)',
+    'Kak GS Skulltula House': 'Gold Skulltula Token (Kakariko Village)',
+    'Kak GS Guards House': 'Gold Skulltula Token (Kakariko Village)',
+    'Kak GS Tree': 'Gold Skulltula Token (Kakariko Village)',
+    'Kak GS Watchtower': 'Gold Skulltula Token (Kakariko Village)',
+    'Kak GS Above Impas House': 'Gold Skulltula Token (Kakariko Village)',
+    'Graveyard GS Wall': 'Gold Skulltula Token (Graveyard)',
+    'Graveyard GS Bean Patch': 'Gold Skulltula Token (Graveyard)',
+    'DMT GS Bean Patch': 'Gold Skulltula Token (Death Mountain Trail)',
+    'DMT GS Near Kak': 'Gold Skulltula Token (Death Mountain Trail)',
+    'DMT GS Falling Rocks Path': 'Gold Skulltula Token (Death Mountain Trail)',
+    'DMT GS Above Dodongos Cavern': 'Gold Skulltula Token (Death Mountain Trail)',
+    'GC GS Boulder Maze': 'Gold Skulltula Token (Goron City)',
+    'GC GS Center Platform': 'Gold Skulltula Token (Goron City)',
+    'DMC GS Crate': 'Gold Skulltula Token (Death Mountain Crater)',
+    'DMC GS Bean Patch': 'Gold Skulltula Token (Death Mountain Crater)',
+    'ZR GS Ladder': 'Gold Skulltula Token (Zoras River)',
+    'ZR GS Tree': 'Gold Skulltula Token (Zoras River)',
+    'ZR GS Near Raised Grottos': 'Gold Skulltula Token (Zoras River)',
+    'ZR GS Above Bridge': 'Gold Skulltula Token (Zoras River)',
+    'ZD GS Frozen Waterfall': 'Gold Skulltula Token (Zoras Domain)',
+    'ZF GS Tree': 'Gold Skulltula Token (Zoras Fountain)',
+    'ZF GS Above the Log': 'Gold Skulltula Token (Zoras Fountain)',
+    'ZF GS Hidden Cave': 'Gold Skulltula Token (Zoras Fountain)',
+    'LH GS Bean Patch': 'Gold Skulltula Token (Lake Hylia)',
+    'LH GS Lab Wall': 'Gold Skulltula Token (Lake Hylia)',
+    'LH GS Small Island': 'Gold Skulltula Token (Lake Hylia)',
+    'LH GS Tree': 'Gold Skulltula Token (Lake Hylia)',
+    'LH GS Lab Crate': 'Gold Skulltula Token (LH Lab)',
+    'GV GS Small Bridge': 'Gold Skulltula Token (Gerudo Valley)',
+    'GV GS Bean Patch': 'Gold Skulltula Token (Gerudo Valley)',
+    'GV GS Behind Tent': 'Gold Skulltula Token (Gerudo Valley)',
+    'GV GS Pillar': 'Gold Skulltula Token (Gerudo Valley)',
+    'GF GS Archery Range': 'Gold Skulltula Token (Gerudo Fortress)',
+    'GF GS Top Floor': 'Gold Skulltula Token (Gerudo Fortress)',
+    'Wasteland GS': 'Gold Skulltula Token (Haunted Wasteland)',
+    'Colossus GS Bean Patch': 'Gold Skulltula Token (Desert Colossus)',
+    'Colossus GS Tree': 'Gold Skulltula Token (Desert Colossus)',
+    'Colossus GS Hill': 'Gold Skulltula Token (Desert Colossus)',
+}
+
+vanilladungeonGS = {
+    'Deku Tree GS Compass Room': 'Gold Skulltula Token (Deku Tree)',
+    'Deku Tree GS Basement Vines': 'Gold Skulltula Token (Deku Tree)',
+    'Deku Tree GS Basement Gate': 'Gold Skulltula Token (Deku Tree)',
+    'Deku Tree GS Basement Back Room': 'Gold Skulltula Token (Deku Tree)',
+    'Dodongos Cavern GS Side Room Near Lower Lizalfos': 'Gold Skulltula Token (Dodongos Cavern)',
+    'Dodongos Cavern GS Vines Above Stairs': 'Gold Skulltula Token (Dodongos Cavern)',
+    'Dodongos Cavern GS Back Room': 'Gold Skulltula Token (Dodongos Cavern)',
+    'Dodongos Cavern GS Alcove Above Stairs': 'Gold Skulltula Token (Dodongos Cavern)',
+    'Dodongos Cavern GS Scarecrow': 'Gold Skulltula Token (Dodongos Cavern)',
+    'Jabu Jabus Belly GS Water Switch Room': 'Gold Skulltula Token (Jabu Jabus Belly)',
+    'Jabu Jabus Belly GS Lobby Basement Lower': 'Gold Skulltula Token (Jabu Jabus Belly)',
+    'Jabu Jabus Belly GS Lobby Basement Upper': 'Gold Skulltula Token (Jabu Jabus Belly)',
+    'Jabu Jabus Belly GS Near Boss': 'Gold Skulltula Token (Jabu Jabus Belly)',
+    'Forest Temple GS First Room': 'Gold Skulltula Token (Forest Temple)',
+    'Forest Temple GS Lobby': 'Gold Skulltula Token (Forest Temple)',
+    'Forest Temple GS Raised Island Courtyard': 'Gold Skulltula Token (Forest Temple)',
+    'Forest Temple GS Level Island Courtyard': 'Gold Skulltula Token (Forest Temple)',
+    'Forest Temple GS Basement': 'Gold Skulltula Token (Forest Temple)',
+    'Fire Temple GS Song of Time Room': 'Gold Skulltula Token (Fire Temple)',
+    'Fire Temple GS Boulder Maze': 'Gold Skulltula Token (Fire Temple)',
+    'Fire Temple GS Scarecrow Climb': 'Gold Skulltula Token (Fire Temple)',
+    'Fire Temple GS Scarecrow Top': 'Gold Skulltula Token (Fire Temple)',
+    'Fire Temple GS Boss Key Loop': 'Gold Skulltula Token (Fire Temple)',
+    'Water Temple GS Behind Gate': 'Gold Skulltula Token (Water Temple)',
+    'Water Temple GS River': 'Gold Skulltula Token (Water Temple)',
+    'Water Temple GS Falling Platform Room': 'Gold Skulltula Token (Water Temple)',
+    'Water Temple GS Central Pillar': 'Gold Skulltula Token (Water Temple)',
+    'Water Temple GS Near Boss Key Chest': 'Gold Skulltula Token (Water Temple)',
+    'Spirit Temple GS Metal Fence': 'Gold Skulltula Token (Spirit Temple)',
+    'Spirit Temple GS Sun on Floor Room': 'Gold Skulltula Token (Spirit Temple)',
+    'Spirit Temple GS Hall After Sun Block Room': 'Gold Skulltula Token (Spirit Temple)',
+    'Spirit Temple GS Boulder Room': 'Gold Skulltula Token (Spirit Temple)',
+    'Spirit Temple GS Lobby': 'Gold Skulltula Token (Spirit Temple)',
+    'Shadow Temple GS Like Like Room': 'Gold Skulltula Token (Shadow Temple)',
+    'Shadow Temple GS Falling Spikes Room': 'Gold Skulltula Token (Shadow Temple)',
+    'Shadow Temple GS Single Giant Pot': 'Gold Skulltula Token (Shadow Temple)',
+    'Shadow Temple GS Near Ship': 'Gold Skulltula Token (Shadow Temple)',
+    'Shadow Temple GS Triple Giant Pot': 'Gold Skulltula Token (Shadow Temple)',
+    'Bottom of the Well GS West Inner Room': 'Gold Skulltula Token (Bottom of the Well)',
+    'Bottom of the Well GS East Inner Room': 'Gold Skulltula Token (Bottom of the Well)',
+    'Bottom of the Well GS Like Like Cage': 'Gold Skulltula Token (Bottom of the Well)',
+    'Ice Cavern GS Spinning Scythe Room': 'Gold Skulltula Token (Ice Cavern)',
+    'Ice Cavern GS Heart Piece Room': 'Gold Skulltula Token (Ice Cavern)',
+    'Ice Cavern GS Push Block Room': 'Gold Skulltula Token (Ice Cavern)',
+    
+    'Deku Tree MQ GS Lobby': 'Gold Skulltula Token (Deku Tree)',
+    'Deku Tree MQ GS Compass Room': 'Gold Skulltula Token (Deku Tree)',
+    'Deku Tree MQ GS Basement Graves Room': 'Gold Skulltula Token (Deku Tree)',
+    'Deku Tree MQ GS Basement Back Room': 'Gold Skulltula Token (Deku Tree)',
+    'Dodongos Cavern MQ GS Scrub Room': 'Gold Skulltula Token (Dodongos Cavern)',
+    'Dodongos Cavern MQ GS Song of Time Block Room': 'Gold Skulltula Token (Dodongos Cavern)',
+    'Dodongos Cavern MQ GS Lizalfos Room': 'Gold Skulltula Token (Dodongos Cavern)',
+    'Dodongos Cavern MQ GS Larvae Room': 'Gold Skulltula Token (Dodongos Cavern)',
+    'Dodongos Cavern MQ GS Back Area': 'Gold Skulltula Token (Dodongos Cavern)',
+    'Jabu Jabus Belly MQ GS Tailpasaran Room': 'Gold Skulltula Token (Jabu Jabus Belly)',
+    'Jabu Jabus Belly MQ GS Invisible Enemies Room': 'Gold Skulltula Token (Jabu Jabus Belly)',
+    'Jabu Jabus Belly MQ GS Boomerang Chest Room': 'Gold Skulltula Token (Jabu Jabus Belly)',
+    'Jabu Jabus Belly MQ GS Near Boss': 'Gold Skulltula Token (Jabu Jabus Belly)',
+    'Forest Temple MQ GS First Hallway': 'Gold Skulltula Token (Forest Temple)',
+    'Forest Temple MQ GS Block Push Room': 'Gold Skulltula Token (Forest Temple)',
+    'Forest Temple MQ GS Raised Island Courtyard': 'Gold Skulltula Token (Forest Temple)',
+    'Forest Temple MQ GS Level Island Courtyard': 'Gold Skulltula Token (Forest Temple)',
+    'Forest Temple MQ GS Well': 'Gold Skulltula Token (Forest Temple)',
+    'Fire Temple MQ GS Above Fire Wall Maze': 'Gold Skulltula Token (Fire Temple)',
+    'Fire Temple MQ GS Fire Wall Maze Center': 'Gold Skulltula Token (Fire Temple)',
+    'Fire Temple MQ GS Big Lava Room Open Door': 'Gold Skulltula Token (Fire Temple)',
+    'Fire Temple MQ GS Fire Wall Maze Side Room': 'Gold Skulltula Token (Fire Temple)',
+    'Fire Temple MQ GS Skull On Fire': 'Gold Skulltula Token (Fire Temple)',
+    'Water Temple MQ GS Before Upper Water Switch': 'Gold Skulltula Token (Water Temple)',
+    'Water Temple MQ GS Freestanding Key Area': 'Gold Skulltula Token (Water Temple)',
+    'Water Temple MQ GS Lizalfos Hallway': 'Gold Skulltula Token (Water Temple)',
+    'Water Temple MQ GS River': 'Gold Skulltula Token (Water Temple)',
+    'Water Temple MQ GS Triple Wall Torch': 'Gold Skulltula Token (Water Temple)',
+    'Spirit Temple MQ GS Symphony Room': 'Gold Skulltula Token (Spirit Temple)',
+    'Spirit Temple MQ GS Leever Room': 'Gold Skulltula Token (Spirit Temple)',
+    'Spirit Temple MQ GS Nine Thrones Room West': 'Gold Skulltula Token (Spirit Temple)',
+    'Spirit Temple MQ GS Nine Thrones Room North': 'Gold Skulltula Token (Spirit Temple)',
+    'Spirit Temple MQ GS Sun Block Room': 'Gold Skulltula Token (Spirit Temple)',
+    'Shadow Temple MQ GS Falling Spikes Room': 'Gold Skulltula Token (Shadow Temple)',
+    'Shadow Temple MQ GS Wind Hint Room': 'Gold Skulltula Token (Shadow Temple)',
+    'Shadow Temple MQ GS After Wind': 'Gold Skulltula Token (Shadow Temple)',
+    'Shadow Temple MQ GS After Ship': 'Gold Skulltula Token (Shadow Temple)',
+    'Shadow Temple MQ GS Near Boss': 'Gold Skulltula Token (Shadow Temple)',
+    'Bottom of the Well MQ GS Basement': 'Gold Skulltula Token (Bottom of the Well)',
+    'Bottom of the Well MQ GS Coffin Room': 'Gold Skulltula Token (Bottom of the Well)',
+    'Bottom of the Well MQ GS West Inner Room': 'Gold Skulltula Token (Bottom of the Well)',
+    'Ice Cavern MQ GS Scarecrow': 'Gold Skulltula Token (Ice Cavern)',
+    'Ice Cavern MQ GS Ice Block': 'Gold Skulltula Token (Ice Cavern)',
+    'Ice Cavern MQ GS Red Ice': 'Gold Skulltula Token (Ice Cavern)',
+}
+
 junk_pool_base = [
     ('Bombs (5)',       8),
     ('Bombs (10)',      2),
@@ -687,6 +814,7 @@ item_groups = {
     'JunkSong': ('Prelude of Light', 'Serenade of Water'),
     'AdultTrade': tradeitems,
     'Bottle': normal_bottles,
+    'Token': tokens,
     'Spell': ('Dins Fire', 'Farores Wind', 'Nayrus Love'),
     'Shield': ('Deku Shield', 'Hylian Shield'),
     'Song': songlist,
@@ -859,153 +987,6 @@ def get_pool_core(world):
         pool.append('Giants Knife')
     else:
         placed_items['GC Medigoron'] = 'Giants Knife'
-
-    if world.dungeon_mq['Deku Tree']:
-        skulltula_locations_final = skulltula_locations + [
-            'Deku Tree MQ GS Lobby',
-            'Deku Tree MQ GS Compass Room',
-            'Deku Tree MQ GS Basement Graves Room',
-            'Deku Tree MQ GS Basement Back Room']
-    else:
-        skulltula_locations_final = skulltula_locations + [
-            'Deku Tree GS Compass Room',
-            'Deku Tree GS Basement Vines',
-            'Deku Tree GS Basement Gate',
-            'Deku Tree GS Basement Back Room']
-    if world.dungeon_mq['Dodongos Cavern']:
-        skulltula_locations_final.extend([
-            'Dodongos Cavern MQ GS Scrub Room',
-            'Dodongos Cavern MQ GS Song of Time Block Room',
-            'Dodongos Cavern MQ GS Lizalfos Room',
-            'Dodongos Cavern MQ GS Larvae Room',
-            'Dodongos Cavern MQ GS Back Area'])
-    else:
-        skulltula_locations_final.extend([
-            'Dodongos Cavern GS Side Room Near Lower Lizalfos',
-            'Dodongos Cavern GS Vines Above Stairs',
-            'Dodongos Cavern GS Back Room',
-            'Dodongos Cavern GS Alcove Above Stairs',
-            'Dodongos Cavern GS Scarecrow'])
-    if world.dungeon_mq['Jabu Jabus Belly']:
-        skulltula_locations_final.extend([
-            'Jabu Jabus Belly MQ GS Tailpasaran Room',
-            'Jabu Jabus Belly MQ GS Invisible Enemies Room',
-            'Jabu Jabus Belly MQ GS Boomerang Chest Room',
-            'Jabu Jabus Belly MQ GS Near Boss'])
-    else:
-        skulltula_locations_final.extend([
-            'Jabu Jabus Belly GS Water Switch Room',
-            'Jabu Jabus Belly GS Lobby Basement Lower',
-            'Jabu Jabus Belly GS Lobby Basement Upper',
-            'Jabu Jabus Belly GS Near Boss'])
-    if world.dungeon_mq['Forest Temple']:
-        skulltula_locations_final.extend([
-            'Forest Temple MQ GS First Hallway',
-            'Forest Temple MQ GS Block Push Room',
-            'Forest Temple MQ GS Raised Island Courtyard',
-            'Forest Temple MQ GS Level Island Courtyard',
-            'Forest Temple MQ GS Well'])
-    else:
-        skulltula_locations_final.extend([
-            'Forest Temple GS First Room',
-            'Forest Temple GS Lobby',
-            'Forest Temple GS Raised Island Courtyard',
-            'Forest Temple GS Level Island Courtyard',
-            'Forest Temple GS Basement'])
-    if world.dungeon_mq['Fire Temple']:
-        skulltula_locations_final.extend([
-            'Fire Temple MQ GS Above Fire Wall Maze',
-            'Fire Temple MQ GS Fire Wall Maze Center',
-            'Fire Temple MQ GS Big Lava Room Open Door',
-            'Fire Temple MQ GS Fire Wall Maze Side Room',
-            'Fire Temple MQ GS Skull On Fire'])
-    else:
-        skulltula_locations_final.extend([
-            'Fire Temple GS Song of Time Room',
-            'Fire Temple GS Boulder Maze',
-            'Fire Temple GS Scarecrow Climb',
-            'Fire Temple GS Scarecrow Top',
-            'Fire Temple GS Boss Key Loop'])
-    if world.dungeon_mq['Water Temple']:
-        skulltula_locations_final.extend([
-            'Water Temple MQ GS Before Upper Water Switch',
-            'Water Temple MQ GS Freestanding Key Area',
-            'Water Temple MQ GS Lizalfos Hallway',
-            'Water Temple MQ GS River',
-            'Water Temple MQ GS Triple Wall Torch'])
-    else:
-        skulltula_locations_final.extend([
-            'Water Temple GS Behind Gate',
-            'Water Temple GS River',
-            'Water Temple GS Falling Platform Room',
-            'Water Temple GS Central Pillar',
-            'Water Temple GS Near Boss Key Chest'])
-    if world.dungeon_mq['Spirit Temple']:
-        skulltula_locations_final.extend([
-            'Spirit Temple MQ GS Symphony Room',
-            'Spirit Temple MQ GS Leever Room',
-            'Spirit Temple MQ GS Nine Thrones Room West',
-            'Spirit Temple MQ GS Nine Thrones Room North',
-            'Spirit Temple MQ GS Sun Block Room'])
-    else:
-        skulltula_locations_final.extend([
-            'Spirit Temple GS Metal Fence',
-            'Spirit Temple GS Sun on Floor Room',
-            'Spirit Temple GS Hall After Sun Block Room',
-            'Spirit Temple GS Boulder Room',
-            'Spirit Temple GS Lobby'])
-    if world.dungeon_mq['Shadow Temple']:
-        skulltula_locations_final.extend([
-            'Shadow Temple MQ GS Falling Spikes Room',
-            'Shadow Temple MQ GS Wind Hint Room',
-            'Shadow Temple MQ GS After Wind',
-            'Shadow Temple MQ GS After Ship',
-            'Shadow Temple MQ GS Near Boss'])
-    else:
-        skulltula_locations_final.extend([
-            'Shadow Temple GS Like Like Room',
-            'Shadow Temple GS Falling Spikes Room',
-            'Shadow Temple GS Single Giant Pot',
-            'Shadow Temple GS Near Ship',
-            'Shadow Temple GS Triple Giant Pot'])
-    if world.dungeon_mq['Bottom of the Well']:
-        skulltula_locations_final.extend([
-            'Bottom of the Well MQ GS Basement',
-            'Bottom of the Well MQ GS Coffin Room',
-            'Bottom of the Well MQ GS West Inner Room'])
-    else:
-        skulltula_locations_final.extend([
-            'Bottom of the Well GS West Inner Room',
-            'Bottom of the Well GS East Inner Room',
-            'Bottom of the Well GS Like Like Cage'])
-    if world.dungeon_mq['Ice Cavern']:
-        skulltula_locations_final.extend([
-            'Ice Cavern MQ GS Scarecrow',
-            'Ice Cavern MQ GS Ice Block',
-            'Ice Cavern MQ GS Red Ice'])
-    else:
-        skulltula_locations_final.extend([
-            'Ice Cavern GS Spinning Scythe Room',
-            'Ice Cavern GS Heart Piece Room',
-            'Ice Cavern GS Push Block Room'])
-    if world.tokensanity == 'off':
-        for location in skulltula_locations_final:
-            placed_items[location] = 'Gold Skulltula Token'
-    elif world.tokensanity == 'dungeons':
-        for location in skulltula_locations_final:
-            if world.get_location(location).scene >= 0x0A:
-                placed_items[location] = 'Gold Skulltula Token'
-            else:
-                pool.append('Gold Skulltula Token')
-    elif world.tokensanity == 'overworld':
-        for location in skulltula_locations_final:
-            if world.get_location(location).scene < 0x0A:
-                placed_items[location] = 'Gold Skulltula Token'
-            else:
-                pool.append('Gold Skulltula Token')
-    else:
-        pool.extend(['Gold Skulltula Token'] * 100)
-
 
     if world.bombchus_in_logic:
         pool.extend(['Bombchus'] * 4)
@@ -1255,6 +1236,43 @@ def get_pool_core(world):
             world.state.collect(item)
             pool.extend(get_junk_item())
 
+    if world.overworld_tokens == 'vanilla':
+        for location, item in vanillaoverworldGS.items():
+            try:
+                world.get_location(location)
+                placed_items[location] = item
+            except KeyError:
+                continue
+    else:
+        pool.extend(['Gold Skulltula Token (Kokiri Forest)'] * 3)
+        pool.extend(['Gold Skulltula Token (Lost Woods)'] * 3)
+        pool.extend(['Gold Skulltula Token (Sacred Forest Meadow)'] * 1)
+        pool.extend(['Gold Skulltula Token (Market Guard House)'] * 1)
+        pool.extend(['Gold Skulltula Token (Hyrule Castle Grounds)'] * 1)
+        pool.extend(['Gold Skulltula Token (Grotto)'] * 3)
+        pool.extend(['Gold Skulltula Token (Ganons Castle Grounds)'] * 1)
+        pool.extend(['Gold Skulltula Token (Lon Lon Ranch)'] * 4)
+        pool.extend(['Gold Skulltula Token (Kakariko Village)'] * 6)
+        pool.extend(['Gold Skulltula Token (Graveyard)'] * 2)
+        pool.extend(['Gold Skulltula Token (Death Mountain Trail)'] * 4)
+        pool.extend(['Gold Skulltula Token (Goron City)'] * 2)
+        pool.extend(['Gold Skulltula Token (Death Mountain Crater)'] * 2)
+        pool.extend(['Gold Skulltula Token (Zoras River)'] * 4)
+        pool.extend(['Gold Skulltula Token (Zoras Domain)'] * 1)
+        pool.extend(['Gold Skulltula Token (Zoras Fountain)'] * 3)
+        pool.extend(['Gold Skulltula Token (Lake Hylia)'] * 4)
+        pool.extend(['Gold Skulltula Token (LH Lab)'] * 1)
+        pool.extend(['Gold Skulltula Token (Gerudo Valley)'] * 4)
+        pool.extend(['Gold Skulltula Token (Gerudo Fortress)'] * 2)
+        pool.extend(['Gold Skulltula Token (Haunted Wasteland)'] * 1)
+        pool.extend(['Gold Skulltula Token (Desert Colossus)'] * 3)
+    if world.dungeon_tokens == 'vanilla':
+        for location, item in vanilladungeonGS.items():
+            try:
+                world.get_location(location)
+                placed_items[location] = item
+            except KeyError:
+                continue
     if world.shuffle_mapcompass == 'vanilla':
         for location, item in vanillaMC.items():
             try:

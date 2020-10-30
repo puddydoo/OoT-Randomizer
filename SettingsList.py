@@ -2617,31 +2617,69 @@ setting_infos = [
         },
     ),
     Combobox(
-        name           = 'tokensanity',
-        gui_text       = 'Tokensanity',
-        default        = 'off',
+        name           = 'overworld_tokens',
+        gui_text       = 'Shuffle Overworld Tokens',
+        default        = 'vanilla',
         choices        = {
-            'off':       'Off',
-            'dungeons':  'Dungeons Only',
-            'overworld': 'Overworld Only',
-            'all':       'All Tokens',
-            },
+            'vanilla':     'Vanilla Locations',
+            'overworld':   'Overworld Only',
+            'dungeons':    'Dungeons Only',
+            'tokensanity': 'Anywhere (Tokensanity)',
+        },
         gui_tooltip    = '''\
-            Token reward from Gold Skulltulas are
-            shuffled into the pool.
+            'Vanilla': All 56 Gold Skulltulas in the overworld
+            drop their respective tokens, as in vanilla.
+            
+            'Overworld Only': The 56 Gold Skulltula Tokens
+            can appear in any location in the overworld.
 
-            'Dungeons Only': This only shuffles
-            the GS locations that are within
-            dungeons, increasing the value of
-            most dungeons and making internal
-            dungeon exploration more diverse.
+            'Dungeons Only': 56 Gold Skulltula Tokens are
+            removed from the overworld and placed within
+            dungeons. Tokens can still be added to the
+            overworld if dungeon tokens are shuffled.
 
-            'Overworld Only': This only shuffles
-            the GS locations that are outside
-            of dungeons.
+            'Anywhere': The 56 Gold Skulltula Tokens from
+            the overworld can appear anywhere in the world.
+        ''',
+        shared         = True,
+        gui_params     = {
+            'randomize_key': 'randomize_settings',
+        },
+    ),
+    Combobox(
+        name           = 'dungeon_tokens',
+        gui_text       = 'Gold Skulltula Tokens',
+        default        = 'vanilla',
+        choices        = {
+            'vanilla':     'Vanilla Locations',
+            'dungeon':     'Dungeon Only',
+            'overworld':   'Overworld Only',
+            'any_dungeon': 'Any Dungeon',
+            'tokensanity': 'Anywhere (Tokensanity)',
+        },
+        gui_tooltip    = '''\
+            'Vanilla': All 44 Gold Skulltulas in dungeons
+            drop their respective tokens, as in vanilla.
+            
+            'Dungeon': Each dungeon will contain at least
+            the same number of Gold Skulltula Tokens as
+            in vanilla. Additional tokens can appear in
+            dungeons if overworld tokens are shuffled.
+            
+            'Overworld Only': 44 Gold Skulltula Tokens are
+            removed from dungeons and placed in the
+            overworld. Tokens can still be added to
+            dungeons if overworld tokens are shuffled.
 
-            'All Tokens': Effectively adds 100
-            new locations for items to appear.
+            'Any Dungeon': The 44 Gold Skulltula Tokens
+            are spread across all dungeons.
+
+            'Anywhere': The 44 Gold Skulltula Tokens from
+            dungeons can appear anywhere in the world.
+            
+            Setting this to 'Anywhere' or 'Overworld Only'
+            increases the value of most dungeons and makes
+            internal dungeon exploration more diverse.
         ''',
         shared         = True,
         gui_params     = {
@@ -3249,6 +3287,8 @@ setting_infos = [
             In addition, overworld tokensanity will always
             hint the location of Sun's Song, and shopsanity
             will always hint the location of a wallet.
+            (I don't know if this is implemented on this
+            branch that changes how tokens work)
 
             Leaving this entry blank or providing an
             invalid URL will generate generic item hints

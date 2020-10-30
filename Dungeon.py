@@ -1,6 +1,6 @@
 class Dungeon(object):
 
-    def __init__(self, world, name, hint, boss_key, small_keys, dungeon_items):
+    def __init__(self, world, name, hint, boss_key, small_keys, gs_tokens, dungeon_items):
         def to_array(obj):
             if obj == None:
                 return []
@@ -15,6 +15,7 @@ class Dungeon(object):
         self.regions = []
         self.boss_key = to_array(boss_key)
         self.small_keys = to_array(small_keys)
+        self.gs_tokens = to_array(gs_tokens)
         self.dungeon_items = to_array(dungeon_items)
 
         for region in world.regions:
@@ -26,9 +27,10 @@ class Dungeon(object):
     def copy(self, new_world):
         new_boss_key = [item.copy(new_world) for item in self.boss_key]
         new_small_keys = [item.copy(new_world) for item in self.small_keys]
+        new_gs_tokens = [item.copy(new_world) for item in self.gs_tokens]
         new_dungeon_items = [item.copy(new_world) for item in self.dungeon_items]
 
-        new_dungeon = Dungeon(new_world, self.name, self.hint, new_boss_key, new_small_keys, new_dungeon_items)
+        new_dungeon = Dungeon(new_world, self.name, self.hint, new_boss_key, new_small_keys, new_gs_tokens, new_dungeon_items)
 
         return new_dungeon
 

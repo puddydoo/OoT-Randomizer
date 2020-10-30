@@ -12,6 +12,7 @@ dungeon_table = [
         'boss_key':     0, 
         'small_key':    0,
         'small_key_mq': 0,
+        'gs_token':     4,
         'dungeon_item': 1,
     },
     {
@@ -20,6 +21,7 @@ dungeon_table = [
         'boss_key':     0, 
         'small_key':    0,
         'small_key_mq': 0,
+        'gs_token':     5,
         'dungeon_item': 1,
     },
     {
@@ -28,6 +30,7 @@ dungeon_table = [
         'boss_key':     0, 
         'small_key':    0,
         'small_key_mq': 0,
+        'gs_token':     4,
         'dungeon_item': 1,
     },
     {
@@ -35,6 +38,7 @@ dungeon_table = [
         'boss_key':     1, 
         'small_key':    5,
         'small_key_mq': 6,
+        'gs_token':     5,
         'dungeon_item': 1,
     },
     {
@@ -42,6 +46,7 @@ dungeon_table = [
         'boss_key':     0, 
         'small_key':    3,
         'small_key_mq': 2,
+        'gs_token':     3,
         'dungeon_item': 1,
     },
     {
@@ -49,6 +54,7 @@ dungeon_table = [
         'boss_key':     1, 
         'small_key':    8,
         'small_key_mq': 5,
+        'gs_token':     5,
         'dungeon_item': 1,
     },
     {
@@ -56,6 +62,7 @@ dungeon_table = [
         'boss_key':     0, 
         'small_key':    0,
         'small_key_mq': 0,
+        'gs_token':     3,
         'dungeon_item': 1,
     },
     {
@@ -63,6 +70,7 @@ dungeon_table = [
         'boss_key':     1, 
         'small_key':    6,
         'small_key_mq': 2,
+        'gs_token':     5,
         'dungeon_item': 1,
     },
     {
@@ -70,6 +78,7 @@ dungeon_table = [
         'boss_key':     1, 
         'small_key':    5,
         'small_key_mq': 6,
+        'gs_token':     5,
         'dungeon_item': 1,
     },
     {
@@ -77,6 +86,7 @@ dungeon_table = [
         'boss_key':     0, 
         'small_key':    9,
         'small_key_mq': 3,
+        'gs_token':     0,
         'dungeon_item': 0,
     },
     {
@@ -84,6 +94,7 @@ dungeon_table = [
         'boss_key':     1, 
         'small_key':    5,
         'small_key_mq': 7,
+        'gs_token':     5,
         'dungeon_item': 1,
     },
     {
@@ -92,6 +103,7 @@ dungeon_table = [
         'boss_key':     1, 
         'small_key':    2,
         'small_key_mq': 3,
+        'gs_token':     0,
         'dungeon_item': 0,
     },
 ]
@@ -121,11 +133,12 @@ def create_dungeons(world):
             small_keys = ItemFactory(['Small Key (%s)' % name] * dungeon_info['small_key'])
         else:
             small_keys = ItemFactory(['Small Key (%s)' % name] * dungeon_info['small_key_mq'])           
+        gs_tokens = ItemFactory(['Gold Skulltula Token (%s)' % name] * dungeon_info['gs_token'])
         dungeon_items = ItemFactory(['Map (%s)' % name, 
                                      'Compass (%s)' % name] * dungeon_info['dungeon_item'])
         if world.settings.shuffle_mapcompass in ['any_dungeon', 'overworld']:
             for item in dungeon_items:
                 item.priority = True
 
-        world.dungeons.append(Dungeon(world, name, hint, boss_keys, small_keys, dungeon_items))
+        world.dungeons.append(Dungeon(world, name, hint, boss_keys, small_keys, gs_tokens, dungeon_items))
 

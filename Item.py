@@ -5,6 +5,7 @@ class ItemInfo(object):
     items = {}
     events = {}
     bottles = set()
+    tokens = set()
     medallions = set()
     stones = set()
 
@@ -25,6 +26,7 @@ class ItemInfo(object):
         self.index = itemID
         self.price = self.special.get('price')
         self.bottle = self.special.get('bottle', False)
+        self.token = self.special.get('token', False)
         self.medallion = self.special.get('medallion', False)
         self.stone = self.special.get('stone', False)
 
@@ -33,6 +35,8 @@ for item_name in item_table:
     ItemInfo.items[item_name] = ItemInfo(item_name)
     if ItemInfo.items[item_name].bottle:
         ItemInfo.bottles.add(item_name)
+    if ItemInfo.items[item_name].token:
+        ItemInfo.tokens.add(item_name)
     if ItemInfo.items[item_name].medallion:
         ItemInfo.medallions.add(item_name)
     if ItemInfo.items[item_name].stone:
@@ -87,6 +91,11 @@ class Item(object):
 
 
     @property
+    def token(self):
+        return self.type == 'Token' or self.type == 'DungeonToken'
+
+
+    @property
     def key(self):
         return self.smallkey or self.bosskey
 
@@ -114,11 +123,11 @@ class Item(object):
     @property
     def dungeonitem(self):
         return self.smallkey or self.bosskey or self.map or self.compass
-
+    
 
     @property
     def majoritem(self):
-        if self.type == 'Token':
+        if self.token:
             return self.world.bridge == 'tokens' or self.world.lacs_condition == 'tokens'
 
         if self.type in ('Drop', 'Event', 'Shop', 'DungeonReward') or not self.advancement:

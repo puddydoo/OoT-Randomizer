@@ -63,7 +63,14 @@ class Region(object):
         is_self_dungeon_restricted = False
         is_dungeon_restricted = False
         is_overworld_restricted = False
-        if item.map or item.compass:
+        if item.type == 'Token':
+            is_dungeon_restricted = self.world.overworld_tokens == 'dungeons'
+            is_overworld_restricted = self.world.overworld_tokens == 'overworld'
+        elif item.type == 'DungeonToken':
+            is_self_dungeon_restricted = self.world.dungeon_tokens in ['dungeon', 'vanilla']
+            is_dungeon_restricted = self.world.dungeon_tokens == 'any_dungeon'
+            is_overworld_restricted = self.world.dungeon_tokens == 'overworld'
+        elif item.map or item.compass:
             is_self_dungeon_restricted = self.world.shuffle_mapcompass in ['dungeon', 'vanilla']
             is_dungeon_restricted = self.world.shuffle_mapcompass == 'any_dungeon'
             is_overworld_restricted = self.world.shuffle_mapcompass == 'overworld'

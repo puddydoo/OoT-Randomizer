@@ -111,13 +111,15 @@ gossipLocations_reversemap = {
 }
 
 def getItemGenericName(item):
-    if item.dungeonitem:
+    if item.token or item.dungeonitem:
         return item.type
     else:
         return item.name
 
 
 def isRestrictedDungeonItem(dungeon, item):
+    if item.type == 'DungeonToken' and dungeon.world.dungeon_tokens == 'dungeon':
+        return item in dungeon.dungeon_items
     if (item.map or item.compass) and dungeon.world.shuffle_mapcompass == 'dungeon':
         return item in dungeon.dungeon_items
     if item.type == 'SmallKey' and dungeon.world.shuffle_smallkeys == 'dungeon':
