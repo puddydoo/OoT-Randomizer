@@ -1909,7 +1909,7 @@
         #"room": 00,
         "savewarp": "Collapse Exterior Savewarp",
         "exits": {
-            "Collapse Interior 5F": "True"
+            "Collapse Interior 5F": "at_day"
         }
     },
     {
@@ -1926,7 +1926,7 @@
         #"room": 00,
         "savewarp": "Collapse Exterior Savewarp",
         "exits": {
-            "Collapse Interior 5F": "True",
+            "Collapse Interior 5F": "at_day",
             "Collapse Exterior 2 Lower": "True", #can_autojump or can_use(Hover_Boots)
             "Collapse Exterior 1": "False"
         }
@@ -1937,7 +1937,7 @@
         "savewarp": "Collapse Exterior Savewarp",
         "exits": {
             "Collapse Exterior 2 Upper": "True", #can_autojump or can_use(Hover_Boots)
-            "Collapse Interior 4F": "True"
+            "Collapse Interior 4F": "at_day"
         }
     },
     {
@@ -1954,7 +1954,7 @@
         #"room": 00,
         "savewarp": "Collapse Exterior Savewarp",
         "exits": {
-            "Collapse Interior 4F": "True",
+            "Collapse Interior 4F": "at_day",
             "Collapse Exterior 3 Lower": "True",
             "Collapse Exterior 2 Lower": "False",
             "Collapse Exterior 1": "False"
@@ -1966,7 +1966,7 @@
         "savewarp": "Collapse Exterior Savewarp",
         "exits": {
             "Collapse Exterior 3 Upper": "True",
-            "Collapse Interior 3F": "True"
+            "Collapse Interior 3F": "at_day"
         }
     },
     {
@@ -1984,7 +1984,7 @@
         #"room": 00,
         "savewarp": "Collapse Exterior Savewarp",
         "exits": {
-            "Collapse Interior 3F": "True",
+            "Collapse Interior 3F": "at_day",
             "Collapse Exterior 4 Lower": "True",
             "Collapse Exterior 3 Lower": "False",
             "Collapse Exterior 2 Lower": "False",
@@ -1997,7 +1997,7 @@
         "savewarp": "Collapse Exterior Savewarp",
         "exits": {
             "Collapse Exterior 4 Upper": "True", #can_climb(66)
-            "Collapse Interior 2F": "True"
+            "Collapse Interior 2F": "at_day"
         }
     },
     {
