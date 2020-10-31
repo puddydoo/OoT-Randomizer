@@ -223,6 +223,7 @@ class World(object):
 
         new_world.always_hints = list(self.always_hints)
         new_world.max_progressions = copy.copy(self.max_progressions)
+        new_world.max_tokens = copy.copy(self.max_tokens)
 
         return new_world
 
