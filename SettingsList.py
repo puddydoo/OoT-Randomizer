@@ -1189,8 +1189,8 @@ logic_tricks = {
         'tooltip' : '''\
                     A precise jump can be used to skip
                     needing to use the Slingshot to go
-                    around B1 of the Deku Tree. If used
-                    with the "Require Deku Tree" setting,
+                    around B1 of the Deku Tree. If using
+                    "Closed Forest Requires Deku Tree",
                     a Slingshot will not be guaranteed
                     to exist somewhere inside the Forest.
                     This trick applies to both Vanilla
@@ -1895,10 +1895,6 @@ setting_infos = [
             to Closed Deku if selected.
         ''',
         shared         = True,
-        disable        = {	
-            'open' : {'settings' : ['require_deku']},
-            'closed_deku' : {'settings' : ['require_deku']}       
-        },
         gui_params     = {
             'randomize_key': 'randomize_settings',
             'distribution': [
@@ -1906,24 +1902,6 @@ setting_infos = [
                 ('closed_deku', 1),
                 ('closed', 1),
             ],
-        },
-    ),
-    Checkbutton(
-        name           = 'require_deku',
-        gui_text       = 'Require Deku Tree',
-        default        = True,
-        gui_tooltip    = '''\
-            If enabled, beating the Deku Tree dungeon will be
-            logically required to go outside the forest area
-            (Kokiri Forest, Lost Woods, Sacred Forest Meadow,
-            Deku Tree, and all of the houses and grottos within).
-            The Kokiri Sword, Deku Shield, and Slingshot needed
-            for this will be guaranteed within the forest area.
-        ''',
-        shared         = True,
-        disabled_default = False,
-        gui_params     = {
-            "hide_when_disabled" : True,
         },
     ),
     Combobox(
@@ -2200,8 +2178,7 @@ setting_infos = [
             considered available. MAY BE IMPOSSIBLE TO BEAT.
         ''',
         disable        = {
-            'glitched'  : {'settings' : ['allowed_tricks', 'require_deku',
-                                         'shuffle_interior_entrances', 'shuffle_grotto_entrances',
+            'glitched'  : {'settings' : ['allowed_tricks', 'shuffle_interior_entrances', 'shuffle_grotto_entrances',
                                          'shuffle_dungeon_entrances', 'shuffle_overworld_entrances', 'owl_drops',
                                          'warp_songs', 'spawn_positions', 'mq_dungeons_random', 'mq_dungeons', ]},
             'none'      : {'tabs'     : ['detailed_tab']},
@@ -2399,6 +2376,28 @@ setting_infos = [
             during the night expect you to have Sun's
             Song to collect them. This prevents needing
             to wait until night for some locations.
+        ''',
+        shared         = True,
+    ),
+    Checkbutton(
+        name           = 'logic_require_deku',
+        gui_text       = 'Closed Forest Requires Deku Tree',
+        default        = True,
+        gui_tooltip    = '''\
+            If Closed Forest is enabled, beating the Deku Tree
+            dungeon is logically required in order to go outside
+            the forest area (Kokiri Forest, Deku Tree, Lost Woods,
+            Sacred Forest Meadow, and houses and grottos within).
+            The Kokiri Sword, Deku Shield, and Slingshot needed
+            for this will be guaranteed within the forest area.
+            This setting does not apply with:
+
+             - Glitched logic
+             - Starting Age set to Adult
+             - Shuffle Overworld Entrances
+             - Shuffle Interior Entrances set to "All Interiors"
+             - Randomize Warp Song Destinations
+             - Randomize Overworld Spawns
         ''',
         shared         = True,
     ),
@@ -2671,9 +2670,6 @@ setting_infos = [
             and items never revert, even when dying or loading a save.
         ''',
         shared         = True,
-        disable        = {	
-            'all' : {'settings' : ['require_deku']}	
-        },
         gui_params     = {
             'randomize_key': 'randomize_settings',
             'distribution':  [
@@ -2731,9 +2727,6 @@ setting_infos = [
         ''',
         default        = False,
         shared         = True,
-        disable        = {	
-            True: {'settings' : ['require_deku']}	
-        },
         gui_params     = {
             'randomize_key': 'randomize_settings',
         },
@@ -2760,9 +2753,6 @@ setting_infos = [
         ''',
         default        = False,
         shared         = True,
-        disable        = {	
-            True: {'settings' : ['require_deku']}	
-        },
         gui_params     = {
             'randomize_key': 'randomize_settings',
         },
@@ -2779,9 +2769,6 @@ setting_infos = [
         ''',
         default        = False,
         shared         = True,
-        disable        = {	
-            True: {'settings' : ['require_deku']}	
-        },
         gui_params     = {
             'randomize_key': 'randomize_settings',
         },
@@ -3694,9 +3681,6 @@ setting_infos = [
             the Master Sword in your inventory.
         ''',
         shared         = True,
-        disable        = {	
-            'adult' : {'settings' : ['require_deku']}	
-        },
         gui_params     = {
             'randomize_key': 'randomize_settings',
             'distribution': [

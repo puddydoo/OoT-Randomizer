@@ -148,7 +148,6 @@
           "row_span": [6,6,9],
           "settings": [
             "open_forest",
-            "require_deku",
             "open_kakariko",
             "open_door_of_time",
             "zora_fountain",
@@ -232,7 +231,8 @@
           "row_span": [1,1,1],
           "settings": [
             "all_reachable",
-            "logic_no_night_tokens_without_suns_song"
+            "logic_no_night_tokens_without_suns_song",
+            "logic_require_deku"
           ]
         },
         {
@@ -337,7 +337,7 @@
             "bingosync_url",
             "text_shuffle",
             "damage_multiplier",
-			"no_collectible_hearts",
+            "no_collectible_hearts",
             "starting_tod"
           ]
         },
