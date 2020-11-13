@@ -2197,7 +2197,11 @@ setting_infos = [
             to beat the game will be guaranteed reachable.
         ''',
         default        = True,
-        shared         = True
+        shared         = True,
+        gui_params     = {
+            'no_line_break' : True,
+            'web:no_line_break' : False,
+        },
     ),
     Checkbutton(
         name           = 'bombchus_in_logic',
@@ -2378,6 +2382,10 @@ setting_infos = [
             to wait until night for some locations.
         ''',
         shared         = True,
+        gui_params     = {
+            'no_line_break' : True,
+            'web:no_line_break' : False,
+        },
     ),
     Checkbutton(
         name           = 'logic_require_deku',
@@ -2390,7 +2398,8 @@ setting_infos = [
             Sacred Forest Meadow, and houses and grottos within).
             The Kokiri Sword, Deku Shield, and Slingshot needed
             for this will be guaranteed within the forest area.
-            This setting does not apply with:
+            
+            This does not apply with certain settings:
 
              - Glitched logic
              - Starting Age set to Adult
