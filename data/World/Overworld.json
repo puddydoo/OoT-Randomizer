@@ -6,7 +6,8 @@
             "Links Pocket": "True"
         },
         "exits": {
-            "Root Exits": "is_starting_age or Time_Travel"
+            "Root Exits": "is_starting_age or Time_Travel",
+            "HC Garden Locations": "skip_child_zelda"
         }
     },
     {
@@ -792,7 +793,7 @@
         },
         "exits": {
             "Castle Grounds": "True",
-            "HC Garden": "Weird_Egg or (not shuffle_weird_egg)",
+            "HC Garden": "Weird_Egg or skip_child_zelda or (not shuffle_weird_egg)",
             "HC Great Fairy Fountain": "has_explosives",
             "HC Storms Grotto": "can_open_storm_grotto"
         }
@@ -801,12 +802,19 @@
         "region_name": "HC Garden",
         "scene": "Castle Grounds",
         "hint": "Hyrule Castle",
+        "exits": {
+            "HC Garden Locations": "True",
+            "Hyrule Castle Grounds": "True"
+        }
+    },
+    {
+        # Directly reachable from Root in "Free Zelda"
+        "region_name": "HC Garden Locations",
+        "scene": "Castle Grounds",
+        "hint": "Hyrule Castle",
         "locations": {
             "HC Zeldas Letter": "True",
             "Song from Impa": "True"
-        },
-        "exits": {
-            "Hyrule Castle Grounds": "True"
         }
     },
     {
@@ -994,7 +1002,8 @@
                 is_child and (Slingshot or has_bombchus or 
                     (logic_kakariko_tower_gs and (Sticks or Kokiri_Sword) and
                     (damage_multiplier != 'ohko' or Fairy or can_use(Nayrus_Love)))) and at_night",
-            "Kak GS Above Impas House": "can_use(Hookshot) and at_night",
+            "Kak GS Above Impas House": "
+                (can_use(Hookshot) or (logic_kakariko_rooftop_gs and can_use(Hover_Boots))) and at_night",
             "Bug Rock": "has_bottle"
         },
         "exits": {
@@ -1310,7 +1319,9 @@
             "DMT GS Near Kak": "can_blast_or_smash",
             "DMT GS Above Dodongos Cavern": "
                 is_adult and at_night and
-                (can_use(Megaton_Hammer) or (logic_trail_gs_lower_hookshot and can_use(Hookshot)) or
+                (can_use(Megaton_Hammer) or
+                    (logic_trail_gs_lower_hookshot and can_use(Hookshot)) or
+                    (logic_trail_gs_lower_hovers and can_use(Hover_Boots)) or
                     (logic_trail_gs_lower_bean and here(can_plant_bean and (has_explosives or Progressive_Strength_Upgrade))))",
             "Bean Plant Fairy": "
                 can_plant_bean and can_play(Song_of_Storms) and has_bottle and

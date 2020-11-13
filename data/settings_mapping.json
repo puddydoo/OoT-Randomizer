@@ -308,6 +308,7 @@
           "text": "Timesavers",
           "row_span": [1,1,1],
           "settings": [
+            "skip_child_zelda",
             "no_escape_sequence",
             "no_guard_stealth",
             "no_epona_race",
@@ -336,6 +337,7 @@
             "bingosync_url",
             "text_shuffle",
             "damage_multiplier",
+			"no_collectible_hearts",
             "starting_tod"
           ]
         },
