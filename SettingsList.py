@@ -2398,9 +2398,10 @@ setting_infos = [
             Sacred Forest Meadow, and houses and grottos within).
             The Kokiri Sword, Deku Shield, and Slingshot needed
             for this will be guaranteed within the forest area.
-            
+
             This does not apply with certain settings:
 
+             - Open Forest or Closed Deku
              - Glitched logic
              - Starting Age set to Adult
              - Shuffle Overworld Entrances
