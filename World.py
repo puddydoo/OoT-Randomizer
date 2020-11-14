@@ -52,17 +52,47 @@ class World(object):
         self.keysanity = self.shuffle_smallkeys in ['keysanity', 'remove', 'any_dungeon', 'overworld']
         self.check_beatable_only = not self.all_reachable
 
-        self.shuffle_special_interior_entrances = self.shuffle_interior_entrances == 'all'
-        self.shuffle_interior_entrances = self.shuffle_interior_entrances in ['simple', 'all']
+        if self.grotto_entrances == 'mix':
+            # Dungeons in grottos make the blue warp go to the vanilla location
+            # So don't shuffle grottos into the same pool as dungeons
+            if (self.dungeon_entrances == 'mix' or (self.interior_entrances != 'mix' and self.overworld_entrances != 'mix')):
+                self.grotto_entrances = 'shuffle'
+                if self.dungeon_entrances == 'mix' and self.interior_entrances != 'mix' and self.overworld_entrances != 'mix':
+                    self.dungeon_entrances = 'shuffle'
+        elif self.dungeon_entrances == 'mix':
+            if self.interior_entrances != 'mix' and self.overworld_entrances != 'mix':
+                self.dungeon_entrances = 'shuffle'
+        elif self.interior_entrances == 'mix':
+            if self.overworld_entrances != 'mix':
+                self.interior_entrances = 'shuffle'
+        elif self.overworld_entrances == 'mix':
+            self.overworld_entrances = 'shuffle'
+        
+        if self.grotto_entrances == 'insanity':
+            if self.dungeon_entrances == 'insanity':
+                self.grotto_entrances = 'decouple'
+                if self.dungeon_entrances == 'insanity' and self.interior_entrances != 'insanity' and self.overworld_entrances != 'insanity':
+                    self.dungeon_entrances = 'decouple'
+        elif self.dungeon_entrances == 'insanity':
+            if self.interior_entrances != 'insanity' and self.overworld_entrances != 'insanity':
+                self.dungeon_entrances = 'decouple'
+        elif self.interior_entrances == 'insanity':
+            if self.overworld_entrances != 'insanity':
+                self.interior_entrances = 'decouple'
+        elif self.overworld_entrances == 'insanity':
+            self.overworld_entrances = 'decouple'
 
-        self.entrance_shuffle = self.shuffle_interior_entrances or self.shuffle_grotto_entrances or self.shuffle_dungeon_entrances or \
-                                self.shuffle_overworld_entrances or self.owl_drops or self.warp_songs or self.spawn_positions
+        self.entrance_shuffle = self.interior_entrances != 'off' or self.grotto_entrances != 'off' or self.dungeon_entrances != 'off' or \
+                                self.overworld_entrances != 'off' or self.owl_drops or self.warp_songs or self.spawn_positions
+        self.mix_entrance_pools = self.interior_entrances in ['mix', 'insanity'] or self.grotto_entrances in ['mix', 'insanity'] or \
+                                self.dungeon_entrances in ['mix', 'insanity'] or self.overworld_entrances in ['mix', 'insanity'] or \
+                                not self.split_decouple_sides
 
-        self.ensure_tod_access = self.shuffle_interior_entrances or self.shuffle_overworld_entrances or self.spawn_positions
-        self.disable_trade_revert = self.shuffle_interior_entrances or self.shuffle_overworld_entrances or self.warp_songs
+        self.ensure_tod_access = self.interior_entrances != 'off' or self.overworld_entrances != 'off' or self.spawn_positions
+        self.disable_trade_revert = self.interior_entrances != 'off' or self.overworld_entrances != 'off' or self.warp_songs
 
-        if self.open_forest == 'closed' and (self.shuffle_special_interior_entrances or self.shuffle_overworld_entrances or 
-                                             self.warp_songs or self.spawn_positions or self.decouple_entrances or (self.mix_entrance_pools != 'off')):
+        if self.open_forest == 'closed' and (self.shuffle_special_interior_entrances or self.overworld_entrances != 'off' or 
+                                             self.warp_songs or self.spawn_positions or (self.interior_entrances in ['mix', 'insanity'])):
             self.open_forest = 'closed_deku'
 
         self.triforce_goal = self.triforce_goal_per_world * settings.world_count
@@ -669,13 +699,13 @@ class World(object):
             'Biggoron Sword',
         ]
         if (self.damage_multiplier != 'ohko' and self.damage_multiplier != 'quadruple' and 
-            self.shuffle_scrubs == 'off' and not self.shuffle_grotto_entrances):
+            self.shuffle_scrubs == 'off' and self.grotto_entrances == 'off'):
             # nayru's love may be required to prevent forced damage
             exclude_item_list.append('Nayrus Love')
         if self.logic_grottos_without_agony and self.hints != 'agony':
             # Stone of Agony skippable if not used for hints or grottos
             exclude_item_list.append('Stone of Agony')
-        if not self.shuffle_special_interior_entrances and not self.shuffle_overworld_entrances and not self.warp_songs and not self.spawn_positions:
+        if not self.shuffle_special_interior_entrances and self.overworld_entrances == 'off' and not self.warp_songs and not self.spawn_positions:
             # Serenade and Prelude are never required unless one of those settings is enabled
             exclude_item_list.append('Serenade of Water')
             exclude_item_list.append('Prelude of Light')

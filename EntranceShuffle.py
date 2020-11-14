@@ -20,11 +20,19 @@ def set_all_entrances_data(world):
         forward_entrance.primary = True
         if type == 'Grotto':
             forward_entrance.data['index'] = 0x1000 + forward_entrance.data['grotto_id']
+            if world.grotto_entrances in ['decouple', 'insanity']:
+                forward_entrance.decouple = True
+        elif (type == 'Grave' and world.grotto_entrances in ['decouple', 'insanity']) or \
+         (type in ('Interior', 'SpecialInterior') and world.interior_entrances in ['decouple', 'insanity']) or \
+         (type == 'Dungeon' and world.dungeon_entrances in ['decouple', 'insanity']) or \
+         (type == 'Overworld' and world.overworld_entrances in ['decouple', 'insanity']):
+            forward_entrance.decouple = True
         if return_entry:
             return_entry = return_entry[0]
             return_entrance = world.get_entrance(return_entry[0])
             return_entrance.data = return_entry[1]
             return_entrance.type = type
+            return_entrance.decouple = forward_entrance.decouple
             forward_entrance.bind_two_way(return_entrance)
             if type == 'Grotto':
                 return_entrance.data['index'] = 0x2000 + return_entrance.data['grotto_id']
@@ -34,10 +42,10 @@ def assume_entrance_pool(entrance_pool):
     assumed_pool = []
     for entrance in entrance_pool:
         assumed_forward = entrance.assume_reachable()
-        if entrance.reverse != None and not entrance.world.decouple_entrances:
+        if entrance.reverse != None and not entrance.decouple:
             assumed_return = entrance.reverse.assume_reachable()
             world = entrance.world
-            if not ((world.mix_entrance_pools != 'off') and (world.shuffle_overworld_entrances or world.shuffle_special_interior_entrances)):
+            if not (world.overworld_entrances == 'mix' or (world.interior_entrances == 'mix' and world.shuffle_special_interior_entrances)):
                 if (entrance.type in ('Dungeon', 'Grotto', 'Grave') and entrance.reverse.name != 'Spirit Temple Lobby -> Desert Colossus From Spirit Lobby') or \
                    (entrance.type == 'Interior' and world.shuffle_special_interior_entrances):
                     # In most cases, Dungeon, Grotto/Grave and Simple Interior exits shouldn't be assumed able to give access to their parent region
@@ -375,51 +383,90 @@ def shuffle_random_entrances(worlds):
 
         if worlds[0].warp_songs:
             one_way_entrance_pools['WarpSong'] = world.get_shufflable_entrances(type='WarpSong')
+        
+        dungeon_entrance_pool = world.get_shufflable_entrances(type='Dungeon', only_primary=True)
+        # The fill algorithm will already make sure gohma is reachable, however it can end up putting
+        # a forest escape via the hands of spirit on Deku leading to Deku on spirit in logic. This is
+        # not really a closed forest anymore, so specifically remove Deku Tree from closed forest.
+        if worlds[0].open_forest == 'closed':
+            dungeon_entrance_pool.remove(world.get_entrance('KF Outside Deku Tree -> Deku Tree Lobby'))
+        interior_entrance_pool = world.get_shufflable_entrances(type='Interior', only_primary=True)
+        if worlds[0].shuffle_special_interior_entrances:
+            interior_entrance_pool += world.get_shufflable_entrances(type='SpecialInterior', only_primary=True)
+        grotto_entrance_pool = world.get_shufflable_entrances(type='Grotto', only_primary=True)
+        grotto_entrance_pool += world.get_shufflable_entrances(type='Grave', only_primary=True)
+        overworld_entrance_pool = world.get_shufflable_entrances(type='Overworld', only_primary=worlds[0].overworld_entrances == 'mix')
+        entrance_pools['Mixed'] = []
+        entrance_pools['Insanity'] = []
+        entrance_pools['InsanityReverse'] = []
 
-        if worlds[0].shuffle_dungeon_entrances:
-            entrance_pools['Dungeon'] = world.get_shufflable_entrances(type='Dungeon', only_primary=True)
-            # The fill algorithm will already make sure gohma is reachable, however it can end up putting
-            # a forest escape via the hands of spirit on Deku leading to Deku on spirit in logic. This is
-            # not really a closed forest anymore, so specifically remove Deku Tree from closed forest.
-            if worlds[0].open_forest == 'closed':
-                entrance_pools['Dungeon'].remove(world.get_entrance('KF Outside Deku Tree -> Deku Tree Lobby'))
-            if worlds[0].decouple_entrances:
-                entrance_pools['DungeonReverse'] = [entrance.reverse for entrance in entrance_pools['Dungeon']]
+        if worlds[0].dungeon_entrances == 'shuffle':
+            entrance_pools['Dungeon'] = dungeon_entrance_pool
+        elif worlds[0].dungeon_entrances == 'mix':
+            entrance_pools['Mixed'] += dungeon_entrance_pool
+        elif worlds[0].dungeon_entrances == 'decouple':
+            entrance_pools['Dungeon'] = dungeon_entrance_pool
+            if worlds[0].split_decouple_sides:
+                entrance_pools['DungeonReverse'] = [entrance.reverse for entrance in dungeon_entrance_pool]
+            else:
+                entrance_pools['Dungeon'] += [entrance.reverse for entrance in dungeon_entrance_pool]
+        elif worlds[0].dungeon_entrances == 'insanity':
+            entrance_pools['Insanity'] += dungeon_entrance_pool
+            if worlds[0].split_decouple_sides and not worlds[0].overworld_entrances == 'insanity':
+                entrance_pools['InsanityReverse'] += [entrance.reverse for entrance in dungeon_entrance_pool]
+            else:
+                entrance_pools['Insanity'] += [entrance.reverse for entrance in dungeon_entrance_pool]
 
-        if worlds[0].shuffle_interior_entrances:
-            entrance_pools['Interior'] = world.get_shufflable_entrances(type='Interior', only_primary=True)
-            if worlds[0].shuffle_special_interior_entrances:
-                entrance_pools['Interior'] += world.get_shufflable_entrances(type='SpecialInterior', only_primary=True)
-            if worlds[0].decouple_entrances:
-                entrance_pools['InteriorReverse'] = [entrance.reverse for entrance in entrance_pools['Interior']]
+        if worlds[0].interior_entrances == 'shuffle':
+            entrance_pools['Interior'] = interior_entrance_pool
+        elif worlds[0].interior_entrances == 'mix':
+            entrance_pools['Mixed'] += interior_entrance_pool
+        elif worlds[0].interior_entrances == 'decouple':
+            entrance_pools['Interior'] = interior_entrance_pool
+            if worlds[0].split_decouple_sides:
+                entrance_pools['InteriorReverse'] = [entrance.reverse for entrance in interior_entrance_pool]
+            else:
+                entrance_pools['Interior'] += [entrance.reverse for entrance in interior_entrance_pool]
+        elif worlds[0].interior_entrances == 'insanity':
+            entrance_pools['Insanity'] += interior_entrance_pool
+            if worlds[0].split_decouple_sides and not worlds[0].overworld_entrances == 'insanity':
+                entrance_pools['InsanityReverse'] += [entrance.reverse for entrance in interior_entrance_pool]
+            else:
+                entrance_pools['Insanity'] += [entrance.reverse for entrance in interior_entrance_pool]
 
-        if worlds[0].shuffle_grotto_entrances:
-            entrance_pools['GrottoGrave'] = world.get_shufflable_entrances(type='Grotto', only_primary=True)
-            entrance_pools['GrottoGrave'] += world.get_shufflable_entrances(type='Grave', only_primary=True)
-            if worlds[0].decouple_entrances:
-                entrance_pools['GrottoGraveReverse'] = [entrance.reverse for entrance in entrance_pools['GrottoGrave']]
+        if worlds[0].grotto_entrances == 'shuffle':
+            entrance_pools['GrottoGrave'] = grotto_entrance_pool
+        elif worlds[0].grotto_entrances == 'mix':
+            entrance_pools['Mixed'] += grotto_entrance_pool
+        elif worlds[0].grotto_entrances == 'decouple':
+            entrance_pools['GrottoGrave'] = grotto_entrance_pool
+            if worlds[0].split_decouple_sides:
+                entrance_pools['GrottoGraveReverse'] = [entrance.reverse for entrance in grotto_entrance_pool]
+            else:
+                entrance_pools['GrottoGrave'] += [entrance.reverse for entrance in grotto_entrance_pool]
+        elif worlds[0].grotto_entrances == 'insanity':
+            entrance_pools['Insanity'] += grotto_entrance_pool
+            if worlds[0].split_decouple_sides and not worlds[0].overworld_entrances == 'insanity':
+                entrance_pools['InsanityReverse'] += [entrance.reverse for entrance in grotto_entrance_pool]
+            else:
+                entrance_pools['Insanity'] += [entrance.reverse for entrance in grotto_entrance_pool]
 
-        if worlds[0].shuffle_overworld_entrances:
-            exclude_overworld_reverse = (worlds[0].mix_entrance_pools == 'all') and not worlds[0].decouple_entrances
-            entrance_pools['Overworld'] = world.get_shufflable_entrances(type='Overworld', only_primary=exclude_overworld_reverse)
-            if not worlds[0].decouple_entrances:
-                entrance_pools['Overworld'].remove(world.get_entrance('GV Lower Stream -> Lake Hylia'))
+        if worlds[0].overworld_entrances == 'shuffle':
+            overworld_entrance_pool.remove(world.get_entrance('GV Lower Stream -> Lake Hylia'))
+            entrance_pools['Overworld'] = overworld_entrance_pool
+        elif worlds[0].overworld_entrances == 'mix':
+            overworld_entrance_pool.remove(world.get_entrance('GV Lower Stream -> Lake Hylia'))
+            entrance_pools['Mixed'] += overworld_entrance_pool
+        elif worlds[0].overworld_entrances == 'decouple':
+            entrance_pools['Overworld'] = overworld_entrance_pool
+        elif worlds[0].overworld_entrances == 'insanity':
+            entrance_pools['Insanity'] += overworld_entrance_pool
 
         # Set shuffled entrances as such
         for entrance in list(chain.from_iterable(one_way_entrance_pools.values())) + list(chain.from_iterable(entrance_pools.values())):
             entrance.shuffled = True
             if entrance.reverse:
                 entrance.reverse.shuffled = True
-
-        # Combine all entrance pools into one when mixing entrance pools
-        if worlds[0].mix_entrance_pools == 'all':
-            entrance_pools = {'Mixed': list(chain.from_iterable(entrance_pools.values()))}
-        elif worlds[0].mix_entrance_pools == 'indoor':
-            if worlds[0].shuffle_overworld_entrances:
-                ow_entrance_pool = entrance_pools['Overworld']
-            entrance_pools = {'Mixed': list(filter(lambda entrance: entrance.type != 'Overworld', chain.from_iterable(entrance_pools.values())))}
-            if worlds[0].shuffle_overworld_entrances:
-                entrance_pools['Overworld'] = ow_entrance_pool
 
         # Build target entrance pools and set the assumption for entrances being reachable
         one_way_target_entrance_pools = {}
@@ -617,15 +664,15 @@ def check_entrances_compatibility(entrance, target, rollbacks=[]):
 # Validate the provided worlds' structures, raising an error if it's not valid based on our criterias
 def validate_world(world, worlds, entrance_placed, locations_to_ensure_reachable, itempool):
 
-    if not world.decouple_entrances:
-        # Unless entrances are decoupled, we don't want the player to end up through certain entrances as the wrong age
-        # This means we need to hard check that none of the relevant entrances are ever reachable as that age
-        # This is mostly relevant when mixing entrance pools or shuffling special interiors (such as windmill or kak potion shop)
-        # Warp Songs and Overworld Spawns can also end up inside certain indoors so those need to be handled as well
-        CHILD_FORBIDDEN = ['OGC Great Fairy Fountain -> Castle Grounds', 'GV Carpenter Tent -> GV Fortress Side']
-        ADULT_FORBIDDEN = ['HC Great Fairy Fountain -> Castle Grounds', 'HC Storms Grotto -> Castle Grounds']
+    # Unless entrances are decoupled, we don't want the player to end up through certain entrances as the wrong age
+    # This means we need to hard check that none of the relevant entrances are ever reachable as that age
+    # This is mostly relevant when mixing entrance pools or shuffling special interiors (such as windmill or kak potion shop)
+    # Warp Songs and Overworld Spawns can also end up inside certain indoors so those need to be handled as well
+    CHILD_FORBIDDEN = ['OGC Great Fairy Fountain -> Castle Grounds', 'GV Carpenter Tent -> GV Fortress Side']
+    ADULT_FORBIDDEN = ['HC Great Fairy Fountain -> Castle Grounds', 'HC Storms Grotto -> Castle Grounds']
 
-        for entrance in world.get_shufflable_entrances():
+    for entrance in world.get_shufflable_entrances():
+        if not entrance.decouple:
             if entrance.shuffled:
                 if entrance.replaces:
                     if entrance.replaces.name in CHILD_FORBIDDEN and not entrance_unreachable_as(entrance, 'child', already_checked=[entrance.replaces.reverse]):
@@ -648,7 +695,7 @@ def validate_world(world, worlds, entrance_placed, locations_to_ensure_reachable
                 if not max_search.visited(location):
                     raise EntranceShuffleError('%s is unreachable' % location.name)
 
-    if world.shuffle_interior_entrances and \
+    if world.interior_entrances != 'off' and \
        (entrance_placed == None or entrance_placed.type in ['Interior', 'SpecialInterior']):
         # When cows are shuffled, ensure both Impa's House entrances are in the same hint region because the cow is reachable from both sides
         if world.shuffle_cows:
@@ -656,8 +703,8 @@ def validate_world(world, worlds, entrance_placed, locations_to_ensure_reachable
             impas_back_entrance = get_entrance_replacing(world.get_region('Kak Impas House Back'), 'Kak Impas Ledge -> Kak Impas House Back')
             check_same_hint_region(impas_front_entrance, impas_back_entrance)
 
-    if (world.shuffle_special_interior_entrances or world.shuffle_overworld_entrances or world.spawn_positions) and \
-       (entrance_placed == None or (world.mix_entrance_pools != 'off') or entrance_placed.type in ['SpecialInterior', 'Overworld', 'Spawn', 'WarpSong', 'OwlDrop']):
+    if (world.shuffle_special_interior_entrances or world.overworld_entrances != 'off' or world.spawn_positions) and \
+       (entrance_placed == None or world.mix_entrance_pools or entrance_placed.type in ['SpecialInterior', 'Overworld', 'Spawn', 'WarpSong', 'OwlDrop']):
         # At least one valid starting region with all basic refills should be reachable without using any items at the beginning of the seed
         # Note this creates new empty states rather than reuse the worlds' states (which already have starting items)
         no_items_search = Search([State(w) for w in worlds])
@@ -680,8 +727,8 @@ def validate_world(world, worlds, entrance_placed, locations_to_ensure_reachable
         elif world.starting_age == 'adult' and not time_travel_search.can_reach(world.get_region('Temple of Time'), age='child'):
             raise EntranceShuffleError('Path to Temple of Time as child is not guaranteed')
 
-    if (world.shuffle_interior_entrances or world.shuffle_overworld_entrances) and \
-       (entrance_placed == None or (world.mix_entrance_pools != 'off') or entrance_placed.type in ['Interior', 'SpecialInterior', 'Overworld', 'Spawn', 'WarpSong', 'OwlDrop']):
+    if (world.interior_entrances != 'off' or world.overworld_entrances != 'off') and \
+       (entrance_placed == None or world.mix_entrance_pools or entrance_placed.type in ['Interior', 'SpecialInterior', 'Overworld', 'Spawn', 'WarpSong', 'OwlDrop']):
         # The Big Poe Shop should always be accessible as adult without the need to use any bottles
         # This is important to ensure that players can never lock their only bottles by filling them with Big Poes they can't sell
         # We can use starting items in this check as long as there are no exits requiring the use of a bottle without refills
@@ -739,7 +786,7 @@ def get_entrance_replacing(region, entrance_name):
 def change_connections(entrance, target_entrance):
     entrance.connect(target_entrance.disconnect())
     entrance.replaces = target_entrance.replaces
-    if entrance.reverse and not entrance.world.decouple_entrances:
+    if entrance.reverse and not entrance.decouple:
         target_entrance.replaces.reverse.connect(entrance.reverse.assumed.disconnect())
         target_entrance.replaces.reverse.replaces = entrance.reverse
 
@@ -748,7 +795,7 @@ def change_connections(entrance, target_entrance):
 def restore_connections(entrance, target_entrance):
     target_entrance.connect(entrance.disconnect())
     entrance.replaces = None
-    if entrance.reverse and not entrance.world.decouple_entrances:
+    if entrance.reverse and not entrance.decouple:
         entrance.reverse.assumed.connect(target_entrance.replaces.reverse.disconnect())
         target_entrance.replaces.reverse.replaces = None
 
@@ -757,7 +804,7 @@ def restore_connections(entrance, target_entrance):
 def confirm_replacement(entrance, target_entrance):
     delete_target_entrance(target_entrance)
     logging.getLogger('').debug('Connected %s To %s [World %d]', entrance, entrance.connected_region, entrance.world.id)
-    if entrance.reverse and not entrance.world.decouple_entrances:
+    if entrance.reverse and not entrance.decouple:
         replaced_reverse = target_entrance.replaces.reverse
         delete_target_entrance(entrance.reverse.assumed)
         logging.getLogger('').debug('Connected %s To %s [World %d]', replaced_reverse, replaced_reverse.connected_region, replaced_reverse.world.id)

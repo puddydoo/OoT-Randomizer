@@ -834,7 +834,7 @@ def patch_rom(spoiler:Spoiler, world:World, rom:Rom):
         rom.write_byte(rom.sym('DISABLE_TIMERS'), 0x01)
         rom.write_int16s(0xB6D460, [0x0030, 0x0035, 0x0036]) # Change trade items revert table to prevent all reverts
 
-    if world.shuffle_overworld_entrances:
+    if world.overworld_entrances != 'off':
         rom.write_byte(rom.sym('OVERWORLD_SHUFFLED'), 1)
 
         # Prevent the ocarina cutscene from leading straight to hyrule field
@@ -856,7 +856,7 @@ def patch_rom(spoiler:Spoiler, world:World, rom:Rom):
         rom.write_int16(0xACAA2E, 0x0138) # 1st Impa escort
         rom.write_int16(0xD12D6E, 0x0138) # 2nd+ Impa escort
 
-    if world.shuffle_dungeon_entrances:
+    if world.dungeon_entrances != 'off':
         rom.write_byte(rom.sym('DUNGEONS_SHUFFLED'), 1)
 
         # Connect lake hylia fill exit to revisit exit
@@ -878,7 +878,7 @@ def patch_rom(spoiler:Spoiler, world:World, rom:Rom):
         # Purge temp flags on entrance to spirit from colossus through the front door.
         rom.write_byte(0x021862E3, 0xC2)
 
-    if world.shuffle_overworld_entrances or world.shuffle_dungeon_entrances:
+    if world.overworld_entrances != 'off' or world.dungeon_entrances != 'off':
         # Remove deku sprout and drop player at SFM after forest completion
         rom.write_int16(0xAC9F96, 0x0608)
 
@@ -1116,7 +1116,7 @@ def patch_rom(spoiler:Spoiler, world:World, rom:Rom):
 
     # Add a gate-opening guard on the Wasteland side of the Gerudo gate when the card is shuffled or certain levels of ER.
     # Overrides the generic guard at the bottom of the ladder in Gerudo Fortress
-    if world.shuffle_gerudo_card or world.shuffle_overworld_entrances or \
+    if world.shuffle_gerudo_card or world.overworld_entrances != 'off' or \
        world.shuffle_special_interior_entrances or world.spawn_positions:
         # Add a gate opening guard on the Wasteland side of the Gerudo Fortress' gate
         new_gate_opening_guard = [0x0138, 0xFAC8, 0x005D, 0xF448, 0x0000, 0x95B0, 0x0000, 0x0301]
@@ -1535,7 +1535,7 @@ def patch_rom(spoiler:Spoiler, world:World, rom:Rom):
     for text_id, message in scrub_message_dict.items():
         update_message_by_id(messages, text_id, message)
 
-    if world.shuffle_grotto_entrances:
+    if world.grotto_entrances != 'off':
         # Build the Grotto Load Table based on grotto entrance data
         for entrance in world.get_shuffled_entrances(type='Grotto'):
             if entrance.primary:

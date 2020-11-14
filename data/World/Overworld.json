@@ -125,7 +125,7 @@
         "exits": {
             "Deku Tree Lobby": "
                 is_child or
-                (shuffle_dungeon_entrances and (open_forest == 'open' or 'Showed Mido Sword & Shield'))",
+                (dungeon_entrances != 'off' and (open_forest == 'open' or 'Showed Mido Sword & Shield'))",
             "Kokiri Forest": "is_adult or open_forest == 'open' or 'Showed Mido Sword & Shield'"
         }
     },
@@ -587,7 +587,7 @@
         "scene": "Gerudo Fortress",
         "hint": "Gerudo's Fortress",
         "exits": {
-            "Gerudo Fortress": "is_adult or (shuffle_overworld_entrances and 'GF Gate Open')",
+            "Gerudo Fortress": "is_adult or (overworld_entrances != 'off' and 'GF Gate Open')",
             "Wasteland Near Fortress": "True"
         }
     },
@@ -1000,7 +1000,7 @@
             "Kak Bazaar": "is_adult and at_day",
             "Kak Shooting Gallery": "is_adult and at_day",
             "Bottom of the Well": "
-                'Drain Well' and (is_child or shuffle_dungeon_entrances)",
+                'Drain Well' and (is_child or dungeon_entrances != 'off')",
             "Kak Potion Shop Front": "is_child or at_day",
             "Kak Redead Grotto": "can_open_bomb_grotto",
             "Kak Impas Ledge": "
@@ -1506,7 +1506,7 @@
             "DMC Central Nearby": "
                 can_use(Goron_Tunic) and can_use(Longshot) and 
                 ((damage_multiplier != 'ohko' and damage_multiplier != 'quadruple') or 
-                    (Fairy and not shuffle_dungeon_entrances) or can_use(Nayrus_Love))"
+                    (Fairy and dungeon_entrances == 'off') or can_use(Nayrus_Love))"
         }
     },
     {
@@ -1577,7 +1577,7 @@
                 (can_use(Hover_Boots) or can_use(Hookshot) or here(can_plant_bean))",
             "DMC Upper Nearby": "is_adult and here(can_plant_bean)",
             "DMC Fire Temple Entrance": "
-                (is_child and shuffle_dungeon_entrances) or
+                (is_child and dungeon_entrances != 'off') or
                 (is_adult and (logic_fewer_tunic_requirements or can_use(Goron_Tunic)))"
         }
     },

@@ -1858,9 +1858,8 @@ setting_infos = [
         disable        = {
             True : {
                 'sections' : ['various_section', 'shuffle_section', 'shuffle_dungeon_section'],
-                'settings': ['starting_age', 'shuffle_interior_entrances', 'shuffle_grotto_entrances', 'shuffle_dungeon_entrances',
-                             'shuffle_overworld_entrances', 'mix_entrance_pools', 'decouple_entrances',
-                             'owl_drops', 'warp_songs', 'spawn_positions'],
+                'settings': ['starting_age', 'interior_entrances', 'grotto_entrances', 'dungeon_entrances',
+                             'overworld_entrances', 'split_decouple_sides', 'owl_drops', 'warp_songs', 'spawn_positions'],
             }
         },
         shared         = True,
@@ -2182,9 +2181,9 @@ setting_infos = [
             considered available. MAY BE IMPOSSIBLE TO BEAT.
         ''',
         disable        = {
-            'glitched'  : {'settings' : ['allowed_tricks', 'mq_dungeons_random', 'mq_dungeons', 'shuffle_interior_entrances',
-                                         'shuffle_grotto_entrances', 'shuffle_dungeon_entrances', 'shuffle_overworld_entrances',
-                                         'mix_entrance_pools', 'decouple_entrances', 'owl_drops', 'warp_songs', 'spawn_positions']},
+            'glitched'  : {'settings' : ['allowed_tricks', 'mq_dungeons_random', 'mq_dungeons', 'interior_entrances',
+                                         'grotto_entrances', 'dungeon_entrances', 'overworld_entrances',
+                                         'split_decouple_sides', 'owl_drops', 'warp_songs', 'spawn_positions']},
             'none'      : {'tabs'     : ['detailed_tab']},
         },
         shared         = True,
@@ -2632,131 +2631,229 @@ setting_infos = [
         },
     ),
     Combobox(
-        name           = 'shuffle_interior_entrances',
+        name           = 'interior_entrances',
         gui_text       = 'Shuffle Interior Entrances',
         default        = 'off',
         choices        = {
             'off':       'Off',
-            'simple':    'Simple Interiors',
-            'all':       'All Interiors',
+            'shuffle':   'Shuffle',
+            'mix':       'Mix',
+            'decouple':  'Decouple',
+            'insanity':  'Insanity',
         },
         gui_tooltip    = '''\
-            'Simple Interiors': 
-            Shuffle the pool of interior entrances which contains most Houses 
-            and all Great Fairies.
-    
-            'All Interiors':
-            Extended version of 'Simple Interiors' with some extra places:
-            Windmill, Link's House, Temple of Time and Kakariko Potion Shop.
+            The pool of interior entrances contains most Houses and
+            all Great Fairies, but excludes the entrances to Windmill,
+            Link's House, Temple of Time, and Kakariko Potion Shop.
 
-            When shuffling any interior entrances, trade quest timers are disabled 
+            'Shuffle': Shuffle interior entrances among each other.
+
+            'Mix': Shuffle interior entrances into the "Mixed" pool
+            together with any other entrance pools set to 'Mix'.
+
+            'Decouple': Shuffle interior entrances among each other,
+            but decouple them, so you are no longer guaranteed to end up
+            back where you came from when you go back through an entrance.
+
+            'Insanity': Decouple interior entrances, and shuffle them
+            into the "Insanity" pool together with any other entrance
+            pools set to 'Insanity'.
+
+            When shuffling interior entrances, trade quest timers are disabled 
             and items never revert, even when dying or loading a save.
+        ''',
+        disable        = {
+            'off': {'settings': ['shuffle_special_interior_entrances']},
+        },
+        shared         = True,
+        gui_params     = {
+            'randomize_key': 'randomize_settings',
+            'distribution':  [
+                ('off', 6),
+                ('shuffle', 2),
+                ('mix', 2),
+                ('decouple', 1),
+                ('insanity', 1),
+            ],
+        },
+    ),
+    Checkbutton(
+        name           = 'shuffle_special_interior_entrances',
+        gui_text       = 'Shuffle Special Interior Entrances',
+        gui_tooltip    = '''\
+            Shuffle the entrances to Windmill, Link's House,
+            Temple of Time, and Kakariko Potion Shop into
+            the pool of interior entrances.
+        ''',
+        default        = False,
+        shared         = True,
+        gui_params     = {
+            'randomize_key': 'randomize_settings',
+            "hide_when_disabled": True,
+        },
+    ),
+    Combobox(
+        name           = 'grotto_entrances',
+        gui_text       = 'Shuffle Grotto Entrances',
+        default        = 'off',
+        choices        = {
+            'off':       'Off',
+            'shuffle':   'Shuffle',
+            'mix':       'Mix',
+            'decouple':  'Decouple',
+            'insanity':  'Insanity',
+        },
+        gui_tooltip    = '''\
+            The pool of grotto entrances contains all graves, 
+            small Fairy Fountains and the Lost Woods Stage.
+
+            'Shuffle': Shuffle grotto entrances among each other.
+
+            'Mix': Shuffle grotto entrances into the "Mixed" pool
+            together with any other entrance pools set to 'Mix'.
+
+            'Decouple': Shuffle grotto entrances among each other,
+            but decouple them, so you are no longer guaranteed to end up
+            back where you came from when you go back through an entrance.
+
+            'Insanity': Decouple grotto entrances, and shuffle them
+            into the "Insanity" pool together with any other entrance
+            pools set to 'Insanity'.
+
+            To avoid issues, grotto entrances will not be mixed into
+            the "Mixed" or "Insanity" pools if dungeon entrances are
+            in the same pool.
         ''',
         shared         = True,
         gui_params     = {
             'randomize_key': 'randomize_settings',
             'distribution':  [
-                ('off', 2),
-                ('simple', 1),
-                ('all', 1),
+                ('off', 6),
+                ('shuffle', 2),
+                ('mix', 2),
+                ('decouple', 1),
+                ('insanity', 1),
             ],
         },
     ),
-    Checkbutton(
-        name           = 'shuffle_grotto_entrances',
-        gui_text       = 'Shuffle Grotto Entrances',
-        gui_tooltip    = '''\
-            Shuffle the pool of grotto entrances, including all graves, 
-            small Fairy Fountains and the Lost Woods Stage.
-        ''',
-        default        = False,
-        shared         = True,
-        gui_params     = {
-            'randomize_key': 'randomize_settings',
-        },
-    ),
-    Checkbutton(
-        name           = 'shuffle_dungeon_entrances',
+    Combobox(
+        name           = 'dungeon_entrances',
         gui_text       = 'Shuffle Dungeon Entrances',
+        default        = 'off',
+        choices        = {
+            'off':       'Off',
+            'shuffle':   'Shuffle',
+            'mix':       'Mix',
+            'decouple':  'Decouple',
+            'insanity':  'Insanity',
+        },
         gui_tooltip    = '''\
-            Shuffle the pool of dungeon entrances, including Bottom 
-            of the Well, Ice Cavern, and Gerudo Training Grounds.
-            However, Ganon's Castle is not shuffled.
+            The pool of dungeon entrances contains all dungeons, including
+            Bottom of the Well, Ice Cavern, and Gerudo Training Grounds,
+            but excluding Thieves' Hideout, Ganon's Castle, Ganon's Tower,
+            and the entrances to Spirit Temple from the hands.
 
-            Additionally, the entrances of Deku Tree, Fire Temple and 
-            Bottom of the Well are opened for both adult and child.
+            'Shuffle': Shuffle dungeon entrances among each other.
+
+            'Mix': Shuffle dungeon entrances into the "Mixed" pool
+            together with any other entrance pools set to 'Mix'.
+
+            'Decouple': Shuffle dungeon entrances among each other,
+            but decouple them, so you are no longer guaranteed to end up
+            back where you came from when you go back through an entrance.
+
+            'Insanity': Decouple dungeon entrances, and shuffle them
+            into the "Insanity" pool together with any other entrance
+            pools set to 'Insanity'.
+
+            When shuffling dungeon entrances, Deku Tree, Fire Temple, and
+            Bottom of the Well are made accessible for both adult and child.
         ''',
-        default        = False,
         shared         = True,
         gui_params     = {
             'randomize_key': 'randomize_settings',
+            'distribution':  [
+                ('off', 6),
+                ('shuffle', 2),
+                ('mix', 2),
+                ('decouple', 1),
+                ('insanity', 1),
+            ],
         },
     ),
-    Checkbutton(
-        name           = 'shuffle_overworld_entrances',
+    Combobox(
+        name           = 'overworld_entrances',
         gui_text       = 'Shuffle Overworld Entrances',
+        default        = 'off',
+        choices        = {
+            'off':       'Off',
+            'shuffle':   'Shuffle',
+            'mix':       'Mix',
+            'decouple':  'Decouple',
+            'insanity':  'Insanity',
+        },
         gui_tooltip    = '''\
-            Shuffle the pool of Overworld entrances, which corresponds
-            to almost all loading zones between Overworld areas.
+            The pool of Overworld entrances corresponds to almost
+            all loading zones between Overworld areas.
 
-            Some entrances are kept unshuffled to avoid issues:
-            - Hyrule Castle Courtyard and Garden entrances
-            - Both Market Back Alley entrances
-            - Gerudo Valley to Lake Hylia (unless entrances are decoupled)
+            Hyrule Castle Courtyard and Garden entrances, as well as
+            both Market Back Alley entrances, are kept unshuffled to
+            avoid issues. The entrance from Gerudo Valley to Lake Hylia
+            is only shuffled when set to 'Decouple' or 'Insanity'.
+
+            'Shuffle': Shuffle overworld entrances among each other.
+
+            'Mix': Shuffle overworld entrances into the "Mixed" pool
+            together with any other entrance pools set to 'Mix'.
+
+            'Decouple': Shuffle overworld entrances among each other,
+            but decouple them, so you are no longer guaranteed to end up
+            back where you came from when you go back through an entrance.
+
+            'Insanity': Decouple overworld entrances, and shuffle them
+            into the "Insanity" pool together with any other entrance
+            pools set to 'Insanity'.
 
             Just like when shuffling interior entrances, shuffling overworld 
             entrances disables trade timers and trade items never revert, 
             even when dying or loading a save.
         ''',
-        default        = False,
-        shared         = True,
-        gui_params     = {
-            'randomize_key': 'randomize_settings',
-        },
-    ),
-    Combobox(
-        name           = 'mix_entrance_pools',
-        gui_text       = 'Mix Entrance Pools',
-        default        = 'off',
-        choices        = {
-            'off':       'Off',
-            'indoor':    'Indoor Entrances',
-            'all':       'All Entrances',
-        },
-        gui_tooltip    = '''\
-            Shuffle entrances into a mixed pool instead of separate ones.
-
-            'Indoor Entrances':
-            Mixes "Indoor" entrance pools, which correspond to entrances
-            of type Dungeon, Grotto, or Interior. Overworld entrances
-            are kept in their own separate pool if randomized.
-
-            'All Entrances':
-            Mixes all entrance pools, including both "Indoor" and
-            Overworld entrances.
-        ''',
         shared         = True,
         gui_params     = {
             'randomize_key': 'randomize_settings',
             'distribution':  [
-                ('off', 2),
-                ('indoor', 1),
-                ('all', 1),
+                ('off', 6),
+                ('shuffle', 2),
+                ('mix', 2),
+                ('decouple', 1),
+                ('insanity', 1),
             ],
         },
     ),
     Checkbutton(
-        name           = 'decouple_entrances',
-        gui_text       = 'Decouple Entrances',
+        name           = 'split_decouple_sides',
+        gui_text       = 'Decoupled Entrance Directionality',
         gui_tooltip    = '''\
-            Decouple entrances when shuffling them.
-            This means you are no longer guaranteed to end up back where you
-            came from when you go back through an entrance.
+            This option affects how interior, dungeon,
+            and grotto entrances work when set to
+            'Decouple' or 'Insanity'.
 
-            This also adds the one-way entrance from Gerudo Valley to Lake Hylia
-            in the pool of overworld entrances when they are shuffled.
+            When enabled, the "front" and "back" of
+            each decoupled entrance are shuffled
+            separately, so the "front" side of one
+            entrance always leads to the "back" side
+            of another, and vice versa.
+            
+            When disabled, both sides are shuffled
+            together, which means, for example, that
+            exiting a dungeon can lead to another dungeon.
+
+            Overworld entrances are always reversible, so
+            if overworld entrances are set to 'Insanity',
+            enabling this setting will only affect entrance
+            pools set to 'Decouple' and not 'Insanity'.
         ''',
-        default        = False,
+        default        = True,
         shared         = True,
         gui_params     = {
             'randomize_key': 'randomize_settings',
