@@ -2622,7 +2622,7 @@ setting_infos = [
             Enabling this adds a Giant's Knife and a pack of Bombchus 
             to the item pool and changes both Medigoron and the 
             Haunted Wasteland Carpet Salesman to sell a random item 
-            once at the price of 200 Rupees.
+            at the price of 200 Rupees.
         ''',
         default        = False,
         shared         = True,

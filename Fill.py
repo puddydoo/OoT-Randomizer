@@ -97,7 +97,7 @@ def distribute_items_restrictive(window, worlds, fill_locations=None):
             and location.item.looks_like_item is None))
     junk_items = remove_junk_items.copy()
     junk_items.remove('Ice Trap')
-    major_items = [item for (item, data) in item_table.items() if data[0] == 'Item' and data[1] and data[2] is not None]
+    major_items = [item for (item, data) in item_table.items() if data[0] == 'Item' and data[1] and data[3] is not None]
     fake_items = []
     if worlds[0].settings.ice_trap_appearance == 'major_only':
         model_items = [item for item in itempool if item.majoritem]

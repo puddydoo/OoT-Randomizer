@@ -12,14 +12,17 @@ class ItemInfo(object):
         if event:
             type = 'Event'
             progressive = True
+            repeatable = None
             itemID = None
             special = None
         else:
-            (type, progressive, itemID, special) = item_table[name]
+            (type, progressive, repeatable, itemID, special) = item_table[name]
 
         self.name = name
         self.advancement = (progressive == True)
         self.priority = (progressive == False)
+        self.repeatable = (repeatable == (True or False))
+        self.onetime = (repeatable == (None or False))
         self.type = type
         self.special = special or {}
         self.index = itemID
@@ -56,6 +59,8 @@ class Item(object):
         self.looks_like_item = None
         self.advancement = self.info.advancement
         self.priority = self.info.priority
+        self.repeatable = self.info.repeatable
+        self.onetime = self.info.onetime
         self.type = self.info.type
         self.special = self.info.special
         self.index = self.info.index

@@ -26,7 +26,7 @@ never_suffix = ['Capacity']
 never = {
     'Bunny Hood', 'Recovery Heart', 'Milk', 'Ice Arrows', 'Ice Trap',
     'Double Defense', 'Biggoron Sword', 'Giants Knife',
-} | {item for item, (t, adv, _, special) in item_table.items() if adv is False
+} | {item for item, (t, adv, _, _, special) in item_table.items() if adv is False
      or any(map(item.startswith, never_prefix)) or any(map(item.endswith, never_suffix))}
 
 # items required at most once, specifically things with multiple possible names
@@ -36,12 +36,12 @@ once = {
 }
 
 progressive = {
-    item for item, (_, _, _, special) in item_table.items()
+    item for item, (_, _, _, _, special) in item_table.items()
     if special and 'progressive' in special
 }
 
 bottles = {
-    item for item, (_, _, _, special) in item_table.items()
+    item for item, (_, _, _, _, special) in item_table.items()
     if special and 'bottle' in special and item != 'Deliver Letter'
 }
 
