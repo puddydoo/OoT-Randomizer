@@ -17,21 +17,22 @@
 
     # Refill aliases. If we start considering Bow etc refills we can enable these aliases
     # without editing all logic files.
+    # The "limited" versions of certain items are less, or not at all, useful in logic.
     # "Bow": "'Bow'",
     # "Slingshot": "'Slingshot'",
     "Bombs": "Bomb_Bag",
-    "Deku_Shield": "Buy_Deku_Shield",
-    "Hylian_Shield": "Buy_Hylian_Shield",
-    "Nuts": "Buy_Deku_Nut_5 or Buy_Deku_Nut_10 or Deku_Nut_Drop",
-    "Sticks": "Buy_Deku_Stick_1 or Deku_Stick_Drop",
+    "Deku_Shield": "'Deku Shield' or Buy_Deku_Shield",
+    "Hylian_Shield": "'Hylian Shield' or Buy_Hylian_Shield",
+    "Nuts": "Deku_Nuts_5 or Deku_Nuts_10 or Buy_Deku_Nut_5 or Buy_Deku_Nut_10 or Deku_Nut_Drop",
+    "Sticks": "Deku_Stick_1 or Buy_Deku_Stick_1 or Deku_Stick_Drop",
     "Bugs": "'Bugs' or Buy_Bottle_Bug",
     "Blue_Fire": "'Blue Fire' or Buy_Blue_Fire",
     "Fish": "'Fish' or Buy_Fish",
     "Fairy": "'Fairy' or Buy_Fairys_Spirit",
     # "Big_Poe": "'Big Poe'",
 
-    "has_bombchus": "(Buy_Bombchu_5 or Buy_Bombchu_10 or Buy_Bombchu_20 or Bombchu_Drop) and (bombchus_in_logic or Bomb_Bag)",
-    "found_bombchus": "(bombchus_in_logic and (Bombchus or Bombchus_5 or Bombchus_10 or Bombchus_20)) or (not bombchus_in_logic and Bomb_Bag)",
+    "has_bombchus": "(Bombchus_5 or Bombchus_10 or Bombchus_20 or Buy_Bombchu_5 or Buy_Bombchu_10 or Buy_Bombchu_20 or Bombchu_Drop) and (bombchus_in_logic or Bomb_Bag)",
+    "found_bombchus": "(bombchus_in_logic and (Bombchus or Bombchus_5_Limited or Bombchus_10_Limited or Bombchus_20_Limited)) or (not bombchus_in_logic and Bomb_Bag)",
     "has_explosives": "Bombs or (bombchus_in_logic and has_bombchus)",
     "is_child": "age == 'child'",
     "is_adult": "age == 'adult'",

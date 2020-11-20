@@ -682,6 +682,13 @@ remove_junk_items = [
 ]
 remove_junk_set = set(remove_junk_items)
 
+limited_items = [
+    'Deku Nuts (5)',
+    'Deku Stick (1)',
+    'Deku Shield',
+    'Hylian Shield',
+    'Deku Nuts (10)',
+]
 
 item_groups = {
     'Junk': remove_junk_items,
@@ -1026,13 +1033,13 @@ def get_pool_core(world):
     else:
         pool.extend(['Bombchus (5)'] + ['Bombchus (10)'] * 2)
         if world.dungeon_mq['Jabu Jabus Belly']:
-                pool.extend(['Bombchus (10)'])
+            pool.extend(['Bombchus (10)'])
         if world.dungeon_mq['Spirit Temple']:
-                pool.extend(['Bombchus (10)'] * 2)
+            pool.extend(['Bombchus (10)'] * 2)
         if not world.dungeon_mq['Bottom of the Well']:
-                pool.extend(['Bombchus (10)'])
+            pool.extend(['Bombchus (10)'])
         if world.dungeon_mq['Gerudo Training Grounds']:
-                pool.extend(['Bombchus (10)'])
+            pool.extend(['Bombchus (10)'])
         if world.dungeon_mq['Ganons Castle']:
             pool.extend(['Bombchus (10)'])
         else:
@@ -1351,6 +1358,13 @@ def get_pool_core(world):
             junk_candidates.remove(junk_item)
             pool.remove(junk_item)
             pool.append(pending_item)
+
+    # Add limited items to pool if no repeatable merchant or cow locations are randomized
+    if not world.shuffle_medigoron_carpet_salesman: #or world.shopsanity in ('off', '0') or world.shuffle_scrubs == 'off' or not world.shuffle_cows:
+        for item in pool:
+            if item in limited_items:
+                pool.remove(item)
+                pool.append(ItemFactory(item, world).limit_item)
 
     world.distribution.configure_starting_items_settings(world)
     world.distribution.collect_starters(world.state)

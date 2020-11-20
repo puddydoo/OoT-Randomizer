@@ -565,6 +565,10 @@ class World(object):
 
         # This check should never be false normally, but is here as a sanity check
         if location.can_fill_fast(item, manual):
+            #if item.limit_item is not None and location.type not in ('Shop', 'RepeatNPC', 'GrottoNPC'):
+            if item.limit_item is not None and location.type not in ('RepeatNPC', 'GrottoNPC'):
+                item = ItemFactory(item.limit_item, self)
+
             location.item = item
             item.location = location
             item.price = location.price if location.price is not None else item.price

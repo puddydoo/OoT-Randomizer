@@ -55,6 +55,7 @@ class Item(object):
         else:
             self.info = ItemInfo.items[name]
         self.price = self.info.special.get('price')
+        self.limit_item = self.info.special.get('limit_item')
         self.world = world
         self.looks_like_item = None
         self.advancement = self.info.advancement
@@ -126,7 +127,7 @@ class Item(object):
         if self.type == 'Token':
             return self.world.bridge == 'tokens' or self.world.lacs_condition == 'tokens'
 
-        if self.type in ('Drop', 'Event', 'Shop', 'DungeonReward') or not self.advancement:
+        if self.type in ('Repeat', 'Drop', 'Event', 'Shop', 'DungeonReward') or not self.advancement:
             return False
 
         if self.name.startswith('Bombchus') and not self.world.bombchus_in_logic:
