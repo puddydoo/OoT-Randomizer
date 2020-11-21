@@ -1360,7 +1360,7 @@ def get_pool_core(world):
             pool.append(pending_item)
 
     # Add limited items to pool if no repeatable merchant or cow locations are randomized
-    if not world.shuffle_medigoron_carpet_salesman: #or world.shopsanity in ('off', '0') or world.shuffle_scrubs == 'off' or not world.shuffle_cows:
+    if not world.shuffle_medigoron_carpet_salesman: #and world.shopsanity in ('off', '0') and world.shuffle_scrubs == 'off' and not world.shuffle_cows:
         for item in pool:
             if item in limited_items:
                 pool.remove(item)
