@@ -2406,7 +2406,6 @@ setting_infos = [
              - Starting Age set to Adult
              - Shuffle Overworld Entrances
              - Shuffle Interior Entrances set to "All Interiors"
-             - Randomize Warp Song Destinations
              - Randomize Overworld Spawns
         ''',
         shared         = True,

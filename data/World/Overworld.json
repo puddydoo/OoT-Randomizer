@@ -16,7 +16,7 @@
             "Child Spawn": "is_child",
             "Adult Spawn": "is_adult",
             "Prelude of Light Warp": "can_play(Prelude_of_Light) and can_leave_forest",
-            "Minuet of Forest Warp": "can_play(Minuet_of_Forest)",
+            "Minuet of Forest Warp": "can_play(Minuet_of_Forest) and (not warp_songs or can_leave_forest)",
             "Bolero of Fire Warp": "can_play(Bolero_of_Fire) and can_leave_forest",
             "Serenade of Water Warp": "can_play(Serenade_of_Water) and can_leave_forest",
             "Nocturne of Shadow Warp": "can_play(Nocturne_of_Shadow) and can_leave_forest",
