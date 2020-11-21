@@ -1265,7 +1265,7 @@
         },
         "exits": {
             "Graveyard": "True",
-            "Kak Windmill": "is_adult and can_play(Song_of_Time)"
+            "Kak Windmill": "can_leave_forest and is_adult and can_play(Song_of_Time)"
         }
     },
     {

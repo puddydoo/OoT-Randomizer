@@ -2404,6 +2404,10 @@ setting_infos = [
              - Open Forest or Closed Deku
              - Glitched logic
              - Starting Age set to Adult
+            
+            This will not apply with certain settings unless
+            "Separate Forest Entrances" is enabled:
+            
              - Shuffle Overworld Entrances
              - Shuffle Interior Entrances set to "All Interiors"
              - Randomize Overworld Spawns
@@ -2738,6 +2742,34 @@ setting_infos = [
         shared         = True,
         gui_params     = {
             'randomize_key': 'randomize_settings',
+        },
+    ),
+    Checkbutton(
+        name           = 'separate_forest_entrances',
+        gui_text       = 'Separate Forest Entrances',
+        gui_tooltip    = '''\
+            When shuffling entrances, prevent all entrances to the
+            forest area (Kokiri Forest, Deku Tree, Lost Woods,
+            and Sacred Forest Meadow) from being shuffled with
+            non-forest entrances, except for:
+            
+            - Interior and grotto entrances
+            - Lost Woods Bridge to Hyrule Field
+            - Lost Woods to Zora's River
+            - Sacred Forest Meadow to Forest Temple
+            
+            When starting as child, the entrance to Link's House
+            won't be shuffled, and child's spawn won't be shuffled
+            outside of the forest.
+        ''',
+        default        = False,
+        shared         = True,
+        gui_params     = {
+            'randomize_key': 'randomize_settings',
+            'distribution':  [
+                ('False', 2),
+                ('True', 1),
+            ],
         },
     ),
     Checkbutton(

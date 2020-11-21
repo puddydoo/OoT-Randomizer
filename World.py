@@ -255,7 +255,7 @@ class World(object):
         if self.starting_age == 'random':
             self.starting_age = random.choice(['child', 'adult'])
             self.randomized_list.append('starting_age')
-        if self.settings.open_forest == 'closed' and logic_rules == "glitchless" and self.starting_age == 'adult' and not self.shuffle_special_interior_entrances and not self.settings.shuffle_overworld_entrances and not self.settings.spawn_positions:
+        if self.settings.open_forest == 'closed' and self.logic_rules == "glitchless" and self.starting_age == 'adult' and not self.shuffle_special_interior_entrances and not self.settings.shuffle_overworld_entrances and not self.settings.spawn_positions:
             # adult is not compatible with glitchless closed forest without ER
             self.settings.open_forest = 'closed_deku'
         if self.chicken_count_random:
