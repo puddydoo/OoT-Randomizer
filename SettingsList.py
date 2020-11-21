@@ -1888,11 +1888,11 @@ setting_infos = [
             out of the forest, but Mido still blocks the path to the
             Deku Tree.
 
-            'Closed Forest': The path to the Deku Tree and the path
-            out of the forest are both blocked. Starting as adult
-            without randomizing overworld spawns and without
-            shuffling "All Indoors" or "Overworld" entrances
-            will force this to Closed Deku if selected.
+            'Closed Forest': The paths to the Deku Tree and out of
+            the forest are both blocked. With Glitchless logic,
+            starting as adult without shuffling "Overworld" or "All
+            Indoors" entrances and without randomizing overworld
+            spawns will force this to Closed Deku if selected.
         ''',
         shared         = True,
         gui_params     = {
