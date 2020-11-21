@@ -1862,7 +1862,7 @@ setting_infos = [
                 'sections' : ['open_section', 'shuffle_section', 'shuffle_dungeon_section'],
                 'settings': ['starting_age', 'shuffle_interior_entrances', 'shuffle_grotto_entrances', 'shuffle_dungeon_entrances',
                              'shuffle_overworld_entrances', 'owl_drops', 'warp_songs', 'spawn_positions',
-                             'triforce_hunt', 'triforce_goal_per_world', 'bombchus_in_logic', 'one_item_per_dungeon'],
+                             'triforce_hunt', 'triforce_goal_per_world', 'abundant_bombchus', 'one_item_per_dungeon'],
             }
         },
         shared         = True,
@@ -2209,22 +2209,25 @@ setting_infos = [
         shared         = True
     ),
     Checkbutton(
-        name           = 'bombchus_in_logic',
-        gui_text       = 'Bombchus Are Considered in Logic',
+        name           = 'abundant_bombchus',
+        gui_text       = 'Abundant Bombchus',
         gui_tooltip    = '''\
-            Bombchus are properly considered in logic.
+            This option changes the availability
+            of Bombchus. Bombchus are not normally
+            considered in logic when this is disabled.
+            
+            Rather than a bomb bag, Bombchu refills
+            from shops require finding a pack of
+            Bombchus in order to be bought, but they
+            are added to Kokiri Shop and the Bazaar.
 
             The first Bombchu pack will always be 20.
             Subsequent packs will be 5 or 10 based on
             how many you have.
-
-            Bombchus can be purchased for 60/99/180
-            rupees once they have been found.
-
-            Bombchu Bowling opens with Bombchus.
-            Bombchus are available at Kokiri Shop
-            and the Bazaar. Bombchu refills cannot
-            be bought until Bombchus have been obtained.
+            
+            Obtaining a pack of Bombchus causes
+            Bombchus to drop like other resources,
+            and opens up the Bombchu Bowling Alley.
         ''',
         default        = False,
         shared         = True,
