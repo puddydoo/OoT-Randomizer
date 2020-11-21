@@ -133,7 +133,7 @@ def patch_rom(spoiler:Spoiler, world:World, rom:Rom):
     if not world.dungeon_mq['Water Temple']:
         rom.write_byte(0x25B8197, 0x3F)
 
-    if world.bombchus_in_logic:
+    if world.abundant_bombchus:
         rom.write_int32(rom.sym('BOMBCHUS_IN_LOGIC'), 1)
 
     # Change graveyard graves to not allow grabbing on to the ledge
