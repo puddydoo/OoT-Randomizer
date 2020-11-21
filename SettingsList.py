@@ -1859,7 +1859,7 @@ setting_infos = [
             True : {
                 'sections' : ['open_section', 'shuffle_section', 'shuffle_dungeon_section'],
                 'settings': ['starting_age', 'shuffle_interior_entrances', 'shuffle_grotto_entrances', 'shuffle_dungeon_entrances',
-                             'shuffle_overworld_entrances', 'owl_drops', 'warp_songs', 'spawn_positions',
+                             'shuffle_overworld_entrances', 'separate_forest_entrances', 'owl_drops', 'warp_songs', 'spawn_positions',
                              'triforce_hunt', 'triforce_goal_per_world', 'bombchus_in_logic', 'one_item_per_dungeon'],
             }
         },
@@ -2179,9 +2179,9 @@ setting_infos = [
         ''',
         disable        = {
             'glitched'  : {'settings' : ['allowed_tricks', 'shuffle_interior_entrances', 'shuffle_grotto_entrances',
-                                         'shuffle_dungeon_entrances', 'shuffle_overworld_entrances', 'owl_drops',
-                                         'warp_songs', 'spawn_positions', 'mq_dungeons_random', 'mq_dungeons', ]},
-            'none'      : {'tabs'     : ['detailed_tab']},
+                                         'shuffle_dungeon_entrances', 'shuffle_overworld_entrances', 'separate_forest_entrances',
+                                         'owl_drops', 'warp_songs', 'spawn_positions', 'mq_dungeons_random', 'mq_dungeons', ]},
+            'none'      : {'settings' : ['allowed_tricks', 'logic_no_night_tokens_without_suns_song', 'all_reachable', 'logic_require_deku', ]},
         },
         shared         = True,
     ),
@@ -2386,6 +2386,7 @@ setting_infos = [
         gui_params     = {
             'no_line_break' : True,
             'web:no_line_break' : False,
+            "hide_when_disabled": True,
         },
     ),
     Checkbutton(
@@ -2400,12 +2401,7 @@ setting_infos = [
             The Kokiri Sword, Deku Shield, and Slingshot needed
             for this will be guaranteed within the forest area.
 
-            This does not apply with certain settings:
-
-             - Open Forest or Closed Deku
-             - Glitched logic
-             - Starting Age set to Adult
-            
+            This only applies when Starting Age is set to Child.
             This will not apply with certain settings unless
             "Separate Forest Entrances" is enabled:
             
@@ -2414,6 +2410,9 @@ setting_infos = [
              - Randomize Overworld Spawns
         ''',
         shared         = True,
+        gui_params     = {
+            "hide_when_disabled": True,
+        },
     ),
     Checkbutton(
         name           = 'free_scarecrow',
