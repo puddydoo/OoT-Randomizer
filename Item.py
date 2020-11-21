@@ -130,9 +130,6 @@ class Item(object):
         if self.type in ('Repeat', 'Drop', 'Event', 'Shop', 'DungeonReward') or not self.advancement:
             return False
 
-        if self.name.startswith('Bombchus') and not self.world.bombchus_in_logic:
-            return False
-
         if self.map or self.compass:
             return False
         if self.type == 'SmallKey' and self.world.shuffle_smallkeys in ['dungeon', 'vanilla']:

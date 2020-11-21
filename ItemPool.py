@@ -1017,7 +1017,7 @@ def get_pool_core(world):
         pool.extend(['Gold Skulltula Token'] * 100)
 
 
-    if world.bombchus_in_logic:
+    if world.abundant_bombchus:
         pool.extend(['Bombchus'] * 4)
         if world.dungeon_mq['Jabu Jabus Belly']:
             pool.extend(['Bombchus'])
@@ -1115,7 +1115,7 @@ def get_pool_core(world):
 
     if world.shopsanity == 'off':
         placed_items.update(vanilla_shop_items)
-        if world.bombchus_in_logic:
+        if world.abundant_bombchus:
             placed_items['KF Shop Item 8'] = 'Buy Bombchu (5)'
             placed_items['Market Bazaar Item 4'] = 'Buy Bombchu (5)'
             placed_items['Kak Bazaar Item 4'] = 'Buy Bombchu (5)'

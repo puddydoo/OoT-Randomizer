@@ -31,8 +31,8 @@
     "Fairy": "'Fairy' or Buy_Fairys_Spirit",
     # "Big_Poe": "'Big Poe'",
 
-    "bombchus_in_logic": "abundant_bombchus or logic_bombchus",
-    "has_bombchus": "(Bombchus_5 or Bombchus_10 or Bombchus_20 or Buy_Bombchu_5 or Buy_Bombchu_10 or Buy_Bombchu_20 or Bombchu_Drop) and (abundant_bombchus or logic_bombchus or Bomb_Bag)",
+	"has_bombchus": "Bombchus_5 or Bombchus_10 or Bombchus_20 or Bombchu_Drop or buy_bombchus",
+	"buy_bombchus": "found_bombchus and (Buy_Bombchu_5 or Buy_Bombchu_10 or Buy_Bombchu_20)",
     "found_bombchus": "(abundant_bombchus and (Bombchus or Bombchus_5_Limited or Bombchus_10_Limited or Bombchus_20_Limited)) or (not abundant_bombchus and Bomb_Bag)",
     "has_explosives": "Bombs or has_bombchus",
     "is_child": "age == 'child'",

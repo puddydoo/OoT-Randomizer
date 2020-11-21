@@ -1584,7 +1584,7 @@ def patch_rom(spoiler:Spoiler, world:World, rom:Rom):
             save_context.write_bits(door_byte, door_bits)
 
     # Fix chest animations
-    if world.bombchus_in_logic:
+    if world.abundant_bombchus:
         bombchu_ids = [0x6A, 0x03, 0x6B]
         for i in bombchu_ids:
             item = read_rom_item(rom, i)

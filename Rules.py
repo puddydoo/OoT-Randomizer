@@ -131,8 +131,6 @@ def set_shop_rules(world):
                                       'Buy Red Potion [50]',
                                       'Buy Fairy\'s Spirit']:
                 location.add_rule(State.has_bottle)
-            if location.item.name in ['Buy Bombchu (10)', 'Buy Bombchu (20)', 'Buy Bombchu (5)']:
-                location.add_rule(found_bombchus)
 
 
 # This function should be ran once after setting up entrances and before placing items

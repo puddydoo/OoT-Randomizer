@@ -2213,21 +2213,28 @@ setting_infos = [
         gui_text       = 'Abundant Bombchus',
         gui_tooltip    = '''\
             This option changes the availability
-            of Bombchus. Bombchus are not normally
-            considered in logic when this is disabled.
+            of Bombchus.
             
-            Rather than a bomb bag, Bombchu refills
+            Obtaining a pack of Bombchus causes
+            Bombchus to drop like other resources,
+            and opens up Bombchu Bowling.
+            
+            Bombchu refills are added to Kokiri Shop
+            and the Bazaar, but all Bombchu refills
             from shops require finding a pack of
-            Bombchus in order to be bought, but they
-            are added to Kokiri Shop and the Bazaar.
+            Bombchus in order to be bought, rather
+            than a Bomb Bag.
 
             The first Bombchu pack will always be 20.
             Subsequent packs will be 5 or 10 based on
             how many you have.
             
-            Obtaining a pack of Bombchus causes
-            Bombchus to drop like other resources,
-            and opens up the Bombchu Bowling Alley.
+            When disabled, Bombchu usage logically
+            requires a Bomb Bag (for buying from
+            shops or Bombchu Bowling), unless
+            obtained from the Haunted Wasteland
+            carpet merchant or another repeatable
+            non-shop source.
         ''',
         default        = False,
         shared         = True,
@@ -2833,9 +2840,9 @@ setting_infos = [
             tunics, but you can buy non-shop tunics.
 
             Non-shop Bombchus will unlock the chu slot
-            in your inventory, which, if Bombchus are in
-            logic, is needed to buy Bombchu refills.
-            Otherwise, the Bomb Bag is required.
+            in your inventory, which is needed to buy
+            Bombchu refills if "Abundant Bombchus" is
+            enabled. Otherwise, the Bomb Bag is required.
         ''',
         shared         = True,
         gui_params     = {
