@@ -92,7 +92,7 @@ class World(object):
         self.disable_trade_revert = self.interior_entrances != 'off' or self.overworld_entrances != 'off' or self.warp_songs
 
         if self.open_forest == 'closed' and (self.shuffle_special_interior_entrances or self.overworld_entrances != 'off' or 
-                                             self.warp_songs or self.spawn_positions or (self.interior_entrances in ['mix', 'insanity'])):
+                                             self.warp_songs or self.spawn_positions or (self.interior_entrances in ['mix', 'decouple', 'insanity']) or (self.grotto_entrances in ['decouple', 'insanity'])):
             self.open_forest = 'closed_deku'
 
         self.triforce_goal = self.triforce_goal_per_world * settings.world_count
