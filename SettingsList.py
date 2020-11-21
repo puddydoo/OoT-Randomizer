@@ -2233,7 +2233,7 @@ setting_infos = [
             requires a Bomb Bag (for buying from
             shops or Bombchu Bowling), unless
             obtained from the Haunted Wasteland
-            carpet merchant or another repeatable
+            Carpet Salesman or another repeatable
             non-shop source.
         ''',
         default        = False,
