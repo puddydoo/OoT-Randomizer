@@ -2201,6 +2201,7 @@ setting_infos = [
         gui_params     = {
             'no_line_break' : True,
             'web:no_line_break' : False,
+            "hide_when_disabled": True,
         },
     ),
     Checkbutton(
