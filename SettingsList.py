@@ -2799,7 +2799,8 @@ setting_infos = [
             Hyrule Castle Courtyard and Garden entrances, as well as
             both Market Back Alley entrances, are kept unshuffled to
             avoid issues. The entrance from Gerudo Valley to Lake Hylia
-            is only shuffled when set to 'Decouple' or 'Insanity'.
+            is only shuffled when set to 'Decouple', or when set to
+            'Insanity' if Decoupled Entrances Lead Inside is disabled.
 
             'Shuffle': Shuffle overworld entrances among each other.
 
@@ -2832,7 +2833,7 @@ setting_infos = [
     ),
     Checkbutton(
         name           = 'split_decouple_sides',
-        gui_text       = 'Decoupled Entrances Always Lead Inside',
+        gui_text       = 'Decoupled Entrances Lead Inside',
         gui_tooltip    = '''\
             When this option is enabled, the
             "inside" and "outside" of decoupled
