@@ -2012,7 +2012,7 @@ setting_infos = [
         choices        = {
             'open':       'Always Open',
             'vanilla':    'Vanilla Requirements',
-            'stones':	  'Spiritual Stones',
+            'stones':     'Spiritual Stones',
             'medallions': 'Medallions',
             'dungeons':   'Dungeons',
             'tokens':     'Gold Skulltula Tokens'
@@ -2832,26 +2832,26 @@ setting_infos = [
     ),
     Checkbutton(
         name           = 'split_decouple_sides',
-        gui_text       = 'Decoupled Entrance Directionality',
+        gui_text       = 'Decoupled Entrances Always Lead Inside',
         gui_tooltip    = '''\
-            This option affects how interior, dungeon,
-            and grotto entrances work when set to
-            'Decouple' or 'Insanity'.
+            When this option is enabled, the
+            "inside" and "outside" of decoupled
+            entrances are shuffled separately,
+            so exiting an interior/dungeon/grotto
+            will always lead to an overworld area.
+            Entering an interior/dungeon/grotto
+            from the overworld always leads to the
+            inside of an interior/dungeon/grotto,
+            unless the entrance connects to an
+            overworld entrance set to 'Insanity'.
 
-            When enabled, the "front" and "back" of
-            each decoupled entrance are shuffled
-            separately, so the "front" side of one
-            entrance always leads to the "back" side
-            of another, and vice versa.
-            
             When disabled, both sides are shuffled
-            together, which means, for example, that
-            exiting a dungeon can lead to another dungeon.
-
-            Overworld entrances are always reversible, so
-            if overworld entrances are set to 'Insanity',
-            enabling this setting will only affect entrance
-            pools set to 'Decouple' and not 'Insanity'.
+            together, which means that entering an
+            interior/dungeon/grotto can spit you
+            out into the overworld from another
+            such entrance, and exiting an area can
+            lead to another "inside" area instead
+            of coming out into the overworld.
         ''',
         default        = True,
         shared         = True,

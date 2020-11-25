@@ -395,7 +395,7 @@ def shuffle_random_entrances(worlds):
             interior_entrance_pool += world.get_shufflable_entrances(type='SpecialInterior', only_primary=True)
         grotto_entrance_pool = world.get_shufflable_entrances(type='Grotto', only_primary=True)
         grotto_entrance_pool += world.get_shufflable_entrances(type='Grave', only_primary=True)
-        overworld_entrance_pool = world.get_shufflable_entrances(type='Overworld', only_primary=worlds[0].overworld_entrances == 'mix')
+        overworld_entrance_pool = world.get_shufflable_entrances(type='Overworld', only_primary=True)
         entrance_pools['Mixed'] = []
         entrance_pools['Insanity'] = []
         entrance_pools['InsanityReverse'] = []
@@ -412,7 +412,7 @@ def shuffle_random_entrances(worlds):
                 entrance_pools['Dungeon'] += [entrance.reverse for entrance in dungeon_entrance_pool]
         elif worlds[0].dungeon_entrances == 'insanity':
             entrance_pools['Insanity'] += dungeon_entrance_pool
-            if worlds[0].split_decouple_sides and not worlds[0].overworld_entrances == 'insanity':
+            if worlds[0].split_decouple_sides:
                 entrance_pools['InsanityReverse'] += [entrance.reverse for entrance in dungeon_entrance_pool]
             else:
                 entrance_pools['Insanity'] += [entrance.reverse for entrance in dungeon_entrance_pool]
@@ -429,7 +429,7 @@ def shuffle_random_entrances(worlds):
                 entrance_pools['Interior'] += [entrance.reverse for entrance in interior_entrance_pool]
         elif worlds[0].interior_entrances == 'insanity':
             entrance_pools['Insanity'] += interior_entrance_pool
-            if worlds[0].split_decouple_sides and not worlds[0].overworld_entrances == 'insanity':
+            if worlds[0].split_decouple_sides:
                 entrance_pools['InsanityReverse'] += [entrance.reverse for entrance in interior_entrance_pool]
             else:
                 entrance_pools['Insanity'] += [entrance.reverse for entrance in interior_entrance_pool]
@@ -446,21 +446,25 @@ def shuffle_random_entrances(worlds):
                 entrance_pools['GrottoGrave'] += [entrance.reverse for entrance in grotto_entrance_pool]
         elif worlds[0].grotto_entrances == 'insanity':
             entrance_pools['Insanity'] += grotto_entrance_pool
-            if worlds[0].split_decouple_sides and not worlds[0].overworld_entrances == 'insanity':
+            if worlds[0].split_decouple_sides:
                 entrance_pools['InsanityReverse'] += [entrance.reverse for entrance in grotto_entrance_pool]
             else:
                 entrance_pools['Insanity'] += [entrance.reverse for entrance in grotto_entrance_pool]
 
         if worlds[0].overworld_entrances == 'shuffle':
             overworld_entrance_pool.remove(world.get_entrance('GV Lower Stream -> Lake Hylia'))
-            entrance_pools['Overworld'] = overworld_entrance_pool
+            entrance_pools['Overworld'] = overworld_entrance_pool + [entrance.reverse for entrance in overworld_entrance_pool]
         elif worlds[0].overworld_entrances == 'mix':
             overworld_entrance_pool.remove(world.get_entrance('GV Lower Stream -> Lake Hylia'))
             entrance_pools['Mixed'] += overworld_entrance_pool
         elif worlds[0].overworld_entrances == 'decouple':
-            entrance_pools['Overworld'] = overworld_entrance_pool
+            entrance_pools['Overworld'] = overworld_entrance_pool + [entrance.reverse for entrance in overworld_entrance_pool]
         elif worlds[0].overworld_entrances == 'insanity':
             entrance_pools['Insanity'] += overworld_entrance_pool
+            if worlds[0].split_decouple_sides:
+                entrance_pools['InsanityReverse'] += [entrance.reverse for entrance in overworld_entrance_pool]
+            else:
+                entrance_pools['Insanity'] += [entrance.reverse for entrance in overworld_entrance_pool]
 
         # Set shuffled entrances as such
         for entrance in list(chain.from_iterable(one_way_entrance_pools.values())) + list(chain.from_iterable(entrance_pools.values())):
