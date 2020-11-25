@@ -2836,15 +2836,19 @@ setting_infos = [
         gui_text       = 'Decoupled Entrances Lead Inside',
         gui_tooltip    = '''\
             When this option is enabled, the
-            "inside" and "outside" of decoupled
+            "outside" and "inside" of decoupled
             entrances are shuffled separately,
             so exiting an interior/dungeon/grotto
-            will always lead to an overworld area.
-            Entering an interior/dungeon/grotto
-            from the overworld always leads to the
-            inside of an interior/dungeon/grotto,
-            unless the entrance connects to an
-            overworld entrance set to 'Insanity'.
+            will always lead to an overworld area,
+            and entering from the overworld should
+            lead inside an interior/dungeon/grotto.
+
+            This also affects overworld entrances
+            when they are set to 'Insanity', so
+            the "front" and "reverse" sides of the
+            overworld entrances will be shuffled
+            respectively with the "outside" and
+            "inside" of the other entrances.
 
             When disabled, both sides are shuffled
             together, which means that entering an
