@@ -69,7 +69,7 @@ class World(object):
             self.overworld_entrances = 'shuffle'
         
         if self.grotto_entrances == 'insanity':
-            if self.dungeon_entrances == 'insanity':
+            if (self.dungeon_entrances == 'insanity' or (self.interior_entrances != 'insanity' and self.overworld_entrances != 'insanity')):
                 self.grotto_entrances = 'decouple'
                 if self.dungeon_entrances == 'insanity' and self.interior_entrances != 'insanity' and self.overworld_entrances != 'insanity':
                     self.dungeon_entrances = 'decouple'
