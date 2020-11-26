@@ -17,7 +17,8 @@ def set_all_entrances_data(world):
         forward_entrance = world.get_entrance(forward_entry[0])
         forward_entrance.data = forward_entry[1]
         forward_entrance.type = type
-        forward_entrance.primary = True
+        # Overworld entrances don't have an "inside" or "outside", so randomize which one is the primary
+        forward_entrance.primary = random.choice([True, (type not in ('Overworld') or not return_entry)])
         if type == 'Grotto':
             forward_entrance.data['index'] = 0x1000 + forward_entrance.data['grotto_id']
             if world.grotto_entrances in ['decouple', 'insanity']:
@@ -32,6 +33,7 @@ def set_all_entrances_data(world):
             return_entrance = world.get_entrance(return_entry[0])
             return_entrance.data = return_entry[1]
             return_entrance.type = type
+            return_entrance.primary = not forward_entrance.primary
             return_entrance.decouple = forward_entrance.decouple
             forward_entrance.bind_two_way(return_entrance)
             if type == 'Grotto':

@@ -2839,16 +2839,12 @@ setting_infos = [
             "outside" and "inside" of decoupled
             entrances are shuffled separately,
             so exiting an interior/dungeon/grotto
-            will always lead to an overworld area,
-            and entering from the overworld should
-            lead inside an interior/dungeon/grotto.
-
-            This also affects overworld entrances
-            when they are set to 'Insanity', so
-            the "front" and "reverse" sides of the
-            overworld entrances will be shuffled
-            respectively with the "outside" and
-            "inside" of the other entrances.
+            will always lead to an overworld area.
+            Likewise, decoupled exterior entrances
+            to interiors/dungeons/grottoes will
+            not lead to other exterior entrances,
+            although they can lead to overworld
+            entrances in the "Insanity" pool.
 
             When disabled, both sides are shuffled
             together, which means that entering an
