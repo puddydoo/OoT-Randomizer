@@ -180,6 +180,51 @@
         }
     },
     {
+        "region_name": "Deku Tree Post-Boss",
+        "dungeon": "Deku Tree",
+        "events": {
+            "Deku Tree Clear": "True"
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Post-Boss",
+        "dungeon": "Dodongos Cavern"
+    },
+    {
+        "region_name": "Jabu Jabus Belly Post-Boss",
+        "dungeon": "Jabu Jabus Belly"
+    },
+    {
+        "region_name": "Forest Temple Post-Boss",
+        "dungeon": "Forest Temple"
+    },
+    {
+        "region_name": "Fire Temple Post-Boss",
+        "dungeon": "Fire Temple"
+    },
+    {
+        "region_name": "Water Temple Post-Boss",
+        "dungeon": "Water Temple",
+        "events": {
+            "Water Temple Clear": "True"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Post-Boss",
+        "dungeon": "Spirit Temple"
+    },
+    {
+        "region_name": "Shadow Temple Post-Boss",
+        "dungeon": "Shadow Temple"
+    },
+    {
+        "region_name": "Ganons Tower Post-Boss",
+        "dungeon": "Ganons Tower",
+        "exits": {
+            "Ganons Lair": "True"
+        }
+    },
+    {
         "region_name": "Kokiri Forest",
         "hint": "Kokiri Forest",
         "events": {

@@ -4,15 +4,13 @@
         "scene": "Queen Gohmas Lair",
         #"dungeon": "Deku Tree",
         "savewarp": "Queen Gohmas Lair Savewarp",
-        "events": {
-            "Deku Tree Clear": "is_adult or Kokiri_Sword or Sticks"
-        },
         "locations": {
             "Deku Tree Queen Gohma Heart": "is_adult or Kokiri_Sword or Sticks",
             "Queen Gohma": "is_adult or Kokiri_Sword or Sticks"
         },
         "exits": {
-            "Deku Tree Boss Room": "True"
+            "Deku Tree Boss Room": "True",
+            "Deku Tree Post-Boss": "is_adult or Kokiri_Sword or Sticks"
         }
     },
     {
@@ -34,7 +32,12 @@
             (is_adult or Sticks or Kokiri_Sword)"
         },
         "exits": {
-            "Dodongos Cavern Boss Area": "True"
+            "Dodongos Cavern Boss Area": "True",
+            "Dodongos Cavern Post-Boss": "
+                (Bombs or Progressive_Strength_Upgrade or
+                    (has_bombchus and ((is_adult and can_shield) or (is_child and can_isg)))
+                ) and 
+                (is_adult or Sticks or Kokiri_Sword)"
         }
     },
     {
@@ -45,6 +48,9 @@
         "locations": {
             "Jabu Jabus Belly Barinade Heart": "can_use(Boomerang) and (Sticks or Kokiri_Sword)",
             "Barinade": "can_use(Boomerang) and (Sticks or Kokiri_Sword)"
+        },
+        "exits": {
+            "Jabu Jabus Belly Post-Boss": "can_use(Boomerang) and (Sticks or Kokiri_Sword)"
         }
     },
     {
@@ -57,6 +63,10 @@
                 (can_use(Slingshot) and (Kokiri_Sword or Sticks))",
             "Phantom Ganon": "(can_use(Hookshot) or can_use(Bow)) or 
                 (can_use(Slingshot) and (Kokiri_Sword or Sticks))"
+        },
+        "exits": {
+            "Forest Temple Post-Boss": "(can_use(Hookshot) or can_use(Bow)) or 
+                (can_use(Slingshot) and (Kokiri_Sword or Sticks))"
         }
     },
     {
@@ -67,6 +77,9 @@
         "locations": {
             "Fire Temple Volvagia Heart": "can_use(Goron_Tunic) and can_use(Megaton_Hammer)",
             "Volvagia": "can_use(Goron_Tunic) and can_use(Megaton_Hammer)"
+        },
+        "exits": {
+            "Fire Temple Post-Boss": "can_use(Goron_Tunic) and can_use(Megaton_Hammer)"
         }
     },
     {
@@ -74,12 +87,12 @@
         "scene": "Morphas Lair",
         #"dungeon": "Water Temple",
         "savewarp": "Morphas Lair Savewarp",
-        "events": {
-            "Water Temple Clear": "can_jumpslash"
-        },
         "locations": {
             "Morpha": "can_jumpslash",
             "Water Temple Morpha Heart": "can_jumpslash"
+        },
+        "exits": {
+            "Water Temple Post-Boss": "can_jumpslash"
         }
     },
     {
@@ -126,6 +139,9 @@
         "locations": {
             "Spirit Temple Twinrova Heart": "can_use(Mirror_Shield)",
             "Twinrova": "can_use(Mirror_Shield)"
+        },
+        "exits": {
+            "Spirit Temple Post-Boss": "can_use(Mirror_Shield)"
         }
     },
     {
@@ -137,6 +153,9 @@
             "Shadow Temple Bongo Bongo Heart": "True",
             "Bongo Bongo": "True"
             #I don't know what exactly beats Bongo Bongo
+        },
+        "exits": {
+            "Shadow Temple Post-Boss": "True"
         }
     },
     {
@@ -160,7 +179,7 @@
             "Ganondorf Hint": "True"
         },
         "exits": {
-            "Ganons Lair": "can_use(Light_Arrows)"
+            "Ganons Tower Post-Boss": "can_use(Light_Arrows)"
         }
     },
     {
