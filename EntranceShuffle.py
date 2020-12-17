@@ -316,7 +316,7 @@ entrance_shuffle_table = [
                         ('Zoras Fountain -> ZD Behind King Zora',                           { 'index': 0x01A1 })),
 
     ('OwlDrop',         ('LH Owl Flight -> Hyrule Field',                                   { 'index': 0x027E, 'addresses': [0xAC9F26] })),
-    ('OwlDrop',         ('DMT Owl Flight -> Kak Impas Ledge',                               { 'index': 0x0554, 'addresses': [0xAC9EF2] })),
+    ('OwlDrop',         ('DMT Owl Flight -> Kak Impas Rooftop',                             { 'index': 0x0554, 'addresses': [0xAC9EF2] })),
 
     ('ChildSpawn',      ('Child Spawn -> KF Links House',                                   { 'index': 0x00BB, 'addresses': [0xB06342] })),
     ('AdultSpawn',      ('Adult Spawn -> Temple of Time',                                   { 'index': 0x05F4, 'addresses': [0xB06332] })),
@@ -436,7 +436,7 @@ def shuffle_random_entrances(worlds):
                 valid_target_types = ('ChildSpawn', 'AdultSpawn', 'Minuet', 'WarpSong', 'OwlDrop', 'Overworld', 'Forest', 'Interior', 'ForestInterior', 'LinksDoor', 'SpecialInterior', 'Extra')
                 one_way_target_entrance_pools[pool_type] = build_one_way_targets(world, valid_target_types)
             elif pool_type == 'WarpSong':
-                valid_target_types = ('ChildSpawn', 'AdultSpawn', 'Minuet', 'WarpSong', 'OwlDrop', 'Overworld', 'Forest', 'Interior', 'ForestInterior', 'LinksDoor', 'SpecialInterior', 'Grave', 'Extra')
+                valid_target_types = ('ChildSpawn', 'AdultSpawn', 'Minuet', 'WarpSong', 'OwlDrop', 'Overworld', 'Forest', 'Interior', 'ForestInterior', 'LinksDoor', 'SpecialInterior', 'Extra')
                 one_way_target_entrance_pools[pool_type] = build_one_way_targets(world, valid_target_types)
             # Ensure that when trying to place the last entrance of a one way pool, we don't assume the rest of the targets are reachable
             for target in one_way_target_entrance_pools[pool_type]:
