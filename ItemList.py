@@ -142,6 +142,7 @@ item_table = {
     'Triforce Piece':                                  ('Item',     True,  0xCA, {'progressive': float('Inf')}),
     'Zeldas Letter':                                   ('Item',     True,  0x0B, None),
     'Time Travel':                                     ('Event',    True,  None, None),
+    'Time Travel Test':                                ('Event',    True,  None, None),
     'Scarecrow Song':                                  ('Event',    True,  None, None),
     'Triforce':                                        ('Event',    True,  None, None),
 

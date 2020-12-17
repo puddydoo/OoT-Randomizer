@@ -477,7 +477,7 @@ def shuffle_random_entrances(worlds):
                 logging.getLogger('').error('%s was shuffled but still isn\'t connected to any region [World %d]', entrance, world.id)
             if entrance.replaces == None:
                 logging.getLogger('').error('%s was shuffled but still doesn\'t replace any entrance [World %d]', entrance, world.id)
-    if len(world.get_region('Root Exits').exits) > 8:
+    if len(world.get_region('Root Exits').exits) > 9:
         for exit in world.get_region('Root Exits').exits:
             logging.getLogger('').error('Root Exit: %s, Connected Region: %s', exit, exit.connected_region)
         raise RuntimeError('Something went wrong, Root has too many entrances left after shuffling entrances [World %d]' % world.id)
@@ -673,7 +673,7 @@ def validate_world(world, worlds, entrance_placed, locations_to_ensure_reachable
             raise EntranceShuffleError('Invalid starting area')
 
         # Check that a region where time passes is always reachable as both ages without having collected any items
-        time_travel_search = Search.with_items([w.state for w in worlds], [ItemFactory('Time Travel', world=w) for w in worlds])
+        time_travel_search = Search.with_items([w.state for w in worlds], [ItemFactory('Time Travel Test', world=w) for w in worlds])
 
         if not (any(region for region in time_travel_search.reachable_regions('child') if region.time_passes and region.world == world) and
                 any(region for region in time_travel_search.reachable_regions('adult') if region.time_passes and region.world == world)):
@@ -691,7 +691,7 @@ def validate_world(world, worlds, entrance_placed, locations_to_ensure_reachable
         # The Big Poe Shop should always be accessible as adult without the need to use any bottles
         # This is important to ensure that players can never lock their only bottles by filling them with Big Poes they can't sell
         # We can use starting items in this check as long as there are no exits requiring the use of a bottle without refills
-        time_travel_search = Search.with_items([w.state for w in worlds], [ItemFactory('Time Travel', world=w) for w in worlds])
+        time_travel_search = Search.with_items([w.state for w in worlds], [ItemFactory('Time Travel Test', world=w) for w in worlds])
 
         if not time_travel_search.can_reach(world.get_region('Market Guard House'), age='adult'):
             raise EntranceShuffleError('Big Poe Shop access is not guaranteed as adult')

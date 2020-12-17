@@ -6,13 +6,14 @@
             "Links Pocket": "True"
         },
         "exits": {
-            "Root Exits": "is_starting_age or Time_Travel",
+            "Root Exits": "is_starting_age or Time_Travel or Time_Travel_Test",
             "HC Garden Locations": "skip_child_zelda"
         }
     },
     {
         "region_name": "Root Exits",
         "exits": {
+            "Beyond Door of Time": "Time_Travel",
             "KF Links House": "is_child",
             "Temple of Time": "
                 is_adult or 
@@ -1107,7 +1108,7 @@
     },
     {
         "region_name": "LLR Stables",
-		"locations": {
+        "locations": {
             "LLR Stables Left Cow": "can_play(Eponas_Song)",
             "LLR Stables Right Cow": "can_play(Eponas_Song)"
         }
@@ -1258,7 +1259,7 @@
     },
     {
         "region_name": "DMT Cow Grotto",
-		 "locations": {
+        "locations": {
             "DMT Cow Grotto Cow": "can_play(Eponas_Song)"
         }
     },

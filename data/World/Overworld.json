@@ -6,7 +6,7 @@
             "Links Pocket": "True"
         },
         "exits": {
-            "Root Exits": "is_starting_age or Time_Travel",
+            "Root Exits": "is_starting_age or Time_Travel or Time_Travel_Test",
             "HC Garden Locations": "skip_child_zelda"
         }
     },
@@ -15,6 +15,7 @@
         "exits": {
             "Child Spawn": "is_child",
             "Adult Spawn": "is_adult",
+            "Beyond Door of Time": "Time_Travel",
             "Prelude of Light Warp": "can_play(Prelude_of_Light) and can_leave_forest",
             "Minuet of Forest Warp": "can_play(Minuet_of_Forest) and (not warp_songs or can_leave_forest)",
             "Bolero of Fire Warp": "can_play(Bolero_of_Fire) and can_leave_forest",
