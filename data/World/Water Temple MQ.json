@@ -49,7 +49,7 @@
         "locations": {
             "Water Temple MQ Boss Key Chest": "
                 (can_use(Zora_Tunic) or logic_fewer_tunic_requirements) and can_use(Dins_Fire) and
-                (logic_water_dragon_jump_dive or can_dive or can_use(Iron_Boots))",
+                (logic_water_dragon_jump_dive or Silver_Scale or can_use(Iron_Boots))",
             "Water Temple MQ GS River": "True",
             "Fairy Pot": "has_bottle",
             "Nut Pot": "True"

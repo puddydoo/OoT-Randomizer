@@ -240,7 +240,7 @@
                 is_adult and
                 (can_use(Hover_Boots) or can_use(Longshot) or
                     here(can_plant_bean) or logic_lost_woods_bridge)",
-            "Zora River": "can_leave_forest and (can_dive or can_use(Iron_Boots))",
+            "Zora River": "can_leave_forest and (Silver_Scale or can_use(Iron_Boots))",
             "LW Beyond Mido": "is_child or logic_mido_backflip or can_play(Sarias_Song)",
             "LW Near Shortcuts Grotto": "here(can_blast_or_smash)"
         }
@@ -379,7 +379,7 @@
         },
         "locations": {
             "Pierre": "is_adult and Bonooru and not free_scarecrow",
-            "LH Underwater Item": "is_child and can_dive",
+            "LH Underwater Item": "is_child and Silver_Scale",
             "LH Sun": "
                 is_adult and 
                 (can_use(Distant_Scarecrow) or 'Water Temple Clear') and can_use(Bow)",
@@ -401,7 +401,7 @@
         },
         "exits": {
             "Hyrule Field": "True",
-            "Zoras Domain": "is_child and can_dive",
+            "Zoras Domain": "is_child and Silver_Scale",
             "LH Owl Flight": "is_child",
             "LH Lab": "True",
             "LH Fishing Island": "
@@ -410,7 +410,7 @@
             "Water Temple Lobby": "
                 can_use(Hookshot) and
                 (can_use(Iron_Boots) or
-                    ((can_use(Longshot) or logic_water_hookshot_entry) and (Progressive_Scale, 2)))",
+                    ((can_use(Longshot) or logic_water_hookshot_entry) and Golden_Scale))",
             "LH Grotto": "True"
         }
     },
@@ -441,7 +441,7 @@
         },
         "locations": {
             "LH Lab Dive": "
-                (Progressive_Scale, 2) or
+                Golden_Scale or
                 (logic_lab_diving and Iron_Boots and can_use(Hookshot))",
             "LH GS Lab Crate": "Iron_Boots and can_use(Hookshot)"
         },
@@ -1683,7 +1683,7 @@
             "ZR Front": "True",
             "ZR Open Grotto": "True",
             "ZR Fairy Grotto": "here(can_blast_or_smash)",
-            "Lost Woods": "can_dive or can_use(Iron_Boots)",
+            "Lost Woods": "Silver_Scale or can_use(Iron_Boots)",
             "ZR Storms Grotto": "can_open_storm_grotto",
             "ZR Behind Waterfall": "
                 can_play(Zeldas_Lullaby) or
@@ -1735,7 +1735,7 @@
         },
         "exits": {
             "ZR Behind Waterfall": "True",
-            "Lake Hylia": "is_child and can_dive",
+            "Lake Hylia": "is_child and Silver_Scale",
             "ZD Behind King Zora": "
                 Deliver_Letter or zora_fountain == 'open' or
                 (zora_fountain == 'adult' and is_adult)",
@@ -2101,7 +2101,7 @@
         "scene": "HF Tektite Grotto",
         "locations": {
             "HF Tektite Grotto Freestanding PoH": "
-                (Progressive_Scale, 2) or can_use(Iron_Boots)"
+                Golden_Scale or can_use(Iron_Boots)"
         },
         "exits": {
             "Hyrule Field": "True"

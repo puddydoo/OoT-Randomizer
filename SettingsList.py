@@ -2421,6 +2421,10 @@ setting_infos = [
             Sacred Forest Meadow, and houses and grottos within).
             The Kokiri Sword, Deku Shield, and Slingshot needed
             for this will be guaranteed within the forest area.
+            Because Silver Scale can be used to escape the forest,
+            and explosives or Din's Fire can be used to break the
+            boulders in Goron City, you will not be expected to
+            use them anywhere else before beating the Deku Tree.
 
             This only applies when Starting Age is set to Child.
             This will not apply with certain settings unless
