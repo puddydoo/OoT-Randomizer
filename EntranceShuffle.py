@@ -76,7 +76,6 @@ def build_one_way_targets(world, types_to_include, exclude=[]):
 entrance_shuffle_table = [
     ('DekuTree',        ('KF Outside Deku Tree -> Deku Tree Lobby',                         { 'index': 0x0000 }),
                         ('Deku Tree Lobby -> KF Outside Deku Tree',                         { 'index': 0x0209, 'blue_warp': 0x0457 })),
-
     ('Dungeon',         ('Death Mountain -> Dodongos Cavern Beginning',                     { 'index': 0x0004 }),
                         ('Dodongos Cavern Beginning -> Death Mountain',                     { 'index': 0x0242, 'blue_warp': 0x047A })),
     ('Dungeon',         ('Zoras Fountain -> Jabu Jabus Belly Beginning',                    { 'index': 0x0028 }),
@@ -174,7 +173,6 @@ entrance_shuffle_table = [
 
     ('LinksDoor',       ('Kokiri Forest -> KF Links House',                                 { 'index': 0x0272 }),
                         ('KF Links House -> Kokiri Forest',                                 { 'index': 0x0211 })),
-
     ('SpecialInterior', ('ToT Entrance -> Temple of Time',                                  { 'index': 0x0053 }),
                         ('Temple of Time -> ToT Entrance',                                  { 'index': 0x0472 })),
     ('SpecialInterior', ('Kakariko Village -> Kak Windmill',                                { 'index': 0x0453 }),
@@ -319,11 +317,10 @@ entrance_shuffle_table = [
     ('OwlDrop',         ('LH Owl Flight -> Hyrule Field',                                   { 'index': 0x027E, 'addresses': [0xAC9F26] })),
     ('OwlDrop',         ('DMT Owl Flight -> Kak Impas Rooftop',                             { 'index': 0x0554, 'addresses': [0xAC9EF2] })),
 
-    ('ChildSpawn',      ('Child Spawn -> KF Links House',                                   { 'index': 0x00BB, 'addresses': [0xB06342] })),
-    ('AdultSpawn',      ('Adult Spawn -> Temple of Time',                                   { 'index': 0x05F4, 'addresses': [0xB06332] })),
+    ('Spawn',           ('Child Spawn -> KF Links House',                                   { 'index': 0x00BB, 'addresses': [0xB06342] })),
+    ('Spawn',           ('Adult Spawn -> Temple of Time',                                   { 'index': 0x05F4, 'addresses': [0xB06332] })),
 
-    ('Minuet',          ('Minuet of Forest Warp -> Sacred Forest Meadow',                   { 'index': 0x0600, 'addresses': [0xBF023C] })),
-    
+    ('Minuet',          ('Minuet of Forest Warp -> Sacred Forest Meadow',                   { 'index': 0x0600, 'addresses': [0xBF023C] })),  
     ('WarpSong',        ('Bolero of Fire Warp -> DMC Central Local',                        { 'index': 0x04F6, 'addresses': [0xBF023E] })),
     ('WarpSong',        ('Serenade of Water Warp -> Lake Hylia',                            { 'index': 0x0604, 'addresses': [0xBF0240] })),
     ('WarpSong',        ('Requiem of Spirit Warp -> Desert Colossus',                       { 'index': 0x01F1, 'addresses': [0xBF0242] })),
@@ -374,8 +371,8 @@ def shuffle_random_entrances(worlds):
             one_way_entrance_pools['OwlDrop'] = world.get_shufflable_entrances(type='OwlDrop')
 
         if worlds[0].spawn_positions:
-            one_way_entrance_pools['ChildSpawn'] = world.get_shufflable_entrances(type='ChildSpawn')
-            one_way_entrance_pools['AdultSpawn'] = world.get_shufflable_entrances(type='AdultSpawn')
+            one_way_entrance_pools['ChildSpawn'] = [world.get_entrance('Child Spawn -> KF Links House')]
+            one_way_entrance_pools['AdultSpawn'] = [world.get_entrance('Adult Spawn -> Temple of Time')]
 
         if worlds[0].warp_songs:
             one_way_entrance_pools['WarpSong'] = world.get_shufflable_entrances(type='WarpSong')
@@ -427,17 +424,15 @@ def shuffle_random_entrances(worlds):
                 one_way_target_entrance_pools[pool_type] = build_one_way_targets(world, valid_target_types, exclude=['Prelude of Light Warp -> Temple of Time'])
                 for target in one_way_target_entrance_pools[pool_type]:
                     target.set_rule(lambda state, age=None, **kwargs: age == 'child')
-            elif pool_type == 'ChildSpawn':
-                if worlds[0].separate_forest_entrances and worlds[0].starting_age == 'child':
-                    valid_target_types = ('ChildSpawn', 'Minuet', 'Forest', 'LinksDoor')
+            elif pool_type in ['ChildSpawn', 'AdultSpawn']:
+                if pool_type == 'ChildSpawn' and worlds[0].separate_forest_entrances and worlds[0].starting_age == 'child':
+                    valid_target_types = ('Spawn', 'Minuet', 'Forest', 'LinksDoor')
+                    one_way_target_entrance_pools[pool_type] = build_one_way_targets(world, valid_target_types, exclude=['Adult Spawn -> Temple of Time'])
                 else:
-                    valid_target_types = ('ChildSpawn', 'AdultSpawn', 'Minuet', 'WarpSong', 'OwlDrop', 'Overworld', 'Forest', 'Interior', 'ForestInterior', 'LinksDoor', 'SpecialInterior', 'Extra')
-                one_way_target_entrance_pools[pool_type] = build_one_way_targets(world, valid_target_types)
-            elif pool_type == 'AdultSpawn':
-                valid_target_types = ('ChildSpawn', 'AdultSpawn', 'Minuet', 'WarpSong', 'OwlDrop', 'Overworld', 'Forest', 'Interior', 'ForestInterior', 'LinksDoor', 'SpecialInterior', 'Extra')
-                one_way_target_entrance_pools[pool_type] = build_one_way_targets(world, valid_target_types)
+                    valid_target_types = ('Spawn', 'Minuet', 'WarpSong', 'OwlDrop', 'Overworld', 'Forest', 'Interior', 'ForestInterior', 'LinksDoor', 'SpecialInterior', 'Extra')
+                    one_way_target_entrance_pools[pool_type] = build_one_way_targets(world, valid_target_types)
             elif pool_type == 'WarpSong':
-                valid_target_types = ('ChildSpawn', 'AdultSpawn', 'Minuet', 'WarpSong', 'OwlDrop', 'Overworld', 'Forest', 'Interior', 'ForestInterior', 'LinksDoor', 'SpecialInterior', 'Extra')
+                valid_target_types = ('Spawn', 'Minuet', 'WarpSong', 'OwlDrop', 'Overworld', 'Forest', 'Interior', 'ForestInterior', 'LinksDoor', 'SpecialInterior', 'Extra')
                 one_way_target_entrance_pools[pool_type] = build_one_way_targets(world, valid_target_types)
             # Ensure that when trying to place the last entrance of a one way pool, we don't assume the rest of the targets are reachable
             for target in one_way_target_entrance_pools[pool_type]:
@@ -612,7 +607,7 @@ def check_entrances_compatibility(entrance, target, rollbacks=[]):
         raise EntranceShuffleError('Self scene connections are forbidden')
 
     # One way entrances shouldn't lead to the same scene as other already chosen one way entrances
-    if entrance.type in ['OwlDrop', 'ChildSpawn', 'AdultSpawn', 'Minuet', 'WarpSong'] and \
+    if entrance.type in ['OwlDrop', 'Spawn', 'Minuet', 'WarpSong'] and \
        any([rollback[0].connected_region.get_scene() == target.connected_region.get_scene() for rollback in rollbacks]):
         raise EntranceShuffleError('Another %s already leads to %s' % (entrance.type, target.connected_region.get_scene()))
 
@@ -651,7 +646,7 @@ def validate_world(world, worlds, entrance_placed, locations_to_ensure_reachable
                     raise EntranceShuffleError('%s is unreachable' % location.name)
 
     if world.shuffle_interior_entrances and \
-       (entrance_placed == None or entrance_placed.type in ['Interior', 'ForestInterior', 'SpecialInterior']):
+       (entrance_placed == None or entrance_placed.type in ['Interior', 'ForestInterior', 'SpecialInterior', 'LinksDoor']):
         # Ensure Kak Potion Shop entrances are in the same hint region so there is no ambiguity as to which entrance is used for hints
         potion_front_entrance = get_entrance_replacing(world.get_region('Kak Potion Shop Front'), 'Kakariko Village -> Kak Potion Shop Front')
         potion_back_entrance = get_entrance_replacing(world.get_region('Kak Potion Shop Back'), 'Kak Backyard -> Kak Potion Shop Back')
@@ -663,8 +658,8 @@ def validate_world(world, worlds, entrance_placed, locations_to_ensure_reachable
             impas_back_entrance = get_entrance_replacing(world.get_region('Kak Impas House Back'), 'Kak Impas Ledge -> Kak Impas House Back')
             check_same_hint_region(impas_front_entrance, impas_back_entrance)
 
-    if not world.separate_forest_entrances and (world.shuffle_special_interior_entrances or world.shuffle_overworld_entrances or world.spawn_positions) and \
-       (entrance_placed == None or entrance_placed.type in ['SpecialInterior', 'LinksDoor', 'Overworld', 'Forest', 'ChildSpawn', 'AdultSpawn', 'Minuet', 'WarpSong', 'OwlDrop']):
+    if (world.shuffle_special_interior_entrances or world.shuffle_overworld_entrances or world.spawn_positions) and \
+       (entrance_placed == None or entrance_placed.type in ['SpecialInterior', 'LinksDoor', 'Overworld', 'Forest', 'Spawn', 'Minuet', 'WarpSong', 'OwlDrop']):
         # At least one valid starting region with all basic refills should be reachable without using any items at the beginning of the seed
         # Note this creates new empty states rather than reuse the worlds' states (which already have starting items)
         no_items_search = Search([State(w) for w in worlds])
@@ -674,9 +669,11 @@ def validate_world(world, worlds, entrance_placed, locations_to_ensure_reachable
             raise EntranceShuffleError('Invalid starting area')
 
         # Check that a region where time passes is always reachable as both ages without having collected any items
+        # (Except in closed forest child start when forest entrances are separated but deku tree isn't required)
         time_travel_search = Search.with_items([w.state for w in worlds], [ItemFactory('Time Travel Test', world=w) for w in worlds])
+        closed_forest = world.open_forest == 'closed' and world.starting_age == 'child' and world.separate_forest_entrances and world.logic_rules == 'glitchless' and not world.logic_require_deku
 
-        if not (any(region for region in time_travel_search.reachable_regions('child') if region.time_passes and region.world == world) and
+        if not ((closed_forest or any(region for region in time_travel_search.reachable_regions('child') if region.time_passes and region.world == world)) and
                 any(region for region in time_travel_search.reachable_regions('adult') if region.time_passes and region.world == world)):
             raise EntranceShuffleError('Time passing is not guaranteed as both ages')
 
@@ -688,7 +685,7 @@ def validate_world(world, worlds, entrance_placed, locations_to_ensure_reachable
             raise EntranceShuffleError('Path to Temple of Time as child is not guaranteed')
 
     if (world.shuffle_interior_entrances or world.shuffle_overworld_entrances) and \
-       (entrance_placed == None or entrance_placed.type in ['Interior', 'ForestInterior', 'SpecialInterior', 'Overworld', 'Forest', 'ChildSpawn', 'AdultSpawn', 'Minuet', 'WarpSong', 'OwlDrop']):
+       (entrance_placed == None or entrance_placed.type in ['Interior', 'ForestInterior', 'SpecialInterior', 'LinksDoor', 'Overworld', 'Forest', 'Spawn', 'Minuet', 'WarpSong', 'OwlDrop']):
         # The Big Poe Shop should always be accessible as adult without the need to use any bottles
         # This is important to ensure that players can never lock their only bottles by filling them with Big Poes they can't sell
         # We can use starting items in this check as long as there are no exits requiring the use of a bottle without refills
