@@ -146,6 +146,28 @@ location_table = {
     "Pierre":                                          ("Event",       None,  None, None,                     None),
     "Deliver Rutos Letter":                            ("Event",       None,  None, None,                     None),
     "Master Sword Pedestal":                           ("Event",       None,  None, None,                     None),
+    "Market Mask Shop Keaton Mask":                    ("Event",       None,  None, None,                     ("the Market", "Market",)),
+    "Market Mask Shop Skull Mask":                     ("Event",       None,  None, None,                     ("the Market", "Market",)),
+    "Market Mask Shop Spooky Mask":                    ("Event",       None,  None, None,                     ("the Market", "Market",)),
+    "Market Mask Shop Bunny Hood":                     ("Event",       None,  None, None,                     ("the Market", "Market",)),
+    "Market Mask Shop Zora Mask":                      ("Event",       None,  None, None,                     ("the Market", "Market",)),
+    "Market Mask Shop Goron Mask":                     ("Event",       None,  None, None,                     ("the Market", "Market",)),
+    "Market Mask Shop Gerudo Mask":                    ("Event",       None,  None, None,                     ("the Market", "Market",)),
+    "Market Mask Shop Mask of Truth":                  ("Event",       None,  None, None,                     ("the Market", "Market",)),
+
+    "Granny Blue Potion":                              ("Event",       0x4E,  None, None,                     ("Kakariko Village", "Kakariko",)), # RepeatNPC
+    "Market Poe Sale":                                 ("Event",       None,  None, None,                     ("the Market", "Hyrule Castle",)), # RepeatNPC
+    "Market Big Poe Sale":                             ("Event",       None,  None, None,                     ("the Market", "Hyrule Castle",)), # NPC
+    "Market Bug Sale":                                 ("Event",       None,  None, None,                     ("the Market", "Market",)), # RepeatNPC
+    "Market Fish Sale":                                ("Event",       None,  None, None,                     ("the Market", "Market",)), # RepeatNPC
+    "Market Blue Fire Sale":                           ("Event",       None,  None, None,                     ("the Market", "Market",)), # RepeatNPC
+    "Kak Bug Sale":                                    ("Event",       None,  None, None,                     ("Kakariko Village", "Kakariko",)), # RepeatNPC
+    "Kak Fish Sale":                                   ("Event",       None,  None, None,                     ("Kakariko Village", "Kakariko",)), # RepeatNPC
+    "Kak Blue Fire Sale":                              ("Event",       None,  None, None,                     ("Kakariko Village", "Kakariko",)), # RepeatNPC
+    "Kak Keaton Mask Sale":                            ("Event",       None,  None, None,                     ("Kakariko Village", "Kakariko",)), # NPC
+    "LW Skull Mask Sale":                              ("Event",       None,  None, None,                     ("the Lost Woods", "Forest",)), # NPC
+    "Graveyard Spooky Mask Sale":                      ("Event",       None,  None, None,                     ("the Graveyard", "Kakariko",)), # NPC
+    "HF Bunny Hood Sale":                              ("Event",       None,  None, None,                     ("Hyrule Field",)), # NPC
 
     "Deku Baba Sticks":                                ("Drop",        None,  None, None,                     None),
     "Deku Baba Nuts":                                  ("Drop",        None,  None, None,                     None),

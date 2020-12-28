@@ -480,6 +480,28 @@ fixedlocations = {
     'Deliver Rutos Letter': 'Deliver Letter',
     'Master Sword Pedestal': 'Time Travel',
     'Market Bombchu Bowling Bombchus': 'Bombchu Drop',
+    'Market Mask Shop Keaton Mask': 'Keaton Mask',
+    'Market Mask Shop Spooky Mask': 'Spooky Mask',
+    'Market Mask Shop Skull Mask': 'Skull Mask',
+    'Market Mask Shop Bunny Hood': 'Bunny Hood',
+    'Market Mask Shop Zora Mask': 'Zora Mask',
+    'Market Mask Shop Goron Mask': 'Goron Mask',
+    'Market Mask Shop Gerudo Mask': 'Gerudo Mask',
+    'Market Mask Shop Mask of Truth': 'Mask of Truth',
+
+    'Granny Blue Potion': 'Rupees (20)', # IDK how to get it to be a blue potion because it fails to push 'Buy Blue Potion'
+    'Market Poe Sale': 'Rupees (20)', # 10
+    'Market Big Poe Sale': 'Rupees (50)',
+    'Market Bug Sale': 'Rupees (50)',
+    'Market Fish Sale': 'Rupees (200)', # 100
+    'Market Blue Fire Sale': 'Rupees (200)', # 150
+    'Kak Bug Sale': 'Rupees (50)',
+    'Kak Fish Sale': 'Rupees (200)', # 100
+    'Kak Blue Fire Sale': 'Rupees (200)', # 150
+    'Kak Keaton Mask Sale': 'Rupees (20)', # 15
+    'LW Skull Mask Sale': 'Rupees (20)', # 10
+    'Graveyard Spooky Mask Sale': 'Rupees (50)', # 30
+    'HF Bunny Hood Sale': 'Rupees (200)', # Wallet fill
 }
 
 droplocations = {
@@ -501,6 +523,7 @@ droplocations = {
     'Gossip Stone Fairy': 'Fairy',
     'Bean Plant Fairy': 'Fairy',
     'Fairy Pond': 'Fairy',
+    'Poe Kill': 'Poe',
     'Big Poe Kill': 'Big Poe',
 }
 
@@ -686,7 +709,6 @@ limited_items = [
     'Deku Nuts (5)',
     'Deku Stick (1)',
     'Deku Shield',
-    'Hylian Shield',
     'Deku Nuts (10)',
 ]
 
@@ -1362,7 +1384,7 @@ def get_pool_core(world):
     # Add limited items to pool if no repeatable merchant or cow locations are randomized
     if not world.shuffle_medigoron_carpet_salesman: #and world.shopsanity in ('off', '0') and world.shuffle_scrubs == 'off' and not world.shuffle_cows:
         for item in pool:
-            if item in limited_items:
+            if (item == 'Hylian Shield') or (False and item in ['Goron Tunic', 'Zora Tunic']) or item in limited_items:
                 pool.remove(item)
                 pool.append(ItemFactory(item, world).limit_item)
 

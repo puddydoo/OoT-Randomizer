@@ -29,10 +29,11 @@
     "Blue_Fire": "'Blue Fire' or Buy_Blue_Fire",
     "Fish": "'Fish' or Buy_Fish",
     "Fairy": "'Fairy' or Buy_Fairys_Spirit",
+    "Poe": "'Poe' or Buy_Poe",
     # "Big_Poe": "'Big Poe'",
 
-	"has_bombchus": "Bombchus_5 or Bombchus_10 or Bombchus_20 or Bombchu_Drop or buy_bombchus",
-	"buy_bombchus": "found_bombchus and (Buy_Bombchu_5 or Buy_Bombchu_10 or Buy_Bombchu_20)",
+    "has_bombchus": "Bombchus_5 or Bombchus_10 or Bombchus_20 or Bombchu_Drop or buy_bombchus",
+    "buy_bombchus": "found_bombchus and (Buy_Bombchu_5 or Buy_Bombchu_10 or Buy_Bombchu_20)",
     "found_bombchus": "(abundant_bombchus and (Bombchus or Bombchus_5_Limited or Bombchus_10_Limited or Bombchus_20_Limited)) or (not abundant_bombchus and Bomb_Bag)",
     "has_explosives": "Bombs or has_bombchus",
     "is_child": "age == 'child'",
