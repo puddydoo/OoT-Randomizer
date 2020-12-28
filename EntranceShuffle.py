@@ -424,13 +424,19 @@ def shuffle_random_entrances(worlds):
                 one_way_target_entrance_pools[pool_type] = build_one_way_targets(world, valid_target_types, exclude=['Prelude of Light Warp -> Temple of Time'])
                 for target in one_way_target_entrance_pools[pool_type]:
                     target.set_rule(lambda state, age=None, **kwargs: age == 'child')
-            elif pool_type in ['ChildSpawn', 'AdultSpawn']:
-                if pool_type == 'ChildSpawn' and worlds[0].separate_forest_entrances and worlds[0].starting_age == 'child':
+            elif pool_type == 'ChildSpawn':
+                child_spawn_exclusions = []
+                if worlds[0].open_forest == 'closed' and worlds[0].logic_require_deku and worlds[0].separate_forest_entrances:
+                    child_spawn_exclusions += ['Kokiri Forest -> LW Bridge From Forest']
+                if worlds[0].separate_forest_entrances and worlds[0].starting_age == 'child':
                     valid_target_types = ('Spawn', 'Minuet', 'Forest', 'LinksDoor')
-                    one_way_target_entrance_pools[pool_type] = build_one_way_targets(world, valid_target_types, exclude=['Adult Spawn -> Temple of Time'])
+                    child_spawn_exclusions += ['Adult Spawn -> Temple of Time']
                 else:
                     valid_target_types = ('Spawn', 'Minuet', 'WarpSong', 'OwlDrop', 'Overworld', 'Forest', 'Interior', 'ForestInterior', 'LinksDoor', 'SpecialInterior', 'Extra')
-                    one_way_target_entrance_pools[pool_type] = build_one_way_targets(world, valid_target_types)
+                one_way_target_entrance_pools[pool_type] = build_one_way_targets(world, valid_target_types, exclude=child_spawn_exclusions)
+            elif pool_type == 'AdultSpawn':
+                valid_target_types = ('Spawn', 'Minuet', 'WarpSong', 'OwlDrop', 'Overworld', 'Forest', 'Interior', 'ForestInterior', 'LinksDoor', 'SpecialInterior', 'Extra')
+                one_way_target_entrance_pools[pool_type] = build_one_way_targets(world, valid_target_types)
             elif pool_type == 'WarpSong':
                 valid_target_types = ('Spawn', 'Minuet', 'WarpSong', 'OwlDrop', 'Overworld', 'Forest', 'Interior', 'ForestInterior', 'LinksDoor', 'SpecialInterior', 'Extra')
                 one_way_target_entrance_pools[pool_type] = build_one_way_targets(world, valid_target_types)
