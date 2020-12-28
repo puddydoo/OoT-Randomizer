@@ -57,17 +57,10 @@ def getHintGroup(group, world):
             hint.type = 'always'
 
         # Hint inclusion override from distribution
-        if group in world.added_hint_types:
+        if group in world.added_hint_types or group in world.item_added_hint_types:
             if hint.name in world.added_hint_types[group]:
                 hint.type = group
-            location_check = False
-            if isinstance(hint.type, list):
-                for htype in hint.type:
-                    if htype in ['sometimes', 'song', 'overworld', 'dungeon', 'always'] and (name not in hintExclusions(world)):
-                        location_check = True
-            elif hint.type in ['sometimes', 'song', 'overworld', 'dungeon', 'always'] and (name not in hintExclusions(world)):
-                location_check = True
-            if location_check:
+            if nameIsLocation(name, hint.type, world):
                 location = world.get_location(name)
                 for i in world.item_added_hint_types[group]:
                     if i == location.item.name:
@@ -79,6 +72,11 @@ def getHintGroup(group, world):
         if group in world.hint_type_overrides:
             if name in world.hint_type_overrides[group]:
                 type_override = True
+        if group in world.item_hint_type_overrides:
+            if nameIsLocation(name, hint.type, world):
+                location = world.get_location(name)
+                if location.item.name in world.item_hint_type_overrides[group]:
+                    type_override = True
 
         if group in hint.type and (name not in hintExclusions(world)) and not type_override:
             ret.append(hint)
@@ -136,7 +134,6 @@ def tokens_required_by_settings(world):
 # Hints required under certain settings
 conditional_always = {
     'Market 10 Big Poes':           lambda world: world.big_poe_count > 3,
-    'Deku Theater Skull Mask':      lambda world: world.hint_dist == 'tournament' and not world.complete_mask_quest,
     'Deku Theater Mask of Truth':   lambda world: not world.complete_mask_quest,
     'Song from Ocarina of Time':    lambda world: stones_required_by_settings(world) < 2,
     'HF Ocarina of Time Item':      lambda world: stones_required_by_settings(world) < 2,
@@ -308,7 +305,7 @@ hintTable = {
     'HF Cow Grotto Cow':                                           ("the #cobwebbed cow# gifts", "a #cow behind webs# in a grotto gifts", ['overworld', 'sometimes']),
     'ZF GS Hidden Cave':                                           ("a spider high #above the icy waters# holds", None, ['overworld', 'sometimes']),
     'Wasteland Chest':                                             (["#deep in the wasteland# is", "beneath #the sands#, flames reveal"], None, ['overworld', 'sometimes']),
-    'Colossus GS Bean Patch':                                      ("a #spider buried in the wasteland# holds", None, ['overworld', 'sometimes']),
+    'Wasteland GS':                                                ("a #spider in the wasteland# holds", None, ['overworld', 'sometimes']),
     'Graveyard Composers Grave Chest':                             (["#flames in the Composers' Grave# reveal", "the #Composer Brothers hid#"], None, ['overworld', 'sometimes']),
     'ZF Bottom Freestanding PoH':                                  ("#under the icy waters# lies", None, ['overworld', 'sometimes']),
     'GC Pot Freestanding PoH':                                     ("spinning #Goron pottery# contains", None, ['overworld', 'sometimes']),
@@ -887,7 +884,7 @@ hintTable = {
     'GF GS Archery Range':                                         ("night reveals a #spider in a fortress# holding", None, 'exclude'),
     'GF GS Top Floor':                                             ("night reveals a #spider in a fortress# holding", None, 'exclude'),
 
-    'Wasteland GS':                                                ("a #spider in the Wasteland# holds", None, 'exclude'),
+    'Colossus GS Bean Patch':                                      ("a #spider buried in the desert# holds", None, 'exclude'),
     'Colossus GS Hill':                                            ("night reveals a #spider deep in the desert# holding", None, 'exclude'),
     'Colossus GS Tree':                                            ("night reveals a #spider deep in the desert# holding", None, 'exclude'),
 
@@ -1286,5 +1283,13 @@ def hintExclusions(world, clear_cache=False):
 
     return hintExclusions.exclusions
 
+def nameIsLocation(name, hint_type, world):
+    if isinstance(hint_type, (list, tuple)):
+        for htype in hint_type:
+            if htype in ['sometimes', 'song', 'overworld', 'dungeon', 'always'] and name not in hintExclusions(world):
+                return True
+    elif hint_type in ['sometimes', 'song', 'overworld', 'dungeon', 'always'] and name not in hintExclusions(world):
+        return True
+    return False
 
 hintExclusions.exclusions = None
