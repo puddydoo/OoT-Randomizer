@@ -229,26 +229,16 @@ tokens = [
     'Gold Skulltula Token',
     'Gold Skulltula Token (Kokiri Forest)',
     'Gold Skulltula Token (Lost Woods)',
-    'Gold Skulltula Token (Sacred Forest Meadow)',
-    'Gold Skulltula Token (Market Guard House)',
-    'Gold Skulltula Token (Hyrule Castle Grounds)',
-    'Gold Skulltula Token (Grotto)',
-    'Gold Skulltula Token (Ganons Castle Grounds)',
+    'Gold Skulltula Token (Hyrule Field)',
+    'Gold Skulltula Token (Market)',
     'Gold Skulltula Token (Lon Lon Ranch)',
-    'Gold Skulltula Token (Kakariko Village)',
-    'Gold Skulltula Token (Graveyard)',
-    'Gold Skulltula Token (Death Mountain Trail)',
-    'Gold Skulltula Token (Goron City)',
-    'Gold Skulltula Token (Death Mountain Crater)',
-    'Gold Skulltula Token (Zoras River)',
+    'Gold Skulltula Token (Kakariko)',
+    'Gold Skulltula Token (Death Mountain)',
     'Gold Skulltula Token (Zoras Domain)',
-    'Gold Skulltula Token (Zoras Fountain)',
     'Gold Skulltula Token (Lake Hylia)',
-    'Gold Skulltula Token (LH Lab)',
     'Gold Skulltula Token (Gerudo Valley)',
     'Gold Skulltula Token (Gerudo Fortress)',
-    'Gold Skulltula Token (Haunted Wasteland)',
-    'Gold Skulltula Token (Desert Colossus)',
+    'Gold Skulltula Token (Desert)',
     'Gold Skulltula Token (Deku Tree)',
     'Gold Skulltula Token (Dodongos Cavern)',
     'Gold Skulltula Token (Jabu Jabus Belly)',
@@ -628,56 +618,56 @@ vanillaoverworldGS = {
     'LW GS Bean Patch Near Bridge': 'Gold Skulltula Token (Lost Woods)',
     'LW GS Bean Patch Near Theater': 'Gold Skulltula Token (Lost Woods)',
     'LW GS Above Theater': 'Gold Skulltula Token (Lost Woods)',
-    'SFM GS': 'Gold Skulltula Token (Sacred Forest Meadow)',
-    'HF GS Near Kak Grotto': 'Gold Skulltula Token (Grotto)',
-    'HF GS Cow Grotto': 'Gold Skulltula Token (Grotto)',
-    'Market GS Guard House': 'Gold Skulltula Token (Market Guard House)',
-    'HC GS Tree': 'Gold Skulltula Token (Hyrule Castle Grounds)',
-    'HC GS Storms Grotto': 'Gold Skulltula Token (Grotto)',
-    'OGC GS': 'Gold Skulltula Token (Ganons Castle Grounds)',
+    'SFM GS': 'Gold Skulltula Token (Lost Woods)',
+    'HF GS Near Kak Grotto': 'Gold Skulltula Token (Hyrule Field)',
+    'HF GS Cow Grotto': 'Gold Skulltula Token (Hyrule Field)',
+    'Market GS Guard House': 'Gold Skulltula Token (Market)',
+    'HC GS Tree': 'Gold Skulltula Token (Market)',
+    'HC GS Storms Grotto': 'Gold Skulltula Token (Market)',
+    'OGC GS': 'Gold Skulltula Token (Market)',
     'LLR GS Tree': 'Gold Skulltula Token (Lon Lon Ranch)',
     'LLR GS Rain Shed': 'Gold Skulltula Token (Lon Lon Ranch)',
     'LLR GS House Window': 'Gold Skulltula Token (Lon Lon Ranch)',
     'LLR GS Back Wall': 'Gold Skulltula Token (Lon Lon Ranch)',
-    'Kak GS House Under Construction': 'Gold Skulltula Token (Kakariko Village)',
-    'Kak GS Skulltula House': 'Gold Skulltula Token (Kakariko Village)',
-    'Kak GS Guards House': 'Gold Skulltula Token (Kakariko Village)',
-    'Kak GS Tree': 'Gold Skulltula Token (Kakariko Village)',
-    'Kak GS Watchtower': 'Gold Skulltula Token (Kakariko Village)',
-    'Kak GS Above Impas House': 'Gold Skulltula Token (Kakariko Village)',
-    'Graveyard GS Wall': 'Gold Skulltula Token (Graveyard)',
-    'Graveyard GS Bean Patch': 'Gold Skulltula Token (Graveyard)',
-    'DMT GS Bean Patch': 'Gold Skulltula Token (Death Mountain Trail)',
-    'DMT GS Near Kak': 'Gold Skulltula Token (Death Mountain Trail)',
-    'DMT GS Falling Rocks Path': 'Gold Skulltula Token (Death Mountain Trail)',
-    'DMT GS Above Dodongos Cavern': 'Gold Skulltula Token (Death Mountain Trail)',
-    'GC GS Boulder Maze': 'Gold Skulltula Token (Goron City)',
-    'GC GS Center Platform': 'Gold Skulltula Token (Goron City)',
-    'DMC GS Crate': 'Gold Skulltula Token (Death Mountain Crater)',
-    'DMC GS Bean Patch': 'Gold Skulltula Token (Death Mountain Crater)',
-    'ZR GS Ladder': 'Gold Skulltula Token (Zoras River)',
-    'ZR GS Tree': 'Gold Skulltula Token (Zoras River)',
-    'ZR GS Near Raised Grottos': 'Gold Skulltula Token (Zoras River)',
-    'ZR GS Above Bridge': 'Gold Skulltula Token (Zoras River)',
+    'Kak GS House Under Construction': 'Gold Skulltula Token (Kakariko)',
+    'Kak GS Skulltula House': 'Gold Skulltula Token (Kakariko)',
+    'Kak GS Guards House': 'Gold Skulltula Token (Kakariko)',
+    'Kak GS Tree': 'Gold Skulltula Token (Kakariko)',
+    'Kak GS Watchtower': 'Gold Skulltula Token (Kakariko)',
+    'Kak GS Above Impas House': 'Gold Skulltula Token (Kakariko)',
+    'Graveyard GS Wall': 'Gold Skulltula Token (Kakariko)',
+    'Graveyard GS Bean Patch': 'Gold Skulltula Token (Kakariko)',
+    'DMT GS Bean Patch': 'Gold Skulltula Token (Death Mountain)',
+    'DMT GS Near Kak': 'Gold Skulltula Token (Death Mountain)',
+    'DMT GS Falling Rocks Path': 'Gold Skulltula Token (Death Mountain)',
+    'DMT GS Above Dodongos Cavern': 'Gold Skulltula Token (Death Mountain)',
+    'GC GS Boulder Maze': 'Gold Skulltula Token (Death Mountain)',
+    'GC GS Center Platform': 'Gold Skulltula Token (Death Mountain)',
+    'DMC GS Crate': 'Gold Skulltula Token (Death Mountain)',
+    'DMC GS Bean Patch': 'Gold Skulltula Token (Death Mountain)',
+    'ZR GS Ladder': 'Gold Skulltula Token (Zoras Domain)',
+    'ZR GS Tree': 'Gold Skulltula Token (Zoras Domain)',
+    'ZR GS Near Raised Grottos': 'Gold Skulltula Token (Zoras Domain)',
+    'ZR GS Above Bridge': 'Gold Skulltula Token (Zoras Domain)',
     'ZD GS Frozen Waterfall': 'Gold Skulltula Token (Zoras Domain)',
-    'ZF GS Tree': 'Gold Skulltula Token (Zoras Fountain)',
-    'ZF GS Above the Log': 'Gold Skulltula Token (Zoras Fountain)',
-    'ZF GS Hidden Cave': 'Gold Skulltula Token (Zoras Fountain)',
+    'ZF GS Tree': 'Gold Skulltula Token (Zoras Domain)',
+    'ZF GS Above the Log': 'Gold Skulltula Token (Zoras Domain)',
+    'ZF GS Hidden Cave': 'Gold Skulltula Token (Zoras Domain)',
     'LH GS Bean Patch': 'Gold Skulltula Token (Lake Hylia)',
     'LH GS Lab Wall': 'Gold Skulltula Token (Lake Hylia)',
     'LH GS Small Island': 'Gold Skulltula Token (Lake Hylia)',
     'LH GS Tree': 'Gold Skulltula Token (Lake Hylia)',
-    'LH GS Lab Crate': 'Gold Skulltula Token (LH Lab)',
+    'LH GS Lab Crate': 'Gold Skulltula Token (Lake Hylia)',
     'GV GS Small Bridge': 'Gold Skulltula Token (Gerudo Valley)',
     'GV GS Bean Patch': 'Gold Skulltula Token (Gerudo Valley)',
     'GV GS Behind Tent': 'Gold Skulltula Token (Gerudo Valley)',
     'GV GS Pillar': 'Gold Skulltula Token (Gerudo Valley)',
     'GF GS Archery Range': 'Gold Skulltula Token (Gerudo Fortress)',
     'GF GS Top Floor': 'Gold Skulltula Token (Gerudo Fortress)',
-    'Wasteland GS': 'Gold Skulltula Token (Haunted Wasteland)',
-    'Colossus GS Bean Patch': 'Gold Skulltula Token (Desert Colossus)',
-    'Colossus GS Tree': 'Gold Skulltula Token (Desert Colossus)',
-    'Colossus GS Hill': 'Gold Skulltula Token (Desert Colossus)',
+    'Wasteland GS': 'Gold Skulltula Token (Desert)',
+    'Colossus GS Bean Patch': 'Gold Skulltula Token (Desert)',
+    'Colossus GS Tree': 'Gold Skulltula Token (Desert)',
+    'Colossus GS Hill': 'Gold Skulltula Token (Desert)',
 }
 
 vanilladungeonGS = {
@@ -1245,27 +1235,17 @@ def get_pool_core(world):
                 continue
     else:
         pool.extend(['Gold Skulltula Token (Kokiri Forest)'] * 3)
-        pool.extend(['Gold Skulltula Token (Lost Woods)'] * 3)
-        pool.extend(['Gold Skulltula Token (Sacred Forest Meadow)'] * 1)
-        pool.extend(['Gold Skulltula Token (Market Guard House)'] * 1)
-        pool.extend(['Gold Skulltula Token (Hyrule Castle Grounds)'] * 1)
-        pool.extend(['Gold Skulltula Token (Grotto)'] * 3)
-        pool.extend(['Gold Skulltula Token (Ganons Castle Grounds)'] * 1)
+        pool.extend(['Gold Skulltula Token (Lost Woods)'] * 4)
+        pool.extend(['Gold Skulltula Token (Hyrule Field)'] * 2)
+        pool.extend(['Gold Skulltula Token (Market)'] * 4)
         pool.extend(['Gold Skulltula Token (Lon Lon Ranch)'] * 4)
-        pool.extend(['Gold Skulltula Token (Kakariko Village)'] * 6)
-        pool.extend(['Gold Skulltula Token (Graveyard)'] * 2)
-        pool.extend(['Gold Skulltula Token (Death Mountain Trail)'] * 4)
-        pool.extend(['Gold Skulltula Token (Goron City)'] * 2)
-        pool.extend(['Gold Skulltula Token (Death Mountain Crater)'] * 2)
-        pool.extend(['Gold Skulltula Token (Zoras River)'] * 4)
-        pool.extend(['Gold Skulltula Token (Zoras Domain)'] * 1)
-        pool.extend(['Gold Skulltula Token (Zoras Fountain)'] * 3)
-        pool.extend(['Gold Skulltula Token (Lake Hylia)'] * 4)
-        pool.extend(['Gold Skulltula Token (LH Lab)'] * 1)
+        pool.extend(['Gold Skulltula Token (Kakariko)'] * 8)
+        pool.extend(['Gold Skulltula Token (Death Mountain)'] * 8)
+        pool.extend(['Gold Skulltula Token (Zoras Domain)'] * 8)
+        pool.extend(['Gold Skulltula Token (Lake Hylia)'] * 5)
         pool.extend(['Gold Skulltula Token (Gerudo Valley)'] * 4)
         pool.extend(['Gold Skulltula Token (Gerudo Fortress)'] * 2)
-        pool.extend(['Gold Skulltula Token (Haunted Wasteland)'] * 1)
-        pool.extend(['Gold Skulltula Token (Desert Colossus)'] * 3)
+        pool.extend(['Gold Skulltula Token (Desert)'] * 4)
     if world.dungeon_tokens == 'vanilla':
         for location, item in vanilladungeonGS.items():
             try:
