@@ -2629,27 +2629,30 @@ setting_infos = [
             'tokensanity': 'Anywhere (Tokensanity)',
         },
         gui_tooltip    = '''\
-            'Start With': All 56 Gold Skulltula Tokens from
-            the overworld are given to you from the start.
-            This will add money and refill items to the pool.
+            There are a total of 56 Gold Skulltula Tokens
+            from the overworld.
 
-            'Vanilla': All 56 Gold Skulltulas in the overworld
+            'Start With': All overworld tokens are given
+            to you from the start. This will add a lot
+            of money and refill items to the pool.
+
+            'Vanilla': All overworld Gold Skulltulas
             drop their respective tokens, as in vanilla.
 
-            'Any Skulltula': If dungeon tokens are shuffled,
-            the 56 Gold Skulltula Tokens from the overworld
-            can appear in any of the 100 Skulltula locations.
+            'Any Skulltula': If dungeon tokens are
+            shuffled, overworld tokens can appear in
+            any of the 100 Skulltula locations.
 
-            'Overworld Only': The 56 Gold Skulltula Tokens
-            can appear in any location in the overworld.
+            'Overworld Only': Overworld tokens can
+            appear in any location in the overworld.
 
-            'Dungeons Only': 56 Gold Skulltula Tokens are
-            removed from the overworld and placed within
-            dungeons. Tokens can still be added to the
-            overworld if dungeon tokens are shuffled.
+            'Dungeons Only': All tokens from the
+            overworld are moved into dungeons. Tokens
+            can still be added to the overworld if
+            dungeon tokens are shuffled.
 
-            'Anywhere': The 56 Gold Skulltula Tokens from
-            the overworld can appear anywhere in the world.
+            'Anywhere': Tokens from the overworld
+            can appear anywhere in the world.
         ''',
         shared         = True,
         gui_params     = {
@@ -2670,32 +2673,33 @@ setting_infos = [
             'tokensanity': 'Anywhere (Tokensanity)',
         },
         gui_tooltip    = '''\
-            'Remove': 44 Gold Skulltula Tokens are removed.
-            This will add money and refill items to the pool
-            and reduce the total number of tokens to 56.
+            There are a total of 44 tokens from dungeons.
 
-            'Vanilla': All 44 Gold Skulltulas in dungeons
+            'Remove': All dungeon tokens are removed. This
+            will add a lot of money and refill items to the
+            pool and reduce the total number of tokens.
+
+            'Vanilla': All Gold Skulltulas in dungeons
             drop their respective tokens, as in vanilla.
 
-            'Any Skulltula': If overworld tokens are shuffled,
-            the 44 Gold Skulltula Tokens from dungeons can
-            appear in any of the 100 Skulltula locations.
+            'Any Skulltula': If overworld tokens are
+            shuffled, tokens from dungeons can appear
+            in any of the 100 Skulltula locations.
 
             'Own Dungeon': Each dungeon will contain at
             least the same number of Gold Skulltula Tokens
             as vanilla. Additional tokens can appear in
             dungeons if overworld tokens are shuffled.
 
-            'Overworld Only': 44 Gold Skulltula Tokens are
-            removed from dungeons and placed in the
-            overworld. Tokens can still be added to
-            dungeons if overworld tokens are shuffled.
+            'Overworld Only': All tokens from dungeons are
+            moved to the overworld. Tokens can still be added
+            to dungeons if overworld tokens are shuffled.
 
-            'Any Dungeon': The 44 Gold Skulltula Tokens
-            are spread across all dungeons.
+            'Any Dungeon': Tokens from dungeons can
+            appear anywhere within any dungeon.
 
-            'Anywhere': The 44 Gold Skulltula Tokens from
-            dungeons can appear anywhere in the world.
+            'Anywhere': Tokens from dungeons
+            can appear anywhere in the world.
 
             Setting this to 'Anywhere', 'Overworld Only', or
             'Remove' increases the value of most dungeons and
