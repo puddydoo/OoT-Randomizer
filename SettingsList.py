@@ -2623,7 +2623,7 @@ setting_infos = [
         choices        = {
 #            'startwith':   'Start With',
             'vanilla':     'Vanilla Locations',
-#            'skulltulas':  'Any Skulltula',
+#            'skulltulas':  'Skulltula Locations',
             'overworld':   'Overworld Only',
             'dungeons':    'Dungeons Only',
             'tokensanity': 'Anywhere (Tokensanity)',
@@ -2637,9 +2637,9 @@ setting_infos = [
             of money and refill items to the pool.
 
             'Vanilla': All overworld Gold Skulltulas
-            drop their respective tokens, as in vanilla.
+            drop their respective tokens.
 
-            'Any Skulltula': If dungeon tokens are
+            'Skulltulas': If dungeon tokens are
             shuffled, overworld tokens can appear in
             any of the 100 Skulltula locations.
 
@@ -2666,44 +2666,38 @@ setting_infos = [
         choices        = {
             'remove':      'Remove',
             'vanilla':     'Vanilla Locations',
-#            'skulltulas':  'Any Skulltula',
+#            'skulltulas':  'Skulltula Locations',
             'dungeon':     'Own Dungeon',
             'overworld':   'Overworld Only',
             'any_dungeon': 'Any Dungeon',
             'tokensanity': 'Anywhere (Tokensanity)',
         },
         gui_tooltip    = '''\
-            There are a total of 44 tokens from dungeons.
+            There are a total of 44 Gold Skulltula Tokens from dungeons.
+            Settings that move tokens out of dungeons increase the value of
+            most dungeons and makes dungeon exploration more diverse.
 
-            'Remove': All dungeon tokens are removed. This
-            will add a lot of money and refill items to the
-            pool and reduce the total number of tokens.
+            'Remove': All tokens from dungeons are removed.
+            This will add a lot of money and refill items to the
+            pool and reduce the total number of tokens to 56.
 
-            'Vanilla': All Gold Skulltulas in dungeons
-            drop their respective tokens, as in vanilla.
+            'Vanilla': All dungeon Skulltulas drop their respective tokens.
 
-            'Any Skulltula': If overworld tokens are
-            shuffled, tokens from dungeons can appear
-            in any of the 100 Skulltula locations.
+            'Skulltulas': If overworld tokens are shuffled, tokens from
+            dungeons can appear in any of the 100 Skulltula locations.
 
-            'Own Dungeon': Each dungeon will contain at
-            least the same number of Gold Skulltula Tokens
-            as vanilla. Additional tokens can appear in
-            dungeons if overworld tokens are shuffled.
+            'Own Dungeon': Each dungeon will contain at least the
+            same number of tokens as vanilla. Additional tokens can
+            appear in dungeons if overworld tokens are shuffled.
 
             'Overworld Only': All tokens from dungeons are
             moved to the overworld. Tokens can still be added
             to dungeons if overworld tokens are shuffled.
 
             'Any Dungeon': Tokens from dungeons can
-            appear anywhere within any dungeon.
+            appear in any location within any dungeon.
 
-            'Anywhere': Tokens from dungeons
-            can appear anywhere in the world.
-
-            Setting this to 'Anywhere', 'Overworld Only', or
-            'Remove' increases the value of most dungeons and
-            makes internal dungeon exploration more diverse.
+            'Anywhere': Dungeon tokens can appear anywhere in the world.
         ''',
         shared         = True,
         gui_params     = {
