@@ -1209,6 +1209,10 @@ def get_pool_core(world):
     if world.no_epona_race:
         world.state.collect(ItemFactory('Epona', event=True))
 
+    if world.dungeon_tokens == 'remove':
+        for item in [item for dungeon in world.dungeons for item in dungeon.gs_tokens]:
+            world.state.collect(item)
+            pool.extend(get_junk_item())
     if world.shuffle_mapcompass == 'remove' or world.shuffle_mapcompass == 'startwith':
         for item in [item for dungeon in world.dungeons for item in dungeon.dungeon_items]:
             world.state.collect(item)
@@ -1233,6 +1237,8 @@ def get_pool_core(world):
                 placed_items[location] = item
             except KeyError:
                 continue
+    elif world.overworld_tokens == 'startwith':
+        pool.extend(get_junk_item(56))
     else:
         pool.extend(['Gold Skulltula Token (Kokiri Forest)'] * 3)
         pool.extend(['Gold Skulltula Token (Lost Woods)'] * 4)

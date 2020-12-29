@@ -119,7 +119,7 @@ def getItemGenericName(item):
 
 def isRestrictedDungeonItem(dungeon, item):
     if item.type == 'DungeonToken' and dungeon.world.dungeon_tokens == 'dungeon':
-        return item in dungeon.dungeon_items
+        return item in dungeon.gs_tokens
     if (item.map or item.compass) and dungeon.world.shuffle_mapcompass == 'dungeon':
         return item in dungeon.dungeon_items
     if item.type == 'SmallKey' and dungeon.world.shuffle_smallkeys == 'dungeon':

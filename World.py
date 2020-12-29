@@ -65,6 +65,16 @@ class World(object):
                                              self.warp_songs or self.spawn_positions):
             self.open_forest = 'closed_deku'
 
+        if self.overworld_tokens in ['vanilla', 'skulltulas'] and self.dungeon_tokens in ['vanilla', 'skulltulas']:
+            self.overworld_tokens = 'vanilla'
+            self.dungeon_tokens = 'vanilla'
+
+        if dungeon_tokens == 'remove':
+            if lacs_tokens > 56:
+                lacs_tokens = 56
+            if bridge_tokens > 56:
+                bridge_tokens = 56
+
         self.triforce_goal = self.triforce_goal_per_world * settings.world_count
 
         if self.triforce_hunt:
@@ -556,6 +566,9 @@ class World(object):
 
         # This check should never be false normally, but is here as a sanity check
         if location.can_fill_fast(item, manual):
+            #if item.type in ('Token', 'DungeonToken'):
+            #    item = ItemFactory('Gold Skulltula Token', self)
+
             location.item = item
             item.location = location
             item.price = location.price if location.price is not None else item.price
