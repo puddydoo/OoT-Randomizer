@@ -75,8 +75,8 @@
     {
         "region_name": "Egg Hatch",
         "locations": {
-            "Weird Egg Hatch": "can_leave_forest and is_child and (Weird_Egg or skip_child_zelda)",
-            "Pocket Egg Hatch": "is_adult and (Pocket_Egg or Claim_Check)"
+            "Hatch Weird Egg": "can_leave_forest and is_child and (Weird_Egg or skip_child_zelda)",
+            "Hatch Pocket Egg": "is_adult and (Pocket_Egg or Claim_Check)"
         }
     },
     {
