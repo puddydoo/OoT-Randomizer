@@ -7,7 +7,8 @@
         },
         "exits": {
             "Root Exits": "is_starting_age or Time_Travel",
-            "HC Garden Locations": "skip_child_zelda"
+            "HC Garden Locations": "skip_child_zelda",
+            "Egg Hatch": "True"
         }
     },
     {
@@ -22,6 +23,13 @@
             "Lake Hylia": "can_play(Serenade_of_Water) and can_leave_forest",
             "Graveyard Warp Pad Region": "can_play(Nocturne_of_Shadow) and can_leave_forest",
             "Desert Colossus": "can_play(Requiem_of_Spirit) and can_leave_forest"
+        }
+    },
+    {
+        "region_name": "Egg Hatch",
+        "locations": {
+            "Weird Egg Hatch": "is_child and (Weird_Egg or skip_child_zelda)",
+            "Pocket Egg Hatch": "is_adult and (Pocket_Egg or Claim_Check)"
         }
     },
     {
@@ -451,8 +459,8 @@
         },
         "exits": {
             "Market": "True",
-            #// garden will logically need weird-egg as letter first can screw over the mask quest
-            "HC Garden": "Weird_Egg or skip_child_zelda or (not shuffle_weird_egg)",
+            #// garden will logically need chicken as letter first can screw over the mask quest
+            "HC Garden": "Chicken or skip_child_zelda or (not shuffle_weird_egg)",
             "HC Great Fairy Fountain": "True",
             "HC Storms Grotto": "can_play(Song_of_Storms)"
         }

@@ -479,6 +479,8 @@ fixedlocations = {
     'Pierre': 'Scarecrow Song',
     'Deliver Rutos Letter': 'Deliver Letter',
     'Master Sword Pedestal': 'Time Travel',
+    'Weird Egg Hatch': 'Chicken',
+    'Pocket Egg Hatch': 'Pocket Cucco',
     'Market Bombchu Bowling Bombchus': 'Bombchu Drop',
     'Market Mask Shop Keaton Mask': 'Keaton Mask',
     'Market Mask Shop Spooky Mask': 'Spooky Mask',

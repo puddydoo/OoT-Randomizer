@@ -144,6 +144,7 @@ item_table = {
     'Magic Bean Pack':                                 ('Item',     True,  False, 0xC9, None),
     'Triforce Piece':                                  ('Item',     True,  None,  0xCA, {'progressive': float('Inf')}),
     'Zeldas Letter':                                   ('Item',     True,  None,  0x0B, None),
+    'Chicken':                                         ('Item',     True,  None,  0x19, None),
     'Time Travel':                                     ('Event',    True,  None,  None, None),
     'Scarecrow Song':                                  ('Event',    True,  None,  None, None),
     'Triforce':                                        ('Event',    True,  None,  None, None),
