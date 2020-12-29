@@ -34,7 +34,7 @@ item_table = {
     'Prescription':                                    ('Item',     True,  None,  0x23, None),
     'Eyeball Frog':                                    ('Item',     True,  None,  0x24, None),
     'Eyedrops':                                        ('Item',     True,  None,  0x25, None),
-    'Claim Check':                                     ('Item',     True,  None,  0x26, None),
+    'Claim Check':                                     ('Item',     True,  False, 0x26, None),
     'Kokiri Sword':                                    ('Item',     True,  False, 0x27, None),
     'Giants Knife':                                    ('Item',     True,  True,  0x28, {'limit_item': 'Giants Knife (Limited)'}),
     'Deku Shield':                                     ('Repeat',   True,  True,  0x29, {'limit_item': 'Deku Shield (Limited)'}),

@@ -725,8 +725,13 @@ remove_junk_set = set(remove_junk_items)
 limited_items = [
     'Deku Nuts (5)',
     'Deku Stick (1)',
+    'Fairy',
     'Deku Shield',
     'Deku Nuts (10)',
+    'Fish',
+    'Bugs',
+    'Blue Fire',
+    'Poe',
 ]
 
 item_groups = {
