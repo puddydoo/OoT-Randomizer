@@ -212,12 +212,19 @@
         "hint": "the Lost Woods",
         "events": {
             "Sell Skull Mask": "is_child and can_play(Sarias_Song) and (Skull_Mask or Skull_Mask_Limited)",
-            "Odd Mushroom Access": "is_adult and ('Cojiro Access' or Cojiro)",
-            "Poachers Saw Access": "is_adult and 'Odd Potion Access'"
+            "Odd Mushroom Access": "
+                is_adult and
+                (Cojiro or Odd_Mushroom or Odd_Potion or Poachers_Saw or Broken_Sword or
+                Prescription or Eyeball_Frog or Eyedrops or Claim_Check)"
+            "Poachers Saw Access": "
+                is_adult and 'Odd Mushroom Access' and
+                (Odd_Potion or Poachers_Saw or Broken_Sword or Prescription or Eyeball_Frog or Eyedrops or Claim_Check)"
         },
         "locations": {
             "LW Skull Kid": "is_child and can_play(Sarias_Song)",
             "LW Skull Mask Sale": "complete_mask_quest or 'Sell Skull Mask'",
+            "LW Odd Mushroom": "is_adult and 'Odd Mushroom Access'",
+            "LW Poachers Saw": "is_adult and 'Poachers Saw Access'",
             "LW Ocarina Memory Game": "is_child and Ocarina",
             "LW Target in Woods": "can_use(Slingshot)",
             "LW Deku Scrub Near Bridge": "is_child and can_stun_deku",
@@ -432,15 +439,11 @@
     {
         "region_name": "LH Lab",
         "scene": "LH Lab",
-        "events": {
-            "Eyedrops Access": "
-                is_adult and 
-                ('Eyeball Frog Access' or (Eyeball_Frog and disable_trade_revert))"
-        },
         "locations": {
             "LH Lab Dive": "
                 (Progressive_Scale, 2) or
                 (logic_lab_diving and Iron_Boots and can_use(Hookshot))",
+            "LH Eyedrops": "is_adult and (Claim_Check or Eyeball_Frog)",
             "LH GS Lab Crate": "Iron_Boots and can_use(Hookshot)"
         },
         "exits": {
@@ -531,11 +534,9 @@
         "scene": "Gerudo Valley",
         "hint": "Gerudo Valley",
         "time_passes": true,
-        "events": {
-            "Broken Sword Access": "is_adult and ('Poachers Saw Access' or Poachers_Saw)"
-        },
         "locations": {
             "GV Chest": "can_use(Megaton_Hammer)",
+            "GV Broken Sword": "is_adult and (Claim_Check or Poachers_Saw)",
             "GV GS Behind Tent": "can_use(Hookshot) and at_night",
             "GV GS Pillar": "can_use(Hookshot) and at_night"
         },
@@ -997,7 +998,6 @@
         "scene": "Kakariko Village",
         "hint": "Kakariko Village",
         "events": {
-            "Cojiro Access": "is_adult and 'Wake Up Adult Talon'",
             "Kakariko Village Gate Open": "is_child and (Zeldas_Letter or open_kakariko == 'open')",
             "Sell Keaton Mask": "is_child and Keaton_Mask"
         },
@@ -1006,6 +1006,7 @@
                 is_adult and Forest_Medallion and Fire_Medallion and Water_Medallion",
             "Kak Anju as Adult": "is_adult and at_day",
             "Kak Anju as Child": "is_child and at_day",
+            "Kak Cojiro": "is_adult and at_day and ('Wake Up Adult Talon' or Claim_Check)",
             "Kak Bug Sale": "is_adult and Bugs",
             "Kak Fish Sale": "is_adult and Fish",
             "Kak Blue Fire Sale": "is_adult and Blue_Fire",
@@ -1212,14 +1213,10 @@
     {
         "region_name": "Kak Grannys Potion Shop",
         "scene": "Kak Grannys Potion Shop",
-        "events": {
-            "Odd Potion Access": "
-                is_adult and
-                ('Odd Mushroom Access' or (Odd_Mushroom and disable_trade_revert))"
-        },
         "locations": {
+            "Kak Odd Potion": "is_adult and (Odd_Mushroom or Claim_Check)",
             "Granny Blue Potion": "
-                is_adult and Progressive_Wallet and ('Poachers Saw Access' or Poachers_Saw)"
+                is_adult and Progressive_Wallet and 'Poachers Saw Access'"
         },
         "exits": {
             "Kak Backyard": "True"
@@ -1381,14 +1378,15 @@
         "hint": "Death Mountain Trail",
         "time_passes": true,
         "events": {
-            "Prescription Access": "is_adult and ('Broken Sword Access' or Broken_Sword)"
+            "Prescription Access": "
+                is_adult and (Broken_Sword or Prescription or Eyeball_Frog or Eyedrops or Claim_Check)",
+            "Claim Check Access": "
+                is_adult and 'Prescription Access' and guarantee_trade_path and Eyedrops"
         },
         "locations": {
-            "DMT Biggoron": "
-                is_adult and 
-                (Claim_Check or 
-                    (guarantee_trade_path and 
-                    ('Eyedrops Access' or (Eyedrops and disable_trade_revert))))",
+            "DMT Prescription": "is_adult and 'Prescription Access'",
+            "DMT Claim Check": "is_adult and ('Claim Check Access' or Claim_Check)",
+            "DMT Biggoron": "is_adult and Claim_Check",
             "DMT GS Falling Rocks Path": "
                 is_adult and (can_use(Megaton_Hammer) or logic_trail_gs_upper) and at_night",
             "DMT Gossip Stone": "True",
@@ -1736,10 +1734,7 @@
         "scene": "Zoras Domain",
         "hint": "Zora's Domain",
         "events": {
-            "King Zora Thawed": "is_adult and Blue_Fire",
-            "Eyeball Frog Access": "
-                is_adult and 'King Zora Thawed' and 
-                (Eyedrops or Eyeball_Frog or Prescription or 'Prescription Access')"
+            "King Zora Thawed": "is_adult and Blue_Fire"
         },
         "locations": {
             "ZD Diving Minigame": "is_child",
@@ -1747,6 +1742,9 @@
             "Deliver Rutos Letter": "
                 is_child and Rutos_Letter and zora_fountain != 'open'",
             "ZD King Zora Thawed": "'King Zora Thawed'",
+            "ZD Eyeball Frog": "
+                is_adult and 'King Zora Thawed' and 
+                (Eyedrops or Eyeball_Frog or Prescription or Claim_Check)",
             "ZD GS Frozen Waterfall": "
                 is_adult and at_night and
                 (Progressive_Hookshot or Bow or Magic_Meter or logic_domain_gs)",

@@ -529,6 +529,21 @@ droplocations = {
     'Big Poe Kill': 'Big Poe',
 }
 
+tradelocations = {
+    'Kak Cojiro': 'Cojiro',
+    'LW Poachers Saw': 'Poachers Saw',
+    'GV Broken Sword': 'Broken Sword',
+    'DMT Prescription': 'Prescription',
+    'DMT Claim Check': 'Claim Check',
+}
+
+timerlocations = {
+    'LW Odd Mushroom': 'Odd Mushroom',
+    'Kak Odd Potion': 'Odd Potion',
+    'ZD Eyeball Frog': 'Eyeball Frog',
+    'LH Eyedrops': 'Eyedrops',
+}
+
 vanillaBK = {
     'Fire Temple Boss Key Chest': 'Boss Key (Fire Temple)',
     'Shadow Temple Boss Key Chest': 'Boss Key (Shadow Temple)',
@@ -784,6 +799,18 @@ def generate_itempool(world):
         item = droplocations[drop_location.name]
         world.push_item(drop_location, ItemFactory(item, world))
         drop_location.locked = True
+    
+    trade_locations = list(filter(lambda loc: loc.name in tradelocations, world.get_locations()))
+    for location in trade_locations:
+        item = tradelocations[location.name]
+        world.push_item(location, ItemFactory(item, world))
+        location.locked = True
+    
+    timer_locations = list(filter(lambda loc: loc.name in timerlocations, world.get_locations()))
+    for location in timer_locations:
+        item = timerlocations[location.name]
+        world.push_item(location, ItemFactory(item, world))
+        location.locked = True
 
     # set up item pool
     (pool, placed_items) = get_pool_core(world)

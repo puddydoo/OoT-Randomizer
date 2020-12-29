@@ -131,6 +131,8 @@
         "locations": {
             "LW Skull Kid": "is_child and can_play(Sarias_Song)",
             "LW Skull Mask Sale": "complete_mask_quest or 'Sell Skull Mask'",
+            "LW Odd Mushroom": "is_adult and Claim_Check",
+            "LW Poachers Saw": "is_adult and Claim_Check",
             "LW Ocarina Memory Game": "is_child and Ocarina",
             "LW Target in Woods": "can_use(Slingshot)",
             "LW Deku Scrub Near Bridge": "is_child and can_stun_deku",
@@ -279,6 +281,7 @@
             "LH Lab Dive": "
                 (Progressive_Scale, 2) or
                 (Iron_Boots and can_use(Hookshot)) or (has_bottle and can_use(Hover_Boots))",
+            "LH Eyedrops": "is_adult and Claim_Check",
             "LH GS Lab Crate": "Iron_Boots and can_use(Hookshot)"
         }
     },
@@ -317,6 +320,7 @@
         "time_passes": true,
         "locations": {
             "GV Chest": "can_use(Megaton_Hammer)",
+            "GV Broken Sword": "is_adult and Claim_Check",
             "GV GS Behind Tent": "can_use(Hookshot) and at_night",
             "GV GS Pillar": "can_use(Hookshot) and at_night"
         },
@@ -615,6 +619,7 @@
             "Kak Man on Roof": "True",
             "Kak Anju as Adult": "is_adult",
             "Kak Anju as Child": "is_child",
+            "Kak Cojiro": "is_adult and Claim_Check",
             "Kak Bug Sale": "is_adult and Bugs",
             "Kak Fish Sale": "is_adult and Fish",
             "Kak Blue Fire Sale": "is_adult and Blue_Fire",
@@ -728,6 +733,7 @@
     {
         "region_name": "Kak Grannys Potion Shop",
         "locations": {
+            "Kak Odd Potion": "is_adult and Claim_Check",
             "Granny Blue Potion": "
                 is_adult and Progressive_Wallet and Poachers_Saw"
         }
@@ -834,6 +840,8 @@
         "hint": "Death Mountain Trail",
         "time_passes": true,
         "locations": {
+            "DMT Prescription": "is_adult and Claim_Check",
+            "DMT Claim Check": "is_adult and Claim_Check",
             "DMT Biggoron": "
                 is_adult and
                 (Claim_Check or (
@@ -1059,6 +1067,7 @@
             "ZD Chest": "can_use(Sticks)",
             "Deliver Rutos Letter": "(is_child and Rutos_Letter) and zora_fountain != 'open'",
             "ZD King Zora Thawed": "is_adult",
+            "ZD Eyeball Frog": "is_adult and Claim_Check",
             "ZD GS Frozen Waterfall": "
                 is_adult and at_night and (Progressive_Hookshot or Bow or Magic_Meter or has_explosives or 
                 Biggoron_Sword or 
