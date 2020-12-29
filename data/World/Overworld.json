@@ -1239,7 +1239,8 @@
             "Graveyard GS Bean Patch": "can_plant_bugs and can_child_attack",
             "Butterfly Fairy": "can_use(Sticks) and at_day and has_bottle",
             "Bean Plant Fairy": "can_plant_bean and can_play(Song_of_Storms) and has_bottle",
-            "Bug Rock": "has_bottle"
+            "Bug Rock": "has_bottle",
+            "Poe Kill": "has_bottle and (is_adult or can_child_damage)"
         },
         "exits": {
             "Graveyard Shield Grave": "is_adult or at_night",

@@ -827,15 +827,15 @@ location_table = OrderedDict([
     ("Market Mask Shop Gerudo Mask":                    ("Event",       None,  None, None,                     ("the Market", "Market",))),
     ("Market Mask Shop Mask of Truth":                  ("Event",       None,  None, None,                     ("the Market", "Market",))),
     ("Hatch Pocket Egg",                                ("Event",       None,  None, None,                     None)),
-    ("Kak Cojiro",                                      ("Event",       0x52,  None, None,                     ("Kakariko Village", "Kakariko",))),
-    ("LW Odd Mushroom",                                 ("Event",       0x5B,  None, None,                     ("the Lost Woods", "Forest",))),
-    ("Kak Odd Potion",                                  ("Event",       0x4E,  None, None,                     ("Kakariko Village", "Kakariko",))),
-    ("LW Poachers Saw",                                 ("Event",       0x5B,  None, None,                     ("the Lost Woods", "Forest",))),
-    ("GV Broken Sword",                                 ("Event",       0x5A,  None, None,                     ("Gerudo Valley", "Gerudo",))),
-    ("DMT Prescription",                                ("Event",       0x60,  None, None,                     ("Death Mountain Trail", "Death Mountain",))),
-    ("ZD Eyeball Frog",                                 ("Event",       0x58,  None, None,                     ("Zora's Domain",))),
-    ("LH Eyedrops",                                     ("Event",       0x38,  None, None,                     ("Lake Hylia",))),
-    ("DMT Claim Check",                                 ("Event",       0x60,  None, None,                     ("Death Mountain Trail", "Death Mountain",))),
+    ("Kak Cojiro",                                      ("Event",       0x52,  None, None,                     ("Kakariko Village", "Kakariko",))), # NPC
+    ("LW Odd Mushroom",                                 ("Event",       0x5B,  None, None,                     ("the Lost Woods", "Forest",))), # NPC
+    ("Kak Odd Potion",                                  ("Event",       0x4E,  None, None,                     ("Kakariko Village", "Kakariko",))), # NPC
+    ("LW Poachers Saw",                                 ("Event",       0x5B,  None, None,                     ("the Lost Woods", "Forest",))), # NPC
+    ("GV Broken Sword",                                 ("Event",       0x5A,  None, None,                     ("Gerudo Valley", "Gerudo",))), # NPC
+    ("DMT Prescription",                                ("Event",       0x60,  None, None,                     ("Death Mountain Trail", "Death Mountain",))), # NPC
+    ("ZD Eyeball Frog",                                 ("Event",       0x58,  None, None,                     ("Zora's Domain",))), # RepeatNPC (repeatable as long as you have the prescription)
+    ("LH Eyedrops",                                     ("Event",       0x38,  None, None,                     ("Lake Hylia",))), # NPC
+    ("DMT Claim Check",                                 ("Event",       0x60,  None, None,                     ("Death Mountain Trail", "Death Mountain",))), # NPC
 
     ("Granny Blue Potion":                              ("Event",       0x4E,  None, None,                     ("Kakariko Village", "Kakariko",))), # RepeatNPC
     ("Market Poe Sale":                                 ("Event",       None,  None, None,                     ("the Market", "Hyrule Castle",))), # RepeatNPC

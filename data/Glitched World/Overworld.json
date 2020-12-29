@@ -751,7 +751,8 @@
             "Graveyard Dampe Gravedigging Tour": "is_child",
             "Graveyard Spooky Mask Sale": "complete_mask_quest or 'Sell Spooky Mask'",
             "Graveyard GS Wall": "(can_use(Boomerang) or (can_hover and is_child)) and at_night",
-            "Graveyard GS Bean Patch": "can_plant_bugs and can_child_attack"
+            "Graveyard GS Bean Patch": "can_plant_bugs and can_child_attack",
+            "Poe Kill": "has_bottle and (is_adult or can_child_damage)"
         },
         "exits": {
             "Graveyard Shield Grave": "True",
