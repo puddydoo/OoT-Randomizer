@@ -74,6 +74,7 @@
     },
     {
         "region_name": "Egg Hatch",
+        "hint": "Link's Pocket",
         "locations": {
             "Hatch Weird Egg": "can_leave_forest and is_child and (Weird_Egg or skip_child_zelda)",
             "Hatch Pocket Egg": "is_adult and (Pocket_Egg or Claim_Check)"
@@ -215,7 +216,7 @@
             "Odd Mushroom Access": "
                 is_adult and
                 (Cojiro or Odd_Mushroom or Odd_Potion or Poachers_Saw or Broken_Sword or
-                Prescription or Eyeball_Frog or Eyedrops or Claim_Check)"
+                Prescription or Eyeball_Frog or Eyedrops or Claim_Check)",
             "Poachers Saw Access": "
                 is_adult and 'Odd Mushroom Access' and
                 (Odd_Potion or Poachers_Saw or Broken_Sword or Prescription or Eyeball_Frog or Eyedrops or Claim_Check)"

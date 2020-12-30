@@ -195,6 +195,7 @@ item_table = {
     'Poe Drop':                         ('Drop',     True,  True,  None, None),
     'Big Poe':                          ('Drop',     True,  True,  None, None),
     'Bombchu Drop':                     ('Drop',     True,  True,  None, None),
+    'Like Like Drop':                   ('Drop',     None,  True,  None, None),
 
     # Consumable refills defined mostly to placate 'starting with' options
     'Arrows':                           ('Refill',   None,  True,  None, None),

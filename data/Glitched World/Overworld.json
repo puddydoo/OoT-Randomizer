@@ -27,6 +27,7 @@
     },
     {
         "region_name": "Egg Hatch",
+        "hint": "Link's Pocket",
         "locations": {
             "Hatch Weird Egg": "is_child and (Weird_Egg or skip_child_zelda)",
             "Hatch Pocket Egg": "is_adult and (Pocket_Egg or Claim_Check)"

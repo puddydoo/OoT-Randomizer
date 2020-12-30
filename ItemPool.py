@@ -911,6 +911,36 @@ def get_pool_core(world):
         if world.dungeon_mq['Jabu Jabus Belly']:
             placed_items['Jabu Jabus Belly MQ Cow'] = 'Milk'
 
+    if False:
+        if world.dungeon_mq['Jabu Jabus Belly']:
+            pool.extend('Hylian Shield')
+        if not world.dungeon_mq['Fire Temple']:
+            pool.extend(['Hylian Shield'] * 2)
+        if not world.dungeon_mq['Water Temple']:
+            pool.extend('Hylian Shield')
+        if not world.dungeon_mq['Spirit Temple']:
+            pool.extend(['Hylian Shield'] * 2)
+        if world.dungeon_mq['Shadow Temple']:
+            pool.extend(['Hylian Shield'] * 2)
+        if not world.dungeon_mq['Ganons Castle']:
+            pool.extend('Hylian Shield')
+    else:
+        if world.dungeon_mq['Jabu Jabus Belly']:
+            placed_items['Jabu Jabus Belly MQ Near Boss Like Likes'] = 'Like Like Drop'
+        if not world.dungeon_mq['Fire Temple']:
+            placed_items['Fire Temple Boss Key Loop Like Like'] = 'Like Like Drop'
+            placed_items['Fire Temple Song of Time Room Like Like'] = 'Like Like Drop'
+        if not world.dungeon_mq['Water Temple']:
+            placed_items['Water Temple Like Like'] = 'Like Like Drop'
+        if not world.dungeon_mq['Spirit Temple']:
+            placed_items['Spirit Temple Early Adult Like Like'] = 'Like Like Drop'
+            placed_items['Spirit Temple First Mirror Like Like'] = 'Like Like Drop'
+        if world.dungeon_mq['Shadow Temple']:
+            placed_items['Shadow Temple MQ Invisible Blades Like Like'] = 'Like Like Drop'
+            placed_items['Shadow Temple MQ Invisible Maze Like Like'] = 'Like Like Drop'
+        if not world.dungeon_mq['Ganons Castle']:
+            placed_items['Ganons Castle Shadow Trial Like Like'] = 'Like Like Drop'
+
     if world.shuffle_beans:
         if world.distribution.get_starting_item('Magic Bean') < 10:
             pool.append('Magic Bean Pack')

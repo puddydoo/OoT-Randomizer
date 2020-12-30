@@ -43,6 +43,7 @@
         "locations": {
             "Shadow Temple MQ Invisible Blades Visible Chest": "can_play(Song_of_Time)",
             "Shadow Temple MQ Invisible Blades Invisible Chest": "can_play(Song_of_Time)",
+            "Shadow Temple MQ Invisible Blades Like Like": "can_feed_like_like",
             "Shadow Temple MQ Beamos Silver Rupees Chest": "can_use(Longshot)",
             "Shadow Temple MQ Falling Spikes Lower Chest": "True",
             "Shadow Temple MQ Falling Spikes Upper Chest": "Progressive_Strength_Upgrade",
@@ -93,7 +94,8 @@
             "Shadow Temple MQ Spike Walls Left Chest": "(Small_Key_Shadow_Temple, 6)",
             "Shadow Temple MQ Boss Key Chest": "(Small_Key_Shadow_Temple, 6)",
             "Shadow Temple MQ Bomb Flower Chest": "True",
-            "Shadow Temple MQ Freestanding Key": "True"
+            "Shadow Temple MQ Freestanding Key": "True",
+            "Shadow Temple MQ Invisible Maze Like Like": "can_feed_like_like"
         }
     }
 ]

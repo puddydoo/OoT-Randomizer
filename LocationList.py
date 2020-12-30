@@ -459,6 +459,7 @@ location_table = OrderedDict([
     ("Jabu Jabus Belly MQ GS Tailpasaran Room",             ("GS Token",    0x02,  0x04, None,                 ("Jabu Jabu's Belly", "Skulltulas",))),
     ("Jabu Jabus Belly MQ GS Invisible Enemies Room",       ("GS Token",    0x02,  0x08, None,                 ("Jabu Jabu's Belly", "Skulltulas",))),
     ("Jabu Jabus Belly MQ GS Near Boss",                    ("GS Token",    0x02,  0x02, None,                 ("Jabu Jabu's Belly", "Skulltulas",))),
+    ("Jabu Jabus Belly MQ Near Boss Like Likes",            ("LikeLike",    0x02,  None, None,                 ("Jabu Jabu's Belly", "Like Like",))), # There are 2 like likes, i'm not sure if they would share a location or if they are 2 separate ones
     # Jabu Jabu's Belly shared
     ("Jabu Jabus Belly Barinade Heart",                     ("BossHeart",   0x13,  0x4F, None,                 ("Jabu Jabu's Belly",))),
 
@@ -551,6 +552,8 @@ location_table = OrderedDict([
     ("Fire Temple GS Boulder Maze",                         ("GS Token",    0x04,  0x04, None,                 ("Fire Temple", "Skulltulas",))),
     ("Fire Temple GS Scarecrow Climb",                      ("GS Token",    0x04,  0x10, None,                 ("Fire Temple", "Skulltulas",))),
     ("Fire Temple GS Scarecrow Top",                        ("GS Token",    0x04,  0x08, None,                 ("Fire Temple", "Skulltulas",))),
+    ("Fire Temple Boss Key Loop Like Like",                 ("LikeLike",    0x04,  None, None,                 ("Fire Temple", "Like Like",))),
+    ("Fire Temple Song of Time Room Like Like",             ("LikeLike",    0x04,  None, None,                 ("Fire Temple", "Like Like",))),
     # Fire Temple MQ
     ("Fire Temple MQ Map Room Side Chest",                  ("Chest",       0x04,  0x02, None,                 ("Fire Temple",))),
     ("Fire Temple MQ Megaton Hammer Chest",                 ("Chest",       0x04,  0x00, None,                 ("Fire Temple",))),
@@ -588,6 +591,7 @@ location_table = OrderedDict([
     ("Water Temple GS Central Pillar",                      ("GS Token",    0x05,  0x04, None,                 ("Water Temple", "Skulltulas",))),
     ("Water Temple GS Falling Platform Room",               ("GS Token",    0x05,  0x02, None,                 ("Water Temple", "Skulltulas",))),
     ("Water Temple GS River",                               ("GS Token",    0x05,  0x10, None,                 ("Water Temple", "Skulltulas",))),
+    ("Water Temple Like Like",                              ("LikeLike",    0x05,  None, None,                 ("Water Temple", "Like Like",))),
     # Water Temple MQ
     ("Water Temple MQ Longshot Chest",                      ("Chest",       0x05,  0x00, None,                 ("Water Temple",))),
     ("Water Temple MQ Map Chest",                           ("Chest",       0x05,  0x02, None,                 ("Water Temple",))),
@@ -652,6 +656,8 @@ location_table = OrderedDict([
     ("Shadow Temple MQ GS After Wind",                      ("GS Token",    0x07,  0x08, None,                 ("Shadow Temple", "Skulltulas",))),
     ("Shadow Temple MQ GS After Ship",                      ("GS Token",    0x07,  0x10, None,                 ("Shadow Temple", "Skulltulas",))),
     ("Shadow Temple MQ GS Near Boss",                       ("GS Token",    0x07,  0x04, None,                 ("Shadow Temple", "Skulltulas",))),
+    ("Shadow Temple MQ Invisible Blades Like Like",         ("LikeLike",    0x07,  None, None,                 ("Shadow Temple", "Like Like",))),
+    ("Shadow Temple MQ Invisible Maze Like Like",           ("LikeLike",    0x07,  None, None,                 ("Shadow Temple", "Like Like",))),
     # Shadow Temple shared
     ("Shadow Temple Bongo Bongo Heart",                     ("BossHeart",   0x18,  0x4F, None,                 ("Shadow Temple",))),
 
@@ -709,6 +715,9 @@ location_table = OrderedDict([
     ("Spirit Temple MQ GS Symphony Room",                   ("GS Token",    0x06,  0x08, None,                 ("Spirit Temple", "Skulltulas",))),
     ("Spirit Temple MQ GS Nine Thrones Room West",          ("GS Token",    0x06,  0x04, None,                 ("Spirit Temple", "Skulltulas",))),
     ("Spirit Temple MQ GS Nine Thrones Room North",         ("GS Token",    0x06,  0x10, None,                 ("Spirit Temple", "Skulltulas",))),
+
+    ("Spirit Temple Early Adult Like Like",                 ("LikeLike",    0x06,  None, None,                 ("Spirit Temple", "Like Like",))),
+    ("Spirit Temple First Mirror Like Like",                ("LikeLike",    0x06,  None, None,                 ("Spirit Temple", "Like Like",))),
 
     ("Spirit Temple Twinrova Heart",                        ("BossHeart",   0x17,  0x4F, None,                 ("Spirit Temple",))),
 
@@ -791,6 +800,7 @@ location_table = OrderedDict([
     ("Ganons Castle Deku Scrub Center-Left",                ("RepeatNPC2",  0x0D,  0x37, None,                 ("Ganon's Castle", "Deku Scrub",))),
     ("Ganons Castle Deku Scrub Center-Right",               ("RepeatNPC2",  0x0D,  0x33, None,                 ("Ganon's Castle", "Deku Scrub",))),
     ("Ganons Castle Deku Scrub Right",                      ("RepeatNPC2",  0x0D,  0x39, None,                 ("Ganon's Castle", "Deku Scrub",))),
+    ("Ganons Castle Shadow Trial Like Like",                ("LikeLike",    0x0D,  None, None,                 ("Ganon's Castle", "Like Like",))),
     # Ganon's Castle MQ
     ("Ganons Castle MQ Forest Trial Freestanding Key",      ("Collectable", 0x0D,  0x01, None,                 ("Ganon's Castle",))),
     ("Ganons Castle MQ Forest Trial Eye Switch Chest",      ("Chest",       0x0D,  0x02, None,                 ("Ganon's Castle",))),
@@ -818,14 +828,14 @@ location_table = OrderedDict([
     ("Deliver Rutos Letter",                            ("Event",       None,  None, None,                     None)),
     ("Master Sword Pedestal",                           ("Event",       None,  None, None,                     None)),
     ("Hatch Weird Egg",                                 ("Event",       None,  None, None,                     None)),
-    ("Market Mask Shop Keaton Mask":                    ("Event",       None,  None, None,                     ("the Market", "Market",))),
-    ("Market Mask Shop Skull Mask":                     ("Event",       None,  None, None,                     ("the Market", "Market",))),
-    ("Market Mask Shop Spooky Mask":                    ("Event",       None,  None, None,                     ("the Market", "Market",))),
-    ("Market Mask Shop Bunny Hood":                     ("Event",       None,  None, None,                     ("the Market", "Market",))),
-    ("Market Mask Shop Zora Mask":                      ("Event",       None,  None, None,                     ("the Market", "Market",))),
-    ("Market Mask Shop Goron Mask":                     ("Event",       None,  None, None,                     ("the Market", "Market",))),
-    ("Market Mask Shop Gerudo Mask":                    ("Event",       None,  None, None,                     ("the Market", "Market",))),
-    ("Market Mask Shop Mask of Truth":                  ("Event",       None,  None, None,                     ("the Market", "Market",))),
+    ("Market Mask Shop Keaton Mask",                    ("Event",       None,  None, None,                     ("the Market", "Market",))),
+    ("Market Mask Shop Skull Mask",                     ("Event",       None,  None, None,                     ("the Market", "Market",))),
+    ("Market Mask Shop Spooky Mask",                    ("Event",       None,  None, None,                     ("the Market", "Market",))),
+    ("Market Mask Shop Bunny Hood",                     ("Event",       None,  None, None,                     ("the Market", "Market",))),
+    ("Market Mask Shop Zora Mask",                      ("Event",       None,  None, None,                     ("the Market", "Market",))),
+    ("Market Mask Shop Goron Mask",                     ("Event",       None,  None, None,                     ("the Market", "Market",))),
+    ("Market Mask Shop Gerudo Mask",                    ("Event",       None,  None, None,                     ("the Market", "Market",))),
+    ("Market Mask Shop Mask of Truth",                  ("Event",       None,  None, None,                     ("the Market", "Market",))),
     ("Hatch Pocket Egg",                                ("Event",       None,  None, None,                     None)),
     ("Kak Cojiro",                                      ("Event",       0x52,  None, None,                     ("Kakariko Village", "Kakariko",))), # NPC
     ("LW Odd Mushroom",                                 ("Event",       0x5B,  None, None,                     ("the Lost Woods", "Forest",))), # NPC
@@ -837,19 +847,19 @@ location_table = OrderedDict([
     ("LH Eyedrops",                                     ("Event",       0x38,  None, None,                     ("Lake Hylia",))), # NPC
     ("DMT Claim Check",                                 ("Event",       0x60,  None, None,                     ("Death Mountain Trail", "Death Mountain",))), # NPC
 
-    ("Granny Blue Potion":                              ("Event",       0x4E,  None, None,                     ("Kakariko Village", "Kakariko",))), # RepeatNPC
-    ("Market Poe Sale":                                 ("Event",       None,  None, None,                     ("the Market", "Hyrule Castle",))), # RepeatNPC
-    ("Market Big Poe Sale":                             ("Event",       None,  None, None,                     ("the Market", "Hyrule Castle",))), # NPC
-    ("Market Bug Sale":                                 ("Event",       None,  None, None,                     ("the Market", "Market",))), # RepeatNPC
-    ("Market Fish Sale":                                ("Event",       None,  None, None,                     ("the Market", "Market",))), # RepeatNPC
-    ("Market Blue Fire Sale":                           ("Event",       None,  None, None,                     ("the Market", "Market",))), # RepeatNPC
-    ("Kak Bug Sale":                                    ("Event",       None,  None, None,                     ("Kakariko Village", "Kakariko",))), # RepeatNPC
-    ("Kak Fish Sale":                                   ("Event",       None,  None, None,                     ("Kakariko Village", "Kakariko",))), # RepeatNPC
-    ("Kak Blue Fire Sale":                              ("Event",       None,  None, None,                     ("Kakariko Village", "Kakariko",))), # RepeatNPC
-    ("Kak Keaton Mask Sale":                            ("Event",       None,  None, None,                     ("Kakariko Village", "Kakariko",))), # NPC
-    ("LW Skull Mask Sale":                              ("Event",       None,  None, None,                     ("the Lost Woods", "Forest",))), # NPC
-    ("Graveyard Spooky Mask Sale":                      ("Event",       None,  None, None,                     ("the Graveyard", "Kakariko",))), # NPC
-    ("HF Bunny Hood Sale":                              ("Event",       None,  None, None,                     ("Hyrule Field",))), # NPC
+    ("Granny Blue Potion",                              ("Event",       0x4E,  None, None,                     ("Kakariko Village", "Kakariko",))), # RepeatNPC
+    ("Market Poe Sale",                                 ("Event",       None,  None, None,                     ("the Market", "Hyrule Castle",))), # RepeatNPC
+    ("Market Big Poe Sale",                             ("Event",       None,  None, None,                     ("the Market", "Hyrule Castle",))), # NPC
+    ("Market Bug Sale",                                 ("Event",       None,  None, None,                     ("the Market", "Market",))), # RepeatNPC
+    ("Market Fish Sale",                                ("Event",       None,  None, None,                     ("the Market", "Market",))), # RepeatNPC
+    ("Market Blue Fire Sale",                           ("Event",       None,  None, None,                     ("the Market", "Market",))), # RepeatNPC
+    ("Kak Bug Sale",                                    ("Event",       None,  None, None,                     ("Kakariko Village", "Kakariko",))), # RepeatNPC
+    ("Kak Fish Sale",                                   ("Event",       None,  None, None,                     ("Kakariko Village", "Kakariko",))), # RepeatNPC
+    ("Kak Blue Fire Sale",                              ("Event",       None,  None, None,                     ("Kakariko Village", "Kakariko",))), # RepeatNPC
+    ("Kak Keaton Mask Sale",                            ("Event",       None,  None, None,                     ("Kakariko Village", "Kakariko",))), # NPC
+    ("LW Skull Mask Sale",                              ("Event",       None,  None, None,                     ("the Lost Woods", "Forest",))), # NPC
+    ("Graveyard Spooky Mask Sale",                      ("Event",       None,  None, None,                     ("the Graveyard", "Kakariko",))), # NPC
+    ("HF Bunny Hood Sale",                              ("Event",       None,  None, None,                     ("Hyrule Field",))), # NPC
 
     ("Deku Baba Sticks",                                ("Drop",        None,  None, None,                     None)),
     ("Deku Baba Nuts",                                  ("Drop",        None,  None, None,                     None)),

@@ -1798,7 +1798,7 @@ def get_override_entry(location):
     else:
         looks_like_item_id = 0
 
-    if location.type in ['NPC', 'RepeatNPC', 'RepeatNPC2', 'BossHeart']: #Remove reference to RepeatNPC2 and GrottoNPC2 when scrubs and cows are made repeatable
+    if location.type in ['NPC', 'RepeatNPC', 'RepeatNPC2', 'BossHeart']: #Remove reference to RepeatNPC2 when scrubs and cows are made repeatable
         type = 0
     elif location.type == 'Chest':
         type = 1
@@ -1809,7 +1809,7 @@ def get_override_entry(location):
         type = 3
     elif location.type == 'Shop' and location.item.type != 'Shop':
         type = 0
-    elif location.type in ['GrottoNPC', 'GrottoNPCOnce', 'GrottoNPC2'] and location.item.type != 'Shop':
+    elif location.type in ['GrottoNPC', 'GrottoNPCOnce', 'GrottoNPC2'] and location.item.type != 'Shop': #Remove reference to GrottoNPCOnce and GrottoNPC2 when scrubs are made repeatable
         type = 4
     elif location.type in ['Song', 'Cutscene']:
         type = 5

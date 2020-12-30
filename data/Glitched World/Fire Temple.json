@@ -15,7 +15,9 @@
                 (can_use(Goron_Tunic) or (Fairy and has_explosives)) and can_use(Megaton_Hammer) and 
                 (Boss_Key_Fire_Temple or at('Fire Temple Flame Maze', True))",
             "Fire Temple GS Boss Key Loop": "
-                ((Small_Key_Fire_Temple, 8) or not keysanity)"
+                ((Small_Key_Fire_Temple, 8) or not keysanity)",
+            "Fire Temple Boss Key Loop Like Like": "
+                ((Small_Key_Fire_Temple, 8) or not keysanity) and can_feed_like_like"
         },
         "exits": {
             "Fire Temple Big Lava Room":"(Small_Key_Fire_Temple, 2)"
@@ -27,7 +29,8 @@
         "locations": {
             "Fire Temple Big Lava Room Lower Open Door Chest": "True",
             "Fire Temple Big Lava Room Blocked Door Chest": "has_explosives",
-            "Fire Temple GS Song of Time Room": "is_adult"
+            "Fire Temple GS Song of Time Room": "is_adult",
+            "Fire Temple Song of Time Room Like Like": "is_adult and can_feed_like_like"
         },
         "exits": {
             "Fire Temple Lower":  "True",
