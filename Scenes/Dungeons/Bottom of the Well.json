@@ -199,8 +199,7 @@
         "dungeon": "Bottom of the Well",
         "room": 02,
         "locations": {
-            "Bottom of the Well Freestanding Key": "has_fire_source_with_torch or can_use(Bow)",
-            "Bottom of the Well Invisible Chest": "can_play(Zeldas_Lullaby) and (logic_lens_botw or can_use(Lens_of_Truth))"
+            "Bottom of the Well Freestanding Key": "has_fire_source_with_torch or can_use(Bow)"
         },
         "exits": {
             "Bottom of the Well Lobby Water Grate": "transition('Bottom of the Well T06', True)"
