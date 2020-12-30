@@ -67,7 +67,7 @@
             "Deku Tree Basement Hint Scrub Room": "
                 (here(has_fire_source or
                 (can_climb(60) and can_press_floor_switch and
-                    (can_use(Sticks) or (logic_deku_b1_webs_with_bow and can_use(Bow))))))
+                    (can_use(Sticks) or can_use(Bow)))))
                 and transition('Deku Tree T03', True)",
             "Deku Tree Basement River Room Ledge": "
                 can_climb(60) and
