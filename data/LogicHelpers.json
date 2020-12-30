@@ -32,8 +32,7 @@
     "Poe": "'Poe' or Buy_Poe or Poe_Drop",
     # "Big_Poe": "'Big Poe'",
 
-    "has_bombchus": "Bombchus_5 or Bombchus_10 or Bombchus_20 or buy_bombchus or Bombchu_Drop",
-    "buy_bombchus": "found_bombchus and (Buy_Bombchu_5 or Buy_Bombchu_10 or Buy_Bombchu_20)",
+    "has_bombchus": "Bombchus_5 or Bombchus_10 or Bombchus_20 or (found_bombchus and (Buy_Bombchu_5 or Buy_Bombchu_10 or Buy_Bombchu_20)) or Bombchu_Drop",
     "found_bombchus": "(abundant_bombchus and ('Bombchus' or Bombchus_5_Limited or Bombchus_10_Limited or Bombchus_20_Limited)) or (not abundant_bombchus and Bomb_Bag)",
     "has_explosives": "Bombs or has_bombchus",
     "is_child": "age == 'child'",
