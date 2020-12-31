@@ -261,9 +261,9 @@
         "region_name": "LH Lab",
         "locations": {
             "LH Lab Dive": "
-                three_heart_drown and (Progressive_Scale, 2) or
+                (Progressive_Scale, 2) or
                 (Iron_Boots and can_use(Hookshot)) or (has_bottle and can_use(Hover_Boots))",
-            "LH GS Lab Crate": "three_heart_drown and Iron_Boots and can_use(Hookshot)"
+            "LH GS Lab Crate": "drown_seconds(5) and Iron_Boots and can_use(Hookshot)"
         }
     },
     {
@@ -608,7 +608,6 @@
             "Kak Bazaar": "is_adult or (is_child and can_jumpslash)",
             "Kak Shooting Gallery": "is_adult",
             "Bottom of the Well": "(is_child and ('Drain Well' or can_jumpslash or can_isg or Nuts))
-			# IDK which of these glitches need three_heart_drown as child
                 or (is_adult and has_explosives)",
             "Kak Potion Shop Front": "is_adult",
             "Kak Potion Shop Back": "is_adult",
@@ -1011,7 +1010,7 @@
             "ZR Front": "True",
             "ZR Open Grotto": "True",
             "ZR Fairy Grotto": "can_blast_or_smash",
-            "Lost Woods": "three_heart_drown and (can_dive or can_use(Iron_Boots) or (is_child and (can_isg or Nuts)) or can_mega)",
+            "Lost Woods": "can_dive or can_use(Iron_Boots) or (is_child and (can_isg or Nuts)) or can_mega",
             "ZR Storms Grotto": "can_play(Song_of_Storms) and can_stun_deku",
             "Zoras Domain": "can_play(Zeldas_Lullaby) or can_mega or can_use(Hover_Boots) or is_child"
         }

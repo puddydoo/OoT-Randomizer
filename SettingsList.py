@@ -264,7 +264,7 @@ logic_tricks = {
                     This allows completion of adult Deku Tree with no fire source.
                     '''},
     'Deku Tree Roll Under the Spiked Log': {
-        'name'    : 'logic_deku_log',
+        'name'    : 'logic_deku_mq_log',
         'tags'    : ("Deku Tree",),
         'tooltip' : '''\
                     You can get past the spiked log by rolling

@@ -224,7 +224,7 @@
                 is_adult and
                 (can_use(Hover_Boots) or can_use(Longshot) or
                     here(can_plant_bean) or logic_lost_woods_bridge)",
-            "Zora River": "three_heart_drown and can_leave_forest and (can_dive or can_use(Iron_Boots))",
+            "Zora River": "can_leave_forest and (can_dive or can_use(Iron_Boots))",
             "LW Beyond Mido": "is_child or logic_mido_backflip or can_play(Sarias_Song)",
             "LW Near Shortcuts Grotto": "here(can_blast_or_smash)"
         }
@@ -330,8 +330,8 @@
         "hint": "Hyrule Field",
         "time_passes": true,
         "locations": {
-            "HF Ocarina of Time Item": "three_heart_drown and is_child and has_all_stones",
-            "Song from Ocarina of Time": "three_heart_drown and is_child and has_all_stones",
+            "HF Ocarina of Time Item": "is_child and has_all_stones",
+            "Song from Ocarina of Time": " is_child and has_all_stones",
             "Big Poe Kill": "can_use(Bow) and can_ride_epona and has_bottle"
         },
         "exits": {
@@ -363,7 +363,7 @@
         },
         "locations": {
             "Pierre": "is_adult and Bonooru and not free_scarecrow",
-            "LH Underwater Item": "three_heart_drown and is_child and can_dive",
+            "LH Underwater Item": "is_child and can_dive",
             "LH Sun": "
                 is_adult and 
                 (can_use(Distant_Scarecrow) or 'Water Temple Clear') and can_use(Bow)",
@@ -385,16 +385,16 @@
         },
         "exits": {
             "Hyrule Field": "True",
-            "Zoras Domain": "three_heart_drown and is_child and can_dive",
+            "Zoras Domain": "is_child and can_dive",
             "LH Owl Flight": "is_child",
             "LH Lab": "True",
             "LH Fishing Island": "
                 is_child or can_use(Scarecrow) or
                 here(can_plant_bean) or 'Water Temple Clear'",
             "Water Temple Lobby": "
-                three_heart_drown and can_use(Hookshot) and
-                (can_use(Iron_Boots) or
-                    ((can_use(Longshot) or logic_water_hookshot_entry) and (Progressive_Scale, 2)))",
+                can_use(Hookshot) and
+                ((drown_seconds(2) and Iron_Boots) or
+                    ((can_use(Longshot) or logic_water_hookshot_entry) and ((Progressive_Scale, 2) or Iron_Boots)))",
             "LH Grotto": "True"
         }
     },
@@ -425,9 +425,9 @@
         },
         "locations": {
             "LH Lab Dive": "
-                three_heart_drown and (Progressive_Scale, 2) or
+                (Progressive_Scale, 2) or
                 (logic_lab_diving and Iron_Boots and can_use(Hookshot))",
-            "LH GS Lab Crate": "three_heart_drown and Iron_Boots and can_use(Hookshot)"
+            "LH GS Lab Crate": "drown_seconds(5) and Iron_Boots and can_use(Hookshot)"
         },
         "exits": {
             "Lake Hylia": "True"
@@ -997,7 +997,8 @@
             "Kak Windmill": "True",
             "Kak Bazaar": "is_adult and at_day",
             "Kak Shooting Gallery": "is_adult and at_day",
-            "Kak Well of Three Features": "True",
+            "Bottom of the Well": "
+                'Drain Well' and (is_child or shuffle_dungeon_entrances)",
             "Kak Potion Shop Front": "is_child or at_day",
             "Kak Redead Grotto": "can_open_bomb_grotto",
             "Kak Impas Ledge": "
@@ -1013,16 +1014,6 @@
             "Kak Backyard": "is_adult or at_day",
             "Graveyard": "True",
             "Kak Behind Gate": "is_adult or 'Kakariko Village Gate Open'"
-        }
-    },
-    {
-        "region_name": "Kak Well of Three Features",
-        "scene": "Kakariko Village",
-        "hint": "Kakariko Village",
-        "exits": {
-            "Kakariko Village": "is_adult or three_heart_drown or 'Drain Well'",
-            "Bottom of the Well": "
-                'Drain Well' and (is_child or shuffle_dungeon_entrances)"
         }
     },
     {
@@ -1679,7 +1670,7 @@
             "ZR Front": "True",
             "ZR Open Grotto": "True",
             "ZR Fairy Grotto": "here(can_blast_or_smash)",
-            "Lost Woods": "three_heart_drown and (can_dive or can_use(Iron_Boots))",
+            "Lost Woods": "can_dive or can_use(Iron_Boots)",
             "ZR Storms Grotto": "can_open_storm_grotto",
             "ZR Behind Waterfall": "
                 can_play(Zeldas_Lullaby) or
@@ -1715,7 +1706,7 @@
                 (Eyedrops or Eyeball_Frog or Prescription or 'Prescription Access')"
         },
         "locations": {
-            "ZD Diving Minigame": "three_heart_drown and is_child",
+            "ZD Diving Minigame": "is_child",
             "ZD Chest": "can_use(Sticks)",
             "Deliver Rutos Letter": "
                 is_child and Rutos_Letter and zora_fountain != 'open'",
@@ -1731,7 +1722,7 @@
         },
         "exits": {
             "ZR Behind Waterfall": "True",
-            "Lake Hylia": "three_heart_drown and is_child and can_dive",
+            "Lake Hylia": "is_child and can_dive",
             "ZD Behind King Zora": "
                 Deliver_Letter or zora_fountain == 'open' or
                 (zora_fountain == 'adult' and is_adult)",
@@ -1765,7 +1756,7 @@
         "locations": {
             "ZF Iceberg Freestanding PoH": "is_adult",
             "ZF Bottom Freestanding PoH": "
-                three_heart_drown and is_adult and Iron_Boots and (logic_fewer_tunic_requirements or can_use(Zora_Tunic))",
+                drown_seconds(14) and is_adult and Iron_Boots and (logic_fewer_tunic_requirements or can_use(Zora_Tunic))",
             "ZF GS Tree": "is_child",
             "ZF GS Above the Log": "can_use(Boomerang) and at_night",
             "ZF GS Hidden Cave": "
@@ -2097,7 +2088,7 @@
         "scene": "HF Tektite Grotto",
         "locations": {
             "HF Tektite Grotto Freestanding PoH": "
-                three_heart_drown and ((Progressive_Scale, 2) or can_use(Iron_Boots))"
+                (Progressive_Scale, 2) or can_use(Iron_Boots)"
         },
         "exits": {
             "Hyrule Field": "True"
