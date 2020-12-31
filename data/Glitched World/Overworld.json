@@ -129,7 +129,7 @@
         "exits": {
             "Kokiri Forest": "True",
             "GC Woods Warp": "True",
-            "Zora River": "three_heart_drown and (can_dive or can_jumpslash) and can_leave_forest",
+            "Zora River": "(can_dive or can_jumpslash) and can_leave_forest",
             "LW Beyond Mido": "True",
             "LW Near Shortcuts Grotto": "can_blast_or_smash"
             #//Can Exit to Woods bridge with megaflip, but walking through kokiri forest is true anyway
@@ -198,8 +198,8 @@
         "hint": "Hyrule Field",
         "time_passes": true,
         "locations": {
-            "HF Ocarina of Time Item": "three_heart_drown and is_child and has_all_stones",
-            "Song from Ocarina of Time": "three_heart_drown and is_child and has_all_stones",
+            "HF Ocarina of Time Item": "is_child and has_all_stones",
+            "Song from Ocarina of Time": "is_child and has_all_stones",
             "Big Poe Kill": "can_use(Bow) and can_ride_epona and has_bottle"
         },
         "exits": {
@@ -230,7 +230,7 @@
         },
         "locations": {
             "Pierre": "is_adult and Bonooru and not free_scarecrow",
-            "LH Underwater Item": "three_heart_drown and is_child and can_dive",
+            "LH Underwater Item": "is_child and can_dive",
             "LH Sun": "
                 is_adult and 
                 (can_use(Distant_Scarecrow) or 'Water Temple Clear' or can_hover) and can_use(Bow)",
@@ -249,7 +249,7 @@
         },
         "exits": {
             "Hyrule Field": "True",
-            "Zoras Domain": "three_heart_drown",
+            "Zoras Domain": "True",
             "LH Lab": "True",
             "LH Fishing Hole": "
                 is_child or can_use(Scarecrow) or here(can_plant_bean) or 'Water Temple Clear' or can_isg",
@@ -1019,7 +1019,7 @@
         "region_name": "Zoras Domain",
         "hint": "Zora's Domain",
         "locations": {
-            "ZD Diving Minigame": "three_heart_drown and is_child",
+            "ZD Diving Minigame": "is_child",
             "ZD Chest": "can_use(Sticks)",
             "Deliver Rutos Letter": "(is_child and Rutos_Letter) and zora_fountain != 'open'",
             "ZD King Zora Thawed": "is_adult",
@@ -1034,7 +1034,7 @@
         },
         "exits": {
             "Zora River": "True",
-            "Lake Hylia": "three_heart_drown",
+            "Lake Hylia": "True",
             "Zoras Fountain": "zora_fountain == 'open' or Deliver_Letter
                 or is_adult or (can_shield and has_bombchus)",
             "ZD Shop": "True"
@@ -1239,7 +1239,7 @@
         "region_name": "HF Tektite Grotto",
         "locations": {
             "HF Tektite Grotto Freestanding PoH": "
-                three_heart_drown and ((Progressive_Scale, 2) or can_use(Iron_Boots))"
+                (Progressive_Scale, 2) or can_use(Iron_Boots)"
         }
     },
     {
