@@ -127,6 +127,11 @@ class Item(object):
         if self.name.startswith('Bombchus') and not self.world.bombchus_in_logic:
             return False
 
+        if self.name.startswith('Heart Container') and not self.world.logic_heart_containers:
+            return False
+        if self.name.startswith('Piece of Heart') and not self.world.logic_heart_pieces:
+            return False
+
         if self.map or self.compass:
             return False
         if self.type == 'SmallKey' and self.world.shuffle_smallkeys in ['dungeon', 'vanilla']:

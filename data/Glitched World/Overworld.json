@@ -129,7 +129,7 @@
         "exits": {
             "Kokiri Forest": "True",
             "GC Woods Warp": "True",
-            "Zora River": "(can_dive or can_jumpslash) and can_leave_forest",
+            "Zora River": "three_heart_drown and (can_dive or can_jumpslash) and can_leave_forest",
             "LW Beyond Mido": "True",
             "LW Near Shortcuts Grotto": "can_blast_or_smash"
             #//Can Exit to Woods bridge with megaflip, but walking through kokiri forest is true anyway
@@ -198,8 +198,8 @@
         "hint": "Hyrule Field",
         "time_passes": true,
         "locations": {
-            "HF Ocarina of Time Item": "is_child and has_all_stones",
-            "Song from Ocarina of Time": "is_child and has_all_stones",
+            "HF Ocarina of Time Item": "three_heart_drown and is_child and has_all_stones",
+            "Song from Ocarina of Time": "three_heart_drown and is_child and has_all_stones",
             "Big Poe Kill": "can_use(Bow) and can_ride_epona and has_bottle"
         },
         "exits": {
@@ -230,7 +230,7 @@
         },
         "locations": {
             "Pierre": "is_adult and Bonooru and not free_scarecrow",
-            "LH Underwater Item": "is_child and can_dive",
+            "LH Underwater Item": "three_heart_drown and is_child and can_dive",
             "LH Sun": "
                 is_adult and 
                 (can_use(Distant_Scarecrow) or 'Water Temple Clear' or can_hover) and can_use(Bow)",
@@ -249,11 +249,11 @@
         },
         "exits": {
             "Hyrule Field": "True",
-            "Zoras Domain": "True",
+            "Zoras Domain": "three_heart_drown",
             "LH Lab": "True",
             "LH Fishing Hole": "
                 is_child or can_use(Scarecrow) or here(can_plant_bean) or 'Water Temple Clear' or can_isg",
-            "Water Temple Lobby": "True",
+            "Water Temple Lobby": "three_heart_drown",
             "LH Grotto": "can_stun_deku"
         }
     },
@@ -261,9 +261,9 @@
         "region_name": "LH Lab",
         "locations": {
             "LH Lab Dive": "
-                (Progressive_Scale, 2) or
+                three_heart_drown and (Progressive_Scale, 2) or
                 (Iron_Boots and can_use(Hookshot)) or (has_bottle and can_use(Hover_Boots))",
-            "LH GS Lab Crate": "Iron_Boots and can_use(Hookshot)"
+            "LH GS Lab Crate": "three_heart_drown and Iron_Boots and can_use(Hookshot)"
         }
     },
     {
@@ -608,6 +608,7 @@
             "Kak Bazaar": "is_adult or (is_child and can_jumpslash)",
             "Kak Shooting Gallery": "is_adult",
             "Bottom of the Well": "(is_child and ('Drain Well' or can_jumpslash or can_isg or Nuts))
+			# IDK which of these glitches need three_heart_drown as child
                 or (is_adult and has_explosives)",
             "Kak Potion Shop Front": "is_adult",
             "Kak Potion Shop Back": "is_adult",
@@ -912,32 +913,36 @@
         "region_name": "DMC Upper",
         "hint": "Death Mountain Crater",
         "locations": {
-            "DMC Wall Freestanding PoH": "True",
+            "DMC Wall Freestanding PoH": "three_heart_heat",
             "DMC GS Crate": "
-                is_child and can_child_attack",
+                three_heart_heat and is_child and can_child_attack",
             "DMC Deku Scrub": "
-                is_child and can_stun_deku",
-            "DMC Gossip Stone": "has_explosives"
+                three_heart_heat and is_child and can_stun_deku",
+            "DMC Gossip Stone": "three_heart_heat and has_explosives"
         },
         "exits": {
-            "Death Mountain Summit": "True",
-            "DMC Lower": "can_use(Hover_Boots) or can_mega",
-            "DMC Central": "(is_child and can_mega and (can_live_dmg(1) or Fairy or can_use(Nayrus_Love)) and Hylian_Shield) or
+            "Death Mountain Summit": "three_heart_heat",
+            "DMC Lower": "three_heart_heat and (can_use(Hover_Boots) or can_mega)",
+            "DMC Central": "
+                three_heart_heat and (
+                (is_child and can_mega and (can_live_dmg(1) or Fairy or can_use(Nayrus_Love)) and Hylian_Shield) or
                 (is_adult and can_use(Goron_Tunic) and (can_use(Distant_Scarecrow) or can_mega) and 
-                (can_live_dmg(1) or Fairy or can_use(Nayrus_Love)))",
-            "DMC Upper Grotto": "here(can_blast_or_smash)"
+                (can_live_dmg(1) or Fairy or can_use(Nayrus_Love))))",
+            "DMC Upper Grotto": "three_heart_heat and here(can_blast_or_smash)"
         }
     },
     {
         "region_name": "DMC Lower",
         "hint": "Death Mountain Crater",
         "exits": {
-            "GC Darunias Chamber": "True",
-            "DMC Great Fairy Fountain": "can_use(Megaton_Hammer) or can_mega or is_child",
+            "GC Darunias Chamber": "three_heart_heat",
+            "DMC Great Fairy Fountain": "
+                three_heart_heat and (can_use(Megaton_Hammer) or can_mega or is_child)",
             "DMC Central": "
-                can_use(Hover_Boots) or can_use(Hookshot) or can_mega",
-            "DMC Upper": "True",
-            "DMC Hammer Grotto": "can_use(Megaton_Hammer) or (can_mega and (can_use(Hookshot) or can_use(Bow)))"
+                three_heart_heat and
+                (can_use(Hover_Boots) or can_use(Hookshot) or can_mega)",
+            "DMC Upper": "three_heart_heat",
+            "DMC Hammer Grotto": "three_heart_heat and (can_use(Megaton_Hammer) or (can_mega and (can_use(Hookshot) or can_use(Bow))))"
         }
     },
     {
@@ -945,16 +950,18 @@
         "hint": "Death Mountain Crater",
         "locations": {
             "DMC Volcano Freestanding PoH": "
-                (is_adult and here(can_plant_bean)) or
-                can_use(Hover_Boots) or can_mega",
-            "Sheik in Crater": "is_adult",
-            "DMC GS Bean Patch": "can_plant_bugs and can_child_attack"
+                three_heart_heat and
+                ((is_adult and here(can_plant_bean)) or
+                can_use(Hover_Boots) or can_mega)",
+            "Sheik in Crater": "three_heart_heat and is_adult",
+            "DMC GS Bean Patch": "three_heart_heat and can_plant_bugs and can_child_attack"
         },
         "exits": {
             "DMC Lower": "
-                (is_adult and here(can_plant_bean)) or
-                can_use(Hover_Boots) or can_use(Hookshot)",
-            "Fire Temple Lower": "is_adult"
+                three_heart_heat and
+                ((is_adult and here(can_plant_bean)) or
+                can_use(Hover_Boots) or can_use(Hookshot))",
+            "Fire Temple Lower": "three_heart_heat and is_adult"
         }
     },
     {
@@ -1004,7 +1011,7 @@
             "ZR Front": "True",
             "ZR Open Grotto": "True",
             "ZR Fairy Grotto": "can_blast_or_smash",
-            "Lost Woods": "can_dive or can_use(Iron_Boots) or (is_child and (can_isg or Nuts)) or can_mega",
+            "Lost Woods": "three_heart_drown and (can_dive or can_use(Iron_Boots) or (is_child and (can_isg or Nuts)) or can_mega)",
             "ZR Storms Grotto": "can_play(Song_of_Storms) and can_stun_deku",
             "Zoras Domain": "can_play(Zeldas_Lullaby) or can_mega or can_use(Hover_Boots) or is_child"
         }
@@ -1013,7 +1020,7 @@
         "region_name": "Zoras Domain",
         "hint": "Zora's Domain",
         "locations": {
-            "ZD Diving Minigame": "is_child",
+            "ZD Diving Minigame": "three_heart_drown and is_child",
             "ZD Chest": "can_use(Sticks)",
             "Deliver Rutos Letter": "(is_child and Rutos_Letter) and zora_fountain != 'open'",
             "ZD King Zora Thawed": "is_adult",
@@ -1028,7 +1035,7 @@
         },
         "exits": {
             "Zora River": "True",
-            "Lake Hylia": "True",
+            "Lake Hylia": "three_heart_drown",
             "Zoras Fountain": "zora_fountain == 'open' or Deliver_Letter
                 or is_adult or (can_shield and has_bombchus)",
             "ZD Shop": "True"
@@ -1039,7 +1046,7 @@
         "hint": "Zora's Fountain",
         "locations": {
             "ZF Iceberg Freestanding PoH": "is_adult",
-            "ZF Bottom Freestanding PoH": "is_adult and Iron_Boots",
+            "ZF Bottom Freestanding PoH": "three_heart_drown and is_adult and Iron_Boots",
             "ZF GS Tree": "is_child",
             "ZF GS Above the Log": "(can_use(Boomerang) or (can_hover and is_child)) and at_night",
             "ZF GS Hidden Cave": "at_night and 
@@ -1107,7 +1114,7 @@
     },
     {
         "region_name": "LLR Stables",
-		"locations": {
+        "locations": {
             "LLR Stables Left Cow": "can_play(Eponas_Song)",
             "LLR Stables Right Cow": "can_play(Eponas_Song)"
         }
@@ -1233,7 +1240,7 @@
         "region_name": "HF Tektite Grotto",
         "locations": {
             "HF Tektite Grotto Freestanding PoH": "
-                (Progressive_Scale, 2) or can_use(Iron_Boots)"
+                three_heart_drown and ((Progressive_Scale, 2) or can_use(Iron_Boots))"
         }
     },
     {
@@ -1258,7 +1265,7 @@
     },
     {
         "region_name": "DMT Cow Grotto",
-		 "locations": {
+        "locations": {
             "DMT Cow Grotto Cow": "can_play(Eponas_Song)"
         }
     },

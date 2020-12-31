@@ -34,9 +34,9 @@
         "dungeon": "Gerudo Training Grounds",
         "locations": {
             "Gerudo Training Grounds MQ Underwater Silver Rupee Chest": "
-                has_fire_source and can_use(Iron_Boots) and
+                three_heart_drown and has_fire_source and can_use(Iron_Boots) and
                 (logic_fewer_tunic_requirements or can_use(Zora_Tunic)) and 
-                (damage_multiplier != 'ohko' or Fairy or can_use(Nayrus_Love))"
+                ((three_heart_damage and damage_multiplier != 'ohko') or Fairy or can_use(Nayrus_Love))"
         }
     },
     {

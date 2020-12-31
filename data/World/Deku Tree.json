@@ -20,14 +20,13 @@
         "exits": {
             "KF Outside Deku Tree": "True",
             "Deku Tree Slingshot Room": "here(has_shield)",
-            "Deku Tree Basement Backroom": "
-                (here(has_fire_source_with_torch or can_use(Bow)) and
-                    here(can_use(Slingshot) or can_use(Bow))) or
-                (is_child and (logic_deku_b1_skip or here(is_adult)))",
-            "Deku Tree Boss Room": "
-                here(has_fire_source_with_torch or
-                     (logic_deku_b1_webs_with_bow and can_use(Bow))) and
-                (logic_deku_b1_skip or here(is_adult or can_use(Slingshot)))"
+            "Deku Tree Torch Deku Baba Room": "
+                here((has_fire_source_with_torch and can_use(Slingshot)) or can_use(Bow)) and
+                # Swim to hit switch or crouch under log
+                # Giant's Knife/BGS also can crouch but isn't in logic
+                (three_heart_drown or logic_deku_log or (is_child and Hylian_Shield) or
+                    (has_shield and (can_use(Sticks) or can_use(Megaton_Hammer))))",
+            "Deku Tree Basement Ledge": "logic_deku_b1_skip or is_adult or at('Deku Tree Basement Ledge', True)"
         }
     },
     {
@@ -42,6 +41,24 @@
         }
     },
     {
+        "region_name": "Deku Tree Torch Deku Baba Room",
+        "dungeon": "Deku Tree",
+        "exits": {
+            "Deku Tree Basement Backroom": "here(has_fire_source_with_torch or can_use(Bow))"
+        }
+    },
+    {
+        "region_name": "Deku Tree Basement Ledge",
+        "dungeon": "Deku Tree",
+        "exits": {
+            "Deku Tree Basement Backroom": "is_child",
+            "Deku Tree Boss Room": "
+                here(has_fire_source_with_torch or
+                     (logic_deku_b1_webs_with_bow and can_use(Bow)))",
+            "Deku Tree Lobby": "True"
+        }
+    },
+    {
         "region_name": "Deku Tree Basement Backroom",
         "dungeon": "Deku Tree",
         "locations": {
@@ -51,7 +68,8 @@
                 (can_use(Boomerang) or can_use(Hookshot))"
         },
         "exits": {
-            "Deku Tree Lobby": "True"
+            "Deku Tree Torch Deku Baba Room": "True",
+            "Deku Tree Basement Ledge": "here(has_fire_source_with_torch or can_use(Bow)) and is_child"
         }
     },
     {

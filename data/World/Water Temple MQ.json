@@ -3,18 +3,18 @@
         "region_name": "Water Temple Lobby",
         "dungeon": "Water Temple",
         "events": {
-            "Water Temple Clear": "Boss_Key_Water_Temple and can_use(Longshot)"
+            "Water Temple Clear": "three_heart_drown and Boss_Key_Water_Temple and can_use(Longshot)"
         },
         "locations": {
-            "Water Temple Morpha Heart": "Boss_Key_Water_Temple and can_use(Longshot)",
-            "Morpha": "Boss_Key_Water_Temple and can_use(Longshot)"
+            "Water Temple Morpha Heart": "three_heart_drown and Boss_Key_Water_Temple and can_use(Longshot)",
+            "Morpha": "three_heart_drown and Boss_Key_Water_Temple and can_use(Longshot)"
         },
         "exits": {
-            "Lake Hylia": "True",
+            "Lake Hylia": "three_heart_drown",
             "Water Temple Dive": "
-                (can_use(Zora_Tunic) or logic_fewer_tunic_requirements) and can_use(Iron_Boots)",
+                three_heart_drown and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements) and can_use(Iron_Boots)",
             "Water Temple Dark Link Region": "
-                Small_Key_Water_Temple and can_use(Longshot)"
+                three_heart_drown and Small_Key_Water_Temple and can_use(Longshot)"
         }
     },
     {

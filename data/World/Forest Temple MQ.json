@@ -74,8 +74,8 @@
         },
         "exits": {
             "Forest Temple NE Outdoors": "
-                can_use(Iron_Boots) or can_use(Longshot) or 
-                (Progressive_Scale, 2) or (logic_forest_well_swim and can_use(Hookshot))",
+                three_heart_drown and (can_use(Iron_Boots) or can_use(Longshot) or 
+                (Progressive_Scale, 2) or (logic_forest_well_swim and can_use(Hookshot)))",
             "Forest Temple Outdoors Top Ledges": "can_use(Fire_Arrows)"
         }
     },
@@ -89,7 +89,7 @@
                 (can_use(Fire_Arrows) and
                     (can_play(Song_of_Time) or (can_use(Hover_Boots) and logic_forest_door_frame)))",
             "Forest Temple MQ GS Well": "
-                (can_use(Iron_Boots) and can_use(Hookshot)) or can_use(Bow) or can_use(Slingshot)",
+                (three_heart_drown and can_use(Iron_Boots) and can_use(Hookshot)) or can_use(Bow) or can_use(Slingshot)",
             "Deku Baba Sticks": "is_adult or Kokiri_Sword or Boomerang",
             "Deku Baba Nuts": "
                 is_adult or Slingshot or Sticks or 

@@ -4,16 +4,18 @@
         "dungeon": "Water Temple",
         "locations": {},
         "exits": {
-            "High Alcove": "is_adult or can_hover",
-            "Boss Area": "can_use(Longshot) or can_hover or (can_use(Hover_Boots) and (can_mega or Megaton_Hammer))",
-            "Dark Link Area": "(at('High Alcove', can_play(Zeldas_Lullaby)) or 
+            "High Alcove": "three_heart_drown and (is_adult or can_hover)",
+            "Boss Area": "three_heart_drown and (can_use(Longshot) or can_hover or (can_use(Hover_Boots) and (can_mega or Megaton_Hammer)))",
+            "Dark Link Area": "
+                three_heart_drown and
+                (at('High Alcove', can_play(Zeldas_Lullaby)) or 
                     (can_use(Hover_Boots) and (can_mega or Megaton_Hammer)))
                 and (Small_Key_Water_Temple,5)",
-            "Under Entrance Block": "can_use(Hookshot) and Iron_Boots",
-            "Central Pillar from Lobby": "can_use(Hookshot) and Iron_Boots and
+            "Under Entrance Block": "three_heart_drown and can_use(Hookshot) and Iron_Boots",
+            "Central Pillar from Lobby": "three_heart_drown and can_use(Hookshot) and Iron_Boots and
                 (Small_Key_Water_Temple,5)",
-            "Compass Room": "can_use(Iron_Boots) and can_use(Hookshot)",
-            "Ruto Column": "can_use(Iron_Boots) or can_use(Longshot) or can_jumpslash"
+            "Compass Room": "three_heart_drown and can_use(Iron_Boots) and can_use(Hookshot)",
+            "Ruto Column": "three_heart_drown and (can_use(Iron_Boots) or can_use(Longshot) or can_jumpslash)"
         }
     },
     {

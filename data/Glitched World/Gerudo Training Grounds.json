@@ -53,7 +53,7 @@
         "dungeon": "Gerudo Training Grounds",
         "locations": {
             "Gerudo Training Grounds Underwater Silver Rupee Chest": "
-                can_use(Hookshot) and (can_play(Song_of_Time) or can_mega) and Iron_Boots"
+                three_heart_drown and can_use(Hookshot) and (can_play(Song_of_Time) or can_mega) and Iron_Boots"
         },
         "exits": {
             "Gerudo Training Grounds Central Maze Right": "can_play(Song_of_Time) or is_child

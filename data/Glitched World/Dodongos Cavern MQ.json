@@ -22,7 +22,7 @@
                 (Slingshot and 
                     (has_explosives or 
                         ((Sticks or can_use(Dins_Fire)) and 
-                            (damage_multiplier != 'ohko' or Fairy or can_use(Nayrus_Love)))))",
+                            ((three_heart_damage and damage_multiplier != 'ohko') or Fairy or can_use(Nayrus_Love)))))",
             "Dodongos Cavern MQ GS Song of Time Block Room": "
                 can_play(Song_of_Time) and (can_child_attack or is_adult)",
             "Dodongos Cavern MQ GS Larvae Room": "can_use(Sticks) or has_fire_source",
@@ -33,7 +33,7 @@
                         (Megaton_Hammer or 
                             ((Sticks or can_use(Dins_Fire) or 
                                 (can_become_adult and (logic_dc_jump or Hover_Boots))) and 
-                            (damage_multiplier != 'ohko' or Fairy or can_use(Nayrus_Love))))))) or 
+                            ((three_heart_damage and damage_multiplier != 'ohko') or Fairy or can_use(Nayrus_Love))))))) or 
                 (can_use(Hookshot) and (has_explosives or Progressive_Strength_Upgrade or 
                     Bow or can_use(Dins_Fire)))",
             "Dodongos Cavern MQ Deku Scrub Lobby Rear": "can_stun_deku",
@@ -42,7 +42,7 @@
             "Dodongos Cavern MQ Deku Scrub Side Room Near Lower Lizalfos": "
                 is_adult or has_explosives or 
                 ((Sticks or can_use(Dins_Fire)) and 
-                    (damage_multiplier != 'ohko' or Fairy or can_use(Nayrus_Love)))",
+                    ((three_heart_damage and damage_multiplier != 'ohko') or Fairy or can_use(Nayrus_Love)))",
             "Dodongos Cavern Gossip Stone": "True"
         },
         "exits": {

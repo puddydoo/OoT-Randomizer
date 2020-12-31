@@ -144,6 +144,38 @@ logic_tricks = {
                     Silver Rupee Chest. May need to make multiple
                     trips.
                     '''},
+    'Heart Containers in Logic': {
+        'name'    : 'logic_heart_containers',
+        'tags'    : ("General",),
+        'tooltip' : '''\
+                    Allows logic to require Heart Containers to
+                    lengthen heat or drowning timers, or to survive
+                    certain maneuvers that require taking damage
+                    when starting hearts are less than three or
+                    the damage multiplier is set to quadruple.
+                    Normally, only starting hearts are counted.
+                    '''},
+    'Pieces of Heart in Logic': {
+        'name'    : 'logic_heart_pieces',
+        'tags'    : ("General",),
+        'tooltip' : '''\
+                    Allows logic to require Pieces of Heart to
+                    lengthen heat or drowning timers, or to survive
+                    certain maneuvers that require taking damage
+                    when starting hearts are less than three or
+                    the damage multiplier is set to quadruple.
+                    Normally, only starting hearts are counted.
+                    '''},
+    'Double Defense in Logic': {
+        'name'    : 'logic_double_defense',
+        'tags'    : ("General",),
+        'tooltip' : '''\
+                    Allows logic to take Double Defense into
+                    account for certain maneuvers that require
+                    taking damage that would be fatal without it.
+                    This can only be required on quadruple damage
+                    or with fewer than three starting hearts.
+                    '''},
     'Hidden Grottos without Stone of Agony': {
         'name'    : 'logic_grottos_without_agony',
         'tags'    : ("General", "Entrance",),
@@ -231,8 +263,8 @@ logic_tricks = {
 
                     This allows completion of adult Deku Tree with no fire source.
                     '''},
-    'Deku Tree MQ Roll Under the Spiked Log': {
-        'name'    : 'logic_deku_mq_log',
+    'Deku Tree Roll Under the Spiked Log': {
+        'name'    : 'logic_deku_log',
         'tags'    : ("Deku Tree",),
         'tooltip' : '''\
                     You can get past the spiked log by rolling

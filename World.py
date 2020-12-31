@@ -112,6 +112,14 @@ class World(object):
 
         self.can_take_damage = True
 
+        self.damage = 1
+        if self.damage_multiplier == 'half':
+            self.damage = 0.5
+        elif self.damage_multiplier == 'double':
+            self.damage = 2
+        elif self.damage_multiplier == 'quadruple':
+            self.damage = 4
+
         self.resolve_random_settings()
 
         if len(settings.hint_dist_user) == 0:
@@ -204,6 +212,7 @@ class World(object):
         new_world.starting_tod = self.starting_tod
         new_world.starting_age = self.starting_age
         new_world.can_take_damage = self.can_take_damage
+        new_world.damage = self.damage
         new_world.shop_prices = copy.copy(self.shop_prices)
         new_world.triforce_goal = self.triforce_goal
         new_world.triforce_count = self.triforce_count
@@ -663,10 +672,12 @@ class World(object):
 
         # these are items that can never be required but are still considered major items
         exclude_item_list = [
-            'Double Defense',
             'Ice Arrows',
             'Biggoron Sword',
         ]
+        if (not self.logic_double_defense or self.damage_multiplier == 'ohko' or (self.damage_multiplier != 'quadruple' and self.starting_hearts >= 3)):
+            # Double Defense may be required to reduce forced damage
+            exclude_item_list.append('Double Defense')
         if (self.damage_multiplier != 'ohko' and self.damage_multiplier != 'quadruple' and 
             self.shuffle_scrubs == 'off' and not self.shuffle_grotto_entrances):
             # nayru's love may be required to prevent forced damage

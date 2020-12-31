@@ -80,11 +80,12 @@ class State(object):
 
     def heart_count(self):
         # Warning: This only considers items that are marked as advancement items
-        return (
-            self.item_count('Heart Container')
-            + self.item_count('Piece of Heart') // 4
-            + 3 # starting hearts
-        )
+        containers = self.world.starting_hearts
+        if self.world.logic_heart_containers:
+            containers += self.item_count('Heart Container')
+        if self.world.logic_heart_pieces:
+            containers += ((self.item_count('Piece of Heart') + self.item_count('Piece of Heart (Treasure Chest Game)')) // 4)
+        return containers
 
     def has_medallions(self, count):
         return self.count_of(ItemInfo.medallions) >= count
@@ -111,14 +112,10 @@ class State(object):
 
 
     # Used for fall damage and other situations where damage is unavoidable
-    def can_live_dmg(self, hearts):
-        mult = self.world.damage_multiplier
-        if hearts*4 >= 3:
-            return mult != 'ohko' and mult != 'quadruple'
-        elif hearts*4 < 3:
-            return mult != 'ohko'
-        else:
-            return True
+    def can_live_dmg(self, damage):
+        damage = damage * self.world.damage
+        health = self.heart_count()
+        return self.world.damage_multiplier != 'ohko' and (damage < health or (self.world.logic_double_defense and damage / 2 < health and self.has('Double Defense')))
 
 
     # Use the guarantee_hint rule defined in json.

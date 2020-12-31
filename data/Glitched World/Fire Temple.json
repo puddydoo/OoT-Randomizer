@@ -3,22 +3,22 @@
         "region_name": "Fire Temple Lower",
         "dungeon": "Fire Temple",
         "locations": {
-            "Fire Temple Near Boss Chest" : "True",
+            "Fire Temple Near Boss Chest" : "three_heart_heat",
             "Fire Temple Flare Dancer Chest": "
                 ((Small_Key_Fire_Temple, 8) or not keysanity) and (can_use(Megaton_Hammer) or can_use(Hookshot) or has_explosives)",
             "Fire Temple Boss Key Chest": "(
                 ((Small_Key_Fire_Temple, 8) or not keysanity) and can_use(Megaton_Hammer)) or (can_mega and can_use(Hookshot))",
             "Fire Temple Volvagia Heart": "
-                (can_use(Goron_Tunic) or (Fairy and has_explosives)) and can_use(Megaton_Hammer) and 
+                three_heart_heat and (can_use(Goron_Tunic) or (Fairy and has_explosives)) and can_use(Megaton_Hammer) and 
                 (Boss_Key_Fire_Temple or at('Fire Temple Flame Maze', True))",
             "Volvagia": "
-                (can_use(Goron_Tunic) or (Fairy and has_explosives)) and can_use(Megaton_Hammer) and 
+                three_heart_heat and (can_use(Goron_Tunic) or (Fairy and has_explosives)) and can_use(Megaton_Hammer) and 
                 (Boss_Key_Fire_Temple or at('Fire Temple Flame Maze', True))",
             "Fire Temple GS Boss Key Loop": "
                 ((Small_Key_Fire_Temple, 8) or not keysanity)"
         },
         "exits": {
-            "Fire Temple Big Lava Room":"(Small_Key_Fire_Temple, 2)"
+            "Fire Temple Big Lava Room": "three_heart_heat and (Small_Key_Fire_Temple, 2)"
         }
     },
     {

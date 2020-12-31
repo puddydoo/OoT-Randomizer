@@ -63,8 +63,8 @@
         },
         "exits": {
             "Forest Temple NE Outdoors": "
-                can_use(Iron_Boots) or can_use(Longshot) or 
-                (Progressive_Scale, 2) or (logic_forest_well_swim and can_use(Hookshot))",
+                three_heart_drown and (can_use(Iron_Boots) or can_use(Longshot) or 
+                (Progressive_Scale, 2) or (logic_forest_well_swim and can_use(Hookshot)))",
             "Forest Temple Outdoors Top Ledges": "can_use(Fire_Arrows)"
         }
     },
@@ -74,7 +74,7 @@
         "locations": {
             "Forest Temple MQ Well Chest": "can_use(Bow)",
             "Forest Temple MQ GS Raised Island Courtyard": "True",
-            "Forest Temple MQ GS Well": "can_use(Iron_Boots) or can_use(Bow)"
+            "Forest Temple MQ GS Well": "(three_heart_drown and can_use(Iron_Boots)) or can_use(Bow)"
         },
         "exits": {
             "Forest Temple Outdoors Top Ledges": "

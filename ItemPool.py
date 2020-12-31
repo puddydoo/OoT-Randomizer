@@ -693,7 +693,7 @@ item_groups = {
     'Song': songlist,
     'NonWarpSong': songlist[0:6],
     'WarpSong': songlist[6:],
-    'HealthUpgrade': ('Heart Container', 'Piece of Heart'),
+    'HealthUpgrade': ('Heart Container', 'Piece of Heart', 'Piece of Heart (Treasure Chest Game)'),
     'ProgressItem': [name for (name, data) in item_table.items() if data[0] == 'Item' and data[1]],
     'DungeonReward': dungeon_rewards,
 

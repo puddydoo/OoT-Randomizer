@@ -4,30 +4,30 @@
         "dungeon": "Fire Temple",
         "locations": {
             "Fire Temple Near Boss Chest" : "
-                logic_fewer_tunic_requirements or can_use(Goron_Tunic)",
+                three_heart_heat and (logic_fewer_tunic_requirements or can_use(Goron_Tunic))",
             "Fire Temple Flare Dancer Chest": "
                 ((Small_Key_Fire_Temple, 8) or not keysanity) and can_use(Megaton_Hammer)",
             "Fire Temple Boss Key Chest": "
                 ((Small_Key_Fire_Temple, 8) or not keysanity) and can_use(Megaton_Hammer)",
             "Fire Temple Volvagia Heart": "
-                can_use(Goron_Tunic) and can_use(Megaton_Hammer) and Boss_Key_Fire_Temple and 
+                three_heart_heat and can_use(Goron_Tunic) and can_use(Megaton_Hammer) and Boss_Key_Fire_Temple and 
                 (logic_fire_boss_door_jump or Hover_Boots or
                     at('Fire Temple Upper', can_play(Song_of_Time) or has_explosives))",
             "Volvagia": "
-                can_use(Goron_Tunic) and can_use(Megaton_Hammer) and Boss_Key_Fire_Temple and 
+                three_heart_heat and can_use(Goron_Tunic) and can_use(Megaton_Hammer) and Boss_Key_Fire_Temple and 
                 (logic_fire_boss_door_jump or Hover_Boots or
                     at('Fire Temple Upper', can_play(Song_of_Time) or has_explosives))",
             "Fire Temple GS Boss Key Loop": "
                 ((Small_Key_Fire_Temple, 8) or not keysanity) and can_use(Megaton_Hammer)",
             "Fairy Pot": "
                 has_bottle and (can_use(Hover_Boots) or can_use(Hookshot)) and
-                (logic_fewer_tunic_requirements or can_use(Goron_Tunic))"
+                three_heart_heat and (logic_fewer_tunic_requirements or can_use(Goron_Tunic))"
         },
         "exits": {
             "DMC Fire Temple Entrance": "True",
             "Fire Temple Big Lava Room":"
                 (Small_Key_Fire_Temple, 2) and
-                (logic_fewer_tunic_requirements or can_use(Goron_Tunic))"
+                three_heart_heat and (logic_fewer_tunic_requirements or can_use(Goron_Tunic))"
         }
     },
     {
