@@ -263,7 +263,7 @@ logic_tricks = {
 
                     This allows completion of adult Deku Tree with no fire source.
                     '''},
-    'Deku Tree Roll Under the Spiked Log': {
+    'Deku Tree MQ Roll Under the Spiked Log': {
         'name'    : 'logic_deku_mq_log',
         'tags'    : ("Deku Tree",),
         'tooltip' : '''\

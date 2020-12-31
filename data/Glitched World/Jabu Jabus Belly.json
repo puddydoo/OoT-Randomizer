@@ -14,7 +14,7 @@
             "Jabu Jabus Belly GS Water Switch Room": "True",
             "Jabu Jabus Belly GS Lobby Basement Lower": "can_use(Boomerang) or can_use(Hookshot) or can_hover",
             "Jabu Jabus Belly GS Lobby Basement Upper": "can_use(Boomerang) or can_use(Hookshot) or can_hover",
-            "Jabu Jabus Belly Deku Scrub": "three_heart_drown"
+            "Jabu Jabus Belly Deku Scrub": "True"
         },
         "exits": {
             "Jabu Jabus Belly Beginning": "True",
