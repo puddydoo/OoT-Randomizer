@@ -3,7 +3,7 @@
         "region_name": "Bottom of the Well",
         "dungeon": "Bottom of the Well",
         "exits": {
-            "Kak Well of Three Features": "True",
+            "Kakariko Village": "True",
             "Bottom of the Well Perimeter": "is_child"
         }
     },
@@ -17,7 +17,7 @@
                 has_explosives or (logic_botw_mq_dead_hand_key and Boomerang)",
             "Bottom of the Well MQ GS Basement": "can_child_attack",
             "Bottom of the Well MQ GS Coffin Room": "
-                (three_heart_drown or can_use_projectile) and can_child_attack and (Small_Key_Bottom_of_the_Well, 2)",
+                can_child_attack and (Small_Key_Bottom_of_the_Well, 2)",
             "Wall Fairy": "has_bottle and Slingshot" # The fairy pot is obsolete
         },
         "exits": {

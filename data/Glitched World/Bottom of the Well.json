@@ -1,5 +1,5 @@
 [    
-    {
+	{
         "region_name": "Bottom of the Well",
         "dungeon": "Bottom of the Well",
         "exits": {
@@ -16,9 +16,7 @@
             "Bottom of the Well Compass Chest": "True",
             "Bottom of the Well Center Skulltula Chest": "True",
             "Bottom of the Well Back Left Bombable Chest": "has_explosives",
-            "Bottom of the Well Freestanding Key": "
-                (three_heart_drown or can_play(Zeldas_Lullaby)) and
-                (Sticks or can_use(Dins_Fire) or Boomerang)",
+            "Bottom of the Well Freestanding Key": "Sticks or can_use(Dins_Fire) or Boomerang",
             "Bottom of the Well Lens of Truth Chest": "
                 (can_play(Zeldas_Lullaby) or  (Small_Key_Bottom_of_the_Well,3)) and 
                 (Kokiri_Sword or Sticks)", 
