@@ -85,6 +85,9 @@ class State(object):
             containers += self.item_count('Heart Container')
         if self.world.logic_heart_pieces:
             containers += ((self.item_count('Piece of Heart') + self.item_count('Piece of Heart (Treasure Chest Game)')) // 4)
+        # Much logic still assumes 3 hearts (the number of hearts required for all checks is not known) so make 3 hearts obtainable
+        if containers < 3:
+            containers = min(3, (self.world.starting_hearts + self.item_count('Heart Container') + ((self.item_count('Piece of Heart') + self.item_count('Piece of Heart (Treasure Chest Game)')) // 4)))
         return containers
 
     def has_medallions(self, count):

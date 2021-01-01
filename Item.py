@@ -127,9 +127,10 @@ class Item(object):
         if self.name.startswith('Bombchus') and not self.world.bombchus_in_logic:
             return False
 
-        if self.name.startswith('Heart Container') and not self.world.logic_heart_containers:
+        # Remove starting hearts check when all heart checks in logic are filled out
+        if self.name.startswith('Heart Container') and not self.world.logic_heart_containers and self.world.starting_hearts >= 3:
             return False
-        if self.name.startswith('Piece of Heart') and not self.world.logic_heart_pieces:
+        if self.name.startswith('Piece of Heart') and not self.world.logic_heart_pieces and self.world.starting_hearts >= 3:
             return False
 
         if self.map or self.compass:
