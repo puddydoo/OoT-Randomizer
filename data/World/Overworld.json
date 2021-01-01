@@ -986,7 +986,7 @@
             "Kak GS Watchtower": "
                 is_child and (Slingshot or has_bombchus or 
                     (logic_kakariko_tower_gs and (Sticks or Kokiri_Sword) and
-                    three_heart_damage and (damage_multiplier != 'ohko' or Fairy or can_use(Nayrus_Love)))) and at_night",
+                    (can_live_dmg(0.5) or Fairy or can_use(Nayrus_Love)))) and at_night",
             "Bug Rock": "has_bottle"
         },
         "exits": {
@@ -1010,7 +1010,7 @@
                 (logic_man_on_roof and 
                     (is_adult or at_day or Slingshot or has_bombchus or 
                         (logic_kakariko_tower_gs and (Sticks or Kokiri_Sword) and
-                            three_heart_damage and (damage_multiplier != 'ohko' or Fairy or can_use(Nayrus_Love)))))",
+                            (can_live_dmg(0.5) or Fairy or can_use(Nayrus_Love)))))",
             "Kak Backyard": "is_adult or at_day",
             "Graveyard": "True",
             "Kak Behind Gate": "is_adult or 'Kakariko Village Gate Open'"
@@ -1307,7 +1307,7 @@
                 can_blast_or_smash or 
                 (logic_dmt_bombable and is_child and Progressive_Strength_Upgrade)",
             "DMT Freestanding PoH": "
-                (three_heart_damage and ((damage_multiplier != 'ohko') or can_use(Nayrus_Love) or Fairy or can_use(Hover_Boots))) or
+                (can_live_dmg(0.5) or can_use(Nayrus_Love) or Fairy or can_use(Hover_Boots)) or
                 (is_adult and here(can_plant_bean and (has_explosives or Progressive_Strength_Upgrade)))",
             "DMT GS Bean Patch": "
                 can_plant_bugs and can_child_attack and
@@ -1577,7 +1577,8 @@
         "hint": "Death Mountain Crater",
         "events": {
             "DMC Cracked Wall": "three_heart_heat and has_explosives",
-            "DMC Upper Grotto Boulder": "three_heart_heat and can_blast_or_smash",
+            "DMC Upper Grotto Boulder": "
+                can_use(Megaton_Hammer) or (three_heart_heat and has_explosives)",
             "DMC Ledge Boulder": "
                 can_use(Megaton_Hammer) and
                 ((three_heart_heat and logic_crater_upper_to_lower) or
@@ -1698,7 +1699,7 @@
             "DMC Cracked Wall": "unknown_heart_heat and has_explosives",
             "DMC Upper Grotto Boulder": "three_heart_heat and can_blast_or_smash",
             "DMC Ledge Boulder": "three_heart_heat and can_use(Megaton_Hammer)",
-            "DMC Fountain Boulders": "three_heart_heat and can_use(Megaton_Hammer)",
+            "DMC Fountain Boulders": "can_use(Megaton_Hammer)",
             "DMC Hammer Grotto Boulder": "three_heart_heat and can_use(Megaton_Hammer)",
             "DMC Bean Plant": "False",
             "DMC Wall PoH Access": "unknown_heart_heat",
@@ -1738,7 +1739,7 @@
             "DMC Upper Grotto Boulder": "unknown_heart_heat and can_blast_or_smash",
             "DMC Ledge Boulder": "three_heart_heat and can_use(Megaton_Hammer)",
             "DMC Fountain Boulders": "three_heart_heat and can_use(Megaton_Hammer)",
-            "DMC Hammer Grotto Boulder": "three_heart_heat and can_use(Megaton_Hammer)",
+            "DMC Hammer Grotto Boulder": "can_use(Megaton_Hammer)",
             "DMC Bean Plant": "False",
             "DMC Wall PoH Access": "unknown_heart_heat",
             "DMC Crate GS Access": "unknown_heart_heat and is_child and can_child_attack",
@@ -1881,7 +1882,7 @@
                 ((three_heart_heat and can_use(Hover_Boots)) or
                 (three_heart_heat and can_use(Hookshot)) or
                 (three_heart_heat and is_adult and 'DMC Bean Plant'))",
-            "DMC Bean Plant": "three_heart_heat and can_plant_bean",
+            "DMC Bean Plant": "can_plant_bean",
             "DMC Wall PoH Access": "
                 (unknown_heart_heat and can_use(Hover_Boots)) or
                 (unknown_heart_heat and can_use(Hookshot)) or
