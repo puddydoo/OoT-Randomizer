@@ -166,16 +166,6 @@ logic_tricks = {
                     the damage multiplier is set to quadruple.
                     Normally, only starting hearts are counted.
                     '''},
-    'Double Defense in Logic': {
-        'name'    : 'logic_double_defense',
-        'tags'    : ("General",),
-        'tooltip' : '''\
-                    Allows logic to take Double Defense into
-                    account for certain maneuvers that require
-                    taking damage that would be fatal without it.
-                    This can only be required on quadruple damage
-                    or with fewer than three starting hearts.
-                    '''},
     'Hidden Grottos without Stone of Agony': {
         'name'    : 'logic_grottos_without_agony',
         'tags'    : ("General", "Entrance",),
@@ -2054,7 +2044,7 @@ setting_infos = [
         choices        = {
             'open':       'Always Open',
             'vanilla':    'Vanilla Requirements',
-            'stones':	  'Spiritual Stones',
+            'stones':     'Spiritual Stones',
             'medallions': 'Medallions',
             'dungeons':   'Dungeons',
             'tokens':     'Gold Skulltula Tokens'
@@ -3663,6 +3653,10 @@ setting_infos = [
         },
         gui_tooltip    = '''\
             Changes the amount of damage taken.
+            
+            'Quadruple': Under this setting,
+            Double Defense can possibly be
+            required for certain maneuvers.
 
             'OHKO': Link dies in one hit.
         ''',

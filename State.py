@@ -118,7 +118,7 @@ class State(object):
     def can_live_dmg(self, damage):
         damage = damage * self.world.damage
         health = self.heart_count()
-        return self.world.damage_multiplier != 'ohko' and (damage < health or (self.world.logic_double_defense and damage / 2 < health and self.has('Double Defense')))
+        return self.world.damage_multiplier != 'ohko' and (damage < health or (damage / 2 < health and self.has('Double Defense')))
 
 
     # Use the guarantee_hint rule defined in json.

@@ -675,7 +675,7 @@ class World(object):
             'Ice Arrows',
             'Biggoron Sword',
         ]
-        if (not self.logic_double_defense or self.damage_multiplier == 'ohko' or (self.damage_multiplier != 'quadruple' and self.starting_hearts >= 3)):
+        if (self.damage_multiplier == 'ohko' or (self.damage_multiplier != 'quadruple' and self.starting_hearts >= 3)):
             # Double Defense may be required to reduce forced damage
             exclude_item_list.append('Double Defense')
         if (self.damage_multiplier != 'ohko' and self.damage_multiplier != 'quadruple' and 
