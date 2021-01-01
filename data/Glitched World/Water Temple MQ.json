@@ -3,7 +3,7 @@
         "region_name": "Water Temple Lobby",
         "dungeon": "Water Temple",
         "events": {
-            "Water Temple Clear": "three_heart_drown and Boss_Key_Water_Temple and can_use(Longshot)"
+            "Water Temple Clear": "Boss_Key_Water_Temple and can_use(Longshot)"
         },
         "locations": {
             "Water Temple MQ Map Chest": "three_heart_drown and has_fire_source and Iron_Boots",
@@ -14,11 +14,11 @@
             # they won't be able to come back without Iron Boots.
             # If it is the Iron Boots or an item required to get them, it means a soft-lock.
             "Water Temple Morpha Heart": "
-                three_heart_drown and Boss_Key_Water_Temple and can_use(Longshot) and Iron_Boots",
-            "Morpha": "three_heart_drown and Boss_Key_Water_Temple and can_use(Longshot)"
+                Boss_Key_Water_Temple and can_use(Longshot) and Iron_Boots",
+            "Morpha": "Boss_Key_Water_Temple and can_use(Longshot)"
         },
         "exits": {
-            "Lake Hylia": "three_heart_drown",
+            "Lake Hylia": "True",
             "Water Temple Lowered Water Levels": "three_heart_drown and can_play(Zeldas_Lullaby) and Iron_Boots",
             "Water Temple Dark Link Region": "
                 three_heart_drown and Small_Key_Water_Temple and can_use(Longshot) and Iron_Boots"
