@@ -20,7 +20,7 @@
     },
     {
         "region_name": "High Alcove",
-        "dungeon":  "Water Temple",
+        "dungeon": "Water Temple",
         "locations": {},
         "exits": {            
             "Compass Room": "is_adult",

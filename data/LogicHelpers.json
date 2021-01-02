@@ -42,8 +42,6 @@
     # Placeholder for timers that may require an unknown amount of hearts above 3
     "unknown_heart_heat": "can_use(Goron_Tunic)",
     "unknown_heart_drown": "can_use(Zora_Tunic)",
-    # Placeholder for damage, until OHKO/Quadruple is removed and replaced with can_live_dmg and the exact amount of damage
-    "three_heart_damage": "has_hearts(3)",
 
     "has_bombchus": "(Buy_Bombchu_5 or Buy_Bombchu_10 or Buy_Bombchu_20 or Bombchu_Drop) and (bombchus_in_logic or Bomb_Bag)",
     "found_bombchus": "(bombchus_in_logic and (Bombchus or Bombchus_5 or Bombchus_10 or Bombchus_20)) or (not bombchus_in_logic and Bomb_Bag)",
