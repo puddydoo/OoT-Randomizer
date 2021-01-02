@@ -33,7 +33,7 @@
                 has_explosives or Kokiri_Sword or can_use(Dins_Fire)"
         },
         "exits": {
-            "Forest Temple NE Outdoors": "three_heart_drown and (Progressive_Scale, 2)",
+            "Forest Temple NE Outdoors": "(Progressive_Scale, 2) and (drown_seconds(5) or Fairy)",
             #Other methods of crossing through the well are not currently relevant.
             "Forest Temple Outdoors High Balconies": "
                 here(is_adult or has_explosives or
@@ -61,7 +61,9 @@
             "Forest Temple Outdoors High Balconies": "
                 can_use(Longshot) or (logic_forest_vines and can_use(Hookshot))",
                 #Longshot can grab some very high up vines to drain the well.
-            "Forest Temple NW Outdoors": "three_heart_drown and (can_use(Iron_Boots) or (Progressive_Scale, 2))",
+            "Forest Temple NW Outdoors": "
+                (can_use(Iron_Boots) and (drown_seconds(18) or (drown_seconds(8) and Fairy)) or 
+                ((Progressive_Scale, 2) and (drown_seconds(5) or Fairy))",
             "Forest Temple Lobby": "True"
         }
     },
