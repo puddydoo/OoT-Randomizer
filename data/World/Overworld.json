@@ -331,7 +331,7 @@
         "time_passes": true,
         "locations": {
             "HF Ocarina of Time Item": "is_child and has_all_stones",
-            "Song from Ocarina of Time": " is_child and has_all_stones",
+            "Song from Ocarina of Time": "is_child and has_all_stones",
             "Big Poe Kill": "can_use(Bow) and can_ride_epona and has_bottle"
         },
         "exits": {
