@@ -263,7 +263,7 @@
             "LH Lab Dive": "
                 (Progressive_Scale, 2) or
                 (Iron_Boots and can_use(Hookshot)) or (has_bottle and can_use(Hover_Boots))",
-            "LH GS Lab Crate": "drown_seconds(5) and Iron_Boots and can_use(Hookshot)"
+            "LH GS Lab Crate": "(drown_seconds(5) or Fairy) and Iron_Boots and can_use(Hookshot)"
         }
     },
     {
@@ -1045,7 +1045,7 @@
         "hint": "Zora's Fountain",
         "locations": {
             "ZF Iceberg Freestanding PoH": "is_adult",
-            "ZF Bottom Freestanding PoH": "three_heart_drown and is_adult and Iron_Boots",
+            "ZF Bottom Freestanding PoH": "(drown_seconds(14) or Fairy) and is_adult and Iron_Boots",
             "ZF GS Tree": "is_child",
             "ZF GS Above the Log": "(can_use(Boomerang) or (can_hover and is_child)) and at_night",
             "ZF GS Hidden Cave": "at_night and 
