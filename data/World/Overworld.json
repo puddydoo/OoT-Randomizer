@@ -1730,8 +1730,8 @@
                 (heat_seconds('three_adult_hearts') and is_adult and Hookshot and 'DMC Bean Plant')",
             "DMC Sheik Access": "
                 is_adult and
-                ((heat_seconds('three_adult_hearts') and can_use(Hover_Boots)) or
-                (heat_seconds('three_adult_hearts') and can_use(Hookshot)))",
+                ((heat_seconds('three_adult_hearts') and Hover_Boots) or
+                (heat_seconds('three_adult_hearts') and Hookshot))",
             "DMC Bean GS Access": "False",
             "DMC Bean Fairy Access": "False"
         },
@@ -1788,8 +1788,8 @@
                 (heat_seconds('three_adult_hearts') and is_adult and Hookshot and 'DMC Bean Plant')",
             "DMC Sheik Access": "
                 is_adult and
-                ((heat_seconds(8) and can_use(Hover_Boots)) or
-                (heat_seconds('three_adult_hearts') and can_use(Hookshot)))",
+                ((heat_seconds(8) and Hover_Boots) or
+                (heat_seconds('three_adult_hearts') and Hookshot))",
             "DMC Bean GS Access": "False",
             "DMC Bean Fairy Access": "False"
         },
