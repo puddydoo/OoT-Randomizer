@@ -9,22 +9,20 @@
                 ((Small_Key_Fire_Temple, 8) or not keysanity) and can_use(Megaton_Hammer)",
             "Fire Temple Boss Key Chest": "
                 ((Small_Key_Fire_Temple, 8) or not keysanity) and can_use(Megaton_Hammer)",
-            "Fire Temple Volvagia Heart": "
-                three_heart_heat and can_use(Goron_Tunic) and can_use(Megaton_Hammer) and Boss_Key_Fire_Temple and 
-                (logic_fire_boss_door_jump or Hover_Boots or
-                    at('Fire Temple Upper', can_play(Song_of_Time) or has_explosives))",
-            "Volvagia": "
-                three_heart_heat and can_use(Goron_Tunic) and can_use(Megaton_Hammer) and Boss_Key_Fire_Temple and 
-                (logic_fire_boss_door_jump or Hover_Boots or
-                    at('Fire Temple Upper', can_play(Song_of_Time) or has_explosives))",
             "Fire Temple GS Boss Key Loop": "
                 ((Small_Key_Fire_Temple, 8) or not keysanity) and can_use(Megaton_Hammer)",
             "Fairy Pot": "
-                has_bottle and (can_use(Hover_Boots) or can_use(Hookshot)) and
-                three_heart_heat and (logic_fewer_tunic_requirements or can_use(Goron_Tunic))"
+                has_bottle and
+                ((can_use(Hover_Boots) and three_heart_heat and (logic_fewer_tunic_requirements or can_use(Goron_Tunic))) or
+                (can_use(Hookshot) and three_heart_heat and (logic_fewer_tunic_requirements or can_use(Goron_Tunic))))"
         },
         "exits": {
             "DMC From Fire Temple": "True",
+            "Fire Temple Boss Room": "
+                can_use(Megaton_Hammer) and Boss_Key_Fire_Temple and 
+                ((unknown_heart_heat and logic_fire_boss_door_jump) or
+                (unknown_heart_heat and Hover_Boots) or
+                (unknown_heart_heat and at('Fire Temple Upper', can_play(Song_of_Time) or has_explosives)))",
             "Fire Temple Big Lava Room":"
                 (Small_Key_Fire_Temple, 2) and
                 three_heart_heat and (logic_fewer_tunic_requirements or can_use(Goron_Tunic))"
@@ -34,17 +32,31 @@
         "region_name": "Fire Temple Big Lava Room",
         "dungeon": "Fire Temple",
         "locations": {
-            "Fire Temple Big Lava Room Lower Open Door Chest": "True",
-            "Fire Temple Big Lava Room Blocked Door Chest": "is_adult and has_explosives",
+            "Fire Temple Big Lava Room Lower Open Door Chest": "
+                three_heart_heat and (logic_fewer_tunic_requirements or can_use(Goron_Tunic))",
+            "Fire Temple Big Lava Room Blocked Door Chest": "
+                is_adult and
+                ((Bombs and three_heart_heat and (logic_fewer_tunic_requirements or can_use(Goron_Tunic))) or
+                (has_bombchus and three_heart_heat and (logic_fewer_tunic_requirements or can_use(Goron_Tunic))))",
             "Fire Temple GS Song of Time Room": "
-                is_adult and (can_play(Song_of_Time) or logic_fire_song_of_time)"
+                is_adult and
+                ((can_play(Song_of_Time) and three_heart_heat and (logic_fewer_tunic_requirements or can_use(Goron_Tunic))) or
+                (logic_fire_song_of_time and three_heart_heat and (logic_fewer_tunic_requirements or can_use(Goron_Tunic))))"
         },
         "exits": {
             "Fire Temple Lower":  "True",
             "Fire Temple Middle": "
-                can_use(Goron_Tunic) and (Small_Key_Fire_Temple, 4) and
-                (Progressive_Strength_Upgrade or logic_fire_strength) and 
-                (has_explosives or Bow or Progressive_Hookshot)"
+                is_adult and (Small_Key_Fire_Temple, 4) and
+                (((Progressive_Strength_Upgrade and
+                    (unknown_heart_heat and Bombs) or
+                    (unknown_heart_heat and has_bombchus) or
+                    (unknown_heart_heat and Bow)) or
+                    (unknown_heart_heat and Progressive_Hookshot)) or
+                (logic_fire_strength and
+                    (unknown_heart_heat and Bombs) or
+                    (unknown_heart_heat and has_bombchus) or
+                    (unknown_heart_heat and Bow)) or
+                    (unknown_heart_heat and Progressive_Hookshot))"
         }
     },
     {
@@ -86,6 +98,14 @@
                 (can_play(Song_of_Time) or (logic_rusted_switches and 
                     (can_use(Hover_Boots) or has_explosives)))",
             "Fire Temple Megaton Hammer Chest": "has_explosives"
+        }
+    },
+    {
+        "region_name": "Fire Temple Boss Room",
+        "dungeon": "Fire Temple",
+        "locations": {
+            "Fire Temple Volvagia Heart": "True",
+            "Volvagia": "True"
         }
     }
 ]

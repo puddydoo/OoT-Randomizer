@@ -6,18 +6,31 @@
             "Fire Temple MQ Map Room Side Chest": "
                 is_adult or Kokiri_Sword or Sticks or Slingshot or Bombs or can_use(Dins_Fire)",
             "Fire Temple MQ Near Boss Chest": "
-                three_heart_heat and (logic_fewer_tunic_requirements or can_use(Goron_Tunic)) and
-                (((can_use(Hover_Boots) or (logic_fire_mq_near_boss and can_use(Bow))) and has_fire_source) or 
-                    (can_use(Hookshot) and (can_use(Fire_Arrows) or
-                        (can_use(Dins_Fire) and 
-                            ((can_live_dmg('placeholder') and damage_multiplier != 'quadruple') or
-                                can_use(Goron_Tunic) or can_use(Bow) or can_use(Longshot))))))"
+                (can_use(Hover_Boots) and
+                    (can_use(Fire_Arrows) and three_heart_heat and (logic_fewer_tunic_requirements or can_use(Goron_Tunic))) or
+                    (can_use(Dins_Fire) and three_heart_heat and (logic_fewer_tunic_requirements or can_use(Goron_Tunic)))) or
+                (logic_fire_mq_near_boss and can_use(Bow) and
+                    (can_use(Fire_Arrows) and three_heart_heat and (logic_fewer_tunic_requirements or can_use(Goron_Tunic))) or
+                    (can_use(Dins_Fire) and three_heart_heat and (logic_fewer_tunic_requirements or can_use(Goron_Tunic)))) or
+                (can_use(Hookshot) and
+                    (can_use(Fire_Arrows) and three_heart_heat and (logic_fewer_tunic_requirements or can_use(Goron_Tunic))) or
+                    (can_use(Dins_Fire) and
+                        (can_use(Goron_Tunic) or
+                        (can_live_dmg('placeholder') and damage_multiplier != 'quadruple' and three_heart_heat and logic_fewer_tunic_requirements) or
+                        (can_use(Bow) and three_heart_heat and logic_fewer_tunic_requirements) or
+                        (can_use(Longshot) and three_heart_heat and logic_fewer_tunic_requirements))))"
         },
         "exits": {
             "DMC From Fire Temple": "True",
             "Fire Boss Room": "
-                three_heart_heat and can_use(Goron_Tunic) and can_use(Megaton_Hammer) and Boss_Key_Fire_Temple and
-                ((has_fire_source and (logic_fire_boss_door_jump or Hover_Boots)) or at('Fire Temple Upper', True))",
+                can_use(Megaton_Hammer) and Boss_Key_Fire_Temple and 
+                ((logic_fire_boss_door_jump and
+                    (unknown_heart_heat and can_use(Dins_Fire)) or
+                    (unknown_heart_heat and can_use(Fire_Arrows))) or
+                (Hover_Boots and
+                    (unknown_heart_heat and can_use(Dins_Fire)) or
+                    (unknown_heart_heat and can_use(Fire_Arrows))) or
+                (unknown_heart_heat and at('Fire Temple Upper', can_play(Song_of_Time) or has_explosives)))",
             "Fire Lower Locked Door": "(Small_Key_Fire_Temple, 5) and (is_adult or Kokiri_Sword)",
             "Fire Big Lava Room": "
                 three_heart_heat and (logic_fewer_tunic_requirements or can_use(Goron_Tunic)) and can_use(Megaton_Hammer)"
@@ -37,20 +50,29 @@
         "dungeon": "Fire Temple",
         "locations": {
             "Fire Temple MQ Boss Key Chest": "
-                has_fire_source and (Bow or logic_fire_mq_bk_chest) and can_use(Hookshot)",
+                has_fire_source and can_use(Hookshot) and
+                ((Bow and three_heart_heat and (logic_fewer_tunic_requirements or can_use(Goron_Tunic))) or
+                (logic_fire_mq_bk_chest and three_heart_heat and (logic_fewer_tunic_requirements or can_use(Goron_Tunic))))",
             "Fire Temple MQ Big Lava Room Blocked Door Chest": "
                 has_fire_source and has_explosives and
-                (can_use(Hookshot) or logic_fire_mq_blocked_chest)",
-            "Fire Temple MQ GS Big Lava Room Open Door": "True",
+                ((can_use(Hookshot) and three_heart_heat and (logic_fewer_tunic_requirements or can_use(Goron_Tunic))) or
+                (logic_fire_mq_blocked_chest and three_heart_heat and (logic_fewer_tunic_requirements or can_use(Goron_Tunic))))",
+            "Fire Temple MQ GS Big Lava Room Open Door": "three_heart_heat and (logic_fewer_tunic_requirements or can_use(Goron_Tunic))",
             "Fairy Pot": "
-                has_bottle and has_fire_source and (Bow or logic_fire_mq_bk_chest) and
-                (can_use(Hookshot) or logic_fire_song_of_time)"
-
+                has_bottle and has_fire_source and
+                ((Bow and
+                    (can_use(Hookshot) and three_heart_heat and (logic_fewer_tunic_requirements or can_use(Goron_Tunic))) or
+                    (logic_fire_song_of_time and three_heart_heat and (logic_fewer_tunic_requirements or can_use(Goron_Tunic)))) or
+                (logic_fire_mq_bk_chest and
+                    (can_use(Hookshot) and three_heart_heat and (logic_fewer_tunic_requirements or can_use(Goron_Tunic))) or
+                    (logic_fire_song_of_time and three_heart_heat and (logic_fewer_tunic_requirements or can_use(Goron_Tunic)))))"
         },
         "exits": {
             "Fire Lower Maze": "
-                can_use(Goron_Tunic) and (Small_Key_Fire_Temple, 2) and
-                (has_fire_source or (logic_fire_mq_climb and Hover_Boots))"
+                (Small_Key_Fire_Temple, 2) and
+                ((can_use(Fire_Arrows) and unknown_heart_heat) or
+                (can_use(Dins_Fire) and unknown_heart_heat) or
+                (unknown_heart_heat and logic_fire_mq_climb and can_use(Hover_Boots)))"
         }
     },
     {
