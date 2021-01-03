@@ -14,9 +14,7 @@
         "exits": {
             "Lake Hylia": "True",
             "Water Temple Highest Water Level": "Raise_Water_Level",
-            "Water Temple Dive": "
-                (can_use(Iron_Boots) and three_heart_drown and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)) or
-                (logic_water_temple_torch_longshot and can_use(Longshot) and three_heart_drown and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements))"
+            "Water Temple Dive": "is_adult and Raise_Water_Level"
         }
     },
     {
@@ -38,49 +36,72 @@
         "region_name": "Water Temple Dive",
         "dungeon": "Water Temple",
         "locations": {
-            "Water Temple Map Chest": "Raise_Water_Level",
-            "Water Temple Compass Chest": "
-                (can_play(Zeldas_Lullaby) or Iron_Boots) and can_use(Hookshot)",
+            "Water Temple Map Chest": "
+                ((Iron_Boots and (drown_seconds(24) or (drown_seconds(10) and Fairy)) and (Zora_Tunic or logic_fewer_tunic_requirements)) or
+                (logic_water_temple_torch_longshot and Longshot and (drown_seconds(2) or Fairy) and (Zora_Tunic or logic_fewer_tunic_requirements)))"
+        },
+        "exits": {
+            "Water Temple Low Water Level": "
+                can_play(Zeldas_Lullaby) and
+                ((Iron_Boots and (drown_seconds(24) or (drown_seconds(10) and Fairy)) and (Zora_Tunic or logic_fewer_tunic_requirements)) or
+                (logic_water_temple_torch_longshot and Longshot and (drown_seconds(2) or Fairy) and (Zora_Tunic or logic_fewer_tunic_requirements)))",
+            "Water Temple North Basement": "
+                (Small_Key_Water_Temple, 5) and
+                (Longshot or (logic_water_boss_key_region and Hover_Boots)) and
+                Iron_Boots and three_heart_drown and (Zora_Tunic or logic_fewer_tunic_requirements)",
+            "Water Temple Spike Tunnel": "Iron_Boots and three_heart_drown and (Zora_Tunic or logic_fewer_tunic_requirements)"
+        }
+    },
+    {
+        "region_name": "Water Temple Low Water Level",
+        "dungeon": "Water Temple",
+        "locations": {
             "Water Temple Torches Chest": "
                 (Bow or can_use(Dins_Fire) or 
-                    (Child_Water_Temple and Sticks and Kokiri_Sword and Magic_Meter)) and
-                can_play(Zeldas_Lullaby)",
+                    (Child_Water_Temple and Sticks and Kokiri_Sword and Magic_Meter))",
             "Water Temple Central Bow Target Chest": "
-                Progressive_Strength_Upgrade and can_play(Zeldas_Lullaby) and 
+                Progressive_Strength_Upgrade and
                 ((Bow and (logic_water_central_bow or Hover_Boots or can_use(Longshot))) or
                     (logic_water_central_bow and Child_Water_Temple and Slingshot and at('Water Temple Middle Water Level', True)))",
             "Water Temple GS Behind Gate": "
-                (can_use(Hookshot) or can_use(Hover_Boots)) and 
-                has_explosives and can_play(Zeldas_Lullaby) and
-                (can_use(Iron_Boots) or can_dive)",
+                (can_use(Hookshot) or can_use(Hover_Boots)) and has_explosives and
+                ((Iron_Boots and three_heart_drown) or
+                (can_dive and Longshot and three_heart_drown))"
             "Water Temple GS Central Pillar": "
-                can_play(Zeldas_Lullaby) and
-                    (((can_use(Longshot) or (logic_water_central_gs_fw and can_use(Hookshot) and can_use(Farores_Wind))) and 
-                        ((Small_Key_Water_Temple, 6) or can_use(Bow) or can_use(Dins_Fire))) or
-                    (logic_water_central_gs_irons and can_use(Hookshot) and can_use(Iron_Boots) and
-                        (can_use(Bow) or can_use(Dins_Fire))) or
-                    (logic_water_central_gs_fw and Child_Water_Temple and Boomerang and can_use(Farores_Wind) and
-                        (Sticks or can_use(Dins_Fire) or
-                        ((Small_Key_Water_Temple, 6) and (can_use(Hover_Boots) or can_use(Bow))))))"
+                (((can_use(Longshot) or (logic_water_central_gs_fw and can_use(Hookshot) and can_use(Farores_Wind))) and 
+                    ((Small_Key_Water_Temple, 6) or can_use(Bow) or can_use(Dins_Fire))) or
+                (logic_water_central_gs_irons and can_use(Hookshot) and Iron_Boots and three_heart_drown and
+                    (can_use(Bow) or can_use(Dins_Fire))) or
+                (logic_water_central_gs_fw and Child_Water_Temple and Boomerang and can_use(Farores_Wind) and
+                    (Sticks or can_use(Dins_Fire) or
+                    ((Small_Key_Water_Temple, 6) and (can_use(Hover_Boots) or can_use(Bow))))))"
         },
         "exits": {
             "Water Temple Cracked Wall": "
-                can_play(Zeldas_Lullaby) and (can_use(Hookshot) or can_use(Hover_Boots)) and
+                (can_use(Hookshot) or can_use(Hover_Boots)) and
                 (logic_water_cracked_wall_nothing or (logic_water_cracked_wall_hovers and can_use(Hover_Boots)))",
             "Water Temple Middle Water Level": "
-                (Bow or can_use(Dins_Fire) or
+                Bow or can_use(Dins_Fire) or
                     ((Small_Key_Water_Temple, 6) and can_use(Hookshot)) or
-                    (Child_Water_Temple and Sticks)) and
-                can_play(Zeldas_Lullaby)",
+                    (Child_Water_Temple and Sticks)",
             "Water Temple North Basement": "
                 (Small_Key_Water_Temple, 5) and
-                (can_use(Longshot) or (logic_water_boss_key_region and can_use(Hover_Boots))) and
-                (can_use(Iron_Boots) or can_play(Zeldas_Lullaby))",
+                (can_use(Longshot) or (logic_water_boss_key_region and can_use(Hover_Boots)))",
             "Water Temple Dragon Statue": "
-                can_play(Zeldas_Lullaby) and Progressive_Strength_Upgrade and
-                ((Iron_Boots and can_use(Hookshot)) or
-                    (logic_water_dragon_adult and (has_bombchus or can_use(Bow) or can_use(Hookshot)) and (can_dive or Iron_Boots)) or
-                    (logic_water_dragon_child and Child_Water_Temple and (has_bombchus or Slingshot or Boomerang) and can_dive))"
+                Progressive_Strength_Upgrade and
+                ((Iron_Boots and three_heart_drown and can_use(Hookshot)) or
+                    (logic_water_dragon_adult and (has_bombchus or can_use(Bow) or can_use(Hookshot)) and
+                    ((can_dive and three_heart_drown) or (Iron_Boots and three_heart_drown))) or
+                    (logic_water_dragon_child and Child_Water_Temple and (has_bombchus or Slingshot or Boomerang) and
+                    can_dive and three_heart_drown))",
+            "Water Temple Spike Tunnel": "True"
+        }
+    },
+    {
+        "region_name": "Water Temple Spike Tunnel",
+        "dungeon": "Water Temple",
+        "locations": {
+            "Water Temple Compass Chest": "can_use(Hookshot)"
         }
     },
     {
@@ -96,7 +117,7 @@
                 # Otherwise you have hovers and just hover over and collect with a jump slash
             "Fairy Pot": "
                 has_bottle and (Small_Key_Water_Temple, 6) and 
-                (logic_water_bk_jump_dive or can_use(Iron_Boots)) and
+                ((logic_water_bk_jump_dive and three_heart_drown) or (Iron_Boots and three_heart_drown)) and
                 (logic_water_north_basement_ledge_jump or (has_explosives and Progressive_Strength_Upgrade) or Hover_Boots)"
         }
     },
@@ -119,7 +140,7 @@
         "dungeon": "Water Temple",
         "locations": {
             "Water Temple Central Pillar Chest": "
-                can_use(Iron_Boots) and can_use(Zora_Tunic) and can_use(Hookshot) and 
+                can_use(Iron_Boots) and unknown_heart_drown and can_use(Hookshot) and 
                 ((Small_Key_Water_Temple, 6) or can_use(Bow) or can_use(Dins_Fire))"
         },
         "exits": {
@@ -147,16 +168,18 @@
             "Water Temple River Chest": "can_play(Song_of_Time) and Bow",
             "Water Temple GS River": "
                 can_play(Song_of_Time) and 
-                ((Iron_Boots and (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)) or
+                ((Iron_Boots and unknown_heart_drown and (Zora_Tunic or logic_fewer_tunic_requirements)) or
                     (logic_water_river_gs and can_use(Longshot) and (Bow or has_bombchus)))",
             "Fairy Pot": 
                 "has_bottle and can_play(Song_of_Time)"
         },
         "exits": {
             "Water Temple Dragon Statue": "
-                (can_use(Zora_Tunic) or logic_fewer_tunic_requirements) and
+                (Zora_Tunic or logic_fewer_tunic_requirements) and
                 can_play(Song_of_Time) and Bow and
-                (Iron_Boots or logic_water_dragon_jump_dive or logic_water_dragon_adult)"
+                ((Iron_Boots and three_heart_drown) or
+                (logic_water_dragon_jump_dive and three_heart_drown) or
+                (logic_water_dragon_adult and three_heart_drown))"
         }
     }
 ]
