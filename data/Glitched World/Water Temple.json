@@ -5,7 +5,7 @@
         "locations": {},
         "exits": {
             "High Alcove": "three_heart_drown and (is_adult or can_hover)",
-            "Boss Area": "three_heart_drown and (can_use(Longshot) or can_hover or (can_use(Hover_Boots) and (can_mega or Megaton_Hammer)))",
+            "Boss Area": "can_use(Longshot) or can_hover or (can_use(Hover_Boots) and (can_mega or Megaton_Hammer))",
             "Dark Link Area": "
                 three_heart_drown and
                 (at('High Alcove', can_play(Zeldas_Lullaby)) or 
