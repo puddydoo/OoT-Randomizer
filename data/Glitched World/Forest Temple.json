@@ -55,7 +55,7 @@
             "Forest Temple Outdoors High Balconies": "can_use(Hookshot)",
                 #Longshot can grab some very high up vines to drain the well.
             "Forest Temple NW Outdoors": "
-                (can_use(Iron_Boots) and (drown_seconds(9) or (drown_seconds(5) and Fairy)) or 
+                (can_use(Iron_Boots) and (drown_seconds(9) or (drown_seconds(5) and Fairy))) or 
                 ((Progressive_Scale, 2) and (drown_seconds(5) or Fairy))",
             "Forest Temple Lobby": "True",
             "Forest Temple Falling Room": "can_hover or
