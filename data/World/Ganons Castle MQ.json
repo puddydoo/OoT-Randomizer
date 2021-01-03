@@ -50,9 +50,9 @@
         "events": {
             "Fire Trial Clear": "
                 can_use(Golden_Gauntlets) and can_use(Light_Arrows) and
-                ((can_use(Longshot) and unknown_heart_heat) or
+                ((Longshot and unknown_heart_heat) or
                 (Hover_Boots and unknown_heart_heat) or
-                (logic_fire_trial_mq and can_use(Hookshot) and unknown_heart_heat))"
+                (logic_fire_trial_mq and Hookshot and unknown_heart_heat))"
         }
     },
     {

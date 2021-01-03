@@ -63,9 +63,21 @@
         },
         "exits": {
             "Forest Temple NE Outdoors": "
-                three_heart_drown and (can_use(Iron_Boots) or can_use(Longshot) or 
-                (Progressive_Scale, 2) or (logic_forest_well_swim and can_use(Hookshot)))",
-            "Forest Temple Outdoors Top Ledges": "can_use(Fire_Arrows)"
+                ((Progressive_Scale, 2) and (drown_seconds(5) or Fairy)) or
+                (can_use(Iron_Boots) and (drown_seconds(9) or (drown_seconds(5) and Fairy))) or
+                ((can_use(Longshot) or (logic_forest_well_swim and can_use(Hookshot))) and (drown_seconds(7) or Fairy))",
+            "Forest Temple Outdoors Top Ledges": "can_use(Fire_Arrows)",
+            "Forest Temple Well Skulltula": "
+                can_use(Iron_Boots) and can_use(Hookshot) and (drown_seconds(4)
+                # or (Fairy and 2 bottles)
+                )"
+        }
+    },
+    {
+        "region_name": "Forest Temple Well Skulltula",
+        "dungeon": "Forest Temple",
+        "locations": {
+            "Forest Temple MQ GS Well": "True"
         }
     },
     {
@@ -73,14 +85,14 @@
         "dungeon": "Forest Temple",
         "locations": {
             "Forest Temple MQ Well Chest": "can_use(Bow)",
-            "Forest Temple MQ GS Raised Island Courtyard": "True",
-            "Forest Temple MQ GS Well": "(three_heart_drown and can_use(Iron_Boots)) or can_use(Bow)"
+            "Forest Temple MQ GS Raised Island Courtyard": "True"
         },
         "exits": {
             "Forest Temple Outdoors Top Ledges": "
                 can_use(Longshot) or can_use(Hover_Boots) or can_play(Song_of_Time) or 
                 (logic_forest_vines and can_use(Hookshot))",
-            "Forest Temple NE Outdoors Ledge": "can_use(Longshot)"
+            "Forest Temple NE Outdoors Ledge": "can_use(Longshot)",
+            "Forest Temple Well Skulltula": "can_use(Bow) or can_use(Slingshot)"
         }
     },
     {

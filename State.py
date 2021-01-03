@@ -116,10 +116,6 @@ class State(object):
 
     # Used for fall damage and other situations where damage is unavoidable
     def can_live_dmg(self, damage):
-        if damage == 'placeholder':
-            # Placeholder until OHKO/Quadruple is removed and replaced with can_live_dmg and the exact amount of damage
-            # Nothing in current logic kills you at 3 hearts double damage
-            damage = 1.5
         damage = damage * self.world.damage
         health = self.heart_count()
         return self.world.damage_multiplier != 'ohko' and (damage < health or (damage / 2 < health and self.has('Double Defense')))

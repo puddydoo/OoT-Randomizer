@@ -15,7 +15,7 @@
                     (can_use(Fire_Arrows) and three_heart_heat) or
                     (can_use(Dins_Fire) and
                         (can_use(Goron_Tunic) or
-                        (can_live_dmg('placeholder') and damage_multiplier != 'quadruple' and three_heart_heat) or
+                        (can_live_dmg(0.75) and three_heart_heat) or
                         (can_use(Bow) and three_heart_heat) or
                         (can_use(Longshot) and three_heart_heat))))"
         },
@@ -33,7 +33,7 @@
             "Fire Lower Locked Door": "
                 (Small_Key_Fire_Temple, 5) and 
                 (has_explosives or Megaton_Hammer or Progressive_Hookshot)",
-            "Fire Big Lava Room": "three_heart_heat and can_use(Megaton_Hammer)"
+            "Fire Big Lava Room": "can_use(Megaton_Hammer)"
         }
     },
     {
@@ -47,17 +47,42 @@
     {
         "region_name": "Fire Big Lava Room",
         "dungeon": "Fire Temple",
+        "events": {
+            "Fire Temple Big Lava Room Blocked Door": "
+                ((Bombs and
+                    (can_use(Hookshot) and three_heart_heat)) or
+                    (logic_fire_mq_blocked_chest and three_heart_heat)) or
+                (has_bombchus and
+                    (can_use(Hookshot) and three_heart_heat) or
+                    (logic_fire_mq_blocked_chest and three_heart_heat))",
+            "Fire Temple Big Lava Room Torches": "
+                (Bow and
+                    (can_use(Dins_Fire) and three_heart_heat) or
+                    (can_use(Fire_Arrows) and three_heart_heat)) or
+                (logic_fire_mq_bk_chest and can_use(Dins_Fire) and three_heart_heat)"
+        },
         "locations": {
-            "Fire Temple MQ Boss Key Chest": "
-                has_fire_source and (Bow or logic_fire_mq_bk_chest) and 
-                Progressive_Hookshot",
             "Fire Temple MQ Big Lava Room Blocked Door Chest": "
-                has_fire_source and Progressive_Hookshot and has_explosives",
+                'Fire Temple Big Lava Room Blocked Door' and has_fire_source and
+                ((can_use(Hookshot) and three_heart_heat) or
+                (logic_fire_mq_blocked_chest and three_heart_heat))",
             "Fire Temple MQ GS Big Lava Room Open Door": "True"
         },
         "exits": {
             "Fire Lower Maze": "
-                unknown_heart_heat and (Small_Key_Fire_Temple, 2) and has_fire_source"
+                unknown_heart_heat and (Small_Key_Fire_Temple, 2) and has_fire_source",
+            "Fire Boss Key Room": "
+                'Fire Temple Big Lava Room Torches' and
+                    ((can_use(Hookshot) and three_heart_heat) or
+                    (logic_fire_song_of_time and three_heart_heat))"
+        }
+    },
+    {
+        "region_name": "Fire Boss Key Room",
+        "dungeon": "Fire Temple",
+        "locations": {
+            "Fire Temple MQ Boss Key Chest": "can_use(Hookshot)",
+            "Fairy Pot": "has_bottle"
         }
     },
     {

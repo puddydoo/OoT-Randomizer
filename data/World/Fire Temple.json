@@ -31,13 +31,18 @@
     {
         "region_name": "Fire Temple Big Lava Room",
         "dungeon": "Fire Temple",
+        "events": {
+            "Fire Temple Big Lava Room Blocked Door": "
+                is_adult and
+                ((Bombs and three_heart_heat and (logic_fewer_tunic_requirements or can_use(Goron_Tunic))) or
+                (has_bombchus and three_heart_heat and (logic_fewer_tunic_requirements or can_use(Goron_Tunic))))"
+        },
         "locations": {
             "Fire Temple Big Lava Room Lower Open Door Chest": "
                 three_heart_heat and (logic_fewer_tunic_requirements or can_use(Goron_Tunic))",
             "Fire Temple Big Lava Room Blocked Door Chest": "
-                is_adult and
-                ((Bombs and three_heart_heat and (logic_fewer_tunic_requirements or can_use(Goron_Tunic))) or
-                (has_bombchus and three_heart_heat and (logic_fewer_tunic_requirements or can_use(Goron_Tunic))))",
+                is_adult and 'Fire Temple Big Lava Room Blocked Door' and
+                three_heart_heat and (logic_fewer_tunic_requirements or can_use(Goron_Tunic))",
             "Fire Temple GS Song of Time Room": "
                 is_adult and
                 ((can_play(Song_of_Time) and three_heart_heat and (logic_fewer_tunic_requirements or can_use(Goron_Tunic))) or

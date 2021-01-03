@@ -39,8 +39,12 @@
         "dungeon": "Ganons Castle",
         "events": {
             "Fire Trial Clear": "
-                three_heart_heat and (can_use(Goron_Tunic) or Fairy) and (can_use(Golden_Gauntlets) or can_use(Hover_Boots)) and 
-                can_use(Light_Arrows) and (can_use(Longshot) or (can_mega and can_use(Hover_Boots)))"
+                can_use(Light_Arrows) and
+                    ((Golden_Gauntlets and (
+                    Longshot and (unknown_heart_heat or (three_heart_heat and Fairy)))) or
+                    (Hover_Boots and (
+                    (Longshot and (unknown_heart_heat or (three_heart_heat and Fairy))) or
+                    (can_mega and (unknown_heart_heat or (three_heart_heat and Fairy))))))"
         }
     },
     {
