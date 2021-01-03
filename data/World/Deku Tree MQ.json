@@ -49,7 +49,7 @@
                 # Giant's Knife/BGS also can crouch but isn't in logic
                 logic_deku_mq_log or (is_child and Hylian_Shield) or
                 (has_shield and (can_use(Sticks) or can_use(Megaton_Hammer))) or
-                can_use(Longshot) or (can_use(Hookshot) and three_heart_drown and can_use(Iron_Boots))",
+                can_use(Longshot) or (can_use(Hookshot) and can_use(Iron_Boots))",
             "Deku Tree Lobby": "True"
         }
     },

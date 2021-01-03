@@ -1512,21 +1512,21 @@
                 can_use(Megaton_Hammer) and
                 ((heat_seconds('three_adult_hearts') and logic_crater_upper_to_lower) or
                 (heat_seconds('three_adult_hearts') and can_use(Hover_Boots)) or
-                (can_use(Longshot) and (can_live_dmg(1) or (Fairy and not entrance_shuffle) or can_use(Nayrus_Love)) and
+                (can_use(Longshot) and (can_live_dmg(1) or Fairy or can_use(Nayrus_Love)) and
                      (heat_seconds('unk_adult_hearts') or
                      (heat_seconds('unk_adult_hearts') and is_adult and 'DMC Bean Plant'))))",
             "DMC Fountain Boulders": "
                 can_use(Megaton_Hammer) and
                 ((heat_seconds('three_adult_hearts') and 'DMC Ledge Boulder') or
                 (heat_seconds('three_adult_hearts') and can_use(Hover_Boots)) or
-                (can_use(Longshot) and (can_live_dmg(1) or (Fairy and not entrance_shuffle) or can_use(Nayrus_Love)) and
+                (can_use(Longshot) and (can_live_dmg(1) or Fairy or can_use(Nayrus_Love)) and
                      (heat_seconds('unk_adult_hearts') or
                      (heat_seconds('unk_adult_hearts') and is_adult and 'DMC Bean Plant'))))",
             "DMC Hammer Grotto Boulder": "
                 can_use(Megaton_Hammer) and
                 ((heat_seconds('three_adult_hearts') and 'DMC Ledge Boulder') or
                 (heat_seconds('three_adult_hearts') and can_use(Hover_Boots)) or
-                (can_use(Longshot) and (can_live_dmg(1) or (Fairy and not entrance_shuffle) or can_use(Nayrus_Love)) and
+                (can_use(Longshot) and (can_live_dmg(1) or Fairy or can_use(Nayrus_Love)) and
                      (heat_seconds('unk_adult_hearts') or
                      (heat_seconds('unk_adult_hearts') and is_adult and 'DMC Bean Plant'))))",
             "DMC Bean Plant": "False",
@@ -1585,7 +1585,7 @@
                 is_adult and 'DMC Hammer Grotto Boulder' and
                 ((heat_seconds('three_adult_hearts') and 'DMC Ledge Boulder') or
                 (heat_seconds('three_adult_hearts') and can_use(Hover_Boots)) or
-                (can_use(Longshot) and (can_live_dmg(1) or (Fairy and not entrance_shuffle) or can_use(Nayrus_Love)) and
+                (can_use(Longshot) and (can_live_dmg(1) or (Fairy and not shuffle_grotto_entrances) or can_use(Nayrus_Love)) and
                      (heat_seconds('unk_adult_hearts') or
                      (heat_seconds('unk_adult_hearts') and is_adult and 'DMC Bean Plant'))))",
             "DMC Fire Temple Entrance": "
@@ -1611,21 +1611,21 @@
                 can_use(Megaton_Hammer) and
                 ((heat_seconds('three_mix_adult_hearts') and logic_crater_upper_to_lower) or
                 (heat_seconds('three_mix_adult_hearts') and can_use(Hover_Boots)) or
-                (can_use(Longshot) and (can_live_dmg(1) or (Fairy and not entrance_shuffle) or can_use(Nayrus_Love)) and
+                (can_use(Longshot) and (can_live_dmg(1) or Fairy or can_use(Nayrus_Love)) and
                      (heat_seconds('unk_mix_adult_hearts') or
                      (heat_seconds('unk_mix_adult_hearts') and is_adult and 'DMC Bean Plant'))))",
             "DMC Fountain Boulders": "
                 can_use(Megaton_Hammer) and
                 ((heat_seconds('three_mix_adult_hearts') and 'DMC Ledge Boulder') or
                 (heat_seconds('three_mix_adult_hearts') and can_use(Hover_Boots)) or
-                (can_use(Longshot) and (can_live_dmg(1) or (Fairy and not entrance_shuffle) or can_use(Nayrus_Love)) and
+                (can_use(Longshot) and (can_live_dmg(1) or Fairy or can_use(Nayrus_Love)) and
                      (heat_seconds('unk_mix_adult_hearts') or
                      (heat_seconds('unk_mix_adult_hearts') and is_adult and 'DMC Bean Plant'))))",
             "DMC Hammer Grotto Boulder": "
                 can_use(Megaton_Hammer) and
                 ((heat_seconds('three_mix_adult_hearts') and 'DMC Ledge Boulder') or
                 (heat_seconds('three_mix_adult_hearts') and can_use(Hover_Boots)) or
-                (can_use(Longshot) and (can_live_dmg(1) or (Fairy and not entrance_shuffle) or can_use(Nayrus_Love)) and
+                (can_use(Longshot) and (can_live_dmg(1) or Fairy or can_use(Nayrus_Love)) and
                      (heat_seconds('unk_mix_adult_hearts') or
                      (heat_seconds('unk_mix_adult_hearts') and is_adult and 'DMC Bean Plant'))))",
             "DMC Bean Plant": "False",
@@ -1684,7 +1684,7 @@
                 is_adult and 'DMC Hammer Grotto Boulder' and
                 ((heat_seconds('three_mix_adult_hearts') and 'DMC Ledge Boulder') or
                 (heat_seconds('three_mix_adult_hearts') and can_use(Hover_Boots)) or
-                (can_use(Longshot) and (can_live_dmg(1) or (Fairy and not entrance_shuffle) or can_use(Nayrus_Love)) and
+                (can_use(Longshot) and (can_live_dmg(1) or (Fairy and not shuffle_grotto_entrances) or can_use(Nayrus_Love)) and
                      (heat_seconds('unk_mix_adult_hearts') or
                      (heat_seconds('unk_mix_adult_hearts') and is_adult and 'DMC Bean Plant'))))",
             "DMC Fire Temple Entrance": "
@@ -1703,9 +1703,12 @@
                 (heat_seconds('unk__hearts') and Bombs) or
                 (heat_seconds('unk__hearts') and has_bombchus)",
             "DMC Upper Grotto Boulder": "
-                (heat_seconds('unk_adult_hearts') and can_use(Megaton_Hammer)) or
-                (heat_seconds('unk__hearts') and Bombs) or
-                (heat_seconds('unk__hearts') and has_bombchus)",
+                (can_use(Megaton_Hammer) and
+                    (heat_seconds('unk_adult_hearts') or (heat_seconds('three_adult_hearts') and Fairy))) or
+                (Bombs and
+                    (heat_seconds('unk__hearts') or (heat_seconds('three__hearts') and Fairy))) or
+                (has_bombchus and
+                    (heat_seconds('unk__hearts') or (heat_seconds('three__hearts') and Fairy)))",
             "DMC Ledge Boulder": "can_use(Megaton_Hammer) and heat_seconds(6)",
             "DMC Fountain Boulders": "can_use(Megaton_Hammer) and heat_seconds(6)",
             "DMC Hammer Grotto Boulder": "can_use(Megaton_Hammer) and (heat_seconds(2) or Fairy)",
@@ -1743,7 +1746,9 @@
         "exits": {
             "DMC Locations": "True",
             "DMC Summit Entrance": "heat_seconds('unk__hearts')",
-            "DMC Upper Grotto Entrance": "heat_seconds('unk__hearts') and 'DMC Upper Grotto Boulder'",
+            "DMC Upper Grotto Entrance": "
+                'DMC Upper Grotto Boulder' and (heat_seconds('unk__hearts') or
+                (heat_seconds('three__hearts') and Fairy and not shuffle_grotto_entrances))",
             "DMC Goron City Entrance": "True",
             "DMC Great Fairy Fountain Entrance": "heat_seconds(5) and is_adult and 'DMC Fountain Boulders'",
             "DMC Hammer Grotto Entrance": "is_adult and 'DMC Hammer Grotto Boulder'",

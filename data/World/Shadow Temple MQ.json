@@ -46,10 +46,10 @@
         "locations": {
             "Shadow Temple MQ Invisible Blades Visible Chest": "
                 can_play(Song_of_Time) or
-                (logic_shadow_mq_invisible_blades and can_live_dmg('placeholder'))",
+                (logic_shadow_mq_invisible_blades and can_live_dmg(0.5))",
             "Shadow Temple MQ Invisible Blades Invisible Chest": "
                 can_play(Song_of_Time) or
-                (logic_shadow_mq_invisible_blades and can_live_dmg('placeholder'))"
+                (logic_shadow_mq_invisible_blades and can_live_dmg(0.5))"
         },
         "exits": {
             "Shadow Temple Lower Huge Pit": "has_fire_source or logic_shadow_mq_huge_pit"
