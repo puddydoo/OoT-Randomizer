@@ -36,8 +36,13 @@
         "exits": {
             "Fire Temple Lower": "True",
             "Fire Temple Middle": "
-                (unknown_heart_heat or (three_heart_heat and Fairy) and (Small_Key_Fire_Temple, 4) and 
-                (has_explosives or can_use(Bow) or can_use(Hookshot))"
+                (Small_Key_Fire_Temple, 4) and
+                (((has_explosives or can_use(Bow)) and
+                    (((Progressive_Strength_Upgrade and unknown_heart_heat or (three_heart_heat and Fairy))) or
+                    (logic_fire_strength and (unknown_heart_heat or (three_heart_heat and Fairy))))) or
+                (can_use(Hookshot) and
+                    ((Progressive_Strength_Upgrade and (unknown_heart_heat or (three_heart_heat and Fairy))) or
+                    (logic_fire_strength and (unknown_heart_heat or (three_heart_heat and Fairy))))))"
         }
     },
     {
