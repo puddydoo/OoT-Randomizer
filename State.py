@@ -74,20 +74,24 @@ class State(object):
 
 
     def has_hearts(self, count):
-        # Warning: This only considers items that are marked as advancement items
         return self.heart_count() >= count
 
 
     def heart_count(self):
-        # Warning: This only considers items that are marked as advancement items
         containers = self.world.starting_hearts
         if self.world.logic_heart_containers:
             containers += self.item_count('Heart Container')
         if self.world.logic_heart_pieces:
             containers += ((self.item_count('Piece of Heart') + self.item_count('Piece of Heart (Treasure Chest Game)')) // 4)
-        # Much logic still assumes 3 hearts (the number of hearts required for all checks is not known) so make 3 hearts obtainable
-        if containers < 3:
-            containers = min(3, (self.world.starting_hearts + self.item_count('Heart Container') + ((self.item_count('Piece of Heart') + self.item_count('Piece of Heart (Treasure Chest Game)')) // 4)))
+        # Count all heart containers and heart pieces if there is a bridge/LACS requirement
+        # Also always require at least 3 hearts because the heart logic is incomplete
+        max_hearts = max(3, self.world.starting_hearts)
+        if self.world.bridge == 'hearts':
+            max_hearts = max(max_hearts, self.world.bridge_hearts)
+        if self.world.lacs_condition == 'hearts':
+            max_hearts = max(max_hearts, self.world.lacs_hearts)
+        if containers < max_hearts:
+            containers = min(max_hearts, (self.world.starting_hearts + self.item_count('Heart Container') + ((self.item_count('Piece of Heart') + self.item_count('Piece of Heart (Treasure Chest Game)')) // 4)))
         return containers
 
     def has_medallions(self, count):

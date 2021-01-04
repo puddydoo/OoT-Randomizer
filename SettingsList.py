@@ -148,23 +148,29 @@ logic_tricks = {
         'name'    : 'logic_heart_containers',
         'tags'    : ("General",),
         'tooltip' : '''\
-                    Allows logic to require Heart Containers to
-                    lengthen heat or drowning timers, or to survive
+                    Allows logic to require extra Heart Containers
+                    to lengthen heat or drowning timers, or for
                     certain maneuvers that require taking damage
                     when starting hearts are less than three or
                     the damage multiplier is set to quadruple.
-                    Normally, only starting hearts are counted.
+                    Normally, logic does not consider any Heart
+                    Containers or Pieces of Heart beyond starting
+                    hearts, or beyond the amount required if the
+                    bridge or LACS requirements are set to "Hearts".
                     '''},
     'Pieces of Heart in Logic': {
         'name'    : 'logic_heart_pieces',
         'tags'    : ("General",),
         'tooltip' : '''\
-                    Allows logic to require Pieces of Heart to
-                    lengthen heat or drowning timers, or to survive
+                    Allows logic to require extra Pieces of Heart
+                    to lengthen heat or drowning timers, or for
                     certain maneuvers that require taking damage
                     when starting hearts are less than three or
                     the damage multiplier is set to quadruple.
-                    Normally, only starting hearts are counted.
+                    Normally, logic does not consider any Heart
+                    Containers or Pieces of Heart beyond starting
+                    hearts, or beyond the amount required if the
+                    bridge or LACS requirements are set to "Hearts".
                     '''},
     'Hidden Grottos without Stone of Agony': {
         'name'    : 'logic_grottos_without_agony',
@@ -2056,15 +2062,16 @@ setting_infos = [
             'Medallions': A configurable amount of Medallions.
             'Dungeons': A configurable amount of Dungeon Rewards.
             'Gold Skulltula Tokens': A configurable amount of Gold Skulltula Tokens.
+            'Hearts': A configurable amount of hearts.
         ''',
         shared         = True,
         disable={
-            'open':       {'settings': ['bridge_medallions', 'bridge_stones', 'bridge_rewards', 'bridge_tokens']},
-            'vanilla':    {'settings': ['bridge_medallions', 'bridge_stones', 'bridge_rewards', 'bridge_tokens']},
-            'stones':     {'settings': ['bridge_medallions', 'bridge_rewards', 'bridge_tokens']},
-            'medallions': {'settings': ['bridge_stones', 'bridge_rewards', 'bridge_tokens']},
-            'dungeons':   {'settings': ['bridge_medallions', 'bridge_stones', 'bridge_tokens']},
-            'tokens':     {'settings': ['bridge_medallions', 'bridge_stones', 'bridge_rewards']},
+            'open':       {'settings': ['bridge_medallions', 'bridge_stones', 'bridge_rewards', 'bridge_tokens', 'bridge_hearts']},
+            'vanilla':    {'settings': ['bridge_medallions', 'bridge_stones', 'bridge_rewards', 'bridge_tokens', 'bridge_hearts']},
+            'stones':     {'settings': ['bridge_medallions', 'bridge_rewards', 'bridge_tokens', 'bridge_hearts']},
+            'medallions': {'settings': ['bridge_stones', 'bridge_rewards', 'bridge_tokens', 'bridge_hearts']},
+            'dungeons':   {'settings': ['bridge_medallions', 'bridge_stones', 'bridge_tokens', 'bridge_hearts']},
+            'tokens':     {'settings': ['bridge_medallions', 'bridge_stones', 'bridge_rewards', 'bridge_hearts']},
         },
         gui_params     = {
             'randomize_key': 'randomize_settings',
@@ -2144,6 +2151,21 @@ setting_infos = [
             "hide_when_disabled": True,
         },
     ),
+    Scale(
+        name           = 'bridge_hearts',
+        gui_text       = "Hearts Required for Bridge",
+        default        = 20,
+        min            = 1,
+        max            = 20,
+        gui_tooltip    = '''\
+            Select the amount of hearts required to spawn the rainbow bridge.
+        ''',
+        shared         = True,
+        disabled_default = 0,
+        gui_params     = {
+            "hide_when_disabled": True,
+        },
+    ),
     Checkbutton(
         name           = 'triforce_hunt',
         gui_text       = 'Triforce Hunt',
@@ -2159,7 +2181,7 @@ setting_infos = [
             'randomize_key': 'randomize_settings',
         },
         disable        = {
-            True  : {'settings' : ['shuffle_ganon_bosskey', 'lacs_medallions', 'lacs_stones', 'lacs_rewards', 'lacs_tokens']},
+            True  : {'settings' : ['shuffle_ganon_bosskey', 'lacs_medallions', 'lacs_stones', 'lacs_rewards', 'lacs_tokens', 'lacs_hearts']},
             False : {'settings' : ['triforce_goal_per_world']}
         },
     ),
@@ -2284,6 +2306,10 @@ setting_infos = [
             GS Tokens only count as major items if the 
             bridge or LACS requirements are set to 
             "GS Tokens".
+
+            Heart Containers and Pieces of Heart only
+            count as major items if the bridge or LACS
+            requirements are set to "Hearts".
 
             Bombchus only count as major items if they
             are considered in logic.
@@ -3150,13 +3176,14 @@ setting_infos = [
             'On LACS: Stones': A configurable amount of Spiritual Stones.
             'On LACS: Dungeons': A configurable amount of Dungeon Rewards.
             'On LACS: Tokens': A configurable amount of Gold Skulltula Tokens.
+            'On LACS: Hearts': A configurable amount of hearts.
         ''',
         shared         = True,
         disable={
-            '!lacs_stones':  {'settings': ['lacs_stones']},
-            '!lacs_medallions':  {'settings': ['lacs_medallions']},
-            '!lacs_dungeons':  {'settings': ['lacs_rewards']},
-            '!lacs_tokens':  {'settings': ['lacs_tokens']},
+            '!lacs_stones':  {'settings': ['lacs_stones', 'lacs_hearts']},
+            '!lacs_medallions':  {'settings': ['lacs_medallions', 'lacs_hearts']},
+            '!lacs_dungeons':  {'settings': ['lacs_rewards', 'lacs_hearts']},
+            '!lacs_tokens':  {'settings': ['lacs_tokens', 'lacs_hearts']},
         },
         gui_params     = {
             'randomize_key': 'randomize_settings',
@@ -3233,6 +3260,22 @@ setting_infos = [
         gui_tooltip    = '''\
             Select the amount of Gold Skulltula Tokens
             required to trigger the Light Arrow Cutscene.
+        ''',
+        shared         = True,
+        disabled_default = 0,
+        gui_params     = {
+            "hide_when_disabled": True,
+        },
+    ),
+    Scale(
+        name           = 'lacs_hearts',
+        gui_text       = "Hearts Required for LACS",
+        default        = 20,
+        min            = 1,
+        max            = 20,
+        gui_tooltip    = '''\
+            Select the amount of hearts
+            required to spawn the Light Arrow Cutscene.
         ''',
         shared         = True,
         disabled_default = 0,

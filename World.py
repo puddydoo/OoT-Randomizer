@@ -81,6 +81,8 @@ class World(object):
             self.lacs_condition = 'stones'
         elif self.shuffle_ganon_bosskey == 'lacs_tokens':
             self.lacs_condition = 'tokens'
+        elif self.shuffle_ganon_bosskey == 'lacs_hearts':
+            self.lacs_condition = 'hearts'
         else:
             self.lacs_condition = 'vanilla'
 
@@ -252,10 +254,12 @@ class World(object):
                         or (setting == 'bridge_stones' and self.bridge != 'stones') \
                         or (setting == 'bridge_rewards' and self.bridge != 'dungeons') \
                         or (setting == 'bridge_tokens' and self.bridge != 'tokens') \
+                        or (setting == 'bridge_hearts' and self.bridge != 'hearts') \
                         or (setting == 'lacs_medallions' and self.lacs_condition != 'medallions') \
                         or (setting == 'lacs_stones' and self.lacs_condition != 'stones') \
                         or (setting == 'lacs_rewards' and self.lacs_condition != 'dungeons') \
-                        or (setting == 'lacs_tokens' and self.lacs_condition != 'tokens'):
+                        or (setting == 'lacs_tokens' and self.lacs_condition != 'tokens') \
+                        or (setting == 'lacs_hearts' and self.lacs_condition != 'hearts'):
                     self.randomized_list.remove(setting)
         if self.big_poe_count_random:
             self.big_poe_count = random.randint(1, 10)

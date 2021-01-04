@@ -1208,6 +1208,7 @@ hintTable = {
     'bridge_medallions':                                        ("Medallions", None, 'bridge'),
     'bridge_dungeons':                                          ("Spiritual Stones and Medallions", None, 'bridge'),
     'bridge_tokens':                                            ("Gold Skulltula Tokens", None, 'bridge'),
+    'bridge_hearts':                                            ("hearts", None, 'bridge'),
 
     'ganonBK_dungeon':                                          ("hidden somewhere #inside its castle#", None, 'ganonBossKey'),
     'ganonBK_vanilla':                                          ("kept in a big chest #inside its tower#", None, 'ganonBossKey'),
@@ -1221,6 +1222,7 @@ hintTable = {
     'lacs_stones':                                              ("Spiritual Stones", None, 'lacs'),
     'lacs_dungeons':                                            ("Spiritual Stones and Medallions", None, 'lacs'),
     'lacs_tokens':                                              ("Gold Skulltula Tokens", None, 'lacs'),
+    'lacs_hearts':                                              ("hearts", None, 'lacs'),
 
     'Spiritual Stone Text Start':                               ("3 Spiritual Stones found in Hyrule...", None, 'altar'),
     'Child Altar Text End':                                     ("\x13\x07Ye who may become a Hero...&Stand with the Ocarina and&play the Song of Time.", None, 'altar'),

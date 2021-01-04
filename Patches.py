@@ -1046,6 +1046,9 @@ def patch_rom(spoiler:Spoiler, world:World, rom:Rom):
     elif world.bridge == 'tokens':
         rom.write_int32(symbol, 5)
         rom.write_int16(count_symbol, world.bridge_tokens)
+    # elif world.bridge == 'hearts':
+    #    rom.write_int32(symbol, 6)
+    #    rom.write_int16(count_symbol, world.bridge_hearts)
 
     if world.triforce_hunt:
         rom.write_int16(rom.sym('triforce_pieces_requied'), world.triforce_goal)
@@ -1066,6 +1069,9 @@ def patch_rom(spoiler:Spoiler, world:World, rom:Rom):
     elif world.lacs_condition == 'tokens':
         rom.write_int32(symbol, 4)
         rom.write_int16(count_symbol, world.lacs_tokens)
+    # elif world.lacs_condition == 'hearts':
+    #     rom.write_int32(symbol, 5)
+    #     rom.write_int16(count_symbol, world.lacs_hearts)
     else:
         rom.write_int32(symbol, 0)
 

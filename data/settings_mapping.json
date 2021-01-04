@@ -157,6 +157,7 @@
             "bridge_stones",
             "bridge_rewards",
             "bridge_tokens",
+            "bridge_hearts",
             "trials_random",
             "trials"
           ]
@@ -214,6 +215,7 @@
             "lacs_stones",
             "lacs_rewards",
             "lacs_tokens",
+            "lacs_hearts",
             "enhance_map_compass"
           ]
         }
@@ -336,7 +338,7 @@
             "bingosync_url",
             "text_shuffle",
             "damage_multiplier",
-			"no_collectible_hearts",
+            "no_collectible_hearts",
             "starting_tod"
           ]
         },

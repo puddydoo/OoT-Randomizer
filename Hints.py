@@ -950,6 +950,8 @@ def buildBridgeReqsString(world):
             item_req_string = str(world.bridge_rewards) + ' ' + item_req_string
         elif world.bridge == 'tokens':
             item_req_string = str(world.bridge_tokens) + ' ' + item_req_string
+        elif world.bridge == 'hearts':
+            item_req_string = str(world.bridge_hearts) + ' ' + item_req_string
         if '#' not in item_req_string:
             item_req_string = '#%s#' % item_req_string
         string += "The awakened ones will await for the Hero to collect %s." % item_req_string
@@ -971,6 +973,8 @@ def buildGanonBossKeyString(world):
                 item_req_string = str(world.lacs_rewards) + ' ' + item_req_string
             elif world.lacs_condition == 'tokens':
                 item_req_string = str(world.lacs_tokens) + ' ' + item_req_string
+            elif world.lacs_condition == 'hearts':
+                item_req_string = str(world.lacs_hearts) + ' ' + item_req_string
             if '#' not in item_req_string:
                 item_req_string = '#%s#' % item_req_string
             bk_location_string = "provided by Zelda once %s are retrieved" % item_req_string
