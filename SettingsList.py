@@ -2483,7 +2483,6 @@ setting_infos = [
             Double Defense in logic for some maneuvers
             that require taking damage.
         ''',
-        disabled_default = 3,
         shared         = True,
     ),
     Checkbutton(
