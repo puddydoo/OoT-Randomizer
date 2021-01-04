@@ -24,9 +24,13 @@
     {
         "region_name": "Fire Temple Big Lava Room",
         "dungeon": "Fire Temple",
+        "events": {
+            "Fire Temple Big Lava Room Blocked Door": "
+                (Bombs and three_heart_heat) or (has_bombchus and three_heart_heat)"
+        },
         "locations": {
             "Fire Temple Big Lava Room Lower Open Door Chest": "three_heart_heat",
-            "Fire Temple Big Lava Room Blocked Door Chest": "three_heart_heat and has_explosives",
+            "Fire Temple Big Lava Room Blocked Door Chest": "three_heart_heat and 'Fire Temple Big Lava Room Blocked Door'",
             "Fire Temple GS Song of Time Room": "three_heart_heat and is_adult"
         },
         "exits": {
