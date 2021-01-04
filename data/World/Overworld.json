@@ -1502,97 +1502,146 @@
         "hint": "Death Mountain Crater",
         "events": {
             "DMC Cracked Wall": "
-                (heat_seconds('three_hearts') and Bombs) or # Priority
-                (heat_seconds('three_hearts') and has_bombchus)", # Priority
+                (Bombs and
+                    heat_seconds('three_hearts')) or # Priority
+                (has_bombchus and
+                    heat_seconds('three_hearts'))", # Priority
             "DMC Upper Grotto Boulder": "
-                (heat_seconds('three_hearts') and can_use(Megaton_Hammer)) or
-                (heat_seconds('three_hearts') and Bombs) or # Priority
-                (heat_seconds('three_hearts') and has_bombchus)", # Priority
+                (can_use(Megaton_Hammer) and
+                    heat_seconds('three_hearts')) or
+                (Bombs and
+                    heat_seconds('three_hearts')) or # Priority
+                (has_bombchus and
+                    heat_seconds('three_hearts'))", # Priority
             "DMC Ledge Boulder": "
                 can_use(Megaton_Hammer) and
-                ((heat_seconds('three_hearts') and logic_crater_upper_to_lower) or
-                (heat_seconds('three_hearts') and can_use(Hover_Boots)) or
+                ((logic_crater_upper_to_lower and
+                    heat_seconds('three_hearts')) or
+                (can_use(Hover_Boots) and
+                    heat_seconds('three_hearts')) or
                 (can_use(Longshot) and (can_live_dmg(1) or Fairy or can_use(Nayrus_Love)) and
-                     (heat_seconds('unknown') or
-                     (heat_seconds('unknown') and is_adult and 'DMC Bean Plant'))))",
+                    (heat_seconds('unknown') or
+                    (is_adult and 'DMC Bean Plant' and
+                        heat_seconds('unknown')))))",
             "DMC Fountain Boulders": "
                 can_use(Megaton_Hammer) and
-                ((heat_seconds('three_hearts') and 'DMC Ledge Boulder') or
-                (heat_seconds('three_hearts') and can_use(Hover_Boots)) or
+                (('DMC Ledge Boulder' and
+                    heat_seconds('three_hearts')) or
+                (can_use(Hover_Boots) and
+                    heat_seconds('three_hearts')) or
                 (can_use(Longshot) and (can_live_dmg(1) or Fairy or can_use(Nayrus_Love)) and
-                     (heat_seconds('unknown') or
-                     (heat_seconds('unknown') and is_adult and 'DMC Bean Plant'))))",
+                    (heat_seconds('unknown') or
+                    (is_adult and 'DMC Bean Plant' and
+                        heat_seconds('unknown')))))",
             "DMC Hammer Grotto Boulder": "
                 can_use(Megaton_Hammer) and
-                ((heat_seconds('three_hearts') and 'DMC Ledge Boulder') or
-                (heat_seconds('three_hearts') and can_use(Hover_Boots)) or
+                (('DMC Ledge Boulder' and
+                    heat_seconds('three_hearts')) or
+                (can_use(Hover_Boots) and
+                    heat_seconds('three_hearts')) or
                 (can_use(Longshot) and (can_live_dmg(1) or Fairy or can_use(Nayrus_Love)) and
-                     (heat_seconds('unknown') or
-                     (heat_seconds('unknown') and is_adult and 'DMC Bean Plant'))))",
+                    (heat_seconds('unknown') or
+                    (is_adult and 'DMC Bean Plant' and
+                        heat_seconds('unknown')))))",
             "DMC Bean Plant": "False",
-            "DMC Wall PoH Access": "heat_seconds('three_hearts')", # Priority
+            "DMC Wall PoH Access": "
+                heat_seconds('three_hearts')", # Priority
             "DMC Crate GS Access": "
                 is_child and
-                ((heat_seconds('three_hearts') and Slingshot) or # Priority
-                (heat_seconds('three_hearts') and Boomerang) or # Priority
-                (heat_seconds('three_hearts') and (Sticks or Kokiri_Sword)) or # Priority
-                (heat_seconds('three_hearts') and Bombs) or # Priority
-                (heat_seconds('three_hearts') and has_bombchus) or # Priority
-                (heat_seconds('three_hearts') and can_use(Dins_Fire)))", # Priority
-            "DMC Gossip Stone Access": "heat_seconds('three_hearts') and 'DMC Cracked Wall'", # Priority
-            "DMC Gossip Fairy Access": "heat_seconds('three_hearts') and 'DMC Cracked Wall' and can_summon_gossip_fairy_without_suns and has_bottle", # Priority
+                ((Slingshot and
+                    heat_seconds('three_hearts')) or # Priority
+                (Boomerang and
+                    heat_seconds('three_hearts')) or # Priority
+                ((Sticks or Kokiri_Sword) and
+                    heat_seconds('three_hearts')) or # Priority
+                (Bombs and
+                    heat_seconds('three_hearts')) or # Priority
+                (has_bombchus and
+                    heat_seconds('three_hearts')) or # Priority
+                (can_use(Dins_Fire) and
+                    heat_seconds('three_hearts')))", # Priority
+            "DMC Gossip Stone Access": "
+                'DMC Cracked Wall' and
+                    heat_seconds('three_hearts')", # Priority
+            "DMC Gossip Fairy Access": "
+                'DMC Cracked Wall' and can_summon_gossip_fairy_without_suns and has_bottle and
+                    heat_seconds('three_hearts')", # Priority
             "DMC Deku Scrub Access": "is_child and
-                ((heat_seconds('three_hearts') and Slingshot) or # Priority
-                (heat_seconds('three_hearts') and Boomerang) or # Priority
-                (heat_seconds('three_hearts') and (Sticks or Kokiri_Sword)) or # Priority
-                (heat_seconds('three_hearts') and has_explosives) or # Priority
-                (heat_seconds('three_hearts') and can_use(Dins_Fire)) or # Priority
-                (heat_seconds('three_hearts') and Nuts) or # Priority
-                (heat_seconds('three_hearts') and Deku_Shield))", # Priority
+                ((Slingshot and
+                    heat_seconds('three_hearts')) or # Priority
+                (Boomerang and
+                    heat_seconds('three_hearts')) or # Priority
+                ((Sticks or Kokiri_Sword) and
+                    heat_seconds('three_hearts')) or # Priority
+                (has_explosives and
+                    heat_seconds('three_hearts')) or # Priority
+                (can_use(Dins_Fire) and
+                    heat_seconds('three_hearts')) or # Priority
+                (Nuts and
+                    heat_seconds('three_hearts')) or # Priority
+                (Deku_Shield and
+                    heat_seconds('three_hearts')))", # Priority
             "DMC Volcano PoH Access": "
-                (logic_crater_bean_poh_with_hovers and heat_seconds('unknown') and can_use(Hover_Boots)) or
-                (is_adult and heat_seconds('unknown') and Hover_Boots and 'DMC Bean Plant') or
-                (is_adult and heat_seconds('unknown') and 'DMC Ledge Boulder' and Hookshot and 'DMC Bean Plant') or
-                (is_adult and heat_seconds('unknown') and Longshot and 'DMC Bean Plant' and
-                    (can_live_dmg(1) or (Fairy and not entrance_shuffle) or can_use(Nayrus_Love)))",
+                (logic_crater_bean_poh_with_hovers and can_use(Hover_Boots and
+                    heat_seconds('unknown'))) or
+                (is_adult and Hover_Boots and 'DMC Bean Plant' and
+                    heat_seconds('unknown')) or
+                (is_adult and 'DMC Ledge Boulder' and Hookshot and 'DMC Bean Plant' and
+                    heat_seconds('unknown')) or
+                (is_adult and Longshot and 'DMC Bean Plant' and
+                    (can_live_dmg(1) or (Fairy and not entrance_shuffle) or can_use(Nayrus_Love)) and
+                        heat_seconds('unknown'))",
             "DMC Sheik Access": "
                 is_adult and
-                ((heat_seconds('unknown') and Hover_Boots) or
-                (heat_seconds('unknown') and 'DMC Ledge Boulder' and Hookshot) or
-                (heat_seconds('unknown') and Longshot and
-                    (can_live_dmg(1) or (Fairy and not entrance_shuffle) or can_use(Nayrus_Love))))",
+                ((Hover_Boots and
+                    heat_seconds('unknown')) or
+                ('DMC Ledge Boulder' and Hookshot and
+                    heat_seconds('unknown')) or
+                (Longshot and (can_live_dmg(1) or (Fairy and not entrance_shuffle) or can_use(Nayrus_Love)) and
+                    heat_seconds('unknown')))",
             "DMC Bean GS Access": "False",
             "DMC Bean Fairy Access": "False"
         },
         "exits": {
             "DMC Locations": "True",
             "DMC Summit Entrance": "True",
-            "DMC Upper Grotto Entrance": "heat_seconds(4) and 'DMC Upper Grotto Boulder'",
+            "DMC Upper Grotto Entrance": "'DMC Upper Grotto Boulder' and heat_seconds(4)",
             "DMC Goron City Entrance": "
-                (heat_seconds('three_hearts') and is_adult and 'DMC Ledge Boulder') or
-                (heat_seconds('three_hearts') and can_use(Hover_Boots)) or
+                (is_adult and 'DMC Ledge Boulder' and
+                    heat_seconds('three_hearts')) or
+                (can_use(Hover_Boots) and
+                    heat_seconds('three_hearts')) or
                 (can_use(Longshot) and (can_live_dmg(1) or (Fairy and not entrance_shuffle) or can_use(Nayrus_Love)) and
-                     (heat_seconds('unknown') or
-                     (heat_seconds('unknown') and is_adult and 'DMC Bean Plant')))",
+                    (heat_seconds('unknown') or
+                    (is_adult and 'DMC Bean Plant' and
+                        heat_seconds('unknown'))))",
             "DMC Great Fairy Fountain Entrance": "
                 is_adult and 'DMC Fountain Boulders' and
-                ((heat_seconds('three_hearts') and 'DMC Ledge Boulder') or
-                (heat_seconds('three_hearts') and can_use(Hover_Boots)) or
+                (('DMC Ledge Boulder' and
+                    heat_seconds('three_hearts')) or
+                (can_use(Hover_Boots) and
+                    heat_seconds('three_hearts')) or
                 (can_use(Longshot) and (can_live_dmg(1) or (Fairy and not entrance_shuffle) or can_use(Nayrus_Love)) and
-                     (heat_seconds('unknown') or
-                     (heat_seconds('unknown') and is_adult and 'DMC Bean Plant'))))",
+                    (heat_seconds('unknown') or
+                    (is_adult and 'DMC Bean Plant' and
+                        heat_seconds('unknown')))))",
             "DMC Hammer Grotto Entrance": "
                 is_adult and 'DMC Hammer Grotto Boulder' and
-                ((heat_seconds('three_hearts') and 'DMC Ledge Boulder') or
-                (heat_seconds('three_hearts') and can_use(Hover_Boots)) or
+                (('DMC Ledge Boulder' and
+                    heat_seconds('three_hearts')) or
+                (can_use(Hover_Boots) and
+                    heat_seconds('three_hearts')) or
                 (can_use(Longshot) and (can_live_dmg(1) or (Fairy and not shuffle_grotto_entrances) or can_use(Nayrus_Love)) and
-                     (heat_seconds('unknown') or
-                     (heat_seconds('unknown') and is_adult and 'DMC Bean Plant'))))",
+                    (heat_seconds('unknown') or
+                    (is_adult and 'DMC Bean Plant' and
+                        heat_seconds('unknown')))))",
             "DMC Fire Temple Entrance": "
-                (heat_seconds('unknown') and can_use(Hover_Boots)) or
-                (is_adult and heat_seconds('unknown') and 'DMC Ledge Boulder' and Hookshot) or
-                (heat_seconds('unknown') and can_use(Longshot) and
-                    (can_live_dmg(1) or (Fairy and not entrance_shuffle) or can_use(Nayrus_Love)))"
+                (can_use(Hover_Boots) and
+                    heat_seconds('unknown')) or
+                (is_adult and 'DMC Ledge Boulder' and Hookshot and
+                    heat_seconds('unknown')) or
+                (can_use(Longshot) and (can_live_dmg(1) or (Fairy and not entrance_shuffle) or can_use(Nayrus_Love)) and
+                    heat_seconds('unknown'))"
         }
     },
     {
@@ -1601,65 +1650,102 @@
         "hint": "Death Mountain Crater",
         "events": {
             "DMC Cracked Wall": "
-                (heat_seconds('three_hearts') and Bombs) or
-                (heat_seconds('three_hearts') and has_bombchus)",
+                (Bombs and
+                    heat_seconds('three_hearts')) or
+                (has_bombchus and
+                    heat_seconds('three_hearts'))",
             "DMC Upper Grotto Boulder": "
                 can_use(Megaton_Hammer) or
-                (heat_seconds('three_hearts') and Bombs) or
-                (heat_seconds('three_hearts') and has_bombchus)",
+                (Bombs and
+                    heat_seconds('three_hearts')) or
+                (has_bombchus and
+                    heat_seconds('three_hearts'))",
             "DMC Ledge Boulder": "
                 can_use(Megaton_Hammer) and
-                ((heat_seconds('three_hearts') and logic_crater_upper_to_lower) or
-                (heat_seconds('three_hearts') and can_use(Hover_Boots)) or
+                ((logic_crater_upper_to_lower and
+                    heat_seconds('three_hearts')) or
+                (can_use(Hover_Boots) and
+                    heat_seconds('three_hearts')) or
                 (can_use(Longshot) and (can_live_dmg(1) or Fairy or can_use(Nayrus_Love)) and
-                     (heat_seconds('unknown') or
-                     (heat_seconds('unknown') and is_adult and 'DMC Bean Plant'))))",
+                    (heat_seconds('unknown') or
+                    (is_adult and 'DMC Bean Plant' and
+                        heat_seconds('unknown')))))",
             "DMC Fountain Boulders": "
                 can_use(Megaton_Hammer) and
-                ((heat_seconds('three_hearts') and 'DMC Ledge Boulder') or
-                (heat_seconds('three_hearts') and can_use(Hover_Boots)) or
+                (('DMC Ledge Boulder' and
+                    heat_seconds('three_hearts')) or
+                (can_use(Hover_Boots) and
+                    heat_seconds('three_hearts')) or
                 (can_use(Longshot) and (can_live_dmg(1) or Fairy or can_use(Nayrus_Love)) and
-                     (heat_seconds('unknown') or
-                     (heat_seconds('unknown') and is_adult and 'DMC Bean Plant'))))",
+                    (heat_seconds('unknown') or
+                    (is_adult and 'DMC Bean Plant' and
+                        heat_seconds('unknown')))))",
             "DMC Hammer Grotto Boulder": "
                 can_use(Megaton_Hammer) and
-                ((heat_seconds('three_hearts') and 'DMC Ledge Boulder') or
-                (heat_seconds('three_hearts') and can_use(Hover_Boots)) or
+                (('DMC Ledge Boulder' and
+                    heat_seconds('three_hearts')) or
+                (can_use(Hover_Boots) and
+                    heat_seconds('three_hearts')) or
                 (can_use(Longshot) and (can_live_dmg(1) or Fairy or can_use(Nayrus_Love)) and
-                     (heat_seconds('unknown') or
-                     (heat_seconds('unknown') and is_adult and 'DMC Bean Plant'))))",
+                    (heat_seconds('unknown') or
+                    (is_adult and 'DMC Bean Plant' and
+                        heat_seconds('unknown')))))",
             "DMC Bean Plant": "False",
-            "DMC Wall PoH Access": "heat_seconds('three_hearts')",
+            "DMC Wall PoH Access": "
+                heat_seconds('three_hearts')",
             "DMC Crate GS Access": "
                 is_child and
-                ((heat_seconds('three_hearts') and Slingshot) or
-                (heat_seconds('three_hearts') and Boomerang) or
-                (heat_seconds('three_hearts') and (Sticks or Kokiri_Sword)) or
-                (heat_seconds('three_hearts') and Bombs) or
-                (heat_seconds('three_hearts') and has_bombchus) or
-                (heat_seconds('three_hearts') and can_use(Dins_Fire)))",
-            "DMC Gossip Stone Access": "heat_seconds('three_hearts') and 'DMC Cracked Wall'",
-            "DMC Gossip Fairy Access": "heat_seconds('three_hearts') and 'DMC Cracked Wall' and can_summon_gossip_fairy_without_suns and has_bottle",
+                ((Slingshot and
+                    heat_seconds('three_hearts')) or
+                (Boomerang and
+                    heat_seconds('three_hearts')) or
+                ((Sticks or Kokiri_Sword) and
+                    heat_seconds('three_hearts')) or
+                (Bombs and
+                    heat_seconds('three_hearts')) or
+                (has_bombchus) and
+                    heat_seconds('three_hearts') or
+                (can_use(Dins_Fire) and
+                    heat_seconds('three_hearts')))",
+            "DMC Gossip Stone Access": "
+                'DMC Cracked Wall' and
+                    heat_seconds('three_hearts')",
+            "DMC Gossip Fairy Access": "
+                'DMC Cracked Wall' and can_summon_gossip_fairy_without_suns and has_bottle and
+                    heat_seconds('three_hearts')",
             "DMC Deku Scrub Access": "is_child and
-                ((heat_seconds('three_hearts') and Slingshot) or
-                (heat_seconds('three_hearts') and Boomerang) or
-                (heat_seconds('three_hearts') and (Sticks or Kokiri_Sword)) or
-                (heat_seconds('three_hearts') and has_explosives) or
-                (heat_seconds('three_hearts') and can_use(Dins_Fire)) or
-                (heat_seconds('three_hearts') and Nuts) or
-                (heat_seconds('three_hearts') and Deku_Shield))",
+                ((Slingshot and
+                    heat_seconds('three_hearts')) or
+                (Boomerang and
+                    heat_seconds('three_hearts')) or
+                ((Sticks or Kokiri_Sword) and
+                    heat_seconds('three_hearts')) or
+                (has_explosives and
+                    heat_seconds('three_hearts')) or
+                (can_use(Dins_Fire) and
+                    heat_seconds('three_hearts')) or
+                (Nuts and
+                    heat_seconds('three_hearts')) or
+                (Deku_Shield and
+                    heat_seconds('three_hearts')))",
             "DMC Volcano PoH Access": "
-                (logic_crater_bean_poh_with_hovers and heat_seconds('unknown') and can_use(Hover_Boots)) or
-                (is_adult and heat_seconds('unknown') and Hover_Boots and 'DMC Bean Plant') or
-                (is_adult and heat_seconds('unknown') and 'DMC Ledge Boulder' and Hookshot and 'DMC Bean Plant') or
-                (is_adult and heat_seconds('unknown') and Longshot and 'DMC Bean Plant' and
-                    (can_live_dmg(1) or (Fairy and not entrance_shuffle) or can_use(Nayrus_Love)))",
+                (logic_crater_bean_poh_with_hovers and can_use(Hover_Boots) and
+                    heat_seconds('unknown')) or
+                (is_adult and Hover_Boots and 'DMC Bean Plant' and
+                    heat_seconds('unknown')) or
+                (is_adult and 'DMC Ledge Boulder' and Hookshot and 'DMC Bean Plant' and
+                    heat_seconds('unknown')) or
+                (is_adult and Longshot and 'DMC Bean Plant' and
+                    (can_live_dmg(1) or (Fairy and not entrance_shuffle) or can_use(Nayrus_Love)) and
+                        heat_seconds('unknown'))",
             "DMC Sheik Access": "
                 is_adult and
-                ((heat_seconds('unknown') and Hover_Boots) or
-                (heat_seconds('unknown') and 'DMC Ledge Boulder' and Hookshot) or
-                (heat_seconds('unknown') and Longshot and
-                    (can_live_dmg(1) or (Fairy and not entrance_shuffle) or can_use(Nayrus_Love))))",
+                ((Hover_Boots and
+                    heat_seconds('unknown')) or
+                ('DMC Ledge Boulder' and Hookshot and
+                    heat_seconds('unknown')) or
+                (Longshot and (can_live_dmg(1) or (Fairy and not entrance_shuffle) or can_use(Nayrus_Love)) and
+                    heat_seconds('unknown')))",
             "DMC Bean GS Access": "False",
             "DMC Bean Fairy Access": "False"
         },
@@ -1668,30 +1754,41 @@
             "DMC Summit Entrance": "heat_seconds(6)",
             "DMC Upper Grotto Entrance": "'DMC Upper Grotto Boulder'",
             "DMC Goron City Entrance": "
-                (heat_seconds('three_hearts') and is_adult and 'DMC Ledge Boulder') or
-                (heat_seconds('three_hearts') and can_use(Hover_Boots)) or
+                (is_adult and 'DMC Ledge Boulder' and
+                    heat_seconds('three_hearts')) or
+                (can_use(Hover_Boots) and
+                    heat_seconds('three_hearts')) or
                 (can_use(Longshot) and (can_live_dmg(1) or (Fairy and not entrance_shuffle) or can_use(Nayrus_Love)) and
-                     (heat_seconds('unknown') or
-                     (heat_seconds('unknown') and is_adult and 'DMC Bean Plant')))",
+                    (heat_seconds('unknown') or
+                    (is_adult and 'DMC Bean Plant' and
+                        heat_seconds('unknown'))))",
             "DMC Great Fairy Fountain Entrance": "
                 is_adult and 'DMC Fountain Boulders' and
-                ((heat_seconds('three_hearts') and 'DMC Ledge Boulder') or
-                (heat_seconds('three_hearts') and can_use(Hover_Boots)) or
+                (('DMC Ledge Boulder' and
+                    heat_seconds('three_hearts')) or
+                (can_use(Hover_Boots) and
+                    heat_seconds('three_hearts')) or
                 (can_use(Longshot) and (can_live_dmg(1) or (Fairy and not entrance_shuffle) or can_use(Nayrus_Love)) and
-                     (heat_seconds('unknown') or
-                     (heat_seconds('unknown') and is_adult and 'DMC Bean Plant'))))",
+                    (heat_seconds('unknown') or
+                    (is_adult and 'DMC Bean Plant' and
+                        heat_seconds('unknown')))))",
             "DMC Hammer Grotto Entrance": "
                 is_adult and 'DMC Hammer Grotto Boulder' and
-                ((heat_seconds('three_hearts') and 'DMC Ledge Boulder') or
-                (heat_seconds('three_hearts') and can_use(Hover_Boots)) or
+                (('DMC Ledge Boulder' and
+                    heat_seconds('three_hearts')) or
+                (can_use(Hover_Boots) and
+                    heat_seconds('three_hearts')) or
                 (can_use(Longshot) and (can_live_dmg(1) or (Fairy and not shuffle_grotto_entrances) or can_use(Nayrus_Love)) and
-                     (heat_seconds('unknown') or
-                     (heat_seconds('unknown') and is_adult and 'DMC Bean Plant'))))",
+                    (heat_seconds('unknown') or
+                    (is_adult and 'DMC Bean Plant' and
+                        heat_seconds('unknown')))))",
             "DMC Fire Temple Entrance": "
-                (heat_seconds('unknown') and can_use(Hover_Boots)) or
-                (is_adult and heat_seconds('unknown') and 'DMC Ledge Boulder' and Hookshot) or
-                (heat_seconds('unknown') and can_use(Longshot) and
-                    (can_live_dmg(1) or (Fairy and not entrance_shuffle) or can_use(Nayrus_Love)))"
+                (can_use(Hover_Boots) and
+                    heat_seconds('unknown')) or
+                (is_adult and 'DMC Ledge Boulder' and Hookshot and
+                    heat_seconds('unknown')) or
+                (can_use(Longshot) and (can_live_dmg(1) or (Fairy and not entrance_shuffle) or can_use(Nayrus_Love)) and
+                    heat_seconds('unknown'))"
         }
     },
     {
@@ -1700,8 +1797,10 @@
         "hint": "Death Mountain Crater",
         "events": {
             "DMC Cracked Wall": "
-                (heat_seconds('unknown') and Bombs) or # Priority
-                (heat_seconds('unknown') and has_bombchus)", # Priority
+                (Bombs and
+                    heat_seconds('unknown')) or # Priority
+                (has_bombchus and
+                    heat_seconds('unknown'))", # Priority
             "DMC Upper Grotto Boulder": "
                 (can_use(Megaton_Hammer) and
                     (heat_seconds('unknown') or (heat_seconds('three_hearts') and Fairy))) or
@@ -1713,48 +1812,75 @@
             "DMC Fountain Boulders": "can_use(Megaton_Hammer) and heat_seconds(6)",
             "DMC Hammer Grotto Boulder": "can_use(Megaton_Hammer) and (heat_seconds(2) or Fairy)",
             "DMC Bean Plant": "False",
-            "DMC Wall PoH Access": "heat_seconds('unknown')", # Priority
+            "DMC Wall PoH Access": "
+                heat_seconds('unknown')", # Priority
             "DMC Crate GS Access": "
                 is_child and
-                ((heat_seconds('unknown') and Slingshot) or # Priority
-                (heat_seconds('unknown') and Boomerang) or # Priority
-                (heat_seconds('unknown') and (Sticks or Kokiri_Sword)) or # Priority
-                (heat_seconds('unknown') and Bombs) or # Priority
-                (heat_seconds('unknown') and has_bombchus) or # Priority
-                (heat_seconds('unknown') and can_use(Dins_Fire)))", # Priority
-            "DMC Gossip Stone Access": "heat_seconds('unknown') and 'DMC Cracked Wall'", # Priority
-            "DMC Gossip Fairy Access": "heat_seconds('unknown') and 'DMC Cracked Wall' and can_summon_gossip_fairy_without_suns and has_bottle", # Priority
+                ((Slingshot and
+                    heat_seconds('unknown')) or # Priority
+                (Boomerang and
+                    heat_seconds('unknown')) or # Priority
+                ((Sticks or Kokiri_Sword) and
+                    heat_seconds('unknown')) or # Priority
+                (Bombs and
+                    heat_seconds('unknown')) or # Priority
+                (has_bombchus and
+                    heat_seconds('unknown')) or # Priority
+                (can_use(Dins_Fire) and
+                    heat_seconds('unknown')))", # Priority
+            "DMC Gossip Stone Access": "
+                'DMC Cracked Wall' and
+                    heat_seconds('unknown')", # Priority
+            "DMC Gossip Fairy Access": "
+                'DMC Cracked Wall' and can_summon_gossip_fairy_without_suns and has_bottle and
+                    heat_seconds('unknown')", # Priority
             "DMC Deku Scrub Access": "is_child and
-                ((heat_seconds('three_hearts') and Slingshot) or # Priority
-                (heat_seconds('three_hearts') and Boomerang) or # Priority
-                (heat_seconds('three_hearts') and (Sticks or Kokiri_Sword)) or # Priority
-                (heat_seconds('three_hearts') and has_explosives) or # Priority
-                (heat_seconds('three_hearts') and can_use(Dins_Fire)) or # Priority
-                (heat_seconds('three_hearts') and Nuts) or # Priority
-                (heat_seconds('three_hearts') and Deku_Shield))", # Priority
+                ((Slingshot and
+                    heat_seconds('three_hearts')) or # Priority
+                (Boomerang and
+                    heat_seconds('three_hearts')) or # Priority
+                ((Sticks or Kokiri_Sword) and
+                    heat_seconds('three_hearts')) or # Priority
+                (has_explosives and
+                    heat_seconds('three_hearts')) or # Priority
+                (can_use(Dins_Fire) and
+                    heat_seconds('three_hearts')) or # Priority
+                (Nuts and
+                    heat_seconds('three_hearts')) or # Priority
+                (Deku_Shield and
+                    heat_seconds('three_hearts')))", # Priority
             "DMC Volcano PoH Access": "
-                (logic_crater_bean_poh_with_hovers and heat_seconds('three_hearts') and can_use(Hover_Boots)) or
-                (heat_seconds('three_hearts') and is_adult and Hover_Boots and 'DMC Bean Plant') or
-                (heat_seconds('three_hearts') and is_adult and Hookshot and 'DMC Bean Plant')",
+                (logic_crater_bean_poh_with_hovers and can_use(Hover_Boots) and
+                    heat_seconds('three_hearts')) or
+                (is_adult and Hover_Boots and 'DMC Bean Plant' and
+                    heat_seconds('three_hearts')) or
+                (is_adult and Hookshot and 'DMC Bean Plant' and
+                    heat_seconds('three_hearts'))",
             "DMC Sheik Access": "
                 is_adult and
-                ((heat_seconds('three_hearts') and Hover_Boots) or
-                (heat_seconds('three_hearts') and Hookshot))",
+                (Hover_Boots and
+                    (heat_seconds('three_hearts')) or
+                (Hookshot and
+                    heat_seconds('three_hearts')))",
             "DMC Bean GS Access": "False",
             "DMC Bean Fairy Access": "False"
         },
         "exits": {
             "DMC Locations": "True",
-            "DMC Summit Entrance": "heat_seconds('unknown')", # Priority
+            "DMC Summit Entrance": "
+                heat_seconds('unknown')", # Priority
             "DMC Upper Grotto Entrance": "
-                'DMC Upper Grotto Boulder' and (heat_seconds('unknown') or # Priority
+                'DMC Upper Grotto Boulder' and
+                    (heat_seconds('unknown') or # Priority
                 (heat_seconds('three_hearts') and Fairy and not shuffle_grotto_entrances))", # Priority
             "DMC Goron City Entrance": "True",
-            "DMC Great Fairy Fountain Entrance": "heat_seconds(5) and is_adult and 'DMC Fountain Boulders'",
+            "DMC Great Fairy Fountain Entrance": "is_adult and 'DMC Fountain Boulders' and heat_seconds(5)",
             "DMC Hammer Grotto Entrance": "is_adult and 'DMC Hammer Grotto Boulder'",
             "DMC Fire Temple Entrance": "
-                (heat_seconds('three_hearts') and can_use(Hover_Boots) and (logic_fewer_tunic_requirements or can_use(Goron_Tunic))) or
-                (heat_seconds('three_hearts') and can_use(Hookshot) and (logic_fewer_tunic_requirements or can_use(Goron_Tunic)))"
+                (can_use(Hover_Boots) and (Goron_Tunic or (logic_fewer_tunic_requirements and
+                    heat_seconds('three_hearts')))) or
+                (can_use(Hookshot) and (Goron_Tunic or (logic_fewer_tunic_requirements and
+                    heat_seconds('three_hearts'))))"
         }
     },
     {
@@ -1763,56 +1889,88 @@
         "hint": "Death Mountain Crater",
         "events": {
             "DMC Cracked Wall": "
-                (heat_seconds('unknown') and Bombs) or # Priority
-                (heat_seconds('unknown') and has_bombchus)", # Priority
+                (Bombs and
+                    heat_seconds('unknown')) or # Priority
+                (has_bombchus and
+                    heat_seconds('unknown'))", # Priority
             "DMC Upper Grotto Boulder": "
-                (heat_seconds('three_hearts') and can_use(Megaton_Hammer)) or
-                (heat_seconds('three_hearts') and Bombs) or # Priority
-                (heat_seconds('three_hearts') and has_bombchus)", # Priority
+                (can_use(Megaton_Hammer) and
+                    heat_seconds('three_hearts')) or
+                (Bombs and
+                    heat_seconds('three_hearts')) or # Priority
+                (has_bombchus and
+                    heat_seconds('three_hearts'))", # Priority
             "DMC Ledge Boulder": "can_use(Megaton_Hammer)",
             "DMC Fountain Boulders": "can_use(Megaton_Hammer)",
-            "DMC Hammer Grotto Boulder": "heat_seconds(7) and can_use(Megaton_Hammer)",
+            "DMC Hammer Grotto Boulder": "can_use(Megaton_Hammer) and heat_seconds(7)",
             "DMC Bean Plant": "False",
-            "DMC Wall PoH Access": "heat_seconds('unknown')", # Priority
+            "DMC Wall PoH Access": "
+                heat_seconds('unknown')", # Priority
             "DMC Crate GS Access": "
                 is_child and
-                ((heat_seconds('unknown') and Slingshot) or # Priority
-                (heat_seconds('unknown') and Boomerang) or # Priority
-                (heat_seconds('unknown') and (Sticks or Kokiri_Sword)) or # Priority
-                (heat_seconds('unknown') and Bombs) or # Priority
-                (heat_seconds('unknown') and has_bombchus) or # Priority
-                (heat_seconds('unknown') and can_use(Dins_Fire)))", # Priority
-            "DMC Gossip Stone Access": "heat_seconds('unknown') and 'DMC Cracked Wall'", # Priority
-            "DMC Gossip Fairy Access": "heat_seconds('unknown') and 'DMC Cracked Wall' and can_summon_gossip_fairy_without_suns and has_bottle", # Priority
+                ((Slingshot and
+                    heat_seconds('unknown')) or # Priority
+                (Boomerang and
+                    heat_seconds('unknown')) or # Priority
+                ((Sticks or Kokiri_Sword) and
+                    heat_seconds('unknown')) or # Priority
+                (Bombs and
+                    heat_seconds('unknown')) or # Priority
+                (has_bombchus and
+                    heat_seconds('unknown')) or # Priority
+                (can_use(Dins_Fire) and
+                    heat_seconds('unknown')))", # Priority
+            "DMC Gossip Stone Access": "
+                'DMC Cracked Wall' and
+                    heat_seconds('unknown')", # Priority
+            "DMC Gossip Fairy Access": "
+                'DMC Cracked Wall' and can_summon_gossip_fairy_without_suns and has_bottle and
+                    heat_seconds('unknown')", # Priority
             "DMC Deku Scrub Access": "is_child and
-                ((heat_seconds('three_hearts') and Slingshot) or # Priority
-                (heat_seconds('three_hearts') and Boomerang) or # Priority
-                (heat_seconds('three_hearts') and (Sticks or Kokiri_Sword)) or # Priority
-                (heat_seconds('three_hearts') and has_explosives) or # Priority
-                (heat_seconds('three_hearts') and can_use(Dins_Fire)) or # Priority
-                (heat_seconds('three_hearts') and Nuts) or # Priority
-                (heat_seconds('three_hearts') and Deku_Shield))", # Priority
+                ((Slingshot and
+                    heat_seconds('three_hearts')) or # Priority
+                (Boomerang and
+                    heat_seconds('three_hearts')) or # Priority
+                ((Sticks or Kokiri_Sword) and
+                    heat_seconds('three_hearts')) or # Priority
+                (has_explosives and
+                    heat_seconds('three_hearts')) or # Priority
+                (can_use(Dins_Fire) and
+                    heat_seconds('three_hearts')) or # Priority
+                (Nuts and
+                    heat_seconds('three_hearts')) or # Priority
+                (Deku_Shield and
+                    heat_seconds('three_hearts')))", # Priority
             "DMC Volcano PoH Access": "
-                (logic_crater_bean_poh_with_hovers and heat_seconds('three_hearts') and can_use(Hover_Boots)) or
-                (heat_seconds('three_hearts') and is_adult and Hover_Boots and 'DMC Bean Plant') or
-                (heat_seconds('three_hearts') and is_adult and Hookshot and 'DMC Bean Plant')",
+                (logic_crater_bean_poh_with_hovers and can_use(Hover_Boots) and
+                    heat_seconds('three_hearts')) or
+                (is_adult and Hover_Boots and 'DMC Bean Plant' and
+                    heat_seconds('three_hearts')) or
+                (is_adult and Hookshot and 'DMC Bean Plant' and
+                    heat_seconds('three_hearts'))",
             "DMC Sheik Access": "
                 is_adult and
-                ((heat_seconds(8) and Hover_Boots) or
-                (heat_seconds('three_hearts') and Hookshot))",
+                ((Hover_Boots and heat_seconds(8)) or
+                (Hookshot and
+                    heat_seconds('three_hearts')))",
             "DMC Bean GS Access": "False",
             "DMC Bean Fairy Access": "False"
         },
         "exits": {
             "DMC Locations": "True",
-            "DMC Summit Entrance": "heat_seconds('unknown')", # Priority
-            "DMC Upper Grotto Entrance": "heat_seconds('three_hearts') and 'DMC Upper Grotto Boulder'", # Priority
+            "DMC Summit Entrance": "
+                heat_seconds('unknown')", # Priority
+            "DMC Upper Grotto Entrance": "
+                'DMC Upper Grotto Boulder' and
+                    heat_seconds('three_hearts')", # Priority
             "DMC Goron City Entrance": "heat_seconds(5)",
             "DMC Great Fairy Fountain Entrance": "is_adult and 'DMC Fountain Boulders'",
-            "DMC Hammer Grotto Entrance": "heat_seconds(7) and is_adult and 'DMC Hammer Grotto Boulder'",
+            "DMC Hammer Grotto Entrance": "is_adult and 'DMC Hammer Grotto Boulder' and heat_seconds(7)",
             "DMC Fire Temple Entrance": "
-                (heat_seconds('three_hearts') and can_use(Hover_Boots) and (logic_fewer_tunic_requirements or can_use(Goron_Tunic))) or
-                (heat_seconds('three_hearts') and can_use(Hookshot) and (logic_fewer_tunic_requirements or can_use(Goron_Tunic)))"
+                (can_use(Hover_Boots) and (Goron_Tunic or (logic_fewer_tunic_requirements and
+                    heat_seconds('three_hearts')))) or
+                (can_use(Hookshot) and (Goron_Tunic or (logic_fewer_tunic_requirements and
+                    heat_seconds('three_hearts'))))"
         }
     },
     {
@@ -1821,56 +1979,93 @@
         "hint": "Death Mountain Crater",
         "events": {
             "DMC Cracked Wall": "
-                (heat_seconds('unknown') and Bombs) or
-                (heat_seconds('unknown') and has_bombchus)",
+                (Bombs and
+                    heat_seconds('unknown')) or
+                (has_bombchus and
+                    heat_seconds('unknown'))",
             "DMC Upper Grotto Boulder": "
-                (heat_seconds('unknown') and can_use(Megaton_Hammer)) or
-                (heat_seconds('unknown') and Bombs) or
-                (heat_seconds('unknown') and has_bombchus)",
-            "DMC Ledge Boulder": "heat_seconds('three_hearts') and can_use(Megaton_Hammer)",
-            "DMC Fountain Boulders": "heat_seconds('three_hearts') and can_use(Megaton_Hammer)",
+                (can_use(Megaton_Hammer) and
+                    heat_seconds('unknown')) or
+                (Bombs and
+                    heat_seconds('unknown')) or
+                (has_bombchus and
+                    heat_seconds('unknown'))",
+            "DMC Ledge Boulder": "
+                can_use(Megaton_Hammer) and
+                    heat_seconds('three_hearts')",
+            "DMC Fountain Boulders": "
+                can_use(Megaton_Hammer) and
+                    heat_seconds('three_hearts')",
             "DMC Hammer Grotto Boulder": "can_use(Megaton_Hammer)",
             "DMC Bean Plant": "False",
-            "DMC Wall PoH Access": "heat_seconds('unknown')",
+            "DMC Wall PoH Access": "
+                heat_seconds('unknown')",
             "DMC Crate GS Access": "
                 is_child and
-                ((heat_seconds('unknown') and Slingshot) or
-                (heat_seconds('unknown') and Boomerang) or
-                (heat_seconds('unknown') and (Sticks or Kokiri_Sword)) or
-                (heat_seconds('unknown') and Bombs) or
-                (heat_seconds('unknown') and has_bombchus) or
-                (heat_seconds('unknown') and can_use(Dins_Fire)))",
-            "DMC Gossip Stone Access": "heat_seconds('unknown') and 'DMC Cracked Wall'",
-            "DMC Gossip Fairy Access": "heat_seconds('unknown') and 'DMC Cracked Wall' and can_summon_gossip_fairy_without_suns and has_bottle",
+                ((Slingshot and
+                    heat_seconds('unknown')) or
+                (Boomerang and
+                    heat_seconds('unknown')) or
+                ((Sticks or Kokiri_Sword) and
+                    heat_seconds('unknown')) or
+                (Bombs and
+                    heat_seconds('unknown')) or
+                (has_bombchus and
+                    heat_seconds('unknown')) or
+                (can_use(Dins_Fire) and
+                    heat_seconds('unknown')))",
+            "DMC Gossip Stone Access": "
+                'DMC Cracked Wall' and
+                    heat_seconds('unknown')",
+            "DMC Gossip Fairy Access": "
+                'DMC Cracked Wall' and can_summon_gossip_fairy_without_suns and has_bottle and
+                    heat_seconds('unknown')",
             "DMC Deku Scrub Access": "is_child and
-                ((heat_seconds('three_hearts') and Slingshot) or
-                (heat_seconds('three_hearts') and Boomerang) or
-                (heat_seconds('three_hearts') and (Sticks or Kokiri_Sword)) or
-                (heat_seconds('three_hearts') and has_explosives) or
-                (heat_seconds('three_hearts') and can_use(Dins_Fire)) or
-                (heat_seconds('three_hearts') and Nuts) or
-                (heat_seconds('three_hearts') and Deku_Shield))",
+                ((Slingshot and
+                    heat_seconds('three_hearts')) or
+                (Boomerang and
+                    heat_seconds('three_hearts')) or
+                ((Sticks or Kokiri_Sword) and
+                    heat_seconds('three_hearts')) or
+                (has_explosives and
+                    heat_seconds('three_hearts')) or
+                (can_use(Dins_Fire) and
+                    heat_seconds('three_hearts')) or
+                (Nuts and
+                    heat_seconds('three_hearts')) or
+                (Deku_Shield and
+                    heat_seconds('three_hearts')))",
             "DMC Volcano PoH Access": "
-                (logic_crater_bean_poh_with_hovers and heat_seconds('three_hearts') and can_use(Hover_Boots)) or
-                (heat_seconds('three_hearts') and is_adult and Hover_Boots and 'DMC Bean Plant') or
-                (heat_seconds('three_hearts') and is_adult and Hookshot and 'DMC Bean Plant')",
+                (logic_crater_bean_poh_with_hovers and can_use(Hover_Boots) and
+                    heat_seconds('three_hearts')) or
+                (is_adult and Hover_Boots and 'DMC Bean Plant' and
+                    heat_seconds('three_hearts')) or
+                (is_adult and Hookshot and 'DMC Bean Plant' and
+                    heat_seconds('three_hearts'))",
             "DMC Sheik Access": "
                 is_adult and
-                ((heat_seconds('three_hearts') and can_use(Hover_Boots)) or
-                (heat_seconds('three_hearts') and can_use(Hookshot)))",
+                ((can_use(Hover_Boots) and
+                    heat_seconds('three_hearts')) or
+                (can_use(Hookshot) and
+                    heat_seconds('three_hearts')))",
             "DMC Bean GS Access": "False",
             "DMC Bean Fairy Access": "False"
         },
         "exits": {
             "DMC Locations": "True",
-            "DMC Summit Entrance": "heat_seconds('unknown')",
-            "DMC Upper Grotto Entrance": "heat_seconds('unknown') and 'DMC Upper Grotto Boulder'",
+            "DMC Summit Entrance": "
+                heat_seconds('unknown')",
+            "DMC Upper Grotto Entrance": "
+                'DMC Upper Grotto Boulder' and
+                    heat_seconds('unknown')",
             "DMC Goron City Entrance": "heat_seconds(2)",
-            "DMC Great Fairy Fountain Entrance": "heat_seconds(8) and is_adult and 'DMC Fountain Boulders'",
+            "DMC Great Fairy Fountain Entrance": "is_adult and 'DMC Fountain Boulders' and heat_seconds(8)",
             "DMC Hammer Grotto Entrance": "is_adult and 'DMC Hammer Grotto Boulder'",
             "DMC Fire Temple Entrance": "
-                (heat_seconds('three_hearts') and can_use(Hover_Boots) and (logic_fewer_tunic_requirements or can_use(Goron_Tunic))) or
-                (heat_seconds('three_hearts') and can_use(Hookshot) and (logic_fewer_tunic_requirements or can_use(Goron_Tunic)))"
+                (can_use(Hover_Boots) and (Goron_Tunic or (logic_fewer_tunic_requirements and
+                    heat_seconds('three_hearts')))) or
+                (can_use(Hookshot) and (Goron_Tunic or (logic_fewer_tunic_requirements and
+                    heat_seconds('three_hearts'))))"
         }
     },
     {
@@ -1880,99 +2075,149 @@
         "events": {
             "DMC Cracked Wall": "
                 (can_use(Hover_Boots) and
-                    ((heat_seconds('unknown') and Bombs) or
-                    (heat_seconds('unknown') and has_bombchus))) or
+                    ((Bombs and
+                        heat_seconds('unknown')) or
+                    (has_bombchus and
+                        heat_seconds('unknown')))) or
                 (can_use(Hookshot) and
-                    ((heat_seconds('unknown') and Bombs) or
-                    (heat_seconds('unknown') and has_bombchus))) or
+                    ((Bombs and
+                        heat_seconds('unknown')) or
+                    (has_bombchus and
+                        heat_seconds('unknown')))) or
                 (is_adult and 'DMC Bean Plant' and
-                    ((heat_seconds('unknown') and Bombs) or
-                    (heat_seconds('unknown') and has_bombchus)))",
+                    ((Bombs and
+                        heat_seconds('unknown')) or
+                    (has_bombchus and
+                        heat_seconds('unknown'))))",
             "DMC Upper Grotto Boulder": "
                 (can_use(Hover_Boots) and
-                    ((heat_seconds('unknown') and Megaton_Hammer) or
-                    (heat_seconds('unknown') and Bombs) or
-                    (heat_seconds('unknown') and has_bombchus))) or
+                    ((Megaton_Hammer and
+                        heat_seconds('unknown')) or
+                    (Bombs and
+                        heat_seconds('unknown')) or
+                    (has_bombchus and
+                        heat_seconds('unknown')))) or
                 (can_use(Hookshot) and
-                    ((heat_seconds('unknown') and Megaton_Hammer) or
-                    (heat_seconds('unknown') and Bombs) or
-                    (heat_seconds('unknown') and has_bombchus))) or
+                    ((Megaton_Hammer and
+                        heat_seconds('unknown')) or
+                    (Bombs and
+                        heat_seconds('unknown')) or
+                    (has_bombchus and
+                        heat_seconds('unknown')))) or
                 (is_adult and 'DMC Bean Plant' and
-                    ((heat_seconds('unknown') and Megaton_Hammer) or
-                    (heat_seconds('unknown') and Bombs) or
-                    (heat_seconds('unknown') and has_bombchus)))",
+                    ((Megaton_Hammer and
+                        heat_seconds('unknown')) or
+                    (Bombs and
+                        heat_seconds('unknown')) or
+                    (has_bombchus and
+                        heat_seconds('unknown'))))",
             "DMC Ledge Boulder": "
                 can_use(Megaton_Hammer) and
-                ((heat_seconds('unknown') and can_use(Hover_Boots)) or
-                (heat_seconds('unknown') and can_use(Hookshot)) or
-                (heat_seconds('unknown') and is_adult and 'DMC Bean Plant'))",
+                ((can_use(Hover_Boots) and
+                    heat_seconds('unknown')) or
+                (can_use(Hookshot) and
+                    heat_seconds('unknown')) or
+                (is_adult and 'DMC Bean Plant' and
+                    heat_seconds('unknown')))",
             "DMC Fountain Boulders": "
                 can_use(Megaton_Hammer) and
-                ((heat_seconds('unknown') and can_use(Hover_Boots)) or
-                (heat_seconds('unknown') and can_use(Hookshot)) or
-                (heat_seconds('unknown') and is_adult and 'DMC Bean Plant'))",
+                ((can_use(Hover_Boots) and
+                    heat_seconds('unknown')) or
+                (can_use(Hookshot) and
+                    heat_seconds('unknown')) or
+                (is_adult and 'DMC Bean Plant' and
+                    heat_seconds('unknown')))",
             "DMC Hammer Grotto Boulder": "
                 can_use(Megaton_Hammer) and
-                ((heat_seconds('unknown') and can_use(Hover_Boots)) or
-                (heat_seconds('unknown') and can_use(Hookshot)) or
-                (heat_seconds('unknown') and is_adult and 'DMC Bean Plant'))",
+                ((can_use(Hover_Boots) and
+                    heat_seconds('unknown')) or
+                (can_use(Hookshot) and
+                    heat_seconds('unknown')) or
+                (is_adult and 'DMC Bean Plant' and
+                    heat_seconds('unknown')))",
             "DMC Bean Plant": "can_plant_bean and (heat_seconds(29) or (heat_seconds(18) and Fairy))",
             "DMC Wall PoH Access": "
-                (heat_seconds('unknown') and can_use(Hover_Boots)) or
-                (heat_seconds('unknown') and can_use(Hookshot)) or
-                (heat_seconds('unknown') and is_adult and 'DMC Bean Plant')",
+                (can_use(Hover_Boots) and
+                    heat_seconds('unknown')) or
+                (can_use(Hookshot) and
+                    heat_seconds('unknown')) or
+                (is_adult and 'DMC Bean Plant' and
+                    heat_seconds('unknown'))",
             "DMC Crate GS Access": "False",
             "DMC Gossip Stone Access": "
                 'DMC Cracked Wall' and
-                ((heat_seconds('unknown') and can_use(Hover_Boots)) or
-                (heat_seconds('unknown') and can_use(Hookshot)) or
-                (heat_seconds('unknown') and is_adult and 'DMC Bean Plant'))",
+                ((can_use(Hover_Boots) and
+                    heat_seconds('unknown')) or
+                (can_use(Hookshot) and
+                    heat_seconds('unknown')) or
+                (is_adult and 'DMC Bean Plant' and
+                    heat_seconds('unknown')))",
             "DMC Gossip Fairy Access": "
                 'DMC Cracked Wall' and can_summon_gossip_fairy_without_suns and has_bottle and
-                ((heat_seconds('unknown') and can_use(Hover_Boots)) or
-                (heat_seconds('unknown') and can_use(Hookshot)) or
-                (heat_seconds('unknown') and is_adult and 'DMC Bean Plant'))",
+                ((can_use(Hover_Boots) and
+                    heat_seconds('unknown')) or
+                (can_use(Hookshot) and
+                    heat_seconds('unknown')) or
+                (is_adult and 'DMC Bean Plant' and
+                    heat_seconds('unknown')))",
             "DMC Deku Scrub Access": "False",
             "DMC Volcano PoH Access": "
                 is_adult and
                 ('DMC Bean Plant' and (heat_seconds(33) or (heat_seconds(18) and Fairy))) or
-                (heat_seconds('unknown') and logic_crater_bean_poh_with_hovers and Hover_Boots)",
+                (logic_crater_bean_poh_with_hovers and Hover_Boots and
+                    heat_seconds('unknown'))",
             "DMC Sheik Access": "is_adult and (heat_seconds(29) or (heat_seconds(18) and Fairy))",
             "DMC Bean GS Access": "
                 can_plant_bugs and
-                ((heat_seconds('unknown') and Slingshot) or
-                (heat_seconds('unknown') and Boomerang) or
-                (heat_seconds('unknown') and (Sticks or Kokiri_Sword)) or
-                (heat_seconds('unknown') and Bombs) or
-                (heat_seconds('unknown') and has_bombchus) or
-                (heat_seconds('unknown') and can_use(Dins_Fire)))",
+                ((Slingshot and
+                    heat_seconds('unknown')) or
+                (Boomerang and
+                    heat_seconds('unknown')) or
+                ((Sticks or Kokiri_Sword) and
+                    heat_seconds('unknown')) or
+                (Bombs and
+                    heat_seconds('unknown')) or
+                (has_bombchus and
+                    heat_seconds('unknown')) or
+                (can_use(Dins_Fire) and
+                    heat_seconds('unknown')))",
             "DMC Bean Fairy Access": "is_child and 'DMC Bean Plant' and can_play(Song_of_Storms) and has_bottle and heat_seconds(30)"
         },
         "exits": {
             "DMC Locations": "True",
             "DMC Summit Entrance": "
-                (heat_seconds('unknown') and can_use(Hover_Boots)) or
-                (heat_seconds('unknown') and can_use(Hookshot)) or
-                (heat_seconds(44) and is_adult and 'DMC Bean Plant')",
+                (can_use(Hover_Boots) and
+                    heat_seconds('unknown')) or
+                (can_use(Hookshot) and
+                    heat_seconds('unknown')) or
+                (is_adult and 'DMC Bean Plant' and heat_seconds(44))",
             "DMC Upper Grotto Entrance": "
                 'DMC Upper Grotto Boulder' and
-                ((heat_seconds('unknown') and can_use(Hover_Boots)) or
-                (heat_seconds('unknown') and can_use(Hookshot)) or
-                (heat_seconds(41) and is_adult and 'DMC Bean Plant'))",
+                ((can_use(Hover_Boots) and
+                    heat_seconds('unknown')) or
+                (can_use(Hookshot) and
+                    heat_seconds('unknown')) or
+                (is_adult and 'DMC Bean Plant' and heat_seconds(41)))",
             "DMC Goron City Entrance": "
-                (heat_seconds('unknown') and can_use(Hover_Boots)) or
-                (heat_seconds('unknown') and can_use(Hookshot)) or
-                (heat_seconds(41) and is_adult and 'DMC Bean Plant')",
+                (can_use(Hover_Boots) and
+                    heat_seconds('unknown')) or
+                (can_use(Hookshot) and
+                    heat_seconds('unknown')) or
+                (is_adult and 'DMC Bean Plant' and heat_seconds(41))",
             "DMC Great Fairy Fountain Entrance": "
                 is_adult and 'DMC Fountain Boulders' and
-                ((heat_seconds('unknown') and Hover_Boots) or
-                (heat_seconds('unknown') and Hookshot) or
-                (heat_seconds(38) and 'DMC Bean Plant'))",
+                ((Hover_Boots and
+                    heat_seconds('unknown')) or
+                (Hookshot and
+                    heat_seconds('unknown')) or
+                ('DMC Bean Plant' and heat_seconds(38)))",
             "DMC Hammer Grotto Entrance": "
                 is_adult and 'DMC Hammer Grotto Boulder' and
-                ((heat_seconds('unknown') and Hover_Boots) or
-                (heat_seconds('unknown') and Hookshot) or
-                (heat_seconds(44) and 'DMC Bean Plant'))",
+                ((Hover_Boots and
+                    heat_seconds('unknown')) or
+                (Hookshot and
+                    heat_seconds('unknown')) or
+                ('DMC Bean Plant' and heat_seconds(44)))",
             "DMC Fire Temple Entrance": "True"
         }
     },
@@ -1983,99 +2228,148 @@
         "events": {
             "DMC Cracked Wall": "
                 (can_use(Hover_Boots) and
-                    ((heat_seconds('unknown') and Bombs) or
-                    (heat_seconds('unknown') and has_bombchus))) or
+                    ((Bombs and
+                        heat_seconds('unknown')) or
+                    (has_bombchus and
+                        heat_seconds('unknown')))) or
                 (can_use(Hookshot) and
-                    ((heat_seconds('unknown') and Bombs) or
-                    (heat_seconds('unknown') and has_bombchus))) or
+                    ((Bombs and
+                        heat_seconds('unknown')) or
+                    (has_bombchus and
+                        heat_seconds('unknown')))) or
                 (is_adult and 'DMC Bean Plant' and
-                    ((heat_seconds('unknown') and Bombs) or
-                    (heat_seconds('unknown') and has_bombchus)))",
+                    ((Bombs and
+                        heat_seconds('unknown')) or
+                    (has_bombchus and
+                        heat_seconds('unknown'))))",
             "DMC Upper Grotto Boulder": "
                 (can_use(Hover_Boots) and
-                    ((heat_seconds('unknown') and Megaton_Hammer) or
-                    (heat_seconds('unknown') and Bombs) or
-                    (heat_seconds('unknown') and has_bombchus))) or
+                    ((Megaton_Hammer and
+                        heat_seconds('unknown')) or
+                    (Bombs and
+                        heat_seconds('unknown')) or
+                    (has_bombchus and
+                        heat_seconds('unknown')))) or
                 (can_use(Hookshot) and
-                    ((heat_seconds('unknown') and Megaton_Hammer) or
-                    (heat_seconds('unknown') and Bombs) or
-                    (heat_seconds('unknown') and has_bombchus))) or
+                    ((Megaton_Hammer and
+                        heat_seconds('unknown')) or
+                    (Bombs and
+                        heat_seconds('unknown')) or
+                    (has_bombchus and
+                        heat_seconds('unknown')))) or
                 (is_adult and 'DMC Bean Plant' and
-                    ((heat_seconds('three_hearts') and Megaton_Hammer) or
-                    (heat_seconds('three_hearts') and Bombs) or
-                    (heat_seconds('three_hearts') and has_bombchus)))",
+                    ((Megaton_Hammer and
+                        heat_seconds('three_hearts')) or
+                    (Bombs and
+                        heat_seconds('three_hearts')) or
+                    (has_bombchus and
+                        heat_seconds('three_hearts'))))",
             "DMC Ledge Boulder": "
                 can_use(Megaton_Hammer) and
-                ((heat_seconds('three_hearts') and can_use(Hover_Boots)) or
-                (heat_seconds('three_hearts') and can_use(Hookshot)) or
-                (heat_seconds('three_hearts') and is_adult and 'DMC Bean Plant'))",
+                ((can_use(Hover_Boots) and
+                    heat_seconds('three_hearts')) or
+                (can_use(Hookshot) and
+                    heat_seconds('three_hearts')) or
+                (is_adult and 'DMC Bean Plant' and
+                    heat_seconds('three_hearts')))",
             "DMC Fountain Boulders": "
                 can_use(Megaton_Hammer) and
-                ((heat_seconds('three_hearts') and can_use(Hover_Boots)) or
-                (heat_seconds('three_hearts') and can_use(Hookshot)) or
-                (heat_seconds('three_hearts') and is_adult and 'DMC Bean Plant'))",
+                ((can_use(Hover_Boots) and
+                    heat_seconds('three_hearts')) or
+                (can_use(Hookshot) and
+                    heat_seconds('three_hearts')) or
+                (is_adult and 'DMC Bean Plant' and
+                    heat_seconds('three_hearts')))",
             "DMC Hammer Grotto Boulder": "
                 can_use(Megaton_Hammer) and
-                ((heat_seconds('three_hearts') and can_use(Hover_Boots)) or
-                (heat_seconds('three_hearts') and can_use(Hookshot)) or
-                (heat_seconds('three_hearts') and is_adult and 'DMC Bean Plant'))",
+                ((can_use(Hover_Boots) and
+                    heat_seconds('three_hearts')) or
+                (can_use(Hookshot) and
+                    heat_seconds('three_hearts')) or
+                (is_adult and 'DMC Bean Plant' and
+                    heat_seconds('three_hearts')))",
             "DMC Bean Plant": "can_plant_bean",
             "DMC Wall PoH Access": "
-                (heat_seconds('unknown') and can_use(Hover_Boots)) or
-                (heat_seconds('unknown') and can_use(Hookshot)) or
+                (can_use(Hover_Boots) and
+                    heat_seconds('unknown')) or
+                (can_use(Hookshot) and
+                    heat_seconds('unknown')) or
                 (is_adult and 'DMC Bean Plant' and (heat_seconds(12) or (heat_seconds(6) and Fairy)))",
             "DMC Crate GS Access": "False",
             "DMC Gossip Stone Access": "
                 'DMC Cracked Wall' and
-                ((heat_seconds('unknown') and can_use(Hover_Boots)) or
-                (heat_seconds('unknown') and can_use(Hookshot)) or
-                (heat_seconds('unknown') and is_adult and 'DMC Bean Plant'))",
+                ((can_use(Hover_Boots) and
+                    heat_seconds('unknown')) or
+                (can_use(Hookshot) and
+                    heat_seconds('unknown')) or
+                (is_adult and 'DMC Bean Plant' and
+                    heat_seconds('unknown')))",
             "DMC Gossip Fairy Access": "
                 'DMC Cracked Wall' and can_summon_gossip_fairy_without_suns and has_bottle and
-                ((heat_seconds('unknown') and can_use(Hover_Boots)) or
-                (heat_seconds('unknown') and can_use(Hookshot)) or
-                (heat_seconds('unknown') and is_adult and 'DMC Bean Plant'))",
+                ((can_use(Hover_Boots) and
+                    heat_seconds('unknown')) or
+                (can_use(Hookshot) and
+                    heat_seconds('unknown')) or
+                (is_adult and 'DMC Bean Plant' and
+                    heat_seconds('unknown')))",
             "DMC Deku Scrub Access": "False",
             "DMC Volcano PoH Access": "
                 is_adult and
                 ('DMC Bean Plant' and heat_seconds(6)) or
-                (heat_seconds('unknown') and logic_crater_bean_poh_with_hovers and Hover_Boots)",
+                (logic_crater_bean_poh_with_hovers and Hover_Boots and
+                    heat_seconds('unknown'))",
             "DMC Sheik Access": "is_adult and (heat_seconds(3) or Fairy)",
             "DMC Bean GS Access": "
                 can_plant_bugs and
-                ((heat_seconds('three_hearts') and Slingshot) or # Priority
-                (heat_seconds('three_hearts') and Boomerang) or # Priority
-                (heat_seconds('three_hearts') and (Sticks or Kokiri_Sword)) or # Priority
-                (heat_seconds('three_hearts') and Bombs) or # Priority
-                (heat_seconds('three_hearts') and has_bombchus) or # Priority
-                (heat_seconds('three_hearts') and can_use(Dins_Fire)))", # Priority
+                ((Slingshot and
+                    heat_seconds('three_hearts')) or # Priority
+                (Boomerang and
+                    heat_seconds('three_hearts')) or # Priority
+                ((Sticks or Kokiri_Sword) and
+                    heat_seconds('three_hearts')) or # Priority
+                (Bombs and
+                    heat_seconds('three_hearts')) or # Priority
+                (has_bombchus and
+                    heat_seconds('three_hearts')) or # Priority
+                (can_use(Dins_Fire) and
+                    heat_seconds('three_hearts')))", # Priority
             "DMC Bean Fairy Access": "is_child and 'DMC Bean Plant' and can_play(Song_of_Storms) and has_bottle"
         },
         "exits": {
             "DMC Locations": "True",
             "DMC Summit Entrance": "
-                (heat_seconds('unknown') and can_use(Hover_Boots)) or
-                (heat_seconds('unknown') and can_use(Hookshot)) or
-                (heat_seconds(17) and is_adult and 'DMC Bean Plant')",
+                (can_use(Hover_Boots) and
+                    heat_seconds('unknown')) or
+                (can_use(Hookshot) and
+                    heat_seconds('unknown')) or
+                (is_adult and 'DMC Bean Plant' and heat_seconds(17))",
             "DMC Upper Grotto Entrance": "
                 'DMC Upper Grotto Boulder' and
-                ((heat_seconds('unknown') and can_use(Hover_Boots)) or
-                (heat_seconds('unknown') and can_use(Hookshot)) or
-                (heat_seconds(14) and is_adult and 'DMC Bean Plant'))",
+                ((can_use(Hover_Boots) and
+                    heat_seconds('unknown')) or
+                (can_use(Hookshot) and
+                    heat_seconds('unknown')) or
+                (is_adult and 'DMC Bean Plant' and heat_seconds(14)))",
             "DMC Goron City Entrance": "
-                (heat_seconds('three_hearts') and can_use(Hover_Boots)) or
-                (heat_seconds('three_hearts') and can_use(Hookshot)) or
-                (heat_seconds(14) and is_adult and 'DMC Bean Plant')",
+                (can_use(Hover_Boots) and
+                    heat_seconds('three_hearts')) or
+                (can_use(Hookshot) and
+                    heat_seconds('three_hearts')) or
+                (is_adult and 'DMC Bean Plant' and heat_seconds(14))",
             "DMC Great Fairy Fountain Entrance": "
                 is_adult and 'DMC Fountain Boulders' and
-                ((heat_seconds('three_hearts') and Hover_Boots) or
-                (heat_seconds('three_hearts') and Hookshot) or
-                (heat_seconds(11) and 'DMC Bean Plant'))",
+                ((Hover_Boots and
+                    heat_seconds('three_hearts')) or
+                (Hookshot and
+                    heat_seconds('three_hearts')) or
+                ('DMC Bean Plant' and heat_seconds(11)))",
             "DMC Hammer Grotto Entrance": "
                 is_adult and 'DMC Hammer Grotto Boulder' and
-                ((heat_seconds('three_hearts') and Hover_Boots) or
-                (heat_seconds('three_hearts') and Hookshot) or
-                (heat_seconds(17) and 'DMC Bean Plant'))",
+                ((Hover_Boots and
+                    heat_seconds('three_hearts')) or
+                (Hookshot and
+                    heat_seconds('three_hearts')) or
+                ('DMC Bean Plant' and heat_seconds(17)))",
             "DMC Fire Temple Entrance": "
                 heat_seconds(13) and
                 ((is_child and shuffle_dungeon_entrances) or
