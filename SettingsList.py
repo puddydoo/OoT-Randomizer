@@ -2474,6 +2474,14 @@ setting_infos = [
             Start the game with the selected number of hearts.
             Heart Containers and Pieces of Heart are removed
             from the item pool in equal proportion.
+
+            Heat and drowning timers last 8 seconds for
+            each heart. At 0 hearts, they last 1 second.
+
+            Starting with fewer than 3 hearts will add
+            Heart Containers to the pool, and may put
+            Double Defense in logic for some maneuvers
+            that require taking damage.
         ''',
         disabled_default = 1,
         shared         = True,
@@ -3653,7 +3661,7 @@ setting_infos = [
         },
         gui_tooltip    = '''\
             Changes the amount of damage taken.
-            
+
             'Quadruple': Under this setting,
             Double Defense can possibly be
             required for certain maneuvers.
