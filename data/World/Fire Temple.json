@@ -14,8 +14,7 @@
                 ((Small_Key_Fire_Temple, 8) or not keysanity) and can_use(Megaton_Hammer)",
             "Fairy Pot": "
                 has_bottle and
-                ((can_use(Hover_Boots) and (Goron_Tunic or (logic_fewer_tunic_requirements and
-                    (three_heart_heat)))) or
+                ((can_use(Hover_Boots) and (Goron_Tunic or (logic_fewer_tunic_requirements and heat_seconds(14)))) or
                 (can_use(Hookshot) and (Goron_Tunic or (logic_fewer_tunic_requirements and
                     (three_heart_heat)))))"
         },

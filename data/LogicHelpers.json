@@ -41,6 +41,8 @@
     "three_heart_drown": "has_hearts(3) or can_use(Zora_Tunic)",
     # Placeholder for timers that may require an unknown amount of hearts above 3
     "unknown_heart_heat": "can_use(Goron_Tunic)",
+    # Placeholder for multiple bottle requirements
+    "has_bottles(number)": "False",
 
     "has_bombchus": "(Buy_Bombchu_5 or Buy_Bombchu_10 or Buy_Bombchu_20 or Bombchu_Drop) and (bombchus_in_logic or Bomb_Bag)",
     "found_bombchus": "(bombchus_in_logic and (Bombchus or Bombchus_5 or Bombchus_10 or Bombchus_20)) or (not bombchus_in_logic and Bomb_Bag)",
