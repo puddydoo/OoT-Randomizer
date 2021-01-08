@@ -870,6 +870,23 @@ logic_tricks = {
                     in the same jump in order to destroy it before you
                     fall into the lava.
                     '''},
+    'Death Mountain Crater Cliff Route without Goron Tunic': {
+        'name'    : 'logic_crater_cliff_tunic',
+        'tags'    : ("Death Mountain Crater",),
+        'tooltip' : '''\
+                    It is possible to get from the upper area to the
+                    warp pad area by jumping off the cliff near the
+                    gossip stone to land on a platform with rupees
+                    and then using Longshot on a wooden bridge, but
+                    this route is difficult without a Goron Tunic.
+                    At 2 hearts and below, you are expected to run
+                    out the timer in the middle of your jump before
+                    landing on the platform so that the timer will
+                    be reset when one of your fairies revives you.
+                    At 1 heart, the timer will run out once before
+                    you get to the cliff, but you can refill that
+                    first fairy from the gossip stone.
+                    '''},
     'Zora\'s Domain Entry with Hover Boots': {
         'name'    : 'logic_zora_with_hovers',
         'tags'    : ("Zora's River",),
