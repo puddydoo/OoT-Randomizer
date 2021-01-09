@@ -530,7 +530,7 @@
             "GV Upper Stream": "True",
             "GV Crate Ledge": "
                 logic_valley_crate_hovers and can_use(Hover_Boots) and
-                (can_live_dmg(0.5) or Fairy or can_use(Nayrus_Love))",
+                (can_live_with_nayrus(0.5) or Fairy)",
             "Gerudo Valley": "
                 is_child or can_ride_epona or can_use(Longshot) or
                 gerudo_fortress == 'open' or 'Carpenter Rescue'",
@@ -986,7 +986,7 @@
             "Kak GS Watchtower": "
                 is_child and (Slingshot or has_bombchus or 
                     (logic_kakariko_tower_gs and (Sticks or Kokiri_Sword) and
-                    (can_live_dmg(0.5) or Fairy or can_use(Nayrus_Love)))) and at_night",
+                    (can_live_with_nayrus(0.5) or Fairy))) and at_night",
             "Bug Rock": "has_bottle"
         },
         "exits": {
@@ -1010,7 +1010,7 @@
                 (logic_man_on_roof and 
                     (is_adult or at_day or Slingshot or has_bombchus or 
                         (logic_kakariko_tower_gs and (Sticks or Kokiri_Sword) and
-                            (can_live_dmg(0.5) or Fairy or can_use(Nayrus_Love)))))",
+                            (can_live_with_nayrus(0.5) or Fairy))))",
             "Kak Backyard": "is_adult or at_day",
             "Graveyard": "True",
             "Kak Behind Gate": "is_adult or 'Kakariko Village Gate Open'"
@@ -1307,7 +1307,7 @@
                 can_blast_or_smash or 
                 (logic_dmt_bombable and is_child and Progressive_Strength_Upgrade)",
             "DMT Freestanding PoH": "
-                (can_live_dmg(0.5) or can_use(Nayrus_Love) or Fairy or can_use(Hover_Boots)) or
+                (can_live_with_nayrus(0.5) or Fairy or can_use(Hover_Boots)) or
                 (is_adult and here(can_plant_bean and (has_explosives or Progressive_Strength_Upgrade)))",
             "DMT GS Bean Patch": "
                 can_plant_bugs and can_child_attack and
@@ -1427,8 +1427,8 @@
             "GC Grotto Platform": "
                 is_adult and
                 ((can_play(Song_of_Time) and
-                        (can_live_dmg(0.75) or (not shuffle_grotto_entrances and Fairy and (can_live_dmg(0.25) or has_bottles(4))) or
-                        can_use(Goron_Tunic) or can_use(Longshot) or can_use(Nayrus_Love))) or
+                        (can_live_with_nayrus(0.75) or (not shuffle_grotto_entrances and Fairy and (can_live_dmg(0.25) or has_bottles(4))) or
+                        can_use(Goron_Tunic) or can_use(Longshot))) or
                     (can_use(Hookshot) and # Fairies don't seem to work here
                         ((can_use(Goron_Tunic) and can_live_dmg(0.25)) or can_use(Nayrus_Love) or
                             # The timing is difficult
@@ -1469,8 +1469,8 @@
         "exits": {
             "GC Grotto": "True",
             "Goron City": "
-                can_live_dmg(0.75) or (not entrance_shuffle and Fairy and (can_live_dmg(0.5) or
-                    (can_live_dmg(0.25) and has_bottles(2)) or has_bottles(4))) or can_use(Goron_Tunic) or can_use(Nayrus_Love) or 
+                can_live_with_nayrus(0.75) or (not entrance_shuffle and Fairy and (can_live_dmg(0.5) or
+                    (can_live_dmg(0.25) and has_bottles(2)) or has_bottles(4))) or can_use(Goron_Tunic) or
                 (can_play(Song_of_Time) and (can_use(Longshot) or
                 (not entrance_shuffle and Fairy and (can_live_dmg(0.25) or has_bottles(3)))))"
         }
@@ -1498,106 +1498,88 @@
         "hint": "Death Mountain Crater",
         "events": {
             "DMC Upper Grotto Boulder": "
-                ((can_use(Megaton_Hammer) or has_bombchus) and (can_use(Goron_Tunic) or has_hearts(1) or (Fairy and has_bottles(2)))) or
-                (Bombs and (can_use(Goron_Tunic) or has_hearts(1) or (Fairy and has_bottles(3))))",
+                ((can_use(Megaton_Hammer) or has_bombchus) and (has_hearts(1) or (Fairy and has_bottles(2)))) or
+                (Bombs and (has_hearts(1) or (Fairy and has_bottles(3))))",
             "DMC Ledge Boulder": "
-                can_use(Megaton_Hammer) and ((logic_crater_upper_to_lower and (Goron_Tunic or has_hearts(1))) or
-                (can_use(Hover_Boots) and (Goron_Tunic or has_hearts(2) or (has_hearts(1) and Fairy))) or
-                (can_use(Longshot) and (can_live_dmg(1) or Fairy or can_use(Nayrus_Love)) and (Goron_Tunic or
-                    (logic_crater_cliff_tunic and has_hearts(5) and (has_hearts(6) or (is_adult and 'DMC Bean Plant'))))) or
-                (logic_crater_cliff_tunic and can_use(Longshot) and Fairy and has_hearts(1) and
-                ((has_hearts(3) and (can_live_dmg(1) or can_use(Nayrus_Love))) or (has_bottles(2) and (has_hearts(2) or
-                (has_bottles(3) and (has_bottles(4) or 'DMC Gossip Fairy Access')))))))",
+                can_use(Megaton_Hammer) and has_hearts(1) and
+                (logic_crater_upper_to_lower or (Hover_Boots and (has_hearts(2) or Fairy)) or
+                (logic_crater_cliff_tunic and Longshot and ((can_live_with_nayrus(1) or Fairy) and has_hearts(5) and
+                    (has_hearts(6) or 'DMC Bean Plant')) or
+                    (Fairy and ((has_hearts(3) and can_live_with_nayrus(1)) or (has_bottles(2) and (has_hearts(2) or
+                    (has_bottles(3) and (has_bottles(4) or 'DMC Gossip Fairy Access'))))))))",
             "DMC Hammer Grotto Boulder": "
-                can_use(Megaton_Hammer) and
-                ((('DMC Ledge Boulder' or Hover_Boots) and (Goron_Tunic or has_hearts(2) or (has_hearts(1) and Fairy))) or
-                (can_use(Hover_Boots) and (Goron_Tunic or has_hearts(2) or (has_hearts(1) and Fairy))) or
-                (can_use(Longshot) and (can_live_dmg(1) or Fairy or can_use(Nayrus_Love)) and
-                    (Goron_Tunic or (logic_crater_cliff_tunic and has_hearts(5)))) or
-                (logic_crater_cliff_tunic and can_use(Longshot) and Fairy and has_hearts(1) and
-                ((has_hearts(3) and (can_live_dmg(1) or can_use(Nayrus_Love))) or
-                (has_bottles(2) and (has_hearts(2) or ('DMC Bean Plant' and has_bottles(4) and 'DMC Gossip Fairy Access'))))))",
+                can_use(Megaton_Hammer) and has_hearts(1) and
+                ((('DMC Ledge Boulder' or Hover_Boots) and (has_hearts(2) or Fairy)) or
+                (logic_crater_cliff_tunic and Longshot and ((can_live_with_nayrus(1) or Fairy) and has_hearts(5)) or
+                    (Fairy and ((has_hearts(3) and can_live_with_nayrus(1)) or (has_bottles(2) and (has_hearts(2) or
+                    ('DMC Bean Plant' and has_bottles(4) and 'DMC Gossip Fairy Access')))))))",
             "DMC Fountain Boulders": "
-                can_use(Megaton_Hammer) and
-                ((('DMC Ledge Boulder' or Hover_Boots) and (Goron_Tunic or has_hearts(2) or (has_hearts(1) and Fairy))) or
-                (can_use(Longshot) and (can_live_dmg(1) or Fairy or can_use(Nayrus_Love)) and (Goron_Tunic or
-                    (logic_crater_cliff_tunic and has_hearts(5) and (has_hearts(6) or (is_adult and 'DMC Bean Plant'))))) or
-                (logic_crater_cliff_tunic and can_use(Longshot) and Fairy and has_hearts(1) and
-                ((has_hearts(3) and (can_live_dmg(1) or can_use(Nayrus_Love))) or (has_bottles(2) and (has_hearts(2) or
-                (has_bottles(3) and (has_bottles(4) or 'DMC Gossip Fairy Access')))))))",
+                can_use(Megaton_Hammer) and has_hearts(1) and
+                ((('DMC Ledge Boulder' or Hover_Boots) and (has_hearts(2) or Fairy)) or
+                (logic_crater_cliff_tunic and Longshot and ((can_live_with_nayrus(1) or Fairy) and has_hearts(5) and
+                    (has_hearts(6) or 'DMC Bean Plant')) or
+                    (Fairy and ((has_hearts(3) and can_live_with_nayrus(1)) or (has_bottles(2) and (has_hearts(2) or
+                    (has_bottles(3) and (has_bottles(4) or 'DMC Gossip Fairy Access'))))))))",
             "DMC Bean Plant": "False",
-            "DMC Wall PoH Access": "can_use(Goron_Tunic) or has_hearts(2) or (has_hearts(1) and Fairy)",
+            "DMC Wall PoH Access": "has_hearts(1) and (has_hearts(2) or Fairy)",
             "DMC Crate GS Access": "
                 is_child and (((Slingshot or Boomerang) and has_hearts(1)) or
                 ((Sticks or has_bombchus) and (has_hearts(1) or Fairy)) or
                 (Kokiri_Sword and (has_hearts(1) or (Fairy and (can_use(Nayrus_Love) or has_bottles(2))))) or
                 (Bombs and (has_hearts(1) or (Fairy and has_bottles(2)))) or can_use(Dins_Fire))",
-            "DMC Gossip Stone Access": "has_explosives and (can_use(Goron_Tunic) or has_hearts(2))",
+            "DMC Gossip Stone Access": "has_explosives and has_hearts(2)",
             "DMC Deku Scrub Access": "
-                is_child and
+                is_child and (can_use(Dins_Fire) and (has_hearts(1) or (Fairy and has_bottles(3)))) or
                 (((Slingshot or Boomerang or Sticks or Kokiri_Sword or has_explosives or Deku_Shield) and has_hearts(1))) or
-                (can_use(Dins_Fire) and (has_hearts(1) or (Fairy and has_bottles(3)))) or
                 (Nuts and (has_hearts(1) or (Fairy and has_bottles(2) and (can_use(Nayrus_Love) or has_bottles(3)))))",
             "DMC Volcano PoH Access": "
-                (logic_crater_bean_poh_with_hovers and can_use(Hover_Boots) and
-                    (Goron_Tunic or unknown_heart_heat or (Fairy and has_hearts(1) and (has_hearts(2) or has_bottles(2))))) or
-                (is_adult and Hover_Boots and 'DMC Bean Plant' and
-                    (Goron_Tunic or unknown_heart_heat or (Fairy and has_hearts(1) and (has_hearts(2) or has_bottles(3))))) or
-                (is_adult and 'DMC Ledge Boulder' and Hookshot and 'DMC Bean Plant' and
-                    (Goron_Tunic or unknown_heart_heat or (Fairy and three_heart_heat))) or
-                (is_adult and Longshot and 'DMC Bean Plant' and
-                    (can_live_dmg(1) or Fairy or can_use(Nayrus_Love)) and (Goron_Tunic or
-                    (logic_crater_cliff_tunic and has_hearts(4)))) or
-                (logic_crater_cliff_tunic and is_adult and Longshot and Fairy and 'DMC Bean Plant' and has_hearts(1) and
-                    ((has_hearts(3) and (can_live_dmg(1) or can_use(Nayrus_Love))) or
-                    (has_bottles(2) and (has_hearts(2) or has_bottles(4) or
-                    (has_bottles(3) and 'DMC Gossip Fairy Access')))))",
+                is_adult and has_hearts(1) and ((logic_crater_bean_poh_with_hovers and Hover_Boots and
+                    (has_hearts(3) or (Fairy and (has_hearts(2) or has_bottles(2))))) or
+                ('DMC Bean Plant' and (Hover_Boots or ('DMC Ledge Boulder' and Hookshot)) and
+                    (has_hearts(4) or (Fairy and (has_hearts(2) or has_bottles(3))))) or
+                (logic_crater_cliff_tunic and Longshot and 'DMC Bean Plant' and ((can_live_with_nayrus(1) or Fairy) and has_hearts(4)) or
+                    (Fairy and ((has_hearts(3) and can_live_with_nayrus(1)) or
+                    (has_bottles(2) and (has_hearts(2) or has_bottles(4) or (has_bottles(3) and 'DMC Gossip Fairy Access')))))))",
             "DMC Sheik Access": "
-                is_adult and ((Hover_Boots and (Goron_Tunic or has_hearts(3) or (has_hearts(1) and Fairy))) or
-                ('DMC Ledge Boulder' and Hookshot and
-                    (Goron_Tunic or has_hearts(3) or (Fairy and has_hearts(1) and (has_hearts(2) or has_bottles(2))))) or
-                (Longshot and (can_live_dmg(1) or Fairy or can_use(Nayrus_Love)) and
-                    (Goron_Tunic or (logic_crater_cliff_tunic and has_hearts(4)))) or
-                (logic_crater_cliff_tunic and Longshot and Fairy and has_hearts(1) and (has_hearts(2) or has_bottles(3) or
-                    (has_bottles(2) and 'DMC Gossip Fairy Access'))))",
+                is_adult and has_hearts(1) and ((Hover_Boots and (has_hearts(3) or Fairy)) or
+                ('DMC Ledge Boulder' and Hookshot and (has_hearts(3) or (Fairy and (has_hearts(2) or has_bottles(2))))) or
+                (logic_crater_cliff_tunic and Longshot and ((can_live_with_nayrus(1) and has_hearts(4)) or
+                    (Fairy and (has_hearts(2) or has_bottles(3) or (has_bottles(2) and 'DMC Gossip Fairy Access'))))))",
             "DMC Bean GS Access": "False",
             "DMC Bean Fairy Access": "False"
         },
         "exits": {
             "DMC Locations": "True",
+            "DMC Upper With Tunic": "can_use(Goron_Tunic)",
             "DMC Summit Entrance": "True",
-            "DMC Upper Grotto Entrance": "'DMC Upper Grotto Boulder' and (can_use(Goron_Tunic) or has_hearts(1))",
+            "DMC Upper Grotto Entrance": "'DMC Upper Grotto Boulder' and has_hearts(1)",
             "DMC Goron City Entrance": "
-                (is_adult and 'DMC Ledge Boulder' and
-                    (Goron_Tunic or three_heart_heat)) or
-                (can_use(Hover_Boots) and
-                    (Goron_Tunic or three_heart_heat)) or
-                (can_use(Longshot) and (can_live_dmg(1) or can_use(Nayrus_Love)) and
-                    (Goron_Tunic or (logic_crater_cliff_tunic and has_hearts(5))))",
+                is_adult and has_hearts(2) and ('DMC Ledge Boulder' or Hover_Boots or
+                (logic_crater_cliff_tunic and Longshot and can_live_with_nayrus(1) and has_hearts(5)))",
             "DMC Hammer Grotto Entrance": "
-                is_adult and 'DMC Hammer Grotto Boulder' and
-                (('DMC Ledge Boulder' and
-                    (Goron_Tunic or three_heart_heat)) or
-                (can_use(Hover_Boots) and
-                    (Goron_Tunic or three_heart_heat)) or
-                (can_use(Longshot) and (can_live_dmg(1) or can_use(Nayrus_Love)) and (Goron_Tunic or
-                (logic_crater_cliff_tunic and has_hearts(5)))))",
+                is_adult and 'DMC Hammer Grotto Boulder' and has_hearts(2) and ('DMC Ledge Boulder' or Hover_Boots or
+                (logic_crater_cliff_tunic and Longshot and can_live_with_nayrus(1) and has_hearts(5)))",
             "DMC Great Fairy Fountain Entrance": "
-                is_adult and 'DMC Fountain Boulders' and
-                (('DMC Ledge Boulder' and
-                    (Goron_Tunic or three_heart_heat)) or
-                (can_use(Hover_Boots) and
-                    (Goron_Tunic or three_heart_heat)) or
-                (can_use(Longshot) and (can_live_dmg(1) or can_use(Nayrus_Love)) and (Goron_Tunic or
-                (logic_crater_cliff_tunic and has_hearts(5) and (has_hearts(6) or (is_adult and 'DMC Bean Plant'))))))",
+                is_adult and 'DMC Fountain Boulders' and has_hearts(1) and
+                ('DMC Ledge Boulder' or (Hover_Boots and has_hearts(2)) or
+                (logic_crater_cliff_tunic and Longshot and can_live_with_nayrus(1) and has_hearts(5) and
+                    (has_hearts(6) or (is_adult and 'DMC Bean Plant'))))",
             "DMC Fire Temple Entrance": "
-                (can_use(Hover_Boots) and
-                    (can_use(Goron_Tunic) or unknown_heart_heat)) or
-                (is_adult and 'DMC Ledge Boulder' and Hookshot and
-                    (Goron_Tunic or unknown_heart_heat)) or
-                (can_use(Longshot) and (((can_live_dmg(1) or can_use(Nayrus_Love)) and (Goron_Tunic or
-                    (logic_crater_cliff_tunic and has_hearts(5)))) or
-                (Fairy and not entrance_shuffle and (Goron_Tunic or (logic_crater_cliff_tunic and has_hearts(3)))))"
+                is_adult and ((logic_fewer_tunic_requirements and (Hover_Boots or ('DMC Ledge Boulder' and Hookshot)) and
+                    has_hearts(2) and (has_hearts(5) or (Fairy and (has_hearts(3) or has_bottles(2))))) or # Priority (1 heart)
+                (logic_crater_cliff_tunic and Longshot and ((can_live_with_nayrus(1) and has_hearts(5)) or
+                    (Fairy and not entrance_shuffle and has_hearts(3)))))" # Priority (multi-bottle)
+        }
+    },
+    {
+        "region_name": "DMC From Upper Grotto Yet To Test",
+        "exits": {
+            "DMC Fire Temple Entrance": "
+                is_adult and has_hearts(1) and (((Hover_Boots or ('DMC Ledge Boulder' and Hookshot)) and
+                    logic_fewer_tunic_requirements and (has_hearts(5) or (Fairy and (has_hearts(3) or
+                    (has_bottles(2) and (has_hearts(2) or has_bottles(3))))))) or
+                (logic_crater_cliff_tunic and Longshot and ((can_live_with_nayrus(1) and has_hearts(5)) or
+                    (Fairy and not entrance_shuffle and has_hearts(3)))))" # Priority (multi-bottle)
         }
     },
     {
@@ -1605,102 +1587,133 @@
         "scene": "Death Mountain Crater",
         "hint": "Death Mountain Crater",
         "events": {
-            "DMC Upper Grotto Boulder": "
-                can_use(Megaton_Hammer) or has_bombchus or (Bombs and can_use(Goron_Tunic) or has_hearts(1) or Fairy)",
-            "DMC Ledge Boulder": "
-                can_use(Megaton_Hammer) and ((logic_crater_upper_to_lower and Goron_Tunic or has_hearts(1)) or
-                (Hover_Boots and (Goron_Tunic or has_hearts(2) or (has_hearts(1) and Fairy))) or
-                (Longshot and (can_live_dmg(1) or Fairy or can_use(Nayrus_Love)) and
-                    (Goron_Tunic or (logic_crater_cliff_tunic and has_hearts(5)))) or
-                (logic_crater_cliff_tunic and can_use(Longshot) and Fairy and has_hearts(1) and
-                ((has_hearts(3) and (can_live_dmg(1) or can_use(Nayrus_Love))) or (has_bottles(2) and (has_hearts(2) or
-                (has_bottles(3) and (has_bottles(4) or 'DMC Gossip Fairy Access')))))))",
-            "DMC Hammer Grotto Boulder": "
-                can_use(Megaton_Hammer) and
-                (('DMC Ledge Boulder' and Goron_Tunic or has_hearts(3) or (has_hearts(1) and Fairy)) or
-                (Hover_Boots and (Goron_Tunic or has_hearts(2) or (has_hearts(1) and Fairy))) or
-                (Longshot and (can_live_dmg(1) or Fairy or can_use(Nayrus_Love)) and
-                    (Goron_Tunic or (logic_crater_cliff_tunic and has_hearts(5)))) or
-                (logic_crater_cliff_tunic and Longshot and Fairy and has_hearts(1) and
-                ((has_hearts(3) and (can_live_dmg(1) or can_use(Nayrus_Love))) or
-                (has_bottles(2) and (has_hearts(2) or ('DMC Bean Plant' and has_bottles(4) and 'DMC Gossip Fairy Access'))))))",
-            "DMC Fountain Boulders": "
-                can_use(Megaton_Hammer) and
-                ((('DMC Ledge Boulder' or Hover_Boots) and (Goron_Tunic or has_hearts(2) or (has_hearts(1) and Fairy))) or
-                (Longshot and (can_live_dmg(1) or Fairy or can_use(Nayrus_Love)) and
-                    (Goron_Tunic or (logic_crater_cliff_tunic and has_hearts(5)))) or
-                (logic_crater_cliff_tunic and Longshot and Fairy and has_hearts(1) and
-                ((has_hearts(3) and (can_live_dmg(1) or can_use(Nayrus_Love))) or (has_bottles(2) and (has_hearts(2) or
-                (has_bottles(3) and (has_bottles(4) or 'DMC Gossip Fairy Access')))))))",
-            "DMC Bean Plant": "False",
-            "DMC Wall PoH Access": "can_use(Goron_Tunic) or has_hearts(2) or (has_hearts(1) and Fairy)",
-            "DMC Crate GS Access": "is_child and can_child_attack and (has_hearts(2) or (has_hearts(1) and Fairy))",
-            "DMC Gossip Stone Access": "
-                has_explosives and (can_use(Goron_Tunic) or has_hearts(2) or (has_hearts(1) and Fairy))",
-            "DMC Deku Scrub Access": "
-                is_child and
-                ((Slingshot or Boomerang or Sticks or Kokiri_Sword or has_explosives or can_use(Dins_Fire) or Nuts) and
-                    (has_hearts(2) or (has_hearts(1) and Fairy)) or
-                (Deku_Shield and (has_hearts(2) or (has_hearts(1) and Fairy and (not is_glitched or Hylian_Shield)))))",
-            "DMC Volcano PoH Access": "
-                (logic_crater_bean_poh_with_hovers and can_use(Hover_Boots) and
-                    (Goron_Tunic or unknown_heart_heat or (Fairy and has_hearts(1) and (has_hearts(2) or has_bottles(2))))) or
-                (is_adult and Hover_Boots and 'DMC Bean Plant' and
-                    (Goron_Tunic or unknown_heart_heat or (Fairy and has_hearts(1) and (has_hearts(2) or has_bottles(3))))) or
-                (is_adult and 'DMC Ledge Boulder' and Hookshot and 'DMC Bean Plant' and
-                    (Goron_Tunic or unknown_heart_heat or (Fairy and three_heart_heat))) or
-                (is_adult and Longshot and 'DMC Bean Plant' and
-                    (can_live_dmg(1) or Fairy or can_use(Nayrus_Love)) and (Goron_Tunic or
-                    (logic_crater_cliff_tunic and has_hearts(4)))) or
-                (logic_crater_cliff_tunic and is_adult and Longshot and Fairy and 'DMC Bean Plant' and has_hearts(1) and
-                    ((has_hearts(3) and (can_live_dmg(1) or can_use(Nayrus_Love))) or
-                    (has_bottles(2) and (has_hearts(2) or has_bottles(4) or
-                    (has_bottles(3) and 'DMC Gossip Fairy Access')))))",
-            "DMC Sheik Access": "
-                is_adult and (((Hover_Boots or ('DMC Ledge Boulder' and Hookshot)) and (Goron_Tunic or has_hearts(3) or
-                    (Fairy and has_hearts(1) and (has_hearts(2) or has_bottles(2))))) or
-                (Longshot and (can_live_dmg(1) or Fairy or can_use(Nayrus_Love)) and
-                    (Goron_Tunic or (logic_crater_cliff_tunic and has_hearts(4)))) or
-                (logic_crater_cliff_tunic and Longshot and Fairy and has_hearts(1) and (has_hearts(2) or has_bottles(3) or
-                    (has_bottles(2) and 'DMC Gossip Fairy Access'))))",
-            "DMC Bean GS Access": "False",
-            "DMC Bean Fairy Access": "False"
+            "DMC Upper Grotto Boulder": "can_use(Megaton_Hammer) or has_bombchus or (Bombs and Fairy)"
         },
         "exits": {
             "DMC Locations": "True",
-            "DMC Summit Entrance": "can_use(Goron_Tunic) or has_hearts(1)",
-            "DMC Upper Grotto Entrance": "'DMC Upper Grotto Boulder'",
-            "DMC Goron City Entrance": "
-                (is_adult and 'DMC Ledge Boulder' and
-                    (Goron_Tunic or three_heart_heat)) or
-                (can_use(Hover_Boots) and
-                    (Goron_Tunic or three_heart_heat)) or
-                (can_use(Longshot) and (can_live_dmg(1) or can_use(Nayrus_Love)) and
-                    (Goron_Tunic or (logic_crater_cliff_tunic and has_hearts(5))))",
+            "DMC Upper With Tunic": "can_use(Goron_Tunic)",
+            "DMC From Upper Grotto 1 Heart": "has_hearts(5)",
+            "DMC Upper Grotto Entrance": "'DMC Upper Grotto Boulder'"
+        }
+    },
+    {
+        "region_name": "DMC From Upper Grotto 1 Heart",
+        "events": {
+            "DMC Upper Grotto Boulder": "can_blast_or_smash",
+            "DMC Ledge Boulder": "
+                can_use(Megaton_Hammer) and (logic_crater_upper_to_lower or (Fairy and (Hover_Boots or
+                (logic_crater_cliff_tunic and Longshot and has_bottles(3) and (has_bottles(4) or 'DMC Gossip Fairy Access')))))",
+            "DMC Hammer Grotto Boulder": "
+                can_use(Megaton_Hammer) and Fairy and ('DMC Ledge Boulder' or Hover_Boots or
+                (logic_crater_cliff_tunic and Longshot and 'DMC Bean Plant' and has_bottles(4) and 'DMC Gossip Fairy Access'))",
+            "DMC Fountain Boulders": "
+                can_use(Megaton_Hammer) and Fairy and ('DMC Ledge Boulder' or Hover_Boots or
+                (logic_crater_cliff_tunic and Longshot and has_bottles(3) and (has_bottles(4) or 'DMC Gossip Fairy Access')))",
+            "DMC Wall PoH Access": "Fairy",
+            "DMC Crate GS Access": "can_child_attack and Fairy",
+            "DMC Gossip Stone Access": "has_explosives and Fairy",
+            "DMC Deku Scrub Access": "
+                is_child and Fairy and ((Deku_Shield and (not is_glitched or Hylian_Shield)) or
+                (Slingshot or Boomerang or Sticks or Kokiri_Sword or has_explosives or can_use(Dins_Fire) or Nuts))",
+            "DMC Volcano PoH Access": "
+                is_adult and Fairy and has_bottles(2) and ((logic_crater_bean_poh_with_hovers and Hover_Boots) or
+                ('DMC Bean Plant' and has_bottles(3) and (Hover_Boots or ('DMC Ledge Boulder' and Hookshot) or
+                (logic_crater_cliff_tunic and Longshot and (has_bottles(4) or 'DMC Gossip Fairy Access')))))",
+            "DMC Sheik Access": "
+                is_adult and Fairy and has_bottles(2) and (Hover_Boots or ('DMC Ledge Boulder' and Hookshot) or
+                (logic_crater_cliff_tunic and Longshot and (has_bottles(3) or 'DMC Gossip Fairy Access')))"
+        },
+        "exits": {
+            "DMC From Upper Grotto 2 Hearts": "has_hearts(2)",
+            "DMC Summit Entrance": "True"
+        }
+    },
+    {
+        "region_name": "DMC From Upper Grotto 2 Hearts",
+        "events": {
+            "DMC Ledge Boulder": "
+                can_use(Megaton_Hammer) and (Hover_Boots or (logic_crater_cliff_tunic and Longshot and Fairy and has_bottles(2)))",
+            "DMC Hammer Grotto Boulder": "
+                can_use(Megaton_Hammer) and (Hover_Boots or (logic_crater_cliff_tunic and Longshot and Fairy and has_bottles(2)))",
+            "DMC Fountain Boulders": "
+                can_use(Megaton_Hammer) and ('DMC Ledge Boulder' or Hover_Boots or
+                (logic_crater_cliff_tunic and Longshot and Fairy and has_bottles(2)))",
+            "DMC Wall PoH Access": "True",
+            "DMC Crate GS Access": "can_child_attack",
+            "DMC Gossip Stone Access": "has_explosives",
+            "DMC Deku Scrub Access": "is_child and can_stun_deku",
+            "DMC Volcano PoH Access": "
+                is_adult and Fairy and ((logic_crater_bean_poh_with_hovers and Hover_Boots) or
+                ('DMC Bean Plant' and (Hover_Boots or ('DMC Ledge Boulder' and Hookshot) or 
+                (logic_crater_cliff_tunic and Longshot and has_bottles(2)))))",
+            "DMC Sheik Access": "
+                is_adult and Fairy and (Hover_Boots or ('DMC Ledge Boulder' and Hookshot) or (logic_crater_cliff_tunic and Longshot))"
+        },
+        "exits": {
+            "DMC From Upper Grotto 3 Hearts": "has_hearts(3)",
+            "DMC Goron City Entrance": "is_adult and ('DMC Ledge Boulder' or Hover_Boots)",
+            "DMC Great Fairy Fountain Entrance": "is_adult and 'DMC Fountain Boulders' and ('DMC Ledge Boulder' or Hover_Boots)"
+        }
+    },
+    {
+        "region_name": "DMC From Upper Grotto 3 Hearts",
+        "events": {
+            "DMC Ledge Boulder": "
+                logic_crater_cliff_tunic and can_use(Megaton_Hammer) and Longshot and Fairy and can_live_with_nayrus(1)",
+            "DMC Hammer Grotto Boulder": "
+                can_use(Megaton_Hammer) and ('DMC Ledge Boulder' or
+                (logic_crater_cliff_tunic and Longshot and Fairy and can_live_with_nayrus(1)))",
+            "DMC Fountain Boulders": "
+                logic_crater_cliff_tunic and can_use(Megaton_Hammer) and Longshot and Fairy and can_live_with_nayrus(1)",
+            "DMC Volcano PoH Access": "
+                is_adult and ((logic_crater_bean_poh_with_hovers and Hover_Boots) or
+                (logic_crater_cliff_tunic and Longshot and 'DMC Bean Plant' and Fairy and can_live_with_nayrus(1)))",
+            "DMC Sheik Access": "is_adult and (Hover_Boots or ('DMC Ledge Boulder' and Hookshot))"
+        },
+        "exits": {
+            "DMC From Upper Grotto 4 Hearts": "has_hearts(4)",
+            "DMC Hammer Grotto Entrance": "is_adult and 'DMC Hammer Grotto Boulder' and ('DMC Ledge Boulder' or Hover_Boots)"
+        }
+    },
+    {
+        "region_name": "DMC From Upper Grotto 4 Hearts",
+        "events": {
+            "DMC Volcano PoH Access": "
+                is_adult and 'DMC Bean Plant' and (Hover_Boots or ('DMC Ledge Boulder' and Hookshot) or
+                (logic_crater_cliff_tunic and Longshot and (can_live_with_nayrus(1) or Fairy)))",
+            "DMC Sheik Access": "logic_crater_cliff_tunic and is_adult and Longshot and can_live_with_nayrus(1)"
+        },
+        "exits": {
+            "DMC From Upper Grotto 5 Hearts": "has_hearts(5)"
+        }
+    },
+    {
+        "region_name": "DMC From Upper Grotto 5 Hearts",
+        "events": {
+            "DMC Ledge Boulder": "
+                logic_crater_cliff_tunic and can_use(Megaton_Hammer) and Longshot and (can_live_with_nayrus(1) or Fairy)",
+            "DMC Hammer Grotto Boulder": "
+                logic_crater_cliff_tunic and can_use(Megaton_Hammer) and Longshot and (can_live_with_nayrus(1) or Fairy)",
+            "DMC Fountain Boulders": "
+                logic_crater_cliff_tunic and can_use(Megaton_Hammer) and Longshot and (can_live_with_nayrus(1) or Fairy)"
+        },
+        "exits": {
+            "DMC Goron City Entrance": "logic_crater_cliff_tunic and can_use(Longshot) and can_live_with_nayrus(1)",
             "DMC Hammer Grotto Entrance": "
-                is_adult and 'DMC Hammer Grotto Boulder' and
-                (('DMC Ledge Boulder' and
-                    (Goron_Tunic or three_heart_heat)) or
-                (can_use(Hover_Boots) and
-                    (Goron_Tunic or three_heart_heat)) or
-                (can_use(Longshot) and (can_live_dmg(1) or can_use(Nayrus_Love)) and
-                    (Goron_Tunic or (logic_crater_cliff_tunic and has_hearts(5)))))",
+                logic_crater_cliff_tunic and is_adult and 'DMC Hammer Grotto Boulder' and Longshot and can_live_with_nayrus(1)",
             "DMC Great Fairy Fountain Entrance": "
-                is_adult and 'DMC Fountain Boulders' and
-                (('DMC Ledge Boulder' and
-                    (Goron_Tunic or three_heart_heat)) or
-                (can_use(Hover_Boots) and
-                    (Goron_Tunic or three_heart_heat)) or
-                (can_use(Longshot) and (can_live_dmg(1) or can_use(Nayrus_Love)) and
-                    (Goron_Tunic or (logic_crater_cliff_tunic and has_hearts(5)))))",
-            "DMC Fire Temple Entrance": "
-                (can_use(Hover_Boots) and
-                    (Goron_Tunic or unknown_heart_heat)) or
-                (is_adult and 'DMC Ledge Boulder' and Hookshot and
-                    (Goron_Tunic or unknown_heart_heat)) or
-                (can_use(Longshot) and (((can_live_dmg(1) or can_use(Nayrus_Love)) and (Goron_Tunic or
-                    (logic_crater_cliff_tunic and has_hearts(5)))) or
-                (Fairy and not entrance_shuffle and (Goron_Tunic or (logic_crater_cliff_tunic and has_hearts(3)))))"
+                logic_crater_cliff_tunic and is_adult and 'DMC Fountain Boulders' and Longshot and can_live_with_nayrus(1)"
+        }
+    },
+    {
+        "region_name": "DMC From Goron City Yet To Test",
+        "events": {
+            "DMC Upper Grotto Boulder": "
+                has_hearts(1) and can_blast_or_smash and (has_hearts(3) or (Fairy and
+                    (has_hearts(2) or (has_bottles(2) and (is_adult or has_bottles(3))))))", # Priority (child 4 hearts)
+            "DMC Wall PoH Access": "has_hearts(2) and (has_hearts(4) or (Fairy and (has_hearts(3) or has_bottles(2))))", # Priority (child)
+            "DMC Gossip Stone Access": "
+                has_explosives and has_hearts(2) and (has_hearts(4) or (Fairy and (has_hearts(3) or has_bottles(2))))", # Priority (child)
         }
     },
     {
@@ -1708,51 +1721,73 @@
         "scene": "Death Mountain Crater",
         "hint": "Death Mountain Crater",
         "events": {
-            "DMC Upper Grotto Boulder": "
-                (can_use(Megaton_Hammer) and (Goron_Tunic or has_hearts(3) or
-                    (Fairy and has_hearts(1) and (has_hearts(2) or has_bottles(2)))))) or
-                (has_explosives and (can_use(Goron_Tunic) or has_hearts(3) or (Fairy and has_hearts(1) and
-                    (has_hearts(2) or (has_bottles(2) and (is_adult or has_bottles(3)))))))",
-            "DMC Ledge Boulder": "can_use(Megaton_Hammer) and (Goron_Tunic or has_hearts(1) or (Fairy and has_bottles(3)))",
-            "DMC Hammer Grotto Boulder": "can_use(Megaton_Hammer) and (Goron_Tunic or has_hearts(1) or Fairy)",
-            "DMC Fountain Boulders": "can_use(Megaton_Hammer) and (Goron_Tunic or has_hearts(1) or (Fairy and has_bottles(3)))",
-            "DMC Bean Plant": "False",
-            "DMC Wall PoH Access": "
-                can_use(Goron_Tunic) or has_hearts(4) or
-                (Fairy and has_hearts(2) and (has_hearts(3) or has_bottles(2)))", # Priority (child)
-            "DMC Crate GS Access": "
-                is_child and can_child_attack and (has_hearts(4) or
-                (Fairy and has_hearts(2) and (has_hearts(3) or has_bottles(2))))",
-            "DMC Gossip Stone Access": "
-                has_explosives and (can_use(Goron_Tunic) or has_hearts(4) or
-                (Fairy and has_hearts(2) and (has_hearts(3) or has_bottles(2))))", # Priority (child)
-            "DMC Deku Scrub Access": "
-                is_child and
-                ((Slingshot or Boomerang or Sticks or Kokiri_Sword or has_explosives or can_use(Dins_Fire) or Nuts) and
-                    (has_hearts(1) and (has_hearts(2) or Fairy)) or
-                (Deku_Shield and (has_hearts(2) or (has_hearts(1) and Fairy and (not is_glitched or Hylian_Shield)))))",
-            "DMC Volcano PoH Access": "
-                (logic_crater_bean_poh_with_hovers and can_use(Hover_Boots) and
-                    (Goron_Tunic or has_hearts(1) or (Fairy and has_bottles(2)))) or
-                (is_adult and (Hover_Boots or Hookshot) and 'DMC Bean Plant' and
-                    (Goron_Tunic or has_hearts(2) or (has_hearts(1) and Fairy)))",
-            "DMC Sheik Access": "
-                is_adult and ((Hover_Boots and (Goron_Tunic or has_hearts(1) or (Fairy and has_bottles(2)))) or
-                (Hookshot and (Goron_Tunic or has_hearts(1) or (Fairy and can_use(Nayrus_Love) and has_bottles(2)))))",
-            "DMC Bean GS Access": "False",
-            "DMC Bean Fairy Access": "False"
+            "DMC Ledge Boulder": "can_use(Megaton_Hammer) and Fairy and has_bottles(3)",
+            "DMC Hammer Grotto Boulder": "can_use(Megaton_Hammer) and Fairy",
+            "DMC Fountain Boulders": "can_use(Megaton_Hammer) and Fairy and has_bottles(3)",
+            "DMC Volcano PoH Access": "logic_crater_bean_poh_with_hovers and can_use(Hover_Boots) and Fairy and has_bottles(2)",
+            "DMC Sheik Access": "is_adult and Fairy and has_bottles(2) and (Hover_Boots or (Hookshot and can_use(Nayrus_Love)))"
         },
         "exits": {
             "DMC Locations": "True",
-            "DMC Summit Entrance": "can_use(Goron_Tunic) or has_hearts(4)",
-            "DMC Upper Grotto Entrance": "'DMC Upper Grotto Boulder' and (can_use(Goron_Tunic) or has_hearts(3))",
+            "DMC Lower With Tunic": "can_use(Goron_Tunic)",
+            "DMC From Goron City 1 Heart": "has_hearts(1)",
             "DMC Goron City Entrance": "True",
-            "DMC Hammer Grotto Entrance": "is_adult and 'DMC Hammer Grotto Boulder'",
-            "DMC Great Fairy Fountain Entrance": "is_adult and 'DMC Fountain Boulders' and (Goron_Tunic or has_hearts(1))",
+            "DMC Hammer Grotto Entrance": "is_adult and 'DMC Hammer Grotto Boulder'"
+        }
+    },
+    {
+        "region_name": "DMC From Goron City 1 Heart",
+        "events": {
+            "DMC Ledge Boulder": "can_use(Megaton_Hammer)",
+            "DMC Hammer Grotto Boulder": "can_use(Megaton_Hammer)",
+            "DMC Fountain Boulders": "can_use(Megaton_Hammer)",
+            "DMC Deku Scrub Access": "
+                is_child and Fairy and ((Deku_Shield and (not is_glitched or Hylian_Shield)) or
+                (Slingshot or Boomerang or Sticks or Kokiri_Sword or has_explosives or can_use(Dins_Fire) or Nuts))",
+            "DMC Volcano PoH Access": "
+                is_adult and ((logic_crater_bean_poh_with_hovers and Hover_Boots) or
+                ((Hover_Boots or Hookshot) and 'DMC Bean Plant' and Fairy))",
+            "DMC Sheik Access": "is_adult and (Hover_Boots or Hookshot)"
+        },
+        "exits": {
+            "DMC From Goron City 2 Hearts": "has_hearts(2)",
+            "DMC Great Fairy Fountain Entrance": "is_adult and 'DMC Fountain Boulders'",
             "DMC Fire Temple Entrance": "
-                ((can_use(Hover_Boots) or can_use(Hookshot)) and (Goron_Tunic or
-                (logic_fewer_tunic_requirements and has_hearts(1) and (has_hearts(3) or
-                (Fairy and not entrance_shuffle and (has_hearts(2) or has_bottles(2)))))))"
+                logic_fewer_tunic_requirements and is_adult and (Hover_Boots or Hookshot) and
+                Fairy and not entrance_shuffle and has_bottles(2)"
+        }
+    },
+    {
+        "region_name": "DMC From Goron City 2 Hearts",
+        "events": {
+            "DMC Crate GS Access": "can_child_attack and Fairy and has_bottles(2)",
+            "DMC Deku Scrub Access": "is_child and can_stun_deku",
+            "DMC Volcano PoH Access": "is_adult and (Hover_Boots or Hookshot) and 'DMC Bean Plant'"
+        },
+        "exits": {
+            "DMC From Goron City 3 Hearts": "has_hearts(3)",
+            "DMC Fire Temple Entrance": "
+                logic_fewer_tunic_requirements and is_adult and (Hover_Boots or Hookshot) and Fairy and not entrance_shuffle"
+        }
+    },
+    {
+        "region_name": "DMC From Goron City 3 Hearts",
+        "events": {
+            "DMC Crate GS Access": "can_child_attack and Fairy",
+        },
+        "exits": {
+            "DMC From Goron City 4 Hearts": "has_hearts(4)",
+            "DMC Upper Grotto Entrance": "'DMC Upper Grotto Boulder'",
+            "DMC Fire Temple Entrance": "logic_fewer_tunic_requirements and is_adult and (Hover_Boots or Hookshot)"
+        }
+    },
+    {
+        "region_name": "DMC From Goron City 4 Hearts",
+        "events": {
+            "DMC Crate GS Access": "can_child_attack",
+        },
+        "exits": {
+            "DMC Summit Entrance": "True"
         }
     },
     {
@@ -1760,80 +1795,92 @@
         "scene": "Death Mountain Crater",
         "hint": "Death Mountain Crater",
         "events": {
-            "DMC Upper Grotto Boulder": "
-                (can_use(Megaton_Hammer) and (Goron_Tunic or has_hearts(3) or
-                    (Fairy and has_hearts(1) and (has_hearts(2) or has_bottles(2)))))) or
-                (has_explosives and (can_use(Goron_Tunic) or has_hearts(3) or (Fairy and has_hearts(1) and
-                    (has_hearts(2) or (has_bottles(2) and (is_adult or has_bottles(3)))))))",
-            "DMC Ledge Boulder": "can_use(Megaton_Hammer) and (Goron_Tunic or has_hearts(1) or (Fairy and has_bottles(4)))",
+            "DMC Ledge Boulder": "can_use(Megaton_Hammer) and Fairy and has_bottles(4)",
             "DMC Hammer Grotto Boulder": "can_use(Megaton_Hammer)",
-            "DMC Fountain Boulders": "
-                can_use(Megaton_Hammer) and
-                    (Goron_Tunic or three_heart_heat)",
-            "DMC Bean Plant": "False",
-            "DMC Wall PoH Access": "
-                can_use(Goron_Tunic) or unknown_heart_heat",
-            "DMC Crate GS Access": "
-                is_child and
-                ((Slingshot and
-                    unknown_heart_heat) or
-                (Boomerang and
-                    unknown_heart_heat) or
-                ((Sticks or Kokiri_Sword) and
-                    unknown_heart_heat) or
-                (Bombs and
-                    unknown_heart_heat) or
-                (has_bombchus and
-                    unknown_heart_heat) or
-                (can_use(Dins_Fire) and
-                    unknown_heart_heat))",
-            "DMC Gossip Stone Access": "
-                has_explosives and (can_use(Goron_Tunic) or unknown_heart_heat or
-                (Fairy and has_hearts(1) and (has_bottles(2) and (has_hearts(2) or has_bottles(4)))",
-            "DMC Deku Scrub Access": "
-                is_child and
-                ((Slingshot and
-                    three_heart_heat) or
-                (Boomerang and
-                    three_heart_heat) or
-                (Sticks and
-                    three_heart_heat) or
-                (Kokiri_Sword and
-                    three_heart_heat) or
-                (has_explosives and
-                    three_heart_heat) or
-                (can_use(Dins_Fire) and
-                    three_heart_heat) or
-                (Nuts and
-                    three_heart_heat) or
-                (Deku_Shield and
-                    three_heart_heat))",
-            "DMC Volcano PoH Access": "
-                (logic_crater_bean_poh_with_hovers and can_use(Hover_Boots) and
-                    (Goron_Tunic or three_heart_heat)) or
-                (is_adult and Hover_Boots and 'DMC Bean Plant' and
-                    (Goron_Tunic or three_heart_heat)) or
-                (is_adult and Hookshot and 'DMC Bean Plant' and
-                    (Goron_Tunic or three_heart_heat))",
-            "DMC Sheik Access": "is_adult and (Hover_Boots or Hookshot) and (Goron_Tunic or has_hearts(1))",
-            "DMC Bean GS Access": "False",
-            "DMC Bean Fairy Access": "False"
+            "DMC Fountain Boulders": "can_use(Megaton_Hammer) and Fairy and has_bottles(4)"
         },
         "exits": {
             "DMC Locations": "True",
-            "DMC Summit Entrance": "
-                can_use(Goron_Tunic) or unknown_heart_heat",
-            "DMC Upper Grotto Entrance": "
-                'DMC Upper Grotto Boulder' and
-                    (can_use(Goron_Tunic) or unknown_heart_heat)",
-            "DMC Goron City Entrance": "can_use(Goron_Tunic) or has_hearts(1)",
-            "DMC Hammer Grotto Entrance": "is_adult and 'DMC Hammer Grotto Boulder'",
-            "DMC Great Fairy Fountain Entrance": "is_adult and 'DMC Fountain Boulders' and (can_use(Goron_Tunic) or has_hearts(1))",
+            "DMC Lower With Tunic": "can_use(Goron_Tunic)",
+            "DMC From Hammer Grotto 1 Heart": "has_hearts(1)",
+            "DMC Hammer Grotto Entrance": "is_adult and 'DMC Hammer Grotto Boulder'"
+        }
+    },
+    {
+        "region_name": "DMC From Hammer Grotto 1 Heart",
+        "events": {
+            "DMC Upper Grotto Boulder": "can_blast_or_smash and Fairy and has_bottles(2) and (is_adult or has_bottles(3))",
+            "DMC Ledge Boulder": "can_use(Megaton_Hammer)",
+            "DMC Fountain Boulders": "can_use(Megaton_Hammer)",
+            "DMC Crate GS Access": "
+                is_child and Fairy and has_bottles(3) and (can_use(Dins_Fire) or
+                (has_bottles(4) and (Slingshot or Boomerang or Sticks or Kokiri_Sword or has_explosives)))",
+            "DMC Gossip Stone Access": "has_explosives and Fairy and has_bottles(4)",
+            "DMC Deku Scrub Access": "
+                is_child and Fairy and ((Deku_Shield and (not is_glitched or Hylian_Shield)) or
+                Slingshot or Boomerang or Sticks or Kokiri_Sword or has_explosives or can_use(Dins_Fire) or Nuts)",
+            "DMC Volcano PoH Access": "
+                is_adult and ((logic_crater_bean_poh_with_hovers and Hover_Boots) or
+                ('DMC Bean Plant' and (Hover_Boots or Hookshot) and Fairy))",
+            "DMC Sheik Access": "is_adult and (Hover_Boots or Hookshot)"
+        },
+        "exits": {
+            "DMC From Hammer Grotto 2 Hearts": "has_hearts(2)",
+            "DMC Goron City Entrance": "True",
+            "DMC Great Fairy Fountain Entrance": "is_adult and 'DMC Fountain Boulders'",
             "DMC Fire Temple Entrance": "
-                (can_use(Hover_Boots) and (Goron_Tunic or (logic_fewer_tunic_requirements and
-                    three_heart_heat))) or
-                (can_use(Hookshot) and (Goron_Tunic or (logic_fewer_tunic_requirements and
-                    three_heart_heat)))"
+                logic_fewer_tunic_requirements and is_adult and (Hover_Boots or Hookshot) and
+                Fairy and not entrance_shuffle and has_bottles(2)"
+        }
+    },
+    {
+        "region_name": "DMC From Hammer Grotto 2 Hearts",
+        "events": {
+            "DMC Upper Grotto Boulder": "can_blast_or_smash and Fairy",
+            "DMC Crate GS Access": "
+                is_child and Fairy and (can_use(Dins_Fire) or
+                (has_bottles(2) and (Slingshot or Boomerang or Sticks or Kokiri_Sword or has_explosives)))",
+            "DMC Gossip Stone Access": "has_explosives and Fairy and has_bottles(2)",
+            "DMC Deku Scrub Access": "is_child and can_stun_deku",
+            "DMC Volcano PoH Access": "
+                is_adult and ((logic_crater_bean_poh_with_hovers and Hover_Boots) or
+                ('DMC Bean Plant' and (Hover_Boots or Hookshot)))",
+        },
+        "exits": {
+            "DMC From Hammer Grotto 3 Hearts": "has_hearts(3)",
+            "DMC Fire Temple Entrance": "
+                logic_fewer_tunic_requirements and is_adult and (Hover_Boots or Hookshot) and Fairy and not entrance_shuffle"
+        }
+    },
+    {
+        "region_name": "DMC From Hammer Grotto 3 Hearts",
+        "events": {
+            "DMC Upper Grotto Boulder": "is_adult and can_blast_or_smash",
+            "DMC Crate GS Access": "can_child_attack and Fairy"
+        },
+        "exits": {
+            "DMC From Hammer Grotto 4 Hearts": "has_hearts(4)",
+            "DMC Fire Temple Entrance": "logic_fewer_tunic_requirements and is_adult and (Hover_Boots or Hookshot)"
+        }
+    },
+    {
+        "region_name": "DMC From Hammer Grotto 4 Hearts",
+        "events": {
+            "DMC Upper Grotto Boulder": "has_explosives",
+            "DMC Wall PoH Access": "True",
+            "DMC Crate GS Access": "can_child_attack",
+            "DMC Gossip Stone Access": "is_adult and has_explosives"
+        },
+        "exits": {
+            "DMC From Hammer Grotto 5 Hearts": "has_hearts(5)",
+            "DMC Summit Entrance": "True",
+            "DMC Upper Grotto Entrance": "'DMC Upper Grotto Boulder'"
+        }
+    },
+    {
+        "region_name": "DMC From Hammer Grotto 5 Hearts",
+        "events": {
+            "DMC Gossip Stone Access": "has_explosives"
         }
     },
     {
@@ -1841,131 +1888,182 @@
         "scene": "Death Mountain Crater",
         "hint": "Death Mountain Crater",
         "events": {
-            "DMC Upper Grotto Boulder": "
-                can_blast_or_smash and ((can_use(Goron_Tunic) or has_hearts(3) or
-                (has_hearts(2) and is_adult and 'DMC Ledge Boulder") or
-                (Fairy and (has_hearts(1) and (has_hearts(2) or has_bottles(2))))))",
             "DMC Ledge Boulder": "can_use(Megaton_Hammer)",
-            "DMC Hammer Grotto Boulder": "can_use(Megaton_Hammer) and (can_use(Goron_Tunic) or has_hearts(1))",
             "DMC Fountain Boulders": "can_use(Megaton_Hammer)",
-            "DMC Bean Plant": "False",
-            "DMC Wall PoH Access": "
-                can_use(Goron_Tunic) or has_hearts(3) or
-                (Fairy and (has_hearts(2) or (has_hearts(1) and has_bottles(2))))",
-            "DMC Crate GS Access": "
-                is_child and has_hearts(1) and ((can_use(Dins_Fire) and (has_hearts(3) or
-                    (Fairy and (has_hearts(2) or has_bottles(2))))) or
-                ((Slingshot or Boomerang or Sticks or Kokiri_Sword or has_explosives) and (has_hearts(3) or
-                    (Fairy and (has_hearts(2) or has_bottles(3))))))",
-            "DMC Gossip Stone Access": "
-                has_explosives and (can_use(Goron_Tunic) or has_hearts(3) or
-                (Fairy and has_hearts(2) or (has_hearts(1) and has_bottles(3))))",
             "DMC Deku Scrub Access": "
-                is_child and ((Slingshot and (has_hearts(1) or
-                    (Fairy and (has_bottles(3) or (can_use(Nayrus_Love) and has_bottles(2)))))) or
-                (Bombs and (has_hearts(1) or (Fairy and has_bottles(3)))) or
-                (has_bombchus and (has_hearts(1) or (Fairy and has_bottles(2)))) or
-                ((Nuts or Sticks or can_use(Dins_Fire)) and (has_hearts(1) or Fairy)) or
-                ((Kokiri_Sword or Deku_Shield or Boomerang) and has_hearts(1)))",
-            "DMC Volcano PoH Access": "
-                (logic_crater_bean_poh_with_hovers and can_use(Hover_Boots) and
-                    (Goron_Tunic or three_heart_heat)) or
-                (is_adult and Hover_Boots and 'DMC Bean Plant' and
-                    (Goron_Tunic or three_heart_heat)) or
-                (is_adult and Hookshot and 'DMC Bean Plant' and
-                    (Goron_Tunic or three_heart_heat))",
-            "DMC Sheik Access": "
-                is_adult and ((Hover_Boots and (Goron_Tunic or has_hearts(1))) or
-                (Hookshot and (Goron_Tunic or has_hearts(2) or (has_hearts(1) and Fairy))))",
-            "DMC Bean GS Access": "False",
-            "DMC Bean Fairy Access": "False"
+                is_child and Fairy and (Nuts or Sticks or can_use(Dins_Fire) or
+                (has_bottles(2) and (has_bombchus or (Slingshot and (has_bottles(3) or can_use(Nayrus_Love))) or
+                    (Bombs and has_bottles(3)))))",
         },
         "exits": {
             "DMC Locations": "True",
-            "DMC Summit Entrance": "
-                can_use(Goron_Tunic) or has_hearts(3) or
-                (Fairy and not entrance_shuffle and (has_hearts(2) or (has_hearts(1) and has_bottles(2))))",
-            "DMC Upper Grotto Entrance": "
-                'DMC Upper Grotto Boulder' and (can_use(Goron_Tunic) or has_hearts(3) or
-                (has_hearts(2) and is_adult and 'DMC Ledge Boulder") or
-                (Fairy and not shuffle_grotto_entrances and (has_hearts(2) or (has_hearts(1) and has_bottles(2)))))",
-            "DMC Goron City Entrance": "can_use(Goron_Tunic) or has_hearts(1)",
-            "DMC Hammer Grotto Entrance": "is_adult and 'DMC Hammer Grotto Boulder' and (can_use(Goron_Tunic) or has_hearts(1))",
-            "DMC Great Fairy Fountain Entrance": "is_adult and 'DMC Fountain Boulders'",
+            "DMC Lower With Tunic": "can_use(Goron_Tunic)",
+            "DMC From Great Fairy Fountain 1 Heart": "has_hearts(1)",
+            "DMC Great Fairy Fountain Entrance": "is_adult and 'DMC Fountain Boulders'"
+        }
+    },
+    {
+        "region_name": "DMC From Great Fairy Fountain 1 Heart",
+        "events": {
+            "DMC Upper Grotto Boulder": "can_blast_or_smash and Fairy and has_bottles(2)",
+            "DMC Hammer Grotto Boulder": "can_use(Megaton_Hammer)",
+            "DMC Wall PoH Access": "Fairy and has_bottles(2)",
+            "DMC Crate GS Access": "
+                is_child and Fairy and has_bottles(2) and (can_use(Dins_Fire) or (has_bottles(3) and
+                (Slingshot or Boomerang or Sticks or Kokiri_Sword or has_explosives)))",
+            "DMC Gossip Stone Access": "has_explosives and Fairy and has_bottles(3)",
+            "DMC Deku Scrub Access": "is_child and can_stun_deku",
+            "DMC Volcano PoH Access": "
+                is_adult and ((logic_crater_bean_poh_with_hovers and Hover_Boots) or
+                ((Hover_Boots or Hookshot) and 'DMC Bean Plant' and Fairy))",
+            "DMC Sheik Access": "is_adult and (Hover_Boots or (Hookshot and Fairy))"
+        },
+        "exits": {
+            "DMC From Great Fairy Fountain 2 Hearts": "has_hearts(2)",
+            "DMC Goron City Entrance": "True",
+            "DMC Hammer Grotto Entrance": "is_adult and 'DMC Hammer Grotto Boulder'",
             "DMC Fire Temple Entrance": "
-                (can_use(Hover_Boots) and (Goron_Tunic or (logic_fewer_tunic_requirements and
-                    three_heart_heat))) or
-                (can_use(Hookshot) and (Goron_Tunic or (logic_fewer_tunic_requirements and
-                    three_heart_heat)))"
+                logic_fewer_tunic_requirements and is_adult and (Hover_Boots or Hookshot) and
+                Fairy and not entrance_shuffle and has_bottles(2)"
+        }
+    },
+    {
+        "region_name": "DMC From Great Fairy Fountain 2 Hearts",
+        "events": {
+            "DMC Upper Grotto Boulder": "can_blast_or_smash and (Fairy or (is_adult and 'DMC Ledge Boulder'))",
+            "DMC Wall PoH Access": "Fairy",
+            "DMC Crate GS Access": "can_child_attack and Fairy",
+            "DMC Gossip Stone Access": "has_explosives and Fairy",
+            "DMC Sheik Access": "is_adult and (Hover_Boots or (Hookshot and Fairy))"
+        },
+        "exits": {
+            "DMC From Great Fairy Fountain 3 Hearts": "has_hearts(3)",
+            "DMC Upper Grotto Entrance": "'DMC Upper Grotto Boulder' and is_adult and 'DMC Ledge Boulder'",
+            "DMC Fire Temple Entrance": "
+                logic_fewer_tunic_requirements and is_adult and (Hover_Boots or Hookshot) and
+                Fairy and not entrance_shuffle"
+        }
+    },
+    {
+        "region_name": "DMC From Great Fairy Fountain 3 Hearts",
+        "events": {
+            "DMC Upper Grotto Boulder": "can_blast_or_smash",
+            "DMC Wall PoH Access": "True",
+            "DMC Crate GS Access": "can_child_attack",
+            "DMC Gossip Stone Access": "has_explosives",
+            "DMC Volcano PoH Access": "is_adult and (Hover_Boots or Hookshot) and 'DMC Bean Plant'"
+        },
+        "exits": {
+            "DMC From Great Fairy Fountain 4 Hearts": "has_hearts(4)",
+            "DMC Summit Entrance": "True",
+            "DMC Upper Grotto Entrance": "'DMC Upper Grotto Boulder'"
+        }
+    },
+    {
+        "region_name": "DMC From Great Fairy Fountain 4 Hearts",
+        "exits": {
+            "DMC Fire Temple Entrance": "logic_fewer_tunic_requirements and is_adult and (Hover_Boots or Hookshot)"
         }
     },
     {
         "region_name": "DMC From Fire Temple",
         "scene": "Death Mountain Crater",
         "hint": "Death Mountain Crater",
-        # Note: Climbing the ladder always requires 3 hearts even with fairies.
+            # Note: Climbing the ladder always requires 3 hearts even with fairies.
+        "exits": {
+            "DMC Locations": "True",
+            "DMC Central With Tunic": "can_use(Goron_Tunic)",
+            "DMC From Fire Temple 3 Hearts": "has_hearts(3)",
+            "DMC Fire Temple Entrance": "True"
+        }
+    },
+    {
+        "region_name": "DMC From Fire Temple 3 Hearts",
         "events": {
             "DMC Upper Grotto Boulder": "
-                can_blast_or_smash and ((can_use(Hover_Boots) or can_use(Hookshot)) and
-                    (Goron_Tunic or has_hearts(8) or (Fairy and has_hearts(3) and (has_hearts(4) or has_bottles(2))))) or
-                (is_adult and 'DMC Bean Plant' and has_hearts(3) and (has_hearts(6) or Fairy))",
-            "DMC Ledge Boulder": "
-                can_use(Megaton_Hammer) and (((can_use(Hover_Boots) or can_use(Hookshot)) and
-                    (Goron_Tunic or has_hearts(6) or (has_hearts(3) and Fairy))) or
-                (is_adult and 'DMC Bean Plant' and (Goron_Tunic or has_hearts(5) or (has_hearts(3) and Fairy))))",
-            "DMC Hammer Grotto Boulder": "
-                can_use(Megaton_Hammer) and
-                (((can_use(Hover_Boots) or can_use(Hookshot)) and (Goron_Tunic or has_hearts(5) or (has_hearts(3) and Fairy))) or
-                (is_adult and 'DMC Bean Plant' and (Goron_Tunic or has_hearts(6) or (has_hearts(3) and Fairy))))",
-            "DMC Fountain Boulders": "
-                can_use(Megaton_Hammer) and (((can_use(Hover_Boots) or can_use(Hookshot)) and
-                    (Goron_Tunic or has_hearts(6) or (has_hearts(3) and Fairy))) or
-                (is_adult and 'DMC Bean Plant' and (Goron_Tunic or has_hearts(5) or (has_hearts(3) and Fairy))))",
-            "DMC Bean Plant": "can_plant_bean and has_hearts(3) and (has_hearts(4) or Fairy)",
-            "DMC Wall PoH Access": "
-                ((can_use(Hover_Boots) or can_use(Hookshot)) and
-                    (Goron_Tunic or has_hearts(8) or (Fairy and has_hearts(3) and (has_hearts(4) or has_bottles(2))))) or
-                (is_adult and 'DMC Bean Plant' and (Goron_Tunic or has_hearts(5) or (has_hearts(3) and Fairy)))",
-            "DMC Crate GS Access": "False",
+                is_adult and can_blast_or_smash and Fairy and ('DMC Bean Plant' or (has_bottles(2) and (Hover_Boots or Hookshot)))",
+            "DMC Ledge Boulder": "can_use(Megaton_Hammer) and Fairy and (Hover_Boots or Hookshot or 'DMC Bean Plant')",
+            "DMC Hammer Grotto Boulder": "can_use(Megaton_Hammer) and Fairy and (Hover_Boots or Hookshot or 'DMC Bean Plant')",
+            "DMC Fountain Boulders": "can_use(Megaton_Hammer) and Fairy and (Hover_Boots or Hookshot or 'DMC Bean Plant')",
+            "DMC Bean Plant": "can_plant_bean and Fairy",
+            "DMC Wall PoH Access": "is_adult and Fairy and ('DMC Bean Plant' or (has_bottles(2) and (Hover_Boots or Hookshot)))",
             "DMC Gossip Stone Access": "
-                has_explosives and (((can_use(Hover_Boots) or can_use(Hookshot)) and
-                (Goron_Tunic or has_hearts(8) or (Fairy and has_hearts(3) and (has_hearts(5) or has_bottles(2))))) or
-                (is_adult and 'DMC Bean Plant' and (Goron_Tunic or has_hearts(6) or (has_hearts(3) and Fairy))))",
+                is_adult and has_explosives and Fairy and ('DMC Bean Plant' or (has_bottles(2) and (Hover_Boots or Hookshot)))",
             "DMC Deku Scrub Access": "False",
             "DMC Volcano PoH Access": "
-                is_adult and ('DMC Bean Plant' and (Goron_Tunic or has_hearts(5) or (has_hearts(3) and Fairy))) or
-                (logic_crater_bean_poh_with_hovers and Hover_Boots and
-                    (Goron_Tunic or has_hearts(6) or (has_hearts(3) and Fairy)))",
-            "DMC Sheik Access": "is_adult and (Goron_Tunic or has_hearts(4) or (has_hearts(3) and Fairy))",
-            "DMC Bean GS Access": "
+                is_adult and Fairy and ('DMC Bean Plant' or (logic_crater_bean_poh_with_hovers and Hover_Boots))",
+            "DMC Sheik Access": "is_adult and Fairy",
+            "DMC Bean GS Access": "can_plant_bugs and can_child_attack and Fairy",
+            "DMC Bean Fairy Access": "is_child and 'DMC Bean Plant' and can_play(Song_of_Storms) and has_bottle and Fairy"
+        },
+        "exits": {
+            "DMC From Fire Temple 4 Hearts": "has_hearts(4)"
+        }
+    },
+    {
+        "region_name": "DMC From Fire Temple 4 Hearts",
+        "events": {
+            "DMC Upper Grotto Boulder": "is_adult and can_blast_or_smash and Fairy and (Hover_Boots or Hookshot)",
+            "DMC Bean Plant": "can_plant_bean",
+            "DMC Wall PoH Access": "is_adult and Fairy and (Hover_Boots or Hookshot)",
+            "DMC Sheik Access": "is_adult",
+            "DMC Bean GS Access": "can_plant_bugs and can_use(Dins_Fire)",
                 # Din's Fire at 4 hearts requires catching one of the bugs so they burrow in the cutscene
-                can_plant_bugs and has_hearts(3) and ((can_use(Dins_Fire) and (has_hearts(4) or Fairy)) or
-                ((Slingshot or Boomerang or Sticks or Kokiri_Sword or Bombs or has_bombchus) and (has_hearts(5) or Fairy)))",
-            "DMC Bean Fairy Access": "
-                is_child and 'DMC Bean Plant' and can_play(Song_of_Storms) and has_bottle and
-                has_hearts(3) and (has_hearts(4) or Fairy)"
+            "DMC Bean Fairy Access": "is_child and 'DMC Bean Plant' and can_play(Song_of_Storms) and has_bottle"
+        },
+        "exits": {
+            "DMC From Fire Temple 5 Hearts": "has_hearts(5)"
+        }
+    },
+    {
+        "region_name": "DMC From Fire Temple 5 Hearts",
+        "events": {
+            "DMC Ledge Boulder": "can_use(Megaton_Hammer) and 'DMC Bean Plant'",
+            "DMC Hammer Grotto Boulder": "can_use(Megaton_Hammer) and (Hover_Boots or Hookshot)",
+            "DMC Fountain Boulders": "can_use(Megaton_Hammer) and 'DMC Bean Plant'",
+            "DMC Wall PoH Access": "'DMC Bean Plant'",
+            "DMC Gossip Stone Access": "is_adult and has_explosives and Fairy and (Hover_Boots or Hookshot)",
+            "DMC Volcano PoH Access": "is_adult and 'DMC Bean Plant'",
+            "DMC Bean GS Access": "can_plant_bugs and can_child_attack"
+        },
+        "exits": {
+            "DMC From Fire Temple 6 Hearts": "has_hearts(6)",
+            "DMC Goron City Entrance": "is_adult and (Hover_Boots or Hookshot)",
+            "DMC Hammer Grotto Entrance": "is_adult and 'DMC Hammer Grotto Boulder' and (Hover_Boots or Hookshot)",
+            "DMC Great Fairy Fountain Entrance": "is_adult and 'DMC Fountain Boulders' and 'DMC Bean Plant'"
+        }
+    },
+    {
+        "region_name": "DMC From Fire Temple 6 Hearts",
+        "events": {
+            "DMC Upper Grotto Boulder": "is_adult and can_blast_or_smash and 'DMC Bean Plant'",
+            "DMC Ledge Boulder": "can_use(Megaton_Hammer) and (Hover_Boots or Hookshot)",
+            "DMC Hammer Grotto Boulder": "can_use(Megaton_Hammer) and 'DMC Bean Plant'",
+            "DMC Fountain Boulders": "can_use(Megaton_Hammer) and (Hover_Boots or Hookshot)",
+            "DMC Gossip Stone Access": "is_adult and has_explosives and 'DMC Bean Plant'",
+            "DMC Volcano PoH Access": "logic_crater_bean_poh_with_hovers and can_use(Hover_Boots)"
+        },
+        "exits": {
+            "DMC From Fire Temple 8 Hearts": "has_hearts(8)",
+            "DMC Summit Entrance": "is_adult and 'DMC Bean Plant'",
+            "DMC Upper Grotto Entrance": "is_adult and 'DMC Upper Grotto Boulder' and 'DMC Bean Plant'",
+            "DMC Goron City Entrance": "is_adult and 'DMC Bean Plant'",
+            "DMC Hammer Grotto Entrance": "is_adult and 'DMC Hammer Grotto Boulder' and 'DMC Bean Plant'",
+            "DMC Great Fairy Fountain Entrance": "is_adult and 'DMC Fountain Boulders' and (Hover_Boots or Hookshot)"
+        }
+    },
+    {
+        "region_name": "DMC From Fire Temple 8 Hearts",
+        "events": {
+            "DMC Upper Grotto Boulder": "is_adult and can_blast_or_smash and (Hover_Boots or Hookshot)",
+            "DMC Wall PoH Access": "is_adult and (Hover_Boots or Hookshot)",
+            "DMC Gossip Stone Access": "is_adult and has_explosives and (Hover_Boots or Hookshot)"
         },
         "exits": {
             "DMC Locations": "True",
-            "DMC Summit Entrance": "
-                ((can_use(Hover_Boots) or can_use(Hookshot)) and (Goron_Tunic or has_hearts(8))) or
-                (is_adult and 'DMC Bean Plant' and (Goron_Tunic or has_hearts(6)))",
-            "DMC Upper Grotto Entrance": "
-                'DMC Upper Grotto Boulder' and
-                (((can_use(Hover_Boots) or can_use(Hookshot)) and (Goron_Tunic or has_hearts(8))) or
-                (is_adult and 'DMC Bean Plant' and (Goron_Tunic or has_hearts(6))))",
-            "DMC Goron City Entrance": "
-                ((can_use(Hover_Boots or can_use(Hookshot)) and (Goron_Tunic or has_hearts(5))) or
-                (is_adult and 'DMC Bean Plant' and (Goron_Tunic or has_hearts(6)))",
-            "DMC Hammer Grotto Entrance": "
-                is_adult and 'DMC Hammer Grotto Boulder' and
-                (((Hover_Boots or Hookshot) and (Goron_Tunic or has_hearts(5))) or
-                ('DMC Bean Plant' and (Goron_Tunic or has_hearts(6))))",
-            "DMC Great Fairy Fountain Entrance": "
-                is_adult and 'DMC Fountain Boulders' and
-                (((Hover_Boots or Hookshot) and (Goron_Tunic or has_hearts(6))) or
-                ('DMC Bean Plant' and (Goron_Tunic or has_hearts(5))))",
-            "DMC Fire Temple Entrance": "True"
+            "DMC Central With Tunic": "can_use(Goron_Tunic)",
+            "DMC Summit Entrance": "is_adult and (Hover_Boots or Hookshot)",
+            "DMC Upper Grotto Entrance": "is_adult and 'DMC Upper Grotto Boulder' and (Hover_Boots or Hookshot)"
         }
     },
     {
@@ -1973,72 +2071,141 @@
         "scene": "Death Mountain Crater",
         "hint": "Death Mountain Crater",
         "events": {
-            "DMC Upper Grotto Boulder": "
-                ((can_use(Hover_Boots) or can_use(Hookshot)) and can_blast_or_smash and
-                    (Goron_Tunic or has_hearts(4) or (Fairy and has_hearts(1) and (has_hearts(2) or has_bottles(3))))) or
-                (is_adult and 'DMC Bean Plant' and can_blast_or_smash and
-                    (Goron_Tunic or has_hearts(2) or (has_hearts(1) and Fairy)))",
-            "DMC Ledge Boulder": "
-                can_use(Megaton_Hammer) and (Hover_Boots or Hookshot or (is_adult and 'DMC Bean Plant')) and
-                (Goron_Tunic or has_hearts(2) or (has_hearts(1) and Fairy))",
-            "DMC Hammer Grotto Boulder": "
-                can_use(Megaton_Hammer) and (Hover_Boots or Hookshot or (is_adult and 'DMC Bean Plant')) and
-                (Goron_Tunic or has_hearts(2) or (has_hearts(1) and Fairy))",
-            "DMC Fountain Boulders": "
-                can_use(Megaton_Hammer) and (Hover_Boots or Hookshot or (is_adult and 'DMC Bean Plant')) and
-                (Goron_Tunic or has_hearts(2) or (has_hearts(1) and Fairy))",
             "DMC Bean Plant": "can_plant_bean",
-            "DMC Wall PoH Access": "
-                ((can_use(Hover_Boots) or can_use(Hookshot)) and (Goron_Tunic or has_hearts(5) or
-                    (Fairy and has_hearts(1) and (has_hearts(3) or (has_bottles(2) and (has_hearts(2) or has_bottles(3))))))) or
-                (is_adult and 'DMC Bean Plant' and (Goron_Tunic or has_hearts(2) or (has_hearts(1) and Fairy)))",
-            "DMC Crate GS Access": "False",
-            "DMC Gossip Stone Access": "
-                has_explosives and (((can_use(Hover_Boots) or can_use(Hookshot)) and (Goron_Tunic or has_hearts(5) or
-                    (Fairy and has_hearts(1) and (has_hearts(3) or (has_bottles(3) and (has_hearts(2) or has_bottles(4))))))) or
-                (is_adult and 'DMC Bean Plant' and (Goron_Tunic or has_hearts(2) or (Fairy and has_hearts(1)))))",
-            "DMC Deku Scrub Access": "False",
-            "DMC Volcano PoH Access": "
-                is_adult and ('DMC Bean Plant' and (Goron_Tunic or has_hearts(1))) or
-                (logic_crater_bean_poh_with_hovers and Hover_Boots and
-                    (Goron_Tunic or has_hearts(2) or (has_hearts(1) and Fairy)))",
-            "DMC Sheik Access": "is_adult and (Goron_Tunic or has_hearts(1) or Fairy)",
+            "DMC Sheik Access": "is_adult and Fairy",
             "DMC Bean GS Access": "
-                # At one heart, it is usually necessary to catch one of the bugs so the others can burrow during the cutscene
-                # At zero hearts, they burrow during the fairy cutscene
-                can_plant_bugs and (((Slingshot or Boomerang) and has_hearts(1)) or
-                ((Sticks or Kokiri_Sword or has_bombchus or can_use(Dins_Fire)) and (has_hearts(1) or (Fairy and has_bottles(3)))) or
-                (Bombs and (has_hearts(1) or (Fairy and can_use(Nayrus_Love) and has_bottles(4)))))",
+                # At zero hearts, the bugs burrow during the fairy cutscene
+                can_plant_bugs and Fairy and has_bottles(3) and
+                (Sticks or Kokiri_Sword or has_bombchus or can_use(Dins_Fire) or
+                (Bombs and can_use(Nayrus_Love) and has_bottles(4)))",
             "DMC Bean Fairy Access": "is_child and 'DMC Bean Plant' and can_play(Song_of_Storms) and has_bottle"
         },
         "exits": {
             "DMC Locations": "True",
-            "DMC Summit Entrance": "
-                ((can_use(Hover_Boots) or can_use(Hookshot)) and (Goron_Tunic or has_hearts(5))) or
-                (is_adult and 'DMC Bean Plant' and (Goron_Tunic or has_hearts(3)))",
-            "DMC Upper Grotto Entrance": "
-                'DMC Upper Grotto Boulder' and
-                ((can_use(Hover_Boots) or can_use(Hookshot)) and
-                    (Goron_Tunic or unknown_heart_heat)) or
-                (is_adult and 'DMC Bean Plant' and (Goron_Tunic or has_hearts(2))))",
-            "DMC Goron City Entrance": "
-                ((can_use(Hover_Boots) or can_use(Hookshot)) and
-                    (Goron_Tunic or unknown_heart_heat)) or
-                (is_adult and 'DMC Bean Plant' and (Goron_Tunic or has_hearts(2)))",
-            "DMC Hammer Grotto Entrance": "
-                is_adult and 'DMC Hammer Grotto Boulder' and
-                ((Hover_Boots or Hookshot) and
-                    (Goron_Tunic or three_heart_heat)) or
-                ('DMC Bean Plant' and (Goron_Tunic or has_hearts(3))))",
-            "DMC Great Fairy Fountain Entrance": "
-                is_adult and 'DMC Fountain Boulders' and
-                ((Hover_Boots or Hookshot) and
-                    (Goron_Tunic or three_heart_heat)) or
-                ('DMC Bean Plant' and (Goron_Tunic or has_hearts(2))))",
+            "DMC Central With Tunic": "can_use(Goron_Tunic)",
+            "DMC From Warp Pad 1 Heart": "has_hearts(1)"
+        }
+    },
+    {
+        "region_name": "DMC From Warp Pad 1 Heart",
+        "events": {
+            "DMC Upper Grotto Boulder": "
+                is_adult and can_blast_or_smash and Fairy and ('DMC Bean Plant' or ((Hover_Boots or Hookshot) and has_bottles(3)))",
+            "DMC Ledge Boulder": "can_use(Megaton_Hammer) and (Hover_Boots or Hookshot or 'DMC Bean Plant') and Fairy",
+            "DMC Hammer Grotto Boulder": "can_use(Megaton_Hammer) and (Hover_Boots or Hookshot or 'DMC Bean Plant') and Fairy",
+            "DMC Fountain Boulders": "can_use(Megaton_Hammer) and (Hover_Boots or Hookshot or 'DMC Bean Plant') and Fairy",
+            "DMC Wall PoH Access": "is_adult and Fairy and ('DMC Bean Plant' or ((Hover_Boots or Hookshot) and has_bottles(3)))",
+            "DMC Gossip Stone Access": "
+                is_adult and has_explosives and Fairy and ('DMC Bean Plant' or ((Hover_Boots or Hookshot) and has_bottles(4)))",
+            "DMC Volcano PoH Access": "is_adult and ('DMC Bean Plant' or (logic_crater_bean_poh_with_hovers and Hover_Boots and Fairy))",
+            "DMC Sheik Access": "is_adult",
+            "DMC Bean GS Access": "can_plant_bugs and can_child_attack"
+                # At one heart, it is usually necessary to catch one of the bugs so the others can burrow during the cutscene
+        },
+        "exits": {
+            "DMC From Warp Pad 2 Hearts": "has_hearts(2)",
             "DMC Fire Temple Entrance": "
-                (can_use(Goron_Tunic) or has_hearts(2)) and
-                ((is_child and shuffle_dungeon_entrances) or
-                (is_adult and logic_fewer_tunic_requirements))"
+                Fairy and not entrance_shuffle and
+                ((is_child and shuffle_dungeon_entrances) or (is_adult and logic_fewer_tunic_requirements))"
+        }
+    },
+    {
+        "region_name": "DMC From Warp Pad 2 Hearts",
+        "events": {
+            "DMC Upper Grotto Boulder": "
+                is_adult and can_blast_or_smash and ('DMC Bean Plant' or ((Hover_Boots or Hookshot) and Fairy))",
+            "DMC Ledge Boulder": "can_use(Megaton_Hammer) and (Hover_Boots or Hookshot or 'DMC Bean Plant')",
+            "DMC Hammer Grotto Boulder": "can_use(Megaton_Hammer) and (Hover_Boots or Hookshot or 'DMC Bean Plant')",
+            "DMC Fountain Boulders": "can_use(Megaton_Hammer) and (Hover_Boots or Hookshot or 'DMC Bean Plant')",
+            "DMC Wall PoH Access": "is_adult and ('DMC Bean Plant' or ((Hover_Boots or Hookshot) and Fairy and has_bottles(2)))",
+            "DMC Gossip Stone Access": "
+                is_adult and has_explosives and ('DMC Bean Plant' or ((Hover_Boots or Hookshot) and Fairy and has_bottles(3)))",
+            "DMC Volcano PoH Access": "logic_crater_bean_poh_with_hovers and can_use(Hover_Boots)"
+        },
+        "exits": {
+            "DMC From Warp Pad 3 Hearts": "has_hearts(3)",
+            "DMC Upper Grotto Entrance": "is_adult and 'DMC Upper Grotto Boulder' and 'DMC Bean Plant'",
+            "DMC Goron City Entrance": "is_adult and (Hover_Boots or Hookshot or 'DMC Bean Plant')",
+            "DMC Hammer Grotto Entrance": "is_adult and 'DMC Hammer Grotto Boulder' and (Hover_Boots or Hookshot)",
+            "DMC Great Fairy Fountain Entrance": "
+                is_adult and 'DMC Fountain Boulders' and (Hover_Boots or Hookshot or 'DMC Bean Plant')",
+            "DMC Fire Temple Entrance": "
+                ((is_child and shuffle_dungeon_entrances) or (is_adult and logic_fewer_tunic_requirements))"
+        }
+    },
+    {
+        "region_name": "DMC From Warp Pad 3 Hearts",
+        "events": {
+            "DMC Wall PoH Access": "is_adult and (Hover_Boots or Hookshot) and Fairy",
+            "DMC Gossip Stone Access": "is_adult and has_explosives and (Hover_Boots or Hookshot) and Fairy"
+        },
+        "exits": {
+            "DMC From Warp Pad 4 Hearts": "has_hearts(4)",
+            "DMC Summit Entrance": "is_adult and 'DMC Bean Plant'",
+            "DMC Hammer Grotto Entrance": "is_adult and 'DMC Hammer Grotto Boulder' and 'DMC Bean Plant'"
+        }
+    },
+    {
+        "region_name": "DMC From Warp Pad 4 Hearts",
+        "events": {
+            "DMC Upper Grotto Boulder": "is_adult and can_blast_or_smash and (Hover_Boots or Hookshot)"
+        },
+        "exits": {
+            "DMC From Warp Pad 5 Hearts": "has_hearts(5)",
+            "DMC Upper Grotto Entrance": "is_adult and 'DMC Upper Grotto Boulder' and (Hover_Boots or Hookshot)"
+        }
+    },
+    {
+        "region_name": "DMC From Warp Pad 5 Hearts",
+        "events": {
+            "DMC Wall PoH Access": "is_adult and (Hover_Boots or Hookshot)",
+            "DMC Gossip Stone Access": "is_adult and has_explosives and (Hover_Boots or Hookshot)"
+        },
+        "exits": {
+            "DMC Summit Entrance": "is_adult and (Hover_Boots or Hookshot)"
+        }
+    },
+    {
+        "region_name": "DMC Upper With Tunic",
+        "events": {
+            "DMC Upper Grotto Boulder": "can_blast_or_smash",
+            "DMC Ledge Boulder": "logic_crater_upper_to_lower and Megaton_Hammer",
+            "DMC Wall PoH Access": "True",
+            "DMC Gossip Stone Access": "has_explosives"
+        },
+        "exits": {
+            "DMC Lower With Tunic": "'DMC Ledge Boulder' or Hover_Boots",
+            "DMC Central With Tunic": "Longshot and (can_live_with_nayrus(1) or Fairy)",
+            "DMC Summit Entrance": "True",
+            "DMC Upper Grotto Entrance": "'DMC Upper Grotto Boulder'"
+        }
+    },
+    {
+        "region_name": "DMC Lower With Tunic",
+        "events": {
+            "DMC Ledge Boulder": "Megaton_Hammer",
+            "DMC Hammer Grotto Boulder": "Megaton_Hammer",
+            "DMC Fountain Boulders": "Megaton_Hammer",
+            "DMC Volcano PoH Access": "logic_crater_bean_poh_with_hovers and Hover_Boots"
+        },
+        "exits": {
+            "DMC Upper With Tunic": "True",
+            "DMC Central With Tunic": "Hover_Boots or Hookshot",
+            "DMC Goron City Entrance": "True",
+            "DMC Hammer Grotto Entrance": "'DMC Hammer Grotto Boulder'",
+            "DMC Great Fairy Fountain Entrance": "'DMC Fountain Boulders'"
+        }
+    },
+    {
+        "region_name": "DMC Central With Tunic",
+        "events": {
+            "DMC Volcano PoH Access": "'DMC Bean Plant'",
+            "DMC Sheik Access": "True"
+        },
+        "exits": {
+            "DMC Lower With Tunic": "Hover_Boots or Hookshot or 'DMC Bean Plant'",
+            "DMC Upper With Tunic": "'DMC Bean Plant'",
+            "DMC Fire Temple Entrance": "True"
         }
     },
     {
