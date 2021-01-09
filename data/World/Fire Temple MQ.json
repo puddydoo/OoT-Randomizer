@@ -173,8 +173,8 @@
         "region_name": "Fire Boss Room",
         "dungeon": "Fire Temple",
         "locations": {
-            "Fire Temple Volvagia Heart": "True",
-            "Volvagia": "True"
+            "Fire Temple Volvagia Heart": "Goron_Tunic or (logic_volvagia_tunic and unknown_heart_heat)",
+            "Volvagia": "Goron_Tunic or (logic_volvagia_tunic and unknown_heart_heat)"
         }
     }
 ]

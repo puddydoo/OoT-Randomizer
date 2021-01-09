@@ -951,6 +951,13 @@ logic_tricks = {
                     Lizalfos Maze with Hover Boots" and "Fire Temple
                     MQ Lizalfos Maze Side Room without Box".
                     '''},
+    'Volvagia without Goron Tunic': {
+        'name'    : 'logic_volvagia_tunic',
+        'tags'    : ("Fire Temple",),
+        'tooltip' : '''\
+                    Logic expects ??? hearts or ??? fairies for
+                    beating Volvagia without the Goron Tunic.
+                    '''},
     'Light Trial MQ without Hookshot': {
         'name'    : 'logic_light_trial_mq',
         'tags'    : ("Ganon's Castle",),
