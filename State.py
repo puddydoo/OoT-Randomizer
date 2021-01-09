@@ -83,11 +83,10 @@ class State(object):
             containers += self.item_count('Heart Container')
         if self.world.logic_heart_pieces:
             containers += ((self.item_count('Piece of Heart') + self.item_count('Piece of Heart (Treasure Chest Game)')) // 4)
-        max_hearts = containers
-        # Always count enough obtainable containers/pieces to get to 3 hearts for now
-        # Logic does not yet have the heart requirements for everything child can do in DMC at 3 hearts
-        # So it must be assumed that at least 3 hearts are obtainable
-        max_hearts = max(max_hearts, 3)
+        max_hearts = 0
+        # At least 1 heart is required for child to reach the gossip stone in DMC
+        if not self.world.check_beatable_only and self.world.hints == 'mask':
+            max_hearts = 1
         # Count all heart containers and heart pieces if there is a bridge/LACS requirement
         if self.world.bridge == 'hearts':
             max_hearts = max(max_hearts, self.world.bridge_hearts)

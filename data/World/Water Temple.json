@@ -37,21 +37,20 @@
         "dungeon": "Water Temple",
         "locations": {
             "Water Temple Map Chest": "
-                ((Iron_Boots and (drown_seconds(24) or (drown_seconds(10) and Fairy)) and (Zora_Tunic or logic_fewer_tunic_requirements)) or
-                (logic_water_temple_torch_longshot and Longshot and (drown_seconds(2) or Fairy) and (Zora_Tunic or logic_fewer_tunic_requirements)))"
+                ((Iron_Boots and (Zora_Tunic or (logic_fewer_tunic_requirements and has_hearts(2) and (has_hearts(3) or Fairy)))) or
+                (logic_water_temple_torch_longshot and Longshot and (Zora_Tunic or (logic_fewer_tunic_requirements and (has_hearts(1) or Fairy)))))"
         },
         "exits": {
             "Water Temple Low Water Level": "
                 can_play(Zeldas_Lullaby) and
-                ((Iron_Boots and (drown_seconds(24) or (drown_seconds(10) and Fairy)) and (Zora_Tunic or logic_fewer_tunic_requirements)) or
-                (logic_water_temple_torch_longshot and Longshot and (drown_seconds(2) or Fairy) and (Zora_Tunic or logic_fewer_tunic_requirements)))",
+                ((Iron_Boots and (Zora_Tunic or (logic_fewer_tunic_requirements and has_hearts(2) and (has_hearts(3) or Fairy)))) or
+                (logic_water_temple_torch_longshot and Longshot and (Zora_Tunic or (logic_fewer_tunic_requirements and (has_hearts(1) or Fairy)))))",
             "Water Temple North Basement": "
                 (Small_Key_Water_Temple, 5) and
                 (Longshot or (logic_water_boss_key_region and Hover_Boots)) and
-                Iron_Boots and (drown_seconds(7) or Fairy) and (Zora_Tunic or logic_fewer_tunic_requirements)",
+                Iron_Boots and (Zora_Tunic or (logic_fewer_tunic_requirements and (has_hearts(1) or Fairy)))",
             "Water Temple Spike Tunnel": "
-                Iron_Boots and (Zora_Tunic or logic_fewer_tunic_requirements) and
-                (drown_seconds(24) or (drown_seconds(16) and Fairy))"
+                Iron_Boots and (Zora_Tunic or (logic_fewer_tunic_requirements and has_hearts(2) and (has_hearts(3) or Fairy)))"
                 # Getting past the stingers in time is hard
         }
     },
@@ -90,7 +89,7 @@
                 (can_use(Longshot) or (logic_water_boss_key_region and can_use(Hover_Boots)))",
             "Water Temple Dragon Statue": "
                 Progressive_Strength_Upgrade and
-                ((Iron_Boots and (drown_seconds(2) or Fairy) and can_use(Hookshot)) or
+                ((Iron_Boots and (Zora_Tunic or has_hearts(1) or Fairy) and can_use(Hookshot)) or
                     (logic_water_dragon_adult and (has_bombchus or can_use(Bow) or can_use(Hookshot)) and
                     (can_dive or Iron_Boots)) or
                     (logic_water_dragon_child and Child_Water_Temple and (has_bombchus or Slingshot or Boomerang) and
@@ -141,7 +140,9 @@
         "dungeon": "Water Temple",
         "locations": {
             "Water Temple Central Pillar Chest": "
-                can_use(Iron_Boots) and (drown_seconds(50) or (drown_seconds(24) and Fairy)) and can_use(Hookshot) and 
+                can_use(Iron_Boots) and can_use(Hookshot) and 
+                (Zora_Tunic or (logic_water_pillar_tunic and has_hearts(3) and (has_hearts(7) or Fairy))) and
+                    # Does not yet consider multiple fairies
                 ((Small_Key_Water_Temple, 6) or can_use(Bow) or can_use(Dins_Fire))"
         },
         "exits": {
@@ -169,7 +170,7 @@
             "Water Temple River Chest": "can_play(Song_of_Time) and Bow",
             "Water Temple GS River": "
                 can_play(Song_of_Time) and 
-                ((Iron_Boots and (drown_seconds(2) or Fairy) and (Zora_Tunic or logic_fewer_tunic_requirements)) or
+                ((Iron_Boots and (Zora_Tunic or (logic_fewer_tunic_requirements and (has_hearts(1) or Fairy)))) or
                     (logic_water_river_gs and can_use(Longshot) and (Bow or has_bombchus)))",
             "Fairy Pot": 
                 "has_bottle and can_play(Song_of_Time)"

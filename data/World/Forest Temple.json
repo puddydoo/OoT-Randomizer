@@ -34,9 +34,9 @@
         },
         "exits": {
             "Forest Temple NE Outdoors": "
-                ((Progressive_Scale, 2) and (drown_seconds(5) or Fairy)) or
-                (can_use(Iron_Boots) and (drown_seconds(9) or (drown_seconds(5) and Fairy))) or
-                ((can_use(Longshot) or (logic_forest_well_swim and can_use(Hookshot))) and (drown_seconds(7) or Fairy))",
+                ((Progressive_Scale, 2) and (can_use(Zora_Tunic) or has_hearts(1) or Fairy)) or
+                (can_use(Iron_Boots) and (can_use(Zora_Tunic) or has_hearts(2) or (has_hearts(1) and Fairy))) or
+                ((can_use(Longshot) or (logic_forest_well_swim and can_use(Hookshot))) and (can_use(Zora_Tunic) or has_hearts(1) or Fairy))",
             "Forest Temple Outdoors High Balconies": "
                 here(is_adult or has_explosives or
                         ((Boomerang or Nuts or Deku_Shield) and
@@ -64,8 +64,8 @@
                 can_use(Longshot) or (logic_forest_vines and can_use(Hookshot))",
                 #Longshot can grab some very high up vines to drain the well.
             "Forest Temple NW Outdoors": "
-                (can_use(Iron_Boots) and (drown_seconds(9) or (drown_seconds(5) and Fairy))) or 
-                ((Progressive_Scale, 2) and (drown_seconds(5) or Fairy))",
+                (can_use(Iron_Boots) and (Zora_Tunic or has_hearts(2) or (has_hearts(1) and Fairy))) or 
+                ((Progressive_Scale, 2) and (can_use(Zora_Tunic) or has_hearts(1) or Fairy))",
             "Forest Temple Lobby": "True"
         }
     },

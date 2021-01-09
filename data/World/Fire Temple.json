@@ -5,7 +5,7 @@
         "locations": {
             "Fire Temple Near Boss Chest": "
                 can_use(Goron_Tunic) or (logic_fewer_tunic_requirements and
-                (heat_seconds(10) or (heat_seconds(5) and Fairy)))",
+                has_hearts(1) and (has_hearts(2) or Fairy))",
             "Fire Temple Flare Dancer Chest": "
                 ((Small_Key_Fire_Temple, 8) or not keysanity) and can_use(Megaton_Hammer)",
             "Fire Temple Boss Key Chest": "
@@ -14,7 +14,7 @@
                 ((Small_Key_Fire_Temple, 8) or not keysanity) and can_use(Megaton_Hammer)",
             "Fairy Pot": "
                 has_bottle and
-                ((can_use(Hover_Boots) and (Goron_Tunic or (logic_fewer_tunic_requirements and heat_seconds(14)))) or
+                ((can_use(Hover_Boots) and (Goron_Tunic or (logic_fewer_tunic_requirements and has_hearts(2)))) or
                 (can_use(Hookshot) and (Goron_Tunic or (logic_fewer_tunic_requirements and
                     (three_heart_heat)))))"
         },
@@ -46,7 +46,7 @@
         "locations": {
             "Fire Temple Big Lava Room Lower Open Door Chest": "
                 can_use(Goron_Tunic) or (logic_fewer_tunic_requirements and
-                (heat_seconds(14) or (heat_seconds(7) and Fairy)))",
+                has_hearts(1) and (has_hearts(2) or Fairy))",
             "Fire Temple Big Lava Room Blocked Door Chest": "
                 is_adult and 'Fire Temple Big Lava Room Blocked Door' and
                 (Goron_Tunic or (logic_fewer_tunic_requirements and

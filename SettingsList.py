@@ -1218,6 +1218,14 @@ logic_tricks = {
                     Temple Dragon Statue Switch from Above the Water as Adult"
                     for adult's variant of this trick.
                     '''},
+    'Water Temple Central Pillar without Zora Tunic': {
+        'name'    : 'logic_water_pillar_tunic',
+        'tags'    : ("Water Temple",),
+        'tooltip' : '''\
+                    Allows reaching the chest below the central pillar
+                    without Zora Tunic. This is possible at 3 hearts
+                    using fairies.
+                    '''},
     'Goron City Maze Left Chest with Hover Boots': {
         'name'    : 'logic_goron_city_leftmost',
         'tags'    : ("Goron City",),
@@ -2525,6 +2533,19 @@ setting_infos = [
             Heart Containers to the pool, and may put
             Double Defense in logic for some maneuvers
             that require taking damage.
+            
+            If starting with 0 hearts and hints require
+            Mask of Truth, up to 1 Heart Container or
+            4 Pieces of Heart will always be in logic.
+        ''',
+        shared         = True,
+    ),
+    Checkbutton(
+        name           = 'shuffle_starting_hearts',
+        gui_text       = 'Shuffle Starting Hearts',
+        gui_tooltip    = '''\
+            Start with a random item to replace each missing
+            Heart Container if starting hearts are set below 3.
         ''',
         shared         = True,
     ),

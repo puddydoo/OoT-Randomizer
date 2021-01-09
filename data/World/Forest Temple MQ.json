@@ -74,14 +74,12 @@
         },
         "exits": {
             "Forest Temple NE Outdoors": "
-                ((Progressive_Scale, 2) and (drown_seconds(5) or Fairy)) or
-                (can_use(Iron_Boots) and (drown_seconds(9) or (drown_seconds(5) and Fairy))) or
-                ((can_use(Longshot) or (logic_forest_well_swim and can_use(Hookshot))) and (drown_seconds(7) or Fairy))",
+                ((Progressive_Scale, 2) and (can_use(Zora_Tunic) or has_hearts(1) or Fairy)) or
+                (can_use(Iron_Boots) and (Zora_Tunic or has_hearts(2) or (has_hearts(1) and Fairy))) or
+                ((can_use(Longshot) or (logic_forest_well_swim and can_use(Hookshot))) and (Zora_Tunic or has_hearts(1) or Fairy))",
             "Forest Temple Outdoors Top Ledges": "can_use(Fire_Arrows)",
             "Forest Temple Well Skulltula": "
-                can_use(Iron_Boots) and can_use(Hookshot) and (drown_seconds(4)
-                # or (Fairy and 2 bottles) # May need to be a trick
-                )"
+                can_use(Iron_Boots) and can_use(Hookshot) and (Zora_Tunic or has_hearts(1) or (Fairy and has_bottles(2)))"
         }
     },
     {

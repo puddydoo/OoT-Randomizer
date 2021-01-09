@@ -294,7 +294,8 @@
           "settings": [
             "start_with_consumables",
             "start_with_rupees",
-            "starting_hearts"
+            "starting_hearts",
+            "shuffle_starting_hearts"
           ]
         }
       ]

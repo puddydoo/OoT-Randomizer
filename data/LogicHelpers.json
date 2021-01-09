@@ -30,12 +30,7 @@
     "Fairy": "'Fairy' or Buy_Fairys_Spirit",
     # "Big_Poe": "'Big Poe'",
 
-    # Three_hearts: Placeholder for timers that don't yet have logic for starting hearts below 3
-    # Unknown: Placeholder for timers that may require an unknown amount of hearts above 3
-    # Routes for DMC that do not come out of grottos/fire temple and are not adult-only are marked priority to fill out.
-    "heat_seconds(time)": "can_use(Goron_Tunic) or (time == 'three_hearts' and has_hearts(3)) or (time != 'three_hearts' and time != 'unknown' and has_hearts(time // 8))",
-    # "heat_seconds(time)": "has_hearts(time // 8) or can_use(Goron_Tunic)",
-    "drown_seconds(time)": "has_hearts(time // 8) or can_use(Zora_Tunic)",
+    "heat_seconds(time)": "has_hearts(time // 8) or can_use(Goron_Tunic)",
     # Placeholder for timers that don't yet have logic for starting hearts below 3
     "three_heart_heat": "has_hearts(3) or can_use(Goron_Tunic)",
     "three_heart_drown": "has_hearts(3) or can_use(Zora_Tunic)",
