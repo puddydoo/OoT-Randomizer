@@ -1747,7 +1747,7 @@
             "DMC Hammer Grotto Entrance": "is_adult and 'DMC Hammer Grotto Boulder' and ('DMC Ledge Boulder' or Hover_Boots)",
             "DMC Fire Temple Entrance": "
                 is_adult and Fairy and not entrance_shuffle and ((logic_crater_cliff_tunic and Longshot) or
-                (logic_fewer_tunic_requirements and (Hover_Boots or ('DMC Ledge Boulder' and Hookshot)))))"
+                (logic_fewer_tunic_requirements and (Hover_Boots or ('DMC Ledge Boulder' and Hookshot))))"
         }
     },
     {
@@ -1920,7 +1920,7 @@
             "DMC Deku Scrub Access": "is_child and can_stun_deku",
             "DMC Volcano PoH Access": "
                 is_adult and ((logic_crater_bean_poh_with_hovers and Hover_Boots) or
-                ('DMC Bean Plant' and (Hover_Boots or Hookshot)))",
+                ('DMC Bean Plant' and (Hover_Boots or Hookshot)))"
         },
         "exits": {
             "DMC From Hammer Grotto 3 Hearts": "has_hearts(3)",
@@ -1969,7 +1969,7 @@
             "DMC Deku Scrub Access": "
                 is_child and Fairy and (Nuts or Sticks or can_use(Dins_Fire) or
                 (has_bottles(2) and (has_bombchus or (Slingshot and (has_bottles(3) or can_use(Nayrus_Love))) or
-                    (Bombs and has_bottles(3)))))",
+                    (Bombs and has_bottles(3)))))"
         },
         "exits": {
             "DMC Locations": "True",
