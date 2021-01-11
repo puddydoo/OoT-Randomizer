@@ -1542,7 +1542,7 @@
             "DMC Upper Grotto Entrance": "'DMC Upper Grotto Boulder'",
             "DMC Great Fairy Fountain Entrance": "is_adult and 'DMC Fountain Boulders' and 'DMC Ledge Boulder'",
             "DMC Fire Temple Entrance": "
-                is_adult and Fairy and not entrance_shuffle and has_bottles(3) and
+                is_adult and Fairy and not shuffle_dungeon_entrances and has_bottles(3) and
                 ((logic_crater_cliff_tunic and Longshot and (has_bottles(4) or 'DMC Gossip Fairy Access')) or
                 (logic_fewer_tunic_requirements and (Hover_Boots or ('DMC Ledge Boulder' and Hookshot))))"
         }
@@ -1572,7 +1572,7 @@
             "DMC Hammer Grotto Entrance": "is_adult and 'DMC Hammer Grotto Boulder' and ('DMC Ledge Boulder' or Hover_Boots)",
             "DMC Great Fairy Fountain Entrance": "is_adult and 'DMC Fountain Boulders' and Hover_Boots",
             "DMC Fire Temple Entrance": "
-                is_adult and Fairy and not entrance_shuffle and has_bottles(2) and ((logic_crater_cliff_tunic and Longshot) or
+                is_adult and Fairy and not shuffle_dungeon_entrances and has_bottles(2) and ((logic_crater_cliff_tunic and Longshot) or
                 (logic_fewer_tunic_requirements and (Hover_Boots or ('DMC Ledge Boulder' and Hookshot))))"
         }
     },
@@ -1593,7 +1593,7 @@
         "exits": {
             "DMC From Summit 4 Hearts": "has_hearts(4)",
             "DMC Fire Temple Entrance": "
-                is_adult and Fairy and not entrance_shuffle and ((logic_crater_cliff_tunic and Longshot) or
+                is_adult and Fairy and not shuffle_dungeon_entrances and ((logic_crater_cliff_tunic and Longshot) or
                 (logic_fewer_tunic_requirements and (Hover_Boots or ('DMC Ledge Boulder' and Hookshot))))"
         }
     },
@@ -1692,7 +1692,7 @@
             "DMC From Upper Grotto 2 Hearts": "has_hearts(2)",
             "DMC Summit Entrance": "True",
             "DMC Fire Temple Entrance": "
-                is_adult and Fairy and not entrance_shuffle and has_bottles(3) and
+                is_adult and Fairy and not shuffle_dungeon_entrances and has_bottles(3) and
                 ((logic_crater_cliff_tunic and Longshot and (has_bottles(4) or 'DMC Gossip Fairy Access')) or
                 (logic_fewer_tunic_requirements and (Hover_Boots or ('DMC Ledge Boulder' and Hookshot))))"
         }
@@ -1723,7 +1723,7 @@
             "DMC Goron City Entrance": "is_adult and ('DMC Ledge Boulder' or Hover_Boots)",
             "DMC Great Fairy Fountain Entrance": "is_adult and 'DMC Fountain Boulders' and ('DMC Ledge Boulder' or Hover_Boots)",
             "DMC Fire Temple Entrance": "
-                is_adult and Fairy and not entrance_shuffle and has_bottles(2) and ((logic_crater_cliff_tunic and Longshot) or
+                is_adult and Fairy and not shuffle_dungeon_entrances and has_bottles(2) and ((logic_crater_cliff_tunic and Longshot) or
                 (logic_fewer_tunic_requirements and (Hover_Boots or ('DMC Ledge Boulder' and Hookshot))))"
         }
     },
@@ -1746,7 +1746,7 @@
             "DMC From Upper Grotto 4 Hearts": "has_hearts(4)",
             "DMC Hammer Grotto Entrance": "is_adult and 'DMC Hammer Grotto Boulder' and ('DMC Ledge Boulder' or Hover_Boots)",
             "DMC Fire Temple Entrance": "
-                is_adult and Fairy and not entrance_shuffle and ((logic_crater_cliff_tunic and Longshot) or
+                is_adult and Fairy and not shuffle_dungeon_entrances and ((logic_crater_cliff_tunic and Longshot) or
                 (logic_fewer_tunic_requirements and (Hover_Boots or ('DMC Ledge Boulder' and Hookshot))))"
         }
     },
@@ -1822,7 +1822,7 @@
             "DMC Great Fairy Fountain Entrance": "is_adult and 'DMC Fountain Boulders'",
             "DMC Fire Temple Entrance": "
                 logic_fewer_tunic_requirements and is_adult and (Hover_Boots or Hookshot) and
-                Fairy and not entrance_shuffle and has_bottles(2)"
+                Fairy and not shuffle_dungeon_entrances and has_bottles(2)"
         }
     },
     {
@@ -1838,7 +1838,7 @@
         "exits": {
             "DMC From Goron City 3 Hearts": "has_hearts(3)",
             "DMC Fire Temple Entrance": "
-                logic_fewer_tunic_requirements and is_adult and (Hover_Boots or Hookshot) and Fairy and not entrance_shuffle"
+                logic_fewer_tunic_requirements and is_adult and (Hover_Boots or Hookshot) and Fairy and not shuffle_dungeon_entrances"
         }
     },
     {
@@ -1906,7 +1906,7 @@
             "DMC Great Fairy Fountain Entrance": "is_adult and 'DMC Fountain Boulders'",
             "DMC Fire Temple Entrance": "
                 logic_fewer_tunic_requirements and is_adult and (Hover_Boots or Hookshot) and
-                Fairy and not entrance_shuffle and has_bottles(2)"
+                Fairy and not shuffle_dungeon_entrances and has_bottles(2)"
         }
     },
     {
@@ -1925,7 +1925,7 @@
         "exits": {
             "DMC From Hammer Grotto 3 Hearts": "has_hearts(3)",
             "DMC Fire Temple Entrance": "
-                logic_fewer_tunic_requirements and is_adult and (Hover_Boots or Hookshot) and Fairy and not entrance_shuffle"
+                logic_fewer_tunic_requirements and is_adult and (Hover_Boots or Hookshot) and Fairy and not shuffle_dungeon_entrances"
         }
     },
     {
@@ -2000,7 +2000,7 @@
             "DMC Hammer Grotto Entrance": "is_adult and 'DMC Hammer Grotto Boulder'",
             "DMC Fire Temple Entrance": "
                 logic_fewer_tunic_requirements and is_adult and (Hover_Boots or Hookshot) and
-                Fairy and not entrance_shuffle and has_bottles(2)"
+                Fairy and not shuffle_dungeon_entrances and has_bottles(2)"
         }
     },
     {
@@ -2017,7 +2017,7 @@
             "DMC Upper Grotto Entrance": "'DMC Upper Grotto Boulder' and is_adult and 'DMC Ledge Boulder'",
             "DMC Fire Temple Entrance": "
                 logic_fewer_tunic_requirements and is_adult and (Hover_Boots or Hookshot) and
-                Fairy and not entrance_shuffle"
+                Fairy and not shuffle_dungeon_entrances"
         }
     },
     {
@@ -2181,7 +2181,7 @@
         "exits": {
             "DMC From Warp Pad 2 Hearts": "has_hearts(2)",
             "DMC Fire Temple Entrance": "
-                Fairy and not entrance_shuffle and
+                Fairy and not shuffle_dungeon_entrances and
                 ((is_child and shuffle_dungeon_entrances) or (is_adult and logic_fewer_tunic_requirements))"
         }
     },

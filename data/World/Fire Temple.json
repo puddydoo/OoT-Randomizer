@@ -2,10 +2,41 @@
     {
         "region_name": "Fire Temple Lower",
         "dungeon": "Fire Temple",
+        "events": {
+            "Fire Temple Child FW Access": "
+                can_use(Farores_Wind) and
+                (at('Deku Tree Lobby', is_child) or
+                at('Dodongos Cavern Beginning', is_child) or
+                at('Jabu Jabus Belly Beginning', is_child) or
+                at('Forest Temple Lobby', is_child) or
+                at('Water Temple Lobby', is_child) or
+                at('Spirit Temple Lobby', is_child) or
+                at('Shadow Temple Entryway', is_child) or
+                at('Bottom of the Well', is_child) or
+                at('Ice Cavern Beginning', is_child) or
+                at('Gerudo Training Grounds Lobby', is_child))",
+            "Fire Temple Adult FW Access": "
+                can_use(Farores_Wind) and
+                (at('Deku Tree Lobby', is_adult) or
+                at('Dodongos Cavern Beginning', is_adult) or
+                at('Jabu Jabus Belly Beginning', is_adult) or
+                at('Forest Temple Lobby', is_adult) or
+                at('Water Temple Lobby', is_adult) or
+                at('Spirit Temple Lobby', is_adult) or
+                at('Shadow Temple Entryway', is_adult) or
+                at('Bottom of the Well', is_adult) or
+                at('Ice Cavern Beginning', is_adult) or
+                at('Gerudo Training Grounds Lobby', is_adult))"
+            "Fire Temple Child No Fairy": "has_hearts(2) or 'Fire Temple Child FW Access'",
+            "Fire Temple Adult No Fairy": "
+                can_use(Goron_Tunic) or has_hearts(5) or 'Fire Temple Adult FW Access' or
+                at('DMC From Warp Pad 2 Hearts', is_adult) or
+                ((Hover_Boots or Hookshot) and at('DMC From Goron City 3 Hearts', is_adult))"
+        },
         "locations": {
             "Fire Temple Near Boss Chest": "
                 can_use(Goron_Tunic) or (logic_fewer_tunic_requirements and
-                has_hearts(1) and (has_hearts(2) or Fairy))",
+                has_hearts(1) and (has_hearts(2) or fire_fairy))",
             "Fire Temple Flare Dancer Chest": "
                 ((Small_Key_Fire_Temple, 8) or not keysanity) and can_use(Megaton_Hammer)",
             "Fire Temple Boss Key Chest": "
@@ -13,22 +44,22 @@
             "Fire Temple GS Boss Key Loop": "
                 ((Small_Key_Fire_Temple, 8) or not keysanity) and can_use(Megaton_Hammer)",
             "Fairy Pot": "
-                has_bottle and
-                ((can_use(Hover_Boots) and (Goron_Tunic or (logic_fewer_tunic_requirements and has_hearts(2)))) or
-                (can_use(Hookshot) and (Goron_Tunic or (logic_fewer_tunic_requirements and
-                    (three_heart_heat)))))"
+                has_bottle and (Goron_Tunic or logic_fewer_tunic_requirements) and
+                ((can_use(Hover_Boots) and (Goron_Tunic or has_hearts(2))) or
+                (can_use(Hookshot) and (Goron_Tunic or
+                    (three_heart_heat))))"
         },
         "exits": {
             "DMC From Fire Temple": "True",
             "Fire Temple Boss Room": "
-                can_use(Megaton_Hammer) and Boss_Key_Fire_Temple and 
-                ((logic_fire_boss_door_jump and (Goron_Tunic or (logic_fewer_tunic_requirements and
-                    (unknown_heart_heat)))) or
-                (Hover_Boots and (Goron_Tunic or (logic_fewer_tunic_requirements and
-                    (unknown_heart_heat)))) or
+                can_use(Megaton_Hammer) and Boss_Key_Fire_Temple and (Goron_Tunic or logic_fewer_tunic_requirements) and
+                ((logic_fire_boss_door_jump and (Goron_Tunic or
+                    (unknown_heart_heat))) or
+                (Hover_Boots and (Goron_Tunic or
+                    (unknown_heart_heat))) or
                 (at('Fire Temple Upper', can_play(Song_of_Time) or has_explosives) and
-                (Goron_Tunic or (logic_fewer_tunic_requirements and
-                    (unknown_heart_heat)))))",
+                (Goron_Tunic or
+                    (unknown_heart_heat))))",
             "Fire Temple Big Lava Room": "(Small_Key_Fire_Temple, 2)"
         }
     },
@@ -37,41 +68,41 @@
         "dungeon": "Fire Temple",
         "events": {
             "Fire Temple Big Lava Room Blocked Door": "
-                is_adult and
-                ((Bombs and (Goron_Tunic or (logic_fewer_tunic_requirements and
-                    (three_heart_heat)))) or
-                (has_bombchus and(Goron_Tunic or (logic_fewer_tunic_requirements and
-                    (three_heart_heat)))))"
+                is_adult and (Goron_Tunic or logic_fewer_tunic_requirements) and
+                ((Bombs and (Goron_Tunic or
+                    (three_heart_heat))) or
+                (has_bombchus and(Goron_Tunic or
+                    (three_heart_heat))))"
         },
         "locations": {
             "Fire Temple Big Lava Room Lower Open Door Chest": "
                 can_use(Goron_Tunic) or (logic_fewer_tunic_requirements and
-                has_hearts(1) and (has_hearts(2) or Fairy))",
+                has_hearts(1) and (has_hearts(2) or fire_fairy))",
             "Fire Temple Big Lava Room Blocked Door Chest": "
                 is_adult and 'Fire Temple Big Lava Room Blocked Door' and
                 (Goron_Tunic or (logic_fewer_tunic_requirements and
                     (three_heart_heat)))",
             "Fire Temple GS Song of Time Room": "
-                is_adult and
-                ((can_play(Song_of_Time) and (Goron_Tunic or (logic_fewer_tunic_requirements and
-                    (three_heart_heat)))) or
-                (logic_fire_song_of_time and (Goron_Tunic or (logic_fewer_tunic_requirements and
-                    (three_heart_heat)))))"
+                is_adult and (Goron_Tunic or logic_fewer_tunic_requirements) and
+                ((can_play(Song_of_Time) and (Goron_Tunic or
+                    (three_heart_heat))) or
+                (logic_fire_song_of_time and (Goron_Tunic or
+                    (three_heart_heat))))"
         },
         "exits": {
             "Fire Temple Lower": "True",
             "Fire Temple Middle": "
-                is_adult and (Small_Key_Fire_Temple, 4) and
+                is_adult and (Small_Key_Fire_Temple, 4) and (Goron_Tunic or logic_fewer_tunic_requirements) and
                 (((has_explosives or Bow) and
-                    ((Progressive_Strength_Upgrade and (Goron_Tunic or (logic_fewer_tunic_requirements and
-                        (unknown_heart_heat)))) or
-                    (logic_fire_strength and (Goron_Tunic or (logic_fewer_tunic_requirements and
-                        (unknown_heart_heat)))))) or
+                    ((Progressive_Strength_Upgrade and (Goron_Tunic or
+                        (unknown_heart_heat))) or
+                    (logic_fire_strength and (Goron_Tunic or
+                        (unknown_heart_heat))))) or
                 (Progressive_Hookshot and
-                    ((Progressive_Strength_Upgrade and (Goron_Tunic or (logic_fewer_tunic_requirements and
-                        (unknown_heart_heat)))) or
-                    (logic_fire_strength and (Goron_Tunic or (logic_fewer_tunic_requirements and
-                        (unknown_heart_heat)))))))"
+                    ((Progressive_Strength_Upgrade and (Goron_Tunic or
+                        (unknown_heart_heat))) or
+                    (logic_fire_strength and (Goron_Tunic or
+                        (unknown_heart_heat))))))"
         }
     },
     {
