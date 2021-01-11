@@ -27,8 +27,8 @@
                 at('Bottom of the Well', is_adult) or
                 at('Ice Cavern Beginning', is_adult) or
                 at('Gerudo Training Grounds Lobby', is_adult))"
-            "Fire Temple Child No Fairy": "has_hearts(2) or 'Fire Temple Child FW Access'",
-            "Fire Temple Adult No Fairy": "
+            "Fire Temple Child Fairy": "has_hearts(2) or 'Fire Temple Child FW Access'",
+            "Fire Temple Adult Fairy": "
                 can_use(Goron_Tunic) or has_hearts(5) or 'Fire Temple Adult FW Access' or
                 at('DMC From Warp Pad 2 Hearts', is_adult) or
                 ((Hover_Boots or Hookshot) and at('DMC From Goron City 3 Hearts', is_adult))"
@@ -50,7 +50,7 @@
                 is_adult and Boss_Key_Fire_Temple and (Goron_Tunic or (logic_fewer_tunic_requirements and has_hearts(1))) and
                 ((logic_fire_boss_door_jump and has_fire_source and (Goron_Tunic or fire_fairy or has_hearts(2))) or
                 (Hover_Boots and has_fire_source and (Goron_Tunic or fire_fairy or has_hearts(2))) or
-                'Fire Temple Boss Door Stone')",
+                (Megaton_Hammer and at('Fire Temple Upper', can_play(Song_of_Time) or has_explosives)))",
             "Fire Lower Locked Door": "(Small_Key_Fire_Temple, 5) and (is_adult or Kokiri_Sword)",
             "Fire Big Lava Room": "can_use(Megaton_Hammer)"
         }
@@ -59,8 +59,8 @@
         "region_name": "Fire Lower Locked Door",
         "dungeon": "Fire Temple",
         "events": {
-            "Fire Temple Child No Fairy": "is_child",
-            "Fire Temple Adult No Fairy": "is_adult"
+            "Fire Temple Child Fairy": "is_child",
+            "Fire Temple Adult Fairy": "is_adult"
         },
         "locations": {
             "Fire Temple MQ Megaton Hammer Chest": "is_adult and (has_explosives or Megaton_Hammer or Hookshot)",
@@ -96,8 +96,8 @@
         "region_name": "Fire Boss Key Room",
         "dungeon": "Fire Temple",
         "events": {
-            "Fire Temple Child No Fairy": "is_child",
-            "Fire Temple Adult No Fairy": "is_adult"
+            "Fire Temple Child Fairy": "is_child",
+            "Fire Temple Adult Fairy": "is_adult"
         },
         "locations": {
             "Fire Temple MQ Boss Key Chest": "can_use(Hookshot)",
@@ -121,10 +121,6 @@
     {
         "region_name": "Fire Upper Maze",
         "dungeon": "Fire Temple",
-        "events": {
-            "Fire Temple Lava Grate Room Torch": "
-                (can_use(Fire_Arrows) or (Bow and Hookshot and (has_hearts(2) or (Fairy and has_bottles(3)))))"
-        },
         "locations": {
             "Fire Temple MQ Lizalfos Maze Upper Chest": "True",
             "Fire Temple MQ Compass Chest": "has_explosives",
@@ -148,9 +144,6 @@
     {
         "region_name": "Fire Temple Upper",
         "dungeon": "Fire Temple",
-        "events": {
-            "Fire Temple Boss Door Stone": "Megaton_Hammer and (can_play(Song_of_Time) or has_explosives)"
-        },
         "locations": {
             "Fire Temple MQ Freestanding Key": "can_use(Hookshot) or logic_fire_mq_flame_maze",
             "Fire Temple MQ Chest On Fire": "
@@ -167,8 +160,14 @@
         "region_name": "Fire Boss Room",
         "dungeon": "Fire Temple",
         "locations": {
-            "Fire Temple Volvagia Heart": "Goron_Tunic or (logic_volvagia_tunic and unknown_heart_heat)",
-            "Volvagia": "Goron_Tunic or (logic_volvagia_tunic and unknown_heart_heat)"
+            "Fire Temple Volvagia Heart": "
+                can_use(Megaton_Hammer) and (Goron_Tunic or (logic_volvagia_tunic and
+                unknown_heart_heat and (unknown_heart_heat or (fire_fairy and (unknown_heart_heat or
+                    (has_bottles(2) and (unknown_heart_heat or (has_bottles(3) and (unknown_heart_heat or has_bottles(4))))))))))",
+            "Volvagia": "
+                can_use(Megaton_Hammer) and (Goron_Tunic or (logic_volvagia_tunic and
+                unknown_heart_heat and (unknown_heart_heat or (fire_fairy and (unknown_heart_heat or
+                    (has_bottles(2) and (unknown_heart_heat or (has_bottles(3) and (unknown_heart_heat or has_bottles(4))))))))))"
         }
     }
 ]

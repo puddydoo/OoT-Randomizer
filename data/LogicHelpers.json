@@ -46,7 +46,7 @@
     "is_adult": "age == 'adult'",
     "is_starting_age": "age == starting_age",
     "is_glitched": "logic_rules != 'glitchless'",
-    "fire_fairy": "Fairy and (shuffle_dungeon_entrances or (is_child and 'Fire Temple Child No Fairy') or (is_adult and 'Fire Temple Adult No Fairy'))",
+    "fire_fairy": "Fairy and (shuffle_dungeon_entrances or (is_child and 'Fire Temple Child Fairy') or (is_adult and 'Fire Temple Adult Fairy'))",
     "can_blast_or_smash": "has_explosives or can_use(Megaton_Hammer)",
     "can_child_attack": "is_child and (Slingshot or Boomerang or Sticks or Kokiri_Sword or has_explosives or can_use(Dins_Fire))",
     "can_child_damage": "is_child and (Slingshot or Sticks or Kokiri_Sword or has_explosives or can_use(Dins_Fire))",
