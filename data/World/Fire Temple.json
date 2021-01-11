@@ -53,6 +53,7 @@
                 ((logic_fire_boss_door_jump and has_fire_source and (Goron_Tunic or fire_fairy or has_hearts(2))) or
                 (Hover_Boots and has_fire_source and (Goron_Tunic or fire_fairy or has_hearts(2))) or
                 (Megaton_Hammer and at('Fire Temple Upper', can_play(Song_of_Time) or has_explosives)))",
+                    # Volvagia requires more than 1 heart and boss room resets the timer so what you do in this room doesn't matter
             "Fire Temple Big Lava Room": "(Small_Key_Fire_Temple, 2)"
         }
     },
