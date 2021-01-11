@@ -51,8 +51,8 @@
         "dungeon": "Gerudo Training Grounds",
         "locations": {
             "Gerudo Training Grounds Underwater Silver Rupee Chest": "
-                three_heart_drown and can_use(Hookshot) and can_play(Song_of_Time) and Iron_Boots and 
-                    (logic_fewer_tunic_requirements or can_use(Zora_Tunic))"
+                can_use(Hookshot) and can_play(Song_of_Time) and Iron_Boots and 
+                (Zora_Tunic or (logic_fewer_tunic_requirements and has_hearts(1)))"
         },
         "exits": {
             "Gerudo Training Grounds Central Maze Right": "can_play(Song_of_Time) or is_child",
