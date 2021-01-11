@@ -26,7 +26,7 @@
                 at('Shadow Temple Entryway', is_adult) or
                 at('Bottom of the Well', is_adult) or
                 at('Ice Cavern Beginning', is_adult) or
-                at('Gerudo Training Grounds Lobby', is_adult))"
+                at('Gerudo Training Grounds Lobby', is_adult))",
             "Fire Temple Child Fairy": "has_hearts(2) or 'Fire Temple Child FW Access'",
             "Fire Temple Adult Fairy": "
                 is_adult and (Goron_Tunic or has_hearts(5) or 'Fire Temple Adult FW Access' or
@@ -44,7 +44,7 @@
                 ((Small_Key_Fire_Temple, 8) or not keysanity) and can_use(Megaton_Hammer)",
             "Fairy Pot": "
                 has_bottle and (Goron_Tunic or (logic_fewer_tunic_requirements and has_hearts(2)) and
-                (can_use(Hover_Boots) or can_use(Hookshot))"
+                (can_use(Hover_Boots) or can_use(Hookshot)))"
         },
         "exits": {
             "DMC From Fire Temple": "True",
@@ -96,7 +96,7 @@
         "exits": {
             "Fire Temple Upper Maze": "
                 (Small_Key_Fire_Temple, 6) and (Goron_Tunic or (Small_Key_Fire_Temple, 7) or
-                can_use(Farores_Wind) or has_bottles(4) or has_hearts(3) or (has_hearts(2) and Hookshot and has_bottles(3)))"
+                can_use(Farores_Wind) or has_bottles(4) or has_hearts(3) or (has_hearts(2) and Hookshot and has_bottles(3)))",
             "Fire Temple Upper": "
                 ((Small_Key_Fire_Temple, 8) or 
                 ((Small_Key_Fire_Temple, 7) and
