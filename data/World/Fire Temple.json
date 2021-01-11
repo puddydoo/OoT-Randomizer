@@ -131,15 +131,17 @@
     {
         "region_name": "Fire Temple Boss Room",
         "dungeon": "Fire Temple",
+        "events": {
+            "Defeat Volvagia": "
+                can_use(Megaton_Hammer) and (Goron_Tunic or (logic_volvagia_tunic and has_hearts(3) and 
+                    ((has_hearts(4) and (has_hearts(17) or (fire_fairy and (has_hearts(8) or
+                        (has_bottles(2) and (has_hearts(6) or (has_bottles(3) and (has_hearts(5) or has_bottles(4))))))))) or
+                    (Bow and (has_hearts(14) or (fire_fairy and (has_hearts(7) or
+                        (has_bottles(2) and (has_hearts(5) or (has_bottles(3) and (has_hearts(4) or has_bottles(4)))))))))))"
+        },
         "locations": {
-            "Fire Temple Volvagia Heart": "
-                can_use(Megaton_Hammer) and (Goron_Tunic or (logic_volvagia_tunic and
-                unknown_heart_heat and (unknown_heart_heat or (fire_fairy and (unknown_heart_heat or
-                    (has_bottles(2) and (unknown_heart_heat or (has_bottles(3) and (unknown_heart_heat or has_bottles(4))))))))))",
-            "Volvagia": "
-                can_use(Megaton_Hammer) and (Goron_Tunic or (logic_volvagia_tunic and
-                unknown_heart_heat and (unknown_heart_heat or (fire_fairy and (unknown_heart_heat or
-                    (has_bottles(2) and (unknown_heart_heat or (has_bottles(3) and (unknown_heart_heat or has_bottles(4))))))))))"
+            "Fire Temple Volvagia Heart": "'Defeat Volvagia'",
+            "Volvagia": "'Defeat Volvagia'"
         }
     }
 ]
