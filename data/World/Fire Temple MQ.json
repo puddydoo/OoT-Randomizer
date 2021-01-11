@@ -165,7 +165,7 @@
                     ((has_hearts(4) and (has_hearts(17) or (fire_fairy and (has_hearts(8) or
                         (has_bottles(2) and (has_hearts(6) or (has_bottles(3) and (has_hearts(5) or has_bottles(4))))))))) or
                     (Bow and (has_hearts(14) or (fire_fairy and (has_hearts(7) or
-                        (has_bottles(2) and (has_hearts(5) or (has_bottles(3) and (has_hearts(4) or has_bottles(4)))))))))))"
+                        (has_bottles(2) and (has_hearts(5) or (has_bottles(3) and (has_hearts(4) or has_bottles(4))))))))))))"
         },
         "locations": {
             "Fire Temple Volvagia Heart": "'Defeat Volvagia'",

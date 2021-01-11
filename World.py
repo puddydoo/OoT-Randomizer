@@ -112,8 +112,6 @@ class World(object):
             'Ganons Castle': False
         }
 
-        self.can_take_damage = True
-
         self.damage = 1
         if self.damage_multiplier == 'half':
             self.damage = 0.5
@@ -213,7 +211,6 @@ class World(object):
         new_world.big_poe_count = copy.copy(self.big_poe_count)
         new_world.starting_tod = self.starting_tod
         new_world.starting_age = self.starting_age
-        new_world.can_take_damage = self.can_take_damage
         new_world.damage = self.damage
         new_world.shop_prices = copy.copy(self.shop_prices)
         new_world.triforce_goal = self.triforce_goal
