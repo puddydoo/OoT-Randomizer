@@ -46,7 +46,9 @@
         "dungeon": "Ganons Castle",
         "events": {
             "Fire Trial Clear": "
-                unknown_heart_heat and can_use(Light_Arrows) and Golden_Gauntlets and Longshot"
+                can_use(Light_Arrows) and Golden_Gauntlets and Longshot and (Goron_Tunic or
+                (logic_fire_trial_tunic and has_hearts(1) and (has_hearts(5) or
+                (Fairy and (has_hearts(3) or (has_bottles(2) and (has_hearts(2) or has_bottles(4)))))))"
         }
     },
     {
