@@ -955,8 +955,6 @@ logic_tricks = {
         'name'    : 'logic_volvagia_tunic',
         'tags'    : ("Fire Temple",),
         'tooltip' : '''\
-                    Logic expects ??? hearts or ??? fairies for
-                    beating Volvagia without the Goron Tunic.
                     '''},
     'Light Trial MQ without Hookshot': {
         'name'    : 'logic_light_trial_mq',
@@ -1440,6 +1438,11 @@ logic_tricks = {
                     precise aim and perfect positioning. The main
                     difficulty comes from getting on the very corner
                     of the obelisk without falling into the lava.
+                    '''},
+    'Fire Trial without Goron Tunic': {
+        'name'    : 'logic_fire_trial_tunic',
+        'tags'    : ("Ganon's Castle",),
+        'tooltip' : '''\
                     '''},
     'Shadow Temple Entry with Fire Arrows': {
         'name'    : 'logic_shadow_fire_arrow_entry',
