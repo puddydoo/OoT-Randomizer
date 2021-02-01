@@ -2305,54 +2305,12 @@
             "Bean Plant Fairy": "'DMC Bean Fairy Access'"
         }
     },
-    {
-        "region_name": "DMC Summit Entrance",
-        "scene": "Death Mountain Crater",
-        "hint": "Death Mountain Crater",
-        "exits": {
-            "Death Mountain Summit": "True"
-        }
-    },
-    {
-        "region_name": "DMC Upper Grotto Entrance",
-        "scene": "Death Mountain Crater",
-        "hint": "Death Mountain Crater",
-        "exits": {
-            "DMC Upper Grotto": "True"
-        }
-    },
-    {
-        "region_name": "DMC Goron City Entrance",
-        "scene": "Death Mountain Crater",
-        "hint": "Death Mountain Crater",
-        "exits": {
-            "GC Darunias Chamber": "True"
-        }
-    },
-    {
-        "region_name": "DMC Hammer Grotto Entrance",
-        "scene": "Death Mountain Crater",
-        "hint": "Death Mountain Crater",
-        "exits": {
-            "DMC Hammer Grotto": "True"
-        }
-    },
-    {
-        "region_name": "DMC Great Fairy Fountain Entrance",
-        "scene": "Death Mountain Crater",
-        "hint": "Death Mountain Crater",
-        "exits": {
-            "DMC Great Fairy Fountain": "True"
-        }
-    },
-    {
-        "region_name": "DMC Fire Temple Entrance",
-        "scene": "Death Mountain Crater",
-        "hint": "Death Mountain Crater",
-        "exits": {
-            "Fire Temple Lower": "True"
-        }
-    },
+    {"region_name": "DMC Summit Entrance","scene": "Death Mountain Crater","hint": "Death Mountain Crater","exits": {"Death Mountain Summit": "True"}},
+    {"region_name": "DMC Upper Grotto Entrance","scene": "Death Mountain Crater","hint": "Death Mountain Crater","exits": {"DMC Upper Grotto": "True"}},
+    {"region_name": "DMC Goron City Entrance","scene": "Death Mountain Crater","hint": "Death Mountain Crater","exits": {"GC Darunias Chamber": "True"}},
+    {"region_name": "DMC Hammer Grotto Entrance","scene": "Death Mountain Crater","hint": "Death Mountain Crater","exits": {"DMC Hammer Grotto": "True"}},
+    {"region_name": "DMC Great Fairy Fountain Entrance","scene": "Death Mountain Crater","hint": "Death Mountain Crater","exits": {"DMC Great Fairy Fountain": "True"}},
+    {"region_name": "DMC Fire Temple Entrance","scene": "Death Mountain Crater","hint": "Death Mountain Crater","exits": {"Fire Temple Lower": "True"}},
     {
         "region_name": "DMC Great Fairy Fountain",
         "scene": "DMC Great Fairy Fountain",
