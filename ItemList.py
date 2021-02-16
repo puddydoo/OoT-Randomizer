@@ -153,9 +153,9 @@ item_table = {
     'Blue Potion':                                     ('Item',     None,  True,  0x12, None),
     'Fairy':                                           ('Item',     True,  True,  0x13, {'limit_item': 'Fairy (Limited)'}),
     'Chicken':                                         ('Item',     True,  None,  0x19, None),
-    'Time Travel':                                     ('Event',    True,  None,  None, None),
-    'Scarecrow Song':                                  ('Event',    True,  None,  None, None),
-    'Triforce':                                        ('Event',    True,  None,  None, None),
+    'Time Travel':                                     ('Event',    True,  False, None, None),
+    'Scarecrow Song':                                  ('Event',    True,  False, None, None),
+    'Triforce':                                        ('Event',    True,  False, None, None),
 
     # Items with different logic if they are not placed in repeatable locations
     'Deku Nuts (5) (Limited)':          ('Item',     None,  True,  0x02, None),
