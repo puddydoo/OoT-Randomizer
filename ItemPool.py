@@ -491,7 +491,7 @@ fixedlocations = {
     'Market Mask Shop Gerudo Mask': 'Gerudo Mask',
     'Market Mask Shop Mask of Truth': 'Mask of Truth',
 
-    'Granny Blue Potion': 'Rupees', # Blue Potion
+    'Kak Granny Blue Potion': 'Rupees', # Blue Potion
     'Market Poe Sale': 'Rupees', # 10
     'Market Big Poe Sale': 'Rupees (50)',
     'Market Bug Sale': 'Rupees (50)',

@@ -74,6 +74,7 @@
     },
     {
         "region_name": "Egg Hatch",
+        "hint": "Link's Pocket",
         "locations": {
             "Hatch Weird Egg": "can_leave_forest and is_child and (Weird_Egg or skip_child_zelda)",
             "Hatch Pocket Egg": "is_adult and (Pocket_Egg or Claim_Check)"
@@ -798,7 +799,7 @@
         },
         "exits": {
             "Castle Grounds": "True",
-            "HC Garden": "Weird_Egg or skip_child_zelda or (not shuffle_weird_egg)",
+            "HC Garden": "Chicken or skip_child_zelda",
             "HC Great Fairy Fountain": "has_explosives",
             "HC Storms Grotto": "can_open_storm_grotto"
         }
@@ -1215,7 +1216,7 @@
         "scene": "Kak Odd Medicine Building",
         "locations": {
             "Kak Odd Potion": "is_adult and (Odd_Mushroom or Claim_Check)",
-            "Granny Blue Potion": "is_adult and Progressive_Wallet and 'Poachers Saw Access'"
+            "Kak Granny Blue Potion": "is_adult and Progressive_Wallet and 'Poachers Saw Access'"
         },
         "exits": {
             "Kak Backyard": "True"

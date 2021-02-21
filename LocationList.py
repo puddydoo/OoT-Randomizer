@@ -840,7 +840,7 @@ location_table = OrderedDict([
     ("ZR Eponas Song Frog",                             ("Event",       0x54,  None, None,                     ("Zora's River",))),
     ("ZR Song of Time Frog",                            ("Event",       0x54,  None, None,                     ("Zora's River",))),
 
-    ("Granny Blue Potion",                              ("Event",       0x4E,  None, None,                     ("Kakariko Village", "Kakariko",))),
+    ("Kak Granny Blue Potion",                          ("Event",       0x4E,  None, None,                     ("Kakariko Village", "Kakariko",))),
     ("Market Poe Sale",                                 ("Event",       None,  None, None,                     ("the Market", "Hyrule Castle",))),
     ("Market Big Poe Sale",                             ("Event",       None,  None, None,                     ("the Market", "Hyrule Castle",))),
     ("Market Bug Sale",                                 ("Event",       None,  None, None,                     ("the Market", "Market",))),

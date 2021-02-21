@@ -27,6 +27,7 @@
     },
     {
         "region_name": "Egg Hatch",
+        "hint": "Link's Pocket",
         "locations": {
             "Hatch Weird Egg": "is_child and (Weird_Egg or skip_child_zelda)",
             "Hatch Pocket Egg": "is_adult and (Pocket_Egg or Claim_Check)"
@@ -464,7 +465,7 @@
         "exits": {
             "Market": "True",
             #// garden will logically need chicken as letter first can screw over the mask quest
-            "HC Garden": "Chicken or skip_child_zelda or (not shuffle_weird_egg)",
+            "HC Garden": "Chicken or skip_child_zelda",
             "HC Great Fairy Fountain": "True",
             "HC Storms Grotto": "can_play(Song_of_Storms)"
         }
@@ -733,7 +734,7 @@
         "region_name": "Kak Odd Medicine Building",
         "locations": {
             "Kak Odd Potion": "is_adult and Claim_Check",
-            "Granny Blue Potion": "
+            "Kak Granny Blue Potion": "
                 is_adult and Progressive_Wallet and Poachers_Saw"
         }
     },
