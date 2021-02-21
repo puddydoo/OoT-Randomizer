@@ -67,7 +67,8 @@
             "Dodongos Cavern MQ GS Scrub Room": "
                 (here(can_use(Bow)) or Progressive_Strength_Upgrade or
                  can_use(Dins_Fire) or has_explosives) and
-                (can_use(Hookshot) or can_use(Boomerang))"
+                (can_use(Hookshot) or can_use(Boomerang))",
+            "Poe Kill": "has_bottle and (is_adult or can_child_damage)"
         },
         "exits": {
             "Dodongos Cavern Lower Right Side": "True"

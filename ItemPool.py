@@ -479,7 +479,42 @@ fixedlocations = {
     'Pierre': 'Scarecrow Song',
     'Deliver Rutos Letter': 'Deliver Letter',
     'Master Sword Pedestal': 'Time Travel',
+    'Hatch Weird Egg': 'Chicken',
+    'Hatch Pocket Egg': 'Pocket Cucco',
     'Market Bombchu Bowling Bombchus': 'Bombchu Drop',
+    'Market Mask Shop Keaton Mask': 'Keaton Mask',
+    'Market Mask Shop Spooky Mask': 'Spooky Mask',
+    'Market Mask Shop Skull Mask': 'Skull Mask',
+    'Market Mask Shop Bunny Hood': 'Bunny Hood',
+    'Market Mask Shop Zora Mask': 'Zora Mask',
+    'Market Mask Shop Goron Mask': 'Goron Mask',
+    'Market Mask Shop Gerudo Mask': 'Gerudo Mask',
+    'Market Mask Shop Mask of Truth': 'Mask of Truth',
+
+    'Granny Blue Potion': 'Rupees', # Blue Potion
+    'Market Poe Sale': 'Rupees', # 10
+    'Market Big Poe Sale': 'Rupees (50)',
+    'Market Bug Sale': 'Rupees (50)',
+    'Market Fish Sale': 'Rupees', # 100
+    'Market Blue Fire Sale': 'Rupees', # 150
+    'Kak Bug Sale': 'Rupees (50)',
+    'Kak Fish Sale': 'Rupees', # 100
+    'Kak Blue Fire Sale': 'Rupees', # 150
+    'Kak Keaton Mask Sale': 'Rupees', # 15
+    'LW Skull Mask Sale': 'Rupees', # 10
+    'Graveyard Spooky Mask Sale': 'Rupees', # 30
+    'HF Bunny Hood Sale': 'Rupees', # Wallet fill
+
+    'Kak Cojiro': 'Cojiro',
+    'LW Poachers Saw': 'Poachers Saw',
+    'GV Broken Sword': 'Broken Sword',
+    'DMT Prescription': 'Prescription',
+    'DMT Claim Check': 'Claim Check',
+
+    'LW Odd Mushroom': 'Odd Mushroom',
+    'Kak Odd Potion': 'Odd Potion',
+    'ZD Eyeball Frog': 'Eyeball Frog',
+    'LH Eyedrops': 'Eyedrops',
 }
 
 droplocations = {
@@ -501,6 +536,7 @@ droplocations = {
     'Gossip Stone Fairy': 'Fairy',
     'Bean Plant Fairy': 'Fairy',
     'Fairy Pond': 'Fairy',
+    'Poe Kill': 'Poe',
     'Big Poe Kill': 'Big Poe',
 }
 

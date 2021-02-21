@@ -28,6 +28,7 @@
     "Blue_Fire": "'Blue Fire' or Buy_Blue_Fire",
     "Fish": "'Fish' or Buy_Fish",
     "Fairy": "'Fairy' or Buy_Fairys_Spirit",
+    "Poe": "'Poe' or Buy_Poe",
     # "Big_Poe": "'Big Poe'",
 
     "has_bombchus": "(Buy_Bombchu_5 or Buy_Bombchu_10 or Buy_Bombchu_20 or Bombchu_Drop) and (bombchus_in_logic or Bomb_Bag)",
