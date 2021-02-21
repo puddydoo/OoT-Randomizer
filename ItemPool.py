@@ -515,6 +515,12 @@ fixedlocations = {
     'Kak Odd Potion': 'Odd Potion',
     'ZD Eyeball Frog': 'Eyeball Frog',
     'LH Eyedrops': 'Eyedrops',
+    
+    "ZR Zeldas Lullaby Frog": "Rupees (50)",
+    "ZR Sarias Song Frog": "Rupees (50)",
+    "ZR Suns Song Frog": "Rupees (50)",
+    "ZR Eponas Song Frog": "Rupees (50)",
+    "ZR Song of Time Frog": "Rupees (50)",
 }
 
 droplocations = {

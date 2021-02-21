@@ -1037,6 +1037,11 @@
         "time_passes": true,
         "locations": {
             "ZR Magic Bean Salesman": "is_child",
+            "ZR Zeldas Lullaby Frog": "is_child and can_play(Zeldas_Lullaby)",
+            "ZR Sarias Song Frog": "is_child and can_play(Sarias_Song)",
+            "ZR Suns Song Frog": "is_child and can_play(Suns_Song)",
+            "ZR Eponas Song Frog": "is_child and can_play(Eponas_Song)",
+            "ZR Song of Time Frog": "is_child and can_play(Song_of_Time)",
             "ZR Frogs Ocarina Game": "
                 is_child and can_play(Zeldas_Lullaby) and can_play(Sarias_Song) and 
                 can_play(Suns_Song) and can_play(Eponas_Song) and 
