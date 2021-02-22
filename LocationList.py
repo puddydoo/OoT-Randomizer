@@ -814,7 +814,8 @@ location_table = OrderedDict([
     ## Events and Drops
     ("Pierre",                                          ("Event",       None,  None, None,                     None)),
     ("Deliver Rutos Letter",                            ("Event",       None,  None, None,                     None)),
-    ("Master Sword Pedestal",                           ("Event",       None,  None, None,                     None)),
+    ("Master Sword Pedestal as Child",                  ("Event",       None,  None, None,                     None)),
+    ("Master Sword Pedestal as Adult",                  ("Event",       None,  None, None,                     None)),
 
     ("Deku Baba Sticks",                                ("Drop",        None,  None, None,                     None)),
     ("Deku Baba Nuts",                                  ("Drop",        None,  None, None,                     None)),

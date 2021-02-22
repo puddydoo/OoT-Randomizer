@@ -1898,9 +1898,10 @@ setting_infos = [
 
             'Closed Forest': The paths to the Deku Tree and out of
             the forest are both blocked. With Glitchless logic,
-            starting as adult without shuffling "Overworld" or "All
-            Indoors" entrances and without randomizing overworld
-            spawns will force this to Closed Deku if selected.
+            starting as adult, without Open Door of Time, without
+            shuffling "Overworld" and "All Indoors" entrances,
+            and with overworld spawns unrandomized, will force
+            this to Closed Deku if selected.
         ''',
         shared         = True,
         gui_params     = {
@@ -2404,9 +2405,6 @@ setting_infos = [
             Song to collect them. This prevents needing
             to wait until night for some locations.
         ''',
-        gui_params={
-            "hide_when_disabled": True,
-        },
         shared         = True,
         gui_params     = {
             'no_line_break' : True,

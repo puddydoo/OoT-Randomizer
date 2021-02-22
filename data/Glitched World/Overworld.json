@@ -422,7 +422,8 @@
         "region_name": "Beyond Door of Time",
         "hint": "Temple of Time",
         "locations": {
-            "Master Sword Pedestal": "True",
+            "Master Sword Pedestal as Child": "age == 'child'",
+            "Master Sword Pedestal as Adult": "age == 'adult'",
             "Sheik at Temple": "Forest_Medallion and is_adult"
         },
         "exits": {

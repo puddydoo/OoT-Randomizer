@@ -478,7 +478,8 @@ fixedlocations = {
     'Ganon': 'Triforce',
     'Pierre': 'Scarecrow Song',
     'Deliver Rutos Letter': 'Deliver Letter',
-    'Master Sword Pedestal': 'Time Travel',
+    'Master Sword Pedestal as Child': 'Time Travel',
+    'Master Sword Pedestal as Adult': 'Time Travel',
     'Market Bombchu Bowling Bombchus': 'Bombchu Drop',
 }
 

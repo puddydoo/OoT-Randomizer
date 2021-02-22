@@ -13,15 +13,15 @@
     {
         "region_name": "Root Exits",
         "exits": {
-            "Child Spawn": "is_child",
-            "Adult Spawn": "is_adult",
-            "Beyond Door of Time": "Time_Travel",
-            "Prelude of Light Warp": "can_play(Prelude_of_Light) and can_leave_forest",
-            "Minuet of Forest Warp": "can_play(Minuet_of_Forest) and (not warp_songs or can_leave_forest)",
-            "Bolero of Fire Warp": "can_play(Bolero_of_Fire) and can_leave_forest",
-            "Serenade of Water Warp": "can_play(Serenade_of_Water) and can_leave_forest",
-            "Nocturne of Shadow Warp": "can_play(Nocturne_of_Shadow) and can_leave_forest",
-            "Requiem of Spirit Warp": "can_play(Requiem_of_Spirit) and can_leave_forest"
+            "Child Spawn": "age == 'child'",
+            "Adult Spawn": "age == 'adult'",
+            "Beyond Door of Time": "(Time_Travel, 2)",
+            "Prelude of Light Warp": "can_play(Prelude_of_Light) and (is_adult or (is_child and can_leave_forest))",
+            "Minuet of Forest Warp": "can_play(Minuet_of_Forest) and (is_adult or is_child) and (not warp_songs or can_leave_forest)",
+            "Bolero of Fire Warp": "can_play(Bolero_of_Fire) and (is_adult or (is_child and can_leave_forest))",
+            "Serenade of Water Warp": "can_play(Serenade_of_Water) and (is_adult or (is_child and can_leave_forest))",
+            "Nocturne of Shadow Warp": "can_play(Nocturne_of_Shadow) and (is_adult or (is_child and can_leave_forest))",
+            "Requiem of Spirit Warp": "can_play(Requiem_of_Spirit) and (is_adult or (is_child and can_leave_forest))"
         }
     },
     {
@@ -104,7 +104,7 @@
             "Lost Woods": "True",
             "LW Bridge From Forest": "
                 open_forest != 'closed' or is_adult or 'Deku Tree Clear' or
-                (Time_Travel_Test and logic_require_deku and (separate_forest_entrances or not (shuffle_special_interior_entrances or shuffle_overworld_entrances or spawn_positions))",
+                (Time_Travel_Test and logic_require_deku and (separate_forest_entrances or not (shuffle_special_interior_entrances or shuffle_overworld_entrances or spawn_positions)))",
             "KF Storms Grotto": "can_open_storm_grotto"
         }
     },
@@ -115,10 +115,10 @@
         "exits": {
             "Kokiri Forest": "
                 open_forest != 'closed' or is_adult or 'Deku Tree Clear' or
-                (Time_Travel_Test and logic_require_deku and (separate_forest_entrances or not (shuffle_special_interior_entrances or shuffle_overworld_entrances or spawn_positions))",
+                (Time_Travel_Test and logic_require_deku and (separate_forest_entrances or not (shuffle_special_interior_entrances or shuffle_overworld_entrances or spawn_positions)))",
             "LW Bridge From Forest": "
                 open_forest != 'closed' or is_adult or 'Deku Tree Clear' or
-                (Time_Travel_Test and logic_require_deku and (separate_forest_entrances or not (shuffle_special_interior_entrances or shuffle_overworld_entrances or spawn_positions))"
+                (Time_Travel_Test and logic_require_deku and (separate_forest_entrances or not (shuffle_special_interior_entrances or shuffle_overworld_entrances or spawn_positions)))"
         }
     },
     {
@@ -753,7 +753,8 @@
             "ToT Light Arrows Cutscene": "is_adult and can_trigger_lacs"
         },
         "exits": {
-            "ToT Entrance": "True",
+            # Require repeatable adult access to leave ToT
+            "ToT Entrance": "is_child or is_adult",
             "Beyond Door of Time": "can_play(Song_of_Time) or open_door_of_time"
         }
     },
@@ -762,7 +763,8 @@
         "scene": "Temple of Time",
         "hint": "Temple of Time",
         "locations": {
-            "Master Sword Pedestal": "True",
+            "Master Sword Pedestal as Child": "age == 'child'",
+            "Master Sword Pedestal as Adult": "age == 'adult'",
             "Sheik at Temple": "Forest_Medallion and is_adult"
         },
         "exits": {
