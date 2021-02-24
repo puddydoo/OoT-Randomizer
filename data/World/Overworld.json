@@ -7,8 +7,7 @@
         },
         "exits": {
             "Root Exits": "is_starting_age or Time_Travel",
-            "HC Garden Locations": "skip_child_zelda",
-            "Egg Hatch": "True"
+            "HC Garden Locations": "skip_child_zelda"
         }
     },
     {
@@ -70,14 +69,6 @@
         "region_name": "Requiem of Spirit Warp",
         "exits": {
             "Desert Colossus": "True"
-        }
-    },
-    {
-        "region_name": "Egg Hatch",
-        "hint": "Link's Pocket",
-        "locations": {
-            "Hatch Weird Egg": "can_leave_forest and is_child and (Weird_Egg or skip_child_zelda)",
-            "Hatch Pocket Egg": "is_adult and (Pocket_Egg or Claim_Check)"
         }
     },
     {
@@ -212,20 +203,11 @@
         "scene": "Lost Woods",
         "hint": "the Lost Woods",
         "events": {
-            "Sell Skull Mask": "is_child and can_play(Sarias_Song) and (Skull_Mask or Skull_Mask_Non-Repeatable)",
-            "Odd Mushroom Access": "
-                is_adult and
-                (Cojiro or Odd_Mushroom or Odd_Potion or Poachers_Saw or Broken_Sword or
-                Prescription or Eyeball_Frog or Eyedrops or Claim_Check)",
-            "Poachers Saw Access": "
-                is_adult and 'Odd Mushroom Access' and
-                (Odd_Potion or Poachers_Saw or Broken_Sword or Prescription or Eyeball_Frog or Eyedrops or Claim_Check)"
+            "Odd Mushroom Access": "is_adult and ('Cojiro Access' or Cojiro)",
+            "Poachers Saw Access": "is_adult and 'Odd Potion Access'"
         },
         "locations": {
             "LW Skull Kid": "is_child and can_play(Sarias_Song)",
-            "LW Skull Mask Sale": "complete_mask_quest or 'Sell Skull Mask'",
-            "LW Odd Mushroom": "is_adult and 'Odd Mushroom Access'",
-            "LW Poachers Saw": "is_adult and 'Poachers Saw Access'",
             "LW Ocarina Memory Game": "is_child and Ocarina",
             "LW Target in Woods": "can_use(Slingshot)",
             "LW Deku Scrub Near Bridge": "is_child and can_stun_deku",
@@ -347,13 +329,9 @@
         "scene": "Hyrule Field",
         "hint": "Hyrule Field",
         "time_passes": true,
-        "events": {
-            "Sell Bunny Hood": "is_child and has_all_stones and Bunny_Hood"
-        },
         "locations": {
             "HF Ocarina of Time Item": "is_child and has_all_stones",
             "Song from Ocarina of Time": "is_child and has_all_stones",
-            "HF Bunny Hood Sale": "complete_mask_quest or 'Sell Bunny Hood'",
             "Big Poe Kill": "can_use(Bow) and can_ride_epona and has_bottle"
         },
         "exits": {
@@ -440,11 +418,15 @@
     {
         "region_name": "LH Lab",
         "scene": "LH Lab",
+        "events": {
+            "Eyedrops Access": "
+                is_adult and 
+                ('Eyeball Frog Access' or (Eyeball_Frog and disable_trade_revert))"
+        },
         "locations": {
             "LH Lab Dive": "
                 (Progressive_Scale, 2) or
                 (logic_lab_diving and Iron_Boots and can_use(Hookshot))",
-            "LH Eyedrops": "is_adult and (Claim_Check or Eyeball_Frog)",
             "LH GS Lab Crate": "Iron_Boots and can_use(Hookshot)"
         },
         "exits": {
@@ -535,9 +517,11 @@
         "scene": "Gerudo Valley",
         "hint": "Gerudo Valley",
         "time_passes": true,
+        "events": {
+            "Broken Sword Access": "is_adult and ('Poachers Saw Access' or Poachers_Saw)"
+        },
         "locations": {
             "GV Chest": "can_use(Megaton_Hammer)",
-            "GV Broken Sword": "is_adult and (Claim_Check or Poachers_Saw)",
             "GV GS Behind Tent": "can_use(Hookshot) and at_night",
             "GV GS Pillar": "can_use(Hookshot) and at_night"
         },
@@ -705,11 +689,6 @@
         "region_name": "Market",
         "scene": "Market",
         "hint": "the Market",
-        "locations": {
-            "Market Bug Sale": "is_child and Bugs",
-            "Market Fish Sale": "is_child and Fish",
-            "Market Blue Fire Sale": "is_child and Blue_Fire"
-        },
         "exits": {
             "Market Entrance": "True",
             "ToT Entrance": "True",
@@ -863,8 +842,6 @@
             "Sell Big Poe": "is_adult and Bottle_with_Big_Poe"
         },
         "locations": {
-            "Market Poe Sale": "is_adult and Poe",
-            "Market Big Poe Sale": "is_adult and (Big_Poe or Bottle_with_Big_Poe)",
             "Market 10 Big Poes": "
                 is_adult and 
                 (Big_Poe or (Bottle_with_Big_Poe, big_poe_count))",
@@ -895,17 +872,12 @@
         "region_name": "Market Mask Shop",
         "scene": "Market Mask Shop",
         "events": {
-            "Sold All Masks": "Zeldas_Letter and (complete_mask_quest or 'Sell Bunny Hood')"
-        },
-        "locations": {
-            "Market Mask Shop Keaton Mask": "Zeldas_Letter",
-            "Market Mask Shop Skull Mask": "Zeldas_Letter and (complete_mask_quest or 'Sell Keaton Mask')",
-            "Market Mask Shop Spooky Mask": "Zeldas_Letter and (complete_mask_quest or 'Sell Skull Mask')",
-            "Market Mask Shop Bunny Hood": "Zeldas_Letter and (complete_mask_quest or 'Sell Spooky Mask')",
-            "Market Mask Shop Zora Mask": "'Sold All Masks'",
-            "Market Mask Shop Goron Mask": "'Sold All Masks'",
-            "Market Mask Shop Gerudo Mask": "'Sold All Masks'",
-            "Market Mask Shop Mask of Truth": "'Sold All Masks'"
+            "Skull Mask": "Zeldas_Letter and (complete_mask_quest or at('Kakariko Village', is_child))",
+            "Mask of Truth": "'Skull Mask' and
+                (complete_mask_quest or
+                (at('Lost Woods', is_child and can_play(Sarias_Song)) and
+                 at('Graveyard', is_child and at_day) and
+                 at('Hyrule Field', is_child and has_all_stones)))"
         },
         "exits": {
             "Market": "True"
@@ -999,19 +971,14 @@
         "scene": "Kakariko Village",
         "hint": "Kakariko Village",
         "events": {
-            "Kakariko Village Gate Open": "is_child and (Zeldas_Letter or open_kakariko == 'open')",
-            "Sell Keaton Mask": "is_child and Keaton_Mask"
+            "Cojiro Access": "is_adult and 'Wake Up Adult Talon'",
+            "Kakariko Village Gate Open": "is_child and (Zeldas_Letter or open_kakariko == 'open')"
         },
         "locations": {
             "Sheik in Kakariko": "
                 is_adult and Forest_Medallion and Fire_Medallion and Water_Medallion",
             "Kak Anju as Adult": "is_adult and at_day",
             "Kak Anju as Child": "is_child and at_day",
-            "Kak Cojiro": "is_adult and at_day and ('Wake Up Adult Talon' or Claim_Check)",
-            "Kak Bug Sale": "is_adult and Bugs",
-            "Kak Fish Sale": "is_adult and Fish",
-            "Kak Blue Fire Sale": "is_adult and Blue_Fire",
-            "Kak Keaton Mask Sale": "complete_mask_quest or 'Sell Keaton Mask'",
             "Kak GS House Under Construction": "is_child and at_night",
             "Kak GS Skulltula House": "is_child and at_night",
             "Kak GS Guards House": "is_child and at_night",
@@ -1038,7 +1005,7 @@
                 (is_child and at_day) or (is_adult and logic_visible_collisions)",
             "Kak Impas Rooftop": "
                 can_use(Hookshot) or (logic_kakariko_rooftop_gs and can_use(Hover_Boots))",
-            "Kak Grannys Rooftop": "
+            "Kak Odd Medicine Rooftop": "
                 can_use(Hookshot) or 
                 (logic_man_on_roof and 
                     (is_adult or at_day or Slingshot or has_bombchus or 
@@ -1071,7 +1038,7 @@
         }
     },
     {
-        "region_name": "Kak Grannys Rooftop",
+        "region_name": "Kak Odd Medicine Rooftop",
         "scene": "Kakariko Village",
         "hint": "Kakariko Village",
         "locations": {
@@ -1089,7 +1056,7 @@
         "exits": {
             "Kakariko Village": "True",
             "Kak Open Grotto": "True",
-            "Kak Grannys Potion Shop": "is_adult",
+            "Kak Odd Medicine Building": "is_adult",
             "Kak Potion Shop Back": "is_adult and at_day"
         }
     },
@@ -1097,7 +1064,7 @@
         "region_name": "Kak Carpenter Boss House",
         "scene": "Kak Carpenter Boss House",
         "events": {
-            "Wake Up Adult Talon": "is_adult and Pocket_Cucco"
+            "Wake Up Adult Talon": "is_adult and (Pocket_Egg or Pocket_Cucco)"
         },
         "exits": {
             "Kakariko Village": "True"
@@ -1212,12 +1179,12 @@
         }
     },
     {
-        "region_name": "Kak Grannys Potion Shop",
-        "scene": "Kak Grannys Potion Shop",
-        "locations": {
-            "Kak Odd Potion": "is_adult and (Odd_Mushroom or Claim_Check)",
-            "Granny Blue Potion": "
-                is_adult and Progressive_Wallet and 'Poachers Saw Access'"
+        "region_name": "Kak Odd Medicine Building",
+        "scene": "Kak Odd Medicine Building",
+        "events": {
+            "Odd Potion Access": "
+                is_adult and
+                ('Odd Mushroom Access' or (Odd_Mushroom and disable_trade_revert))"
         },
         "exits": {
             "Kak Backyard": "True"
@@ -1227,21 +1194,16 @@
         "region_name": "Graveyard",
         "scene": "Graveyard",
         "hint": "the Graveyard",
-        "events": {
-            "Sell Spooky Mask": "is_child and at_day and Spooky_Mask"
-        },
         "locations": {
             "Graveyard Freestanding PoH": "
                 (is_adult and (here(can_plant_bean) or can_use(Longshot))) or
                 (logic_graveyard_poh and can_use(Boomerang))",
             "Graveyard Dampe Gravedigging Tour": "is_child and at_dampe_time",
-            "Graveyard Spooky Mask Sale": "complete_mask_quest or 'Sell Spooky Mask'",
             "Graveyard GS Wall": "can_use(Boomerang) and at_night",
             "Graveyard GS Bean Patch": "can_plant_bugs and can_child_attack",
             "Butterfly Fairy": "can_use(Sticks) and at_day and has_bottle",
             "Bean Plant Fairy": "can_plant_bean and can_play(Song_of_Storms) and has_bottle",
-            "Bug Rock": "has_bottle",
-            "Poe Kill": "has_bottle and (is_adult or can_child_damage)"
+            "Bug Rock": "has_bottle"
         },
         "exits": {
             "Graveyard Shield Grave": "is_adult or at_night",
@@ -1380,15 +1342,14 @@
         "hint": "Death Mountain Trail",
         "time_passes": true,
         "events": {
-            "Prescription Access": "
-                is_adult and (Broken_Sword or Prescription or Eyeball_Frog or Eyedrops or Claim_Check)",
-            "Claim Check Access": "
-                is_adult and 'Prescription Access' and guarantee_trade_path and Eyedrops"
+            "Prescription Access": "is_adult and ('Broken Sword Access' or Broken_Sword)"
         },
         "locations": {
-            "DMT Prescription": "is_adult and 'Prescription Access'",
-            "DMT Claim Check": "is_adult and ('Claim Check Access' or Claim_Check)",
-            "DMT Biggoron": "is_adult and Claim_Check",
+            "DMT Biggoron": "
+                is_adult and 
+                (Claim_Check or 
+                    (guarantee_trade_path and 
+                    ('Eyedrops Access' or (Eyedrops and disable_trade_revert))))",
             "DMT GS Falling Rocks Path": "
                 is_adult and (can_use(Megaton_Hammer) or logic_trail_gs_upper) and at_night",
             "DMT Gossip Stone": "True",
@@ -1736,7 +1697,10 @@
         "scene": "Zoras Domain",
         "hint": "Zora's Domain",
         "events": {
-            "King Zora Thawed": "is_adult and Blue_Fire"
+            "King Zora Thawed": "is_adult and Blue_Fire",
+            "Eyeball Frog Access": "
+                is_adult and 'King Zora Thawed' and 
+                (Eyedrops or Eyeball_Frog or Prescription or 'Prescription Access')"
         },
         "locations": {
             "ZD Diving Minigame": "is_child",
@@ -1744,9 +1708,6 @@
             "Deliver Rutos Letter": "
                 is_child and Rutos_Letter and zora_fountain != 'open'",
             "ZD King Zora Thawed": "'King Zora Thawed'",
-            "ZD Eyeball Frog": "
-                is_adult and 'King Zora Thawed' and 
-                (Eyedrops or Eyeball_Frog or Prescription or Claim_Check)",
             "ZD GS Frozen Waterfall": "
                 is_adult and at_night and
                 (Progressive_Hookshot or Bow or Magic_Meter or logic_domain_gs)",
@@ -1882,7 +1843,7 @@
     {
         "region_name": "LLR Stables",
         "scene": "LLR Stables",
-        "locations": {
+		"locations": {
             "LLR Stables Left Cow": "can_play(Eponas_Song)",
             "LLR Stables Right Cow": "can_play(Eponas_Song)"
         },
@@ -1965,8 +1926,8 @@
         "region_name": "Deku Theater",
         "scene": "Deku Theater",
         "locations": {
-            "Deku Theater Skull Mask": "is_child and Skull_Mask",
-            "Deku Theater Mask of Truth": "is_child and Mask_of_Truth"
+            "Deku Theater Skull Mask": "is_child and 'Skull Mask'",
+            "Deku Theater Mask of Truth": "is_child and 'Mask of Truth'"
         },
         "exits": {
             "LW Beyond Mido": "True"
@@ -2176,7 +2137,7 @@
     {
         "region_name": "DMT Cow Grotto",
         "scene": "DMT Cow Grotto",
-        "locations": {
+		 "locations": {
             "DMT Cow Grotto Cow": "can_play(Eponas_Song)"
         },
         "exits": {

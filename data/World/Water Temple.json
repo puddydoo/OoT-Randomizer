@@ -143,7 +143,6 @@
         "region_name": "Water Temple Dark Link Region",
         "dungeon": "Water Temple",
         "locations": {
-            "Water Temple Like Like": "can_feed_like_like",
             "Water Temple Longshot Chest": "True",
             "Water Temple River Chest": "can_play(Song_of_Time) and Bow",
             "Water Temple GS River": "

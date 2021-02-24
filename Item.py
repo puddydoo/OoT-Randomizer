@@ -130,7 +130,7 @@ class Item(object):
         if self.type in ('Repeat', 'Drop', 'Event', 'Shop', 'DungeonReward') or not self.advancement:
             return False
 
-        if self.name.startswith('Bombchus') and self.name.endswith('(Non-Repeatable)') and not self.world.abundant_bombchus:
+        if self.name.startswith('Bombchus') and self.name.endswith('(Non-Repeatable)') and not self.world.bombchus_in_logic:
             return False
 
         if self.map or self.compass:

@@ -1868,7 +1868,7 @@ setting_infos = [
                 'sections' : ['open_section', 'shuffle_section', 'shuffle_dungeon_section'],
                 'settings': ['starting_age', 'shuffle_interior_entrances', 'shuffle_grotto_entrances', 'shuffle_dungeon_entrances',
                              'shuffle_overworld_entrances', 'owl_drops', 'warp_songs', 'spawn_positions',
-                             'triforce_hunt', 'triforce_goal_per_world', 'abundant_bombchus', 'one_item_per_dungeon'],
+                             'triforce_hunt', 'triforce_goal_per_world', 'bombchus_in_logic', 'one_item_per_dungeon'],
             }
         },
         shared         = True,
@@ -2216,8 +2216,8 @@ setting_infos = [
         shared         = True
     ),
     Checkbutton(
-        name           = 'abundant_bombchus',
-        gui_text       = 'Abundant Bombchus',
+        name           = 'bombchus_in_logic',
+        gui_text       = 'Bombchus in Logic',
         gui_tooltip    = '''\
             This option changes the availability
             of Bombchus.
@@ -2856,7 +2856,7 @@ setting_infos = [
 
             Non-shop Bombchus will unlock the chu slot
             in your inventory, which is needed to buy
-            Bombchu refills if "Abundant Bombchus" is
+            Bombchu refills if "Bombchus in Logic" is
             enabled. Otherwise, the Bomb Bag is required.
         ''',
         shared         = True,

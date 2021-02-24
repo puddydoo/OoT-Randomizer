@@ -18,7 +18,6 @@
             "Bottom of the Well MQ GS Basement": "can_child_attack",
             "Bottom of the Well MQ GS Coffin Room": "
                 can_child_attack and (Small_Key_Bottom_of_the_Well, 2)",
-            "Poe Kill": "has_bottle and (is_adult or can_child_damage) and (Small_Key_Bottom_of_the_Well, 2)"
             "Wall Fairy": "has_bottle and Slingshot" # The fairy pot is obsolete
         },
         "exits": {

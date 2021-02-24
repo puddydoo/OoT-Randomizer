@@ -1066,7 +1066,7 @@ hintTable = {
     'Kak House of Skulltula':                                   ("the #House of Skulltula#", None, 'region'),
     'Kak Impas House':                                          ("Impa's House", None, 'region'),
     'Kak Impas House Back':                                     ("Impa's cow cage", None, 'region'),
-    'Kak Grannys Potion Shop':                                  ("Granny's Potion Shop", None, 'region'),
+    'Kak Odd Medicine Building':                                ("Granny's Potion Shop", None, 'region'),
     'Graveyard Dampes House':                                   ("Dampe's Hut", None, 'region'),
     'GC Shop':                                                  ("the #Goron Shop#", None, 'region'),
     'ZD Shop':                                                  ("the #Zora Shop#", None, 'region'),

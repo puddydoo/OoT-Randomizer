@@ -479,31 +479,7 @@ fixedlocations = {
     'Pierre': 'Scarecrow Song',
     'Deliver Rutos Letter': 'Deliver Letter',
     'Master Sword Pedestal': 'Time Travel',
-    'Hatch Weird Egg': 'Chicken',
-    'Hatch Pocket Egg': 'Pocket Cucco',
     'Market Bombchu Bowling Bombchus': 'Bombchu Drop',
-    'Market Mask Shop Keaton Mask': 'Keaton Mask',
-    'Market Mask Shop Spooky Mask': 'Spooky Mask',
-    'Market Mask Shop Skull Mask': 'Skull Mask',
-    'Market Mask Shop Bunny Hood': 'Bunny Hood',
-    'Market Mask Shop Zora Mask': 'Zora Mask',
-    'Market Mask Shop Goron Mask': 'Goron Mask',
-    'Market Mask Shop Gerudo Mask': 'Gerudo Mask',
-    'Market Mask Shop Mask of Truth': 'Mask of Truth',
-
-    'Granny Blue Potion': 'Rupees (20)', # IDK how to get it to be a blue potion because it fails to push 'Buy Blue Potion'
-    'Market Poe Sale': 'Rupees (20)', # 10
-    'Market Big Poe Sale': 'Rupees (50)',
-    'Market Bug Sale': 'Rupees (50)',
-    'Market Fish Sale': 'Rupees (200)', # 100
-    'Market Blue Fire Sale': 'Rupees (200)', # 150
-    'Kak Bug Sale': 'Rupees (50)',
-    'Kak Fish Sale': 'Rupees (200)', # 100
-    'Kak Blue Fire Sale': 'Rupees (200)', # 150
-    'Kak Keaton Mask Sale': 'Rupees (20)', # 15
-    'LW Skull Mask Sale': 'Rupees (20)', # 10
-    'Graveyard Spooky Mask Sale': 'Rupees (50)', # 30
-    'HF Bunny Hood Sale': 'Rupees (200)', # Wallet fill
 }
 
 droplocations = {
@@ -525,23 +501,7 @@ droplocations = {
     'Gossip Stone Fairy': 'Fairy Drop',
     'Bean Plant Fairy': 'Fairy Drop',
     'Fairy Pond': 'Fairy Drop',
-    'Poe Kill': 'Poe Drop',
     'Big Poe Kill': 'Big Poe',
-}
-
-tradelocations = {
-    'Kak Cojiro': 'Cojiro',
-    'LW Poachers Saw': 'Poachers Saw',
-    'GV Broken Sword': 'Broken Sword',
-    'DMT Prescription': 'Prescription',
-    'DMT Claim Check': 'Claim Check',
-}
-
-timerlocations = {
-    'LW Odd Mushroom': 'Odd Mushroom',
-    'Kak Odd Potion': 'Odd Potion',
-    'ZD Eyeball Frog': 'Eyeball Frog',
-    'LH Eyedrops': 'Eyedrops',
 }
 
 vanillaBK = {
@@ -805,18 +765,6 @@ def generate_itempool(world):
         item = droplocations[drop_location.name]
         world.push_item(drop_location, ItemFactory(item, world))
         drop_location.locked = True
-    
-    trade_locations = list(filter(lambda loc: loc.name in tradelocations, world.get_locations()))
-    for location in trade_locations:
-        item = tradelocations[location.name]
-        world.push_item(location, ItemFactory(item, world))
-        location.locked = True
-    
-    timer_locations = list(filter(lambda loc: loc.name in timerlocations, world.get_locations()))
-    for location in timer_locations:
-        item = timerlocations[location.name]
-        world.push_item(location, ItemFactory(item, world))
-        location.locked = True
 
     # set up item pool
     (pool, placed_items) = get_pool_core(world)
@@ -911,36 +859,6 @@ def get_pool_core(world):
         placed_items['HF Cow Grotto Cow'] = 'Milk'
         if world.dungeon_mq['Jabu Jabus Belly']:
             placed_items['Jabu Jabus Belly MQ Cow'] = 'Milk'
-
-    if False:
-        if world.dungeon_mq['Jabu Jabus Belly']:
-            pool.extend('Hylian Shield')
-        if not world.dungeon_mq['Fire Temple']:
-            pool.extend(['Hylian Shield'] * 2)
-        if not world.dungeon_mq['Water Temple']:
-            pool.extend('Hylian Shield')
-        if not world.dungeon_mq['Spirit Temple']:
-            pool.extend(['Hylian Shield'] * 2)
-        if world.dungeon_mq['Shadow Temple']:
-            pool.extend(['Hylian Shield'] * 2)
-        if not world.dungeon_mq['Ganons Castle']:
-            pool.extend('Hylian Shield')
-    else:
-        if world.dungeon_mq['Jabu Jabus Belly']:
-            placed_items['Jabu Jabus Belly MQ Near Boss Like Likes'] = 'Like Like Drop'
-        if not world.dungeon_mq['Fire Temple']:
-            placed_items['Fire Temple Boss Key Loop Like Like'] = 'Like Like Drop'
-            placed_items['Fire Temple Song of Time Room Like Like'] = 'Like Like Drop'
-        if not world.dungeon_mq['Water Temple']:
-            placed_items['Water Temple Like Like'] = 'Like Like Drop'
-        if not world.dungeon_mq['Spirit Temple']:
-            placed_items['Spirit Temple Early Adult Like Like'] = 'Like Like Drop'
-            placed_items['Spirit Temple First Mirror Like Like'] = 'Like Like Drop'
-        if world.dungeon_mq['Shadow Temple']:
-            placed_items['Shadow Temple MQ Invisible Blades Like Like'] = 'Like Like Drop'
-            placed_items['Shadow Temple MQ Invisible Maze Like Like'] = 'Like Like Drop'
-        if not world.dungeon_mq['Ganons Castle']:
-            placed_items['Ganons Castle Shadow Trial Like Like'] = 'Like Like Drop'
 
     if world.shuffle_beans:
         if world.distribution.get_starting_item('Magic Bean') < 10:
@@ -1104,7 +1022,7 @@ def get_pool_core(world):
         pool.extend(['Gold Skulltula Token'] * 100)
 
 
-    if world.abundant_bombchus:
+    if world.bombchus_in_logic:
         pool.extend(['Bombchus'] * 4)
         if world.dungeon_mq['Jabu Jabus Belly']:
             pool.extend(['Bombchus'])
@@ -1202,7 +1120,7 @@ def get_pool_core(world):
 
     if world.shopsanity == 'off':
         placed_items.update(vanilla_shop_items)
-        if world.abundant_bombchus:
+        if world.bombchus_in_logic:
             placed_items['KF Shop Item 8'] = 'Buy Bombchu (5)'
             placed_items['Market Bazaar Item 4'] = 'Buy Bombchu (5)'
             placed_items['Kak Bazaar Item 4'] = 'Buy Bombchu (5)'

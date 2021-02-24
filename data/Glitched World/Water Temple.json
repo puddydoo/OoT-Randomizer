@@ -122,7 +122,6 @@
         "region_name": "Dark Link Area",
         "dungeon": "Water Temple",
         "locations": {
-            "Water Temple Like Like": "can_use(Hookshot) and can_feed_like_like",
             "Water Temple Longshot Chest": "can_use(Hookshot)",
             "Water Temple GS Falling Platform Room": "can_use(Hookshot)"
         },

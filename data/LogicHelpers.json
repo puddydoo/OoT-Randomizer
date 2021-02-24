@@ -29,11 +29,11 @@
     "Blue_Fire": "'Blue Fire' or Buy_Blue_Fire or Blue_Fire_Drop",
     "Fish": "'Fish' or Buy_Fish or Fish_Drop",
     "Fairy": "'Fairy' or Buy_Fairys_Spirit or Fairy_Drop",
-    "Poe": "'Poe' or Buy_Poe or Poe_Drop",
+    # "Poe": "'Poe' or Buy_Poe or Poe_Drop",
     # "Big_Poe": "'Big Poe'",
 
     "has_bombchus": "Bombchus_5 or Bombchus_10 or Bombchus_20 or (found_bombchus and (Buy_Bombchu_5 or Buy_Bombchu_10 or Buy_Bombchu_20)) or Bombchu_Drop",
-    "found_bombchus": "(abundant_bombchus and ('Bombchus' or Bombchus_5_Non-Repeatable or Bombchus_10_Non-Repeatable or Bombchus_20_Non-Repeatable)) or (not abundant_bombchus and Bomb_Bag)",
+    "found_bombchus": "(bombchus_in_logic and ('Bombchus' or Bombchus_5_Non-Repeatable or Bombchus_10_Non-Repeatable or Bombchus_20_Non-Repeatable)) or (not bombchus_in_logic and Bomb_Bag)",
     "has_explosives": "Bombs or has_bombchus",
     "is_child": "age == 'child'",
     "is_adult": "age == 'adult'",
@@ -44,7 +44,6 @@
     "can_child_damage": "is_child and (Slingshot or Sticks or Kokiri_Sword or has_explosives or can_use(Dins_Fire))",
     "can_cut_shrubs": "is_adult or Sticks or Kokiri_Sword or Boomerang or has_explosives",
     "can_dive": "Progressive_Scale",
-    "can_feed_like_like": "(damage_multiplier != 'ohko' or Fairy) and ((True and Hylian_Shield) or (False and is_adult and (Goron_Tunic or Zora_Tunic)))", # IDK if nayru's love works or what kills a like like
     "can_leave_forest": "open_forest != 'closed' or is_adult or is_glitched or Deku_Tree_Clear",
     "can_plant_bugs": "is_child and Bugs",
     "can_ride_epona": "is_adult and Epona and (can_play(Eponas_Song) or (is_glitched and can_hover))",

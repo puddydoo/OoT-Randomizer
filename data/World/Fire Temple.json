@@ -19,8 +19,6 @@
                     at('Fire Temple Upper', can_play(Song_of_Time) or has_explosives))",
             "Fire Temple GS Boss Key Loop": "
                 ((Small_Key_Fire_Temple, 8) or not keysanity) and can_use(Megaton_Hammer)",
-            "Fire Temple Boss Key Loop Like Like": "
-                can_feed_like_like and ((Small_Key_Fire_Temple, 8) or not keysanity) and can_use(Megaton_Hammer)",
             "Fairy Pot": "
                 has_bottle and (can_use(Hover_Boots) or can_use(Hookshot)) and
                 (logic_fewer_tunic_requirements or can_use(Goron_Tunic))"
@@ -39,9 +37,7 @@
             "Fire Temple Big Lava Room Lower Open Door Chest": "True",
             "Fire Temple Big Lava Room Blocked Door Chest": "is_adult and has_explosives",
             "Fire Temple GS Song of Time Room": "
-                is_adult and (can_play(Song_of_Time) or logic_fire_song_of_time)",
-            "Fire Temple Song of Time Room Like Like": "
-                can_feed_like_like and is_adult and (can_play(Song_of_Time) or logic_fire_song_of_time)"
+                is_adult and (can_play(Song_of_Time) or logic_fire_song_of_time)"
         },
         "exits": {
             "Fire Temple Lower":  "True",
