@@ -21,8 +21,8 @@ class ItemInfo(object):
         self.name = name
         self.advancement = (progressive == True)
         self.priority = (progressive == False)
-        self.repeatable = (repeatable == (True or False))
-        self.onetime = (repeatable == (None or False))
+        self.repeatable = (repeatable in (True, False))
+        self.onetime = (repeatable in (None, False))
         self.type = type
         self.special = special or {}
         self.index = itemID
@@ -128,6 +128,9 @@ class Item(object):
             return self.world.bridge == 'tokens' or self.world.lacs_condition == 'tokens'
 
         if self.type in ('Repeat', 'Drop', 'Event', 'Shop', 'DungeonReward') or not self.advancement:
+            return False
+
+        if self.name.startswith('Bombchus') and self.name.endswith('(Non-Repeatable)') and not self.world.abundant_bombchus:
             return False
 
         if self.map or self.compass:

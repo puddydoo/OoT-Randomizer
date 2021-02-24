@@ -127,7 +127,7 @@
         "region_name": "Lost Woods",
         "hint": "the Lost Woods",
         "events": {
-            "Sell Skull Mask": "is_child and can_play(Sarias_Song) and (Skull_Mask or Skull_Mask_Limited)"
+            "Sell Skull Mask": "is_child and can_play(Sarias_Song) and (Skull_Mask or Skull_Mask_Non-Repeatable)"
         },
         "locations": {
             "LW Skull Kid": "is_child and can_play(Sarias_Song)",

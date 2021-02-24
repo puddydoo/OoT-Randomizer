@@ -17,7 +17,7 @@
 
     # Refill aliases. If we start considering Bow etc refills we can enable these aliases
     # without editing all logic files.
-    # The "limited" versions of certain items are less, or not at all, useful in logic.
+    # Does not include the non-repeatable versions of items.
     # "Bow": "'Bow'",
     # "Slingshot": "'Slingshot'",
     "Bombs": "Bomb_Bag",
@@ -33,7 +33,7 @@
     # "Big_Poe": "'Big Poe'",
 
     "has_bombchus": "Bombchus_5 or Bombchus_10 or Bombchus_20 or (found_bombchus and (Buy_Bombchu_5 or Buy_Bombchu_10 or Buy_Bombchu_20)) or Bombchu_Drop",
-    "found_bombchus": "(abundant_bombchus and ('Bombchus' or Bombchus_5_Limited or Bombchus_10_Limited or Bombchus_20_Limited)) or (not abundant_bombchus and Bomb_Bag)",
+    "found_bombchus": "(abundant_bombchus and ('Bombchus' or Bombchus_5_Non-Repeatable or Bombchus_10_Non-Repeatable or Bombchus_20_Non-Repeatable)) or (not abundant_bombchus and Bomb_Bag)",
     "has_explosives": "Bombs or has_bombchus",
     "is_child": "age == 'child'",
     "is_adult": "age == 'adult'",

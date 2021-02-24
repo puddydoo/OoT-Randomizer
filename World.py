@@ -565,15 +565,8 @@ class World(object):
         # This check should never be false normally, but is here as a sanity check
         if location.can_fill_fast(item, manual):
             #location.type not in ('Shop', 'RepeatNPC', 'GrottoNPC', 'LikeLike', 'Event'):
-            if location.type not in ('RepeatNPC', 'GrottoNPC', 'LikeLike', 'Event'):
-                if item.name == 'Hylian Shield':
-                    if True:
-                        item = ItemFactory(item.limit_item, self)
-                elif item.name in ['Goron Tunic', 'Zora Tunic']:
-                    if False:
-                        item = ItemFactory(item.limit_item, self)
-                elif item.limit_item is not None:
-                    item = ItemFactory(item.limit_item, self)
+            if item.limit_item is not None and location.type not in ('RepeatNPC', 'GrottoNPC', 'LikeLike', 'Event'):
+                item = ItemFactory(item.limit_item, self)
 
             location.item = item
             item.location = location

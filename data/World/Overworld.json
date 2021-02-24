@@ -212,7 +212,7 @@
         "scene": "Lost Woods",
         "hint": "the Lost Woods",
         "events": {
-            "Sell Skull Mask": "is_child and can_play(Sarias_Song) and (Skull_Mask or Skull_Mask_Limited)",
+            "Sell Skull Mask": "is_child and can_play(Sarias_Song) and (Skull_Mask or Skull_Mask_Non-Repeatable)",
             "Odd Mushroom Access": "
                 is_adult and
                 (Cojiro or Odd_Mushroom or Odd_Potion or Poachers_Saw or Broken_Sword or

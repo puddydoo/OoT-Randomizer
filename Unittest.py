@@ -20,9 +20,9 @@ os.makedirs(output_dir, exist_ok=True)
 logging.basicConfig(level=logging.INFO, filename=os.path.join(output_dir, 'LAST_TEST_LOG'), filemode='w')
 
 # items never required:
-# refills, maps, compasses, capacity upgrades, non-repeatable shields/tunics
+# refills, maps, compasses, capacity upgrades
 never_prefix = ['Bombs', 'Arrows', 'Rupee', 'Deku Seeds', 'Map', 'Compass']
-never_suffix = ['Capacity', 'Shield (Limited)', 'Tunic (Limited)']
+never_suffix = ['Capacity']
 never = {
     'Recovery Heart', 'Milk', 'Ice Arrows', 'Ice Trap',
     'Double Defense', 'Biggoron Sword', 'Giants Knife', 'Giants Knife (Limited)',
