@@ -2217,7 +2217,7 @@ setting_infos = [
     ),
     Checkbutton(
         name           = 'bombchus_in_logic',
-        gui_text       = 'Bombchus in Logic',
+        gui_text       = 'Bombchus are Considered in Logic',
         gui_tooltip    = '''\
             This option changes the availability
             of Bombchus.
