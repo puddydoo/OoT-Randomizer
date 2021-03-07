@@ -433,7 +433,7 @@ class WorldDistribution(object):
     def set_complete_itempool(self, pool):
         self.item_pool = {}
         for item in pool:
-            if item.dungeonitem or item.type in ('Drop', 'Event', 'DungeonReward'):
+            if item.dungeonitem or item.type in ('Event', 'DungeonReward'):
                 continue
             if item.name in self.item_pool:
                 self.item_pool[item.name].count += 1
