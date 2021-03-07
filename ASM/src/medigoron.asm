@@ -1,4 +1,4 @@
-SHUFFLE_MEDIGORON:
+MAX_ONE_MEDIGORON:
 .byte 0x00
 .align 4
 
@@ -13,7 +13,7 @@ medigoron_inital_check:
     addiu   v0, zero, 0x0005    ; child default value for v0
     addiu   v0, zero, 0x0011    ; adult default value for v0
 
-    lb      t0, SHUFFLE_MEDIGORON
+    lb      t0, MAX_ONE_MEDIGORON
     beqz    t0, @@return        ; skip if the salesman isn't randomized
 
     la      t1, GLOBAL_CONTEXT
@@ -29,7 +29,7 @@ medigoron_inital_check:
 
 ; Set the medigoron scene collectible flag on purchase if medigoron is randomized
 medigoron_buy_item_hook:
-    lb      t0, SHUFFLE_MEDIGORON
+    lb      t0, MAX_ONE_MEDIGORON
     beqz    t0, @@return        ; skip if medigoron isn't randomized
 
     la      t1, GLOBAL_CONTEXT

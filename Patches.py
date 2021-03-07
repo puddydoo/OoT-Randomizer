@@ -1568,7 +1568,7 @@ def patch_rom(spoiler:Spoiler, world:World, rom:Rom):
             update_message_by_id(messages, 0x6078, "Thank you very much!\x04The mark that will lead you to\x01the Spirit Temple is the \x05\x41flag on\x01the left \x05\x40outside the shop.\x01Be seeing you!\x02")
             if world.get_location('Wasteland Bombchu Salesman').item.onetime:
                 # Make carpet salesman a one-time purchase
-                rom.write_byte(rom.sym('SHUFFLE_CARPET_SALESMAN'), 0x01)
+                rom.write_byte(rom.sym('MAX_ONE_CARPET_SALESMAN'), 0x01)
         if not world.get_location('GC Medigoron').item.name == 'Giants Knife':
             # Update medigoron messages to better fit the fact that he sells a randomized item
             update_message_by_id(messages, 0x304C, "I have something cool right here.\x01How about it...\x07\x30\x4F\x02")
@@ -1576,7 +1576,7 @@ def patch_rom(spoiler:Spoiler, world:World, rom:Rom):
             update_message_by_id(messages, 0x304F, "How about buying this cool item for \x01200 Rupees?\x01\x1B\x05\x42Buy\x01Don't buy\x05\x40\x02")
             if world.get_location('GC Medigoron').item.onetime:
                 # Make medigoron a one-time purchase
-                rom.write_byte(rom.sym('SHUFFLE_MEDIGORON'), 0x01)
+                rom.write_byte(rom.sym('MAX_ONE_MEDIGORON'), 0x01)
 
     if world.shuffle_smallkeys == 'remove' or world.shuffle_bosskeys == 'remove' or world.shuffle_ganon_bosskey == 'remove':
         locked_doors = get_locked_doors(rom, world)

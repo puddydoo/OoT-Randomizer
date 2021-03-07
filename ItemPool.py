@@ -682,19 +682,6 @@ remove_junk_items = [
 ]
 remove_junk_set = set(remove_junk_items)
 
-nonrepeatable_items = [
-    'Deku Nuts (5)',
-    'Deku Stick (1)',
-    'Fairy',
-    'Deku Shield',
-    'Hylian Shield',
-    'Deku Nuts (10)',
-    'Fish',
-    'Bugs',
-    'Blue Fire',
-    'Poe',
-]
-
 item_groups = {
     'Junk': remove_junk_items,
     'JunkSong': ('Prelude of Light', 'Serenade of Water'),
@@ -1363,13 +1350,6 @@ def get_pool_core(world):
             junk_candidates.remove(junk_item)
             pool.remove(junk_item)
             pool.append(pending_item)
-
-    # Add non-repeatable items to pool if no repeatable merchant or cow locations are randomized
-    if not world.shuffle_medigoron_carpet_salesman: #and world.shopsanity in ('off', '0') and world.shuffle_scrubs == 'off' and not world.shuffle_cows:
-        for item in pool:
-            if item in nonrepeatable_items:
-                pool.remove(item)
-                pool.append(ItemFactory(item, world).limit_item)
 
     world.distribution.configure_starting_items_settings(world)
     world.distribution.collect_starters(world.state)

@@ -1,10 +1,10 @@
-SHUFFLE_CARPET_SALESMAN:
+MAX_ONE_CARPET_SALESMAN:
 .byte 0x00
 .align 4
 
 ; Override the inital message based on whether the player should be able to buy or not
 carpet_inital_message:
-    lb      t0, SHUFFLE_CARPET_SALESMAN
+    lb      t0, MAX_ONE_CARPET_SALESMAN
     beqz    t0, @@return        ; use the default message if the salesman isn't randomized
 
     la      t1, GLOBAL_CONTEXT
@@ -20,7 +20,7 @@ carpet_inital_message:
 
 ; Set the salesman scene collectible flag on purchase if the salesman is randomized
 carpet_buy_item_hook:
-    lb      t0, SHUFFLE_CARPET_SALESMAN
+    lb      t0, MAX_ONE_CARPET_SALESMAN
     beqz    t0, @@return        ; skip if the salesman isn't randomized
 
     la      t1, GLOBAL_CONTEXT

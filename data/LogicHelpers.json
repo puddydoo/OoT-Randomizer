@@ -33,7 +33,7 @@
     # "Big_Poe": "'Big Poe'",
 
     "has_bombchus": "Bombchus_5 or Bombchus_10 or Bombchus_20 or (found_bombchus and (Buy_Bombchu_5 or Buy_Bombchu_10 or Buy_Bombchu_20)) or Bombchu_Drop",
-    "found_bombchus": "(bombchus_in_logic and ('Bombchus' or Bombchus_5_Non-Repeatable or Bombchus_10_Non-Repeatable or Bombchus_20_Non-Repeatable)) or (not bombchus_in_logic and Bomb_Bag)",
+    "found_bombchus": "(bombchus_in_logic and ('Bombchus' or Bombchus_5_Non_Repeatable or Bombchus_10_Non_Repeatable or Bombchus_20_Non_Repeatable)) or (not bombchus_in_logic and Bomb_Bag)",
     "has_explosives": "Bombs or has_bombchus",
     "is_child": "age == 'child'",
     "is_adult": "age == 'adult'",
