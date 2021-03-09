@@ -530,7 +530,7 @@
             "GV Upper Stream": "True",
             "GV Crate Ledge": "
                 logic_valley_crate_hovers and can_use(Hover_Boots) and
-                (damage_multiplier != 'ohko' or Fairy or can_use(Nayrus_Love))",
+                (can_live_with_nayrus(0.5) or Fairy)",
             "Gerudo Valley": "
                 is_child or can_ride_epona or can_use(Longshot) or
                 gerudo_fortress == 'open' or 'Carpenter Rescue'",
@@ -986,7 +986,7 @@
             "Kak GS Watchtower": "
                 is_child and (Slingshot or has_bombchus or 
                     (logic_kakariko_tower_gs and (Sticks or Kokiri_Sword) and
-                    (damage_multiplier != 'ohko' or Fairy or can_use(Nayrus_Love)))) and at_night",
+                    (can_live_with_nayrus(0.5) or Fairy))) and at_night",
             "Bug Rock": "has_bottle"
         },
         "exits": {
@@ -1010,7 +1010,7 @@
                 (logic_man_on_roof and 
                     (is_adult or at_day or Slingshot or has_bombchus or 
                         (logic_kakariko_tower_gs and (Sticks or Kokiri_Sword) and
-                            (damage_multiplier != 'ohko' or Fairy or can_use(Nayrus_Love)))))",
+                            (can_live_with_nayrus(0.5) or Fairy))))",
             "Kak Backyard": "is_adult or at_day",
             "Graveyard": "True",
             "Kak Behind Gate": "is_adult or 'Kakariko Village Gate Open'"
@@ -1307,7 +1307,7 @@
                 can_blast_or_smash or 
                 (logic_dmt_bombable and is_child and Progressive_Strength_Upgrade)",
             "DMT Freestanding PoH": "
-                (damage_multiplier != 'ohko') or can_use(Nayrus_Love) or Fairy or can_use(Hover_Boots) or
+                can_live_with_nayrus(0.5) or Fairy or can_use(Hover_Boots) or
                 (is_adult and here(can_plant_bean and (has_explosives or Progressive_Strength_Upgrade)))",
             "DMT GS Bean Patch": "
                 can_plant_bugs and can_child_attack and
@@ -1427,12 +1427,14 @@
             "GC Grotto Platform": "
                 is_adult and 
                 ((can_play(Song_of_Time) and 
-                        ((damage_multiplier != 'ohko' and damage_multiplier != 'quadruple') or 
-                            can_use(Goron_Tunic) or can_use(Longshot) or can_use(Nayrus_Love))) or 
-                    (can_use(Hookshot) and
-                        ((damage_multiplier != 'ohko' and can_use(Goron_Tunic)) or
+                        (can_live_with_nayrus(0.75) or
+                            (not shuffle_grotto_entrances and Fairy and (can_live_dmg(0.25) or has_bottles(4))) or
+                            can_use(Goron_Tunic) or can_use(Longshot))) or 
+                    (can_use(Hookshot) and # Fairies don't seem to work here
+                        ((can_live_dmg(0.25) and can_use(Goron_Tunic)) or
                             can_use(Nayrus_Love) or
-                            (damage_multiplier != 'ohko' and damage_multiplier != 'quadruple' and logic_goron_grotto))))"
+                            # The timing is difficult
+                            (can_live_dmg(1) and logic_goron_grotto))))"
         }
     },
     {
@@ -1469,9 +1471,10 @@
         "exits": {
             "GC Grotto": "True",
             "Goron City": "
-                (damage_multiplier != 'ohko' and damage_multiplier != 'quadruple') or 
-                can_use(Goron_Tunic) or can_use(Nayrus_Love) or 
-                (can_play(Song_of_Time) and can_use(Longshot))"
+                can_live_with_nayrus(0.75) or (not shuffle_grotto_entrances and Fairy and (can_live_dmg(0.5) or
+                    (can_live_dmg(0.25) and has_bottles(2)) or has_bottles(4))) or can_use(Goron_Tunic) or
+                (can_play(Song_of_Time) and (can_use(Longshot) or
+                (not shuffle_grotto_entrances and Fairy and (can_live_dmg(0.25) or has_bottles(3)))))"
         }
     },
     {
@@ -1517,8 +1520,7 @@
             "DMC Ladder Area Nearby": "True",
             "DMC Central Nearby": "
                 can_use(Goron_Tunic) and can_use(Longshot) and 
-                ((damage_multiplier != 'ohko' and damage_multiplier != 'quadruple') or 
-                    (Fairy and not entrance_shuffle) or can_use(Nayrus_Love))"
+                (can_live_with_nayrus(1) or (Fairy and not entrance_shuffle))"
         }
     },
     {
