@@ -1855,7 +1855,7 @@ setting_infos = [
                          Randomizes all settings on the 'Main Rules' tab, except:
 
                          - Glitches Are Considered in Logic
-                         - Guaranteed Reachable Locations
+                         - Guarantee Reachable Locations
                          - (Random) Number of MQ Dungeons
                          - Rainbow Bridge/LACS Requirements: Gold Skulltula Tokens
                          - Variable numbers of Spiritual Stones, Medallions, or Dungeons
@@ -2192,10 +2192,10 @@ setting_infos = [
     ),
     Combobox(
         name           = 'reachable_locations',
-        gui_text       = 'Guaranteed Reachable Locations',
+        gui_text       = 'Guarantee Reachable Locations',
         default        = 'all',
         choices        = {
-            'all':      '100%',
+            'all':      'All',
             'goals':    'All Goals',
             'beatable': 'Required Only',
             'none':     'None',
@@ -2203,7 +2203,8 @@ setting_infos = [
         gui_tooltip    = '''\
             This determines which items and locations are guaranteed to be reachable.
 
-            '100%': The randomizer will guarantee that every item is obtainable and every location is reachable.
+            'All': The randomizer will guarantee that every item is obtainable and every location is reachable,
+            so it will be possible to not only beat the game but also achieve 100% completion.
 
             'All Goals': The randomizer will guarantee that every goal item is obtainable, not just the amount required
             to beat the game, but otherwise behaves like 'Required Only'.
