@@ -50,7 +50,7 @@ class World(object):
 
         # rename a few attributes...
         self.keysanity = self.shuffle_smallkeys in ['keysanity', 'remove', 'any_dungeon', 'overworld']
-        self.check_beatable_only = not self.all_reachable
+        self.check_beatable_only = self.reachable_locations != 'all'
 
         self.shuffle_special_interior_entrances = self.shuffle_interior_entrances == 'all'
         self.shuffle_interior_entrances = self.shuffle_interior_entrances in ['simple', 'all']
@@ -71,18 +71,6 @@ class World(object):
             # Pin shuffle_ganon_bosskey to 'triforce' when triforce_hunt is enabled
             # (specifically, for randomize_settings)
             self.shuffle_ganon_bosskey = 'triforce'
-
-        # Determine LACS Condition
-        if self.shuffle_ganon_bosskey == 'lacs_medallions':
-            self.lacs_condition = 'medallions'
-        elif self.shuffle_ganon_bosskey == 'lacs_dungeons':
-            self.lacs_condition = 'dungeons'
-        elif self.shuffle_ganon_bosskey == 'lacs_stones':
-            self.lacs_condition = 'stones'
-        elif self.shuffle_ganon_bosskey == 'lacs_tokens':
-            self.lacs_condition = 'tokens'
-        else:
-            self.lacs_condition = 'vanilla'
 
         # trials that can be skipped will be decided later
         self.skipped_trials = {
@@ -152,6 +140,7 @@ class World(object):
             self.hint_exclusions.add('Song from Impa')
         self.hint_type_overrides = {}
         self.item_hint_type_overrides = {}
+                
         for dist in hint_dist_keys:
             self.added_hint_types[dist] = []
             for loc in self.hint_dist_user['add_locations']:
@@ -170,6 +159,7 @@ class World(object):
             for i in self.hint_dist_user['remove_items']:
                 if dist in i['types']:
                     self.item_hint_type_overrides[dist].append(i['item'])
+                    
 
         self.hint_text_overrides = {}
         for loc in self.hint_dist_user['add_locations']:
@@ -178,6 +168,9 @@ class World(object):
                 if len(loc['text']) > 80:
                     raise Exception('Custom hint text too large for %s', loc['location'])
                 self.hint_text_overrides.update({loc['location']: loc['text']})
+
+        self.item_hints = settings.item_hints + self.item_added_hint_types["named-item"]
+        self.named_item_pool = list(self.item_hints)
 
         self.always_hints = [hint.name for hint in getRequiredHints(self)]
         
