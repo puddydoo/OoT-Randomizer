@@ -1854,7 +1854,8 @@ setting_infos = [
         gui_tooltip    = '''\
                          Randomizes all settings on the 'Main Rules' tab, except:
 
-                         - Logic Rules
+                         - Glitches Are Considered in Logic
+                         - Guaranteed Reachable Locations
                          - (Random) Number of MQ Dungeons
                          - Rainbow Bridge/LACS Requirements: Gold Skulltula Tokens
                          - Variable numbers of Spiritual Stones, Medallions, or Dungeons
@@ -1869,6 +1870,10 @@ setting_infos = [
                              'shuffle_overworld_entrances', 'owl_drops', 'warp_songs', 'spawn_positions',
                              'triforce_hunt', 'triforce_goal_per_world', 'bombchus_in_logic', 'one_item_per_dungeon'],
             }
+        },
+        gui_params     = {
+            'no_line_break' : True,
+            'web:no_line_break' : False,
         },
         shared         = True,
     ),
@@ -2165,51 +2170,40 @@ setting_infos = [
             "hide_when_disabled": True,
         },
     ),
-    Combobox(
-        name           = 'logic_rules',
-        gui_text       = 'Logic Rules',
-        default        = 'glitchless',
-        choices        = {
-            'glitchless': 'Glitchless',
-            'glitched':   'Glitched',
-            'none':       'No Logic',
-        },
+    Checkbutton(
+        name           = 'glitched_logic',
+        gui_text       = 'Glitches Are Considered in Logic',
         gui_tooltip    = '''\
             Logic provides guiding sets of rules for world generation
             which the Randomizer uses to ensure the generated seeds 
             are beatable.
 
-            'Glitchless': No glitches are required, but may require 
-            some minor tricks. Add minor tricks to consider for logic
-            in the 'Detailed Logic' tab.
-
-            'Glitched': Movement-oriented glitches are likely required.
-            No locations excluded.
-
-            'No Logic': Maximize randomization, All locations are 
-            considered available. MAY BE IMPOSSIBLE TO BEAT.
+            Enabling this changes the logic so that it can require
+            the use of movement-oriented glitches.
+            This is not compatible with entrance shuffle.
         ''',
+        default        = False,
         disable        = {
-            'glitched'  : {'settings' : ['allowed_tricks', 'shuffle_interior_entrances', 'shuffle_grotto_entrances',
+            True :        {'settings' : ['allowed_tricks', 'shuffle_interior_entrances', 'shuffle_grotto_entrances',
                                          'shuffle_dungeon_entrances', 'shuffle_overworld_entrances', 'owl_drops',
-                                         'warp_songs', 'spawn_positions', 'mq_dungeons_random', 'mq_dungeons', ]},
-            'none'      : {'settings' : ['allowed_tricks', 'logic_no_night_tokens_without_suns_song', 'reachable_locations']},
+                                         'warp_songs', 'spawn_positions', 'mq_dungeons_random', 'mq_dungeons', ]}
         },
         shared         = True,
     ),
     Combobox(
         name           = 'reachable_locations',
-        gui_text       = 'Guarantee Reachable Locations',
+        gui_text       = 'Guaranteed Reachable Locations',
         default        = 'all',
         choices        = {
-            'all':      'All',
+            'all':      '100%',
             'goals':    'All Goals',
             'beatable': 'Required Only',
+            'none':     'None',
         },
         gui_tooltip    = '''\
             This determines which items and locations are guaranteed to be reachable.
 
-            'All': The randomizer will guarantee that every item is obtainable and every location is reachable.
+            '100%': The randomizer will guarantee that every item is obtainable and every location is reachable.
 
             'All Goals': The randomizer will guarantee that every goal item is obtainable, not just the amount required
             to beat the game, but otherwise behaves like 'Required Only'.
@@ -2218,9 +2212,12 @@ setting_infos = [
             be obtainable. In Triforce Hunt, this will also guarantee that all Triforce Pieces can be obtained.
 
             'Required Only': Only items and locations required to beat the game will be guaranteed reachable.
+
+            'None': All items will be placed in random locations without guaranteeing that anything is reachable.
+            MAY BE IMPOSSIBLE TO BEAT.
         ''',
-        gui_params={
-            "hide_when_disabled": True,
+        disable        = {
+            'none'      : {'settings' : ['glitched_logic', 'allowed_tricks', 'logic_no_night_tokens_without_suns_song']},
         },
         shared         = True
     ),

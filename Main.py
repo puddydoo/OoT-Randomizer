@@ -136,7 +136,7 @@ def build_world_graphs(settings, window=dummy_window()):
         window.update_progress(0 + 1*(id + 1)/settings.world_count)
         logger.info('Creating Overworld')
 
-        if settings.logic_rules == 'glitched':
+        if settings.glitched_logic:
             overworld_data = os.path.join(data_path('Glitched World'), 'Overworld.json')
         else:
             overworld_data = os.path.join(data_path('World'), 'Overworld.json')

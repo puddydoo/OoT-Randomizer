@@ -102,7 +102,7 @@ def create_dungeons(world):
         name = dungeon_info['name']
         hint = dungeon_info['hint'] if 'hint' in dungeon_info else name
         
-        if world.settings.logic_rules == 'glitched':
+        if world.settings.glitched_logic:
             if not world.dungeon_mq[name]:
                 dungeon_json = os.path.join(data_path('Glitched World'), name + '.json')
             else:
