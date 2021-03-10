@@ -2212,7 +2212,7 @@ setting_infos = [
             set to 1 Medallion and Ganon's Boss Key to 1 Gold Skulltula Token, all 6 Medallions and all 100 Tokens will
             be obtainable. In Triforce Hunt, this will also guarantee that all Triforce Pieces can be obtained.
 
-            'Required Only': Only items and locations required to beat the game will be guaranteed reachable.
+            'Required Only': Not every item or location will be guaranteed reachable, but there will be enough to beat the game.
 
             'None': All items will be placed in random locations without guaranteeing that anything is reachable.
             MAY BE IMPOSSIBLE TO BEAT.
