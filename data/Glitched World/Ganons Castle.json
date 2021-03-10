@@ -73,6 +73,11 @@
             "Ganons Castle Shadow Trial Golden Gauntlets Chest": "(has_bombchus and can_isg) or 
                 (has_explosives and Hover_Boots and can_shield) or
                 ( (can_use(Longshot) and (Hover_Boots or can_use(Dins_Fire))) 
+                    or can_use(Fire_Arrows) )",
+            "Ganons Castle Shadow Trial Like Like": "
+                can_feed_like_like and (has_bombchus and can_isg) or 
+                (has_explosives and Hover_Boots and can_shield) or
+                ( (can_use(Longshot) and (Hover_Boots or can_use(Dins_Fire))) 
                     or can_use(Fire_Arrows) )"
         }
     },

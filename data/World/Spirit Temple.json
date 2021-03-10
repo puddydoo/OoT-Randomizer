@@ -83,8 +83,11 @@
             "Spirit Temple Early Adult Right Chest": "
                 Bow or Progressive_Hookshot or has_bombchus or (Bombs and logic_spirit_lower_adult_switch)", 
                 #requires a very specific Bombchu use, Hover Boots can be skipped by jumping on top of the rolling rock.
+            "Spirit Temple Early Adult Like Like": "
+                can_feed_like_like and (Bow or Progressive_Hookshot or has_bombchus or (Bombs and logic_spirit_lower_adult_switch))", 
             "Spirit Temple First Mirror Left Chest": "(Small_Key_Spirit_Temple, 3)",
             "Spirit Temple First Mirror Right Chest": "(Small_Key_Spirit_Temple, 3)",
+            "Spirit Temple First Mirror Like Like": "(Small_Key_Spirit_Temple, 3) and can_feed_like_like",
             "Spirit Temple GS Boulder Room": "
                 can_play(Song_of_Time) and 
                 (Bow or Progressive_Hookshot or has_bombchus or (Bombs and logic_spirit_lower_adult_switch))"

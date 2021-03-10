@@ -62,8 +62,10 @@
             "Spirit Temple Compass Chest": "can_play(Zeldas_Lullaby) and
                 (can_use(Hookshot) or can_hover) and has_projectile(either)",
             "Spirit Temple Early Adult Right Chest": "has_projectile(either)",
+            "Spirit Temple Early Adult Like Like": "has_projectile(either) and can_feed_like_like",
             "Spirit Temple First Mirror Left Chest": "(Small_Key_Spirit_Temple, 2)",
             "Spirit Temple First Mirror Right Chest": "(Small_Key_Spirit_Temple, 2)",
+            "Spirit Temple First Mirror Like Like": "(Small_Key_Spirit_Temple, 2) and can_feed_like_like",
             "Spirit Temple GS Boulder Room": "has_projectile(either) and
                 (can_play(Song_of_Time) or can_use(Hover_Boots))"
         },

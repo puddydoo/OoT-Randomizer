@@ -49,7 +49,8 @@
                 (logic_shadow_mq_invisible_blades and damage_multiplier != 'ohko')",
             "Shadow Temple MQ Invisible Blades Invisible Chest": "
                 can_play(Song_of_Time) or
-                (logic_shadow_mq_invisible_blades and damage_multiplier != 'ohko')"
+                (logic_shadow_mq_invisible_blades and damage_multiplier != 'ohko')",
+            "Shadow Temple MQ Invisible Blades Like Like": "can_feed_like_like"
         },
         "exits": {
             "Shadow Temple Lower Huge Pit": "has_fire_source or logic_shadow_mq_huge_pit"
@@ -121,7 +122,8 @@
             "Shadow Temple MQ Boss Key Chest": "
                 can_use(Dins_Fire) and (Small_Key_Shadow_Temple, 6)",
             "Shadow Temple MQ Bomb Flower Chest": "True",
-            "Shadow Temple MQ Freestanding Key": "True"
+            "Shadow Temple MQ Freestanding Key": "True",
+            "Shadow Temple MQ Invisible Maze Like Like": "can_feed_like_like"
         }
     }
 ]

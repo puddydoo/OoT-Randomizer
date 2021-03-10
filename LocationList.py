@@ -457,6 +457,7 @@ location_table = OrderedDict([
     ("Jabu Jabus Belly MQ GS Tailpasaran Room",             ("GS Token",    0x02,  0x04, None,                 ("Jabu Jabu's Belly", "Skulltulas",))),
     ("Jabu Jabus Belly MQ GS Invisible Enemies Room",       ("GS Token",    0x02,  0x08, None,                 ("Jabu Jabu's Belly", "Skulltulas",))),
     ("Jabu Jabus Belly MQ GS Near Boss",                    ("GS Token",    0x02,  0x02, None,                 ("Jabu Jabu's Belly", "Skulltulas",))),
+    ("Jabu Jabus Belly MQ Near Boss Like Likes",            ("LikeLike",    0x02,  0x05, None,                 ("Jabu Jabu's Belly", "Like Like",))),
     # Jabu Jabu's Belly shared
     ("Jabu Jabus Belly Barinade Heart",                     ("BossHeart",   0x13,  0x4F, None,                 ("Jabu Jabu's Belly",))),
 
@@ -549,6 +550,8 @@ location_table = OrderedDict([
     ("Fire Temple GS Boulder Maze",                         ("GS Token",    0x04,  0x04, None,                 ("Fire Temple", "Skulltulas",))),
     ("Fire Temple GS Scarecrow Climb",                      ("GS Token",    0x04,  0x10, None,                 ("Fire Temple", "Skulltulas",))),
     ("Fire Temple GS Scarecrow Top",                        ("GS Token",    0x04,  0x08, None,                 ("Fire Temple", "Skulltulas",))),
+    ("Fire Temple Boss Key Loop Like Like",                 ("LikeLike",    0x04,  0x12, None,                 ("Fire Temple", "Like Like",))),
+    ("Fire Temple Song of Time Room Like Like",             ("LikeLike",    0x04,  0x13, None,                 ("Fire Temple", "Like Like",))),
     # Fire Temple MQ
     ("Fire Temple MQ Map Room Side Chest",                  ("Chest",       0x04,  0x02, None,                 ("Fire Temple",))),
     ("Fire Temple MQ Megaton Hammer Chest",                 ("Chest",       0x04,  0x00, None,                 ("Fire Temple",))),
@@ -586,6 +589,7 @@ location_table = OrderedDict([
     ("Water Temple GS Central Pillar",                      ("GS Token",    0x05,  0x04, None,                 ("Water Temple", "Skulltulas",))),
     ("Water Temple GS Falling Platform Room",               ("GS Token",    0x05,  0x02, None,                 ("Water Temple", "Skulltulas",))),
     ("Water Temple GS River",                               ("GS Token",    0x05,  0x10, None,                 ("Water Temple", "Skulltulas",))),
+    ("Water Temple Like Like",                              ("LikeLike",    0x05,  0x06, None,                 ("Water Temple", "Like Like",))),
     # Water Temple MQ
     ("Water Temple MQ Longshot Chest",                      ("Chest",       0x05,  0x00, None,                 ("Water Temple",))),
     ("Water Temple MQ Map Chest",                           ("Chest",       0x05,  0x02, None,                 ("Water Temple",))),
@@ -650,6 +654,8 @@ location_table = OrderedDict([
     ("Shadow Temple MQ GS After Wind",                      ("GS Token",    0x07,  0x08, None,                 ("Shadow Temple", "Skulltulas",))),
     ("Shadow Temple MQ GS After Ship",                      ("GS Token",    0x07,  0x10, None,                 ("Shadow Temple", "Skulltulas",))),
     ("Shadow Temple MQ GS Near Boss",                       ("GS Token",    0x07,  0x04, None,                 ("Shadow Temple", "Skulltulas",))),
+    ("Shadow Temple MQ Invisible Blades Like Like",         ("LikeLike",    0x07,  0x10, None,                 ("Shadow Temple", "Like Like",))),
+    ("Shadow Temple MQ Invisible Maze Like Like",           ("LikeLike",    0x07,  0x0F, None,                 ("Shadow Temple", "Like Like",))),
     # Shadow Temple shared
     ("Shadow Temple Bongo Bongo Heart",                     ("BossHeart",   0x18,  0x4F, None,                 ("Shadow Temple",))),
 
@@ -707,6 +713,9 @@ location_table = OrderedDict([
     ("Spirit Temple MQ GS Symphony Room",                   ("GS Token",    0x06,  0x08, None,                 ("Spirit Temple", "Skulltulas",))),
     ("Spirit Temple MQ GS Nine Thrones Room West",          ("GS Token",    0x06,  0x04, None,                 ("Spirit Temple", "Skulltulas",))),
     ("Spirit Temple MQ GS Nine Thrones Room North",         ("GS Token",    0x06,  0x10, None,                 ("Spirit Temple", "Skulltulas",))),
+
+    ("Spirit Temple Early Adult Like Like",                 ("LikeLike",    0x06,  0x0C, None,                 ("Spirit Temple", "Like Like",))),
+    ("Spirit Temple First Mirror Like Like",                ("LikeLike",    0x06,  0x0F, None,                 ("Spirit Temple", "Like Like",))),
 
     ("Spirit Temple Twinrova Heart",                        ("BossHeart",   0x17,  0x4F, None,                 ("Spirit Temple",))),
 
@@ -789,6 +798,7 @@ location_table = OrderedDict([
     ("Ganons Castle Deku Scrub Center-Left",                ("NPC",         0x0D,  0x37, None,                 ("Ganon's Castle", "Deku Scrub",))),
     ("Ganons Castle Deku Scrub Center-Right",               ("NPC",         0x0D,  0x33, None,                 ("Ganon's Castle", "Deku Scrub",))),
     ("Ganons Castle Deku Scrub Right",                      ("NPC",         0x0D,  0x39, None,                 ("Ganon's Castle", "Deku Scrub",))),
+    ("Ganons Castle Shadow Trial Like Like",                ("LikeLike",    0x0D,  0x0C, None,                 ("Ganon's Castle", "Like Like",))),
     # Ganon's Castle MQ
     ("Ganons Castle MQ Forest Trial Freestanding Key",      ("Collectable", 0x0D,  0x01, None,                 ("Ganon's Castle",))),
     ("Ganons Castle MQ Forest Trial Eye Switch Chest",      ("Chest",       0x0D,  0x02, None,                 ("Ganon's Castle",))),
