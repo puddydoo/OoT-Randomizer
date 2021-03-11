@@ -104,7 +104,7 @@
             "Lost Woods": "True",
             "LW Bridge From Forest": "
                 open_forest != 'closed' or is_adult or 'Deku Tree Clear' or
-                (Time_Travel_Test and logic_require_deku and (separate_forest_entrances or not (shuffle_special_interior_entrances or shuffle_overworld_entrances or spawn_positions)))",
+                (Time_Travel_Test and logic_require_deku and not (shuffle_special_interior_entrances or shuffle_overworld_entrances or spawn_positions))",
             "KF Storms Grotto": "can_open_storm_grotto"
         }
     },
@@ -115,10 +115,10 @@
         "exits": {
             "Kokiri Forest": "
                 open_forest != 'closed' or is_adult or 'Deku Tree Clear' or
-                (Time_Travel_Test and logic_require_deku and (separate_forest_entrances or not (shuffle_special_interior_entrances or shuffle_overworld_entrances or spawn_positions)))",
+                (Time_Travel_Test and logic_require_deku and not (shuffle_special_interior_entrances or shuffle_overworld_entrances or spawn_positions))",
             "LW Bridge From Forest": "
                 open_forest != 'closed' or is_adult or 'Deku Tree Clear' or
-                (Time_Travel_Test and logic_require_deku and (separate_forest_entrances or not (shuffle_special_interior_entrances or shuffle_overworld_entrances or spawn_positions)))"
+                (Time_Travel_Test and logic_require_deku and not (shuffle_special_interior_entrances or shuffle_overworld_entrances or spawn_positions))"
         }
     },
     {

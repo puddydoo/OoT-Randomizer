@@ -1866,7 +1866,7 @@ setting_infos = [
             True : {
                 'sections' : ['open_section', 'shuffle_section', 'shuffle_dungeon_section'],
                 'settings': ['starting_age', 'shuffle_interior_entrances', 'shuffle_grotto_entrances', 'shuffle_dungeon_entrances',
-                             'shuffle_overworld_entrances', 'separate_forest_entrances', 'owl_drops', 'warp_songs', 'spawn_positions',
+                             'shuffle_overworld_entrances', 'owl_drops', 'warp_songs', 'spawn_positions',
                              'triforce_hunt', 'triforce_goal_per_world', 'bombchus_in_logic', 'one_item_per_dungeon'],
             }
         },
@@ -2188,8 +2188,7 @@ setting_infos = [
         disable        = {
             'glitched'  : {'settings' : ['allowed_tricks', 'shuffle_interior_entrances', 'shuffle_grotto_entrances',
                                          'shuffle_dungeon_entrances', 'shuffle_overworld_entrances', 'owl_drops',
-                                         'warp_songs', 'spawn_positions', 'mq_dungeons_random', 'mq_dungeons',
-                                         'separate_forest_entrances', ]},
+                                         'warp_songs', 'spawn_positions', 'mq_dungeons_random', 'mq_dungeons', ]},
             'none'      : {'settings' : ['allowed_tricks', 'logic_no_night_tokens_without_suns_song', 'reachable_locations',
                                          'logic_require_deku', ]},
         },
@@ -2778,34 +2777,6 @@ setting_infos = [
         shared         = True,
         gui_params     = {
             'randomize_key': 'randomize_settings',
-        },
-    ),
-    Checkbutton(
-        name           = 'separate_forest_entrances',
-        gui_text       = 'Separate Forest Entrances',
-        gui_tooltip    = '''\
-            When shuffling entrances, prevent all entrances to the
-            forest area (Kokiri Forest, Deku Tree, Lost Woods,
-            and Sacred Forest Meadow) from being shuffled with
-            non-forest entrances, except for:
-            
-            - Interior and grotto entrances
-            - Lost Woods Bridge to Hyrule Field
-            - Lost Woods to Zora's River
-            - Sacred Forest Meadow to Forest Temple
-            
-            When starting as child, the entrance to Link's House
-            won't be shuffled, and child's spawn won't be shuffled
-            outside of the forest.
-        ''',
-        default        = False,
-        shared         = True,
-        gui_params     = {
-            'randomize_key': 'randomize_settings',
-            'distribution':  [
-                ('False', 2),
-                ('True', 1),
-            ],
         },
     ),
     Checkbutton(
