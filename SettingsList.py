@@ -2180,7 +2180,7 @@ setting_infos = [
 
             Enabling this changes the logic so that it can require
             the use of movement-oriented glitches.
-            This is not compatible with entrance shuffle.
+            This is not compatible with entrance shuffle or Master Quest.
         ''',
         default        = False,
         disable        = {
