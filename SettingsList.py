@@ -2174,11 +2174,11 @@ setting_infos = [
         name           = 'glitched_logic',
         gui_text       = 'Glitches Are Considered in Logic',
         gui_tooltip    = '''\
-            Enabling this changes the logic so that it can require
-            the use of sequence-breaking glitches that lower item
-            requirements or provide movement techniques.
-            It also expects you to use all of the minor tricks from
-            the "Detailed Logic" tab which are otherwise optional.
+            All glitchless logic tricks as well as most glitches short of
+            Item Manipulation and Wrong Warp are considered in logic.
+            For a detailed description of what's in logic,
+            please visit the Glitch Logic wiki page.
+
             This is not compatible with entrance shuffle or Master Quest.
         ''',
         default        = False,
