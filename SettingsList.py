@@ -2177,7 +2177,7 @@ setting_infos = [
             Enabling this changes the logic so that it can require
             the use of sequence-breaking glitches that lower item
             requirements or provide movement techniques.
-            It also expects you to use most of the minor tricks from
+            It also expects you to use all of the minor tricks from
             the "Detailed Logic" tab which are otherwise optional.
             This is not compatible with entrance shuffle or Master Quest.
         ''',
