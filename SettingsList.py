@@ -2436,9 +2436,8 @@ setting_infos = [
             boulders in Goron City, you will not be expected to
             use them anywhere else before beating the Deku Tree.
 
-            This only applies when Starting Age is set to Child.
             This will not apply with certain settings:
-
+             - Starting as Adult
              - Shuffle Overworld Entrances
              - Shuffle Interior Entrances set to "All Interiors"
              - Randomize Overworld Spawns
