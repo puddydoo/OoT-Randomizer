@@ -50,7 +50,7 @@ class World(object):
 
         # rename a few attributes...
         self.keysanity = self.shuffle_smallkeys in ['keysanity', 'remove', 'any_dungeon', 'overworld']
-        self.check_beatable_only = self.reachable_locations != 'all'
+        self.check_beatable_only = self.logic_rules != 'all'
 
         self.shuffle_special_interior_entrances = self.shuffle_interior_entrances == 'all'
         self.shuffle_interior_entrances = self.shuffle_interior_entrances in ['simple', 'all']
@@ -310,7 +310,7 @@ class World(object):
                     new_location = LocationFactory(location)
                     new_location.parent_region = new_region
                     new_location.rule_string = rule
-                    if self.reachable_locations != 'none':
+                    if self.logic_rules != 'none':
                         self.parser.parse_spot_rule(new_location)
                     if new_location.never:
                         # We still need to fill the location even if ALR is off.
@@ -323,7 +323,7 @@ class World(object):
                     lname = '%s from %s' % (event, new_region.name)
                     new_location = Location(lname, type='Event', parent=new_region)
                     new_location.rule_string = rule
-                    if self.reachable_locations != 'none':
+                    if self.logic_rules != 'none':
                         self.parser.parse_spot_rule(new_location)
                     if new_location.never:
                         logging.getLogger('').debug('Dropping unreachable event: %s', new_location.name)
@@ -336,7 +336,7 @@ class World(object):
                     new_exit = Entrance('%s -> %s' % (new_region.name, exit), new_region)
                     new_exit.connected_region = exit
                     new_exit.rule_string = rule
-                    if self.reachable_locations != 'none':
+                    if self.logic_rules != 'none':
                         self.parser.parse_spot_rule(new_exit)
                     if new_exit.never:
                         logging.getLogger('').debug('Dropping unreachable exit: %s', new_exit.name)

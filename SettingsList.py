@@ -1855,7 +1855,7 @@ setting_infos = [
                          Randomizes all settings on the 'Main Rules' tab, except:
 
                          - Glitches Are Considered in Logic
-                         - Guarantee Reachable Locations
+                         - Logic Rules
                          - (Random) Number of MQ Dungeons
                          - Rainbow Bridge/LACS Requirements: Gold Skulltula Tokens
                          - Variable numbers of Spiritual Stones, Medallions, or Dungeons
@@ -2174,10 +2174,6 @@ setting_infos = [
         name           = 'glitched_logic',
         gui_text       = 'Glitches Are Considered in Logic',
         gui_tooltip    = '''\
-            Logic provides guiding sets of rules for world generation
-            which the Randomizer uses to ensure the generated seeds 
-            are beatable.
-
             Enabling this changes the logic so that it can require
             the use of movement-oriented glitches.
             This is not compatible with entrance shuffle or Master Quest.
@@ -2191,31 +2187,33 @@ setting_infos = [
         shared         = True,
     ),
     Combobox(
-        name           = 'reachable_locations',
-        gui_text       = 'Guarantee Reachable Locations',
+        name           = 'logic_rules',
+        gui_text       = 'Logic Rules',
         default        = 'all',
         choices        = {
-            'all':      'All',
-            'goals':    'All Goals',
-            'beatable': 'Required Only',
-            'none':     'None',
+            'all':      'All Locations Reachable',
+            'goals':    'All Goals Reachable',
+            'beatable': 'Beatable at Minimum',
+            'none':     'Not Guaranteed Beatable',
         },
         gui_tooltip    = '''\
-            This determines which items and locations are guaranteed to be reachable.
+            Logic provides guiding sets of rules for world generation which
+            the Randomizer uses to ensure the generated seeds are beatable.
 
-            'All': The randomizer will guarantee that every item is obtainable and every location is reachable,
-            so it will be possible to not only beat the game but also achieve 100% completion.
+            'All Locations Reachable': The randomizer will guarantee that every item is obtainable and every location
+            is reachable, so it will be possible to not only beat the game but also achieve 100% completion.
 
-            'All Goals': The randomizer will guarantee that every goal item is obtainable, not just the amount required
-            to beat the game, but otherwise behaves like 'Required Only'.
+            'All Goals Reachable': The randomizer will guarantee that every goal item is obtainable, not just the
+            amount required to beat the game, but otherwise behaves like 'Beatable at Minimum'.
             Goal items are the items required for the rainbow bridge and/or Ganon's Boss Key, so for example if the bridge is
             set to 1 Medallion and Ganon's Boss Key to 1 Gold Skulltula Token, all 6 Medallions and all 100 Tokens will
             be obtainable. In Triforce Hunt, this will also guarantee that all Triforce Pieces can be obtained.
 
-            'Required Only': Not every item or location will be guaranteed reachable, but there will be enough to beat the game.
+            'Beatable at Minimum': Not every item or location will be guaranteed reachable,
+            but there will be enough to beat the game.
 
-            'None': All items will be placed in random locations without guaranteeing that anything is reachable.
-            MAY BE IMPOSSIBLE TO BEAT.
+            'Not Guaranteed Beatable': All items will be placed in random locations without guaranteeing that
+            anything is reachable. MAY BE IMPOSSIBLE TO BEAT.
         ''',
         disable        = {
             'none'      : {'settings' : ['glitched_logic', 'allowed_tricks', 'logic_no_night_tokens_without_suns_song']},

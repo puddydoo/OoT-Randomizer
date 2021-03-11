@@ -140,7 +140,7 @@
           "settings": [
             "randomize_settings",
             "glitched_logic",
-            "reachable_locations"
+            "logic_rules"
           ]
         },
         {

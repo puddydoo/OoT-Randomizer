@@ -388,10 +388,10 @@ def fill_restrictive(window, worlds, base_search, locations, itempool, count=-1)
         max_search.collect_locations()
 
         # perform_access_check checks location reachability
-        if worlds[0].reachable_locations == 'all':
+        if worlds[0].logic_rules == 'all':
             perform_access_check = True
             extra_location_checks = []
-        elif worlds[0].reachable_locations == 'goals':
+        elif worlds[0].logic_rules == 'goals':
             # for All Goals Reachable, we have to track whether any goal items have been placed,
             # since we then have to start checking their reachability.
             perform_access_check = item_to_place.goalitem or not max_search.can_beat_game(scan_for_items=False)
