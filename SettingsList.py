@@ -2437,9 +2437,8 @@ setting_infos = [
             use them anywhere else before beating the Deku Tree.
 
             This only applies when Starting Age is set to Child.
-            This will not apply with certain settings unless
-            "Separate Forest Entrances" is enabled:
-            
+            This will not apply with certain settings:
+
              - Shuffle Overworld Entrances
              - Shuffle Interior Entrances set to "All Interiors"
              - Randomize Overworld Spawns
