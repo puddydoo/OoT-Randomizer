@@ -2218,8 +2218,6 @@ setting_infos = [
         ''',
         gui_params={
             "hide_when_disabled": True,
-            'no_line_break' : True,
-            'web:no_line_break' : False,
         },
         shared         = True
     ),
