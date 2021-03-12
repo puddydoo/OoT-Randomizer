@@ -2179,7 +2179,7 @@ setting_infos = [
             For a detailed description of what's in logic,
             please visit the Glitch Logic wiki page.
 
-            This is not compatible with entrance shuffle or Master Quest.
+            This is currently not compatible with entrance shuffle or Master Quest.
         ''',
         default        = False,
         disable        = {
