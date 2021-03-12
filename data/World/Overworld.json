@@ -82,8 +82,7 @@
         "locations": {
             "KF Kokiri Sword Chest": "is_child",
             "KF GS Know It All House": "
-                is_child and can_child_attack and at_night and
-                (had_night_start or can_leave_forest or can_play(Suns_Song))",
+                is_child and can_child_attack and (at_night or (had_night_start and is_starting_age))",
             "KF GS Bean Patch": "
                 can_plant_bugs and can_child_attack",
             "KF GS House of Twins": "
@@ -1850,7 +1849,8 @@
         "region_name": "LLR Talons House",
         "scene": "LLR Talons House",
         "locations": {
-            "LLR Talons Chickens": "is_child and at_day and Zeldas_Letter"
+            "LLR Talons Chickens": "
+                is_child and Zeldas_Letter and (at_day or (not had_night_start and is_starting_age))"
         },
         "exits": {
             "Lon Lon Ranch": "True"
