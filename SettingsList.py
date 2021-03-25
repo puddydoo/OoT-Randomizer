@@ -1886,6 +1886,7 @@ setting_infos = [
             and a Kokiri boy blocks the path out of the forest.
             Mido requires Kokiri Sword and Deku Shield, and the
             Kokiri boy moves after clearing the Deku Tree dungeon.
+            Both of these paths are always open as adult.
             
             'Open Forest': Mido no longer blocks the path to the
             Deku Tree, and the Kokiri boy no longer blocks the path
