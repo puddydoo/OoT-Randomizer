@@ -1895,15 +1895,17 @@ setting_infos = [
             out of the forest, but Mido still blocks the path to the
             Deku Tree.
 
-            'Closed Forest': The path to the Deku Tree is blocked.
-            The path out of the forest is also blocked, but only if
-            AT LEAST ONE of the following settings applies:
+            'Closed Forest': The paths to the Deku Tree and out of
+            the forest are both blocked. This setting requires
+            AT LEAST ONE of the following settings to apply:
             - Starting as Child
             - Open Door of Time
             - Shuffle Overworld Entrances
             - Shuffle Interior Entrances set to "All Interiors"
             - Randomize Overworld Spawns
             - Logic Rules set to "Glitched" or "No Logic"
+            Otherwise, this will instead be treated as Closed Deku to
+            prevent getting stuck in the forest after time traveling.
         ''',
         shared         = True,
         gui_params     = {
