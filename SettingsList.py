@@ -1895,12 +1895,15 @@ setting_infos = [
             out of the forest, but Mido still blocks the path to the
             Deku Tree.
 
-            'Closed Forest': The paths to the Deku Tree and out of
-            the forest are both blocked. With Glitchless logic,
-            starting as adult, without Open Door of Time, without
-            shuffling "Overworld" and "All Indoors" entrances,
-            and with overworld spawns unrandomized, will force
-            this to Closed Deku if selected.
+            'Closed Forest': The path to the Deku Tree is blocked.
+            The path out of the forest is also blocked, but only if
+            AT LEAST ONE of the following settings applies:
+            - Starting as Child
+            - Open Door of Time
+            - Shuffle Overworld Entrances
+            - Shuffle Interior Entrances set to "All Interiors"
+            - Randomize Overworld Spawns
+            - Logic Rules set to "Glitched" or "No Logic"
         ''',
         shared         = True,
         gui_params     = {
@@ -2435,10 +2438,10 @@ setting_infos = [
             use them anywhere else before beating the Deku Tree.
 
             This will not apply with certain settings:
-             - Starting as Adult
-             - Shuffle Overworld Entrances
-             - Shuffle Interior Entrances set to "All Interiors"
-             - Randomize Overworld Spawns
+            - Starting as Adult
+            - Shuffle Overworld Entrances
+            - Shuffle Interior Entrances set to "All Interiors"
+            - Randomize Overworld Spawns
         ''',
         shared         = True,
         gui_params     = {
