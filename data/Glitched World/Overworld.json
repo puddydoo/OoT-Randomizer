@@ -191,7 +191,7 @@
     },
     {
         "region_name": "Ganons Tower Post-Boss",
-        "dungeon": "Ganons Tower",
+        "scene": "Ganons Tower",
         "exits": {
             "Ganons Lair": "True"
         }
