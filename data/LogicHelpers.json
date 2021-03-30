@@ -7,8 +7,8 @@
     "Longshot": "(Progressive_Hookshot, 2)",
     "Silver_Gauntlets": "(Progressive_Strength_Upgrade, 2)",
     "Golden_Gauntlets": "(Progressive_Strength_Upgrade, 3)",
-    "Scarecrow": "Progressive_Hookshot and can_play(Scarecrow_Song)",
-    "Distant_Scarecrow": "(Progressive_Hookshot, 2) and can_play(Scarecrow_Song)",
+    "Scarecrow": "Progressive_Hookshot and can_play(Scarecrow_Song) and ('Pierre' or free_scarecrow)",
+    "Distant_Scarecrow": "(Progressive_Hookshot, 2) and can_play(Scarecrow_Song) and ('Pierre' or free_scarecrow)",
     # Items can be directly aliased, so all occurrences of that item name get replaced,
     # but make sure that inside the rule you use the string 'item' form
     # to avoid infinite recursion.

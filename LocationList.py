@@ -822,7 +822,7 @@ location_table = OrderedDict([
     ("Ganons Tower Boss Key Chest",                         ("Chest",       0x0A,  0x0B, None,                 ("Ganon's Castle",))),
 
     ## Events and Drops
-    ("Pierre",                                          ("Event",       None,  None, None,                     None)),
+    ("Song from Bonooru",                               ("Event",       None,  None, None,                     ("Lake Hylia", "Songs",))),
     ("Deliver Rutos Letter",                            ("Event",       None,  None, None,                     None)),
     ("Master Sword Pedestal",                           ("Event",       None,  None, None,                     None)),
     ("Hatch Weird Egg",                                 ("Event",       None,  None, None,                     None)),

@@ -245,10 +245,10 @@
         "hint": "Lake Hylia",
         "time_passes": true,
         "events": {
-            "Bonooru": "is_child and Ocarina"
+            "Pierre": "is_adult and can_play(Scarecrow_Song)"
         },
         "locations": {
-            "Pierre": "is_adult and Bonooru and not free_scarecrow",
+            "Song from Bonooru": "is_child and Ocarina",
             "LH Underwater Item": "is_child and can_dive",
             "LH Sun": "
                 is_adult and 

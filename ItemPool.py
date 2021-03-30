@@ -474,7 +474,7 @@ tradeitemoptions = (
 
 fixedlocations = {
     'Ganon': 'Triforce',
-    'Pierre': 'Scarecrow Song',
+    'Song from Bonooru': 'Scarecrow Song',
     'Deliver Rutos Letter': 'Deliver Letter',
     'Master Sword Pedestal': 'Time Travel',
     'Hatch Weird Egg': 'Chicken',
