@@ -105,7 +105,7 @@
         "exits": {
             "Dodongos Cavern Boss Area": "True",
             "Dodongos Cavern Post-Boss": "
-                (Bombs or Progressive_Strength_Upgrade) and 
+                can_blast_or_smash and (Bombs or Progressive_Strength_Upgrade) and 
                 (is_adult or Sticks or Kokiri_Sword)"
         }
     },

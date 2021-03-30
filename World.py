@@ -308,7 +308,7 @@ class World(object):
                     new_region.dungeon = 'Fire Temple'
                 elif new_region.scene == 'Morphas Lair':
                     new_region.dungeon = 'Water Temple'
-                elif new_region.scene == 'Desert Colossus':
+                elif new_region.scene == 'Desert Colossus Hands':
                     new_region.dungeon = 'Spirit Temple'
                 elif new_region.scene == 'Twinrovas Lair':
                     new_region.dungeon = 'Spirit Temple'
