@@ -25,6 +25,18 @@
         }
     },
     {
+        "region_name": "Queen Gohmas Lair",
+        "scene": "Queen Gohmas Lair",
+        "locations": {
+            "Deku Tree Queen Gohma Heart": "is_adult or Kokiri_Sword or Sticks",
+            "Queen Gohma": "is_adult or Kokiri_Sword or Sticks"
+        },
+        "exits": {
+            "Deku Tree Boss Room": "True",
+            "Deku Tree Post-Boss": "is_adult or Kokiri_Sword or Sticks"
+        }
+    },
+    {
         "region_name": "Deku Tree Post-Boss",
         "dungeon": "Deku Tree",
         "events": {
@@ -32,20 +44,92 @@
         }
     },
     {
+        "region_name": "King Dodongos Lair",
+        "scene": "King Dodongos Lair",
+        "locations": {
+            "Dodongos Cavern Boss Room Chest": "True",
+            "Dodongos Cavern King Dodongo Heart": "
+                (Bombs or Progressive_Strength_Upgrade or
+                    (has_bombchus and ((is_adult and can_shield) or (is_child and can_isg)))
+                ) and 
+                (is_adult or Sticks or Kokiri_Sword)",
+            "King Dodongo": "
+            (Bombs or Progressive_Strength_Upgrade or
+                (has_bombchus and ((is_adult and can_shield) or (is_child and can_isg)))
+            ) and 
+            (is_adult or Sticks or Kokiri_Sword)"
+        },
+        "exits": {
+            "Dodongos Cavern Boss Area": "True",
+            "Dodongos Cavern Post-Boss": "
+                (Bombs or Progressive_Strength_Upgrade or
+                    (has_bombchus and ((is_adult and can_shield) or (is_child and can_isg)))
+                ) and 
+                (is_adult or Sticks or Kokiri_Sword)"
+        }
+    },
+    {
         "region_name": "Dodongos Cavern Post-Boss",
         "dungeon": "Dodongos Cavern"
+    },
+    {
+        "region_name": "Barinades Lair",
+        "scene": "Barinades Lair",
+        "locations": {
+            "Jabu Jabus Belly Barinade Heart": "can_use(Boomerang) and (Sticks or Kokiri_Sword)",
+            "Barinade": "can_use(Boomerang) and (Sticks or Kokiri_Sword)"
+        },
+        "exits": {
+            "Jabu Jabus Belly Post-Boss": "can_use(Boomerang) and (Sticks or Kokiri_Sword)"
+        }
     },
     {
         "region_name": "Jabu Jabus Belly Post-Boss",
         "dungeon": "Jabu Jabus Belly"
     },
     {
+        "region_name": "Phantom Ganons Lair",
+        "scene": "Phantom Ganons Lair",
+        "locations": {
+            "Forest Temple Phantom Ganon Heart": "(can_use(Hookshot) or can_use(Bow)) or 
+                (can_use(Slingshot) and (Kokiri_Sword or Sticks))",
+            "Phantom Ganon": "(can_use(Hookshot) or can_use(Bow)) or 
+                (can_use(Slingshot) and (Kokiri_Sword or Sticks))"
+        },
+        "exits": {
+            "Forest Temple Post-Boss": "(can_use(Hookshot) or can_use(Bow)) or 
+                (can_use(Slingshot) and (Kokiri_Sword or Sticks))"
+        }
+    },
+    {
         "region_name": "Forest Temple Post-Boss",
         "dungeon": "Forest Temple"
     },
     {
+        "region_name": "Volvagias Lair",
+        "scene": "Volvagias Lair",
+        "locations": {
+            "Fire Temple Volvagia Heart": "can_use(Goron_Tunic) and can_use(Megaton_Hammer)",
+            "Volvagia": "can_use(Goron_Tunic) and can_use(Megaton_Hammer)"
+        },
+        "exits": {
+            "Fire Temple Post-Boss": "can_use(Goron_Tunic) and can_use(Megaton_Hammer)"
+        }
+    },
+    {
         "region_name": "Fire Temple Post-Boss",
         "dungeon": "Fire Temple"
+    },
+    {
+        "region_name": "Morphas Lair",
+        "scene": "Morphas Lair",
+        "locations": {
+            "Morpha": "can_jumpslash",
+            "Water Temple Morpha Heart": "can_jumpslash"
+        },
+        "exits": {
+            "Water Temple Post-Boss": "can_jumpslash"
+        }
     },
     {
         "region_name": "Water Temple Post-Boss",
@@ -55,18 +139,68 @@
         }
     },
     {
+        "region_name": "Twinrovas Lair",
+        "scene": "Twinrovas Lair",
+        "locations": {
+            "Spirit Temple Twinrova Heart": "can_use(Mirror_Shield)",
+            "Twinrova": "can_use(Mirror_Shield)"
+        },
+        "exits": {
+            "Spirit Temple Post-Boss": "can_use(Mirror_Shield)"
+        }
+    },
+    {
         "region_name": "Spirit Temple Post-Boss",
         "dungeon": "Spirit Temple"
+    },
+    {
+        "region_name": "Bongo Bongos Lair",
+        "scene": "Bongo Bongos Lair",
+        "locations": {
+            "Shadow Temple Bongo Bongo Heart": "True",
+            "Bongo Bongo": "True"
+            #I don't know what exactly beats Bongo Bongo
+        },
+        "exits": {
+            "Shadow Temple Post-Boss": "True"
+        }
     },
     {
         "region_name": "Shadow Temple Post-Boss",
         "dungeon": "Shadow Temple"
     },
     {
+        "region_name": "Ganons Tower",
+        "scene": "Ganons Tower",
+        "locations": {
+            "Ganons Tower Boss Key Chest": "True"
+        },
+        "exits": {
+            "Ganondorfs Lair": "Boss_Key_Ganons_Castle"
+        }
+    },
+    {
+        "region_name": "Ganondorfs Lair",
+        "scene": "Ganondorfs Lair",
+        "locations": {
+            "Ganondorf Hint": "True"
+        },
+        "exits": {
+            "Ganons Tower Post-Boss": "can_use(Light_Arrows)"
+        }
+    },
+    {
         "region_name": "Ganons Tower Post-Boss",
         "dungeon": "Ganons Tower",
         "exits": {
             "Ganons Lair": "True"
+        }
+    },
+    {
+        "region_name": "Ganons Lair",
+        "scene": "Ganons Lair",
+        "locations": {
+            "Ganon": "True"
         }
     },
     {
@@ -416,6 +550,39 @@
             "Spirit Temple Lobby": "True",
             "Colossus Grotto": "can_use(Silver_Gauntlets)",
             "Spirit Temple Outdoor Hands": "can_hover and can_use(Hover_Boots)"
+        }
+    },
+    {
+        "region_name": "Mirror Shield Hand",
+        "scene": "Desert Colossus Hands",
+        "locations": {
+            "Spirit Temple Mirror Shield Chest": "True"
+        },
+        "exits": {
+            "Desert Colossus": "True",
+            "Silver Gauntlets Hand": "
+                can_hover or can_use(Hookshot) or (can_use(Hover_Boots) and can_mega)",
+            "Spirit Temple Left Hand": "True"
+        }
+    },
+    {
+        "region_name": "Silver Gauntlets Hand",
+        "scene": "Desert Colossus Hands",
+        "locations": {
+            "Spirit Temple Silver Gauntlets Chest": "True"
+        },
+        "exits": {
+            "Desert Colossus": "True",
+            "Mirror Shield Hand": "can_hover or (can_use(Hover_Boots) and can_mega)",
+            "Spirit Temple Right Hand": "(Small_Key_Spirit_Temple, 2)"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Outdoor Hands",
+        "scene": "Desert Colossus Hands",
+        "exits": {
+            "Silver Gauntlets Hand": "True",
+            "Mirror Shield Hand": "True"
         }
     },
     {

@@ -138,14 +138,11 @@ def build_world_graphs(settings, window=dummy_window()):
 
         if settings.logic_rules == 'glitched':
             overworld_data = os.path.join(data_path('Glitched World'), 'Overworld.json')
-            outer_data = os.path.join(data_path('Glitched World'), 'Outer Dungeon.json')
         else:
             overworld_data = os.path.join(data_path('World'), 'Overworld.json')
-            outer_data = os.path.join(data_path('World'), 'Outer Dungeon.json')
 
         # Compile the json rules based on settings
         world.load_regions_from_json(overworld_data)
-        world.load_outer_dungeon_regions(outer_data)
         create_dungeons(world)
         world.create_internal_locations()
 

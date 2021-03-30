@@ -294,91 +294,79 @@ class World(object):
         for region in region_json:
             new_region = Region(region['region_name'])
             new_region.world = self
-            self.load_region_info(region, new_region)
-            self.regions.append(new_region)
-    
-    def load_outer_dungeon_regions(self, file_path):
-        region_json = read_json(file_path)
-            
-        for region in region_json:
-            new_region = Region(region['region_name'])
-            new_region.world = self
-            self.load_region_info(region, new_region)
-            if new_region.scene   == 'Queen Gohmas Lair':
-                new_region.dungeon = 'Deku Tree'
-            elif new_region.scene == 'King Dodongos Lair':
-                new_region.dungeon = 'Dodongos Cavern'
-            elif new_region.scene == 'Barinades Lair':
-                new_region.dungeon = 'Jabu Jabus Belly'
-            elif new_region.scene == 'Phantom Ganons Lair':
-                new_region.dungeon = 'Forest Temple'
-            elif new_region.scene == 'Volvagias Lair':
-                new_region.dungeon = 'Fire Temple'
-            elif new_region.scene == 'Morphas Lair':
-                new_region.dungeon = 'Water Temple'
-            elif new_region.scene == 'Desert Colossus':
-                new_region.dungeon = 'Spirit Temple'
-            elif new_region.scene == 'Twinrovas Lair':
-                new_region.dungeon = 'Spirit Temple'
-            elif new_region.scene == 'Bongo Bongos Lair':
-                new_region.dungeon = 'Shadow Temple'
-            elif new_region.scene == 'Ganons Tower':
-                new_region.dungeon = 'Ganons Castle'
-            elif new_region.scene == 'Ganondorfs Lair':
-                new_region.dungeon = 'Ganons Castle'
-            elif new_region.scene == 'Ganons Lair':
-                new_region.dungeon = 'Ganons Castle'
-            self.regions.append(new_region)
-    
-    def load_region_info(self, region, new_region):
-        if 'scene' in region:
-            new_region.scene = region['scene']
-        if 'hint' in region:
-            new_region.hint = region['hint']
-        if 'dungeon' in region:
-            new_region.dungeon = region['dungeon']
-        if 'time_passes' in region:
-            new_region.time_passes = region['time_passes']
-            new_region.provides_time = TimeOfDay.ALL
-        if new_region.name == 'Ganons Castle Grounds':
-            new_region.provides_time = TimeOfDay.DAMPE
-        if 'locations' in region:
-            for location, rule in region['locations'].items():
-                new_location = LocationFactory(location)
-                new_location.parent_region = new_region
-                new_location.rule_string = rule
-                if self.logic_rules != 'none':
-                    self.parser.parse_spot_rule(new_location)
-                if new_location.never:
-                    # We still need to fill the location even if ALR is off.
-                    logging.getLogger('').debug('Unreachable location: %s', new_location.name)
-                new_location.world = self
-                new_region.locations.append(new_location)
-        if 'events' in region:
-            for event, rule in region['events'].items():
-                # Allow duplicate placement of events
-                lname = '%s from %s' % (event, new_region.name)
-                new_location = Location(lname, type='Event', parent=new_region)
-                new_location.rule_string = rule
-                if self.logic_rules != 'none':
-                    self.parser.parse_spot_rule(new_location)
-                if new_location.never:
-                    logging.getLogger('').debug('Dropping unreachable event: %s', new_location.name)
-                else:
+            if 'scene' in region:
+                new_region.scene = region['scene']
+                if new_region.scene   == 'Queen Gohmas Lair':
+                    new_region.dungeon = 'Deku Tree'
+                elif new_region.scene == 'King Dodongos Lair':
+                    new_region.dungeon = 'Dodongos Cavern'
+                elif new_region.scene == 'Barinades Lair':
+                    new_region.dungeon = 'Jabu Jabus Belly'
+                elif new_region.scene == 'Phantom Ganons Lair':
+                    new_region.dungeon = 'Forest Temple'
+                elif new_region.scene == 'Volvagias Lair':
+                    new_region.dungeon = 'Fire Temple'
+                elif new_region.scene == 'Morphas Lair':
+                    new_region.dungeon = 'Water Temple'
+                elif new_region.scene == 'Desert Colossus':
+                    new_region.dungeon = 'Spirit Temple'
+                elif new_region.scene == 'Twinrovas Lair':
+                    new_region.dungeon = 'Spirit Temple'
+                elif new_region.scene == 'Bongo Bongos Lair':
+                    new_region.dungeon = 'Shadow Temple'
+                elif new_region.scene == 'Ganons Tower':
+                    new_region.dungeon = 'Ganons Castle'
+                elif new_region.scene == 'Ganondorfs Lair':
+                    new_region.dungeon = 'Ganons Castle'
+                elif new_region.scene == 'Ganons Lair':
+                    new_region.dungeon = 'Ganons Castle'
+            if 'hint' in region:
+                new_region.hint = region['hint']
+            if 'dungeon' in region:
+                new_region.dungeon = region['dungeon']
+            if 'time_passes' in region:
+                new_region.time_passes = region['time_passes']
+                new_region.provides_time = TimeOfDay.ALL
+            if new_region.name == 'Ganons Castle Grounds':
+                new_region.provides_time = TimeOfDay.DAMPE
+            if 'locations' in region:
+                for location, rule in region['locations'].items():
+                    new_location = LocationFactory(location)
+                    new_location.parent_region = new_region
+                    new_location.rule_string = rule
+                    if self.logic_rules != 'none':
+                        self.parser.parse_spot_rule(new_location)
+                    if new_location.never:
+                        # We still need to fill the location even if ALR is off.
+                        logging.getLogger('').debug('Unreachable location: %s', new_location.name)
                     new_location.world = self
                     new_region.locations.append(new_location)
-                    MakeEventItem(event, new_location)
-        if 'exits' in region:
-            for exit, rule in region['exits'].items():
-                new_exit = Entrance('%s -> %s' % (new_region.name, exit), new_region)
-                new_exit.connected_region = exit
-                new_exit.rule_string = rule
-                if self.logic_rules != 'none':
-                    self.parser.parse_spot_rule(new_exit)
-                if new_exit.never:
-                    logging.getLogger('').debug('Dropping unreachable exit: %s', new_exit.name)
-                else:
-                    new_region.exits.append(new_exit)
+            if 'events' in region:
+                for event, rule in region['events'].items():
+                    # Allow duplicate placement of events
+                    lname = '%s from %s' % (event, new_region.name)
+                    new_location = Location(lname, type='Event', parent=new_region)
+                    new_location.rule_string = rule
+                    if self.logic_rules != 'none':
+                        self.parser.parse_spot_rule(new_location)
+                    if new_location.never:
+                        logging.getLogger('').debug('Dropping unreachable event: %s', new_location.name)
+                    else:
+                        new_location.world = self
+                        new_region.locations.append(new_location)
+                        MakeEventItem(event, new_location)
+            if 'exits' in region:
+                for exit, rule in region['exits'].items():
+                    new_exit = Entrance('%s -> %s' % (new_region.name, exit), new_region)
+                    new_exit.connected_region = exit
+                    new_exit.rule_string = rule
+                    if self.logic_rules != 'none':
+                        self.parser.parse_spot_rule(new_exit)
+                    if new_exit.never:
+                        logging.getLogger('').debug('Dropping unreachable exit: %s', new_exit.name)
+                    else:
+                        new_region.exits.append(new_exit)
+            self.regions.append(new_region)
 
 
     def create_internal_locations(self):
