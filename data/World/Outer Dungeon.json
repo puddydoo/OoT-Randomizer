@@ -3,7 +3,6 @@
         "region_name": "Queen Gohmas Lair",
         "scene": "Queen Gohmas Lair",
         #"dungeon": "Deku Tree",
-        "savewarp": "Queen Gohmas Lair Savewarp",
         "locations": {
             "Deku Tree Queen Gohma Heart": "is_adult or Kokiri_Sword or Sticks",
             "Queen Gohma": "is_adult or Kokiri_Sword or Sticks"
@@ -17,7 +16,6 @@
         "region_name": "King Dodongos Lair",
         "scene": "King Dodongos Lair",
         #"dungeon": "Dodongos Cavern",
-        "savewarp": "King Dodongos Lair Savewarp",
         "locations": {
             "Dodongos Cavern Boss Room Chest": "True",
             "Dodongos Cavern King Dodongo Heart": "
@@ -38,7 +36,6 @@
         "region_name": "Barinades Lair",
         "scene": "Barinades Lair",
         #"dungeon": "Jabu Jabus Belly",
-        "savewarp": "Barinades Lair Savewarp",
         "locations": {
             "Jabu Jabus Belly Barinade Heart": "can_use(Boomerang) and (Sticks or Kokiri_Sword)",
             "Barinade": "can_use(Boomerang) and (Sticks or Kokiri_Sword)"
@@ -51,7 +48,6 @@
         "region_name": "Phantom Ganons Lair",
         "scene": "Phantom Ganons Lair",
         #"dungeon": "Forest Temple",
-        "savewarp": "Phantom Ganons Lair Savewarp",
         "locations": {
             "Forest Temple Phantom Ganon Heart": "(can_use(Hookshot) or can_use(Bow)) or 
                 (can_use(Slingshot) and (Kokiri_Sword or Sticks))",
@@ -67,7 +63,6 @@
         "region_name": "Volvagias Lair",
         "scene": "Volvagias Lair",
         #"dungeon": "Fire Temple",
-        "savewarp": "Volvagias Lair Savewarp",
         "locations": {
             "Fire Temple Volvagia Heart": "can_use(Goron_Tunic) and can_use(Megaton_Hammer)",
             "Volvagia": "can_use(Goron_Tunic) and can_use(Megaton_Hammer)"
@@ -80,7 +75,6 @@
         "region_name": "Morphas Lair",
         "scene": "Morphas Lair",
         #"dungeon": "Water Temple",
-        "savewarp": "Morphas Lair Savewarp",
         "locations": {
             "Morpha": "can_use(Hookshot)",
             "Water Temple Morpha Heart": "can_use(Hookshot)"
@@ -125,7 +119,6 @@
         "region_name": "Twinrovas Lair",
         "scene": "Twinrovas Lair",
         #"dungeon": "Spirit Temple",
-        "savewarp": "Twinrovas Lair Savewarp",
         "locations": {
             "Spirit Temple Twinrova Heart": "can_use(Mirror_Shield)",
             "Twinrova": "can_use(Mirror_Shield)"
@@ -138,7 +131,6 @@
         "region_name": "Bongo Bongos Lair",
         "scene": "Bongo Bongos Lair",
         #"dungeon": "Shadow Temple",
-        "savewarp": "Bongo Bongos Lair Savewarp",
         "locations": {
             "Shadow Temple Bongo Bongo Heart": "True",
             "Bongo Bongo": "True"
@@ -152,7 +144,6 @@
         "region_name": "Ganons Tower",
         "scene": "Ganons Tower",
         #"dungeon": "Ganons Castle",
-        "savewarp": "Ganons Tower Savewarp",
         "locations": {
             "Ganons Tower Boss Key Chest": "True"
         },
@@ -164,7 +155,6 @@
         "region_name": "Ganondorfs Lair",
         "scene": "Ganondorfs Lair",
         #"dungeon": "Ganons Castle",
-        "savewarp": "Ganondorfs Lair Savewarp",
         "locations": {
             "Ganondorf Hint": "True"
         },
@@ -176,7 +166,6 @@
         "region_name": "Ganons Lair",
         "scene": "Ganons Lair",
         #"dungeon": "Ganons Castle",
-        "savewarp": "Ganons Lair Savewarp",
         "locations": {
             "Ganon": "True"
         }
