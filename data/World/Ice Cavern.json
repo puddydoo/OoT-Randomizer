@@ -9,130 +9,103 @@
     {
         "region_name": "Ice Cavern Room00",
         "dungeon": "Ice Cavern", #"room": 00,
-        "locations": {
-        },
         "exits": {
+            "ZF Ice Ledge": "True",
+            "Ice Cavern Room01": "True"
         }
     },
     {
         "region_name": "Ice Cavern Room01",
         "dungeon": "Ice Cavern", #"room": 01,
-        "locations": {
-        },
         "exits": {
+            #Freezards are weird, they are immune to KS completely. Leave sticks out as 8/10 is a lot
+            "Ice Cavern Room02": "here(is_adult or has_explosives or can_use(Dins_Fire))",
+            "Ice Cavern Room10": "False"
         }
     },
     {
         "region_name": "Ice Cavern Room02",
         "dungeon": "Ice Cavern", #"room": 02,
-        "locations": {
-        },
         "exits": {
+            "Ice Cavern Room03": "True"
         }
     },
     {
         "region_name": "Ice Cavern Room03",
         "dungeon": "Ice Cavern", #"room": 03,
         "locations": {
+            "Ice Cavern GS Spinning Scythe Room": "can_use(Hookshot) or can_use(Boomerang)"
         },
         "exits": {
+            "Ice Cavern Room04": "Blue_Fire",
+            "Ice Cavern Room08": "is_adult",
+            "Ice Cavern Room11": "Blue_Fire"
         }
     },
     {
         "region_name": "Ice Cavern Room04",
         "dungeon": "Ice Cavern", #"room": 04,
-        "locations": {
-        },
         "exits": {
+            "Ice Cavern Room05": "True"
         }
     },
     {
         "region_name": "Ice Cavern Room05",
         "dungeon": "Ice Cavern", #"room": 05,
         "locations": {
+            "Ice Cavern GS Push Block Room": "
+                can_use(Hookshot) or can_use(Boomerang) or (logic_ice_block_gs and can_use(Hover_Boots))"
         },
         "exits": {
+            "Ice Cavern Room06": "True"
         }
     },
     {
         "region_name": "Ice Cavern Room06",
         "dungeon": "Ice Cavern", #"room": 06,
-        "locations": {
-        },
         "exits": {
+            "Ice Cavern Room07": "True"
         }
     },
     {
         "region_name": "Ice Cavern Room07",
         "dungeon": "Ice Cavern", #"room": 07,
         "locations": {
-        },
-        "exits": {
+            "Ice Cavern Iron Boots Chest": "
+                is_adult or Slingshot or Sticks or Kokiri_Sword or can_use(Dins_Fire)",
+            "Sheik in Ice Cavern": "
+                is_adult or Slingshot or Sticks or Kokiri_Sword or can_use(Dins_Fire)"
         }
     },
     {
         "region_name": "Ice Cavern Room08",
         "dungeon": "Ice Cavern", #"room": 08,
-        "locations": {
-        },
         "exits": {
+            "Ice Cavern Room09": "True"
         }
     },
     {
         "region_name": "Ice Cavern Room09",
         "dungeon": "Ice Cavern", #"room": 09,
         "locations": {
-        },
-        "exits": {
+            "Ice Cavern Map Chest": "Blue_Fire",
+            "Blue Fire": "has_bottle"
         }
     },
     {
         "region_name": "Ice Cavern Room10",
         "dungeon": "Ice Cavern", #"room": 10,
-        "locations": {
-        },
         "exits": {
+            "Ice Cavern Room07": "can_use(Iron_Boots)"
         }
     },
     {
         "region_name": "Ice Cavern Room11",
         "dungeon": "Ice Cavern", #"room": 11,
         "locations": {
-        },
-        "exits": {
-        }
-    },
-    {
-        "region_name": "Ice Cavern Beginning",
-        "dungeon": "Ice Cavern",
-        "exits": {
-            "ZF Ice Ledge": "True",
-            #Frezzards are weird, they are immune to KS completely. Leave sticks out as 8/10 is a lot
-            "Ice Cavern": "here(is_adult or has_explosives or can_use(Dins_Fire))"
-        }
-    },
-    {
-        "region_name": "Ice Cavern",
-        "dungeon": "Ice Cavern",
-        "locations": {
-            "Ice Cavern Map Chest": "Blue_Fire and is_adult",
-            "Ice Cavern Compass Chest": "Blue_Fire",
-            "Ice Cavern Iron Boots Chest": "
-                Blue_Fire and 
-                (is_adult or Slingshot or Sticks or 
-                    Kokiri_Sword or can_use(Dins_Fire))",
-            "Sheik in Ice Cavern": "
-                Blue_Fire and 
-                (is_adult or Slingshot or Sticks or 
-                    Kokiri_Sword or can_use(Dins_Fire))",
-            "Ice Cavern Freestanding PoH": "Blue_Fire",
-            "Ice Cavern GS Spinning Scythe Room": "can_use(Hookshot) or can_use(Boomerang)",
-            "Ice Cavern GS Heart Piece Room": "
-                Blue_Fire and (can_use(Hookshot) or can_use(Boomerang))",
-            "Ice Cavern GS Push Block Room": "
-                Blue_Fire and (can_use(Hookshot) or can_use(Boomerang) or
-                    (logic_ice_block_gs and can_use(Hover_Boots)))",
-            "Blue Fire": "is_adult and has_bottle"
+            "Ice Cavern Compass Chest": "True",
+            "Ice Cavern Freestanding PoH": "True",
+            "Ice Cavern GS Heart Piece Room": "can_use(Hookshot) or can_use(Boomerang)"
         }
     }
 ]
