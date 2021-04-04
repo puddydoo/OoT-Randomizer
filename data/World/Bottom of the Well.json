@@ -3,6 +3,69 @@
         "region_name": "Bottom of the Well",
         "dungeon": "Bottom of the Well",
         "exits": {
+            "Bottom of the Well Room00": "True"
+        }
+    },
+    {
+        "region_name": "Bottom of the Well Room00",
+        "dungeon": "Bottom of the Well", #"room": 00,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Bottom of the Well Room01",
+        "dungeon": "Bottom of the Well", #"room": 01,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Bottom of the Well Room02",
+        "dungeon": "Bottom of the Well", #"room": 02,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Bottom of the Well Room03",
+        "dungeon": "Bottom of the Well", #"room": 03,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Bottom of the Well Room04",
+        "dungeon": "Bottom of the Well", #"room": 04,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Bottom of the Well Room05",
+        "dungeon": "Bottom of the Well", #"room": 05,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Bottom of the Well Room06",
+        "dungeon": "Bottom of the Well", #"room": 06,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Bottom of the Well",
+        "dungeon": "Bottom of the Well",
+        "exits": {
             "Kakariko Village": "True",
             "Bottom of the Well Main Area" : "is_child and (can_child_attack or Nuts)"
         }

@@ -2,6 +2,109 @@
     {
         "region_name": "Ice Cavern Beginning",
         "dungeon": "Ice Cavern",
+        "exits": {
+            "Ice Cavern Room00": "True"
+        }
+    },
+    {
+        "region_name": "Ice Cavern Room00",
+        "dungeon": "Ice Cavern", #"room": 00,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Ice Cavern Room01",
+        "dungeon": "Ice Cavern", #"room": 01,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Ice Cavern Room02",
+        "dungeon": "Ice Cavern", #"room": 02,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Ice Cavern Room03",
+        "dungeon": "Ice Cavern", #"room": 03,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Ice Cavern Room04",
+        "dungeon": "Ice Cavern", #"room": 04,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Ice Cavern Room05",
+        "dungeon": "Ice Cavern", #"room": 05,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Ice Cavern Room06",
+        "dungeon": "Ice Cavern", #"room": 06,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Ice Cavern Room07",
+        "dungeon": "Ice Cavern", #"room": 07,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Ice Cavern Room08",
+        "dungeon": "Ice Cavern", #"room": 08,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Ice Cavern Room09",
+        "dungeon": "Ice Cavern", #"room": 09,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Ice Cavern Room10",
+        "dungeon": "Ice Cavern", #"room": 10,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Ice Cavern Room11",
+        "dungeon": "Ice Cavern", #"room": 11,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Ice Cavern Beginning",
+        "dungeon": "Ice Cavern",
         "locations": {
             "Fairy Pot": "has_bottle"
         },

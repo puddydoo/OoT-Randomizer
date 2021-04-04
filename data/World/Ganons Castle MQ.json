@@ -3,6 +3,173 @@
         "region_name": "Ganons Castle Lobby",
         "dungeon": "Ganons Castle",
         "exits": {
+            "Ganons Castle Room00": "True"
+        }
+    },
+    {
+        "region_name": "Ganons Castle Room00",
+        "dungeon": "Ganons Castle", #"room": 00,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Ganons Castle Room01",
+        "dungeon": "Ganons Castle", #"room": 01,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Ganons Castle Room02",
+        "dungeon": "Ganons Castle", #"room": 02,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Ganons Castle Room03",
+        "dungeon": "Ganons Castle", #"room": 03,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Ganons Castle Room04",
+        "dungeon": "Ganons Castle", #"room": 04,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Ganons Castle Room05",
+        "dungeon": "Ganons Castle", #"room": 05,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Ganons Castle Room06",
+        "dungeon": "Ganons Castle", #"room": 06,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Ganons Castle Room07",
+        "dungeon": "Ganons Castle", #"room": 07,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Ganons Castle Room08",
+        "dungeon": "Ganons Castle", #"room": 08,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Ganons Castle Room09",
+        "dungeon": "Ganons Castle", #"room": 09,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Ganons Castle Room10",
+        "dungeon": "Ganons Castle", #"room": 10,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Ganons Castle Room11",
+        "dungeon": "Ganons Castle", #"room": 11,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Ganons Castle Room12",
+        "dungeon": "Ganons Castle", #"room": 12,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Ganons Castle Room13",
+        "dungeon": "Ganons Castle", #"room": 13,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Ganons Castle Room14",
+        "dungeon": "Ganons Castle", #"room": 14,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Ganons Castle Room15",
+        "dungeon": "Ganons Castle", #"room": 15,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Ganons Castle Room16",
+        "dungeon": "Ganons Castle", #"room": 16,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Ganons Castle Room17",
+        "dungeon": "Ganons Castle", #"room": 17,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Ganons Castle Room18",
+        "dungeon": "Ganons Castle", #"room": 18,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Ganons Castle Room19",
+        "dungeon": "Ganons Castle", #"room": 19,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Ganons Castle Lobby",
+        "dungeon": "Ganons Castle",
+        "exits": {
             "Castle Grounds": "True",
             "Ganons Castle Forest Trial": "True",
             "Ganons Castle Fire Trial": "True",

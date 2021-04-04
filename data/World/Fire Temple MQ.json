@@ -2,6 +2,221 @@
     {
         "region_name": "Fire Temple Lower",
         "dungeon": "Fire Temple",
+        "exits": {
+            "Fire Temple Room00": "True"
+        }
+    },
+    {
+        "region_name": "Fire Temple Room00",
+        "dungeon": "Fire Temple", #"room": 00,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Fire Temple Room01",
+        "dungeon": "Fire Temple", #"room": 01,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Fire Temple Room02",
+        "dungeon": "Fire Temple", #"room": 02,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Fire Temple Room03",
+        "dungeon": "Fire Temple", #"room": 03,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Fire Temple Room04",
+        "dungeon": "Fire Temple", #"room": 04,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Fire Temple Room05",
+        "dungeon": "Fire Temple", #"room": 05,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Fire Temple Room06",
+        "dungeon": "Fire Temple", #"room": 06,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Fire Temple Room07",
+        "dungeon": "Fire Temple", #"room": 07,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Fire Temple Room08",
+        "dungeon": "Fire Temple", #"room": 08,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Fire Temple Room09",
+        "dungeon": "Fire Temple", #"room": 09,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Fire Temple Room10",
+        "dungeon": "Fire Temple", #"room": 10,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Fire Temple Room11",
+        "dungeon": "Fire Temple", #"room": 11,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Fire Temple Room12",
+        "dungeon": "Fire Temple", #"room": 12,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Fire Temple Room13",
+        "dungeon": "Fire Temple", #"room": 13,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Fire Temple Room14",
+        "dungeon": "Fire Temple", #"room": 14,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Fire Temple Room15",
+        "dungeon": "Fire Temple", #"room": 15,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Fire Temple Room16",
+        "dungeon": "Fire Temple", #"room": 16,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Fire Temple Room17",
+        "dungeon": "Fire Temple", #"room": 17,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Fire Temple Room18",
+        "dungeon": "Fire Temple", #"room": 18,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Fire Temple Room19",
+        "dungeon": "Fire Temple", #"room": 19,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Fire Temple Room20",
+        "dungeon": "Fire Temple", #"room": 20,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Fire Temple Room21",
+        "dungeon": "Fire Temple", #"room": 21,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Fire Temple Room22",
+        "dungeon": "Fire Temple", #"room": 22,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Fire Temple Room23",
+        "dungeon": "Fire Temple", #"room": 23,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Fire Temple Room24",
+        "dungeon": "Fire Temple", #"room": 24,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Fire Temple Room25",
+        "dungeon": "Fire Temple", #"room": 25,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Fire Temple Lower",
+        "dungeon": "Fire Temple",
         "locations": {
             "Fire Temple MQ Map Room Side Chest": "
                 is_adult or Kokiri_Sword or Sticks or Slingshot or Bombs or can_use(Dins_Fire)",

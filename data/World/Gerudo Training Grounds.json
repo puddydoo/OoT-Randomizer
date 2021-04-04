@@ -2,6 +2,101 @@
     {
         "region_name": "Gerudo Training Grounds Lobby",
         "dungeon": "Gerudo Training Grounds",
+        "exits": {
+            "Gerudo Training Grounds Room00": "True"
+        }
+    },
+    {
+        "region_name": "Gerudo Training Grounds Room00",
+        "dungeon": "Gerudo Training Grounds", #"room": 00,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Gerudo Training Grounds Room01",
+        "dungeon": "Gerudo Training Grounds", #"room": 01,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Gerudo Training Grounds Room02",
+        "dungeon": "Gerudo Training Grounds", #"room": 02,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Gerudo Training Grounds Room03",
+        "dungeon": "Gerudo Training Grounds", #"room": 03,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Gerudo Training Grounds Room04",
+        "dungeon": "Gerudo Training Grounds", #"room": 04,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Gerudo Training Grounds Room05",
+        "dungeon": "Gerudo Training Grounds", #"room": 05,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Gerudo Training Grounds Room06",
+        "dungeon": "Gerudo Training Grounds", #"room": 06,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Gerudo Training Grounds Room07",
+        "dungeon": "Gerudo Training Grounds", #"room": 07,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Gerudo Training Grounds Room08",
+        "dungeon": "Gerudo Training Grounds", #"room": 08,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Gerudo Training Grounds Room09",
+        "dungeon": "Gerudo Training Grounds", #"room": 09,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Gerudo Training Grounds Room10",
+        "dungeon": "Gerudo Training Grounds", #"room": 10,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Gerudo Training Grounds Lobby",
+        "dungeon": "Gerudo Training Grounds",
         "locations": {
             "Gerudo Training Grounds Lobby Left Chest": "can_use(Bow) or can_use(Slingshot)",
             "Gerudo Training Grounds Lobby Right Chest": "can_use(Bow) or can_use(Slingshot)",

@@ -3,6 +3,150 @@
         "region_name": "Dodongos Cavern Beginning",
         "dungeon": "Dodongos Cavern",
         "exits": {
+            "Dodongos Cavern Room00 Beginning": "True"
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Room00 Beginning",
+        "dungeon": "Dodongos Cavern",
+        "exits": {
+            "Death Mountain": "True",
+            "Dodongos Cavern Room00": "
+                here(can_blast_or_smash or Progressive_Strength_Upgrade)"
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Room00",
+        "dungeon": "Dodongos Cavern", #"room": 00,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Room01",
+        "dungeon": "Dodongos Cavern", #"room": 01,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Room02",
+        "dungeon": "Dodongos Cavern", #"room": 02,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Room03",
+        "dungeon": "Dodongos Cavern", #"room": 03,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Room04",
+        "dungeon": "Dodongos Cavern", #"room": 04,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Room05",
+        "dungeon": "Dodongos Cavern", #"room": 05,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Room06",
+        "dungeon": "Dodongos Cavern", #"room": 06,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Room07",
+        "dungeon": "Dodongos Cavern", #"room": 07,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Room08",
+        "dungeon": "Dodongos Cavern", #"room": 08,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Room09",
+        "dungeon": "Dodongos Cavern", #"room": 09,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Room10",
+        "dungeon": "Dodongos Cavern", #"room": 10,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Room11",
+        "dungeon": "Dodongos Cavern", #"room": 11,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Room12",
+        "dungeon": "Dodongos Cavern", #"room": 12,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Room13",
+        "dungeon": "Dodongos Cavern", #"room": 13,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Room14",
+        "dungeon": "Dodongos Cavern", #"room": 14,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Room15",
+        "dungeon": "Dodongos Cavern", #"room": 15,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Beginning",
+        "dungeon": "Dodongos Cavern",
+        "exits": {
             "Death Mountain": "True",
             "Dodongos Cavern Lobby": "
                 here(can_blast_or_smash or Progressive_Strength_Upgrade)"

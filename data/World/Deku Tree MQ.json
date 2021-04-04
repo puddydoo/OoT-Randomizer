@@ -2,6 +2,101 @@
     {
         "region_name": "Deku Tree Lobby",
         "dungeon": "Deku Tree",
+        "exits": {
+            "Deku Tree Room00": "True"
+        }
+    },
+    {
+        "region_name": "Deku Tree Room00",
+        "dungeon": "Deku Tree", #"room": 00,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Deku Tree Room01",
+        "dungeon": "Deku Tree", #"room": 01,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Deku Tree Room02",
+        "dungeon": "Deku Tree", #"room": 02,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Deku Tree Room03",
+        "dungeon": "Deku Tree", #"room": 03,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Deku Tree Room04",
+        "dungeon": "Deku Tree", #"room": 04,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Deku Tree Room05",
+        "dungeon": "Deku Tree", #"room": 05,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Deku Tree Room06",
+        "dungeon": "Deku Tree", #"room": 06,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Deku Tree Room07",
+        "dungeon": "Deku Tree", #"room": 07,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Deku Tree Room08",
+        "dungeon": "Deku Tree", #"room": 08,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Deku Tree Room09",
+        "dungeon": "Deku Tree", #"room": 09,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Deku Tree Room10",
+        "dungeon": "Deku Tree", #"room": 10,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Deku Tree Lobby",
+        "dungeon": "Deku Tree",
         "locations": {
             "Deku Tree MQ Map Chest": "True",
             "Deku Tree MQ Slingshot Chest": "is_adult or can_child_attack",

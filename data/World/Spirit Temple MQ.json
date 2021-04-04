@@ -2,6 +2,237 @@
     {
         "region_name": "Spirit Temple Lobby",
         "dungeon": "Spirit Temple",
+        "exits": {
+            "Spirit Temple Room00": "True"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Room00",
+        "dungeon": "Spirit Temple", #"room": 00,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Spirit Temple Room01",
+        "dungeon": "Spirit Temple", #"room": 01,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Spirit Temple Room02",
+        "dungeon": "Spirit Temple", #"room": 02,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Spirit Temple Room03",
+        "dungeon": "Spirit Temple", #"room": 03,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Spirit Temple Room04",
+        "dungeon": "Spirit Temple", #"room": 04,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Spirit Temple Room05",
+        "dungeon": "Spirit Temple", #"room": 05,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Spirit Temple Room06",
+        "dungeon": "Spirit Temple", #"room": 06,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Spirit Temple Room07",
+        "dungeon": "Spirit Temple", #"room": 07,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Spirit Temple Room08",
+        "dungeon": "Spirit Temple", #"room": 08,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Spirit Temple Room09",
+        "dungeon": "Spirit Temple", #"room": 09,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Spirit Temple Room10",
+        "dungeon": "Spirit Temple", #"room": 10,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Spirit Temple Room11",
+        "dungeon": "Spirit Temple", #"room": 11,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Spirit Temple Room12",
+        "dungeon": "Spirit Temple", #"room": 12,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Spirit Temple Room13",
+        "dungeon": "Spirit Temple", #"room": 13,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Spirit Temple Room14",
+        "dungeon": "Spirit Temple", #"room": 14,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Spirit Temple Room15",
+        "dungeon": "Spirit Temple", #"room": 15,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Spirit Temple Room16",
+        "dungeon": "Spirit Temple", #"room": 16,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Spirit Temple Room17",
+        "dungeon": "Spirit Temple", #"room": 17,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Spirit Temple Room18",
+        "dungeon": "Spirit Temple", #"room": 18,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Spirit Temple Room19",
+        "dungeon": "Spirit Temple", #"room": 19,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Spirit Temple Room20",
+        "dungeon": "Spirit Temple", #"room": 20,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Spirit Temple Room21",
+        "dungeon": "Spirit Temple", #"room": 21,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Spirit Temple Room22",
+        "dungeon": "Spirit Temple", #"room": 22,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Spirit Temple Room23",
+        "dungeon": "Spirit Temple", #"room": 23,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Spirit Temple Room24",
+        "dungeon": "Spirit Temple", #"room": 24,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Spirit Temple Room25",
+        "dungeon": "Spirit Temple", #"room": 25,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Spirit Temple Room26",
+        "dungeon": "Spirit Temple", #"room": 26,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Spirit Temple Room27",
+        "dungeon": "Spirit Temple", #"room": 27,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Spirit Temple Lobby",
+        "dungeon": "Spirit Temple",
         "locations": {
             "Spirit Temple MQ Entrance Front Left Chest": "True",
             "Spirit Temple MQ Entrance Back Left Chest": "

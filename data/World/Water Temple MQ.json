@@ -2,6 +2,189 @@
     {
         "region_name": "Water Temple Lobby",
         "dungeon": "Water Temple",
+        "exits": {
+            "Water Temple Room00": "True"
+        }
+    },
+    {
+        "region_name": "Water Temple Room00",
+        "dungeon": "Water Temple", #"room": 00,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Water Temple Room01",
+        "dungeon": "Water Temple", #"room": 01,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Water Temple Room02",
+        "dungeon": "Water Temple", #"room": 02,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Water Temple Room03",
+        "dungeon": "Water Temple", #"room": 03,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Water Temple Room04",
+        "dungeon": "Water Temple", #"room": 04,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Water Temple Room05",
+        "dungeon": "Water Temple", #"room": 05,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Water Temple Room06",
+        "dungeon": "Water Temple", #"room": 06,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Water Temple Room07",
+        "dungeon": "Water Temple", #"room": 07,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Water Temple Room08",
+        "dungeon": "Water Temple", #"room": 08,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Water Temple Room09",
+        "dungeon": "Water Temple", #"room": 09,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Water Temple Room10",
+        "dungeon": "Water Temple", #"room": 10,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Water Temple Room11",
+        "dungeon": "Water Temple", #"room": 11,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Water Temple Room12",
+        "dungeon": "Water Temple", #"room": 12,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Water Temple Room13",
+        "dungeon": "Water Temple", #"room": 13,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Water Temple Room14",
+        "dungeon": "Water Temple", #"room": 14,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Water Temple Room15",
+        "dungeon": "Water Temple", #"room": 15,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Water Temple Room16",
+        "dungeon": "Water Temple", #"room": 16,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Water Temple Room17",
+        "dungeon": "Water Temple", #"room": 17,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Water Temple Room18",
+        "dungeon": "Water Temple", #"room": 18,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Water Temple Room19",
+        "dungeon": "Water Temple", #"room": 19,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Water Temple Room20",
+        "dungeon": "Water Temple", #"room": 20,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Water Temple Room21",
+        "dungeon": "Water Temple", #"room": 21,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Water Temple Lobby",
+        "dungeon": "Water Temple",
         "events": {
             "Water Temple Clear": "Boss_Key_Water_Temple and can_use(Longshot)"
         },

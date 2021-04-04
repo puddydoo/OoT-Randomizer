@@ -2,6 +2,189 @@
     {
         "region_name": "Forest Temple Lobby",
         "dungeon": "Forest Temple",
+        "exits": {
+            "Forest Temple Room00": "True"
+        }
+    },
+    {
+        "region_name": "Forest Temple Room00",
+        "dungeon": "Forest Temple", #"room": 00,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Forest Temple Room01",
+        "dungeon": "Forest Temple", #"room": 01,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Forest Temple Room02",
+        "dungeon": "Forest Temple", #"room": 02,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Forest Temple Room03",
+        "dungeon": "Forest Temple", #"room": 03,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Forest Temple Room04",
+        "dungeon": "Forest Temple", #"room": 04,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Forest Temple Room05",
+        "dungeon": "Forest Temple", #"room": 05,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Forest Temple Room06",
+        "dungeon": "Forest Temple", #"room": 06,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Forest Temple Room07",
+        "dungeon": "Forest Temple", #"room": 07,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Forest Temple Room08",
+        "dungeon": "Forest Temple", #"room": 08,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Forest Temple Room09",
+        "dungeon": "Forest Temple", #"room": 09,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Forest Temple Room10",
+        "dungeon": "Forest Temple", #"room": 10,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Forest Temple Room11",
+        "dungeon": "Forest Temple", #"room": 11,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Forest Temple Room12",
+        "dungeon": "Forest Temple", #"room": 12,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Forest Temple Room13",
+        "dungeon": "Forest Temple", #"room": 13,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Forest Temple Room14",
+        "dungeon": "Forest Temple", #"room": 14,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Forest Temple Room15",
+        "dungeon": "Forest Temple", #"room": 15,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Forest Temple Room16",
+        "dungeon": "Forest Temple", #"room": 16,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Forest Temple Room17",
+        "dungeon": "Forest Temple", #"room": 17,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Forest Temple Room18",
+        "dungeon": "Forest Temple", #"room": 18,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Forest Temple Room19",
+        "dungeon": "Forest Temple", #"room": 19,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Forest Temple Room20",
+        "dungeon": "Forest Temple", #"room": 20,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Forest Temple Room21",
+        "dungeon": "Forest Temple", #"room": 21,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Forest Temple Lobby",
+        "dungeon": "Forest Temple",
         "locations": {
             "Forest Temple MQ First Room Chest": "
                 is_adult or Bombs or can_use(Sticks) or Nuts or can_use(Boomerang) or

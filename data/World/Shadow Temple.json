@@ -1,4 +1,187 @@
 [    
+   {
+        "region_name": "Shadow Temple Entryway",
+        "dungeon": "Shadow Temple",
+        "exits": {
+            "Shadow Temple Room02": "True"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Room00",
+        "dungeon": "Shadow Temple", #"room": 00,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Shadow Temple Room01",
+        "dungeon": "Shadow Temple", #"room": 01,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Shadow Temple Room02",
+        "dungeon": "Shadow Temple", #"room": 02,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Shadow Temple Room03",
+        "dungeon": "Shadow Temple", #"room": 03,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Shadow Temple Room04",
+        "dungeon": "Shadow Temple", #"room": 04,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Shadow Temple Room05",
+        "dungeon": "Shadow Temple", #"room": 05,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Shadow Temple Room06",
+        "dungeon": "Shadow Temple", #"room": 06,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Shadow Temple Room07",
+        "dungeon": "Shadow Temple", #"room": 07,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Shadow Temple Room08",
+        "dungeon": "Shadow Temple", #"room": 08,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Shadow Temple Room09",
+        "dungeon": "Shadow Temple", #"room": 09,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Shadow Temple Room10",
+        "dungeon": "Shadow Temple", #"room": 10,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Shadow Temple Room11",
+        "dungeon": "Shadow Temple", #"room": 11,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Shadow Temple Room12",
+        "dungeon": "Shadow Temple", #"room": 12,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Shadow Temple Room13",
+        "dungeon": "Shadow Temple", #"room": 13,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Shadow Temple Room14",
+        "dungeon": "Shadow Temple", #"room": 14,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Shadow Temple Room15",
+        "dungeon": "Shadow Temple", #"room": 15,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Shadow Temple Room16",
+        "dungeon": "Shadow Temple", #"room": 16,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Shadow Temple Room17",
+        "dungeon": "Shadow Temple", #"room": 17,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Shadow Temple Room18",
+        "dungeon": "Shadow Temple", #"room": 18,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Shadow Temple Room19",
+        "dungeon": "Shadow Temple", #"room": 19,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Shadow Temple Room20",
+        "dungeon": "Shadow Temple", #"room": 20,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
+    {
+        "region_name": "Shadow Temple Room21",
+        "dungeon": "Shadow Temple", #"room": 21,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
     {
         "region_name": "Shadow Temple Entryway",
         "dungeon": "Shadow Temple",
