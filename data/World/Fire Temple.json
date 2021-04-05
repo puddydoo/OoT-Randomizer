@@ -36,7 +36,7 @@
         "region_name": "Fire Temple Room02",
         "dungeon": "Fire Temple", #"room": 02,
         "locations": {
-            "Fire Temple Near Boss Chest" : "
+            "Fire Temple Near Boss Chest": "
                 logic_fewer_tunic_requirements or can_use(Goron_Tunic)",
             "Fire Temple Volvagia Heart": "
                 can_use(Goron_Tunic) and can_use(Megaton_Hammer) and Boss_Key_Fire_Temple and 
