@@ -10,332 +10,299 @@
         "region_name": "Forest Temple Room00",
         "dungeon": "Forest Temple", #"room": 00,
         "locations": {
+            "Forest Temple First Room Chest": "True",
+            "Forest Temple GS First Room": "
+                (is_adult and (Hookshot or Bow or Bombs)) or (is_child and (Boomerang or Slingshot)) or
+                has_bombchus or can_use(Dins_Fire) or (logic_forest_first_gs and (Bombs or
+                    (can_jumpslash and can_take_damage)))"
         },
         "exits": {
+            "SFM Forest Temple Entrance Ledge": "True",
+            "Forest Temple Room01": "True"
         }
     },
     {
         "region_name": "Forest Temple Room01",
         "dungeon": "Forest Temple", #"room": 01,
-        "locations": {
-        },
         "exits": {
+            "Forest Temple Room02": "True"
         }
     },
     {
         "region_name": "Forest Temple Room02",
         "dungeon": "Forest Temple", #"room": 02,
+        "events": {
+            "Forest Temple Meg": "
+                Forest_Temple_Jo and Forest_Temple_Beth and Forest_Temple_Amy"
+        },
         "locations": {
+            "Forest Temple GS Lobby": "can_use(Hookshot) or can_use(Boomerang)"
         },
         "exits": {
+            "Forest Temple Room04": "True",
+            "Forest Temple Room05": "(Small_Key_Forest_Temple, 1)",
+            "Forest Temple Room07": "can_use(Bow) or can_use(Slingshot)",
+            "Forest Temple Room08": "can_play(Song_of_Time) or is_child",
+            "Forest Temple Room17": "Forest_Temple_Meg"
         }
     },
     {
         "region_name": "Forest Temple Room03",
         "dungeon": "Forest Temple", #"room": 03,
-        "locations": {
-        },
-        "exits": {
-        }
     },
     {
         "region_name": "Forest Temple Room04",
         "dungeon": "Forest Temple", #"room": 04,
-        "locations": {
-        },
         "exits": {
+            "Forest Temple Room06": "is_adult or can_child_attack or Nuts"
         }
     },
     {
         "region_name": "Forest Temple Room05",
         "dungeon": "Forest Temple", #"room": 05,
-        "locations": {
-        },
         "exits": {
+            "Forest Temple Room11": "True"
         }
     },
     {
         "region_name": "Forest Temple Room06",
         "dungeon": "Forest Temple", #"room": 06,
         "locations": {
+            "Forest Temple First Stalfos Chest": "is_adult or Kokiri_Sword",
+            "Fairy Pot": "has_bottle"
+        }
+    },
+    {
+        "region_name": "Forest Temple Room06 Upper",
+        "dungeon": "Forest Temple", #"room": 06,
+        "locations": {
+            "Forest Temple Bow Chest": "True"
         },
         "exits": {
+            "Forest Temple Room13": "True"
         }
     },
     {
         "region_name": "Forest Temple Room07",
         "dungeon": "Forest Temple", #"room": 07,
         "locations": {
+            "Forest Temple Raised Island Courtyard Chest": "
+                can_use(Hookshot) or
+                at('Forest Temple Room15', True) or
+                (logic_forest_outdoors_ledge and can_use(Hover_Boots) and at('Forest Temple Room07 Upper', True))",
+            "Forest Temple GS Raised Island Courtyard": "
+                can_use(Hookshot) or (logic_forest_outdoor_east_gs and can_use(Boomerang)) or
+                at('Forest Temple Room15', can_use(Bow) or can_use(Dins_Fire) or has_explosives)",
+            "Deku Baba Sticks": "is_adult or Kokiri_Sword or Boomerang",
+            "Deku Baba Nuts": "
+                is_adult or Slingshot or Sticks or 
+                has_explosives or Kokiri_Sword or can_use(Dins_Fire)"
         },
         "exits": {
+            "Forest Temple Room07 Upper": "
+                can_use(Longshot) or (logic_forest_vines and can_use(Hookshot))",
+                #Longshot can grab some very high up vines to drain the well.
+            "Forest Temple Room09": "
+                'Forest Temple Drain Well' or can_use(Iron_Boots) or (Progressive_Scale, 2)"
+        }
+    },
+    {
+        "region_name": "Forest Temple Room07 Upper",
+        "dungeon": "Forest Temple", #"room": 07,
+        "events": {
+            "Forest Temple Drain Well": "True"
+        },
+        "exits": {
+            "Forest Temple Room07": "True",
+            "Forest Temple Room10": "True",
+            "Forest Temple Room15": "
+                logic_forest_door_frame and can_use(Hover_Boots) and can_use(Scarecrow)"
         }
     },
     {
         "region_name": "Forest Temple Room08",
         "dungeon": "Forest Temple", #"room": 08,
         "locations": {
+            "Forest Temple GS Level Island Courtyard": "
+                can_use(Longshot) or 
+                at('Forest Temple Room08 Upper', can_use(Hookshot))",
+            "Deku Baba Sticks": "is_adult or Kokiri_Sword or Boomerang",
+            "Deku Baba Nuts": "
+                is_adult or Slingshot or Sticks or 
+                has_explosives or Kokiri_Sword or can_use(Dins_Fire)"
         },
         "exits": {
+            "Forest Temple Room09": "(Progressive_Scale, 2)",
+            #Other methods of crossing through the well are not currently relevant.
+            "Forest Temple Room10": "True"
+        }
+    },
+    {
+        "region_name": "Forest Temple Room08 Upper",
+        "dungeon": "Forest Temple", #"room": 08,
+        "exits": {
+            "Forest Temple Room08": "True",
+            "Forest Temple Room18": "True",
+            "Forest Temple Room21": "True"
         }
     },
     {
         "region_name": "Forest Temple Room09",
         "dungeon": "Forest Temple", #"room": 09,
         "locations": {
+            "Forest Temple Well Chest": "'Forest Temple Drain Well'"
         },
         "exits": {
+            "Forest Temple Room07": "
+                'Forest Temple Drain Well' or can_use(Iron_Boots) or (Progressive_Scale, 2)",
+            "Forest Temple Room08": "
+                'Forest Temple Drain Well' or can_use(Iron_Boots) or (Progressive_Scale, 2)"
         }
     },
     {
         "region_name": "Forest Temple Room10",
         "dungeon": "Forest Temple", #"room": 10,
         "locations": {
+            "Forest Temple Map Chest": "
+                here(is_adult or has_explosives or
+                        ((Boomerang or Nuts or Deku_Shield) and
+                            (Sticks or Kokiri_Sword or Slingshot)))"
         },
         "exits": {
-        }
-    },
-    {
-        "region_name": "Forest Temple Room11",
-        "dungeon": "Forest Temple", #"room": 11,
-        "locations": {
-        },
-        "exits": {
-        }
-    },
-    {
-        "region_name": "Forest Temple Room12",
-        "dungeon": "Forest Temple", #"room": 12,
-        "locations": {
-        },
-        "exits": {
-        }
-    },
-    {
-        "region_name": "Forest Temple Room13",
-        "dungeon": "Forest Temple", #"room": 13,
-        "locations": {
-        },
-        "exits": {
-        }
-    },
-    {
-        "region_name": "Forest Temple Room14",
-        "dungeon": "Forest Temple", #"room": 14,
-        "locations": {
-        },
-        "exits": {
-        }
-    },
-    {
-        "region_name": "Forest Temple Room15",
-        "dungeon": "Forest Temple", #"room": 15,
-        "locations": {
-        },
-        "exits": {
-        }
-    },
-    {
-        "region_name": "Forest Temple Room16",
-        "dungeon": "Forest Temple", #"room": 16,
-        "locations": {
-        },
-        "exits": {
-        }
-    },
-    {
-        "region_name": "Forest Temple Room17",
-        "dungeon": "Forest Temple", #"room": 17,
-        "locations": {
-        },
-        "exits": {
-        }
-    },
-    {
-        "region_name": "Forest Temple Room18",
-        "dungeon": "Forest Temple", #"room": 18,
-        "locations": {
-        },
-        "exits": {
-        }
-    },
-    {
-        "region_name": "Forest Temple Room19",
-        "dungeon": "Forest Temple", #"room": 19,
-        "locations": {
-        },
-        "exits": {
-        }
-    },
-    {
-        "region_name": "Forest Temple Room20",
-        "dungeon": "Forest Temple", #"room": 20,
-        "locations": {
-        },
-        "exits": {
-        }
-    },
-    {
-        "region_name": "Forest Temple Room21",
-        "dungeon": "Forest Temple", #"room": 21,
-        "locations": {
-        },
-        "exits": {
-        }
-    },
-    {
-        "region_name": "Forest Temple Lobby",
-        "dungeon": "Forest Temple",
-        "locations": {
-            "Forest Temple First Room Chest": "True",
-            "Forest Temple First Stalfos Chest": "is_adult or Kokiri_Sword",
-            "Forest Temple GS First Room": "
-                (is_adult and (Hookshot or Bow or Bombs)) or (is_child and (Boomerang or Slingshot)) or
-                has_bombchus or can_use(Dins_Fire) or (logic_forest_first_gs and (Bombs or
-                    (can_jumpslash and can_take_damage)))",
-            "Forest Temple GS Lobby": "can_use(Hookshot) or can_use(Boomerang)",
-            "Fairy Pot": "has_bottle and (is_adult or can_child_attack or Nuts)"
-        },
-        "exits": {
-            "SFM Forest Temple Entrance Ledge": "True",
-            "Forest Temple NW Outdoors": "can_play(Song_of_Time) or is_child",
-            "Forest Temple NE Outdoors": "can_use(Bow) or can_use(Slingshot)",
-            "Forest Temple Block Push Room": "(Small_Key_Forest_Temple, 1)",
-            "Forest Temple Boss Region": "Forest_Temple_Jo_and_Beth and Forest_Temple_Amy_and_Meg"
-        }
-    },
-    {
-        "region_name": "Forest Temple NW Outdoors",
-        "dungeon": "Forest Temple",
-        "locations": {
-            "Forest Temple GS Level Island Courtyard": "
-                can_use(Longshot) or 
-                at('Forest Temple Outside Upper Ledge', can_use(Hookshot))",
-            "Deku Baba Sticks": "is_adult or Kokiri_Sword or Boomerang",
-            "Deku Baba Nuts": "
-                is_adult or Slingshot or Sticks or 
-                has_explosives or Kokiri_Sword or can_use(Dins_Fire)"
-        },
-        "exits": {
-            "Forest Temple NE Outdoors": "(Progressive_Scale, 2)",
-            #Other methods of crossing through the well are not currently relevant.
-            "Forest Temple Outdoors High Balconies": "
+            "Forest Temple Room07 Upper": "
+                here(is_adult or has_explosives or
+                        ((Boomerang or Nuts or Deku_Shield) and
+                            (Sticks or Kokiri_Sword or Slingshot)))",
+            "Forest Temple Room08": "
                 here(is_adult or has_explosives or
                         ((Boomerang or Nuts or Deku_Shield) and
                             (Sticks or Kokiri_Sword or Slingshot)))"
         }
     },
     {
-        "region_name": "Forest Temple NE Outdoors",
-        "dungeon": "Forest Temple",
-        "locations": {
-            "Forest Temple Raised Island Courtyard Chest": "
-                can_use(Hookshot) or
-                at('Forest Temple Falling Room', True) or
-                (logic_forest_outdoors_ledge and can_use(Hover_Boots) and at('Forest Temple Outdoors High Balconies', True))",
-            "Forest Temple GS Raised Island Courtyard": "
-                can_use(Hookshot) or (logic_forest_outdoor_east_gs and can_use(Boomerang)) or
-                at('Forest Temple Falling Room', can_use(Bow) or can_use(Dins_Fire) or has_explosives)",
-            "Deku Baba Sticks": "is_adult or Kokiri_Sword or Boomerang",
-            "Deku Baba Nuts": "
-                is_adult or Slingshot or Sticks or 
-                has_explosives or Kokiri_Sword or can_use(Dins_Fire)"
-        },
-        "exits": {
-            "Forest Temple Outdoors High Balconies": "
-                can_use(Longshot) or (logic_forest_vines and can_use(Hookshot))",
-                #Longshot can grab some very high up vines to drain the well.
-            "Forest Temple NW Outdoors": "can_use(Iron_Boots) or (Progressive_Scale, 2)",
-            "Forest Temple Lobby": "True"
-        }
-    },
-    {
-        "region_name": "Forest Temple Outdoors High Balconies",
-        "dungeon": "Forest Temple",
-        "locations": {
-            "Forest Temple Well Chest": "True",
-            "Forest Temple Map Chest": "True"
-        },
-        "exits": {
-            "Forest Temple NW Outdoors": "True",
-            "Forest Temple NE Outdoors": "True",
-            "Forest Temple Falling Room": "
-                logic_forest_door_frame and can_use(Hover_Boots) and can_use(Scarecrow)"
-        }
-    },
-    {
-        "region_name": "Forest Temple Falling Room",
-        "dungeon": "Forest Temple",
-        "events": {
-            "Forest Temple Amy and Meg": "can_use(Bow)"
-        },
-        "locations": {
-            "Forest Temple Falling Ceiling Room Chest": "True"
-        },
-        "exits": {
-            "Forest Temple NE Outdoors": "True"
-        }
-    },
-    {
-        "region_name": "Forest Temple Block Push Room",
-        "dungeon": "Forest Temple",
+        "region_name": "Forest Temple Room11",
+        "dungeon": "Forest Temple", #"room": 11,
         "locations": {
             "Forest Temple Eye Switch Chest": "
                 Progressive_Strength_Upgrade and (can_use(Bow) or can_use(Slingshot))"
         },
         "exits": {
             #end of the road for child forest. No hovers and too short to climb push blocks
-            "Forest Temple Outside Upper Ledge": "
+            "Forest Temple Room08 Upper": "
                 can_use(Hover_Boots) or (logic_forest_outside_backdoor and is_adult and Progressive_Strength_Upgrade)",
-            "Forest Temple Bow Region": "
-                Progressive_Strength_Upgrade and (Small_Key_Forest_Temple, 3) and is_adult",
-            "Forest Temple Straightened Hall": "
-                Progressive_Strength_Upgrade and (Small_Key_Forest_Temple, 2) and can_use(Bow)"
+            "Forest Temple Room19": "
+                Progressive_Strength_Upgrade and (Small_Key_Forest_Temple, 2) and is_adult",
+            "Forest Temple Room19 Straight": "
+                Progressive_Strength_Upgrade and (Small_Key_Forest_Temple, 2) and is_adult and Bow"
         }
     },
     {
-        "region_name": "Forest Temple Straightened Hall",
-        "dungeon": "Forest Temple",
-        "locations": {
-            "Forest Temple Boss Key Chest": "True"
-        },
-        "exits": {
-            "Forest Temple Outside Upper Ledge": "True"
-        }
-    },
-    {
-        "region_name": "Forest Temple Outside Upper Ledge",
-        "dungeon": "Forest Temple",
-        "locations": {
-            "Forest Temple Floormaster Chest": "True"
-        },
-        "exits": {
-            "Forest Temple NW Outdoors": "True"
-        }
-    },
-    {
-        "region_name": "Forest Temple Bow Region",
-        "dungeon": "Forest Temple",
+        "region_name": "Forest Temple Room12",
+        "dungeon": "Forest Temple", #"room": 12,
         "events": {
-            "Forest Temple Jo and Beth": "can_use(Bow)"
+            "Forest Temple Jo": "can_use(Bow)"
         },
         "locations": {
-            "Forest Temple Bow Chest": "True",
-            "Forest Temple Red Poe Chest": "can_use(Bow)",
-            "Forest Temple Blue Poe Chest": "can_use(Bow)"
+            "Forest Temple Red Poe Chest": "'Forest Temple Jo'"
         },
         "exits": {
-            "Forest Temple Falling Room": "
-            (Small_Key_Forest_Temple, 5) and (Bow or can_use(Dins_Fire))"
+            "Forest Temple Room06 Upper": "True"
         }
     },
     {
-        "region_name": "Forest Temple Boss Region",
-        "dungeon": "Forest Temple",
+        "region_name": "Forest Temple Room13",
+        "dungeon": "Forest Temple", #"room": 13,
+        "events": {
+            "Forest Temple Beth": "can_use(Bow)"
+        },
+        "locations": {
+            "Forest Temple Blue Poe Chest": "'Forest Temple Beth'"
+        },
+        "exits": {
+            "Forest Temple Room20": "(Small_Key_Forest_Temple, 4)"
+        }
+    },
+    {
+        "region_name": "Forest Temple Room14",
+        "dungeon": "Forest Temple", #"room": 14,
+        "exits": {
+            "Forest Temple Room20 Twisted": "Bow or can_use(Dins_Fire)"
+        }
+    },
+    {
+        "region_name": "Forest Temple Room15",
+        "dungeon": "Forest Temple", #"room": 15,
+        "locations": {
+            "Forest Temple Falling Ceiling Room Chest": "True"
+        },
+        "exits": {
+            "Forest Temple Room07": "True",
+            "Forest Temple Room16": "True"
+        }
+    },
+    {
+        "region_name": "Forest Temple Room16",
+        "dungeon": "Forest Temple", #"room": 16,
+        "events": {
+            "Forest Temple Amy": "can_use(Bow)"
+        },
+        "exits": {
+            "Forest Temple Room03": "'Forest Temple Amy'"
+        }
+    },
+    {
+        "region_name": "Forest Temple Room17",
+        "dungeon": "Forest Temple", #"room": 17,
         "locations": {
             "Forest Temple Basement Chest": "True",
             "Forest Temple Phantom Ganon Heart": "Boss_Key_Forest_Temple",
             "Phantom Ganon": "Boss_Key_Forest_Temple",
             "Forest Temple GS Basement": "can_use(Hookshot) or can_use(Boomerang)"
+        }
+    },
+    {
+        "region_name": "Forest Temple Room18",
+        "dungeon": "Forest Temple", #"room": 18,
+        "locations": {
+            "Forest Temple Floormaster Chest": "True"
+        }
+    },
+    {
+        "region_name": "Forest Temple Room19",
+        "dungeon": "Forest Temple", #"room": 19,
+        "exits": {
+            "Forest Temple Room12": "(Small_Key_Forest_Temple, 3)"
+        }
+    },
+    {
+        "region_name": "Forest Temple Room19 Straight",
+        "dungeon": "Forest Temple", #"room": 19,
+        "locations": {
+            "Forest Temple Boss Key Chest": "True"
+        },
+        "exits": {
+            "Forest Temple Room21": "True"
+        }
+    },
+    {
+        "region_name": "Forest Temple Room20",
+        "dungeon": "Forest Temple", #"room": 20,
+        "exits": {
+            "Forest Temple Room14": "(Small_Key_Forest_Temple, 5)"
+        }
+    },
+    {
+        "region_name": "Forest Temple Room20 Twisted",
+        "dungeon": "Forest Temple", #"room": 20,
+        "exits": {
+            "Forest Temple Room15": "True"
+        }
+    },
+    {
+        "region_name": "Forest Temple Room21",
+        "dungeon": "Forest Temple", #"room": 21,
+        "exits": {
+            "Forest Temple Room08 Upper": "True"
         }
     }
 ]
