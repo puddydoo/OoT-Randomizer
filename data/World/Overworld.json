@@ -1862,15 +1862,6 @@
         }
     },
     {
-        "region_name": "Ganons Castle Tower",
-        "dungeon": "Ganons Castle",
-        "locations": {
-            "Ganons Tower Boss Key Chest": "True",
-            "Ganondorf Hint": "Boss_Key_Ganons_Castle",
-            "Ganon": "Boss_Key_Ganons_Castle and can_use(Light_Arrows)"
-        }
-    },
-    {
         "region_name": "GF Storms Grotto",
         "scene": "GF Storms Grotto",
         "locations": {
@@ -2271,6 +2262,179 @@
         },
         "exits": {
             "GV Fortress Side": "True"
+        }
+    },
+    {
+        "region_name": "Queen Gohmas Lair",
+        "dungeon": "Deku Tree",
+        "locations": {
+            "Deku Tree Queen Gohma Heart": "is_adult or Kokiri_Sword or Sticks",
+            "Queen Gohma": "is_adult or Kokiri_Sword or Sticks"
+        },
+        "exits": {
+            "Deku Tree Boss Room": "True",
+            "Deku Tree Post-Boss": "is_adult or Kokiri_Sword or Sticks"
+        }
+    },
+    {
+        "region_name": "Deku Tree Post-Boss",
+        "dungeon": "Deku Tree",
+        "events": {
+            "Deku Tree Clear": "True"
+        }
+    },
+    {
+        "region_name": "King Dodongos Lair",
+        "dungeon": "Dodongos Cavern",
+        "locations": {
+            "Dodongos Cavern Boss Room Chest": "True",
+            "Dodongos Cavern King Dodongo Heart": "
+                can_blast_or_smash and (Bombs or Progressive_Strength_Upgrade) and 
+                (is_adult or Sticks or Kokiri_Sword)",
+            "King Dodongo": "
+                can_blast_or_smash and (Bombs or Progressive_Strength_Upgrade) and 
+                (is_adult or Sticks or Kokiri_Sword)"
+        },
+        "exits": {
+            "Dodongos Cavern Boss Area": "True",
+            "Dodongos Cavern Post-Boss": "
+                can_blast_or_smash and (Bombs or Progressive_Strength_Upgrade) and 
+                (is_adult or Sticks or Kokiri_Sword)"
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Post-Boss",
+        "dungeon": "Dodongos Cavern"
+    },
+    {
+        "region_name": "Barinades Lair",
+        "dungeon": "Jabu Jabus Belly",
+        "locations": {
+            "Jabu Jabus Belly Barinade Heart": "can_use(Boomerang) and (Sticks or Kokiri_Sword)",
+            "Barinade": "can_use(Boomerang) and (Sticks or Kokiri_Sword)"
+        },
+        "exits": {
+            "Jabu Jabus Belly Post-Boss": "can_use(Boomerang) and (Sticks or Kokiri_Sword)"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Post-Boss",
+        "dungeon": "Jabu Jabus Belly"
+    },
+    {
+        "region_name": "Phantom Ganons Lair",
+        "dungeon": "Forest Temple",
+        "locations": {
+            "Forest Temple Phantom Ganon Heart": "(can_use(Hookshot) or can_use(Bow)) or 
+                (can_use(Slingshot) and (Kokiri_Sword or Sticks))",
+            "Phantom Ganon": "(can_use(Hookshot) or can_use(Bow)) or 
+                (can_use(Slingshot) and (Kokiri_Sword or Sticks))"
+        },
+        "exits": {
+            "Forest Temple Post-Boss": "(can_use(Hookshot) or can_use(Bow)) or 
+                (can_use(Slingshot) and (Kokiri_Sword or Sticks))"
+        }
+    },
+    {
+        "region_name": "Forest Temple Post-Boss",
+        "dungeon": "Forest Temple"
+    },
+    {
+        "region_name": "Volvagias Lair",
+        "dungeon": "Fire Temple",
+        "locations": {
+            "Fire Temple Volvagia Heart": "can_use(Goron_Tunic) and can_use(Megaton_Hammer)",
+            "Volvagia": "can_use(Goron_Tunic) and can_use(Megaton_Hammer)"
+        },
+        "exits": {
+            "Fire Temple Post-Boss": "can_use(Goron_Tunic) and can_use(Megaton_Hammer)"
+        }
+    },
+    {
+        "region_name": "Fire Temple Post-Boss",
+        "dungeon": "Fire Temple"
+    },
+    {
+        "region_name": "Morphas Lair",
+        "dungeon": "Water Temple",
+        "locations": {
+            "Morpha": "can_use(Hookshot)",
+            "Water Temple Morpha Heart": "can_use(Hookshot)"
+        },
+        "exits": {
+            "Water Temple Post-Boss": "can_use(Hookshot)"
+        }
+    },
+    {
+        "region_name": "Water Temple Post-Boss",
+        "dungeon": "Water Temple",
+        "events": {
+            "Water Temple Clear": "True"
+        }
+    },
+    {
+        "region_name": "Twinrovas Lair",
+        "dungeon": "Spirit Temple",
+        "locations": {
+            "Spirit Temple Twinrova Heart": "can_use(Mirror_Shield)",
+            "Twinrova": "can_use(Mirror_Shield)"
+        },
+        "exits": {
+            "Spirit Temple Post-Boss": "can_use(Mirror_Shield)"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Post-Boss",
+        "dungeon": "Spirit Temple"
+    },
+    {
+        "region_name": "Bongo Bongos Lair",
+        "dungeon": "Shadow Temple",
+        "locations": {
+            "Shadow Temple Bongo Bongo Heart": "True",
+            "Bongo Bongo": "True"
+            #I don't know what exactly beats Bongo Bongo
+        },
+        "exits": {
+            "Shadow Temple Post-Boss": "True"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Post-Boss",
+        "dungeon": "Shadow Temple"
+    },
+    {
+        "region_name": "Ganons Tower",
+        "dungeon": "Ganons Castle",
+        "locations": {
+            "Ganons Tower Boss Key Chest": "True"
+        },
+        "exits": {
+            "Ganondorfs Lair": "Boss_Key_Ganons_Castle"
+        }
+    },
+    {
+        "region_name": "Ganondorfs Lair",
+        "dungeon": "Ganons Castle",
+        "locations": {
+            "Ganondorf Hint": "True"
+        },
+        "exits": {
+            "Ganons Tower Post-Boss": "can_use(Light_Arrows)"
+        }
+    },
+    {
+        "region_name": "Ganons Tower Post-Boss",
+        "dungeon": "Ganons Castle",
+        "exits": {
+            "Ganons Lair": "True"
+        }
+    },
+    {
+        "region_name": "Ganons Lair",
+        "dungeon": "Ganons Castle",
+        "locations": {
+            "Ganon": "True"
         }
     }
 ]

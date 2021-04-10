@@ -24,7 +24,7 @@
             "Ganons Castle Room12": "True",
             "Ganons Castle Room17": "True",
             "Ganons Castle Room09": "can_use(Golden_Gauntlets)",
-            "Ganons Castle Tower": "
+            "Ganons Tower": "
                 (skipped_trials[Forest] or 'Forest Trial Clear') and 
                 (skipped_trials[Fire] or 'Fire Trial Clear') and 
                 (skipped_trials[Water] or 'Water Trial Clear') and 

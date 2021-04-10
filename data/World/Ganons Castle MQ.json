@@ -177,7 +177,7 @@
             "Ganons Castle Shadow Trial": "True",
             "Ganons Castle Spirit Trial": "True",
             "Ganons Castle Light Trial": "can_use(Golden_Gauntlets)",
-            "Ganons Castle Tower": "
+            "Ganons Tower": "
                 (skipped_trials[Forest] or 'Forest Trial Clear') and 
                 (skipped_trials[Fire] or 'Fire Trial Clear') and 
                 (skipped_trials[Water] or 'Water Trial Clear') and 

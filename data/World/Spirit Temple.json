@@ -161,9 +161,8 @@
     {
         "region_name": "Spirit Temple Room05 Ceiling",
         "dungeon": "Spirit Temple", #"room": 05,
-        "locations": {
-            "Spirit Temple Twinrova Heart": "Progressive_Hookshot and Boss_Key_Spirit_Temple",
-            "Twinrova": "Progressive_Hookshot and Boss_Key_Spirit_Temple"
+        "exits": {
+            "Twinrovas Lair": "Progressive_Hookshot and Boss_Key_Spirit_Temple"
         }
     },
     {

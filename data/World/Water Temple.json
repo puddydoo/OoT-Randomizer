@@ -178,12 +178,8 @@
     {
         "region_name": "Water Temple Room11",
         "dungeon": "Water Temple", #"room": 11,
-        "events": {
-            "Water Temple Clear": "Boss_Key_Water_Temple"
-        },
-        "locations": {
-            "Morpha": "Boss_Key_Water_Temple",
-            "Water Temple Morpha Heart": "Boss_Key_Water_Temple"
+        "exits": {
+            "Morphas Lair": "Boss_Key_Water_Temple"
         }
     },
     {

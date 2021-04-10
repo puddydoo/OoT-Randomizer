@@ -45,9 +45,8 @@
     {
         "region_name": "Shadow Temple Room03",
         "dungeon": "Shadow Temple", #"room": 03,
-        "locations": {
-            "Shadow Temple Bongo Bongo Heart": "Boss_Key_Shadow_Temple",
-            "Bongo Bongo": "Boss_Key_Shadow_Temple"
+        "exits": {
+            "Bongo Bongos Lair": "Boss_Key_Shadow_Temple"
         }
     },
     {

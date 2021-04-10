@@ -38,15 +38,14 @@
         "locations": {
             "Fire Temple Near Boss Chest": "
                 logic_fewer_tunic_requirements or can_use(Goron_Tunic)",
-            "Fire Temple Volvagia Heart": "
-                can_use(Goron_Tunic) and can_use(Megaton_Hammer) and Boss_Key_Fire_Temple and 
-                (logic_fire_boss_door_jump or Hover_Boots or 'Fire Temple Boss Door Stone')",
-            "Volvagia": "
-                can_use(Goron_Tunic) and can_use(Megaton_Hammer) and Boss_Key_Fire_Temple and 
-                (logic_fire_boss_door_jump or Hover_Boots or 'Fire Temple Boss Door Stone')",
             "Fairy Pot": "
                 has_bottle and (can_use(Hover_Boots) or can_use(Hookshot)) and
                 (logic_fewer_tunic_requirements or can_use(Goron_Tunic))"
+        },
+        "exits": {
+            "Volvagias Lair": "
+                can_use(Goron_Tunic) and Boss_Key_Fire_Temple and 
+                (logic_fire_boss_door_jump or Hover_Boots or 'Fire Temple Boss Door Stone')"
         }
     },
     {

@@ -220,15 +220,11 @@
         "dungeon": "Dodongos Cavern",
         "locations": {
             "Dodongos Cavern MQ Under Grave Chest": "True",
-            "Dodongos Cavern Boss Room Chest": "True",
-            "Dodongos Cavern King Dodongo Heart": "
-                can_blast_or_smash and (Bombs or Progressive_Strength_Upgrade) and 
-                (is_adult or Sticks or Kokiri_Sword)",
-            "King Dodongo": "
-                can_blast_or_smash and (Bombs or Progressive_Strength_Upgrade) and 
-                (is_adult or Sticks or Kokiri_Sword)",
             "Dodongos Cavern MQ GS Back Area": "True",
             "Fairy Pot": "has_bottle"
+        },
+        "exits": {
+            "King Dodongos Lair": "True"
         }
     }
 ]

@@ -181,13 +181,12 @@
         "locations": {
             "Jabu Jabus Belly MQ Cow" : "can_play(Eponas_Song)",
             "Jabu Jabus Belly MQ Near Boss Chest": "True",
-            "Jabu Jabus Belly Barinade Heart": "True",
-            "Barinade": "True",
             "Jabu Jabus Belly MQ GS Near Boss": "True",
             "Fairy Pot": "has_bottle"
         },
         "exits": {
-            "Jabu Jabus Belly Main": "True"
+            "Jabu Jabus Belly Main": "True",
+            "Barinades Lair": "True"
         }
     }
 ]

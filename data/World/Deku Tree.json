@@ -103,15 +103,8 @@
     {
         "region_name": "Deku Tree Room09",
         "dungeon": "Deku Tree", #"room": 09,
-        "events": {
-            "Deku Tree Clear": "
-                here(has_shield) and (is_adult or Kokiri_Sword or Sticks)"
-        },
-        "locations": {
-            "Deku Tree Queen Gohma Heart": "
-                here(has_shield) and (is_adult or Kokiri_Sword or Sticks)",
-            "Queen Gohma": "
-                here(has_shield) and (is_adult or Kokiri_Sword or Sticks)"
+        "exits": {
+            "Queen Gohmas Lair": "here(has_shield)"
         }
     },
     {

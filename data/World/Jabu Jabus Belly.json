@@ -79,9 +79,10 @@
         "region_name": "Jabu Jabus Belly Room05",
         "dungeon": "Jabu Jabus Belly", #"room": 05,
         "locations": {
-            "Jabu Jabus Belly Barinade Heart": "can_use(Boomerang)",
-            "Barinade": "can_use(Boomerang)",
             "Jabu Jabus Belly GS Near Boss": "True"
+        },
+        "exits": {
+            "Barinades Lair": "can_use(Boomerang)"
         }
     },
     {

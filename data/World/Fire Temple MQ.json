@@ -230,7 +230,7 @@
         },
         "exits": {
             "DMC Fire Temple Entrance": "True",
-            "Fire Boss Room": "
+            "Volvagias Lair": "
                 can_use(Goron_Tunic) and can_use(Megaton_Hammer) and Boss_Key_Fire_Temple and
                 ((has_fire_source and (logic_fire_boss_door_jump or Hover_Boots)) or at('Fire Temple Upper', True))",
             "Fire Lower Locked Door": "(Small_Key_Fire_Temple, 5) and (is_adult or Kokiri_Sword)",
