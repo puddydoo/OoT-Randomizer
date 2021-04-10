@@ -248,8 +248,7 @@
                 (logic_water_cracked_wall_nothing or (logic_water_cracked_wall_hovers and can_use(Hover_Boots)))))"
         },
         "exits": {
-            "Water Temple Room18": "
-			    Low_Water_Level and (has_fire_source_with_torch or can_use(Bow))",
+            "Water Temple Room18": "Low_Water_Level and (has_fire_source_with_torch or can_use(Bow))",
             "Water Temple Room19": "Raise_Water_Level and is_adult"
         }
     },
