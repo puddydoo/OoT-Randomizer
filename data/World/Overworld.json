@@ -665,6 +665,29 @@
         }
     },
     {
+        "region_name": "Desert Colossus Right Hand",
+        "dungeon": "Spirit Temple",
+        "locations": {
+            "Spirit Temple Silver Gauntlets Chest": "True"
+        },
+        "exits": {
+            "Desert Colossus": "False",
+            "Desert Colossus Left Hand": "
+                at('Desert Colossus Left Hand', True) and can_use(Longshot)"
+        }
+    },
+    {
+        "region_name": "Desert Colossus Left Hand",
+        "dungeon": "Spirit Temple",
+        "locations": {
+            "Spirit Temple Mirror Shield Chest": "True"
+        },
+        "exits": {
+            "Desert Colossus": "False",
+            "Desert Colossus Right Hand": "can_use(Longshot)"
+        }
+    },
+    {
         "region_name": "Colossus Great Fairy Fountain",
         "scene": "Colossus Great Fairy Fountain",
         "locations": {

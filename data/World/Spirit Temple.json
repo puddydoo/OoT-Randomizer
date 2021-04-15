@@ -220,7 +220,7 @@
         "region_name": "Spirit Temple Room11 West",
         "dungeon": "Spirit Temple", #"room": 11,
         "exits": {
-            "Colossus Silver Gauntlets Hand": "
+            "Desert Colossus Right Hand": "
                 (Small_Key_Spirit_Temple, 5) or (Progressive_Hookshot, 2) and has_explosives)",
             "Desert Colossus": "
                 (Small_Key_Spirit_Temple, 5) or (can_use(Silver_Gauntlets) and has_explosives)"
@@ -230,8 +230,8 @@
         "region_name": "Spirit Temple Room11 East",
         "dungeon": "Spirit Temple", #"room": 11,
         "exits": {
-            "Colossus Mirror Shield Hand": "(Small_Key_Spirit_Temple, 4)",
-            "Colossus Silver Gauntlets Hand": "can_use(Longshot)",
+            "Desert Colossus Left Hand": "(Small_Key_Spirit_Temple, 4)",
+            "Desert Colossus Right Hand": "can_use(Longshot)",
             "Desert Colossus": "True"
         }
     },
@@ -367,29 +367,6 @@
         "dungeon": "Spirit Temple", #"room": 27,
         "exits": {
             "Spirit Temple Room02 Rear": "True"
-        }
-    },
-    {
-        "region_name": "Colossus Silver Gauntlets Hand",
-        "dungeon": "Spirit Temple",
-        "locations": {
-            "Spirit Temple Silver Gauntlets Chest": "True"
-        },
-        "exits": {
-            "Desert Colossus": "False",
-            "Colossus Mirror Shield Hand": "
-                at('Colossus Mirror Shield Hand', True) and can_use(Longshot)"
-        }
-    },
-    {
-        "region_name": "Colossus Mirror Shield Hand",
-        "dungeon": "Spirit Temple",
-        "locations": {
-            "Spirit Temple Mirror Shield Chest": "True"
-        },
-        "exits": {
-            "Desert Colossus": "False",
-            "Colossus Silver Gauntlets Hand": "can_use(Longshot)"
         }
     }
 ]
