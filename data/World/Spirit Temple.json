@@ -110,7 +110,7 @@
                 (has_projectile(adult) or can_take_damage))"
         },
         "exits": {
-            "Spirit Temple Room03 Rear": "(Small_Key_Spirit_Temple, 5)",
+            "Spirit Temple Room01 Rear": "(Small_Key_Spirit_Temple, 5)",
             "Spirit Temple Room05": "has_explosives"
         }
     },
