@@ -7,25 +7,6 @@
         }
     },
     {
-        "region_name": "Spirit Temple Lobby",
-        "dungeon": "Spirit Temple",
-        "locations": {
-            "Spirit Temple MQ Entrance Front Left Chest": "True",
-            "Spirit Temple MQ Entrance Back Left Chest": "
-                here(can_blast_or_smash) and 
-                (can_use(Slingshot) or can_use(Bow))",
-            "Spirit Temple MQ Entrance Back Right Chest": "
-                has_bombchus or can_use(Bow) or can_use(Hookshot) or 
-                can_use(Slingshot) or can_use(Boomerang)"
-        },
-        "exits": {
-            "Desert Colossus From Spirit Lobby": "True",
-            "Child Spirit Temple": "is_child",
-            "Adult Spirit Temple": "
-                has_bombchus and can_use(Longshot) and can_use(Silver_Gauntlets)"
-        }
-    },
-    {
         "region_name": "Spirit Temple Room00",
         "dungeon": "Spirit Temple", #"room": 00,
         "locations": {
