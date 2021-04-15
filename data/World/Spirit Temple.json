@@ -155,7 +155,7 @@
         "exits": {
             "Spirit Temple Room05": "True",
             "Spirit Temple Room16": "
-                (Small_Key_Spirit_Temple, 3) and can_use(Silver_Gauntlets)",
+                (Small_Key_Spirit_Temple, 3) and can_use(Silver_Gauntlets)"
         }
     },
     {
