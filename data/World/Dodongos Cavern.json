@@ -88,7 +88,8 @@
         "dungeon": "Dodongos Cavern", #"room": 02,
         "exits": {
             "Dodongos Cavern Room02 Vines": "True",
-            "Dodongos Cavern Room02 Alcove": "at('Dodongos Cavern Room00 Far Bridge', True)",
+            "Dodongos Cavern Room02 Alcove": "
+                can_use(Longshot) or at('Dodongos Cavern Room00 Far Bridge', True)",
             "Dodongos Cavern Room05": "True"
         }
     },
