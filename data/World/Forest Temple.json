@@ -257,7 +257,7 @@
             "Forest Temple Basement Chest": "True",
             "Forest Temple GS Basement": "can_use(Hookshot) or can_use(Boomerang)"
         },
-        "locations": {
+        "exits": {
             "Phantom Ganons Lair": "Boss_Key_Forest_Temple"
         }
     },
