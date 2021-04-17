@@ -10,183 +10,158 @@
         "region_name": "Jabu Jabus Belly Room00",
         "dungeon": "Jabu Jabus Belly", #"room": 00,
         "locations": {
-        },
-        "exits": {
-        }
-    },
-    {
-        "region_name": "Jabu Jabus Belly Room01",
-        "dungeon": "Jabu Jabus Belly", #"room": 01,
-        "locations": {
-        },
-        "exits": {
-        }
-    },
-    {
-        "region_name": "Jabu Jabus Belly Room02",
-        "dungeon": "Jabu Jabus Belly", #"room": 02,
-        "locations": {
-        },
-        "exits": {
-        }
-    },
-    {
-        "region_name": "Jabu Jabus Belly Room03",
-        "dungeon": "Jabu Jabus Belly", #"room": 03,
-        "locations": {
-        },
-        "exits": {
-        }
-    },
-    {
-        "region_name": "Jabu Jabus Belly Room04",
-        "dungeon": "Jabu Jabus Belly", #"room": 04,
-        "locations": {
-        },
-        "exits": {
-        }
-    },
-    {
-        "region_name": "Jabu Jabus Belly Room05",
-        "dungeon": "Jabu Jabus Belly", #"room": 05,
-        "locations": {
-        },
-        "exits": {
-        }
-    },
-    {
-        "region_name": "Jabu Jabus Belly Room06",
-        "dungeon": "Jabu Jabus Belly", #"room": 06,
-        "locations": {
-        },
-        "exits": {
-        }
-    },
-    {
-        "region_name": "Jabu Jabus Belly Room07",
-        "dungeon": "Jabu Jabus Belly", #"room": 07,
-        "locations": {
-        },
-        "exits": {
-        }
-    },
-    {
-        "region_name": "Jabu Jabus Belly Room08",
-        "dungeon": "Jabu Jabus Belly", #"room": 08,
-        "locations": {
-        },
-        "exits": {
-        }
-    },
-    {
-        "region_name": "Jabu Jabus Belly Room09",
-        "dungeon": "Jabu Jabus Belly", #"room": 09,
-        "locations": {
-        },
-        "exits": {
-        }
-    },
-    {
-        "region_name": "Jabu Jabus Belly Room10",
-        "dungeon": "Jabu Jabus Belly", #"room": 10,
-        "locations": {
-        },
-        "exits": {
-        }
-    },
-    {
-        "region_name": "Jabu Jabus Belly Room11",
-        "dungeon": "Jabu Jabus Belly", #"room": 11,
-        "locations": {
-        },
-        "exits": {
-        }
-    },
-    {
-        "region_name": "Jabu Jabus Belly Room12",
-        "dungeon": "Jabu Jabus Belly", #"room": 12,
-        "locations": {
-        },
-        "exits": {
-        }
-    },
-    {
-        "region_name": "Jabu Jabus Belly Room13",
-        "dungeon": "Jabu Jabus Belly", #"room": 13,
-        "locations": {
-        },
-        "exits": {
-        }
-    },
-    {
-        "region_name": "Jabu Jabus Belly Room14",
-        "dungeon": "Jabu Jabus Belly", #"room": 14,
-        "locations": {
-        },
-        "exits": {
-        }
-    },
-    {
-        "region_name": "Jabu Jabus Belly Beginning",
-        "dungeon": "Jabu Jabus Belly",
-        "locations": {
             "Nut Pot": "True",
             "Jabu Jabus Belly MQ Map Chest": "can_blast_or_smash",
             "Jabu Jabus Belly MQ First Room Side Chest": "can_use(Slingshot)"
         },
         "exits": {
             "Zoras Fountain": "True",
-            "Jabu Jabus Belly Main": "here(is_child and can_use(Slingshot))"
+            "Jabu Jabus Belly Room01": "here(is_child and can_use(Slingshot))"
         }
     },
     {
-        "region_name": "Jabu Jabus Belly Main",
-        "dungeon": "Jabu Jabus Belly",
+        "region_name": "Jabu Jabus Belly Room01",
+        "dungeon": "Jabu Jabus Belly", #"room": 01,
         "locations": {
             "Jabu Jabus Belly MQ Second Room Lower Chest": "True",
             "Jabu Jabus Belly MQ Second Room Upper Chest": "
                 can_use(Hover_Boots) or can_use(Hookshot) or
-                at('Jabu Jabus Belly Boss Area', is_child)",
-            "Jabu Jabus Belly MQ Compass Chest": "True",
+                at('Jabu Jabus Belly Room01 Upper', True)",
+            "Jabu Jabus Belly MQ Compass Chest": "True"
+        },
+        "exits": {
+            "Jabu Jabus Belly Room02": "True",
+            "Jabu Jabus Belly Room05": "
+                'Jabu Jabus Belly Red Tentacle' and
+                (can_use(Hover_Boots) or can_use(Hookshot) or
+                at('Jabu Jabus Belly Room01 Upper', True))"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Room01 Upper",
+        "dungeon": "Jabu Jabus Belly", #"room": 01,
+    },
+    {
+        "region_name": "Jabu Jabus Belly Room02",
+        "dungeon": "Jabu Jabus Belly", #"room": 02,
+        "exits": {
+            "Jabu Jabus Belly Room03": "True",
+            "Jabu Jabus Belly Room07": "has_explosives and can_use(Boomerang)"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Room03",
+        "dungeon": "Jabu Jabus Belly", #"room": 03,
+        "locations": {
             "Jabu Jabus Belly MQ Basement Near Vines Chest": "True",
-            "Jabu Jabus Belly MQ Basement Near Switches Chest": "True",
+            "Jabu Jabus Belly MQ Basement Near Switches Chest": "True"
+        },
+        "exits": {
+            "Jabu Jabus Belly Room06": "'Jabu Jabus Belly Green Tentacle'",
+            "Jabu Jabus Belly Room13": "'Jabu Jabus Belly Red Tentacle'",
+            "Jabu Jabus Belly Room14": "True"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Room04",
+        "dungeon": "Jabu Jabus Belly", #"room": 04,
+        "locations": {
+            "Jabu Jabus Belly MQ Cow" : "can_play(Eponas_Song)"
+        },
+        "exits": {
+            "Jabu Jabus Belly Room01 Upper": "can_use(Boomerang)"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Room05",
+        "dungeon": "Jabu Jabus Belly", #"room": 05,
+        "locations": {
+            "Jabu Jabus Belly MQ Near Boss Chest": "can_use(Slingshot)",
+            "Jabu Jabus Belly MQ GS Near Boss": "can_use(Boomerang)",
+            "Fairy Pot": "has_bottle"
+        },
+        "exits": {
+            "Barinades Lair": "here(can_use(Slingshot))"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Room06",
+        "dungeon": "Jabu Jabus Belly", #"room": 06,
+        "exits": {
+            "Jabu Jabus Belly Room06 Upper": "
+                here(can_use(Boomerang) and (Sticks or Kokiri_Sword))"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Room06 Upper",
+        "dungeon": "Jabu Jabus Belly", #"room": 06,
+        "exits": {
+            "Jabu Jabus Belly Room04": "True"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Room07",
+        "dungeon": "Jabu Jabus Belly", #"room": 07,
+        "exits": {
+            "Jabu Jabus Belly Room08": "here(can_blast_or_smash)",
+            "Jabu Jabus Belly Room09": "here(has_fire_source_with_torch)",
+            "Jabu Jabus Belly Room10": "'Jabu Jabus Belly Blue Tentacle'",
+            "Jabu Jabus Belly Room11": "True",
+            "Jabu Jabus Belly Room12": "'Jabu Jabus Belly Blue Tentacle'"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Room08",
+        "dungeon": "Jabu Jabus Belly", #"room": 08,
+        "events": {
+            "Jabu Jabus Belly Red Tentacle": "can_use(Boomerang)"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Room09",
+        "dungeon": "Jabu Jabus Belly", #"room": 09,
+        "events": {
+            "Jabu Jabus Belly Blue Tentacle": "can_use(Boomerang)"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Room10",
+        "dungeon": "Jabu Jabus Belly", #"room": 10,
+        "events": {
+            "Jabu Jabus Belly Green Tentacle": "can_use(Boomerang)"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Room11",
+        "dungeon": "Jabu Jabus Belly", #"room": 11,
+        "locations": {
+            "Jabu Jabus Belly MQ Falling Like Like Room Chest": "True"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Room12",
+        "dungeon": "Jabu Jabus Belly", #"room": 12,
+        "locations": {
+            "Jabu Jabus Belly MQ GS Tailpasaran Room": "True"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Room13",
+        "dungeon": "Jabu Jabus Belly", #"room": 13,
+        "locations": {
+            "Jabu Jabus Belly MQ GS Invisible Enemies Room": "
+                logic_lens_jabu_mq or can_use(Lens_of_Truth) or
+                (can_use(Hover_Boots) and can_use(Hookshot))"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Room14",
+        "dungeon": "Jabu Jabus Belly", #"room": 14,
+        "locations": {
             "Jabu Jabus Belly MQ Boomerang Room Small Chest": "True",
             "Jabu Jabus Belly MQ Boomerang Chest": "True",
             "Jabu Jabus Belly MQ GS Boomerang Chest Room": "
                 can_play(Song_of_Time) or (logic_jabu_mq_sot_gs and can_use(Boomerang))"
-        },
-        "exits": {
-            "Jabu Jabus Belly Beginning": "True",
-            "Jabu Jabus Belly Depths": "has_explosives and can_use(Boomerang)"
-        }
-    },
-    {
-        "region_name": "Jabu Jabus Belly Depths",
-        "dungeon": "Jabu Jabus Belly",
-        "locations": {
-            "Jabu Jabus Belly MQ Falling Like Like Room Chest": "True",
-            "Jabu Jabus Belly MQ GS Tailpasaran Room": "Sticks or can_use(Dins_Fire)",
-            "Jabu Jabus Belly MQ GS Invisible Enemies Room": "
-                (logic_lens_jabu_mq or can_use(Lens_of_Truth)) or
-                at('Jabu Jabus Belly Main', can_use(Hover_Boots) and can_use(Hookshot))"
-        },
-        "exits": {
-            "Jabu Jabus Belly Main": "True",
-            "Jabu Jabus Belly Boss Area": "Sticks or (can_use(Dins_Fire) and Kokiri_Sword)"
-        }
-    },
-    {
-        "region_name": "Jabu Jabus Belly Boss Area",
-        "dungeon": "Jabu Jabus Belly",
-        "locations": {
-            "Jabu Jabus Belly MQ Cow" : "can_play(Eponas_Song)",
-            "Jabu Jabus Belly MQ Near Boss Chest": "True",
-            "Jabu Jabus Belly MQ GS Near Boss": "True",
-            "Fairy Pot": "has_bottle"
-        },
-        "exits": {
-            "Jabu Jabus Belly Main": "True",
-            "Barinades Lair": "True"
         }
     }
 ]
