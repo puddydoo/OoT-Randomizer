@@ -128,7 +128,8 @@
             "Dodongos Cavern MQ GS Lizalfos Room": "can_blast_or_smash"
         },
         "exits": {
-            "Dodongos Cavern Room03": "can_blast_or_smash"
+            "Dodongos Cavern Room03": "
+                can_blast_or_smash and at('Dodongos Cavern Room03', True)"
             "Dodongos Cavern Room12": "
                 here(is_adult or Slingshot or Sticks or 
                 has_explosives or Kokiri_Sword)"
