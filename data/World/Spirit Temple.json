@@ -20,11 +20,13 @@
         "dungeon": "Spirit Temple", #"room": 00,
         "exits": {
             "Spirit Temple Room13": "
-                Bow or Progressive_Hookshot or has_bombchus or
-                (Bombs and logic_spirit_lower_adult_switch)",
+                here(can_use(Bow) or can_use(Hookshot) or has_bombchus or
+                (Bombs and logic_spirit_lower_adult_switch) or
+                can_use(Slingshot) or can_use(Boomerang))",
             "Spirit Temple Room14": "
-                Bow or Progressive_Hookshot or has_bombchus or
-                (Bombs and logic_spirit_lower_adult_switch)",
+                here(can_use(Bow) or can_use(Hookshot) or has_bombchus or
+                (Bombs and logic_spirit_lower_adult_switch) or
+                can_use(Slingshot) or can_use(Boomerang))",
             "Spirit Temple Room15": "(Small_Key_Spirit_Temple, 1)"
         }
     },
@@ -134,8 +136,8 @@
         "exits": {
             "Spirit Temple Room04": "True",
             "Spirit Temple Room06": "
-                at('Spirit Temple Room05 East', (Small_Key_Spirit_Temple, 3) and
-                Megaton_Hammer and (Hover_Boots or logic_spirit_lobby_jump or
+                (Small_Key_Spirit_Temple, 3) and at('Spirit Temple Room05 East', 
+                    can_use(Megaton_Hammer) and (Hover_Boots or logic_spirit_lobby_jump or
                     (Progressive_Hookshot and can_play(Zeldas_Lullaby)))",
             "Spirit Temple Room07": "True"
         }
@@ -147,20 +149,25 @@
             "Spirit Temple Statue Room Hand Chest": "
                 (Small_Key_Spirit_Temple, 3) and can_play(Zeldas_Lullaby)",
             "Spirit Temple Statue Room Northeast Chest": "
-                (Small_Key_Spirit_Temple, 3) and can_play(Zeldas_Lullaby) and 
+                (Small_Key_Spirit_Temple, 3) and can_play(Zeldas_Lullaby) and is_adult and 
                 (Progressive_Hookshot or Hover_Boots or logic_spirit_lobby_jump)"
         },
         "exits": {
             "Spirit Temple Room05": "True",
+            "Spirit Temple Room15": "True",
             "Spirit Temple Room16": "(Small_Key_Spirit_Temple, 3)"
+                # 3 keys allows access to desert colossus (besides mirror shield)
+                # Locations behind this door require 4 keys
         }
     },
     {
         "region_name": "Spirit Temple Room05 Ceiling",
         "dungeon": "Spirit Temple", #"room": 05,
         "exits": {
+            "Spirit Temple Room05": "True",
+            "Spirit Temple Room05 East": "True",
             "Twinrovas Lair": "
-                (Small_Key_Spirit_Temple, 5) and Progressive_Hookshot and Boss_Key_Spirit_Temple"
+                (Small_Key_Spirit_Temple, 5) and can_use(Hookshot) and Boss_Key_Spirit_Temple"
         }
     },
     {
@@ -171,6 +178,7 @@
         "region_name": "Spirit Temple Room07",
         "dungeon": "Spirit Temple", #"room": 07,
         "exits": {
+            "Spirit Temple Room05": "True",
             "Spirit Temple Room08": "True"
         }
     },
@@ -188,6 +196,7 @@
                     (can_use(Fire_Arrows) or (logic_spirit_sun_chest and Bow)))"
         },
         "exits": {
+            "Spirit Temple Room07": "True",
             "Spirit Temple Room09": "True"
         }
     },
@@ -202,6 +211,7 @@
                     (Spirit_Temple_Central_Child_Access and Boomerang)))"
         },
         "exits": {
+            "Spirit Temple Room08": "True",
             "Spirit Temple Room10": "(Small_Key_Spirit_Temple, 3)"
         }
     },
@@ -209,13 +219,16 @@
         "region_name": "Spirit Temple Room10",
         "dungeon": "Spirit Temple", #"room": 10,
         "exits": {
-            "Spirit Temple Room11 West": "True"
+            "Spirit Temple Room09": "(Small_Key_Spirit_Temple, 5)",
+            "Spirit Temple Room11 West": "here(is_adult or Kokiri_Sword or has_explosives)"
         }
     },
     {
         "region_name": "Spirit Temple Room11 West",
         "dungeon": "Spirit Temple", #"room": 11,
         "exits": {
+            "Spirit Temple Room00": "True",
+            "Spirit Temple Room10": "True",
             "Desert Colossus Right Hand": "
                 (Small_Key_Spirit_Temple, 5) or (Progressive_Hookshot, 2) and has_explosives)",
             "Desert Colossus": "
@@ -226,6 +239,8 @@
         "region_name": "Spirit Temple Room11 East",
         "dungeon": "Spirit Temple", #"room": 11,
         "exits": {
+            "Spirit Temple Room00": "True",
+            "Spirit Temple Room20": "True",
             "Desert Colossus Left Hand": "(Small_Key_Spirit_Temple, 4)",
             "Desert Colossus Right Hand": "can_use(Longshot)",
             "Desert Colossus": "True"
@@ -235,18 +250,18 @@
         "region_name": "Spirit Temple Room12",
         "dungeon": "Spirit Temple", #"room": 12,
         "locations": {
-            "Spirit Temple GS Boulder Room": "True"
+            "Spirit Temple Early Adult Right Chest": "True"
         }
     },
     {
         "region_name": "Spirit Temple Room13",
         "dungeon": "Spirit Temple", #"room": 13,
         "locations": {
-            "Spirit Temple Early Adult Right Chest": "True" 
-                #requires a very specific Bombchu use, Hover Boots can be skipped by jumping on top of the rolling rock.
+            "Spirit Temple GS Boulder Room": "can_play(Song_of_Time)" 
         },
         "exits": {
-            "Spirit Temple Room12": "can_play(Song_of_Time)"
+            "Spirit Temple Room12": "True"
+                #requires a very specific Bombchu use, Hover Boots can be skipped by jumping on top of the rolling rock.
         }
     },
     {
@@ -264,6 +279,7 @@
             "Spirit Temple First Mirror Right Chest": "(Small_Key_Spirit_Temple, 3)"
         },
         "exits": {
+            "Spirit Temple Room00 East": "(Small_Key_Spirit_Temple, 5)",
             "Spirit Temple Room05 East": "True"
         }
     },
@@ -279,16 +295,20 @@
         "region_name": "Spirit Temple Room17",
         "dungeon": "Spirit Temple", #"room": 17,
         "exits": {
+            "Spirit Temple Room16": "has_explosives",
             "Spirit Temple Room18": "has_explosives",
             "Spirit Temple Room23": "(Small_Key_Spirit_Temple, 4)"
+                # 4 keys allows access to central chamber through ceiling
+                # Locations and boss door access require 5 keys
         }
     },
     {
         "region_name": "Spirit Temple Room18",
         "dungeon": "Spirit Temple", #"room": 18,
         "exits": {
+            "Spirit Temple Room17": "True",
             "Spirit Temple Room19": "True",
-            "Spirit Temple Room21": "Mirror_Shield"
+            "Spirit Temple Room21": "can_use(Mirror_Shield)"
         }
     },
     {
@@ -301,6 +321,7 @@
                 (Small_Key_Spirit_Temple, 4) and (logic_lens_spirit or can_use(Lens_of_Truth))"
         },
         "exits": {
+            "Spirit Temple Room18": "True",
             "Spirit Temple Room20": "True"
         }
     },
@@ -308,7 +329,8 @@
         "region_name": "Spirit Temple Room20",
         "dungeon": "Spirit Temple", #"room": 20,
         "exits": {
-            "Spirit Temple Room11 East": "True"
+            "Spirit Temple Room19": "here(is_adult or Kokiri_Sword or has_explosives)",
+            "Spirit Temple Room11 East": "here(is_adult or Kokiri_Sword or has_explosives)"
         }
     },
     {
@@ -323,7 +345,8 @@
         "dungeon": "Spirit Temple", #"room": 22,
         "locations": {
             "Spirit Temple Boss Key Chest": "
-                (Small_Key_Spirit_Temple, 5) and Bow and Progressive_Hookshot"
+                (Small_Key_Spirit_Temple, 5) and can_use(Hookshot) and
+                    here(Bow or can_use(Slingshot))"
         }
     },
     {
@@ -333,7 +356,8 @@
             "Spirit Temple Room24": "
                 logic_spirit_wall or can_use(Longshot) or has_bombchus or 
                     ((Bombs or Nuts or can_use(Dins_Fire)) and 
-                        (Bow or can_use(Hookshot) or Megaton_Hammer))"
+                        (can_use(Bow) or can_use(Hookshot) or can_use(Megaton_Hammer) or
+                        can_use(Slingshot) or can_use(Boomerang)))"
         }
     },
     {
@@ -349,15 +373,16 @@
         "dungeon": "Spirit Temple", #"room": 25,
         "exits": {
             "Spirit Temple Room05 Ceiling": "
-                at('Spirit Temple Room26', Mirror_Shield and has_explosives)",
-            "Spirit Temple Room26": "True"
+                at('Spirit Temple Room26', can_use(Mirror_Shield) and has_explosives)",
+            "Spirit Temple Room26": "is_adult or Kokiri_Sword or Sticks or has_explosives"
         }
     },
     {
         "region_name": "Spirit Temple Room26",
         "dungeon": "Spirit Temple", #"room": 26,
         "locations": {
-            "Spirit Temple Topmost Chest": "(Small_Key_Spirit_Temple, 5) and Mirror_Shield"
+            "Spirit Temple Topmost Chest": "
+                (Small_Key_Spirit_Temple, 5) and can_use(Mirror_Shield)"
         }
     },
     {
