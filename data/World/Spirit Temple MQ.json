@@ -136,7 +136,7 @@
         "region_name": "Spirit Temple Room05 Ceiling",
         "dungeon": "Spirit Temple", #"room": 05,
         "exits": {
-            "Twinrovas Lair": "Boss_Key_Spirit_Temple"
+            "Twinrovas Lair": "(Small_Key_Spirit_Temple, 6) and Boss_Key_Spirit_Temple"
         }
     },
     {
@@ -249,6 +249,7 @@
         "region_name": "Spirit Temple Room16",
         "dungeon": "Spirit Temple", #"room": 16,
         "exits": {
+            "Spirit Temple Room05 East": "(Small_Key_Spirit_Temple, 7)",
             "Spirit Temple Room17": "True"
         }
     },
@@ -260,7 +261,7 @@
         },
         "exits": {
             "Spirit Temple Room18": "can_play(Song_of_Time)",
-            "Spirit Temple Room23": "(Small_Key_Spirit_Temple, 6)"
+            "Spirit Temple Room23": "(Small_Key_Spirit_Temple, 5)"
         }
     },
     {
@@ -332,7 +333,7 @@
         "dungeon": "Spirit Temple", #"room": 26,
         "locations": {
             "Spirit Temple MQ Mirror Puzzle Invisible Chest": "
-                logic_lens_spirit_mq or can_use(Lens_of_Truth)"
+                (Small_Key_Spirit_Temple, 6) and (logic_lens_spirit_mq or can_use(Lens_of_Truth))"
         }
     },
     {

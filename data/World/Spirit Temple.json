@@ -162,7 +162,8 @@
         "region_name": "Spirit Temple Room05 Ceiling",
         "dungeon": "Spirit Temple", #"room": 05,
         "exits": {
-            "Twinrovas Lair": "Progressive_Hookshot and Boss_Key_Spirit_Temple"
+            "Twinrovas Lair": "
+                (Small_Key_Spirit_Temple, 5) and Progressive_Hookshot and Boss_Key_Spirit_Temple"
         }
     },
     {
@@ -275,6 +276,7 @@
         "region_name": "Spirit Temple Room16",
         "dungeon": "Spirit Temple", #"room": 16,
         "exits": {
+            "Spirit Temple Room05 East": "(Small_Key_Spirit_Temple, 5)",
             "Spirit Temple Room17": "True"
         }
     },
@@ -283,7 +285,7 @@
         "dungeon": "Spirit Temple", #"room": 17,
         "exits": {
             "Spirit Temple Room18": "has_explosives",
-            "Spirit Temple Room23": "(Small_Key_Spirit_Temple, 5)"
+            "Spirit Temple Room23": "(Small_Key_Spirit_Temple, 4)"
         }
     },
     {
@@ -325,7 +327,8 @@
         "region_name": "Spirit Temple Room22",
         "dungeon": "Spirit Temple", #"room": 22,
         "locations": {
-            "Spirit Temple Boss Key Chest": "Bow and Progressive_Hookshot"
+            "Spirit Temple Boss Key Chest": "
+                (Small_Key_Spirit_Temple, 5) and Bow and Progressive_Hookshot"
         }
     },
     {
@@ -359,7 +362,7 @@
         "region_name": "Spirit Temple Room26",
         "dungeon": "Spirit Temple", #"room": 26,
         "locations": {
-            "Spirit Temple Topmost Chest": "Mirror_Shield"
+            "Spirit Temple Topmost Chest": "(Small_Key_Spirit_Temple, 5) and Mirror_Shield"
         }
     },
     {
