@@ -18,213 +18,242 @@
     {
         "region_name": "Dodongos Cavern Room00",
         "dungeon": "Dodongos Cavern", #"room": 00,
+        "events": {
+            "Dodongos Cavern Room00 2F Boulders": "
+                can_blast_or_smash or can_use(Sticks) or can_use(Dins_Fire)"
+        },
         "locations": {
+            "Dodongos Cavern MQ Map Chest": "True",
+            "Dodongos Cavern MQ Deku Scrub Lobby Rear": "can_stun_deku",
+            "Dodongos Cavern MQ Deku Scrub Lobby Front": "can_stun_deku",
+            "Dodongos Cavern Gossip Stone": "True",
+            "Gossip Stone Fairy": "can_summon_gossip_fairy and has_bottle"
         },
         "exits": {
+            "Dodongos Cavern Room00 East Ledge": "
+                is_adult or
+                (logic_dc_mq_child_bombs and (Kokiri_Sword or Sticks) and can_take_damage)",
+            "Dodongos Cavern Room00 Behind Boulders": "'Dodongos Cavern Room00 2F Boulders'",
+            "Dodongos Cavern Room01": "
+                here(can_blast_or_smash) or
+                ('Dodongos Cavern Room00 2F Boulders' and can_take_damage)",
+            "Dodongos Cavern Room02": "True",
+            "Dodongos Cavern Room07": "
+                has_explosives or
+                (logic_dc_mq_eyes and 'Dodongos Cavern Room00 2F Boulders' and Progressive_Strength_Upgrade)"
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Room00 East Ledge",
+        "dungeon": "Dodongos Cavern", #"room": 00,
+        "locations": {
+            "Dodongos Cavern MQ Bomb Bag Chest": "True"
+        },
+        "exits": {
+            "Dodongos Cavern Room04": "True"
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Room00 Bridge",
+        "dungeon": "Dodongos Cavern", #"room": 00,
+        "exits": {
+            "Dodongos Cavern Room05": "True",
+            "Dodongos Cavern Room09": "True"
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Room00 Behind Boulders",
+        "dungeon": "Dodongos Cavern", #"room": 00,
+        "events": {
+            "Dodongos Cavern Room00 2F Boulders": "Progressive_Strength_Upgrade"
+        }
+        "exits": {
+            "Dodongos Cavern Room09 Upper": "True"
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Lower Right Side",
+        "dungeon": "Dodongos Cavern",
+        "exits": {
+            "Dodongos Cavern Bomb Bag Area": "
+                here((can_use(Bow) or ((Progressive_Strength_Upgrade or
+                can_use(Dins_Fire) or has_explosives) and
+                can_use(Slingshot)))"
         }
     },
     {
         "region_name": "Dodongos Cavern Room01",
         "dungeon": "Dodongos Cavern", #"room": 01,
-        "locations": {
-        },
         "exits": {
+            "Dodongos Cavern Room03": "
+                here(can_use(Bow)) or 
+                here(can_use(Slingshot) and 
+                (Progressive_Strength_Upgrade or can_use(Dins_Fire) or has_explosives))",
+            "Dodongos Cavern Room11": "True"
         }
     },
     {
         "region_name": "Dodongos Cavern Room02",
         "dungeon": "Dodongos Cavern", #"room": 02,
         "locations": {
+            "Deku Baba Sticks": "is_adult or Kokiri_Sword or can_use(Boomerang)"
         },
         "exits": {
+            "Dodongos Cavern Room02 Upper": "here(has_explosives or can_use(Sticks))",
+            "Dodongos Cavern Room15": "True"
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Room02 Upper",
+        "dungeon": "Dodongos Cavern", #"room": 02,
+        "locations": {
+            "Dodongos Cavern MQ Deku Scrub Staircase": "can_stun_deku"
+        },
+        "exits": {
+            "Dodongos Cavern Room05": "True"
         }
     },
     {
         "region_name": "Dodongos Cavern Room03",
         "dungeon": "Dodongos Cavern", #"room": 03,
+        "exits": {
+            "Dodongos Cavern Room01": "True",
+            "Dodongos Cavern Room04": "True"
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Room03 Upper",
+        "dungeon": "Dodongos Cavern", #"room": 03,
         "locations": {
+            "Dodongos Cavern MQ GS Lizalfos Room": "can_blast_or_smash"
         },
         "exits": {
+            "Dodongos Cavern Room03": "can_blast_or_smash"
+            "Dodongos Cavern Room12": "
+                here(is_adult or Slingshot or Sticks or 
+                has_explosives or Kokiri_Sword)"
         }
     },
     {
         "region_name": "Dodongos Cavern Room04",
         "dungeon": "Dodongos Cavern", #"room": 04,
-        "locations": {
-        },
         "exits": {
+            "Dodongos Cavern Room00 East Ledge": "has_fire_source_with_torch"
+            "Dodongos Cavern Room13": "
+                here(can_use(Bow)) or Progressive_Strength_Upgrade or
+                can_use(Dins_Fire) or has_explosives"
         }
     },
     {
         "region_name": "Dodongos Cavern Room05",
         "dungeon": "Dodongos Cavern", #"room": 05,
         "locations": {
+            "Dodongos Cavern MQ Compass Chest": "is_adult or can_child_attack or Nuts"
         },
         "exits": {
+            "Dodongos Cavern Room00 Bridge": "is_adult or can_child_attack or Nuts"
         }
     },
     {
         "region_name": "Dodongos Cavern Room06",
         "dungeon": "Dodongos Cavern", #"room": 06,
         "locations": {
-        },
-        "exits": {
+            "Dodongos Cavern MQ Larvae Room Chest": "True",
+            "Dodongos Cavern MQ GS Larvae Room": "True"
         }
     },
     {
         "region_name": "Dodongos Cavern Room07",
         "dungeon": "Dodongos Cavern", #"room": 07,
-        "locations": {
-        },
         "exits": {
+            "Dodongos Cavern Room07 Upper": "is_adult",
+            "Dodongos Cavern Room08": "True"
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Room07 Upper",
+        "dungeon": "Dodongos Cavern", #"room": 07,
+        "exits": {
+            "King Dodongos Lair": "True"
         }
     },
     {
         "region_name": "Dodongos Cavern Room08",
         "dungeon": "Dodongos Cavern", #"room": 08,
         "locations": {
+            "Dodongos Cavern MQ GS Back Area": "True",
+            "Fairy Pot": "has_bottle"
         },
         "exits": {
+            "Dodongos Cavern Room07 Upper": "True",
+            "Dodongos Cavern Room14": "True"
         }
     },
     {
         "region_name": "Dodongos Cavern Room09",
         "dungeon": "Dodongos Cavern", #"room": 09,
+        "exits": {
+            "Dodongos Cavern Room06": "here(has_fire_source_with_torch)",
+            "Dodongos Cavern Room09 Upper": "
+                is_adult and (Hover_Boots or Hookshot or logic_dc_jump)",
+            "Dodongos Cavern Room10": "True"
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Room09 Upper",
+        "dungeon": "Dodongos Cavern", #"room": 09,
         "locations": {
+            "Dodongos Cavern MQ Torch Puzzle Room Chest": "True"
         },
         "exits": {
+            "Dodongos Cavern Room00 Far Bridge": "True",
+            "Dodongos Cavern Room09": "True",
+            "Dodongos Cavern Room12": "True"
         }
     },
     {
         "region_name": "Dodongos Cavern Room10",
         "dungeon": "Dodongos Cavern", #"room": 10,
-        "locations": {
-        },
         "exits": {
+            "Dodongos Cavern Room03 Upper": "
+                here(can_blast_or_smash or (Progressive_Strength_Upgrade and can_use(Sticks))"
         }
     },
     {
         "region_name": "Dodongos Cavern Room11",
         "dungeon": "Dodongos Cavern", #"room": 11,
         "locations": {
-        },
-        "exits": {
+            "Dodongos Cavern MQ Deku Scrub Side Room Near Lower Lizalfos": "can_stun_deku"
         }
     },
     {
         "region_name": "Dodongos Cavern Room12",
         "dungeon": "Dodongos Cavern", #"room": 12,
-        "locations": {
-        },
         "exits": {
+            "Dodongos Cavern Room03 Upper": "True",
+            "Dodongos Cavern Room09 Upper": "True"
         }
     },
     {
         "region_name": "Dodongos Cavern Room13",
         "dungeon": "Dodongos Cavern", #"room": 13,
         "locations": {
-        },
-        "exits": {
+            "Dodongos Cavern MQ GS Scrub Room": "can_use(Hookshot) or can_use(Boomerang)"
         }
     },
     {
         "region_name": "Dodongos Cavern Room14",
         "dungeon": "Dodongos Cavern", #"room": 14,
         "locations": {
-        },
-        "exits": {
+            "Dodongos Cavern MQ Under Grave Chest": "True"
         }
     },
     {
         "region_name": "Dodongos Cavern Room15",
         "dungeon": "Dodongos Cavern", #"room": 15,
         "locations": {
-        },
-        "exits": {
-        }
-    },
-    {
-        "region_name": "Dodongos Cavern Beginning",
-        "dungeon": "Dodongos Cavern",
-        "exits": {
-            "Death Mountain": "True",
-            "Dodongos Cavern Lobby": "
-                here(can_blast_or_smash or Progressive_Strength_Upgrade)"
-        }
-    },
-    {
-        "region_name": "Dodongos Cavern Lobby",
-        "dungeon": "Dodongos Cavern",
-        "locations": {
-            "Deku Baba Sticks": "is_adult or Kokiri_Sword or can_use(Boomerang)",
-            "Dodongos Cavern MQ Map Chest": "True",
-            "Dodongos Cavern MQ Compass Chest": "is_adult or can_child_attack or Nuts",
-            "Dodongos Cavern MQ Larvae Room Chest": "can_use(Sticks) or has_fire_source",
-            "Dodongos Cavern MQ Torch Puzzle Room Chest": "
-                can_blast_or_smash or can_use(Sticks) or can_use(Dins_Fire) or 
-                (is_adult and (logic_dc_jump or Hover_Boots or Progressive_Hookshot))",
             "Dodongos Cavern MQ GS Song of Time Block Room": "
-                can_play(Song_of_Time) and (can_child_attack or is_adult)",
-            "Dodongos Cavern MQ GS Larvae Room": "can_use(Sticks) or has_fire_source",
-            "Dodongos Cavern MQ GS Lizalfos Room": "can_blast_or_smash",
-            "Dodongos Cavern MQ Deku Scrub Lobby Rear": "can_stun_deku",
-            "Dodongos Cavern MQ Deku Scrub Lobby Front": "can_stun_deku",
-            "Dodongos Cavern MQ Deku Scrub Staircase": "can_stun_deku",
-            "Dodongos Cavern Gossip Stone": "True",
-            "Gossip Stone Fairy": "can_summon_gossip_fairy and has_bottle"
-        },
-        "exits": {
-            "Dodongos Cavern Lower Right Side": "
-                here(can_blast_or_smash or
-                      ((can_use(Sticks) or can_use(Dins_Fire)) and can_take_damage))",
-            "Dodongos Cavern Bomb Bag Area": "
-                is_adult or (here(is_adult) and has_explosives) or
-                (logic_dc_mq_child_bombs and (Kokiri_Sword or Sticks) and can_take_damage)",
-            "Dodongos Cavern Boss Area": "
-                has_explosives or
-                (logic_dc_mq_eyes and Progressive_Strength_Upgrade and
-                    (is_adult or logic_dc_mq_child_back) and
-                    (here(can_use(Sticks)) or can_use(Dins_Fire) or
-                        (is_adult and (logic_dc_jump or Hammer or Hover_Boots or Hookshot))))"
-        }
-    },
-    {
-        "region_name": "Dodongos Cavern Lower Right Side",
-        "dungeon": "Dodongos Cavern",
-        "locations": {
-            "Dodongos Cavern MQ Deku Scrub Side Room Near Lower Lizalfos": "can_stun_deku"
-        },
-        "exits": {
-            "Dodongos Cavern Bomb Bag Area": "
-                (here(can_use(Bow)) or Progressive_Strength_Upgrade or
-                 can_use(Dins_Fire) or has_explosives) and
-                can_use(Slingshot)"
-        }
-    },
-    {
-        "region_name": "Dodongos Cavern Bomb Bag Area",
-        "dungeon": "Dodongos Cavern",
-        "locations": {
-            "Dodongos Cavern MQ Bomb Bag Chest": "True",
-            "Dodongos Cavern MQ GS Scrub Room": "
-                (here(can_use(Bow)) or Progressive_Strength_Upgrade or
-                 can_use(Dins_Fire) or has_explosives) and
-                (can_use(Hookshot) or can_use(Boomerang))"
-        },
-        "exits": {
-            "Dodongos Cavern Lower Right Side": "True"
-        }
-    },
-    {
-        "region_name": "Dodongos Cavern Boss Area",
-        "dungeon": "Dodongos Cavern",
-        "locations": {
-            "Dodongos Cavern MQ Under Grave Chest": "True",
-            "Dodongos Cavern MQ GS Back Area": "True",
-            "Fairy Pot": "has_bottle"
-        },
-        "exits": {
-            "King Dodongos Lair": "True"
+                can_play(Song_of_Time) and (can_child_attack or is_adult)"
         }
     }
 ]
