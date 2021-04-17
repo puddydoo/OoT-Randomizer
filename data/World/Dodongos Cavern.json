@@ -155,6 +155,7 @@
         "region_name": "Dodongos Cavern Room07",
         "dungeon": "Dodongos Cavern", #"room": 07,
         "exits": {
+            "Dodongos Cavern Room07 Upper": "is_adult",
             "Dodongos Cavern Room08": "True"
         }
     },
