@@ -23,7 +23,7 @@
         },
         "exits": {
             "Jabu Jabus Belly Room02": "True",
-            "Jabu Jabus Belly Boss Area": "
+            "Jabu Jabus Belly Room05": "
                 at('Jabu Jabus Belly Room01 Upper", True) or
                 (logic_jabu_boss_gs_adult and can_use(Hover_Boots))"
         }
