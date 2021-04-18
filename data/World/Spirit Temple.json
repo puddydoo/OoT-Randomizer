@@ -132,14 +132,13 @@
                 ((Small_Key_Spirit_Temple, 5) and has_explosives and 
                     can_use(Sticks))",
             "Spirit Temple GS Lobby": "
-                (colossus_hands and
-                    (logic_spirit_lobby_gs and can_use(Boomerang)) or
-                    (is_adult and Progressive_Hookshot or Hover_Boots or logic_spirit_lobby_jump)) or
                 (logic_spirit_lobby_gs and Boomerang and
+                    (is_child and (colossus_hands or
+                        ((Small_Key_Spirit_Temple, 5) and has_explosives))) or
                     (Spirit_Temple_Central_Child_Access and 
-                        (Progressive_Hookshot or Hover_Boots or logic_spirit_lobby_jump)) or
-                    ((Small_Key_Spirit_Temple, 5) and is_child and has_explosives)) or
-                ((Small_Key_Spirit_Temple, 3) and is_adult and (Progressive_Hookshot or Hover_Boots or logic_spirit_lobby_jump))"
+                        (Progressive_Hookshot or Hover_Boots or logic_spirit_lobby_jump))) or
+                (is_adult and (Progressive_Hookshot or Hover_Boots or logic_spirit_lobby_jump) and
+                    (colossus_hands or (Small_Key_Spirit_Temple, 3)))"
         },
         "exits": {
             "Spirit Temple Room04": "True",
