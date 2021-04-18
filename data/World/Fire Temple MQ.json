@@ -1,26 +1,19 @@
 [
     {
-        "region_name": "Fire Temple Lower",
-        "dungeon": "Fire Temple",
-        "exits": {
-            "Fire Temple Room00": "True"
-        }
-    },
-    {
-        "region_name": "Fire Temple Room00",
+        "region_name": "Fire Temple Lobby",
         "dungeon": "Fire Temple", #"room": 00,
         "exits": {
             "DMC Fire Temple Entrance": "True",
-            "Fire Temple Room00 Upper": "is_adult",
+            "Fire Temple Lobby Upper": "is_adult",
             "Fire Temple Room15": "(Small_Key_Fire_Temple, 5)",
             "Fire Temple Room17 South": "True"
         }
     },
     {
-        "region_name": "Fire Temple Room00 Upper",
+        "region_name": "Fire Temple Lobby Upper",
         "dungeon": "Fire Temple", #"room": 00,
         "exits": {
-            "Fire Temple Room00": "True",
+            "Fire Temple Lobby": "True",
             "Fire Temple Room01": "
                 (logic_fewer_tunic_requirements or can_use(Goron_Tunic)) and can_use(Megaton_Hammer)",
             "Fire Temple Room02": "has_fire_source"
@@ -93,7 +86,7 @@
         "dungeon": "Fire Temple", #"room": 05,
         "locations": {
             "Fire Temple MQ Lizalfos Maze Lower Chest": "True"
-        }
+        },
         "exits": {
             "Fire Temple Room05 Upper": "
                 ((has_explosives or logic_rusted_switches) and can_use(Hookshot)) or
@@ -181,9 +174,7 @@
     },
     {
         "region_name": "Fire Temple Room10 Ceiling",
-        "dungeon": "Fire Temple", #"room": 10,
-        "locations": {
-        }
+        "dungeon": "Fire Temple" #"room": 10,
     },
     {
         "region_name": "Fire Temple Room11",
@@ -197,7 +188,7 @@
     },
     {
         "region_name": "Fire Temple Room11 Upper",
-        "dungeon": "Fire Temple", #"room": 11,
+        "dungeon": "Fire Temple" #"room": 11,
     },
     {
         "region_name": "Fire Temple Room12",

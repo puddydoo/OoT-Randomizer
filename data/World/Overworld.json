@@ -1621,7 +1621,7 @@
         "scene": "Death Mountain Crater",
         "hint": "Death Mountain Crater",
         "exits": {
-            "Fire Temple Lower": "True",
+            "Fire Temple Lobby": "True",
             "DMC Central Nearby": "can_use(Goron_Tunic)"
         }
     },
@@ -2441,7 +2441,7 @@
             "Ganons Tower Boss Key Chest": "True"
         },
         "exits": {
-            "Ganons Tower Boss Door": "Trues"
+            "Ganons Tower Boss Door": "True"
         }
     },
     {

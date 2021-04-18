@@ -1,13 +1,6 @@
 [
     {
         "region_name": "Water Temple Lobby",
-        "dungeon": "Water Temple",
-        "exits": {
-            "Water Temple Room00": "True"
-        }
-    },
-    {
-        "region_name": "Water Temple Room00",
         "dungeon": "Water Temple", #"room": 00,
         "events": {
             "Raise Water Level": "can_use(Hookshot)"
@@ -36,7 +29,7 @@
         }
     },
     {
-        "region_name": "Water Temple Room00 Switch",
+        "region_name": "Water Temple Lobby Switch",
         "dungeon": "Water Temple", #"room": 01,
         "events": {
             "Water Temple Basement Switch": "can_use(Iron_Boots)"
@@ -73,7 +66,7 @@
     },
     {
         "region_name": "Water Temple Room04",
-        "dungeon": "Water Temple", #"room": 04,
+        "dungeon": "Water Temple" #"room": 04,
     },
     {
         "region_name": "Water Temple Room05",
@@ -105,7 +98,7 @@
         "dungeon": "Water Temple", #"room": 08,
         "exits": {
             "Water Temple Room08 Rear": "
-                (can_dive or can_use(Iron_Boots) and
+                (can_dive or can_use(Iron_Boots)) and
                 (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)",
             "Water Temple Room09": "
                 at('Water Temple Room08 Rear', can_use(Dins_Fire))"
@@ -113,7 +106,7 @@
     },
     {
         "region_name": "Water Temple Room08 Rear",
-        "dungeon": "Water Temple", #"room": 08,
+        "dungeon": "Water Temple" #"room": 08,
     },
     {
         "region_name": "Water Temple Room08 Ledge",
@@ -132,7 +125,7 @@
             "Water Temple MQ Boss Key Chest": "True"
         },
         "exits": {
-            "Water Temple Room00 Switch": "can_use(Iron_Boots) or can_dive"
+            "Water Temple Lobby Switch": "can_use(Iron_Boots) or can_dive"
         }
     },
     {

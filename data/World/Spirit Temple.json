@@ -1,22 +1,15 @@
 [
     {
         "region_name": "Spirit Temple Lobby",
-        "dungeon": "Spirit Temple",
-        "exits": {
-            "Spirit Temple Room00": "True"
-        }
-    },
-    {
-        "region_name": "Spirit Temple Room00",
         "dungeon": "Spirit Temple", #"room": 00,
         "exits": {
             "Desert Colossus From Spirit Lobby": "True",
             "Spirit Temple Room01": "is_child",
-            "Spirit Temple Room00 East": "can_use(Silver_Gauntlets)"
+            "Spirit Temple Lobby East": "can_use(Silver_Gauntlets)"
         }
     },
     {
-        "region_name": "Spirit Temple Room00 East",
+        "region_name": "Spirit Temple Lobby East",
         "dungeon": "Spirit Temple", #"room": 00,
         "exits": {
             "Spirit Temple Room13": "
@@ -59,7 +52,7 @@
     },
     {
         "region_name": "Spirit Temple Room02",
-        "dungeon": "Spirit Temple", #"room": 02,
+        "dungeon": "Spirit Temple" #"room": 02,
     },
     {
         "region_name": "Spirit Temple Room02 Rear",
@@ -99,16 +92,16 @@
             "Spirit Temple Child Climb North Chest": "
                 can_use_projectile and (colossus_hands or has_projectile(both) or 
                     (is_adult and Spirit_Temple_Central_Child_Access) or 
-                    (is_child and (Small_Key_Spirit_Temple, 5))",
+                    (is_child and (Small_Key_Spirit_Temple, 5)))",
             "Spirit Temple Child Climb East Chest": "
                 can_use_projectile and (colossus_hands or has_projectile(both) or 
                     (is_adult and Spirit_Temple_Central_Child_Access) or 
-                    (is_child and (Small_Key_Spirit_Temple, 5))",
+                    (is_child and (Small_Key_Spirit_Temple, 5)))",
             "Spirit Temple GS Sun on Floor Room": "
                 can_use(Dins_Fire) or 
                 (can_use_projectile and (colossus_hands or has_projectile(both) or 
                     (is_adult and Spirit_Temple_Central_Child_Access) or 
-                    (is_child and (Small_Key_Spirit_Temple, 5))) or
+                    (is_child and (Small_Key_Spirit_Temple, 5)))) or
                 (can_take_damage and
                     (Sticks or Kokiri_Sword or has_projectile(child)) or
                     (is_adult and (colossus_hands or Spirit_Temple_Central_Child_Access)))"
@@ -145,7 +138,7 @@
             "Spirit Temple Room06": "
                 (Small_Key_Spirit_Temple, 3) and at('Spirit Temple Room05 East', 
                     can_use(Megaton_Hammer) and (Hover_Boots or logic_spirit_lobby_jump or
-                    (Progressive_Hookshot and can_play(Zeldas_Lullaby)))",
+                    (Progressive_Hookshot and can_play(Zeldas_Lullaby))))",
             "Spirit Temple Room07": "True"
         }
     },
@@ -187,7 +180,7 @@
     },
     {
         "region_name": "Spirit Temple Room06",
-        "dungeon": "Spirit Temple", #"room": 06,
+        "dungeon": "Spirit Temple" #"room": 06,
     },
     {
         "region_name": "Spirit Temple Room07",
@@ -246,7 +239,7 @@
         "region_name": "Spirit Temple Room11 West",
         "dungeon": "Spirit Temple", #"room": 11,
         "exits": {
-            "Spirit Temple Room00": "True",
+            "Spirit Temple Lobby": "True",
             "Spirit Temple Room10": "True",
             "Desert Colossus Right Hand": "
                 colossus_hands or (Small_Key_Spirit_Temple, 5) or
@@ -260,7 +253,7 @@
         "region_name": "Spirit Temple Room11 East",
         "dungeon": "Spirit Temple", #"room": 11,
         "exits": {
-            "Spirit Temple Room00": "True",
+            "Spirit Temple Lobby": "True",
             "Spirit Temple Room20": "True",
             "Desert Colossus Left Hand": "colossus_hands or (Small_Key_Spirit_Temple, 4)",
             "Desert Colossus Right Hand": "not colossus_hands and can_use(Longshot)",
@@ -302,7 +295,7 @@
                 colossus_hands or (Small_Key_Spirit_Temple, 3)"
         },
         "exits": {
-            "Spirit Temple Room00 East": "(Small_Key_Spirit_Temple, 5)",
+            "Spirit Temple Lobby East": "(Small_Key_Spirit_Temple, 5)",
             "Spirit Temple Room05 East": "True"
         }
     },

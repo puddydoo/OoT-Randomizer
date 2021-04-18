@@ -1,13 +1,6 @@
 [    
     {
         "region_name": "Forest Temple Lobby",
-        "dungeon": "Forest Temple",
-        "exits": {
-            "Forest Temple Room00": "True"
-        }
-    },
-    {
-        "region_name": "Forest Temple Room00",
         "dungeon": "Forest Temple", #"room": 00,
         "locations": {
             "Forest Temple First Room Chest": "True",
@@ -48,7 +41,7 @@
     },
     {
         "region_name": "Forest Temple Room03",
-        "dungeon": "Forest Temple", #"room": 03,
+        "dungeon": "Forest Temple" #"room": 03,
     },
     {
         "region_name": "Forest Temple Room04",

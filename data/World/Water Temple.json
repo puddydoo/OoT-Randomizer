@@ -1,13 +1,6 @@
 [    
     {
         "region_name": "Water Temple Lobby",
-        "dungeon": "Water Temple",
-        "exits": {
-            "Water Temple Room00": "True"
-        }
-    },
-    {
-        "region_name": "Water Temple Room00",
         "dungeon": "Water Temple", #"room": 00,
         "events": {
             "Raise Water Level": "
@@ -143,7 +136,7 @@
             "Water Temple Room08 Rear": "
                 (Iron_Boots and can_use(Hookshot)) or
                 (logic_water_dragon_adult and is_adult and (has_bombchus or Bow or Hookshot) and (can_dive or Iron_Boots)) or
-                    (logic_water_dragon_child and is_child and (has_bombchus or Slingshot or Boomerang) and can_dive))"
+                    (logic_water_dragon_child and is_child and (has_bombchus or Slingshot or Boomerang) and can_dive)"
         }
     },
     {
@@ -173,7 +166,7 @@
     },
     {
         "region_name": "Water Temple Room10",
-        "dungeon": "Water Temple", #"room": 10,
+        "dungeon": "Water Temple" #"room": 10,
     },
     {
         "region_name": "Water Temple Room11",
@@ -275,7 +268,7 @@
     },
     {
         "region_name": "Water Temple Room20",
-        "dungeon": "Water Temple", #"room": 20,
+        "dungeon": "Water Temple" #"room": 20,
     },
     {
         "region_name": "Water Temple Room20 West",

@@ -1,13 +1,6 @@
 [
     {
         "region_name": "Gerudo Training Grounds Lobby",
-        "dungeon": "Gerudo Training Grounds",
-        "exits": {
-            "Gerudo Training Grounds Room00": "True"
-        }
-    },
-    {
-        "region_name": "Gerudo Training Grounds Room00",
         "dungeon": "Gerudo Training Grounds", #"room": 00,
         "locations": {
             "Gerudo Training Grounds MQ Lobby Left Chest": "True",
@@ -33,7 +26,7 @@
     {
         "region_name": "Gerudo Training Grounds Room02",
         "dungeon": "Gerudo Training Grounds", #"room": 02,
-        "exits": 
+        "exits": {
             "Gerudo Training Grounds Room03": "
                 can_use(Longshot) or logic_gtg_mq_without_hookshot or
                 (logic_gtg_mq_with_hookshot and can_use(Hookshot))"

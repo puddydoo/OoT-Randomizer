@@ -1,13 +1,6 @@
 [
     {
         "region_name": "Jabu Jabus Belly Beginning",
-        "dungeon": "Jabu Jabus Belly",
-        "exits": {
-            "Jabu Jabus Belly Room00": "True"
-        }
-    },
-    {
-        "region_name": "Jabu Jabus Belly Room00",
         "dungeon": "Jabu Jabus Belly", #"room": 00,
         "locations": {
             "Nut Pot": "True",
@@ -39,7 +32,7 @@
     },
     {
         "region_name": "Jabu Jabus Belly Room01 Upper",
-        "dungeon": "Jabu Jabus Belly", #"room": 01,
+        "dungeon": "Jabu Jabus Belly" #"room": 01,
     },
     {
         "region_name": "Jabu Jabus Belly Room02",

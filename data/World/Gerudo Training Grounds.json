@@ -1,13 +1,6 @@
 [
     {
         "region_name": "Gerudo Training Grounds Lobby",
-        "dungeon": "Gerudo Training Grounds",
-        "exits": {
-            "Gerudo Training Grounds Room00": "True"
-        }
-    },
-    {
-        "region_name": "Gerudo Training Grounds Room00",
         "dungeon": "Gerudo Training Grounds", #"room": 00,
         "locations": {
             "Gerudo Training Grounds Lobby Left Chest": "can_use(Bow) or can_use(Slingshot)",
@@ -33,7 +26,7 @@
     {
         "region_name": "Gerudo Training Grounds Room02",
         "dungeon": "Gerudo Training Grounds", #"room": 02,
-        "exits": 
+        "exits": {
             "Gerudo Training Grounds Room03": "can_use(Hookshot) or logic_gtg_without_hookshot"
         }
     },

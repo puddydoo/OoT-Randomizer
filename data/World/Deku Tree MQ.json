@@ -1,24 +1,6 @@
 [
     {
         "region_name": "Deku Tree Lobby",
-        "dungeon": "Deku Tree",
-        "exits": {
-            "Deku Tree Room00": "True"
-        }
-    },
-    {
-        "region_name": "Deku Tree Lobby",
-        "dungeon": "Deku Tree",
-        "locations": {
-            "Deku Tree MQ Basement Chest": "has_fire_source_with_torch or can_use(Bow)"
-        },
-        "exits": {
-            "KF Outside Deku Tree": "True",
-            "Deku Tree Basement Ledge": "logic_deku_b1_skip or here(is_adult)"
-        }
-    },
-    {
-        "region_name": "Deku Tree Room00",
         "dungeon": "Deku Tree", #"room": 00,
         "locations": {
             "Deku Tree MQ Map Chest": "True",
@@ -105,7 +87,7 @@
             "Deku Tree Room05": "True",
             "Deku Tree Room06": "
                 here(can_use(Sticks) or can_use(Dins_Fire)) or
-                at('Deku Tree Basement Water Room Front', can_use(Fire_Arrows))"
+                at('Deku Tree Room05', can_use(Fire_Arrows))"
         }
     },
     {

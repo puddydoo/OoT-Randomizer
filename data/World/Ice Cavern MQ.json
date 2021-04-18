@@ -1,28 +1,10 @@
 [
     {
         "region_name": "Ice Cavern Beginning",
-        "dungeon": "Ice Cavern",
-        "exits": {
-            "Ice Cavern Room00": "True"
-        }
-    },
-    {
-        "region_name": "Ice Cavern Room00",
         "dungeon": "Ice Cavern", #"room": 00,
         "exits": {
             "ZF Ice Ledge": "True",
             "Ice Cavern Room01": "True"
-        }
-    },
-    {
-        "region_name": "Ice Cavern Beginning",
-        "dungeon": "Ice Cavern",
-        "locations": {
-            "Fairy Pot": "has_bottle"
-        },
-        "exits": {
-            "Ice Cavern Compass Room": "is_adult and Blue_Fire",
-            "Ice Cavern Iron Boots Region": "Blue_Fire"
         }
     },
     {

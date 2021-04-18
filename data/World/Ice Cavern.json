@@ -1,13 +1,6 @@
 [
     {
         "region_name": "Ice Cavern Beginning",
-        "dungeon": "Ice Cavern",
-        "exits": {
-            "Ice Cavern Room00": "True"
-        }
-    },
-    {
-        "region_name": "Ice Cavern Room00",
         "dungeon": "Ice Cavern", #"room": 00,
         "exits": {
             "ZF Ice Ledge": "True",

@@ -1,13 +1,6 @@
 [
     {
         "region_name": "Ganons Castle Lobby",
-        "dungeon": "Ganons Castle",
-        "exits": {
-            "Ganons Castle Room00": "True"
-        }
-    },
-    {
-        "region_name": "Ganons Castle Room00",
         "dungeon": "Ganons Castle", #"room": 00,
         "exits": {
             "Castle Grounds": "True",
@@ -111,7 +104,7 @@
         "exits": {
             "Ganons Castle Room08": "(Small_Key_Ganons_Castle, 2)"
         }
-    }.
+    },
     {
         "region_name": "Ganons Castle Room10",
         "dungeon": "Ganons Castle", #"room": 10,

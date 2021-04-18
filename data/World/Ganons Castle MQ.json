@@ -1,17 +1,10 @@
 [
     {
         "region_name": "Ganons Castle Lobby",
-        "dungeon": "Ganons Castle",
-        "exits": {
-            "Ganons Castle Room00": "True"
-        }
-    },
-    {
-        "region_name": "Ganons Castle Room00",
         "dungeon": "Ganons Castle", #"room": 00,
         "exits": {
             "Castle Grounds": "True",
-            "Ganons Castle Room01": ""
+            "Ganons Castle Room01": "True"
         }
     },
     {

@@ -3,13 +3,6 @@
         "region_name": "Dodongos Cavern Beginning",
         "dungeon": "Dodongos Cavern",
         "exits": {
-            "Dodongos Cavern Room00 Beginning": "True"
-        }
-    },
-    {
-        "region_name": "Dodongos Cavern Room00 Beginning",
-        "dungeon": "Dodongos Cavern",
-        "exits": {
             "Death Mountain": "True",
             "Dodongos Cavern Room00": "
                 here(can_blast_or_smash or Progressive_Strength_Upgrade)"
@@ -129,7 +122,7 @@
         "region_name": "Dodongos Cavern Room04",
         "dungeon": "Dodongos Cavern", #"room": 04,
         "exits": {
-            "Dodongos Cavern Room00 East Ledge": "has_fire_source_with_torch"
+            "Dodongos Cavern Room00 East Ledge": "has_fire_source_with_torch",
             "Dodongos Cavern Room13": "
                 here(is_adult or Slingshot or Sticks or 
                 has_explosives or Kokiri_Sword or

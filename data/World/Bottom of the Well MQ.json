@@ -1,13 +1,6 @@
 [
     {
         "region_name": "Bottom of the Well",
-        "dungeon": "Bottom of the Well",
-        "exits": {
-            "Bottom of the Well Room00": "True"
-        }
-    },
-    {
-        "region_name": "Bottom of the Well Room00",
         "dungeon": "Bottom of the Well", #"room": 00,
         "exits": {
             "Kakariko Village": "True",
@@ -33,6 +26,7 @@
         "region_name": "Bottom of the Well Room00 Middle",
         "dungeon": "Bottom of the Well", #"room": 00,
         "locations": {
+            "Bottom of the Well MQ Map Chest": "True"
         },
         "exits": {
             "Bottom of the Well Room01 Ceiling": "
@@ -43,7 +37,7 @@
     },
     {
         "region_name": "Bottom of the Well Room00 East Cage",
-        "dungeon": "Bottom of the Well", #"room": 00,
+        "dungeon": "Bottom of the Well" #"room": 00,
     },
     {
         "region_name": "Bottom of the Well Room01",

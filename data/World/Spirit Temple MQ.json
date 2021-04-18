@@ -1,13 +1,6 @@
 [
     {
         "region_name": "Spirit Temple Lobby",
-        "dungeon": "Spirit Temple",
-        "exits": {
-            "Spirit Temple Room00": "True"
-        }
-    },
-    {
-        "region_name": "Spirit Temple Room00",
         "dungeon": "Spirit Temple", #"room": 00,
         "locations": {
             "Spirit Temple MQ Entrance Front Left Chest": "True",
@@ -15,7 +8,7 @@
                 here(can_blast_or_smash) and 
                 (can_use(Slingshot) or can_use(Bow))",
             "Spirit Temple MQ Entrance Front Right Chest": "
-                at('Spirit Temple Room00 East', can_use(Megaton_Hammer))",
+                at('Spirit Temple Lobby East', can_use(Megaton_Hammer))",
             "Spirit Temple MQ Entrance Back Right Chest": "
                 has_bombchus or can_use(Bow) or can_use(Hookshot) or 
                 can_use(Slingshot) or can_use(Boomerang)"
@@ -27,7 +20,7 @@
         }
     },
     {
-        "region_name": "Spirit Temple Room00 East",
+        "region_name": "Spirit Temple Lobby East",
         "dungeon": "Spirit Temple", #"room": 00,
         "exits": {
             "Spirit Temple Room13": "(Small_Key_Spirit_Temple, 7)",
@@ -39,7 +32,7 @@
         "dungeon": "Spirit Temple", #"room": 01,
         "locations": {
             "Spirit Temple MQ Child Hammer Switch Chest": "
-                at('Spirit Temple Room01 Rear', can_use(Megaton_Hammer)"
+                at('Spirit Temple Room01 Rear', can_use(Megaton_Hammer))"
         },
         "exits": {
             "Spirit Temple Room01 Rear": "has_bombchus",
@@ -217,7 +210,7 @@
         "region_name": "Spirit Temple Room11 West",
         "dungeon": "Spirit Temple", #"room": 11,
         "exits": {
-            "Spirit Temple Room00": "True",
+            "Spirit Temple Lobby": "True",
             "Spirit Temple Room10": "True",
             "Desert Colossus Right Hand": "
                 colossus_hands or
@@ -233,7 +226,7 @@
         "region_name": "Spirit Temple Room11 East",
         "dungeon": "Spirit Temple", #"room": 11,
         "exits": {
-            "Spirit Temple Room00": "True",
+            "Spirit Temple Lobby": "True",
             "Spirit Temple Room20": "True",
             "Desert Colossus Left Hand": "
                 colossus_hands or (Small_Key_Spirit_Temple, 5)",
@@ -271,7 +264,7 @@
         "region_name": "Spirit Temple Room15",
         "dungeon": "Spirit Temple", #"room": 15,
         "exits": {
-            "Spirit Temple Room00 East": "here(can_use(Mirror_Shield))"
+            "Spirit Temple Lobby East": "here(can_use(Mirror_Shield))"
         }
     },
     {

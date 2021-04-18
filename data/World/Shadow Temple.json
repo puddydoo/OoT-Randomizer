@@ -1,11 +1,4 @@
 [    
-   {
-        "region_name": "Shadow Temple Entryway",
-        "dungeon": "Shadow Temple",
-        "exits": {
-            "Shadow Temple Room02 Entryway": "True"
-        }
-    },
     {
         "region_name": "Shadow Temple Room00",
         "dungeon": "Shadow Temple", #"room": 00,
@@ -25,7 +18,7 @@
         }
     },
     {
-        "region_name": "Shadow Temple Room02 Entryway",
+        "region_name": "Shadow Temple Entryway",
         "dungeon": "Shadow Temple", #"room": 02,
         "exits": {
             "Graveyard Warp Pad Region": "True",

@@ -3,13 +3,6 @@
         "region_name": "Dodongos Cavern Beginning",
         "dungeon": "Dodongos Cavern",
         "exits": {
-            "Dodongos Cavern Room00 Beginning": "True"
-        }
-    },
-    {
-        "region_name": "Dodongos Cavern Room00 Beginning",
-        "dungeon": "Dodongos Cavern",
-        "exits": {
             "Death Mountain": "True",
             "Dodongos Cavern Room00": "
                 here(can_blast_or_smash or Progressive_Strength_Upgrade)"
@@ -66,19 +59,9 @@
         "dungeon": "Dodongos Cavern", #"room": 00,
         "events": {
             "Dodongos Cavern Room00 2F Boulders": "Progressive_Strength_Upgrade"
-        }
+        },
         "exits": {
             "Dodongos Cavern Room09 Upper": "True"
-        }
-    },
-    {
-        "region_name": "Dodongos Cavern Lower Right Side",
-        "dungeon": "Dodongos Cavern",
-        "exits": {
-            "Dodongos Cavern Bomb Bag Area": "
-                here((can_use(Bow) or ((Progressive_Strength_Upgrade or
-                can_use(Dins_Fire) or has_explosives) and
-                can_use(Slingshot)))"
         }
     },
     {
@@ -129,7 +112,7 @@
         },
         "exits": {
             "Dodongos Cavern Room03": "
-                can_blast_or_smash and at('Dodongos Cavern Room03', True)"
+                can_blast_or_smash and at('Dodongos Cavern Room03', True)",
             "Dodongos Cavern Room12": "
                 here(is_adult or Slingshot or Sticks or 
                 has_explosives or Kokiri_Sword)"
@@ -139,7 +122,7 @@
         "region_name": "Dodongos Cavern Room04",
         "dungeon": "Dodongos Cavern", #"room": 04,
         "exits": {
-            "Dodongos Cavern Room00 East Ledge": "has_fire_source_with_torch"
+            "Dodongos Cavern Room00 East Ledge": "has_fire_source_with_torch",
             "Dodongos Cavern Room13": "
                 here(can_use(Bow)) or Progressive_Strength_Upgrade or
                 can_use(Dins_Fire) or has_explosives"
@@ -207,7 +190,7 @@
             "Dodongos Cavern MQ Torch Puzzle Room Chest": "True"
         },
         "exits": {
-            "Dodongos Cavern Room00 Far Bridge": "True",
+            "Dodongos Cavern Room00 Behind Boulders": "True",
             "Dodongos Cavern Room09": "True",
             "Dodongos Cavern Room12": "True"
         }
@@ -217,7 +200,7 @@
         "dungeon": "Dodongos Cavern", #"room": 10,
         "exits": {
             "Dodongos Cavern Room03 Upper": "
-                here(can_blast_or_smash or (Progressive_Strength_Upgrade and can_use(Sticks))"
+                here(can_blast_or_smash or (Progressive_Strength_Upgrade and can_use(Sticks)))"
         }
     },
     {

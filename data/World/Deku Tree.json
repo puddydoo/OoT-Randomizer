@@ -1,13 +1,6 @@
 [
     {
         "region_name": "Deku Tree Lobby",
-        "dungeon": "Deku Tree",
-        "exits": {
-            "Deku Tree Room00": "True"
-        }
-    },
-    {
-        "region_name": "Deku Tree Room00",
         "dungeon": "Deku Tree", #"room": 00,
         "locations": {
             "Deku Tree Map Chest": "True",

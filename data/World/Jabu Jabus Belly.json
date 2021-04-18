@@ -1,13 +1,6 @@
 [
     {
         "region_name": "Jabu Jabus Belly Beginning",
-        "dungeon": "Jabu Jabus Belly",
-        "exits": {
-            "Jabu Jabus Belly Room00": "True"
-        }
-    },
-    {
-        "region_name": "Jabu Jabus Belly Room00",
         "dungeon": "Jabu Jabus Belly", #"room": 00,
         "exits": {
             "Zoras Fountain": "True",
@@ -24,13 +17,13 @@
         "exits": {
             "Jabu Jabus Belly Room02": "True",
             "Jabu Jabus Belly Room05": "
-                at('Jabu Jabus Belly Room01 Upper", True) or
+                at('Jabu Jabus Belly Room01 Upper', True) or
                 (logic_jabu_boss_gs_adult and can_use(Hover_Boots))"
         }
     },
     {
         "region_name": "Jabu Jabus Belly Room01 Upper",
-        "dungeon": "Jabu Jabus Belly", #"room": 01,
+        "dungeon": "Jabu Jabus Belly" #"room": 01,
     },
     {
         "region_name": "Jabu Jabus Belly Room02",
