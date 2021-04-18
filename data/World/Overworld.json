@@ -2297,7 +2297,7 @@
             "Queen Gohma": "is_adult or Kokiri_Sword or Sticks"
         },
         "exits": {
-            "Deku Tree Boss Room": "True",
+            "Deku Tree Boss Door": "True",
             "Deku Tree Post-Boss": "is_adult or Kokiri_Sword or Sticks"
         }
     },
@@ -2321,7 +2321,7 @@
                 (is_adult or Sticks or Kokiri_Sword)"
         },
         "exits": {
-            "Dodongos Cavern Boss Area": "True",
+            "Dodongos Cavern Boss Door": "True",
             "Dodongos Cavern Post-Boss": "
                 can_blast_or_smash and (Bombs or Progressive_Strength_Upgrade) and 
                 (is_adult or Sticks or Kokiri_Sword)"
@@ -2339,6 +2339,7 @@
             "Barinade": "can_use(Boomerang) and (Sticks or Kokiri_Sword)"
         },
         "exits": {
+            "Jabu Jabus Belly Boss Door": "False",
             "Jabu Jabus Belly Post-Boss": "can_use(Boomerang) and (Sticks or Kokiri_Sword)"
         }
     },
@@ -2356,6 +2357,7 @@
                 (can_use(Slingshot) and (Kokiri_Sword or Sticks))"
         },
         "exits": {
+            "Forest Temple Boss Door": "False",
             "Forest Temple Post-Boss": "(can_use(Hookshot) or can_use(Bow)) or 
                 (can_use(Slingshot) and (Kokiri_Sword or Sticks))"
         }
@@ -2372,6 +2374,7 @@
             "Volvagia": "can_use(Goron_Tunic) and can_use(Megaton_Hammer)"
         },
         "exits": {
+            "Fire Temple Boss Door": "False",
             "Fire Temple Post-Boss": "can_use(Goron_Tunic) and can_use(Megaton_Hammer)"
         }
     },
@@ -2387,6 +2390,7 @@
             "Water Temple Morpha Heart": "can_use(Hookshot)"
         },
         "exits": {
+            "Water Temple Boss Door": "False",
             "Water Temple Post-Boss": "can_use(Hookshot)"
         }
     },
@@ -2405,6 +2409,7 @@
             "Twinrova": "can_use(Mirror_Shield)"
         },
         "exits": {
+            "Spirit Temple Boss Door": "False",
             "Spirit Temple Post-Boss": "can_use(Mirror_Shield)"
         }
     },
@@ -2421,6 +2426,7 @@
             #I don't know what exactly beats Bongo Bongo
         },
         "exits": {
+            "Shadow Temple Boss Door": "False",
             "Shadow Temple Post-Boss": "True"
         }
     },
@@ -2435,6 +2441,13 @@
             "Ganons Tower Boss Key Chest": "True"
         },
         "exits": {
+            "Ganons Tower Boss Door": "Trues"
+        }
+    },
+    {
+        "region_name": "Ganons Tower Boss Door",
+        "dungeon": "Ganons Castle",
+        "exits": {
             "Ganondorfs Lair": "Boss_Key_Ganons_Castle"
         }
     },
@@ -2445,6 +2458,7 @@
             "Ganondorf Hint": "True"
         },
         "exits": {
+            "Ganons Tower Boss Door": "False",
             "Ganons Tower Post-Boss": "can_use(Light_Arrows)"
         }
     },
