@@ -7,11 +7,42 @@
         }
     },
     {
-        "region_name": "Fire Temple Lower",
-        "dungeon": "Fire Temple",
+        "region_name": "Fire Temple Room00",
+        "dungeon": "Fire Temple", #"room": 00,
+        "exits": {
+            "DMC Fire Temple Entrance": "True",
+            "Fire Temple Room00 Upper": "is_adult",
+            "Fire Temple Room15": "(Small_Key_Fire_Temple, 5)",
+            "Fire Temple Room17 South": "True"
+        }
+    },
+    {
+        "region_name": "Fire Temple Room00 Upper",
+        "dungeon": "Fire Temple", #"room": 00,
+        "exits": {
+            "Fire Temple Room00": "True",
+            "Fire Temple Room01": "
+                (logic_fewer_tunic_requirements or can_use(Goron_Tunic)) and can_use(Megaton_Hammer)",
+            "Fire Temple Room02": "has_fire_source"
+        }
+    },
+    {
+        "region_name": "Fire Temple Room01",
+        "dungeon": "Fire Temple", #"room": 01,
+        "exits": {
+            "Fire Temple Room19": "
+                has_fire_source and (Bow or logic_fire_mq_bk_chest) and
+                (can_use(Hookshot) or logic_fire_song_of_time)",
+            "Fire Temple Room20": "True",
+            "Fire Temple Room21": "(Small_Key_Fire_Temple, 2)",
+            "Fire Temple Room22": "
+                has_explosives and (can_use(Hookshot) or logic_fire_mq_blocked_chest)"
+        }
+    },
+    {
+        "region_name": "Fire Temple Room02",
+        "dungeon": "Fire Temple", #"room": 02,
         "locations": {
-            "Fire Temple MQ Map Room Side Chest": "
-                is_adult or Kokiri_Sword or Sticks or Slingshot or Bombs or can_use(Dins_Fire)",
             "Fire Temple MQ Near Boss Chest": "
                 (logic_fewer_tunic_requirements or can_use(Goron_Tunic)) and
                 (((can_use(Hover_Boots) or (logic_fire_mq_near_boss and can_use(Bow))) and has_fire_source) or 
@@ -21,159 +52,124 @@
                                 can_use(Goron_Tunic) or can_use(Bow) or can_use(Longshot))))))"
         },
         "exits": {
-            "DMC Fire Temple Entrance": "True",
             "Volvagias Lair": "
                 can_use(Goron_Tunic) and can_use(Megaton_Hammer) and Boss_Key_Fire_Temple and
-                ((has_fire_source and (logic_fire_boss_door_jump or Hover_Boots)) or at('Fire Temple Upper', True))",
-            "Fire Lower Locked Door": "(Small_Key_Fire_Temple, 5) and (is_adult or Kokiri_Sword)",
-            "Fire Big Lava Room": "
-                (logic_fewer_tunic_requirements or can_use(Goron_Tunic)) and can_use(Megaton_Hammer)"
-        }
-    },
-    {
-        "region_name": "Fire Temple Room00",
-        "dungeon": "Fire Temple", #"room": 00,
-        "locations": {
-        },
-        "exits": {
-            "DMC Fire Temple Entrance": "True",
-            "Fire Temple Room01": "",
-            "Fire Temple Room02": "",
-            "Fire Temple Room15": "",
-            "Fire Temple Room17 South": ""
-        }
-    },
-    {
-        "region_name": "Fire Temple Room01",
-        "dungeon": "Fire Temple", #"room": 01,
-        "locations": {
-        },
-        "exits": {
-            "Fire Temple Room19": "",
-            "Fire Temple Room20": "",
-            "Fire Temple Room21": "",
-            "Fire Temple Room22": ""
-        }
-    },
-    {
-        "region_name": "Fire Temple Room02",
-        "dungeon": "Fire Temple", #"room": 02,
-        "locations": {
-        },
-        "exits": {
-            "Volvagias Lair": ""
+                (logic_fire_boss_door_jump or Hover_Boots or at('Fire Temple Room10', True))"
         }
     },
     {
         "region_name": "Fire Temple Room03",
         "dungeon": "Fire Temple", #"room": 03,
         "locations": {
+            "Fire Temple MQ Megaton Hammer Chest": "is_adult and (has_explosives or Megaton_Hammer or Hookshot)"
         },
         "exits": {
-            "Fire Temple Room17": ""
+            "Fire Temple Room17": "here(is_adult and (has_explosives or Megaton_Hammer or Hookshot))"
         }
     },
     {
         "region_name": "Fire Temple Room04",
         "dungeon": "Fire Temple", #"room": 04,
-        "locations": {
-        },
         "exits": {
-            "Fire Temple Room05": ""
+            "Fire Temple Room05": "has_fire_source or (logic_fire_mq_climb and Hover_Boots)"
         }
     },
     {
         "region_name": "Fire Temple Room04 Shortcut",
         "dungeon": "Fire Temple", #"room": 04,
         "locations": {
+            "Fire Temple MQ Compass Chest": "True"
         }
     },
     {
         "region_name": "Fire Temple Room05",
         "dungeon": "Fire Temple", #"room": 05,
         "locations": {
-        },
+            "Fire Temple MQ Lizalfos Maze Lower Chest": "True"
+        }
         "exits": {
-            "Fire Temple Room06": "",
-            "Fire Temple Room23": ""
+            "Fire Temple Room05 Upper": "
+                ((has_explosives or logic_rusted_switches) and can_use(Hookshot)) or
+                (logic_fire_mq_maze_hovers and can_use(Hover_Boots)) or logic_fire_mq_maze_jump",
+            "Fire Temple Room06": "False",
+            "Fire Temple Room23": "
+                has_explosives and (logic_fire_mq_maze_side_room or at('Fire Temple Room05 Upper', True))"
         }
     },
     {
         "region_name": "Fire Temple Room05 Upper",
         "dungeon": "Fire Temple", #"room": 05,
         "locations": {
+            "Fire Temple MQ Lizalfos Maze Upper Chest": "True"
         },
         "exits": {
-            "Fire Temple Room04 Shortcut": "",
-            "Fire Temple Room07": "",
-            "Fire Temple Room16": ""
+            "Fire Temple Room04 Shortcut": "has_explosives",
+            "Fire Temple Room07": "
+                (can_play(Song_of_Time) and can_use(Hookshot) and (has_explosives or logic_rusted_switches)) or
+                can_use(Longshot)",
+            "Fire Temple Room16": "(Small_Key_Fire_Temple, 3)"
         }
     },
     {
         "region_name": "Fire Temple Room06",
         "dungeon": "Fire Temple", #"room": 06,
         "locations": {
+            "Fairy Pot": "has_bottle"
         },
         "exits": {
-            "Fire Temple Room16": "",
-            "Fire Temple Room16 Cage": ""
+            "Fire Temple Room05": "True",
+            "Fire Temple Room16": "False"
         }
     },
     {
         "region_name": "Fire Temple Room07",
         "dungeon": "Fire Temple", #"room": 07,
         "locations": {
+            "Wall Fairy": "has_bottle"
         },
         "exits": {
-            "Fire Temple Room08": ""
+            "Fire Temple Room08": "True"
         }
     },
     {
         "region_name": "Fire Temple Room08",
         "dungeon": "Fire Temple", #"room": 08,
         "locations": {
+            "Fire Temple MQ GS Skull On Fire": "True"
         },
         "exits": {
-            "Fire Temple Room06": ""
+            "Fire Temple Room06": "can_live_dmg(1.0) or can_use(Nayrus_Love) or Fairy"
         }
     },
     {
         "region_name": "Fire Temple Room09",
         "dungeon": "Fire Temple", #"room": 09,
-        "locations": {
-        },
         "exits": {
-            "Fire Temple Room10": ""
+            "Fire Temple Room10": "True"
         }
     },
     {
         "region_name": "Fire Temple Room10",
         "dungeon": "Fire Temple", #"room": 10,
         "locations": {
+            "Fire Temple MQ GS Above Fire Wall Maze": "
+                at('Fire Temple Room10 Ceiling', True) or
+                (logic_fire_mq_above_maze_gs and can_use(Longshot))"
         },
         "exits": {
-            "Fire Temple Room10 Ledge": "",
-            "Fire Temple Room10 North": "",
-            "Fire Temple Room11": "",
-            "Fire Temple Room25": ""
-        }
-    },
-    {
-        "region_name": "Fire Temple Room10 Ledge",
-        "dungeon": "Fire Temple", #"room": 10,
-        "locations": {
-        },
-        "exits": {
-            "Fire Temple Room11 Upper": ""
+            "Fire Temple Room02": "True",
+            "Fire Temple Room10 North": "logic_fire_mq_flame_maze",
+            "Fire Temple Room11": "True",
+            "Fire Temple Room11 Upper": "True",
+            "Fire Temple Room25": "
+                can_play(Song_of_Time) or Hover_Boots or logic_fire_mq_flame_maze"
         }
     },
     {
         "region_name": "Fire Temple Room10 North",
         "dungeon": "Fire Temple", #"room": 10,
-        "locations": {
-        },
         "exits": {
-            "Fire Temple Room24": ""
+            "Fire Temple Room24": "True"
         }
     },
     {
@@ -186,221 +182,133 @@
         "region_name": "Fire Temple Room11",
         "dungeon": "Fire Temple", #"room": 11,
         "locations": {
+            "Fire Temple MQ GS Fire Wall Maze Center": "has_explosives"
         },
         "exits": {
-            "Fire Temple Room10 North": "",
-            "Fire Temple Room11 Upper": ""
+            "Fire Temple Room10 North": "at('Fire Temple Room11 Upper', can_use(Hookshot))"
         }
     },
     {
         "region_name": "Fire Temple Room11 Upper",
         "dungeon": "Fire Temple", #"room": 11,
-        "locations": {
-        },
-        "exits": {
-            "Fire Temple Room10 Ledge": "",
-            "Fire Temple Room11": ""
-        }
     },
     {
         "region_name": "Fire Temple Room12",
         "dungeon": "Fire Temple", #"room": 12,
-        "locations": {
-        },
         "exits": {
-            "Fire Temple Room13": ""
+            "Fire Temple Room13": "(Small_Key_Fire_Temple, 4)"
         }
     },
     {
         "region_name": "Fire Temple Room13",
         "dungeon": "Fire Temple", #"room": 13,
         "locations": {
+            "Fire Temple MQ Chest On Fire": "True"
         },
         "exits": {
-            "Fire Temple Room11 Upper": "",
-            "Fire Temple Room14": ""
+            "Fire Temple Room14": "(Small_Key_Fire_Temple, 5)"
         }
     },
     {
         "region_name": "Fire Temple Room14",
         "dungeon": "Fire Temple", #"room": 14,
-        "locations": {
-        },
         "exits": {
-            "Fire Temple Room10 Ceiling": ""
+            "Fire Temple Room10 Ceiling": "True"
         }
     },
     {
         "region_name": "Fire Temple Room15",
         "dungeon": "Fire Temple", #"room": 15,
-        "locations": {
-        },
         "exits": {
-            "Fire Temple Room18": ""
+            "Fire Temple Room18": "here(is_adult or Kokiri_Sword)"
         }
     },
     {
         "region_name": "Fire Temple Room16",
         "dungeon": "Fire Temple", #"room": 16,
-        "locations": {
-        },
         "exits": {
-            "Fire Temple Room05 Upper": "",
-            "Fire Temple Room09": "",
-            "Fire Temple Room16 Cage": ""
-        }
-    },
-    {
-        "region_name": "Fire Temple Room16 Cage",
-        "dungeon": "Fire Temple", #"room": 16,
-        "locations": {
+            "Fire Temple Room05 Upper": "True",
+            "Fire Temple Room06": "True",
+            "Fire Temple Room09": "
+                (can_use(Bow) and can_use(Hookshot)) or can_use(Fire_Arrows)"
         }
     },
     {
         "region_name": "Fire Temple Room17",
         "dungeon": "Fire Temple", #"room": 17,
         "locations": {
+            "Fire Temple MQ Map Chest": "can_use(Megaton_Hammer)"
         }
     },
     {
         "region_name": "Fire Temple Room17 South",
         "dungeon": "Fire Temple", #"room": 17,
+        "locations": {
+            "Fire Temple MQ Map Room Side Chest": "
+                is_adult or Kokiri_Sword or Sticks or Slingshot or Bombs or can_use(Dins_Fire)"
+        }
     },
     {
         "region_name": "Fire Temple Room18",
         "dungeon": "Fire Temple", #"room": 18,
         "locations": {
+            "Fairy Pot": "has_bottle"
         },
         "exits": {
-            "Fire Temple Room03": ""
+            "Fire Temple Room03": "True"
         }
     },
     {
         "region_name": "Fire Temple Room19",
         "dungeon": "Fire Temple", #"room": 19,
         "locations": {
+            "Fire Temple MQ Boss Key Chest": "can_use(Hookshot)",
+            "Fairy Pot": "has_bottle"
         }
     },
     {
         "region_name": "Fire Temple Room20",
         "dungeon": "Fire Temple", #"room": 20,
         "locations": {
+            "Fire Temple MQ GS Big Lava Room Open Door": "True"
         }
     },
     {
         "region_name": "Fire Temple Room21",
         "dungeon": "Fire Temple", #"room": 21,
-        "locations": {
-        },
         "exits": {
-            "Fire Temple Room04": ""
+            "Fire Temple Room04": "can_use(Goron_Tunic)"
         }
     },
     {
         "region_name": "Fire Temple Room22",
         "dungeon": "Fire Temple", #"room": 22,
         "locations": {
+            "Fire Temple MQ Big Lava Room Blocked Door Chest": "has_fire_source"
         }
     },
     {
         "region_name": "Fire Temple Room23",
         "dungeon": "Fire Temple", #"room": 23,
         "locations": {
+            "Fire Temple MQ Lizalfos Maze Side Room Chest": "True"
         }
     },
     {
         "region_name": "Fire Temple Room24",
         "dungeon": "Fire Temple", #"room": 24,
         "locations": {
+            "Fire Temple MQ Freestanding Key": "True"
         },
         "exits": {
-            "Fire Temple Room12": ""
+            "Fire Temple Room12": "True"
         }
     },
     {
         "region_name": "Fire Temple Room25",
         "dungeon": "Fire Temple", #"room": 25,
         "locations": {
-        }
-    }
-    {
-        "region_name": "Fire Lower Locked Door",
-        "dungeon": "Fire Temple",
-        "locations": {
-            "Fire Temple MQ Megaton Hammer Chest": "is_adult and (has_explosives or Megaton_Hammer or Hookshot)",
-            "Fire Temple MQ Map Chest": "can_use(Megaton_Hammer)",
-            "Fairy Pot": "has_bottle"
-        }
-    },
-    {
-        "region_name": "Fire Big Lava Room",
-        "dungeon": "Fire Temple",
-        "locations": {
-            "Fire Temple MQ Boss Key Chest": "
-                has_fire_source and (Bow or logic_fire_mq_bk_chest) and can_use(Hookshot)",
-            "Fire Temple MQ Big Lava Room Blocked Door Chest": "
-                has_fire_source and has_explosives and
-                (can_use(Hookshot) or logic_fire_mq_blocked_chest)",
-            "Fire Temple MQ GS Big Lava Room Open Door": "True",
-            "Fairy Pot": "
-                has_bottle and has_fire_source and (Bow or logic_fire_mq_bk_chest) and
-                (can_use(Hookshot) or logic_fire_song_of_time)"
-
-        },
-        "exits": {
-            "Fire Lower Maze": "
-                can_use(Goron_Tunic) and (Small_Key_Fire_Temple, 2) and
-                (has_fire_source or (logic_fire_mq_climb and Hover_Boots))"
-        }
-    },
-    {
-        "region_name": "Fire Lower Maze",
-        "dungeon": "Fire Temple",
-        "locations": {
-            "Fire Temple MQ Lizalfos Maze Lower Chest": "True",
-            "Fire Temple MQ Lizalfos Maze Side Room Chest": "
-                has_explosives and (logic_fire_mq_maze_side_room or at('Fire Upper Maze', True))"
-        },
-        "exits": {
-            "Fire Upper Maze": "
-                ((has_explosives or logic_rusted_switches) and can_use(Hookshot)) or
-                (logic_fire_mq_maze_hovers and can_use(Hover_Boots)) or logic_fire_mq_maze_jump"
-        }
-    },
-    {
-        "region_name": "Fire Upper Maze",
-        "dungeon": "Fire Temple",
-        "locations": {
-            "Fire Temple MQ Lizalfos Maze Upper Chest": "True",
-            "Fire Temple MQ Compass Chest": "has_explosives",
-            "Fire Temple MQ GS Skull On Fire": "
-                (can_play(Song_of_Time) and can_use(Hookshot) and (has_explosives or logic_rusted_switches)) or
-                can_use(Longshot)",
-            "Wall Fairy": "
-                has_bottle and
-                ((can_play(Song_of_Time) and can_use(Hookshot) and (has_explosives or logic_rusted_switches)) or
-                    can_use(Longshot))",
-            "Fairy Pot": "has_bottle and (Small_Key_Fire_Temple, 3)"
-        },
-        "exits": {
-            "Fire Temple Upper": "
-                (Small_Key_Fire_Temple, 3) and
-                ((can_use(Bow) and can_use(Hookshot)) or can_use(Fire_Arrows))"
-        }
-    },
-    {
-        "region_name": "Fire Temple Upper",
-        "dungeon": "Fire Temple",
-        "locations": {
-            "Fire Temple MQ Freestanding Key": "can_use(Hookshot) or logic_fire_mq_flame_maze",
-            "Fire Temple MQ Chest On Fire": "
-                (can_use(Hookshot) or logic_fire_mq_flame_maze) and (Small_Key_Fire_Temple, 4)",
-            "Fire Temple MQ GS Fire Wall Maze Side Room": "
-                can_play(Song_of_Time) or Hover_Boots or logic_fire_mq_flame_maze",
-            "Fire Temple MQ GS Fire Wall Maze Center": "has_explosives",
-            "Fire Temple MQ GS Above Fire Wall Maze": "
-                (can_use(Hookshot) and (Small_Key_Fire_Temple, 5)) or
-                (logic_fire_mq_above_maze_gs and can_use(Longshot))"
+            "Fire Temple MQ GS Fire Wall Maze Side Room": "True"
         }
     }
 ]
