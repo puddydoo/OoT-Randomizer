@@ -38,6 +38,14 @@
         "exits": {
         }
     },
+	{
+        "region_name": "Deku Tree Room03 Ledge",
+        "dungeon": "Deku Tree", #"room": 03,
+        "locations": {
+        },
+        "exits": {
+        }
+    },
     {
         "region_name": "Deku Tree Room04",
         "dungeon": "Deku Tree", #"room": 04,
@@ -93,7 +101,7 @@
         },
         "exits": {
         }
-    },
+    }
     {
         "region_name": "Deku Tree Lobby",
         "dungeon": "Deku Tree",

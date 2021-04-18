@@ -12,6 +12,8 @@
         "locations": {
         },
         "exits": {
+            "Castle Grounds": "True",
+            "Ganons Castle Room01": ""
         }
     },
     {
@@ -20,6 +22,20 @@
         "locations": {
         },
         "exits": {
+            "Ganons Castle Room05": "True",
+            "Ganons Castle Room14": "True",
+            "Ganons Castle Room02": "True",
+            "Ganons Castle Room12": "True",
+            "Ganons Castle Room17": "True",
+            "Ganons Castle Room09": "can_use(Golden_Gauntlets)",
+            "Ganons Tower": "
+                (skipped_trials[Forest] or 'Forest Trial Clear') and 
+                (skipped_trials[Fire] or 'Fire Trial Clear') and 
+                (skipped_trials[Water] or 'Water Trial Clear') and 
+                (skipped_trials[Shadow] or 'Shadow Trial Clear') and 
+                (skipped_trials[Spirit] or 'Spirit Trial Clear') and 
+                (skipped_trials[Light] or 'Light Trial Clear')",
+            "Ganons Castle Room16": "logic_lens_castle_mq or can_use(Lens_of_Truth)"
         }
     },
     {
@@ -28,6 +44,7 @@
         "locations": {
         },
         "exits": {
+            "Ganons Castle Room03": ""
         }
     },
     {
@@ -36,14 +53,13 @@
         "locations": {
         },
         "exits": {
+            "Ganons Castle Room04": ""
         }
     },
     {
         "region_name": "Ganons Castle Room04",
         "dungeon": "Ganons Castle", #"room": 04,
         "locations": {
-        },
-        "exits": {
         }
     },
     {
@@ -52,6 +68,7 @@
         "locations": {
         },
         "exits": {
+            "Ganons Castle Room06": ""
         }
     },
     {
@@ -60,14 +77,13 @@
         "locations": {
         },
         "exits": {
+            "Ganons Castle Room07": ""
         }
     },
     {
         "region_name": "Ganons Castle Room07",
         "dungeon": "Ganons Castle", #"room": 07,
         "locations": {
-        },
-        "exits": {
         }
     },
     {
@@ -76,6 +92,7 @@
         "locations": {
         },
         "exits": {
+            "Ganons Castle Room10": ""
         }
     },
     {
@@ -84,6 +101,7 @@
         "locations": {
         },
         "exits": {
+            "Ganons Castle Room08": ""
         }
     },
     {
@@ -92,14 +110,13 @@
         "locations": {
         },
         "exits": {
+            "Ganons Castle Room11": ""
         }
     },
     {
         "region_name": "Ganons Castle Room11",
         "dungeon": "Ganons Castle", #"room": 11,
         "locations": {
-        },
-        "exits": {
         }
     },
     {
@@ -108,14 +125,13 @@
         "locations": {
         },
         "exits": {
+            "Ganons Castle Room13": ""
         }
     },
     {
         "region_name": "Ganons Castle Room13",
         "dungeon": "Ganons Castle", #"room": 13,
         "locations": {
-        },
-        "exits": {
         }
     },
     {
@@ -124,22 +140,19 @@
         "locations": {
         },
         "exits": {
+            "Ganons Castle Room15": ""
         }
     },
     {
         "region_name": "Ganons Castle Room15",
         "dungeon": "Ganons Castle", #"room": 15,
         "locations": {
-        },
-        "exits": {
         }
     },
     {
         "region_name": "Ganons Castle Room16",
         "dungeon": "Ganons Castle", #"room": 16,
         "locations": {
-        },
-        "exits": {
         }
     },
     {
@@ -148,6 +161,7 @@
         "locations": {
         },
         "exits": {
+            "Ganons Castle Room18": ""
         }
     },
     {
@@ -156,37 +170,15 @@
         "locations": {
         },
         "exits": {
+            "Ganons Castle Room19": ""
         }
     },
     {
         "region_name": "Ganons Castle Room19",
         "dungeon": "Ganons Castle", #"room": 19,
         "locations": {
-        },
-        "exits": {
         }
-    },
-    {
-        "region_name": "Ganons Castle Lobby",
-        "dungeon": "Ganons Castle",
-        "exits": {
-            "Castle Grounds": "True",
-            "Ganons Castle Forest Trial": "True",
-            "Ganons Castle Fire Trial": "True",
-            "Ganons Castle Water Trial": "True",
-            "Ganons Castle Shadow Trial": "True",
-            "Ganons Castle Spirit Trial": "True",
-            "Ganons Castle Light Trial": "can_use(Golden_Gauntlets)",
-            "Ganons Tower": "
-                (skipped_trials[Forest] or 'Forest Trial Clear') and 
-                (skipped_trials[Fire] or 'Fire Trial Clear') and 
-                (skipped_trials[Water] or 'Water Trial Clear') and 
-                (skipped_trials[Shadow] or 'Shadow Trial Clear') and 
-                (skipped_trials[Spirit] or 'Spirit Trial Clear') and 
-                (skipped_trials[Light] or 'Light Trial Clear')",
-            "Ganons Castle Deku Scrubs": "logic_lens_castle_mq or can_use(Lens_of_Truth)"
-        }
-    },
+    }
     {
         "region_name": "Ganons Castle Deku Scrubs",
         "dungeon": "Ganons Castle",

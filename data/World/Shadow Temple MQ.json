@@ -12,14 +12,24 @@
         "locations": {
         },
         "exits": {
+            "Shadow Temple Room01": "",
+            "Shadow Temple Room04": ""
         }
     },
     {
         "region_name": "Shadow Temple Room01",
         "dungeon": "Shadow Temple", #"room": 01,
         "locations": {
-        },
+        }
+    },
+	{
+        "region_name": "Shadow Temple Room02 Entryway",
+        "dungeon": "Shadow Temple", #"room": 02,
         "exits": {
+            "Graveyard Warp Pad Region": "True",
+            "Shadow Temple Room02": "
+                (logic_lens_shadow_mq or can_use(Lens_of_Truth)) and
+                (can_use(Hover_Boots) or can_use(Hookshot))"
         }
     },
     {
@@ -28,6 +38,8 @@
         "locations": {
         },
         "exits": {
+            "Shadow Temple Room00": "",
+            "Shadow Temple Room05": ""
         }
     },
     {
@@ -36,14 +48,13 @@
         "locations": {
         },
         "exits": {
+            "Bongo Bongos Lair": ""
         }
     },
     {
         "region_name": "Shadow Temple Room04",
         "dungeon": "Shadow Temple", #"room": 04,
         "locations": {
-        },
-        "exits": {
         }
     },
     {
@@ -52,22 +63,21 @@
         "locations": {
         },
         "exits": {
+            "Shadow Temple Room06": "",
+            "Shadow Temple Room07": "",
+            "Shadow Temple Room08": ""
         }
     },
     {
         "region_name": "Shadow Temple Room06",
         "dungeon": "Shadow Temple", #"room": 06,
         "locations": {
-        },
-        "exits": {
         }
     },
     {
         "region_name": "Shadow Temple Room07",
         "dungeon": "Shadow Temple", #"room": 07,
         "locations": {
-        },
-        "exits": {
         }
     },
     {
@@ -76,6 +86,7 @@
         "locations": {
         },
         "exits": {
+            "Shadow Temple Room09": ""
         }
     },
     {
@@ -84,14 +95,15 @@
         "locations": {
         },
         "exits": {
+            "Shadow Temple Room10": "",
+            "Shadow Temple Room11": "",
+            "Shadow Temple Room16": ""
         }
     },
     {
         "region_name": "Shadow Temple Room10",
         "dungeon": "Shadow Temple", #"room": 10,
         "locations": {
-        },
-        "exits": {
         }
     },
     {
@@ -100,30 +112,26 @@
         "locations": {
         },
         "exits": {
+            "Shadow Temple Room14": "",
+            "Shadow Temple Room18": ""
         }
     },
     {
         "region_name": "Shadow Temple Room12",
         "dungeon": "Shadow Temple", #"room": 12,
         "locations": {
-        },
-        "exits": {
         }
     },
     {
         "region_name": "Shadow Temple Room13",
         "dungeon": "Shadow Temple", #"room": 13,
         "locations": {
-        },
-        "exits": {
         }
     },
     {
         "region_name": "Shadow Temple Room14",
         "dungeon": "Shadow Temple", #"room": 14,
         "locations": {
-        },
-        "exits": {
         }
     },
     {
@@ -132,22 +140,21 @@
         "locations": {
         },
         "exits": {
+            "Shadow Temple Room12": "",
+            "Shadow Temple Room13": "",
+            "Shadow Temple Room17": ""
         }
     },
     {
         "region_name": "Shadow Temple Room16",
         "dungeon": "Shadow Temple", #"room": 16,
         "locations": {
-        },
-        "exits": {
         }
     },
     {
         "region_name": "Shadow Temple Room17",
         "dungeon": "Shadow Temple", #"room": 17,
         "locations": {
-        },
-        "exits": {
         }
     },
     {
@@ -156,14 +163,14 @@
         "locations": {
         },
         "exits": {
+            "Shadow Temple Room19": "",
+            "Shadow Temple Room20": ""
         }
     },
     {
         "region_name": "Shadow Temple Room19",
         "dungeon": "Shadow Temple", #"room": 19,
         "locations": {
-        },
-        "exits": {
         }
     },
     {
@@ -172,6 +179,7 @@
         "locations": {
         },
         "exits": {
+            "Shadow Temple Room21": ""
         }
     },
     {
@@ -180,18 +188,10 @@
         "locations": {
         },
         "exits": {
+            "Shadow Temple Room03": "",
+            "Shadow Temple Room15": ""
         }
-    },
-    {
-        "region_name": "Shadow Temple Entryway",
-        "dungeon": "Shadow Temple",
-        "exits": {
-            "Graveyard Warp Pad Region": "True",
-            "Shadow Temple Beginning": "
-                (logic_lens_shadow_mq or can_use(Lens_of_Truth)) and
-                (can_use(Hover_Boots) or can_use(Hookshot))"
-        }
-    },
+    }
     {
         "region_name": "Shadow Temple Beginning",
         "dungeon": "Shadow Temple",

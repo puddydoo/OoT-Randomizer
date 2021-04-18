@@ -12,6 +12,8 @@
         "locations": {
         },
         "exits": {
+            "ZF Ice Ledge": "True",
+            "Ice Cavern Room01": "True"
         }
     },
     {
@@ -20,6 +22,8 @@
         "locations": {
         },
         "exits": {
+            "Ice Cavern Room02": "",
+            "Ice Cavern Room10": "False"
         }
     },
     {
@@ -28,6 +32,7 @@
         "locations": {
         },
         "exits": {
+            "Ice Cavern Room03": ""
         }
     },
     {
@@ -36,6 +41,9 @@
         "locations": {
         },
         "exits": {
+            "Ice Cavern Room04": "",
+            "Ice Cavern Room08": "",
+            "Ice Cavern Room11": ""
         }
     },
     {
@@ -44,6 +52,7 @@
         "locations": {
         },
         "exits": {
+            "Ice Cavern Room05": ""
         }
     },
     {
@@ -52,6 +61,7 @@
         "locations": {
         },
         "exits": {
+            "Ice Cavern Room06": ""
         }
     },
     {
@@ -60,14 +70,13 @@
         "locations": {
         },
         "exits": {
+            "Ice Cavern Room07": ""
         }
     },
     {
         "region_name": "Ice Cavern Room07",
         "dungeon": "Ice Cavern", #"room": 07,
         "locations": {
-        },
-        "exits": {
         }
     },
     {
@@ -76,14 +85,13 @@
         "locations": {
         },
         "exits": {
+            "Ice Cavern Room09": ""
         }
     },
     {
         "region_name": "Ice Cavern Room09",
         "dungeon": "Ice Cavern", #"room": 09,
         "locations": {
-        },
-        "exits": {
         }
     },
     {
@@ -92,16 +100,15 @@
         "locations": {
         },
         "exits": {
+            "Ice Cavern Room07": ""
         }
     },
     {
         "region_name": "Ice Cavern Room11",
         "dungeon": "Ice Cavern", #"room": 11,
         "locations": {
-        },
-        "exits": {
         }
-    },
+    }
     {
         "region_name": "Ice Cavern Beginning",
         "dungeon": "Ice Cavern",

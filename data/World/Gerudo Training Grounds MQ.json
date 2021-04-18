@@ -12,6 +12,10 @@
         "locations": {
         },
         "exits": {
+            "Gerudo Fortress": "True",
+            "Gerudo Training Grounds Room01": "",
+            "Gerudo Training Grounds Room07": "",
+            "Gerudo Training Grounds Room08": ""
         }
     },
     {
@@ -20,6 +24,7 @@
         "locations": {
         },
         "exits": {
+            "Gerudo Training Grounds Room02": ""
         }
     },
     {
@@ -27,7 +32,8 @@
         "dungeon": "Gerudo Training Grounds", #"room": 02,
         "locations": {
         },
-        "exits": {
+        "exits": 
+            "Gerudo Training Grounds Room03": ""
         }
     },
     {
@@ -36,14 +42,27 @@
         "locations": {
         },
         "exits": {
+            "Gerudo Training Grounds Room04 Upper": "",
+            "Gerudo Training Grounds Room10": ""
         }
     },
     {
-        "region_name": "Gerudo Training Grounds Room04",
+        "region_name": "Gerudo Training Grounds Room04 Lower",
         "dungeon": "Gerudo Training Grounds", #"room": 04,
         "locations": {
         },
         "exits": {
+            "Gerudo Training Grounds Room05": ""
+        }
+    },
+	{
+        "region_name": "Gerudo Training Grounds Room04 Upper",
+        "dungeon": "Gerudo Training Grounds", #"room": 04,
+        "locations": {
+        },
+        "exits": {
+            "Gerudo Training Grounds Room04 Lower": "",
+            "Gerudo Training Grounds Room08 Ceiling": ""
         }
     },
     {
@@ -52,6 +71,8 @@
         "locations": {
         },
         "exits": {
+            "Gerudo Training Grounds Room04 Lower": "",
+            "Gerudo Training Grounds Room06": ""
         }
     },
     {
@@ -60,6 +81,20 @@
         "locations": {
         },
         "exits": {
+            "Gerudo Training Grounds Room05": "",
+            "Gerudo Training Grounds Room06 Left": "",
+            "Gerudo Training Grounds Room09": ""
+        }
+    },
+	{
+        "region_name": "Gerudo Training Grounds Room06 Left",
+        "dungeon": "Gerudo Training Grounds", #"room": 06,
+        "locations": {
+        },
+        "exits": {
+            "Gerudo Training Grounds Room05": "",
+            "Gerudo Training Grounds Room06": "",
+            "Gerudo Training Grounds Room08 Right": ""
         }
     },
     {
@@ -68,6 +103,7 @@
         "locations": {
         },
         "exits": {
+            "Gerudo Training Grounds Room06": ""
         }
     },
     {
@@ -76,24 +112,36 @@
         "locations": {
         },
         "exits": {
+            "Gerudo Training Grounds Room08 Right": ""
+        }
+    },
+	{
+        "region_name": "Gerudo Training Grounds Room08 Right",
+        "dungeon": "Gerudo Training Grounds", #"room": 08,
+        "locations": {
+        },
+        "exits": {
+            "Gerudo Training Grounds Room06 Left": ""
+        }
+    },
+	{
+        "region_name": "Gerudo Training Grounds Room08 Ceiling",
+        "dungeon": "Gerudo Training Grounds", #"room": 08,
+        "locations": {
         }
     },
     {
         "region_name": "Gerudo Training Grounds Room09",
         "dungeon": "Gerudo Training Grounds", #"room": 09,
         "locations": {
-        },
-        "exits": {
         }
     },
     {
         "region_name": "Gerudo Training Grounds Room10",
         "dungeon": "Gerudo Training Grounds", #"room": 10,
         "locations": {
-        },
-        "exits": {
         }
-    },
+    }
     {
         "region_name": "Gerudo Training Grounds Lobby",
         "dungeon": "Gerudo Training Grounds",
