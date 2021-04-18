@@ -7,109 +7,21 @@
         }
     },
     {
-        "region_name": "Deku Tree Room00",
-        "dungeon": "Deku Tree", #"room": 00,
-        "locations": {
-        },
-        "exits": {
-        }
-    },
-    {
-        "region_name": "Deku Tree Room01",
-        "dungeon": "Deku Tree", #"room": 01,
-        "locations": {
-        },
-        "exits": {
-        }
-    },
-    {
-        "region_name": "Deku Tree Room02",
-        "dungeon": "Deku Tree", #"room": 02,
-        "locations": {
-        },
-        "exits": {
-        }
-    },
-    {
-        "region_name": "Deku Tree Room03",
-        "dungeon": "Deku Tree", #"room": 03,
-        "locations": {
-        },
-        "exits": {
-        }
-    },
-	{
-        "region_name": "Deku Tree Room03 Ledge",
-        "dungeon": "Deku Tree", #"room": 03,
-        "locations": {
-        },
-        "exits": {
-        }
-    },
-    {
-        "region_name": "Deku Tree Room04",
-        "dungeon": "Deku Tree", #"room": 04,
-        "locations": {
-        },
-        "exits": {
-        }
-    },
-    {
-        "region_name": "Deku Tree Room05",
-        "dungeon": "Deku Tree", #"room": 05,
-        "locations": {
-        },
-        "exits": {
-        }
-    },
-    {
-        "region_name": "Deku Tree Room06",
-        "dungeon": "Deku Tree", #"room": 06,
-        "locations": {
-        },
-        "exits": {
-        }
-    },
-    {
-        "region_name": "Deku Tree Room07",
-        "dungeon": "Deku Tree", #"room": 07,
-        "locations": {
-        },
-        "exits": {
-        }
-    },
-    {
-        "region_name": "Deku Tree Room08",
-        "dungeon": "Deku Tree", #"room": 08,
-        "locations": {
-        },
-        "exits": {
-        }
-    },
-    {
-        "region_name": "Deku Tree Room09",
-        "dungeon": "Deku Tree", #"room": 09,
-        "locations": {
-        },
-        "exits": {
-        }
-    },
-    {
-        "region_name": "Deku Tree Room10",
-        "dungeon": "Deku Tree", #"room": 10,
-        "locations": {
-        },
-        "exits": {
-        }
-    }
-    {
         "region_name": "Deku Tree Lobby",
         "dungeon": "Deku Tree",
         "locations": {
+            "Deku Tree MQ Basement Chest": "has_fire_source_with_torch or can_use(Bow)"
+        },
+        "exits": {
+            "KF Outside Deku Tree": "True",
+            "Deku Tree Basement Ledge": "logic_deku_b1_skip or here(is_adult)"
+        }
+    },
+    {
+        "region_name": "Deku Tree Room00",
+        "dungeon": "Deku Tree", #"room": 00,
+        "locations": {
             "Deku Tree MQ Map Chest": "True",
-            "Deku Tree MQ Slingshot Chest": "is_adult or can_child_attack",
-            "Deku Tree MQ Slingshot Room Back Chest": "has_fire_source_with_torch or can_use(Bow)",
-            "Deku Tree MQ Basement Chest": "has_fire_source_with_torch or can_use(Bow)",
             "Deku Tree MQ GS Lobby": "is_adult or can_child_attack",
             "Deku Baba Sticks": "is_adult or Kokiri_Sword or Boomerang",
             "Deku Baba Nuts": "
@@ -118,17 +30,21 @@
         },
         "exits": {
             "KF Outside Deku Tree": "True",
-            "Deku Tree Compass Room": "
-                here(can_use(Slingshot) or can_use(Bow)) and
-                here(has_fire_source_with_torch or can_use(Bow))",
-            "Deku Tree Basement Water Room Front": "
-                here(can_use(Slingshot) or can_use(Bow)) and here(has_fire_source_with_torch)",
-            "Deku Tree Basement Ledge": "logic_deku_b1_skip or here(is_adult)"
+            "Deku Tree Room01": "here(has_fire_source_with_torch or can_use(Bow))",
+            "Deku Tree Room03": "True",
+            "Deku Tree Room10": "True"
         }
     },
     {
-        "region_name": "Deku Tree Compass Room",
-        "dungeon": "Deku Tree",
+        "region_name": "Deku Tree Room01",
+        "dungeon": "Deku Tree", #"room": 01,
+        "exits": {
+            "Deku Tree Room02": "here(can_use(Slingshot) or can_use(Bow))"
+        }
+    },
+    {
+        "region_name": "Deku Tree Room02",
+        "dungeon": "Deku Tree", #"room": 02,
         "locations": {
             "Deku Tree MQ Compass Chest": "True",
             "Deku Tree MQ GS Compass Room": "
@@ -136,70 +52,105 @@
                 here(has_bombchus or
                     (Bombs and (can_play(Song_of_Time) or is_adult)) or
                     (can_use(Hammer) and (can_play(Song_of_Time) or logic_deku_mq_compass_gs)))"
-        },
-        "exits": {
-            "Deku Tree Lobby": "True"
         }
     },
     {
-        "region_name": "Deku Tree Basement Water Room Front",
-        "dungeon": "Deku Tree",
+        "region_name": "Deku Tree Room03",
+        "dungeon": "Deku Tree", #"room": 03,
+        "locations": {
+            "Deku Tree MQ Basement Chest": "has_fire_source_with_torch or can_use(Bow)"
+        },
+        "exits": {
+            "Deku Tree Room03 Ledge": "logic_deku_b1_skip or is_adult or at('Deku Tree Room03 Ledge', True)",
+            "Deku Tree Room04": "here(can_use(Slingshot) or can_use(Bow))"
+        }
+    },
+    {
+        "region_name": "Deku Tree Room03 Ledge",
+        "dungeon": "Deku Tree", #"room": 03,
+        "locations": {
+            "Deku Tree MQ Deku Scrub": "can_stun_deku"
+        },
+        "exits": {
+            "Deku Tree Room07": "is_child",
+            "Deku Tree Room09": "here(has_fire_source_with_torch)"
+        }
+    },
+    {
+        "region_name": "Deku Tree Room04",
+        "dungeon": "Deku Tree", #"room": 04,
+        "exits": {
+            "Deku Tree Room05": "here(has_fire_source_with_torch)"
+        }
+    },
+    {
+        "region_name": "Deku Tree Room05",
+        "dungeon": "Deku Tree", #"room": 05,
         "locations": {
             "Deku Tree MQ Before Spinning Log Chest": "True"
         },
         "exits": {
-            "Deku Tree Basement Water Room Back": "
+            "Deku Tree Room05 Rear": "
                 logic_deku_mq_log or (is_child and (Deku_Shield or Hylian_Shield)) or
-                can_use(Longshot) or (can_use(Hookshot) and can_use(Iron_Boots))",
-            "Deku Tree Lobby": "True"
+                can_use(Longshot) or (can_use(Hookshot) and can_use(Iron_Boots))"
         }
     },
     {
-        "region_name": "Deku Tree Basement Water Room Back",
-        "dungeon": "Deku Tree",
+        "region_name": "Deku Tree Room05 Rear",
+        "dungeon": "Deku Tree", #"room": 05,
         "locations": {
             "Deku Tree MQ After Spinning Log Chest": "can_play(Song_of_Time)"
         },
         "exits": {
-            "Deku Tree Basement Back Room": "
-                (here(can_use(Sticks) or can_use(Dins_Fire)) or
-                    at('Deku Tree Basement Water Room Front', can_use(Fire_Arrows))) and
-                here(is_adult or Kokiri_Sword or can_use_projectile or (Nuts and Sticks))",
-            "Deku Tree Basement Water Room Front": "True"
+            "Deku Tree Room05": "True",
+            "Deku Tree Room06": "
+                here(can_use(Sticks) or can_use(Dins_Fire)) or
+                at('Deku Tree Basement Water Room Front', can_use(Fire_Arrows))"
         }
     },
     {
-        "region_name": "Deku Tree Basement Back Room",
-        "dungeon": "Deku Tree",
+        "region_name": "Deku Tree Room06",
+        "dungeon": "Deku Tree", #"room": 06,
+        "exits": {
+            "Deku Tree Room05 Rear": "
+                here(is_adult or Kokiri_Sword or can_use_projectile or (Nuts and Sticks))",
+            "Deku Tree Room07": "
+                here(is_adult or Kokiri_Sword or can_use_projectile or (Nuts and Sticks))"
+        }
+    },
+    {
+        "region_name": "Deku Tree Room07",
+        "dungeon": "Deku Tree", #"room": 07,
         "locations": {
             "Deku Tree MQ GS Basement Graves Room": "
                 can_use(Longshot) or
-                (can_play(Song_of_Time) and (can_use(Boomerang) or can_use(Hookshot)))",
-            "Deku Tree MQ GS Basement Back Room": "
-                here(has_fire_source_with_torch) and
-                (can_use(Hookshot) or can_use(Boomerang))"
+                (can_play(Song_of_Time) and (can_use(Boomerang) or can_use(Hookshot)))"
         },
         "exits": {
-            "Deku Tree Basement Ledge": "is_child",
-            "Deku Tree Basement Water Room Back": "
-                can_use(Kokiri_Sword) or can_use_projectile or (Nuts and can_use(Sticks))"
+            "Deku Tree Room03 Ledge": "is_child",
+            "Deku Tree Room08": "here(has_fire_source_with_torch)"
         }
-    }, 
+    },
     {
-        "region_name": "Deku Tree Basement Ledge",
-        "dungeon": "Deku Tree",
+        "region_name": "Deku Tree Room08",
+        "dungeon": "Deku Tree", #"room": 08,
         "locations": {
-            "Deku Tree MQ Deku Scrub": "can_stun_deku"
-        },
-        "events": {
-            "Deku Tree Clear": "
-                here(has_fire_source_with_torch) and here(has_shield) and
-                (is_adult or Kokiri_Sword or Sticks)"
-        },
-        "exits" : {
-            "Deku Tree Basement Back Room": "is_child",
-            "Deku Tree Lobby": "True",
-            "Queen Gohmas Lair": "here(has_fire_source_with_torch) and here(has_shield)"
+            "Deku Tree MQ GS Basement Back Room": "can_use(Hookshot) or can_use(Boomerang)"
+        }
+    },
+    {
+        "region_name": "Deku Tree Room09",
+        "dungeon": "Deku Tree", #"room": 09,
+        "exits": {
+            "Queen Gohmas Lair": "here(has_shield)"
+        }
+    },
+    {
+        "region_name": "Deku Tree Room10",
+        "dungeon": "Deku Tree", #"room": 10,
+        "locations": {
+            "Deku Tree MQ Slingshot Chest": "is_adult or can_child_attack",
+            "Deku Tree MQ Slingshot Room Back Chest": "has_fire_source_with_torch or can_use(Bow)"
         }
     }
 ]
