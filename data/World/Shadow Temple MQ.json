@@ -48,6 +48,13 @@
             "Shadow Temple MQ GS Near Boss": "True"
         },
         "exits": {
+            "Shadow Temple Boss Door": "True"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Boss Door",
+        "dungeon": "Shadow Temple", #"room": 03,
+        "exits": {
             "Bongo Bongos Lair": "Boss_Key_Shadow_Temple"
         }
     },

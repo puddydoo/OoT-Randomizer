@@ -146,6 +146,13 @@
         "region_name": "Water Temple Room11",
         "dungeon": "Water Temple", #"room": 11,
         "exits": {
+            "Water Temple Boss Door": "True"
+        }
+    },
+    {
+        "region_name": "Water Temple Boss Door",
+        "dungeon": "Water Temple", #"room": 11,
+        "exits": {
             "Morphas Lair": "Boss_Key_Water_Temple"
         }
     },

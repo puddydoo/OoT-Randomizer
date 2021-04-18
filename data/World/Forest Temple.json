@@ -258,6 +258,13 @@
             "Forest Temple GS Basement": "can_use(Hookshot) or can_use(Boomerang)"
         },
         "exits": {
+            "Forest Temple Boss Door": "True"
+        }
+    },
+    {
+        "region_name": "Forest Temple Boss Door",
+        "dungeon": "Forest Temple", #"room": 17,
+        "exits": {
             "Phantom Ganons Lair": "Boss_Key_Forest_Temple"
         }
     },

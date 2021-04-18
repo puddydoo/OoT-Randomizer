@@ -2297,7 +2297,7 @@
             "Queen Gohma": "is_adult or Kokiri_Sword or Sticks"
         },
         "exits": {
-            "Deku Tree Boss Door": "True",
+            "Deku Tree Room09": "True",
             "Deku Tree Post-Boss": "is_adult or Kokiri_Sword or Sticks"
         }
     },
@@ -2321,7 +2321,7 @@
                 (is_adult or Sticks or Kokiri_Sword)"
         },
         "exits": {
-            "Dodongos Cavern Boss Door": "True",
+            "Dodongos Cavern Room07": "True",
             "Dodongos Cavern Post-Boss": "
                 can_blast_or_smash and (Bombs or Progressive_Strength_Upgrade) and 
                 (is_adult or Sticks or Kokiri_Sword)"
@@ -2339,7 +2339,7 @@
             "Barinade": "can_use(Boomerang) and (Sticks or Kokiri_Sword)"
         },
         "exits": {
-            "Jabu Jabus Belly Boss Door": "False",
+            "Jabu Jabus Belly Room05": "False",
             "Jabu Jabus Belly Post-Boss": "can_use(Boomerang) and (Sticks or Kokiri_Sword)"
         }
     },
