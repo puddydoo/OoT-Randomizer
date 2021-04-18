@@ -243,8 +243,8 @@
             "Spirit Temple Room00": "True",
             "Spirit Temple Room10": "True",
             "Desert Colossus Right Hand": "
-                colossus_hands or
-                (Small_Key_Spirit_Temple, 5) or (Progressive_Hookshot, 2) and has_explosives)",
+                colossus_hands or (Small_Key_Spirit_Temple, 5) or
+                ((Progressive_Hookshot, 2) and has_explosives)",
             "Desert Colossus": "
                 not colossus_hands and
                 ((Small_Key_Spirit_Temple, 5) or (is_adult and has_explosives))"
