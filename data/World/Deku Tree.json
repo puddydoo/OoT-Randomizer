@@ -50,7 +50,7 @@
         },
         "exits": {
             "Deku Tree Room03 Ledge": "logic_deku_b1_skip or is_adult or at('Deku Tree Room03 Ledge', True)",
-            "Deku Tree Room04": "here(has_fire_source_with_torch or can_use(Bow))",
+            "Deku Tree Room04": "here(has_fire_source_with_torch or can_use(Bow))"
         }
     },
     {
