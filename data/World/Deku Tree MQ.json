@@ -124,6 +124,8 @@
         "region_name": "Deku Tree Room09",
         "dungeon": "Deku Tree", #"room": 09,
         "exits": {
+            "Deku Tree Lobby": "True",
+            "Deku Tree Room03 Ledge": "True",
             "Queen Gohmas Lair": "here(has_shield)"
         }
     },

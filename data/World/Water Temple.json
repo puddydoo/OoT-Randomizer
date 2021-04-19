@@ -8,11 +8,9 @@
                 (has_fire_source_with_torch and can_use_projectile)"
                 # Ensure that the water level can be raised if it were to be lowered.
         },
-        "locations": {
-            "Fairy Pot": "Raise_Water_Level and has_bottle and can_use(Longshot)"
-        },
         "exits": {
             "Lake Hylia": "True",
+            "Water Temple Lobby North": "Raise_Water_Level and can_use(Longshot)",
             "Water Temple Room01": "
                 Low_Water_Level and (can_use(Bow) or has_fire_source_with_torch)",
             "Water Temple Room01 Lower": "Low_Water_Level and (Small_Key_Water_Temple, 5)",
@@ -25,7 +23,6 @@
                 Low_Water_Level and Progressive_Strength_Upgrade and
                 (can_dive or can_use(Iron_Boots))",
             "Water Temple Room10": "Middle_Water_Level",
-            "Water Temple Room11": "Raise_Water_Level and can_use(Longshot)",
             "Water Temple Room12": "
                 (Small_Key_Water_Temple, 4) and
                 (can_use(Longshot) or (logic_water_boss_key_region and can_use(Hover_Boots))) and
@@ -39,6 +36,17 @@
                 Low_Water_Level and
                 ((can_use(Bow) and (logic_water_central_bow or Hover_Boots or can_use(Longshot))) or
                     (logic_water_central_bow and can_use(Slingshot) and Middle_Water_Level))"
+        }
+    },
+    {
+        "region_name": "Water Temple Lobby North",
+        "dungeon": "Water Temple", #"room": 00,
+        "locations": {
+            "Fairy Pot": "has_bottle"
+        },
+        "exits": {
+            "Water Temple Lobby": "True",
+            "Water Temple Room11": "True"
         }
     },
     {
@@ -172,6 +180,7 @@
         "region_name": "Water Temple Room11",
         "dungeon": "Water Temple", #"room": 11,
         "exits": {
+            "Water Temple Lobby North": "True",
             "Water Temple Boss Door": "True"
         }
     },
@@ -179,6 +188,8 @@
         "region_name": "Water Temple Boss Door",
         "dungeon": "Water Temple", #"room": 11,
         "exits": {
+            "Water Temple Lobby": "True",
+            "Water Temple Room11": "True",
             "Morphas Lair": "Boss_Key_Water_Temple"
         }
     },

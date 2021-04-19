@@ -37,17 +37,22 @@
     {
         "region_name": "Shadow Temple Room03",
         "dungeon": "Shadow Temple", #"room": 03,
-        "locations": {
-            "Shadow Temple MQ GS Near Boss": "True"
-        },
         "exits": {
+            "Shadow Temple Room21 Across Statue": "True",
             "Shadow Temple Boss Door": "True"
         }
     },
     {
         "region_name": "Shadow Temple Boss Door",
         "dungeon": "Shadow Temple", #"room": 03,
+        "locations": {
+            "Shadow Temple MQ GS Near Boss": "
+                (logic_lens_shadow_mq_back or can_use(Lens_of_Truth)) and can_use_projectile"
+        },
         "exits": {
+            "Shadow Temple Entryway": "True",
+            "Shadow Temple Room03": "
+                (logic_lens_shadow_mq_back or can_use(Lens_of_Truth)) and can_use(Hover_Boots)",
             "Bongo Bongos Lair": "Boss_Key_Shadow_Temple"
         }
     },
@@ -220,16 +225,36 @@
     {
         "region_name": "Shadow Temple Room21",
         "dungeon": "Shadow Temple", #"room": 21,
+        "exits": {
+            "Shadow Temple Room21 West": "can_play(Zeldas_Lullaby)"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Room21 West",
+        "dungeon": "Shadow Temple", #"room": 21,
+        "events": {
+            "Shadow Temple Statue": "Bow or (logic_shadow_statue and has_bombchus)"
+        },
         "locations": {
-            "Shadow Temple MQ GS After Ship": "can_play(Zeldas_Lullaby)"
+            "Shadow Temple MQ GS After Ship": "can_use_projectile"
         },
         "exits": {
-            "Shadow Temple Room03": "
-                can_play(Zeldas_Lullaby) and
-                (Bow or (logic_shadow_statue and has_bombchus))",
             "Shadow Temple Room15": "
-                can_play(Zeldas_Lullaby) and
-                Bow and can_play(Song_of_Time) and can_use(Longshot)"
+                at('Shadow Temple Room21 Across Statue',
+                Bow and can_play(Song_of_Time) and can_use(Longshot))",
+            "Shadow Temple Room21 Across Statue": "Shadow_Temple_Statue"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Room21 Across Statue",
+        "dungeon": "Shadow Temple", #"room": 21,
+        "events": {
+            "Shadow Temple Statue": "
+                has_explosives or can_use(Bow) or Progressive_Strength_Upgrade or can_use(Dins_Fire)"
+        },
+        "exits": {
+            "Shadow Temple Room03": "True",
+            "Shadow Temple Room21 West": "Shadow_Temple_Statue"
         }
     }
 ]

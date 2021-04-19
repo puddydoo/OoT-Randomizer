@@ -45,7 +45,8 @@
         "dungeon": "Spirit Temple", #"room": 01,
         "exits": {
             "Spirit Temple Room04": "
-                (not colossus_hands and (Small_Key_Spirit_Temple, 1)) or
+                (not colossus_hands and not spirit_backdoor and
+                    (Small_Key_Spirit_Temple, 1)) or
                 (Small_Key_Spirit_Temple, 7)"
         }
     },
@@ -95,7 +96,8 @@
         "dungeon": "Spirit Temple", #"room": 05,
         "locations": {
             "Spirit Temple MQ Compass Chest": "
-                (can_use(Slingshot) and (colossus_hands or (Small_Key_Spirit_Temple, 7))) or
+                (can_use(Slingshot) and
+                    (colossus_hands or spirit_backdoor or (Small_Key_Spirit_Temple, 7))) or
                 can_use(Bow) or
                 (Bow and Slingshot)",
             "Spirit Temple MQ Statue Room Lullaby Chest": "
@@ -145,6 +147,7 @@
         "region_name": "Spirit Temple Boss Door",
         "dungeon": "Spirit Temple", #"room": 05,
         "exits": {
+            "Spirit Temple Lobby": "True",
             "Twinrovas Lair": "Boss_Key_Spirit_Temple"
         }
     },

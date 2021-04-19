@@ -39,6 +39,7 @@
         "region_name": "Shadow Temple Room03",
         "dungeon": "Shadow Temple", #"room": 03,
         "exits": {
+            "Shadow Temple Room21 Across Statue": "(Small_Key_Shadow_Temple, 5)",
             "Shadow Temple Boss Door": "True"
         }
     },
@@ -46,6 +47,9 @@
         "region_name": "Shadow Temple Boss Door",
         "dungeon": "Shadow Temple", #"room": 03,
         "exits": {
+            "Shadow Temple Entryway": "True",
+            "Shadow Temple Room03": "
+                (logic_lens_shadow_back or can_use(Lens_of_Truth)) and can_use(Hover_Boots)",
             "Bongo Bongos Lair": "Boss_Key_Shadow_Temple"
         }
     },
@@ -121,7 +125,7 @@
         "region_name": "Shadow Temple Room12",
         "dungeon": "Shadow Temple", #"room": 12,
         "locations": {
-            "Shadow Temple GS Triple Giant Pot": "True"
+            "Shadow Temple GS Triple Giant Pot": "can_use(Hookshot)"
         }
     },
     {
@@ -200,10 +204,31 @@
             "Shadow Temple GS Near Ship": "can_use(Longshot)"
         },
         "exits": {
-            "Shadow Temple Room03": "
-                can_play(Zeldas_Lullaby) and (Small_Key_Shadow_Temple, 5) and
-                (Bow or can_use(Distant_Scarecrow) or (logic_shadow_statue and has_bombchus))",
-            "Shadow Temple Room15": "can_play(Zeldas_Lullaby)"
+            "Shadow Temple Room21 West": "can_play(Zeldas_Lullaby)"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Room21 West",
+        "dungeon": "Shadow Temple", #"room": 21,
+        "events": {
+            "Shadow Temple Statue": "Bow or (logic_shadow_statue and has_bombchus)"
+        },
+        "exits": {
+            "Shadow Temple Room15": "True",
+            "Shadow Temple Room21 Across Statue": "
+                can_use(Distant_Scarecrow) or Shadow_Temple_Statue"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Room21 Across Statue",
+        "dungeon": "Shadow Temple", #"room": 21,
+        "events": {
+            "Shadow Temple Statue": "
+                has_explosives or can_use(Bow) or Progressive_Strength_Upgrade or can_use(Dins_Fire)"
+        },
+        "exits": {
+            "Shadow Temple Room03": "(Small_Key_Shadow_Temple, 5)",
+            "Shadow Temple Room21 West": "Shadow_Temple_Statue"
         }
     }
 ]

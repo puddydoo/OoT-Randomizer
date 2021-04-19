@@ -281,6 +281,8 @@
         "region_name": "Forest Temple Boss Door",
         "dungeon": "Forest Temple", #"room": 17,
         "exits": {
+            "Forest Temple Lobby": "True",
+            "Forest Temple Room17": "False",
             "Phantom Ganons Lair": "Boss_Key_Forest_Temple"
         }
     },

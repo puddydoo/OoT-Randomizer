@@ -20,14 +20,15 @@
             "Jabu Jabus Belly MQ Second Room Upper Chest": "
                 can_use(Hover_Boots) or can_use(Hookshot) or
                 at('Jabu Jabus Belly Room01 Upper', True)",
-            "Jabu Jabus Belly MQ Compass Chest": "True"
+            "Jabu Jabus Belly MQ Compass Chest": "can_use(Slingshot)"
         },
         "exits": {
-            "Jabu Jabus Belly Room02": "True",
-            "Jabu Jabus Belly Room05": "
-                'Jabu Jabus Belly Red Tentacle' and
-                (can_use(Hover_Boots) or can_use(Hookshot) or
-                at('Jabu Jabus Belly Room01 Upper', True))"
+            "Jabu Jabus Belly Beginning": "True",
+            "Jabu Jabus Belly Room01 East": "
+                can_use(Hover_Boots) or can_use(Hookshot) or
+                at('Jabu Jabus Belly Room01 Upper', True)",
+            "Jabu Jabus Belly Room02": "
+                here(is_child or can_dive or logic_jabu_scrub_jump_dive or can_use(Iron_Boots))"
         }
     },
     {
@@ -35,19 +36,40 @@
         "dungeon": "Jabu Jabus Belly" #"room": 01,
     },
     {
+        "region_name": "Jabu Jabus Belly Room01 East",
+        "dungeon": "Jabu Jabus Belly", #"room": 01,
+        "locations": {
+            "Jabu Jabus Belly MQ Second Room Upper Chest": "can_use(Slingshot)"
+        },
+        "exits": {
+            "Jabu Jabus Belly Room02": "True",
+            "Jabu Jabus Belly Room01 Behind Tentacle": "'Jabu Jabus Belly Red Tentacle'"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Room01 Behind Tentacle",
+        "dungeon": "Jabu Jabus Belly", #"room": 01,
+        "exits": {
+            "Jabu Jabus Belly Room01 East": "
+                'Jabu Jabus Belly Red Tentacle' or can_take_damage or can_use(Nayrus_Love)",
+            "Jabu Jabus Belly Room05": "True"
+        }
+    },
+    {
         "region_name": "Jabu Jabus Belly Room02",
         "dungeon": "Jabu Jabus Belly", #"room": 02,
         "exits": {
             "Jabu Jabus Belly Room03": "True",
-            "Jabu Jabus Belly Room07": "has_explosives and can_use(Boomerang)"
+            "Jabu Jabus Belly Room07": "
+                has_explosives and can_use(Slingshot) and can_use(Boomerang)"
         }
     },
     {
         "region_name": "Jabu Jabus Belly Room03",
         "dungeon": "Jabu Jabus Belly", #"room": 03,
         "locations": {
-            "Jabu Jabus Belly MQ Basement Near Vines Chest": "True",
-            "Jabu Jabus Belly MQ Basement Near Switches Chest": "True"
+            "Jabu Jabus Belly MQ Basement Near Vines Chest": "can_use(Slingshot)",
+            "Jabu Jabus Belly MQ Basement Near Switches Chest": "can_use(Slingshot)"
         },
         "exits": {
             "Jabu Jabus Belly Room06": "'Jabu Jabus Belly Green Tentacle'",
@@ -59,7 +81,7 @@
         "region_name": "Jabu Jabus Belly Room04",
         "dungeon": "Jabu Jabus Belly", #"room": 04,
         "locations": {
-            "Jabu Jabus Belly MQ Cow" : "can_play(Eponas_Song)"
+            "Jabu Jabus Belly MQ Cow": "can_play(Eponas_Song)"
         },
         "exits": {
             "Jabu Jabus Belly Room01 Upper": "can_use(Boomerang)"
@@ -74,6 +96,7 @@
             "Fairy Pot": "has_bottle"
         },
         "exits": {
+            "Jabu Jabus Belly Beginning": "True",
             "Barinades Lair": "here(can_use(Slingshot))"
         }
     },
@@ -89,7 +112,7 @@
         "region_name": "Jabu Jabus Belly Room06 Upper",
         "dungeon": "Jabu Jabus Belly", #"room": 06,
         "exits": {
-            "Jabu Jabus Belly Room04": "True"
+            "Jabu Jabus Belly Room04": "can_use(Slingshot)"
         }
     },
     {

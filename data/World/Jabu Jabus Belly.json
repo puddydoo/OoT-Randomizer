@@ -15,6 +15,7 @@
                 can_dive or is_child or logic_jabu_scrub_jump_dive or can_use(Iron_Boots)"
         },
         "exits": {
+            "Jabu Jabus Belly Beginning": "True",
             "Jabu Jabus Belly Room02": "True",
             "Jabu Jabus Belly Room05": "
                 at('Jabu Jabus Belly Room01 Upper', True) or
@@ -72,9 +73,11 @@
         "region_name": "Jabu Jabus Belly Room05",
         "dungeon": "Jabu Jabus Belly", #"room": 05,
         "locations": {
-            "Jabu Jabus Belly GS Near Boss": "True"
+            "Jabu Jabus Belly GS Near Boss": "can_use_projectile or can_use(Dins_Fire)"
         },
         "exits": {
+            "Jabu Jabus Belly Beginning": "True",
+            "Jabu Jabus Belly Room01": "True",
             "Barinades Lair": "can_use(Boomerang)"
         }
     },

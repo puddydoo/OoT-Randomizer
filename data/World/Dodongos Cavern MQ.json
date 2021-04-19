@@ -13,14 +13,17 @@
         "dungeon": "Dodongos Cavern", #"room": 00,
         "events": {
             "Dodongos Cavern Room00 2F Boulders": "
-                can_blast_or_smash or can_use(Sticks) or can_use(Dins_Fire)"
+                can_blast_or_smash or (Progressive_Strength_Upgrade and
+                (can_use(Sticks) or can_use(Dins_Fire)))"
         },
         "locations": {
-            "Dodongos Cavern MQ Map Chest": "True",
+            "Dodongos Cavern MQ Map Chest": "can_blast_or_smash or Progressive_Strength_Upgrade",
             "Dodongos Cavern MQ Deku Scrub Lobby Rear": "can_stun_deku",
             "Dodongos Cavern MQ Deku Scrub Lobby Front": "can_stun_deku",
-            "Dodongos Cavern Gossip Stone": "True",
-            "Gossip Stone Fairy": "can_summon_gossip_fairy and has_bottle"
+            "Dodongos Cavern Gossip Stone": "can_blast_or_smash or Progressive_Strength_Upgrade",
+            "Gossip Stone Fairy": "
+                (can_blast_or_smash or Progressive_Strength_Upgrade) and
+                can_summon_gossip_fairy and has_bottle"
         },
         "exits": {
             "Dodongos Cavern Room00 East Ledge": "
@@ -30,7 +33,8 @@
             "Dodongos Cavern Room01": "
                 here(can_blast_or_smash) or
                 ('Dodongos Cavern Room00 2F Boulders' and can_take_damage)",
-            "Dodongos Cavern Room02": "True",
+            "Dodongos Cavern Room02": "
+                here(can_blast_or_smash or Progressive_Strength_Upgrade)",
             "Dodongos Cavern Room07": "
                 has_explosives or
                 (logic_dc_mq_eyes and 'Dodongos Cavern Room00 2F Boulders' and Progressive_Strength_Upgrade)"
@@ -123,6 +127,7 @@
         "dungeon": "Dodongos Cavern", #"room": 04,
         "exits": {
             "Dodongos Cavern Room00 East Ledge": "has_fire_source_with_torch",
+            "Dodongos Cavern Room03": "True",
             "Dodongos Cavern Room13": "
                 here(can_use(Bow)) or Progressive_Strength_Upgrade or
                 can_use(Dins_Fire) or has_explosives"
@@ -150,6 +155,8 @@
         "region_name": "Dodongos Cavern Room07",
         "dungeon": "Dodongos Cavern", #"room": 07,
         "exits": {
+            "Dodongos Cavern Beginning": "True",
+            "Dodongos Cavern Room00": "True",
             "Dodongos Cavern Room07 Upper": "is_adult",
             "Dodongos Cavern Room08": "True"
         }
@@ -158,6 +165,7 @@
         "region_name": "Dodongos Cavern Room07 Upper",
         "dungeon": "Dodongos Cavern", #"room": 07,
         "exits": {
+            "Dodongos Cavern Room08 Rear": "True",
             "King Dodongos Lair": "True"
         }
     },
@@ -165,12 +173,25 @@
         "region_name": "Dodongos Cavern Room08",
         "dungeon": "Dodongos Cavern", #"room": 08,
         "locations": {
-            "Dodongos Cavern MQ GS Back Area": "True",
+            "Dodongos Cavern MQ GS Back Area": "
+                can_use(Boomerang) or
+                at('Dodongos Cavern Room08 Rear', is_adult or can_child_attack)"
+        },
+        "exits": {
+            "Dodongos Cavern Room08 Rear": "
+                here(is_adult or can_use(Dins_Fire) or has_explosives or
+                ((Nuts or can_use(Boomerang)) and (Kokiri_Sword or Sticks)))",
+            "Dodongos Cavern Room14": "True"
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Room08 Rear",
+        "dungeon": "Dodongos Cavern", #"room": 08,
+        "locations": {
             "Fairy Pot": "has_bottle"
         },
         "exits": {
-            "Dodongos Cavern Room07 Upper": "True",
-            "Dodongos Cavern Room14": "True"
+            "Dodongos Cavern Room07 Upper": "True"
         }
     },
     {

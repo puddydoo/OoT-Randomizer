@@ -31,6 +31,7 @@
     # "Big_Poe": "'Big Poe'",
 
     "colossus_hands": "False",
+    "spirit_backdoor": "False",
     "has_bombchus": "(Buy_Bombchu_5 or Buy_Bombchu_10 or Buy_Bombchu_20 or Bombchu_Drop) and (bombchus_in_logic or Bomb_Bag)",
     "found_bombchus": "(bombchus_in_logic and (Bombchus or Bombchus_5 or Bombchus_10 or Bombchus_20)) or (not bombchus_in_logic and Bomb_Bag)",
     "has_explosives": "Bombs or (bombchus_in_logic and has_bombchus)",

@@ -45,6 +45,7 @@
                                 can_use(Goron_Tunic) or can_use(Bow) or can_use(Longshot))))))"
         },
         "exits": {
+            "Fire Temple Lobby Upper": "True",
             "Fire Temple Boss Door": "
                 (logic_fewer_tunic_requirements or can_use(Goron_Tunic)) and
                 (logic_fire_boss_door_jump or Hover_Boots or at('Fire Temple Room10', True))"
@@ -54,6 +55,10 @@
         "region_name": "Fire Temple Boss Door",
         "dungeon": "Fire Temple", #"room": 02,
         "exits": {
+            "Fire Temple Lobby": "True",
+            "Fire Temple Room02": "
+                (logic_fewer_tunic_requirements or can_use(Goron_Tunic)) and
+                is_adult",
             "Volvagias Lair": "Boss_Key_Fire_Temple"
         }
     },

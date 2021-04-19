@@ -138,7 +138,12 @@
     {
         "region_name": "Water Temple Room11",
         "dungeon": "Water Temple", #"room": 11,
+        "locations": {
+            "Wall Fairy": "has_bottle and can_use(Hookshot)"
+        },
         "exits": {
+            "Water Temple Lobby": "
+                can_live_dmg(0.5) or can_use(Longshot) or can_use(Nayrus_Love)",
             "Water Temple Boss Door": "True"
         }
     },
@@ -146,6 +151,8 @@
         "region_name": "Water Temple Boss Door",
         "dungeon": "Water Temple", #"room": 11,
         "exits": {
+            "Water Temple Lobby": "True",
+            "Water Temple Room11": "True",
             "Morphas Lair": "Boss_Key_Water_Temple"
         }
     },
