@@ -750,8 +750,6 @@ class World(object):
                     # to logic
                     dupe_locations = duplicate_item_woth[world_id].get('Bottle', [])
                     max_progressive = 1
-                    # if self.damage_multiplier == 'ohko' and not self.shuffle_grotto_entrances:
-                    #    max_progressive = 4
                 elif item.name == 'Bottle with Big Poe':
                     # The max number of requred Big Poe Bottles is based on the setting
                     dupe_locations = duplicate_item_woth[world_id].get(item.name, [])
