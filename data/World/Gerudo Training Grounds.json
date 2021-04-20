@@ -8,108 +8,108 @@
         },
         "exits": {
             "Gerudo Fortress": "True",
-            "Gerudo Training Grounds Room01": "True",
-            "Gerudo Training Grounds Room07": "True",
-            "Gerudo Training Grounds Room08": "True"
+            "Gerudo Training Grounds Stalfos Room": "True",
+            "Gerudo Training Grounds Beamos Room": "True",
+            "Gerudo Training Grounds Central Maze": "True"
         }
     },
     {
-        "region_name": "Gerudo Training Grounds Room01",
+        "region_name": "Gerudo Training Grounds Stalfos Room",
         "dungeon": "Gerudo Training Grounds", #"room": 01,
         "locations": {
             "Gerudo Training Grounds Stalfos Chest": "is_adult or Kokiri_Sword"
         },
         "exits": {
-            "Gerudo Training Grounds Room02": "is_adult or Kokiri_Sword"
+            "Gerudo Training Grounds Boulder Room": "is_adult or Kokiri_Sword"
         }
     },
     {
-        "region_name": "Gerudo Training Grounds Room02",
+        "region_name": "Gerudo Training Grounds Boulder Room",
         "dungeon": "Gerudo Training Grounds", #"room": 02,
         "exits": {
-            "Gerudo Training Grounds Room03": "can_use(Hookshot) or logic_gtg_without_hookshot"
+            "Gerudo Training Grounds Heavy Block Room": "can_use(Hookshot) or logic_gtg_without_hookshot"
         }
     },
     {
-        "region_name": "Gerudo Training Grounds Room03",
+        "region_name": "Gerudo Training Grounds Heavy Block Room",
         "dungeon": "Gerudo Training Grounds", #"room": 03,
         "locations": {
             "Gerudo Training Grounds Before Heavy Block Chest": "True"
         },
         "exits": {
-            "Gerudo Training Grounds Room04 Upper": "
+            "Gerudo Training Grounds Eye Statue Upper": "
                 (logic_lens_gtg or can_use(Lens_of_Truth)) and
                 (can_use(Hookshot) or (logic_gtg_fake_wall and can_use(Hover_Boots)))",
-            "Gerudo Training Grounds Room10": "
+            "Gerudo Training Grounds Like Like Room": "
                 can_use(Silver_Gauntlets) and (logic_lens_gtg or can_use(Lens_of_Truth)) and
                 (can_use(Hookshot) or (logic_gtg_fake_wall and can_use(Hover_Boots)))"
         }
     },
     {
-        "region_name": "Gerudo Training Grounds Room04 Lower",
+        "region_name": "Gerudo Training Grounds Eye Statue Lower",
         "dungeon": "Gerudo Training Grounds", #"room": 04,
         "locations": {
             "Gerudo Training Grounds Eye Statue Chest": "can_use(Bow)"
         },
         "exits": {
-            "Gerudo Training Grounds Room05": "True"
+            "Gerudo Training Grounds Hammer Room": "True"
         }
     },
     {
-        "region_name": "Gerudo Training Grounds Room04 Upper",
+        "region_name": "Gerudo Training Grounds Eye Statue Upper",
         "dungeon": "Gerudo Training Grounds", #"room": 04,
         "exits": {
-            "Gerudo Training Grounds Room04 Lower": "True",
-            "Gerudo Training Grounds Room08 Ceiling": "can_use(Bow)"
+            "Gerudo Training Grounds Eye Statue Lower": "True",
+            "Gerudo Training Grounds Central Maze Ceiling": "can_use(Bow)"
         }
     },
     {
-        "region_name": "Gerudo Training Grounds Room05",
+        "region_name": "Gerudo Training Grounds Hammer Room",
         "dungeon": "Gerudo Training Grounds", #"room": 05,
         "locations": {
             "Gerudo Training Grounds Hammer Room Clear Chest": "True",
             "Gerudo Training Grounds Hammer Room Switch Chest": "can_use(Megaton_Hammer)"
         },
         "exits": {
-            "Gerudo Training Grounds Room04 Lower": "can_use(Megaton_Hammer) and Bow",
-            "Gerudo Training Grounds Room06": "True"
+            "Gerudo Training Grounds Eye Statue Lower": "can_use(Megaton_Hammer) and Bow",
+            "Gerudo Training Grounds Lava Room": "True"
         }
     },
     {
-        "region_name": "Gerudo Training Grounds Room06",
+        "region_name": "Gerudo Training Grounds Lava Room",
         "dungeon": "Gerudo Training Grounds", #"room": 06,
         "exits": {
-            "Gerudo Training Grounds Room05": "
+            "Gerudo Training Grounds Hammer Room": "
                 can_use(Longshot) or (can_use(Hookshot) and can_use(Hover_Boots))",
-            "Gerudo Training Grounds Room06 Left": "can_play(Song_of_Time) or is_child",
-            "Gerudo Training Grounds Room09": "can_use(Hookshot)"
+            "Gerudo Training Grounds Lava Room Left": "can_play(Song_of_Time) or is_child",
+            "Gerudo Training Grounds Underwater": "can_use(Hookshot)"
         }
     },
     {
-        "region_name": "Gerudo Training Grounds Room06 Left",
+        "region_name": "Gerudo Training Grounds Lava Room Left",
         "dungeon": "Gerudo Training Grounds", #"room": 06,
         "locations": {
             "Gerudo Training Grounds Freestanding Key": "True"
         },
         "exits": {
-            "Gerudo Training Grounds Room05": "can_use(Hookshot)",
-            "Gerudo Training Grounds Room06": "True",
-            "Gerudo Training Grounds Room08 Right": "True"
+            "Gerudo Training Grounds Hammer Room": "can_use(Hookshot)",
+            "Gerudo Training Grounds Lava Room": "True",
+            "Gerudo Training Grounds Central Maze Right": "True"
         }
     },
     {
-        "region_name": "Gerudo Training Grounds Room07",
+        "region_name": "Gerudo Training Grounds Beamos Room",
         "dungeon": "Gerudo Training Grounds", #"room": 07,
         "locations": {
             "Gerudo Training Grounds Beamos Chest": "has_explosives and (is_adult or Kokiri_Sword)",
             "Wall Fairy": "has_bottle and can_use(Bow)" #in the Beamos room shoot the Gerudo symbol above the door to the lava room.
         },
         "exits": {
-            "Gerudo Training Grounds Room06": "here(has_explosives and (is_adult or Kokiri_Sword))"
+            "Gerudo Training Grounds Lava Room": "here(has_explosives and (is_adult or Kokiri_Sword))"
         }
     },
     {
-        "region_name": "Gerudo Training Grounds Room08",
+        "region_name": "Gerudo Training Grounds Central Maze",
         "dungeon": "Gerudo Training Grounds", #"room": 08,
         "locations": {
             "Gerudo Training Grounds Hidden Ceiling Chest": "(Small_Key_Gerudo_Training_Grounds, 3) and (logic_lens_gtg or can_use(Lens_of_Truth))",
@@ -119,29 +119,29 @@
             "Gerudo Training Grounds Maze Path Final Chest": "(Small_Key_Gerudo_Training_Grounds, 9)"
         },
         "exits": {
-            "Gerudo Training Grounds Room08 Right": "(Small_Key_Gerudo_Training_Grounds, 9)"
+            "Gerudo Training Grounds Central Maze Right": "(Small_Key_Gerudo_Training_Grounds, 9)"
         }
     },
     {
-        "region_name": "Gerudo Training Grounds Room08 Right",
+        "region_name": "Gerudo Training Grounds Central Maze Right",
         "dungeon": "Gerudo Training Grounds", #"room": 08,
         "locations": {
             "Gerudo Training Grounds Maze Right Central Chest": "True",
             "Gerudo Training Grounds Maze Right Side Chest": "True"
         },
         "exits": {
-            "Gerudo Training Grounds Room06 Left": "True"
+            "Gerudo Training Grounds Lava Room Left": "True"
         }
     },
     {
-        "region_name": "Gerudo Training Grounds Room08 Ceiling",
+        "region_name": "Gerudo Training Grounds Central Maze Ceiling",
         "dungeon": "Gerudo Training Grounds", #"room": 08,
         "locations": {
             "Gerudo Training Grounds Near Scarecrow Chest": "True"
         }
     },
     {
-        "region_name": "Gerudo Training Grounds Room09",
+        "region_name": "Gerudo Training Grounds Underwater",
         "dungeon": "Gerudo Training Grounds", #"room": 09,
         "locations": {
             "Gerudo Training Grounds Underwater Silver Rupee Chest": "
@@ -149,7 +149,7 @@
         }
     },
     {
-        "region_name": "Gerudo Training Grounds Room10",
+        "region_name": "Gerudo Training Grounds Like Like Room",
         "dungeon": "Gerudo Training Grounds", #"room": 10,
         "locations": {
             "Gerudo Training Grounds Heavy Block First Chest": "True",

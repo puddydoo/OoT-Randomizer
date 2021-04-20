@@ -15,36 +15,36 @@
         },
         "exits": {
             "Desert Colossus From Spirit Lobby": "True",
-            "Spirit Temple Room01": "is_child",
-            "Spirit Temple Room06": "has_bombchus and can_use(Longshot)"
+            "Spirit Temple First Child Room": "is_child",
+            "Spirit Temple Silver Block Hall": "has_bombchus and can_use(Longshot)"
         }
     },
     {
         "region_name": "Spirit Temple Lobby East",
         "dungeon": "Spirit Temple", #"room": 00,
         "exits": {
-            "Spirit Temple Room13": "(Small_Key_Spirit_Temple, 7)",
-            "Spirit Temple Room14": "True"
+            "Spirit Temple Symphony Room": "(Small_Key_Spirit_Temple, 7)",
+            "Spirit Temple Leever Room": "True"
         }
     },
     {
-        "region_name": "Spirit Temple Room01",
+        "region_name": "Spirit Temple First Child Room",
         "dungeon": "Spirit Temple", #"room": 01,
         "locations": {
             "Spirit Temple MQ Child Hammer Switch Chest": "
-                at('Spirit Temple Room01 Rear', can_use(Megaton_Hammer))"
+                at('Spirit Temple First Child Room Rear', can_use(Megaton_Hammer))"
         },
         "exits": {
-            "Spirit Temple Room01 Rear": "has_bombchus",
+            "Spirit Temple First Child Room Rear": "has_bombchus",
             "Spirit Temple Room02": "Sticks or Kokiri_Sword or Bombs",
-            "Spirit Temple Room03": "Sticks or Kokiri_Sword or Bombs"
+            "Spirit Temple Map Room": "Sticks or Kokiri_Sword or Bombs"
         }
     },
     {
-        "region_name": "Spirit Temple Room01 Rear",
+        "region_name": "Spirit Temple First Child Room Rear",
         "dungeon": "Spirit Temple", #"room": 01,
         "exits": {
-            "Spirit Temple Room04": "
+            "Spirit Temple Child Climb": "
                 (not colossus_hands and not spirit_backdoor and
                     (Small_Key_Spirit_Temple, 1)) or
                 (Small_Key_Spirit_Temple, 7)"
@@ -61,25 +61,25 @@
         "region_name": "Spirit Temple Room02 Rear",
         "dungeon": "Spirit Temple", #"room": 02,
         "exits": {
-            "Spirit Temple Room27": "Sticks or Kokiri_Sword or can_use(Dins_Fire)"
+            "Spirit Temple Stalfos Room": "Sticks or Kokiri_Sword or can_use(Dins_Fire)"
         }
     },
     {
-        "region_name": "Spirit Temple Room03",
+        "region_name": "Spirit Temple Map Room",
         "dungeon": "Spirit Temple", #"room": 03,
         "locations": {
             "Spirit Temple MQ Map Chest": "True"
         }
     },
     {
-        "region_name": "Spirit Temple Room03 Rear",
+        "region_name": "Spirit Temple Map Room Rear",
         "dungeon": "Spirit Temple", #"room": 03,
         "locations": {
             "Spirit Temple MQ Map Room Enemy Chest": "can_use(Dins_Fire)"
         }
     },
     {
-        "region_name": "Spirit Temple Room04",
+        "region_name": "Spirit Temple Child Climb",
         "dungeon": "Spirit Temple", #"room": 04,
         "locations": {
             "Spirit Temple MQ Child Climb North Chest": "(Small_Key_Spirit_Temple, 6)",
@@ -87,12 +87,12 @@
                 (Small_Key_Spirit_Temple, 7) and can_use(Hookshot)"
         },
         "exits": {
-            "Spirit Temple Room01 Rear": "(Small_Key_Spirit_Temple, 7)",
-            "Spirit Temple Room05": "(Small_Key_Spirit_Temple, 2)"
+            "Spirit Temple First Child Room Rear": "(Small_Key_Spirit_Temple, 7)",
+            "Spirit Temple Statue Room": "(Small_Key_Spirit_Temple, 2)"
         }
     },
     {
-        "region_name": "Spirit Temple Room05",
+        "region_name": "Spirit Temple Statue Room",
         "dungeon": "Spirit Temple", #"room": 05,
         "locations": {
             "Spirit Temple MQ Compass Chest": "
@@ -101,12 +101,12 @@
                 can_use(Bow) or
                 (Bow and Slingshot)",
             "Spirit Temple MQ Statue Room Lullaby Chest": "
-                at('Spirit Temple Room05 East', can_play(Zeldas_Lullaby))"
+                at('Spirit Temple Statue Room East', can_play(Zeldas_Lullaby))"
         },
         "exits": {
-            "Spirit Temple Room04": "(Small_Key_Spirit_Temple, 6)",
-            "Spirit Temple Room05 East": "can_use(Hookshot)",
-            "Spirit Temple Room06 Rear": "
+            "Spirit Temple Child Climb": "(Small_Key_Spirit_Temple, 6)",
+            "Spirit Temple Statue Room East": "can_use(Hookshot)",
+            "Spirit Temple Silver Block Hall Rear": "
                 (Small_Key_Spirit_Temple, 7) and here(has_fire_source or
                 (logic_spirit_mq_frozen_eye and can_use(Bow) and can_play(Song_of_Time)))",
             "Spirit Temple Room07": "
@@ -115,7 +115,7 @@
         }
     },
     {
-        "region_name": "Spirit Temple Room05 East",
+        "region_name": "Spirit Temple Statue Room East",
         "dungeon": "Spirit Temple", #"room": 05,
         "locations": {
             "Spirit Temple MQ Statue Room Invisible Chest": "
@@ -123,9 +123,9 @@
                 (logic_lens_spirit_mq or can_use(Lens_of_Truth))"
         },
         "exits": {
-            "Spirit Temple Room05": "True",
+            "Spirit Temple Statue Room": "True",
             "Spirit Temple Room15": "
-                at('Spirit Temple Room05', can_use(Fire_Arrows) or
+                at('Spirit Temple Statue Room', can_use(Fire_Arrows) or
                 (logic_spirit_mq_lower_adult and can_use(Dins_Fire) and can_use(Bow)))",
             "Spirit Temple Room16": "
                 (not colossus_hands and (Small_Key_Spirit_Temple, 4)) or
@@ -135,11 +135,11 @@
         }
     },
     {
-        "region_name": "Spirit Temple Room05 Ceiling",
+        "region_name": "Spirit Temple Statue Room Ceiling",
         "dungeon": "Spirit Temple", #"room": 05,
         "exits": {
-            "Spirit Temple Room05": "True",
-            "Spirit Temple Room05 East": "True",
+            "Spirit Temple Statue Room": "True",
+            "Spirit Temple Statue Room East": "True",
             "Spirit Temple Boss Door": "(Small_Key_Spirit_Temple, 6) and can_use(Hookshot)"
         }
     },
@@ -152,33 +152,33 @@
         }
     },
     {
-        "region_name": "Spirit Temple Room06",
+        "region_name": "Spirit Temple Silver Block Hall",
         "dungeon": "Spirit Temple", #"room": 06,
         "exits": {
-            "Spirit Temple Room06 Rear": "can_use(Silver_Gauntlets)"
+            "Spirit Temple Silver Block Hall Rear": "can_use(Silver_Gauntlets)"
         }
     },
     {
-        "region_name": "Spirit Temple Room06 Rear",
+        "region_name": "Spirit Temple Silver Block Hall Rear",
         "dungeon": "Spirit Temple", #"room": 06,
         "locations": {
             "Spirit Temple MQ Silver Block Hallway Chest": "
                 is_adult and here(is_child and Slingshot)"
         },
         "exits": {
-            "Spirit Temple Room05": "True"
+            "Spirit Temple Statue Room": "True"
         }
     },
     {
         "region_name": "Spirit Temple Room07",
         "dungeon": "Spirit Temple", #"room": 07,
         "exits": {
-            "Spirit Temple Room05": "True",
-            "Spirit Temple Room08": "True"
+            "Spirit Temple Statue Room": "True",
+            "Spirit Temple Sun Block Room": "True"
         }
     },
     {
-        "region_name": "Spirit Temple Room08",
+        "region_name": "Spirit Temple Sun Block Room",
         "dungeon": "Spirit Temple", #"room": 08,
         "locations": {
             "Spirit Temple MQ Sun Block Room Chest": "True",
@@ -188,33 +188,33 @@
         },
         "exits": {
             "Spirit Temple Room07": "True",
-            "Spirit Temple Room09": "True"
+            "Spirit Temple Child Knuckle Hall": "True"
         }
     },
     {
-        "region_name": "Spirit Temple Room09",
+        "region_name": "Spirit Temple Child Knuckle Hall",
         "dungeon": "Spirit Temple", #"room": 09,
         "exits": {
-            "Spirit Temple Room08": "True",
-            "Spirit Temple Room10": "
+            "Spirit Temple Sun Block Room": "True",
+            "Spirit Temple Child Knuckle": "
                 (not colossus_hands and (Small_Key_Spirit_Temple, 4)) or
                 (Small_Key_Spirit_Temple, 7)"
         }
     },
     {
-        "region_name": "Spirit Temple Room10",
+        "region_name": "Spirit Temple Child Knuckle",
         "dungeon": "Spirit Temple", #"room": 10,
         "exits": {
-            "Spirit Temple Room09": "(Small_Key_Spirit_Temple, 7)",
-            "Spirit Temple Room11 West": "here(is_adult or Kokiri_Sword or has_explosives)"
+            "Spirit Temple Child Knuckle Hall": "(Small_Key_Spirit_Temple, 7)",
+            "Spirit Temple Right Hand Exit": "here(is_adult or Kokiri_Sword or has_explosives)"
         }
     },
     {
-        "region_name": "Spirit Temple Room11 West",
+        "region_name": "Spirit Temple Right Hand Exit",
         "dungeon": "Spirit Temple", #"room": 11,
         "exits": {
             "Spirit Temple Lobby": "True",
-            "Spirit Temple Room10": "True",
+            "Spirit Temple Child Knuckle": "True",
             "Desert Colossus Right Hand": "
                 colossus_hands or
                 (Small_Key_Spirit_Temple, 7) or (can_play(Song_of_Time) and 
@@ -226,11 +226,11 @@
         }
     },
     {
-        "region_name": "Spirit Temple Room11 East",
+        "region_name": "Spirit Temple Left Hand Exit",
         "dungeon": "Spirit Temple", #"room": 11,
         "exits": {
             "Spirit Temple Lobby": "True",
-            "Spirit Temple Room20": "True",
+            "Spirit Temple Adult Knuckle": "True",
             "Desert Colossus Left Hand": "
                 colossus_hands or (Small_Key_Spirit_Temple, 5)",
             "Desert Colossus Right Hand": "not colossus_hands",
@@ -238,7 +238,7 @@
         }
     },
     {
-        "region_name": "Spirit Temple Room12",
+        "region_name": "Spirit Temple 1F Treasure Room",
         "dungeon": "Spirit Temple", #"room": 12,
         "locations": {
             "Spirit Temple MQ Symphony Room Chest": "True",
@@ -246,17 +246,17 @@
         }
     },
     {
-        "region_name": "Spirit Temple Room13",
+        "region_name": "Spirit Temple Symphony Room",
         "dungeon": "Spirit Temple", #"room": 13,
         "exits": {
-            "Spirit Temple Room12": "
+            "Spirit Temple 1F Treasure Room": "
                 can_use(Megaton_Hammer) and Ocarina and 
                 Song_of_Time and Eponas_Song and Suns_Song and 
                 Song_of_Storms and Zeldas_Lullaby"
         }
     },
     {
-        "region_name": "Spirit Temple Room14",
+        "region_name": "Spirit Temple Leever Room",
         "dungeon": "Spirit Temple", #"room": 14,
         "locations": {
             "Spirit Temple MQ Leever Room Chest": "can_use(Longshot)",
@@ -274,13 +274,13 @@
         "region_name": "Spirit Temple Room16",
         "dungeon": "Spirit Temple", #"room": 16,
         "exits": {
-            "Spirit Temple Room05 East": "
+            "Spirit Temple Statue Room East": "
                 (Small_Key_Spirit_Temple, 7) and can_use(Hookshot)",
-            "Spirit Temple Room17": "True"
+            "Spirit Temple Beamos Room": "True"
         }
     },
     {
-        "region_name": "Spirit Temple Room17",
+        "region_name": "Spirit Temple Beamos Room",
         "dungeon": "Spirit Temple", #"room": 17,
         "locations": {
             "Spirit Temple MQ Beamos Room Chest": "
@@ -289,50 +289,50 @@
         },
         "exits": {
             "Spirit Temple Room16": "has_explosives",
-            "Spirit Temple Room18": "can_play(Song_of_Time)",
-            "Spirit Temple Room23": "(Small_Key_Spirit_Temple, 5)"
-                # 5 keys allows access to central chamber through ceiling
+            "Spirit Temple Chest Switch Room": "can_play(Song_of_Time)",
+            "Spirit Temple Shifting Wall": "(Small_Key_Spirit_Temple, 5)"
+                # 5 keys allows access to statue room through ceiling
                 # Locations and boss door access require 6 keys
         }
     },
     {
-        "region_name": "Spirit Temple Room18",
+        "region_name": "Spirit Temple Chest Switch Room",
         "dungeon": "Spirit Temple", #"room": 18,
         "locations": {
             "Spirit Temple MQ Chest Switch Chest": "
                 colossus_hands or (Small_Key_Spirit_Temple, 5)"
         },
         "exits": {
-            "Spirit Temple Room17": "True",
-            "Spirit Temple Room19": "is_adult or Kokiri_Sword or Sticks",
-            "Spirit Temple Room21": "can_play(Song_of_Time) and can_use(Mirror_Shield)"
+            "Spirit Temple Beamos Room": "True",
+            "Spirit Temple Adult Knuckle Hall": "is_adult or Kokiri_Sword or Sticks",
+            "Spirit Temple 2F Treasure Room": "can_play(Song_of_Time) and can_use(Mirror_Shield)"
         }
     },
     {
-        "region_name": "Spirit Temple Room19",
+        "region_name": "Spirit Temple Adult Knuckle Hall",
         "dungeon": "Spirit Temple", #"room": 19,
         "exits": {
-            "Spirit Temple Room18": "True",
-            "Spirit Temple Room20": "logic_lens_spirit_mq or can_use(Lens_of_Truth)"
+            "Spirit Temple Chest Switch Room": "True",
+            "Spirit Temple Adult Knuckle": "logic_lens_spirit_mq or can_use(Lens_of_Truth)"
         }
     },
     {
-        "region_name": "Spirit Temple Room20",
+        "region_name": "Spirit Temple Adult Knuckle",
         "dungeon": "Spirit Temple", #"room": 20,
         "exits": {
-            "Spirit Temple Room19": "here(is_adult or Kokiri_Sword or has_explosives)",
-            "Spirit Temple Room11 East": "True"
+            "Spirit Temple Adult Knuckle Hall": "here(is_adult or Kokiri_Sword or has_explosives)",
+            "Spirit Temple Left Hand Exit": "True"
         }
     },
     {
-        "region_name": "Spirit Temple Room21",
+        "region_name": "Spirit Temple 2F Treasure Room",
         "dungeon": "Spirit Temple", #"room": 21,
         "locations": {
             "Spirit Temple MQ Boss Key Chest": "True"
         }
     },
     {
-        "region_name": "Spirit Temple Room22",
+        "region_name": "Spirit Temple Nine Thrones Room",
         "dungeon": "Spirit Temple", #"room": 22,
         "locations": {
             "Spirit Temple MQ GS Nine Thrones Room West": "can_use(Hookshot) or can_use(Boomerang)",
@@ -340,31 +340,31 @@
         }
     },
     {
-        "region_name": "Spirit Temple Room23",
+        "region_name": "Spirit Temple Shifting Wall",
         "dungeon": "Spirit Temple", #"room": 23,
         "exits": {
-            "Spirit Temple Room24": "True"
+            "Spirit Temple Top Floor": "True"
         }
     },
     {
-        "region_name": "Spirit Temple Room24",
+        "region_name": "Spirit Temple Top Floor",
         "dungeon": "Spirit Temple", #"room": 24,
         "exits": {
-            "Spirit Temple Room22": "(Small_Key_Spirit_Temple, 7)",
-            "Spirit Temple Room25": "can_play(Zeldas_Lullaby)"
+            "Spirit Temple Nine Thrones Room": "(Small_Key_Spirit_Temple, 7)",
+            "Spirit Temple Ceiling Mirror Room": "can_play(Zeldas_Lullaby)"
         }
     },
     {
-        "region_name": "Spirit Temple Room25",
+        "region_name": "Spirit Temple Ceiling Mirror Room",
         "dungeon": "Spirit Temple", #"room": 25,
         "exits": {
-            "Spirit Temple Room05 Ceiling": "
-                at('Spirit Temple Room26', can_use(Mirror_Shield))",
-            "Spirit Temple Room26": "here(can_use(Megaton_Hammer))"
+            "Spirit Temple Statue Room Ceiling": "
+                at('Spirit Temple Mirror Puzzle', can_use(Mirror_Shield))",
+            "Spirit Temple Mirror Puzzle": "here(can_use(Megaton_Hammer))"
         }
     },
     {
-        "region_name": "Spirit Temple Room26",
+        "region_name": "Spirit Temple Mirror Puzzle",
         "dungeon": "Spirit Temple", #"room": 26,
         "locations": {
             "Spirit Temple MQ Mirror Puzzle Invisible Chest": "
@@ -372,13 +372,13 @@
         }
     },
     {
-        "region_name": "Spirit Temple Room27",
+        "region_name": "Spirit Temple Stalfos Room",
         "dungeon": "Spirit Temple", #"room": 27,
         "locations": {
             "Fairy Pot": "has_bottle"
         },
         "exits": {
-            "Spirit Temple Room03 Rear": "True"
+            "Spirit Temple Map Room Rear": "True"
         }
     }
 ]

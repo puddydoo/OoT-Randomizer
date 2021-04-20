@@ -671,7 +671,7 @@
             "Spirit Temple Silver Gauntlets Chest": "True"
         },
         "exits": {
-            "Spirit Temple Room11 West": "True",
+            "Spirit Temple Right Hand Exit": "True",
             "Desert Colossus": "colossus_hands",
             "Desert Colossus Left Hand": "
                 at('Desert Colossus Left Hand', True) and can_use(Longshot)"
@@ -684,7 +684,7 @@
             "Spirit Temple Mirror Shield Chest": "True"
         },
         "exits": {
-            "Spirit Temple Room11 East": "True",
+            "Spirit Temple Left Hand Exit": "True",
             "Desert Colossus": "colossus_hands",
             "Desert Colossus Right Hand": "can_use(Longshot)"
         }
