@@ -1428,8 +1428,8 @@
                 is_adult and 
                 ((can_play(Song_of_Time) and 
                         (can_live_with_nayrus(0.75) or
-                            (not shuffle_grotto_entrances and Fairy and (can_live_dmg(0.25) or has_bottles(4))) or
-                            can_use(Goron_Tunic) or can_use(Longshot))) or 
+                            (not shuffle_grotto_entrances and Fairy and (can_live_dmg(0.25) # or has_bottles(4)
+                            )) or can_use(Goron_Tunic) or can_use(Longshot))) or 
                     (can_use(Hookshot) and # Fairies don't seem to work here
                         ((can_live_dmg(0.25) and can_use(Goron_Tunic)) or
                             can_use(Nayrus_Love) or
@@ -1471,10 +1471,13 @@
         "exits": {
             "GC Grotto": "True",
             "Goron City": "
-                can_live_with_nayrus(0.75) or (not shuffle_grotto_entrances and Fairy and (can_live_dmg(0.5) or
-                    (can_live_dmg(0.25) and has_bottles(2)) or has_bottles(4))) or can_use(Goron_Tunic) or
+                can_live_with_nayrus(0.75) or (not shuffle_grotto_entrances and Fairy and (can_live_dmg(0.5)
+                    # or (can_live_dmg(0.25) and has_bottles(2)) or has_bottles(4)
+                    )) or can_use(Goron_Tunic) or
                 (can_play(Song_of_Time) and (can_use(Longshot) or
-                (not shuffle_grotto_entrances and Fairy and (can_live_dmg(0.25) or has_bottles(3)))))"
+                (not shuffle_grotto_entrances and Fairy and (can_live_dmg(0.25)
+                # or has_bottles(3)
+                ))))"
         }
     },
     {
