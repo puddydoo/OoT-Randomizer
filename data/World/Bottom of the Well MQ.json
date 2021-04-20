@@ -4,73 +4,73 @@
         "dungeon": "Bottom of the Well", #"room": 00,
         "exits": {
             "Kakariko Village": "True",
-            "Bottom of the Well Room00 Perimeter": "is_child"
+            "Bottom of the Well Perimeter": "is_child"
         }
     },
     {
-        "region_name": "Bottom of the Well Room00 Perimeter",
+        "region_name": "Bottom of the Well Perimeter",
         "dungeon": "Bottom of the Well", #"room": 00,
         "locations": {
             "Wall Fairy": "has_bottle and Slingshot" # The fairy pot is obsolete
         },
         "exits": {
-            "Bottom of the Well Room00 Middle": "
+            "Bottom of the Well Middle": "
                 can_play(Zeldas_Lullaby) or (logic_botw_mq_pits and has_explosives)",
-            "Bottom of the Well Room01": "True",
-            "Bottom of the Well Room02": "(Small_Key_Bottom_of_the_Well, 2)",
-            "Bottom of the Well Room03": "True",
-            "Bottom of the Well Room04": "can_jumpslash or can_use_projectile"
+            "Bottom of the Well Basement": "True",
+            "Bottom of the Well Coffin Room": "(Small_Key_Bottom_of_the_Well, 2)",
+            "Bottom of the Well Pit Room": "True",
+            "Bottom of the Well Dead Hand Room": "can_jumpslash or can_use_projectile"
         }
     },
     {
-        "region_name": "Bottom of the Well Room00 Middle",
+        "region_name": "Bottom of the Well Middle",
         "dungeon": "Bottom of the Well", #"room": 00,
         "locations": {
             "Bottom of the Well MQ Map Chest": "True"
         },
         "exits": {
-            "Bottom of the Well Room01 Ceiling": "
-                at('Bottom of the Well Room00 East Cage', has_explosives)",
-            "Bottom of the Well Room05": "True",
-            "Bottom of the Well Room06": "logic_botw_mq_pits or has_explosives"
+            "Bottom of the Well Basement Ceiling": "
+                at('Bottom of the Well East Cage', has_explosives)",
+            "Bottom of the Well East Inner Room": "True",
+            "Bottom of the Well West Inner Room": "logic_botw_mq_pits or has_explosives"
         }
     },
     {
-        "region_name": "Bottom of the Well Room00 East Cage",
+        "region_name": "Bottom of the Well East Cage",
         "dungeon": "Bottom of the Well" #"room": 00,
     },
     {
-        "region_name": "Bottom of the Well Room01",
+        "region_name": "Bottom of the Well Basement",
         "dungeon": "Bottom of the Well", #"room": 01,
         "locations": {
             "Bottom of the Well MQ Lens of Truth Chest": "
-                at('Bottom of the Well Room01 Ceiling', True)",
+                at('Bottom of the Well Basement Ceiling', True)",
             "Bottom of the Well MQ GS Basement": "can_child_attack"
         }
     },
     {
-        "region_name": "Bottom of the Well Room01 Ceiling",
+        "region_name": "Bottom of the Well Basement Ceiling",
         "dungeon": "Bottom of the Well", #"room": 01,
         "exits": {
-            "Bottom of the Well Room01": "True"
+            "Bottom of the Well Basement": "True"
         }
     },
     {
-        "region_name": "Bottom of the Well Room02",
+        "region_name": "Bottom of the Well Coffin Room",
         "dungeon": "Bottom of the Well", #"room": 02,
         "locations": {
             "Bottom of the Well MQ GS Coffin Room": "can_child_attack"
         }
     },
     {
-        "region_name": "Bottom of the Well Room03",
+        "region_name": "Bottom of the Well Pit Room",
         "dungeon": "Bottom of the Well", #"room": 03,
         "exits": {
-            "Bottom of the Well Room00 East Cage": "(Small_Key_Bottom_of_the_Well, 2)"
+            "Bottom of the Well East Cage": "(Small_Key_Bottom_of_the_Well, 2)"
         }
     },
     {
-        "region_name": "Bottom of the Well Room04",
+        "region_name": "Bottom of the Well Dead Hand Room",
         "dungeon": "Bottom of the Well", #"room": 04,
         "locations": {
             "Bottom of the Well MQ Compass Chest": "
@@ -80,17 +80,17 @@
         }
     },
     {
-        "region_name": "Bottom of the Well Room05",
+        "region_name": "Bottom of the Well East Inner Room",
         "dungeon": "Bottom of the Well", #"room": 05,
         "locations": {
             "Bottom of the Well MQ East Inner Room Freestanding Key": "True"
         },
         "exits": {
-            "Bottom of the Well Room01": "True"
+            "Bottom of the Well Basement": "True"
         }
     },
     {
-        "region_name": "Bottom of the Well Room06",
+        "region_name": "Bottom of the Well West Inner Room",
         "dungeon": "Bottom of the Well", #"room": 06,
         "locations": {
             "Bottom of the Well MQ GS West Inner Room": "can_child_attack"
