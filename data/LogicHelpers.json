@@ -62,8 +62,6 @@
             or (for_age == adult and (Bow or Hookshot))
             or (for_age == both and (Slingshot or Boomerang) and (Bow or Hookshot))
             or (for_age == either and (Slingshot or Boomerang or Bow or Hookshot))",
-    # Placeholder for multiple bottle requirements
-    "has_bottles(number)": "False",
 
     # can_use and helpers
     # The parser reduces this to smallest form based on item category.
