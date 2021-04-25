@@ -1,76 +1,261 @@
 [
     {
         "region_name": "Water Temple Lobby",
-        "dungeon": "Water Temple",
+        "dungeon": "Water Temple", #"room": 00,
         "events": {
-            "Water Temple Clear": "Boss_Key_Water_Temple and can_use(Longshot)"
-        },
-        "locations": {
-            "Water Temple Morpha Heart": "Boss_Key_Water_Temple and can_use(Longshot)",
-            "Morpha": "Boss_Key_Water_Temple and can_use(Longshot)"
+            "Raise Water Level": "can_use(Hookshot)"
+                # Ensure that the water level can be raised if it were to be lowered.
         },
         "exits": {
             "Lake Hylia": "True",
-            "Water Temple Dive": "
-                (can_use(Zora_Tunic) or logic_fewer_tunic_requirements) and can_use(Iron_Boots)",
-            "Water Temple Dark Link Region": "
-                Small_Key_Water_Temple and can_use(Longshot)"
+            "Water Temple Room01": "
+                Low_Water_Level or (can_use(Iron_Boots) and
+                (can_use(Zora_Tunic) or logic_fewer_tunic_requirements))",
+            "Water Temple Room03": "
+                'Water Temple Basement Switch' and
+                (is_adult or (Low_Water_Level and can_dive))",
+            "Water Temple Room04": "
+                Low_Water_Level or (can_use(Iron_Boots) and
+                (can_use(Zora_Tunic) or logic_fewer_tunic_requirements))",
+            "Water Temple Room05": "Small_Key_Water_Temple and here(can_use(Longshot))",
+            "Water Temple Room10": "
+                Middle_Water_Level and at('Water Temple Room04', can_use(Hookshot))",
+            "Water Temple Room11": "Raise_Water_Level and can_use(Longshot)",
+            "Water Temple Room12": "'Water Temple Basement Switch' and is_adult",
+            "Water Temple Room17": "
+                Low_Water_Level or (can_use(Iron_Boots) and
+                    (can_use(Zora_Tunic) or logic_fewer_tunic_requirements))",
+            "Water Temple Room20": "Low_Water_Level"
         }
     },
     {
-        "region_name": "Water Temple Dive",
-        "dungeon": "Water Temple",
-        "locations": {
-            "Water Temple MQ Map Chest": "has_fire_source and can_use(Hookshot)",
-            "Water Temple MQ Central Pillar Chest": "
-                can_use(Zora_Tunic) and can_use(Hookshot) and
-                ((logic_water_mq_central_pillar and can_use(Fire_Arrows)) or
-                    (can_use(Dins_Fire) and can_play(Song_of_Time)))"
+        "region_name": "Water Temple Lobby Switch",
+        "dungeon": "Water Temple", #"room": 01,
+        "events": {
+            "Water Temple Basement Switch": "can_use(Iron_Boots)"
+        }
+    },
+    {
+        "region_name": "Water Temple Room01",
+        "dungeon": "Water Temple", #"room": 01,
+        "events": {
+            "Middle Water Level": "Low_Water_Level"
         },
         "exits": {
-            "Water Temple Lowered Water Levels": "can_play(Zeldas_Lullaby)"
+            "Water Temple Room02": "
+                can_use(Iron_Boots) and can_use(Zora_Tunic) and
+                ((logic_water_mq_central_pillar and can_use(Fire_Arrows)) or
+                    (can_use(Dins_Fire) and can_play(Song_of_Time) and
+                    (Raise_Water_Level or can_use(Longshot))))"
         }
     },
     {
-        "region_name": "Water Temple Lowered Water Levels",
-        "dungeon": "Water Temple",
+        "region_name": "Water Temple Room02",
+        "dungeon": "Water Temple", #"room": 02,
         "locations": {
-            "Water Temple MQ Compass Chest": "
-                can_use(Bow) or can_use(Dins_Fire) or 
-                at('Water Temple Lobby', can_use(Sticks) and has_explosives)",
-            "Water Temple MQ Longshot Chest": "can_use(Hookshot)",
-            "Water Temple MQ GS Lizalfos Hallway": "can_use(Dins_Fire)",
-            "Water Temple MQ GS Before Upper Water Switch": "can_use(Longshot)"
+            "Water Temple MQ Central Pillar Chest": "can_use(Hookshot)"
         }
     },
     {
-        "region_name": "Water Temple Dark Link Region",
-        "dungeon": "Water Temple",
+        "region_name": "Water Temple Room03",
+        "dungeon": "Water Temple", #"room": 03,
         "locations": {
-            "Water Temple MQ Boss Key Chest": "
-                (can_use(Zora_Tunic) or logic_fewer_tunic_requirements) and can_use(Dins_Fire) and
-                (logic_water_dragon_jump_dive or can_dive or can_use(Iron_Boots))",
-            "Water Temple MQ GS River": "True",
+            "Water Temple MQ GS Triple Wall Torch": "
+                can_use(Fire_Arrows) and (Hover_Boots or can_use(Scarecrow))"
+        }
+    },
+    {
+        "region_name": "Water Temple Room04",
+        "dungeon": "Water Temple" #"room": 04,
+    },
+    {
+        "region_name": "Water Temple Room05",
+        "dungeon": "Water Temple", #"room": 05,
+        "exits": {
+            "Water Temple Room06": "can_use(Longshot)"
+        }
+    },
+    {
+        "region_name": "Water Temple Room06",
+        "dungeon": "Water Temple", #"room": 06,
+        "locations": {
             "Fairy Pot": "has_bottle",
             "Nut Pot": "True"
         },
         "exits": {
-            "Water Temple Basement Gated Areas": "
-                (can_use(Zora_Tunic) or logic_fewer_tunic_requirements) and
-                can_use(Dins_Fire) and can_use(Iron_Boots)"
+            "Water Temple Room13": "True"
         }
     },
     {
-        "region_name": "Water Temple Basement Gated Areas",
-        "dungeon": "Water Temple",
+        "region_name": "Water Temple Room07",
+        "dungeon": "Water Temple", #"room": 07,
+        "exits": {
+            "Water Temple Room21": "True"
+        }
+    },
+    {
+        "region_name": "Water Temple Room08",
+        "dungeon": "Water Temple", #"room": 08,
+        "exits": {
+            "Water Temple Room08 Rear": "
+                (can_dive or can_use(Iron_Boots)) and
+                (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)",
+            "Water Temple Room09": "
+                at('Water Temple Room08 Rear', can_use(Dins_Fire))"
+        }
+    },
+    {
+        "region_name": "Water Temple Room08 Rear",
+        "dungeon": "Water Temple" #"room": 08,
+    },
+    {
+        "region_name": "Water Temple Room08 Ledge",
+        "dungeon": "Water Temple", #"room": 08,
+        "exits": {
+            "Water Temple Room08": "True",
+            "Water Temple Room08 Rear": "
+                logic_water_dragon_jump_dive and
+                (can_use(Zora_Tunic) or logic_fewer_tunic_requirements)"
+        }
+    },
+    {
+        "region_name": "Water Temple Room09",
+        "dungeon": "Water Temple", #"room": 09,
         "locations": {
-            "Water Temple MQ Freestanding Key": "
+            "Water Temple MQ Boss Key Chest": "True"
+        },
+        "exits": {
+            "Water Temple Lobby Switch": "can_use(Iron_Boots) or can_dive"
+        }
+    },
+    {
+        "region_name": "Water Temple Room10",
+        "dungeon": "Water Temple", #"room": 10,
+        "locations": {
+            "Water Temple MQ GS Before Upper Water Switch": "can_use(Longshot)"
+        }
+    },
+    {
+        "region_name": "Water Temple Room11",
+        "dungeon": "Water Temple", #"room": 11,
+        "locations": {
+            "Wall Fairy": "has_bottle and can_use(Hookshot)"
+        },
+        "exits": {
+            "Water Temple Lobby": "
+                can_live_dmg(0.5) or can_use(Longshot) or can_use(Nayrus_Love)",
+            "Water Temple Boss Door": "True"
+        }
+    },
+    {
+        "region_name": "Water Temple Boss Door",
+        "dungeon": "Water Temple", #"room": 11,
+        "exits": {
+            "Water Temple Lobby": "True",
+            "Water Temple Room11": "True",
+            "Morphas Lair": "Boss_Key_Water_Temple"
+        }
+    },
+    {
+        "region_name": "Water Temple Room12",
+        "dungeon": "Water Temple", #"room": 12,
+        "exits": {
+            "Water Temple Room12 West": "
                 Hover_Boots or can_use(Scarecrow) or logic_water_north_basement_ledge_jump",
-            "Water Temple MQ GS Triple Wall Torch": "
-                can_use(Fire_Arrows) and (Hover_Boots or can_use(Scarecrow))",
-            "Water Temple MQ GS Freestanding Key Area": "
-                logic_water_mq_locked_gs or ((Small_Key_Water_Temple, 2) and
-                    (Hover_Boots or can_use(Scarecrow) or logic_water_north_basement_ledge_jump))"
+            "Water Temple Room12 North": "logic_water_mq_locked_gs"
+        }
+    },
+    {
+        "region_name": "Water Temple Room12 West",
+        "dungeon": "Water Temple", #"room": 12,
+        "exits": {
+            "Water Temple Room15": "(Small_Key_Water_Temple, 2)",
+            "Water Temple Room16": "True"
+        }
+    },
+    {
+        "region_name": "Water Temple Room12 North",
+        "dungeon": "Water Temple", #"room": 12,
+        "locations": {
+            "Water Temple MQ GS Freestanding Key Area": "True"
+        },
+        "exits": {
+            "Water Temple Room14": "True"
+        }
+    },
+    {
+        "region_name": "Water Temple Room13",
+        "dungeon": "Water Temple", #"room": 13,
+        "exits": {
+            "Water Temple Room07": "True"
+        }
+    },
+    {
+        "region_name": "Water Temple Room14",
+        "dungeon": "Water Temple", #"room": 14,
+        "exits": {
+            "Water Temple Room12 North": "True",
+            "Water Temple Room15": "True"
+        }
+    },
+    {
+        "region_name": "Water Temple Room15",
+        "dungeon": "Water Temple", #"room": 15,
+        "exits": {
+            "Water Temple Room12 West": "(Small_Key_Water_Temple, 2)",
+            "Water Temple Room14": "True"
+        }
+    },
+    {
+        "region_name": "Water Temple Room16",
+        "dungeon": "Water Temple", #"room": 16,
+        "locations": {
+            "Water Temple MQ Freestanding Key": "True"
+        }
+    },
+    {
+        "region_name": "Water Temple Room17",
+        "dungeon": "Water Temple", #"room": 17,
+        "events": {
+            "Low Water Level": "can_play(Zeldas_Lullaby)"
+        },
+        "locations": {
+            "Water Temple MQ Longshot Chest": "Middle_Water_Level and can_use(Hookshot)"
+        },
+        "exits": {
+            "Water Temple Room18": "Low_Water_Level and (has_fire_source_with_torch or can_use(Bow))",
+            "Water Temple Room19": "Raise_Water_Level and is_adult and has_fire_source"
+        }
+    },
+    {
+        "region_name": "Water Temple Room18",
+        "dungeon": "Water Temple", #"room": 18,
+        "locations": {
+            "Water Temple MQ Compass Chest": "is_adult or can_use(Dins_Fire) or has_explosives"
+        }
+    },
+    {
+        "region_name": "Water Temple Room19",
+        "dungeon": "Water Temple", #"room": 19,
+        "locations": {
+            "Water Temple MQ Map Chest": "True"
+        }
+    },
+    {
+        "region_name": "Water Temple Room20",
+        "dungeon": "Water Temple", #"room": 20,
+        "locations": {
+            "Water Temple MQ GS Lizalfos Hallway": "can_use(Dins_Fire)"
+        }
+    },
+    {
+        "region_name": "Water Temple Room21",
+        "dungeon": "Water Temple", #"room": 21,
+        "locations": {
+            "Water Temple MQ GS River": "True"
+        },
+        "exits": {
+            "Water Temple Room08 Ledge": "True"
         }
     }
 ]

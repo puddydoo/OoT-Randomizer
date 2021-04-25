@@ -665,6 +665,31 @@
         }
     },
     {
+        "region_name": "Desert Colossus Right Hand",
+        "dungeon": "Spirit Temple",
+        "locations": {
+            "Spirit Temple Silver Gauntlets Chest": "True"
+        },
+        "exits": {
+            "Spirit Temple Right Hand Exit": "True",
+            "Desert Colossus": "colossus_hands",
+            "Desert Colossus Left Hand": "
+                at('Desert Colossus Left Hand', True) and can_use(Longshot)"
+        }
+    },
+    {
+        "region_name": "Desert Colossus Left Hand",
+        "dungeon": "Spirit Temple",
+        "locations": {
+            "Spirit Temple Mirror Shield Chest": "True"
+        },
+        "exits": {
+            "Spirit Temple Left Hand Exit": "True",
+            "Desert Colossus": "colossus_hands",
+            "Desert Colossus Right Hand": "can_use(Longshot)"
+        }
+    },
+    {
         "region_name": "Colossus Great Fairy Fountain",
         "scene": "Colossus Great Fairy Fountain",
         "locations": {
@@ -1596,7 +1621,7 @@
         "scene": "Death Mountain Crater",
         "hint": "Death Mountain Crater",
         "exits": {
-            "Fire Temple Lower": "True",
+            "Fire Temple Lobby": "True",
             "DMC Central Nearby": "can_use(Goron_Tunic)"
         }
     },
@@ -1859,15 +1884,6 @@
         },
         "exits": {
             "Lon Lon Ranch": "True"
-        }
-    },
-    {
-        "region_name": "Ganons Castle Tower",
-        "dungeon": "Ganons Castle",
-        "locations": {
-            "Ganons Tower Boss Key Chest": "True",
-            "Ganondorf Hint": "Boss_Key_Ganons_Castle",
-            "Ganon": "Boss_Key_Ganons_Castle and can_use(Light_Arrows)"
         }
     },
     {
@@ -2271,6 +2287,210 @@
         },
         "exits": {
             "GV Fortress Side": "True"
+        }
+    },
+    {
+        "region_name": "Queen Gohmas Lair",
+        "dungeon": "Deku Tree",
+        "events": {
+            "Defeat Queen Gohma": "is_adult or Kokiri_Sword or Sticks"
+        },
+        "locations": {
+            "Deku Tree Queen Gohma Heart": "Defeat_Queen_Gohma",
+            "Queen Gohma": "Defeat_Queen_Gohma"
+        },
+        "exits": {
+            "Deku Tree B2": "True",
+            "Deku Tree Post-Boss": "Defeat_Queen_Gohma"
+        }
+    },
+    {
+        "region_name": "Deku Tree Post-Boss",
+        "dungeon": "Deku Tree",
+        "events": {
+            "Deku Tree Clear": "True"
+        }
+    },
+    {
+        "region_name": "King Dodongos Lair",
+        "dungeon": "Dodongos Cavern",
+        "events": {
+            "Defeat King Dodongo": "
+                can_blast_or_smash and (Bombs or Progressive_Strength_Upgrade) and 
+                (is_adult or Sticks or Kokiri_Sword)"
+        },
+        "locations": {
+            "Dodongos Cavern Boss Room Chest": "True",
+            "Dodongos Cavern King Dodongo Heart": "Defeat_King_Dodongo",
+            "King Dodongo": "Defeat_King_Dodongo"
+        },
+        "exits": {
+            "Dodongos Cavern Behind Skull": "True",
+            "Dodongos Cavern Post-Boss": "Defeat_King_Dodongo"
+        }
+    },
+    {
+        "region_name": "Dodongos Cavern Post-Boss",
+        "dungeon": "Dodongos Cavern"
+    },
+    {
+        "region_name": "Barinades Lair",
+        "dungeon": "Jabu Jabus Belly",
+        "events": {
+            "Defeat Barinade": "can_use(Boomerang) and (Sticks or Kokiri_Sword)"
+        },
+        "locations": {
+            "Jabu Jabus Belly Barinade Heart": "Defeat_Barinade",
+            "Barinade": "Defeat_Barinade"
+        },
+        "exits": {
+            "Jabu Jabus Belly Pre-Boss Room": "False",
+            "Jabu Jabus Belly Post-Boss": "Defeat_Barinade"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Post-Boss",
+        "dungeon": "Jabu Jabus Belly"
+    },
+    {
+        "region_name": "Phantom Ganons Lair",
+        "dungeon": "Forest Temple",
+        "events": {
+            "Defeat Phantom Ganon": "(can_use(Hookshot) or can_use(Bow)) or 
+                (can_use(Slingshot) and (Kokiri_Sword or Sticks))"
+        },
+        "locations": {
+            "Forest Temple Phantom Ganon Heart": "Defeat_Phantom_Ganon",
+            "Phantom Ganon": "Defeat_Phantom_Ganon"
+        },
+        "exits": {
+            "Forest Temple Boss Door": "False",
+            "Forest Temple Post-Boss": "Defeat_Phantom_Ganon"
+        }
+    },
+    {
+        "region_name": "Forest Temple Post-Boss",
+        "dungeon": "Forest Temple"
+    },
+    {
+        "region_name": "Volvagias Lair",
+        "dungeon": "Fire Temple",
+        "events": {
+            "Defeat Volvagia": "can_use(Goron_Tunic) and can_use(Megaton_Hammer)"
+        },
+        "locations": {
+            "Fire Temple Volvagia Heart": "Defeat_Volvagia",
+            "Volvagia": "Defeat_Volvagia"
+        },
+        "exits": {
+            "Fire Temple Boss Door": "False",
+            "Fire Temple Post-Boss": "Defeat_Volvagia"
+        }
+    },
+    {
+        "region_name": "Fire Temple Post-Boss",
+        "dungeon": "Fire Temple"
+    },
+    {
+        "region_name": "Morphas Lair",
+        "dungeon": "Water Temple",
+        "events": {
+            "Defeat Morpha": "can_use(Hookshot)"
+        },
+        "locations": {
+            "Morpha": "Defeat_Morpha",
+            "Water Temple Morpha Heart": "Defeat_Morpha"
+        },
+        "exits": {
+            "Water Temple Boss Door": "False",
+            "Water Temple Post-Boss": "Defeat_Morpha"
+        }
+    },
+    {
+        "region_name": "Water Temple Post-Boss",
+        "dungeon": "Water Temple",
+        "events": {
+            "Water Temple Clear": "True"
+        }
+    },
+    {
+        "region_name": "Twinrovas Lair",
+        "dungeon": "Spirit Temple",
+        "events": {
+            "Defeat Twinrova": "can_use(Mirror_Shield)"
+        },
+        "locations": {
+            "Spirit Temple Twinrova Heart": "Defeat_Twinrova",
+            "Twinrova": "Defeat_Twinrova"
+        },
+        "exits": {
+            "Spirit Temple Boss Door": "False",
+            "Spirit Temple Post-Boss": "Defeat_Twinrova"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Post-Boss",
+        "dungeon": "Spirit Temple"
+    },
+    {
+        "region_name": "Bongo Bongos Lair",
+        "dungeon": "Shadow Temple",
+        "events": {
+            "Defeat Bongo Bongo": "True"
+        },
+        "locations": {
+            "Shadow Temple Bongo Bongo Heart": "Defeat_Bongo_Bongo",
+            "Bongo Bongo": "Defeat_Bongo_Bongo"
+        },
+        "exits": {
+            "Shadow Temple Boss Door": "False",
+            "Shadow Temple Post-Boss": "Defeat_Bongo_Bongo"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Post-Boss",
+        "dungeon": "Shadow Temple"
+    },
+    {
+        "region_name": "Ganons Tower",
+        "dungeon": "Ganons Castle",
+        "locations": {
+            "Ganons Tower Boss Key Chest": "True"
+        },
+        "exits": {
+            "Ganons Tower Boss Door": "True"
+        }
+    },
+    {
+        "region_name": "Ganons Tower Boss Door",
+        "dungeon": "Ganons Castle",
+        "exits": {
+            "Ganondorfs Lair": "Boss_Key_Ganons_Castle"
+        }
+    },
+    {
+        "region_name": "Ganondorfs Lair",
+        "dungeon": "Ganons Castle",
+        "locations": {
+            "Ganondorf Hint": "True"
+        },
+        "exits": {
+            "Ganons Tower Boss Door": "False",
+            "Ganons Tower Post-Boss": "can_use(Light_Arrows)"
+        }
+    },
+    {
+        "region_name": "Ganons Tower Post-Boss",
+        "dungeon": "Ganons Castle",
+        "exits": {
+            "Ganons Lair": "True"
+        }
+    },
+    {
+        "region_name": "Ganons Lair",
+        "dungeon": "Ganons Castle",
+        "locations": {
+            "Ganon": "True"
         }
     }
 ]

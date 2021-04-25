@@ -1,53 +1,167 @@
 [
     {
         "region_name": "Jabu Jabus Belly Beginning",
-        "dungeon": "Jabu Jabus Belly",
+        "dungeon": "Jabu Jabus Belly", #"room": 00,
         "exits": {
             "Zoras Fountain": "True",
-            "Jabu Jabus Belly Main": "can_use_projectile"
+            "Jabu Jabus Belly Second Room": "can_use_projectile"
         }
     },
     {
-        "region_name": "Jabu Jabus Belly Main",
-        "dungeon": "Jabu Jabus Belly",
+        "region_name": "Jabu Jabus Belly Second Room",
+        "dungeon": "Jabu Jabus Belly", #"room": 01,
         "locations": {
-            "Jabu Jabus Belly Boomerang Chest": "True",
-            "Jabu Jabus Belly GS Water Switch Room": "True",
-            "Jabu Jabus Belly GS Lobby Basement Lower": "can_use(Boomerang) or can_use(Hookshot)",
-            "Jabu Jabus Belly GS Lobby Basement Upper": "can_use(Boomerang) or can_use(Hookshot)",
             "Jabu Jabus Belly Deku Scrub": "
-                can_dive or is_child or logic_jabu_scrub_jump_dive or can_use(Iron_Boots)",
-            "Fairy Pot": "has_bottle"
+                can_dive or is_child or logic_jabu_scrub_jump_dive or can_use(Iron_Boots)"
         },
         "exits": {
             "Jabu Jabus Belly Beginning": "True",
-            "Jabu Jabus Belly Depths": "can_use(Boomerang)",
-            "Jabu Jabus Belly Boss Area": "logic_jabu_boss_gs_adult and can_use(Hover_Boots)"
+            "Jabu Jabus Belly Room02": "True",
+            "Jabu Jabus Belly Pre-Boss Room": "
+                at('Jabu Jabus Belly Second Room Upper', True) or
+                (logic_jabu_boss_gs_adult and can_use(Hover_Boots))"
         }
     },
     {
-        "region_name": "Jabu Jabus Belly Depths",
-        "dungeon": "Jabu Jabus Belly",
+        "region_name": "Jabu Jabus Belly Second Room Upper",
+        "dungeon": "Jabu Jabus Belly" #"room": 01,
+    },
+    {
+        "region_name": "Jabu Jabus Belly Room02",
+        "dungeon": "Jabu Jabus Belly", #"room": 02,
+        "exits": {
+            "Jabu Jabus Belly Room03": "True",
+            "Jabu Jabus Belly Room03 East": "True",
+            "Jabu Jabus Belly Room03 West": "'Jabu Jabus Belly Green Tentacle'",
+            "Jabu Jabus Belly Room07": "True"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Room03",
+        "dungeon": "Jabu Jabus Belly", #"room": 03,
         "locations": {
-            "Jabu Jabus Belly Map Chest": "True",
-            "Jabu Jabus Belly Compass Chest": "True"
+            "Jabu Jabus Belly GS Lobby Basement Lower": "can_use(Boomerang) or can_use(Hookshot)",
+            "Jabu Jabus Belly GS Lobby Basement Upper": "can_use(Boomerang) or can_use(Hookshot)"
         },
         "exits": {
-            "Jabu Jabus Belly Main": "True",
-            "Jabu Jabus Belly Boss Area": "Sticks or Kokiri_Sword"
+            "Jabu Jabus Belly Room03 East": "True",
+            "Jabu Jabus Belly Room13": "True"
         }
     },
     {
-        "region_name": "Jabu Jabus Belly Boss Area",
-        "dungeon": "Jabu Jabus Belly",
+        "region_name": "Jabu Jabus Belly Room03 East",
+        "dungeon": "Jabu Jabus Belly", #"room": 03,
+        "exits": {
+            "Jabu Jabus Belly Room14": "True"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Room03 West",
+        "dungeon": "Jabu Jabus Belly", #"room": 03,
+        "exits": {
+            "Jabu Jabus Belly Room06": "True"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Room04",
+        "dungeon": "Jabu Jabus Belly", #"room": 04,
+        "exits": {
+            "Jabu Jabus Belly Second Room Upper": "can_use(Boomerang)"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Pre-Boss Room",
+        "dungeon": "Jabu Jabus Belly", #"room": 05,
         "locations": {
-            "Jabu Jabus Belly Barinade Heart": "can_use(Boomerang)",
-            "Barinade": "can_use(Boomerang)",
-            "Jabu Jabus Belly GS Near Boss": "True",
+            "Jabu Jabus Belly GS Near Boss": "can_use_projectile or can_use(Dins_Fire)"
+        },
+        "exits": {
+            "Jabu Jabus Belly Beginning": "True",
+            "Jabu Jabus Belly Second Room": "True",
+            "Barinades Lair": "can_use(Boomerang)"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Room06",
+        "dungeon": "Jabu Jabus Belly", #"room": 06,
+        "exits": {
+            "Jabu Jabus Belly Room06 Upper": "
+                here(can_use(Boomerang) and (Sticks or Kokiri_Sword))"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Room06 Upper",
+        "dungeon": "Jabu Jabus Belly", #"room": 06,
+        "locations": {
+            "Fairy Pot": "has_bottle",
             "Nut Pot": "True"
         },
         "exits": {
-            "Jabu Jabus Belly Main": "True"
+            "Jabu Jabus Belly Room04": "True"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Room07",
+        "dungeon": "Jabu Jabus Belly", #"room": 07,
+        "exits": {
+            "Jabu Jabus Belly Room08": "'Jabu Jabus Belly Blue Tentacle'",
+            "Jabu Jabus Belly Room09": "True",
+            "Jabu Jabus Belly Room10": "True",
+            "Jabu Jabus Belly Room11": "'Jabu Jabus Belly Red Tentacle'",
+            "Jabu Jabus Belly Room12": "'Jabu Jabus Belly Red Tentacle'"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Room08",
+        "dungeon": "Jabu Jabus Belly", #"room": 08,
+        "events": {
+            "Jabu Jabus Belly Green Tentacle": "can_use(Boomerang)"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Room09",
+        "dungeon": "Jabu Jabus Belly", #"room": 09,
+        "locations": {
+            "Jabu Jabus Belly Boomerang Chest": "True"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Room10",
+        "dungeon": "Jabu Jabus Belly", #"room": 10,
+        "events": {
+            "Jabu Jabus Belly Red Tentacle": "can_use(Boomerang)"
+        },
+        "locations": {
+            "Jabu Jabus Belly Map Chest": "'Jabu Jabus Belly Red Tentacle'"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Room11",
+        "dungeon": "Jabu Jabus Belly", #"room": 11,
+        "events": {
+            "Jabu Jabus Belly Blue Tentacle": "can_use(Boomerang)"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Room12",
+        "dungeon": "Jabu Jabus Belly", #"room": 12,
+        "locations": {
+            "Jabu Jabus Belly Compass Chest": "True"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Room13",
+        "dungeon": "Jabu Jabus Belly", #"room": 13,
+        "locations": {
+            "Fairy Pot": "has_bottle and can_use(Boomerang)"
+        }
+    },
+    {
+        "region_name": "Jabu Jabus Belly Room14",
+        "dungeon": "Jabu Jabus Belly", #"room": 14,
+        "locations": {
+            "Jabu Jabus Belly GS Water Switch Room": "True",
+            "Fairy Pot": "has_bottle"
         }
     }
 ]

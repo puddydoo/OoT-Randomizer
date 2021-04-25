@@ -1,15 +1,15 @@
 [    
     {
         "region_name": "Bottom of the Well",
-        "dungeon": "Bottom of the Well",
+        "dungeon": "Bottom of the Well", #"room": 00,
         "exits": {
             "Kakariko Village": "True",
-            "Bottom of the Well Main Area" : "is_child and (can_child_attack or Nuts)"
+            "Bottom of the Well Main Area": "is_child and (can_child_attack or Nuts)"
         }
     },
     {
         "region_name": "Bottom of the Well Main Area",
-        "dungeon": "Bottom of the Well",
+        "dungeon": "Bottom of the Well", #"room": 00,
         "locations": {
             "Bottom of the Well Front Left Fake Wall Chest": "logic_lens_botw or can_use(Lens_of_Truth)",
             "Bottom of the Well Front Center Bombable Chest": "has_explosives",
@@ -17,37 +17,108 @@
             "Bottom of the Well Compass Chest": "logic_lens_botw or can_use(Lens_of_Truth)",
             "Bottom of the Well Center Skulltula Chest": "logic_lens_botw or can_use(Lens_of_Truth)",
             "Bottom of the Well Back Left Bombable Chest": "has_explosives and (logic_lens_botw or can_use(Lens_of_Truth))",
-            "Bottom of the Well Freestanding Key": "Sticks or can_use(Dins_Fire)",
-            "Bottom of the Well Lens of Truth Chest": "
-                can_play(Zeldas_Lullaby) and 
-                (Kokiri_Sword or (Sticks and logic_child_deadhand))", 
-                #Sword not strictly necessary but frankly being forced to do this with sticks isn't fair
-            "Bottom of the Well Invisible Chest": "can_play(Zeldas_Lullaby) and (logic_lens_botw or can_use(Lens_of_Truth))",
             "Bottom of the Well Underwater Front Chest": "can_play(Zeldas_Lullaby)",
             "Bottom of the Well Underwater Left Chest": "can_play(Zeldas_Lullaby)",
+            "Stick Pot": "True"
+        },
+        "exits": {
+            "Bottom of the Well Basement": "True",
+            "Bottom of the Well Basement Ceiling": "logic_lens_botw or can_use(Lens_of_Truth)",
+            "Bottom of the Well Coffin Room": "True",
+            "Bottom of the Well Pit Room": "(Small_Key_Bottom_of_the_Well, 3)",
+            "Bottom of the Well Dead Hand Room": "can_play(Zeldas_Lullaby)",
+            "Bottom of the Well East Inner Room": "
+                (logic_lens_botw or can_use(Lens_of_Truth)) and (Small_Key_Bottom_of_the_Well, 3)",
+            "Bottom of the Well West Inner Room": "
+                (logic_lens_botw or can_use(Lens_of_Truth)) and (Small_Key_Bottom_of_the_Well, 3)"
+        }
+    },
+    {
+        "region_name": "Bottom of the Well East Cage",
+        "dungeon": "Bottom of the Well", #"room": 00,
+        "locations": {
+            "Bottom of the Well Like Like Chest": "True",
+            "Bottom of the Well GS Like Like Cage": "Boomerang"
+        }
+    },
+    {
+        "region_name": "Bottom of the Well Basement",
+        "dungeon": "Bottom of the Well", #"room": 01,
+        "events": {
+            "Bottom of the Well Third Finger Rocks": "
+                Progressive_Strength_Upgrade or can_blast_or_smash or can_use(Dins_Fire)
+                or (logic_botw_basement and can_use(Sticks))"
+        },
+        "locations": {
             "Bottom of the Well Map Chest": "
-                has_explosives or 
-                ((((Small_Key_Bottom_of_the_Well, 3) and (logic_lens_botw or can_use(Lens_of_Truth))) or 
-                    can_use(Dins_Fire) or (logic_botw_basement and Sticks)) and 
-                Progressive_Strength_Upgrade)",
-            "Bottom of the Well Fire Keese Chest": "
-                (Small_Key_Bottom_of_the_Well, 3) and (logic_lens_botw or can_use(Lens_of_Truth))", #These pits are really unfair.
-            "Bottom of the Well Like Like Chest": "
-                (Small_Key_Bottom_of_the_Well, 3) and (logic_lens_botw or can_use(Lens_of_Truth))",
-            "Bottom of the Well GS West Inner Room": "
-                Boomerang and (logic_lens_botw or can_use(Lens_of_Truth)) and 
-                (Small_Key_Bottom_of_the_Well, 3)",
-            "Bottom of the Well GS East Inner Room": "
-                Boomerang and (logic_lens_botw or can_use(Lens_of_Truth)) and 
-                (Small_Key_Bottom_of_the_Well, 3)",
-            "Bottom of the Well GS Like Like Cage": "
-                Boomerang and (logic_lens_botw or can_use(Lens_of_Truth)) and
-                (Small_Key_Bottom_of_the_Well, 3)",
-            "Stick Pot": "True",
+                can_blast_or_smash or ('Bottom of the Well Third Finger Rocks' and Progressive_Strength_Upgrade)",
             "Nut Pot": "True"
         },
         "exits": {
-            "Bottom of the Well" : "True"
+            "Bottom of the Well Basement Ceiling": "False",
+            "Bottom of the Well Basement Third Finger": "'Bottom of the Well Third Finger Rocks'"
+        }
+    },
+    {
+        "region_name": "Bottom of the Well Basement Ceiling",
+        "dungeon": "Bottom of the Well", #"room": 01,
+        "exits": {
+            "Bottom of the Well Basement": "True"
+        }
+    },
+    {
+        "region_name": "Bottom of the Well Basement Third Finger",
+        "dungeon": "Bottom of the Well", #"room": 01,
+        "events": {
+            "Bottom of the Well Third Finger Rocks": "
+                Progressive_Strength_Upgrade or can_blast_or_smash or can_use(Dins_Fire) or can_use(Bow)"
+        },
+        "exits": {
+            "Bottom of the Well Basement": "'Bottom of the Well Third Finger Rocks'"
+        }
+    },
+    {
+        "region_name": "Bottom of the Well Coffin Room",
+        "dungeon": "Bottom of the Well", #"room": 02,
+        "locations": {
+            "Bottom of the Well Freestanding Key": "Sticks or can_use(Dins_Fire)"
+        }
+    },
+    {
+        "region_name": "Bottom of the Well Pit Room",
+        "dungeon": "Bottom of the Well", #"room": 03,
+        "locations": {
+            "Bottom of the Well Fire Keese Chest": "logic_lens_botw or can_use(Lens_of_Truth)" #These pits are really unfair.
+        },
+        "exits": {
+            "Bottom of the Well East Cage": "logic_lens_botw or can_use(Lens_of_Truth)",
+            "Bottom of the Well Basement Third Finger": "True"
+        }
+    },
+    {
+        "region_name": "Bottom of the Well Dead Hand Room",
+        "dungeon": "Bottom of the Well", #"room": 04,
+        "locations": {
+            "Bottom of the Well Lens of Truth Chest": "Kokiri_Sword or (Sticks and logic_child_deadhand)", 
+                #Sword not strictly necessary but frankly being forced to do this with sticks isn't fair
+            "Bottom of the Well Invisible Chest": "logic_lens_botw or can_use(Lens_of_Truth)"
+        }
+    },
+    {
+        "region_name": "Bottom of the Well East Inner Room",
+        "dungeon": "Bottom of the Well", #"room": 05,
+        "locations": {
+            "Bottom of the Well GS East Inner Room": "Boomerang"
+        },
+        "exits": {
+            "Bottom of the Well Basement": "True"
+        }
+    },
+    {
+        "region_name": "Bottom of the Well West Inner Room",
+        "dungeon": "Bottom of the Well", #"room": 06,
+        "locations": {
+            "Bottom of the Well GS West Inner Room": "Boomerang"
         }
     }
 ]

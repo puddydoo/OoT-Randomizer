@@ -1,48 +1,175 @@
 [
     {
+        "region_name": "Shadow Temple Room00",
+        "dungeon": "Shadow Temple", #"room": 00,
+        "exits": {
+            "Shadow Temple Room01": "True",
+            "Shadow Temple Room04": "can_play(Song_of_Time) and Bow"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Room01",
+        "dungeon": "Shadow Temple", #"room": 01,
+        "locations": {
+            "Shadow Temple MQ Compass Chest": "True"
+        }
+    },
+    {
         "region_name": "Shadow Temple Entryway",
-        "dungeon": "Shadow Temple",
+        "dungeon": "Shadow Temple", #"room": 02,
         "exits": {
             "Graveyard Warp Pad Region": "True",
-            "Shadow Temple Beginning": "
+            "Shadow Temple Room02": "
                 (logic_lens_shadow_mq or can_use(Lens_of_Truth)) and
                 (can_use(Hover_Boots) or can_use(Hookshot))"
         }
     },
     {
-        "region_name": "Shadow Temple Beginning",
-        "dungeon": "Shadow Temple",
+        "region_name": "Shadow Temple Room02",
+        "dungeon": "Shadow Temple", #"room": 02,
         "exits": {
-            "Shadow Temple Entryway": "True",
-            "Shadow Temple First Beamos": "
+            "Shadow Temple Room00": "has_explosives and (Small_Key_Shadow_Temple, 6)",
+            "Shadow Temple Room05": "
                 can_use(Fire_Arrows) or Hover_Boots or
-                (logic_shadow_mq_gap and can_use(Longshot))",
-            "Shadow Temple Dead Hand Area": "has_explosives and (Small_Key_Shadow_Temple, 6)"
+                (logic_shadow_mq_gap and can_use(Longshot))"
         }
     },
     {
-        "region_name": "Shadow Temple Dead Hand Area",
-        "dungeon": "Shadow Temple",
-        "locations": {
-            "Shadow Temple MQ Compass Chest": "True",
-            "Shadow Temple MQ Hover Boots Chest": "can_play(Song_of_Time) and Bow"
+        "region_name": "Shadow Temple Boss Door Room",
+        "dungeon": "Shadow Temple", #"room": 03,
+        "exits": {
+            "Shadow Temple River Across Statue": "True",
+            "Shadow Temple Boss Door": "True"
         }
     },
     {
-        "region_name": "Shadow Temple First Beamos",
-        "dungeon": "Shadow Temple",
+        "region_name": "Shadow Temple Boss Door",
+        "dungeon": "Shadow Temple", #"room": 03,
         "locations": {
-            "Shadow Temple MQ Map Chest": "True",
-            "Shadow Temple MQ Early Gibdos Chest": "True",
-            "Shadow Temple MQ Near Ship Invisible Chest": "True"
+            "Shadow Temple MQ GS Near Boss": "
+                (logic_lens_shadow_mq_back or can_use(Lens_of_Truth)) and can_use_projectile"
         },
         "exits": {
-            "Shadow Temple Upper Huge Pit": "has_explosives and (Small_Key_Shadow_Temple, 2)"
+            "Shadow Temple Entryway": "True",
+            "Shadow Temple Boss Door Room": "
+                (logic_lens_shadow_mq_back or can_use(Lens_of_Truth)) and can_use(Hover_Boots)",
+            "Bongo Bongos Lair": "Boss_Key_Shadow_Temple"
         }
     },
     {
-        "region_name": "Shadow Temple Upper Huge Pit",
-        "dungeon": "Shadow Temple",
+        "region_name": "Shadow Temple Room04",
+        "dungeon": "Shadow Temple", #"room": 04,
+        "locations": {
+            "Shadow Temple MQ Hover Boots Chest": "True"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Room05",
+        "dungeon": "Shadow Temple", #"room": 05,
+        "exits": {
+            "Shadow Temple Room06": "True",
+            "Shadow Temple Room07": "True",
+            "Shadow Temple Room08": "has_explosives and (Small_Key_Shadow_Temple, 2)"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Room06",
+        "dungeon": "Shadow Temple", #"room": 06,
+        "locations": {
+            "Shadow Temple MQ Map Chest": "True"
+        },
+        "exits": {
+            "Shadow Temple River Cage": "True"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Room07",
+        "dungeon": "Shadow Temple", #"room": 07,
+        "locations": {
+            "Shadow Temple MQ Early Gibdos Chest": "True"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Room08",
+        "dungeon": "Shadow Temple", #"room": 08,
+        "exits": {
+            "Shadow Temple Room09": "True"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Room09",
+        "dungeon": "Shadow Temple", #"room": 09,
+        "locations": {
+            "Shadow Temple MQ Beamos Silver Rupees Chest": "
+                (has_fire_source or logic_shadow_mq_huge_pit) and can_use(Longshot)"
+        },
+        "exits": {
+            "Shadow Temple Room10": "has_fire_source or logic_shadow_mq_huge_pit",
+            "Shadow Temple Room11": "
+                (has_fire_source or logic_shadow_mq_huge_pit) and
+                Hover_Boots and (Small_Key_Shadow_Temple, 3) and
+                (logic_lens_shadow_mq_back or can_use(Lens_of_Truth))",
+            "Shadow Temple Room16": "True"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Room10",
+        "dungeon": "Shadow Temple", #"room": 10,
+        "locations": {
+            "Shadow Temple MQ Falling Spikes Lower Chest": "True",
+            "Shadow Temple MQ Falling Spikes Upper Chest": "
+                (logic_shadow_umbrella and Hover_Boots) or Progressive_Strength_Upgrade",
+            "Shadow Temple MQ Falling Spikes Switch Chest": "
+                (logic_shadow_umbrella and Hover_Boots) or Progressive_Strength_Upgrade",
+            "Shadow Temple MQ GS Falling Spikes Room": "
+                (logic_shadow_umbrella_gs and Hover_Boots) or Progressive_Hookshot"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Room11",
+        "dungeon": "Shadow Temple", #"room": 11,
+        "locations": {
+            "Shadow Temple MQ Invisible Spikes Chest": "True"
+        },
+        "exits": {
+            "Shadow Temple Room14": "Progressive_Hookshot",
+            "Shadow Temple Room18": "Progressive_Hookshot and (Small_Key_Shadow_Temple, 4)"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Room12",
+        "dungeon": "Shadow Temple", #"room": 12,
+        "locations": {
+            "Shadow Temple MQ Freestanding Key": "True"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Room13",
+        "dungeon": "Shadow Temple", #"room": 13,
+        "locations": {
+            "Shadow Temple MQ Spike Walls Left Chest": "can_use(Dins_Fire)",
+            "Shadow Temple MQ Boss Key Chest": "can_use(Dins_Fire)"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Room14",
+        "dungeon": "Shadow Temple", #"room": 14,
+        "locations": {
+            "Shadow Temple MQ Stalfos Room Chest": "True"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Room15",
+        "dungeon": "Shadow Temple", #"room": 15,
+        "exits": {
+            "Shadow Temple Room12": "True",
+            "Shadow Temple Room13": "(Small_Key_Shadow_Temple, 6)",
+            "Shadow Temple Room17": "True"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Room16",
+        "dungeon": "Shadow Temple", #"room": 16,
         "locations": {
             "Shadow Temple MQ Invisible Blades Visible Chest": "
                 can_play(Song_of_Time) or
@@ -50,78 +177,84 @@
             "Shadow Temple MQ Invisible Blades Invisible Chest": "
                 can_play(Song_of_Time) or
                 (logic_shadow_mq_invisible_blades and damage_multiplier != 'ohko')"
-        },
-        "exits": {
-            "Shadow Temple Lower Huge Pit": "has_fire_source or logic_shadow_mq_huge_pit"
         }
     },
     {
-        "region_name": "Shadow Temple Lower Huge Pit",
-        "dungeon": "Shadow Temple",
+        "region_name": "Shadow Temple Room17",
+        "dungeon": "Shadow Temple", #"room": 17,
         "locations": {
-            "Shadow Temple MQ Beamos Silver Rupees Chest": "can_use(Longshot)",
-            "Shadow Temple MQ Falling Spikes Lower Chest": "True",
-            "Shadow Temple MQ Falling Spikes Upper Chest": "
-                (logic_shadow_umbrella and Hover_Boots) or Progressive_Strength_Upgrade",
-            "Shadow Temple MQ Falling Spikes Switch Chest": "
-                (logic_shadow_umbrella and Hover_Boots) or Progressive_Strength_Upgrade",
-            "Shadow Temple MQ Invisible Spikes Chest": "
-                Hover_Boots and (Small_Key_Shadow_Temple, 3) and
-                (logic_lens_shadow_mq_back or can_use(Lens_of_Truth))",
-            "Shadow Temple MQ Stalfos Room Chest": "
-                Hover_Boots and (Small_Key_Shadow_Temple, 3) and Progressive_Hookshot and
-                (logic_lens_shadow_mq_back or can_use(Lens_of_Truth))",
-            "Shadow Temple MQ GS Falling Spikes Room": "
-                (logic_shadow_umbrella_gs and Hover_Boots) or Progressive_Hookshot"
-        },
-        "exits": {
-            "Shadow Temple Wind Tunnel": "
-                Hover_Boots and (logic_lens_shadow_mq_back or can_use(Lens_of_Truth)) and 
-                Progressive_Hookshot and (Small_Key_Shadow_Temple, 4)"
+            "Shadow Temple MQ Bomb Flower Chest": "True"
         }
     },
     {
-        "region_name": "Shadow Temple Wind Tunnel",
-        "dungeon": "Shadow Temple",
+        "region_name": "Shadow Temple Room18",
+        "dungeon": "Shadow Temple", #"room": 18,
+        "exits": {
+            "Shadow Temple Room19": "True",
+            "Shadow Temple Room20": "True"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Room19",
+        "dungeon": "Shadow Temple", #"room": 19,
         "locations": {
             "Shadow Temple MQ Wind Hint Chest": "True",
+            "Shadow Temple MQ GS Wind Hint Room": "True"
+        }
+    },
+    {
+        "region_name": "Shadow Temple Room20",
+        "dungeon": "Shadow Temple", #"room": 20,
+        "locations": {
             "Shadow Temple MQ After Wind Enemy Chest": "True",
             "Shadow Temple MQ After Wind Hidden Chest": "True",
-            "Shadow Temple MQ GS Wind Hint Room": "True",
             "Shadow Temple MQ GS After Wind": "True",
             "Nut Pot": "True"
         },
         "exits": {
-            "Shadow Temple Beyond Boat": "
-                can_play(Zeldas_Lullaby) and (Small_Key_Shadow_Temple, 5)"
+            "Shadow Temple River": "(Small_Key_Shadow_Temple, 5)"
         }
     },
     {
-        "region_name": "Shadow Temple Beyond Boat",
-        "dungeon": "Shadow Temple",
+        "region_name": "Shadow Temple River Cage",
+        "dungeon": "Shadow Temple", #"room": 21,
         "locations": {
-            "Shadow Temple Bongo Bongo Heart": "
-                (Bow or (logic_shadow_statue and has_bombchus)) and Boss_Key_Shadow_Temple",
-            "Bongo Bongo": "
-                (Bow or (logic_shadow_statue and has_bombchus)) and Boss_Key_Shadow_Temple",
-            "Shadow Temple MQ GS After Ship": "True",
-            "Shadow Temple MQ GS Near Boss": "Bow or (logic_shadow_statue and has_bombchus)"
+            "Shadow Temple MQ Near Ship Invisible Chest": "True"
+        }
+    },
+    {
+        "region_name": "Shadow Temple River",
+        "dungeon": "Shadow Temple", #"room": 21,
+        "exits": {
+            "Shadow Temple River West": "can_play(Zeldas_Lullaby)"
+        }
+    },
+    {
+        "region_name": "Shadow Temple River West",
+        "dungeon": "Shadow Temple", #"room": 21,
+        "events": {
+            "Shadow Temple Statue": "Bow or (logic_shadow_statue and has_bombchus)"
+        },
+        "locations": {
+            "Shadow Temple MQ GS After Ship": "can_use_projectile"
         },
         "exits": {
-            "Shadow Temple Invisible Maze": "
-                Bow and can_play(Song_of_Time) and can_use(Longshot)"
+            "Shadow Temple Room15": "
+                at('Shadow Temple River Across Statue',
+                Bow and can_play(Song_of_Time) and can_use(Longshot))",
+            "Shadow Temple River Across Statue": "Shadow_Temple_Statue"
         }
     },
     {
-        "region_name": "Shadow Temple Invisible Maze",
-        "dungeon": "Shadow Temple",
-        "locations": {
-            "Shadow Temple MQ Spike Walls Left Chest": "
-                can_use(Dins_Fire) and (Small_Key_Shadow_Temple, 6)",
-            "Shadow Temple MQ Boss Key Chest": "
-                can_use(Dins_Fire) and (Small_Key_Shadow_Temple, 6)",
-            "Shadow Temple MQ Bomb Flower Chest": "True",
-            "Shadow Temple MQ Freestanding Key": "True"
+        "region_name": "Shadow Temple River Across Statue",
+        "dungeon": "Shadow Temple", #"room": 21,
+        "events": {
+            "Shadow Temple Statue": "
+                has_explosives or can_use(Bow) or Progressive_Strength_Upgrade or can_use(Dins_Fire)"
+        },
+        "exits": {
+            "Shadow Temple Boss Door Room": "True",
+            "Shadow Temple River West": "Shadow_Temple_Statue"
         }
     }
 ]

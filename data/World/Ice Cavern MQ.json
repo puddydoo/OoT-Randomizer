@@ -1,48 +1,107 @@
 [
     {
         "region_name": "Ice Cavern Beginning",
-        "dungeon": "Ice Cavern",
+        "dungeon": "Ice Cavern", #"room": 00,
+        "exits": {
+            "ZF Ice Ledge": "True",
+            "Ice Cavern Room01": "True"
+        }
+    },
+    {
+        "region_name": "Ice Cavern Room01",
+        "dungeon": "Ice Cavern", #"room": 01,
+        "exits": {
+            "Ice Cavern Room02": "True", # Throw pot from previous room
+            "Ice Cavern Room10": "False"
+        }
+    },
+    {
+        "region_name": "Ice Cavern Room02",
+        "dungeon": "Ice Cavern", #"room": 02,
+        "exits": {
+            "Ice Cavern Room03": "True"
+        }
+    },
+    {
+        "region_name": "Ice Cavern Room03",
+        "dungeon": "Ice Cavern", #"room": 03,
         "locations": {
             "Fairy Pot": "has_bottle"
         },
         "exits": {
-            "ZF Ice Ledge": "True",
-            "Ice Cavern Map Room": "
+            "Ice Cavern Room04": "Blue_Fire",
+            "Ice Cavern Room08": "is_adult and Blue_Fire",
+            "Ice Cavern Room11": "
                 is_adult or can_use(Dins_Fire) or
-                (has_explosives and (can_use(Sticks) or can_use(Slingshot) or Kokiri_Sword))",
-            "Ice Cavern Compass Room": "is_adult and Blue_Fire",
-            "Ice Cavern Iron Boots Region": "Blue_Fire"
+                (has_explosives and (can_use(Sticks) or can_use(Slingshot) or Kokiri_Sword))"
         }
     },
     {
-        "region_name": "Ice Cavern Map Room",
-        "dungeon": "Ice Cavern",
+        "region_name": "Ice Cavern Room04",
+        "dungeon": "Ice Cavern", #"room": 04,
+        "exits": {
+            "Ice Cavern Room05": "True"
+        }
+    },
+    {
+        "region_name": "Ice Cavern Room05",
+        "dungeon": "Ice Cavern", #"room": 05,
+        "locations": {
+            "Ice Cavern MQ GS Ice Block": "is_adult or can_child_attack",
+            "Ice Cavern MQ GS Scarecrow": "
+                can_use(Scarecrow) or (Hover_Boots and can_use(Longshot)) or
+                (logic_ice_mq_scarecrow and is_adult)"
+        },
+        "exits": {
+            "Ice Cavern Room06": "is_adult"
+        }
+    },
+    {
+        "region_name": "Ice Cavern Room06",
+        "dungeon": "Ice Cavern", #"room": 06,
+        "exits": {
+            "Ice Cavern Room07": "True"
+        }
+    },
+    {
+        "region_name": "Ice Cavern Room07",
+        "dungeon": "Ice Cavern", #"room": 07,
+        "locations": {
+            "Ice Cavern MQ Iron Boots Chest": "True",
+            "Sheik in Ice Cavern": "True"
+        }
+    },
+    {
+        "region_name": "Ice Cavern Room08",
+        "dungeon": "Ice Cavern", #"room": 08,
+        "exits": {
+            "Ice Cavern Room09": "True"
+        }
+    },
+    {
+        "region_name": "Ice Cavern Room09",
+        "dungeon": "Ice Cavern", #"room": 09,
+        "locations": {
+            "Ice Cavern MQ Compass Chest": "True",
+            "Ice Cavern MQ Freestanding PoH": "has_explosives",
+            "Ice Cavern MQ GS Red Ice": "can_play(Song_of_Time) or logic_ice_mq_red_ice_gs"
+        }
+    },
+    {
+        "region_name": "Ice Cavern Room10",
+        "dungeon": "Ice Cavern", #"room": 10,
+        "exits": {
+            "Ice Cavern Room07": "can_use(Iron_Boots)"
+        }
+    },
+    {
+        "region_name": "Ice Cavern Room11",
+        "dungeon": "Ice Cavern", #"room": 11,
         "locations": {
             "Ice Cavern MQ Map Chest": "
                 Blue_Fire and
                 (is_adult or can_use(Sticks) or Kokiri_Sword or can_use_projectile)",
             "Blue Fire": "has_bottle"
-        }
-    },
-    {
-        "region_name": "Ice Cavern Iron Boots Region",
-        "dungeon": "Ice Cavern",
-        "locations": {
-            "Ice Cavern MQ Iron Boots Chest": "is_adult",
-            "Sheik in Ice Cavern": "is_adult",
-            "Ice Cavern MQ GS Ice Block": "is_adult or can_child_attack",
-            "Ice Cavern MQ GS Scarecrow": "
-                can_use(Scarecrow) or (Hover_Boots and can_use(Longshot)) or
-                (logic_ice_mq_scarecrow and is_adult)"
-        }
-    },
-    {
-        "region_name": "Ice Cavern Compass Room",
-        "dungeon": "Ice Cavern",
-        "locations": {
-            "Ice Cavern MQ Compass Chest": "True",
-            "Ice Cavern MQ Freestanding PoH": "has_explosives",
-            "Ice Cavern MQ GS Red Ice": "can_play(Song_of_Time) or logic_ice_mq_red_ice_gs"
         }
     }
 ]
