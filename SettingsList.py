@@ -2424,11 +2424,14 @@ setting_infos = [
         gui_text       = 'Closed Forest Requires Gohma',
         gui_tooltip    = '''\
             If Closed Forest is enabled, beating Gohma is
-            logically required in order to go outside the forest
-            (Kokiri Forest, Lost Woods, Sacred Forest Meadow,
-            Deku Tree, and any accessible houses and grottos).
-            The Kokiri Sword, Deku Shield, and Slingshot needed
-            for this will be guaranteed within the forest area.
+            logically required for accessing any overworld
+            area outside of Kokiri Forest, Lost Woods, and
+            Sacred Forest Meadow.
+
+            This typically guarantees that the Kokiri Sword, a
+            Deku Shield, and a Slingshot will be in the forest
+            or connected dungeons, interiors, and grottos.
+
             Explosives, Silver Scale, Din's Fire, and warp songs,
             with the exception of Minuet of Forest if warp song
             destinations are not randomized, are not considered
