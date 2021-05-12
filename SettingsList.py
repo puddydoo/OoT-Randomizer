@@ -1198,9 +1198,9 @@ logic_tricks = {
                     A precise jump can be used to skip
                     needing to use the Slingshot to go
                     around B1 of the Deku Tree. If using
-                    "Closed Forest Requires Deku Tree",
-                    a Slingshot will not be guaranteed
-                    to exist somewhere inside the Forest.
+                    "Closed Forest Requires Gohma", a
+                    Slingshot will not be guaranteed to
+                    exist somewhere inside the Forest.
                     This trick applies to both Vanilla
                     and Master Quest.
                     '''},
