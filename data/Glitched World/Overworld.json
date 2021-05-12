@@ -1389,10 +1389,6 @@
         }
     },
     {
-        "region_name": "Jabu Jabus Belly Boss Door",
-        "dungeon": "Jabu Jabus Belly"
-    },
-    {
         "region_name": "Barinades Lair",
         "scene": "Barinades Lair",
         "events": {
@@ -1403,7 +1399,7 @@
             "Barinade": "'Defeat Barinade'"
         },
         "exits": {
-            "Jabu Jabus Belly Boss Door": "False"
+            "Jabu Jabus Belly Boss Area": "False"
         }
     },
     {
@@ -1426,10 +1422,6 @@
         }
     },
     {
-        "region_name": "Fire Temple Boss Door",
-        "dungeon": "Fire Temple"
-    },
-    {
         "region_name": "Volvagias Lair",
         "scene": "Volvagias Lair",
         "events": {
@@ -1440,7 +1432,7 @@
             "Volvagia": "'Defeat Volvagia'"
         },
         "exits": {
-            "Fire Temple Boss Door": "False"
+            "Fire Temple Lower": "False"
         }
     },
     {
@@ -1480,10 +1472,6 @@
         }
     },
     {
-        "region_name": "Shadow Temple Boss Door",
-        "dungeon": "Shadow Temple"
-    },
-    {
         "region_name": "Bongo Bongos Lair",
         "scene": "Bongo Bongos Lair",
         "events": {
@@ -1495,7 +1483,7 @@
             "Bongo Bongo": "'Defeat Bongo Bongo'"
         },
         "exits": {
-            "Shadow Temple Boss Door": "False"
+            "Shadow Temple Beyond Boat": "False"
         }
     },
     {

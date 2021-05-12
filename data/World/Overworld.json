@@ -2325,10 +2325,6 @@
         }
     },
     {
-        "region_name": "Jabu Jabus Belly Boss Door",
-        "dungeon": "Jabu Jabus Belly"
-    },
-    {
         "region_name": "Barinades Lair",
         "scene": "Barinades Lair",
         "events": {
@@ -2339,12 +2335,8 @@
             "Barinade": "'Defeat Barinade'"
         },
         "exits": {
-            "Jabu Jabus Belly Boss Door": "False"
+            "Jabu Jabus Belly Boss Area": "False"
         }
-    },
-    {
-        "region_name": "Forest Temple Boss Door",
-        "dungeon": "Forest Temple"
     },
     {
         "region_name": "Phantom Ganons Lair",
@@ -2358,12 +2350,8 @@
             "Phantom Ganon": "'Defeat Phantom Ganon'"
         },
         "exits": {
-            "Forest Temple Boss Door": "False"
+            "Forest Temple Boss Region": "False"
         }
-    },
-    {
-        "region_name": "Fire Temple Boss Door",
-        "dungeon": "Fire Temple"
     },
     {
         "region_name": "Volvagias Lair",
@@ -2376,12 +2364,8 @@
             "Volvagia": "'Defeat Volvagia'"
         },
         "exits": {
-            "Fire Temple Boss Door": "False"
+            "Fire Temple Lower": "False"
         }
-    },
-    {
-        "region_name": "Water Temple Boss Door",
-        "dungeon": "Water Temple"
     },
     {
         "region_name": "Morphas Lair",
@@ -2398,10 +2382,6 @@
         }
     },
     {
-        "region_name": "Spirit Temple Boss Door",
-        "dungeon": "Spirit Temple"
-    },
-    {
         "region_name": "Twinrovas Lair",
         "scene": "Twinrovas Lair",
         "events": {
@@ -2412,12 +2392,8 @@
             "Twinrova": "'Defeat Twinrova'"
         },
         "exits": {
-            "Spirit Temple Boss Door": "False"
+            "Spirit Temple Boss Area": "False"
         }
-    },
-    {
-        "region_name": "Shadow Temple Boss Door",
-        "dungeon": "Shadow Temple"
     },
     {
         "region_name": "Bongo Bongos Lair",
@@ -2431,7 +2407,7 @@
             "Bongo Bongo": "'Defeat Bongo Bongo'"
         },
         "exits": {
-            "Shadow Temple Boss Door": "False"
+            "Shadow Temple Beyond Boat": "False"
         }
     },
     {

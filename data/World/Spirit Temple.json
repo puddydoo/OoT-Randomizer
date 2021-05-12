@@ -166,9 +166,16 @@
             "Spirit Temple Topmost Chest": "Mirror_Shield"
         },
         "exits": {
-            "Twinrovas Lair": "
-                Mirror_Shield and has_explosives and 
-                Progressive_Hookshot and Boss_Key_Spirit_Temple"
+            "Spirit Temple Boss Area": "
+                Mirror_Shield and has_explosives and
+                Progressive_Hookshot"
+        }
+    },
+    {
+        "region_name": "Spirit Temple Boss Area",
+        "dungeon": "Spirit Temple",
+        "exits": {
+            "Twinrovas Lair": "Boss_Key_Spirit_Temple"
         }
     }
 ]

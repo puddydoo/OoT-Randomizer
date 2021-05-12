@@ -21,13 +21,20 @@
     },
     {
         "region_name": "Water Temple Highest Water Level",
-        "dungeon":  "Water Temple",
+        "dungeon": "Water Temple",
         "locations": {
             "Fairy Pot": "has_bottle and can_use(Longshot)"
         },
         "exits": {
             "Water Temple Falling Platform Room": "(Small_Key_Water_Temple, 4)",
-            "Morphas Lair": "Boss_Key_Water_Temple and can_use(Longshot)"
+            "Water Temple Boss Door": "can_use(Longshot)"
+        }
+    },
+    {
+        "region_name": "Water Temple Boss Door",
+        "dungeon": "Water Temple",
+        "exits": {
+            "Morphas Lair": "Boss_Key_Water_Temple"
         }
     },
     {
