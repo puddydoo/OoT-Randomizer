@@ -1197,10 +1197,10 @@ logic_tricks = {
         'tooltip' : '''\
                     A precise jump can be used to skip
                     needing to use the Slingshot to go
-                    around B1 of the Deku Tree. If used
-                    with the "Closed Forest" setting, a
-                    Slingshot will not be guaranteed to
-                    exist somewhere inside the Forest.
+                    around B1 of the Deku Tree. If using
+                    "Closed Forest Requires Deku Tree",
+                    a Slingshot will not be guaranteed
+                    to exist somewhere inside the Forest.
                     This trick applies to both Vanilla
                     and Master Quest.
                     '''},
@@ -1882,31 +1882,28 @@ setting_infos = [
             'closed':      'Closed Forest',
             },
         gui_tooltip    = '''\
-            'Open Forest': Mido no longer blocks the path to the
-            Deku Tree, and the Kokiri boy no longer blocks the path
-            out of the forest.
-            
-            'Closed Deku': The Kokiri boy no longer blocks the path
-            out of the forest, but Mido still blocks the path to the
-            Deku Tree, requiring Kokiri Sword and Deku Shield to access
-            the Deku Tree.
+            In the child era, Mido blocks the path to the Deku Tree,
+            and a Kokiri boy blocks the path out of the forest.
+            Mido requires the Kokiri Sword and a Deku Shield.
+            The Kokiri boy moves after Gohma is defeated.
 
-            'Closed Forest': Beating Deku Tree is logically required
-            to leave the forest area (Kokiri Forest/Lost Woods/Sacred Forest
-            Meadow/Deku Tree), while the Kokiri Sword and a Deku Shield are
-            required to access the Deku Tree. Items needed for this will be
-            guaranteed inside the forest area. This setting is incompatible
-            with starting as adult, and so Starting Age will be locked to Child.
-            With either "Shuffle Interior Entrances" set to "All", "Shuffle 
-            Overworld Entrances" on, "Randomize Warp Song Destinations" on 
-            or "Randomize Overworld Spawns" on, Closed Forest will instead 
-            be treated as Closed Deku with starting age Child and WILL NOT 
-            guarantee that these items are available in the forest area.
+            'Open Forest': Both paths are always open.
+
+            'Closed Deku': The Kokiri boy no longer blocks the path
+            out of the forest, but Mido still guards the Deku Tree.
+
+            'Closed Forest': The paths to the Deku Tree and out of
+            the forest are both blocked. Closed Forest requires
+            AT LEAST ONE of the following settings to apply:
+            - Starting as Child
+            - Open Door of Time
+            - Shuffle Overworld Entrances
+            - Shuffle Interior Entrances set to "All Interiors"
+            - Randomize Overworld Spawns
+            - Logic Rules set to "Glitched" or "No Logic"
+            Otherwise, it will instead be treated as Closed Deku.
         ''',
         shared         = True,
-        disable        = {
-            'closed' : {'settings' : ['starting_age']}
-        },
         gui_params     = {
             'randomize_key': 'randomize_settings',
             'distribution': [
@@ -2021,7 +2018,7 @@ setting_infos = [
         choices        = {
             'open':       'Always Open',
             'vanilla':    'Vanilla Requirements',
-            'stones':	  'Spiritual Stones',
+            'stones':     'Spiritual Stones',
             'medallions': 'Medallions',
             'dungeons':   'Dungeons',
             'tokens':     'Gold Skulltula Tokens'
@@ -2193,7 +2190,8 @@ setting_infos = [
             'glitched'  : {'settings' : ['allowed_tricks', 'shuffle_interior_entrances', 'shuffle_grotto_entrances',
                                          'shuffle_dungeon_entrances', 'shuffle_overworld_entrances', 'owl_drops',
                                          'warp_songs', 'spawn_positions', 'mq_dungeons_random', 'mq_dungeons', ]},
-            'none'      : {'settings' : ['allowed_tricks', 'logic_no_night_tokens_without_suns_song', 'reachable_locations']},
+            'none'      : {'settings' : ['allowed_tricks', 'logic_no_night_tokens_without_suns_song', 'reachable_locations',
+                                         'logic_require_gohma', ]},
         },
         shared         = True,
     ),
@@ -2414,9 +2412,39 @@ setting_infos = [
             Song to collect them. This prevents needing
             to wait until night for some locations.
         ''',
-        gui_params={
+        gui_params     = {
+            'no_line_break' : True,
+            'web:no_line_break' : False,
             "hide_when_disabled": True,
         },
+        shared         = True,
+    ),
+    Checkbutton(
+        name           = 'logic_require_gohma',
+        gui_text       = 'Closed Forest Requires Gohma',
+        gui_tooltip    = '''\
+            If Closed Forest is enabled, beating Gohma is
+            logically required in order to go outside the forest
+            (Kokiri Forest, Lost Woods, Sacred Forest Meadow,
+            Deku Tree, and any accessible houses and grottos).
+            The Kokiri Sword, Deku Shield, and Slingshot needed
+            for this will be guaranteed within the forest area.
+            Explosives, Silver Scale, Din's Fire, and warp songs,
+            with the exception of Minuet of Forest if warp song
+            destinations are not randomized, are not considered
+            in logic until Gohma is beaten because they can be
+            used to escape the forest early.
+
+            This will not apply with certain settings:
+            - Starting as Adult
+            - Shuffle Overworld Entrances
+            - Shuffle Interior Entrances set to "All Interiors"
+            - Randomize Overworld Spawns
+        ''',
+        gui_params     = {
+            "hide_when_disabled": True,
+        },
+        default        = True,
         shared         = True,
     ),
     Checkbutton(
@@ -3733,10 +3761,7 @@ setting_infos = [
             Choose which age Link will start as.
 
             Starting as adult means you start with
-            the master sword in your inventory.
-
-            Only the child option is compatible with
-            Closed Forest.
+            the Master Sword in your inventory.
         ''',
         shared         = True,
         gui_params     = {

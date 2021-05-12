@@ -16,7 +16,7 @@
             "Child Spawn": "is_child",
             "Adult Spawn": "is_adult",
             "Prelude of Light Warp": "can_play(Prelude_of_Light) and can_leave_forest",
-            "Minuet of Forest Warp": "can_play(Minuet_of_Forest)",
+            "Minuet of Forest Warp": "can_play(Minuet_of_Forest) and (not warp_songs or can_leave_forest)",
             "Bolero of Fire Warp": "can_play(Bolero_of_Fire) and can_leave_forest",
             "Serenade of Water Warp": "can_play(Serenade_of_Water) and can_leave_forest",
             "Nocturne of Shadow Warp": "can_play(Nocturne_of_Shadow) and can_leave_forest",
@@ -81,8 +81,8 @@
         "locations": {
             "KF Kokiri Sword Chest": "is_child",
             "KF GS Know It All House": "
-                is_child and can_child_attack and at_night and
-                (had_night_start or can_leave_forest or can_play(Suns_Song))",
+                is_child and can_child_attack and at_night and (ensure_tod_access or
+                open_forest != 'closed' or 'Defeat Gohma' or had_night_start or can_play(Suns_Song))",
             "KF GS Bean Patch": "
                 can_plant_bugs and can_child_attack",
             "KF GS House of Twins": "
@@ -101,8 +101,17 @@
             "KF Kokiri Shop": "True",
             "KF Outside Deku Tree": "is_adult or open_forest == 'open' or 'Showed Mido Sword & Shield'",
             "Lost Woods": "True",
-            "LW Bridge From Forest": "can_leave_forest",
+            "LW Bridge From Forest": "open_forest != 'closed' or is_adult or 'Defeat Gohma'",
             "KF Storms Grotto": "can_open_storm_grotto"
+        }
+    },
+    {
+        "region_name": "Kokiri Forest From Bridge",
+        "scene": "Kokiri Forest",
+        "hint": "Kokiri Forest",
+        "exits": {
+            "Kokiri Forest": "open_forest != 'closed' or is_adult or 'Defeat Gohma'",
+            "LW Bridge From Forest": "open_forest != 'closed' or is_adult or 'Defeat Gohma'"
         }
     },
     {
@@ -224,7 +233,7 @@
                 is_adult and
                 (can_use(Hover_Boots) or can_use(Longshot) or
                     here(can_plant_bean) or logic_lost_woods_bridge)",
-            "Zora River": "can_leave_forest and (can_dive or can_use(Iron_Boots))",
+            "Zora River": "can_leave_forest and (Silver_Scale or can_use(Iron_Boots))",
             "LW Beyond Mido": "is_child or logic_mido_backflip or can_play(Sarias_Song)",
             "LW Near Shortcuts Grotto": "here(can_blast_or_smash)"
         }
@@ -319,7 +328,7 @@
         "scene": "Lost Woods",
         "hint": "the Lost Woods",
         "exits": {
-            "Kokiri Forest": "True",
+            "Kokiri Forest From Bridge": "True",
             "Hyrule Field": "True",
             "Lost Woods": "can_use(Longshot)"
         }
@@ -363,7 +372,7 @@
         },
         "locations": {
             "Pierre": "is_adult and Bonooru and not free_scarecrow",
-            "LH Underwater Item": "is_child and can_dive",
+            "LH Underwater Item": "is_child and Silver_Scale",
             "LH Sun": "
                 is_adult and 
                 (can_use(Distant_Scarecrow) or 'Water Temple Clear') and can_use(Bow)",
@@ -385,7 +394,7 @@
         },
         "exits": {
             "Hyrule Field": "True",
-            "Zoras Domain": "is_child and can_dive",
+            "Zoras Domain": "is_child and Silver_Scale",
             "LH Owl Flight": "is_child",
             "LH Lab": "True",
             "LH Fishing Island": "
@@ -394,7 +403,7 @@
             "Water Temple Lobby": "
                 can_use(Hookshot) and
                 (can_use(Iron_Boots) or
-                    ((can_use(Longshot) or logic_water_hookshot_entry) and (Progressive_Scale, 2)))",
+                    ((can_use(Longshot) or logic_water_hookshot_entry) and Golden_Scale))",
             "LH Grotto": "True"
         }
     },
@@ -425,7 +434,7 @@
         },
         "locations": {
             "LH Lab Dive": "
-                (Progressive_Scale, 2) or
+                Golden_Scale or
                 (logic_lab_diving and Iron_Boots and can_use(Hookshot))",
             "LH GS Lab Crate": "Iron_Boots and can_use(Hookshot)"
         },
@@ -736,7 +745,9 @@
             "ToT Light Arrows Cutscene": "is_adult and can_trigger_lacs"
         },
         "exits": {
-            "ToT Entrance": "True",
+            "ToT Entrance": "
+                (open_forest != 'closed' or starting_age == 'child' or here(is_child) or
+                shuffle_overworld_entrances or shuffle_special_interior_entrances or spawn_positions)",
             "Beyond Door of Time": "can_play(Song_of_Time) or open_door_of_time"
         }
     },
@@ -746,7 +757,10 @@
         "hint": "Temple of Time",
         "locations": {
             "Master Sword Pedestal": "True",
-            "Sheik at Temple": "Forest_Medallion and is_adult"
+            "Sheik at Temple": "
+                Forest_Medallion and is_adult and
+                (open_forest != 'closed' or starting_age == 'child' or here(is_child) or
+                shuffle_overworld_entrances or shuffle_special_interior_entrances or spawn_positions)"
         },
         "exits": {
             "Temple of Time": "True"
@@ -1665,7 +1679,7 @@
             "ZR Front": "True",
             "ZR Open Grotto": "True",
             "ZR Fairy Grotto": "here(can_blast_or_smash)",
-            "Lost Woods": "can_dive or can_use(Iron_Boots)",
+            "Lost Woods": "Silver_Scale or can_use(Iron_Boots)",
             "ZR Storms Grotto": "can_open_storm_grotto",
             "ZR Behind Waterfall": "
                 can_play(Zeldas_Lullaby) or
@@ -1717,7 +1731,7 @@
         },
         "exits": {
             "ZR Behind Waterfall": "True",
-            "Lake Hylia": "is_child and can_dive",
+            "Lake Hylia": "is_child and Silver_Scale",
             "ZD Behind King Zora": "
                 Deliver_Letter or zora_fountain == 'open' or
                 (zora_fountain == 'adult' and is_adult)",
@@ -1832,7 +1846,9 @@
         "region_name": "LLR Talons House",
         "scene": "LLR Talons House",
         "locations": {
-            "LLR Talons Chickens": "is_child and at_day and Zeldas_Letter"
+            "LLR Talons Chickens": "
+                is_child and Zeldas_Letter and at_day and (ensure_tod_access or
+                open_forest != 'closed' or 'Defeat Gohma' or not had_night_start or can_play(Suns_Song))"
         },
         "exits": {
             "Lon Lon Ranch": "True"
@@ -2083,7 +2099,7 @@
         "scene": "HF Tektite Grotto",
         "locations": {
             "HF Tektite Grotto Freestanding PoH": "
-                (Progressive_Scale, 2) or can_use(Iron_Boots)"
+                Golden_Scale or can_use(Iron_Boots)"
         },
         "exits": {
             "Hyrule Field": "True"

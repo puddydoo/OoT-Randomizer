@@ -129,7 +129,7 @@
         "exits": {
             "Kokiri Forest": "True",
             "GC Woods Warp": "True",
-            "Zora River": "(can_dive or can_jumpslash) and can_leave_forest",
+            "Zora River": "(Silver_Scale or can_jumpslash) and can_leave_forest",
             "LW Beyond Mido": "True",
             "LW Near Shortcuts Grotto": "can_blast_or_smash"
             #//Can Exit to Woods bridge with megaflip, but walking through kokiri forest is true anyway
@@ -230,7 +230,7 @@
         },
         "locations": {
             "Pierre": "is_adult and Bonooru and not free_scarecrow",
-            "LH Underwater Item": "is_child and can_dive",
+            "LH Underwater Item": "is_child and Silver_Scale",
             "LH Sun": "
                 is_adult and 
                 (can_use(Distant_Scarecrow) or 'Water Temple Clear' or can_hover) and can_use(Bow)",
@@ -261,7 +261,7 @@
         "region_name": "LH Lab",
         "locations": {
             "LH Lab Dive": "
-                (Progressive_Scale, 2) or
+                Golden_Scale or
                 (Iron_Boots and can_use(Hookshot)) or (has_bottle and can_use(Hover_Boots))",
             "LH GS Lab Crate": "Iron_Boots and can_use(Hookshot)"
         }
@@ -1004,7 +1004,7 @@
             "ZR Front": "True",
             "ZR Open Grotto": "True",
             "ZR Fairy Grotto": "can_blast_or_smash",
-            "Lost Woods": "can_dive or can_use(Iron_Boots) or (is_child and (can_isg or Nuts)) or can_mega",
+            "Lost Woods": "Silver_Scale or can_use(Iron_Boots) or (is_child and (can_isg or Nuts)) or can_mega",
             "ZR Storms Grotto": "can_play(Song_of_Storms) and can_stun_deku",
             "Zoras Domain": "can_play(Zeldas_Lullaby) or can_mega or can_use(Hover_Boots) or is_child"
         }
@@ -1233,7 +1233,7 @@
         "region_name": "HF Tektite Grotto",
         "locations": {
             "HF Tektite Grotto Freestanding PoH": "
-                (Progressive_Scale, 2) or can_use(Iron_Boots)"
+                Golden_Scale or can_use(Iron_Boots)"
         }
     },
     {

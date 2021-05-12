@@ -261,7 +261,7 @@ entrance_shuffle_table = [
                         ('Graveyard Dampes Grave -> Graveyard',                             { 'index': 0x0359 })),
 
     ('Overworld',       ('Kokiri Forest -> LW Bridge From Forest',                          { 'index': 0x05E0 }),
-                        ('LW Bridge -> Kokiri Forest',                                      { 'index': 0x020D })),
+                        ('LW Bridge -> Kokiri Forest From Bridge',                          { 'index': 0x020D })),
     ('Overworld',       ('Kokiri Forest -> Lost Woods',                                     { 'index': 0x011E }),
                         ('LW Forest Exit -> Kokiri Forest',                                 { 'index': 0x0286 })),
     ('Overworld',       ('Lost Woods -> GC Woods Warp',                                     { 'index': 0x04E2 }),
@@ -399,9 +399,8 @@ def shuffle_random_entrances(worlds):
         if worlds[0].shuffle_dungeon_entrances:
             entrance_pools['Dungeon'] = world.get_shufflable_entrances(type='Dungeon', only_primary=True)
             # The fill algorithm will already make sure gohma is reachable, however it can end up putting
-            # a forest escape via the hands of spirit on Deku leading to Deku on spirit in logic. This is
-            # not really a closed forest anymore, so specifically remove Deku Tree from closed forest.
-            if worlds[0].open_forest == 'closed':
+            # a forest escape via the hands of spirit on Deku leading to Deku on spirit in logic.
+            if worlds[0].open_forest == 'closed' and worlds[0].starting_age == 'child' and worlds[0].logic_require_gohma:
                 entrance_pools['Dungeon'].remove(world.get_entrance('KF Outside Deku Tree -> Deku Tree Lobby'))
 
         if worlds[0].shuffle_interior_entrances:

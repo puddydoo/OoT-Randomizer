@@ -75,7 +75,7 @@
         "exits": {
             "Forest Temple NE Outdoors": "
                 can_use(Iron_Boots) or can_use(Longshot) or 
-                (Progressive_Scale, 2) or (logic_forest_well_swim and can_use(Hookshot))",
+                Golden_Scale or (logic_forest_well_swim and can_use(Hookshot))",
             "Forest Temple Outdoors Top Ledges": "can_use(Fire_Arrows)"
         }
     },

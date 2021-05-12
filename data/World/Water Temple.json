@@ -52,7 +52,7 @@
             "Water Temple GS Behind Gate": "
                 (can_use(Hookshot) or can_use(Hover_Boots)) and 
                 has_explosives and can_play(Zeldas_Lullaby) and
-                (can_use(Iron_Boots) or can_dive)",
+                (can_use(Iron_Boots) or Silver_Scale)",
             "Water Temple GS Central Pillar": "
                 can_play(Zeldas_Lullaby) and
                     (((can_use(Longshot) or (logic_water_central_gs_fw and can_use(Hookshot) and can_use(Farores_Wind))) and 
@@ -79,8 +79,8 @@
             "Water Temple Dragon Statue": "
                 can_play(Zeldas_Lullaby) and Progressive_Strength_Upgrade and
                 ((Iron_Boots and can_use(Hookshot)) or
-                    (logic_water_dragon_adult and (has_bombchus or can_use(Bow) or can_use(Hookshot)) and (can_dive or Iron_Boots)) or
-                    (logic_water_dragon_child and Child_Water_Temple and (has_bombchus or Slingshot or Boomerang) and can_dive))"
+                    (logic_water_dragon_adult and (has_bombchus or can_use(Bow) or can_use(Hookshot)) and (Silver_Scale or Iron_Boots)) or
+                    (logic_water_dragon_child and Child_Water_Temple and (has_bombchus or Slingshot or Boomerang) and Silver_Scale))"
         }
     },
     {

@@ -58,12 +58,7 @@ class World(object):
         self.entrance_shuffle = self.shuffle_interior_entrances or self.shuffle_grotto_entrances or self.shuffle_dungeon_entrances or \
                                 self.shuffle_overworld_entrances or self.owl_drops or self.warp_songs or self.spawn_positions
 
-        self.ensure_tod_access = self.shuffle_interior_entrances or self.shuffle_overworld_entrances or self.spawn_positions
         self.disable_trade_revert = self.shuffle_interior_entrances or self.shuffle_overworld_entrances
-
-        if self.open_forest == 'closed' and (self.shuffle_special_interior_entrances or self.shuffle_overworld_entrances or 
-                                             self.warp_songs or self.spawn_positions):
-            self.open_forest = 'closed_deku'
 
         self.triforce_goal = self.triforce_goal_per_world * settings.world_count
 
@@ -99,6 +94,15 @@ class World(object):
         }
 
         self.resolve_random_settings()
+
+        if self.open_forest == 'closed' and self.starting_age == 'adult' and self.logic_rules == 'glitchless' and \
+            not (self.open_door_of_time or \
+            self.shuffle_special_interior_entrances or self.settings.shuffle_overworld_entrances or self.settings.spawn_positions):
+                # adult is not compatible with glitchless closed forest without shuffled entrances or open door of time
+                self.open_forest = 'closed_deku'
+
+        self.ensure_tod_access = self.shuffle_special_interior_entrances or self.shuffle_overworld_entrances or self.spawn_positions or \
+                                 (self.open_forest == 'closed' and (self.starting_age == 'adult' or not self.logic_require_gohma))
 
         if len(settings.hint_dist_user) == 0:
             for d in HintDistFiles():
@@ -247,11 +251,7 @@ class World(object):
             self.starting_tod = random.choice(choices)
             self.randomized_list.append('starting_tod')
         if self.starting_age == 'random':
-            if self.settings.open_forest == 'closed':
-                # adult is not compatible
-                self.starting_age = 'child'
-            else:
-                self.starting_age = random.choice(['child', 'adult'])
+            self.starting_age = random.choice(['child', 'adult'])
             self.randomized_list.append('starting_age')
         if self.chicken_count_random:
             self.chicken_count = random.randint(0, 7)
