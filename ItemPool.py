@@ -1286,11 +1286,13 @@ def get_pool_core(world):
         # this is because vanilla expects the dungeon major item to be
         # locked behind the keys, which is not always true in rando.
         # We can resolve this by starting with some extra keys
-        if world.dungeon_mq['Spirit Temple']:
+        if world.dungeon_mq['Spirit Temple'] or world.colossus_hands:
             # Yes somehow you need 3 keys. This dungeon is bonkers
             world.state.collect(ItemFactory('Small Key (Spirit Temple)'))
             world.state.collect(ItemFactory('Small Key (Spirit Temple)'))
             world.state.collect(ItemFactory('Small Key (Spirit Temple)'))
+            if world.dungeon_mq['Spirit Temple'] and world.colossus_hands:
+                world.state.collect(ItemFactory('Small Key (Spirit Temple)'))
         #if not world.dungeon_mq['Fire Temple']:
         #    world.state.collect(ItemFactory('Small Key (Fire Temple)'))
     if world.shuffle_bosskeys == 'vanilla':

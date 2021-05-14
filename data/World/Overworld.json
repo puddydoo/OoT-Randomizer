@@ -648,7 +648,8 @@
         },
         "exits": {
             "Colossus Great Fairy Fountain": "has_explosives",
-            "Spirit Temple Lobby": "True",
+            "Spirit Temple Lobby": "not colossus_hands",
+            "Desert Colossus Left Hand": "colossus_hands",
             "Wasteland Near Colossus": "True",
             "Colossus Grotto": "can_use(Silver_Gauntlets)"
         }
@@ -662,6 +663,33 @@
         },
         "exits": {
             "Desert Colossus": "True"
+        }
+    },
+    {
+        "region_name": "Desert Colossus Right Hand",
+        "scene": "Desert Colossus Hands",
+        "locations": {
+            "Spirit Temple Silver Gauntlets Chest": "True"
+        },
+        "exits": {
+            "Spirit Temple Right Hand Exit": "not colossus_hands",
+            "Spirit Temple Lobby": "colossus_hands",
+            "Desert Colossus": "colossus_hands and can_leave_forest",
+            "Desert Colossus Left Hand": "
+                at('Desert Colossus Left Hand', True) and can_use(Longshot)"
+        }
+    },
+    {
+        "region_name": "Desert Colossus Left Hand",
+        "scene": "Desert Colossus Hands",
+        "locations": {
+            "Spirit Temple Mirror Shield Chest": "True"
+        },
+        "exits": {
+            "Spirit Temple Left Hand Exit": "not colossus_hands",
+            "Desert Colossus From Spirit Lobby": "colossus_hands",
+            "Desert Colossus": "colossus_hands and can_leave_forest",
+            "Desert Colossus Right Hand": "can_use(Longshot)"
         }
     },
     {

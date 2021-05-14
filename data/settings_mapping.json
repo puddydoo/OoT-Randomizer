@@ -168,8 +168,8 @@
           "settings": [
             "starting_age",
             "shuffle_interior_entrances",
-            "shuffle_grotto_entrances",
             "shuffle_dungeon_entrances",
+            "shuffle_grotto_entrances",
             "shuffle_overworld_entrances",
             "owl_drops",
             "warp_songs",

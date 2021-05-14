@@ -2021,7 +2021,7 @@ setting_infos = [
         choices        = {
             'open':       'Always Open',
             'vanilla':    'Vanilla Requirements',
-            'stones':	  'Spiritual Stones',
+            'stones':     'Spiritual Stones',
             'medallions': 'Medallions',
             'dungeons':   'Dungeons',
             'tokens':     'Gold Skulltula Tokens'
@@ -2697,22 +2697,15 @@ setting_infos = [
             ],
         },
     ),
-    Checkbutton(
-        name           = 'shuffle_grotto_entrances',
-        gui_text       = 'Shuffle Grotto Entrances',
-        gui_tooltip    = '''\
-            Shuffle the pool of grotto entrances, including all graves, 
-            small Fairy Fountains and the Lost Woods Stage.
-        ''',
-        default        = False,
-        shared         = True,
-        gui_params     = {
-            'randomize_key': 'randomize_settings',
-        },
-    ),
-    Checkbutton(
+    Combobox(
         name           = 'shuffle_dungeon_entrances',
         gui_text       = 'Shuffle Dungeon Entrances',
+        default        = 'off',
+        choices        = {
+            'off':       'Off',
+            'on':        'On',
+            'hands':     'On (Include Hands)',
+        },
         gui_tooltip    = '''\
             Shuffle the pool of dungeon entrances, including Bottom 
             of the Well, Ice Cavern, and Gerudo Training Grounds.
@@ -2720,6 +2713,36 @@ setting_infos = [
 
             Additionally, the entrances of Deku Tree, Fire Temple and 
             Bottom of the Well are opened for both adult and child.
+
+            'Include Hands': The hands of the Desert Colossus are
+            disconnected from Spirit Temple and added to the pool
+            of dungeon entrances. This makes it possible to enter
+            Spirit Temple from the adult side; from there the main
+            entrance can be accessed by savewarping.
+
+            One dungeon entrance will lead to the Desert Colossus's
+            left hand, where another dungeon can be entered from
+            the right hand after using the Longshot to cross over.
+
+            The exit within the child side of Spirit Temple will
+            lead to the entrance of another dungeon.
+        ''',
+        shared         = True,
+        gui_params     = {
+            'randomize_key': 'randomize_settings',
+            'distribution':  [
+                ('off', 2),
+                ('on', 1),
+                ('hands', 1),
+            ],
+        },
+    ),
+    Checkbutton(
+        name           = 'shuffle_grotto_entrances',
+        gui_text       = 'Shuffle Grotto Entrances',
+        gui_tooltip    = '''\
+            Shuffle the pool of grotto entrances, including all graves, 
+            small Fairy Fountains and the Lost Woods Stage.
         ''',
         default        = False,
         shared         = True,
@@ -2973,9 +2996,11 @@ setting_infos = [
             mode.
 
             'Vanilla': Small Keys will appear in their 
-            vanilla locations. You start with 3 keys in 
-            Spirit Temple MQ because the vanilla key 
-            layout is not beatable in logic.
+            vanilla locations. If Spirit Temple is MQ
+            or Desert Colossus hands are shuffled, you
+            start with 3 keys because the vanilla key 
+            layout is not beatable in logic. If both
+            at the same time, you start with 4 keys.
 
             'Own Dungeon': Small Keys can only appear in their
             respective dungeon. If Fire Temple is not a

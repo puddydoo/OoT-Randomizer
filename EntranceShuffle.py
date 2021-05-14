@@ -100,6 +100,13 @@ entrance_shuffle_table = [
     ('Dungeon',         ('Gerudo Fortress -> Gerudo Training Grounds Lobby',                { 'index': 0x0008 }),
                         ('Gerudo Training Grounds Lobby -> Gerudo Fortress',                { 'index': 0x03A8 })),
 
+    ('Hands',           ('Desert Colossus -> Desert Colossus Left Hand',                    { 'index': 0x01E9 }),
+                        ('Desert Colossus Left Hand -> Desert Colossus From Spirit Lobby',  { 'index': 0x01E1 })),
+    ('Hands',           ('Desert Colossus Right Hand -> Spirit Temple Lobby',               { 'index': 0x0082 }),
+                        ('Spirit Temple Lobby -> Desert Colossus Right Hand',               { 'index': 0x01E5, 'blue_warp': 0x0610 })),
+    ('Hands',           ('Spirit Temple Right Hand Exit -> Spirit Temple Left Hand Exit',   { 'index': 0x03F4 }),
+                        ('Spirit Temple Left Hand Exit -> Spirit Temple Right Hand Exit',   { 'index': 0x03F0 })),
+
     ('Interior',        ('Kokiri Forest -> KF Midos House',                                 { 'index': 0x0433 }),
                         ('KF Midos House -> Kokiri Forest',                                 { 'index': 0x0443 })),
     ('Interior',        ('Kokiri Forest -> KF Sarias House',                                { 'index': 0x0437 }),
@@ -398,11 +405,9 @@ def shuffle_random_entrances(worlds):
 
         if worlds[0].shuffle_dungeon_entrances:
             entrance_pools['Dungeon'] = world.get_shufflable_entrances(type='Dungeon', only_primary=True)
-            # The fill algorithm will already make sure gohma is reachable, however it can end up putting
-            # a forest escape via the hands of spirit on Deku leading to Deku on spirit in logic. This is
-            # not really a closed forest anymore, so specifically remove Deku Tree from closed forest.
-            if worlds[0].open_forest == 'closed':
-                entrance_pools['Dungeon'].remove(world.get_entrance('KF Outside Deku Tree -> Deku Tree Lobby'))
+            if worlds[0].colossus_hands:
+                entrance_pools['Dungeon'] += world.get_shufflable_entrances(type='Hands', only_primary=True)
+                entrance_pools['Dungeon'].remove(world.get_entrance('Desert Colossus -> Spirit Temple Lobby'))
 
         if worlds[0].shuffle_interior_entrances:
             entrance_pools['Interior'] = world.get_shufflable_entrances(type='Interior', only_primary=True)

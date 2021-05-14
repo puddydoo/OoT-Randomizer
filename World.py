@@ -55,6 +55,9 @@ class World(object):
         self.shuffle_special_interior_entrances = self.shuffle_interior_entrances == 'all'
         self.shuffle_interior_entrances = self.shuffle_interior_entrances in ['simple', 'all']
 
+        self.colossus_hands = self.shuffle_dungeon_entrances == 'hands'
+        self.shuffle_dungeon_entrances = self.shuffle_dungeon_entrances in ['on', 'hands']
+
         self.entrance_shuffle = self.shuffle_interior_entrances or self.shuffle_grotto_entrances or self.shuffle_dungeon_entrances or \
                                 self.shuffle_overworld_entrances or self.owl_drops or self.warp_songs or self.spawn_positions
 
