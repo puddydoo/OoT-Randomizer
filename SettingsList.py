@@ -2832,6 +2832,7 @@ setting_infos = [
 
             'Mix': Shuffle Overworld entrances into the "Mixed" pool
             together with any other entrance pools set to 'Mix'.
+            This option is currently not compatible with Plandomizer.
 
             'Decouple': Shuffle Overworld entrances among each other,
             but decouple them, so you are not guaranteed to end up back
@@ -2847,6 +2848,9 @@ setting_infos = [
             even when dying or loading a save.
         ''',
         shared         = True,
+        disable        = {
+            'mix' : {'settings' : ['enable_distribution_file']},
+        },
         gui_params     = {
             'randomize_key': 'randomize_settings',
             'distribution':  [
