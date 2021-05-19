@@ -406,6 +406,10 @@ def shuffle_random_entrances(worlds):
                     one_way_priorities['Requiem'] = priority_entrance_table['Requiem']
 
         dungeon_entrance_pool = world.get_shufflable_entrances(type='Dungeon', only_primary=True)
+        # The toll can make shop items behind the gate unaffordable if there are no rupees
+        # In the future, the toll can be made into a permanent flag through hacks
+        if worlds[0].dungeon_entrances != 'shuffle':
+            dungeon_entrance_pool.remove(world.get_entrance('Gerudo Fortress -> Gerudo Training Grounds Lobby'))
         interior_entrance_pool = world.get_shufflable_entrances(type='Interior', only_primary=True)
         if worlds[0].shuffle_special_interior_entrances:
             interior_entrance_pool += world.get_shufflable_entrances(type='SpecialInterior', only_primary=True)
