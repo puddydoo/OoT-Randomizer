@@ -15,7 +15,7 @@
         },
         "exits": {
             "Desert Colossus From Spirit Lobby": "not colossus_hands",
-            "Desert Colossus Right Hand": "colossus_hands",
+            "Desert Colossus Right Hand": "colossus_hands and can_leave_forest",
             "Spirit Temple First Child Room": "is_child",
             "Spirit Temple Silver Block Hall": "has_bombchus and can_use(Longshot)"
         }
