@@ -1897,11 +1897,12 @@ setting_infos = [
             required to access the Deku Tree. Items needed for this will be
             guaranteed inside the forest area. This setting is incompatible
             with starting as adult, and so Starting Age will be locked to Child.
-            With either "Shuffle Interior Entrances" set to "All", "Shuffle 
-            Overworld Entrances" on, "Randomize Warp Song Destinations" on 
-            or "Randomize Overworld Spawns" on, Closed Forest will instead 
-            be treated as Closed Deku with starting age Child and WILL NOT 
-            guarantee that these items are available in the forest area.
+            With either "Shuffle Special Interior Entrances" on, "Shuffle 
+            Overworld Entrances" on, "Randomize Warp Song Destinations" on, 
+            "Randomize Overworld Spawns" on, or any decoupled entrances,
+            Closed Forest will instead be treated as Closed Deku with
+            starting age Child and WILL NOT guarantee that these items
+            are available in the forest area.
         ''',
         shared         = True,
         disable        = {
