@@ -2677,8 +2677,8 @@ setting_infos = [
             'mix':       'Mix',
             'decouple_uni': 'Decouple (Unidirectional)',
             'decouple_bi': 'Decouple (Bidirectional)',
-            'insanity_uni': 'Insanity (Unidirectional)',
-            'insanity_bi': 'Insanity (Bidirectional)',
+            'mix_decouple_uni': 'Mix/Decouple (Unidirectional)',
+            'mix_decouple_bi': 'Mix/Decouple (Bidirectional)',
         },
         gui_tooltip    = '''\
             The pool of interior entrances contains most Houses and
@@ -2694,10 +2694,10 @@ setting_infos = [
             but decouple them, so you are not guaranteed to end up back
             where you came from when you go back through an entrance.
 
-            'Insanity': Decouple interior entrances, and shuffle them
-            into the "Insanity" pool together with any other entrance
-            pools set to 'Insanity'. The unidirectional and
-            bidirectional "Insanity" pools are separate.
+            'Mix/Decouple': Decouple interior entrances, and shuffle them
+            into the "Mixed/Decoupled" pool together with any other entrance
+            pools set to 'Mix/Decouple'. The unidirectional and
+            bidirectional "Mixed/Decoupled" pools are separate.
 
             (Unidirectional): The front and reverse sides of
             decoupled entrances are shuffled separately.
@@ -2719,8 +2719,8 @@ setting_infos = [
                 ('mix', 8),
                 ('decouple_uni', 1),
                 ('decouple_bi', 1),
-                ('insanity_uni', 3),
-                ('insanity_bi', 3),
+                ('mix_decouple_uni', 3),
+                ('mix_decouple_bi', 3),
             ],
         },
     ),
@@ -2762,8 +2762,8 @@ setting_infos = [
             'mix':       'Mix',
             'decouple_uni': 'Decouple (Unidirectional)',
             'decouple_bi': 'Decouple (Bidirectional)',
-            'insanity_uni': 'Insanity (Unidirectional)',
-            'insanity_bi': 'Insanity (Bidirectional)',
+            'mix_decouple_uni': 'Mix/Decouple (Unidirectional)',
+            'mix_decouple_bi': 'Mix/Decouple (Bidirectional)',
         },
         gui_tooltip    = '''\
             The pool of dungeon entrances contains all dungeons, including
@@ -2780,10 +2780,10 @@ setting_infos = [
             but decouple them, so you are not guaranteed to end up back
             where you came from when you go back through an entrance.
 
-            'Insanity': Decouple dungeon entrances, and shuffle them
-            into the "Insanity" pool together with any other entrance
-            pools set to 'Insanity'. The unidirectional and
-            bidirectional "Insanity" pools are separate.
+            'Mix/Decouple': Decouple dungeon entrances, and shuffle them
+            into the "Mixed/Decoupled" pool together with any other entrance
+            pools set to 'Mix/Decouple'. The unidirectional and
+            bidirectional "Mixed/Decoupled" pools are separate.
 
             (Unidirectional): The front and reverse sides of
             decoupled entrances are shuffled separately.
@@ -2802,8 +2802,8 @@ setting_infos = [
                 ('mix', 8),
                 ('decouple_uni', 1),
                 ('decouple_bi', 1),
-                ('insanity_uni', 3),
-                ('insanity_bi', 3),
+                ('mix_decouple_uni', 3),
+                ('mix_decouple_bi', 3),
             ],
         },
     ),
@@ -2816,8 +2816,8 @@ setting_infos = [
             'shuffle':   'Shuffle',
             'mix':       'Mix',
             'decouple':  'Decouple',
-            'insanity_uni': 'Insanity (Unidirectional)',
-            'insanity_bi': 'Insanity (Bidirectional)',
+            'mix_decouple_uni': 'Mix/Decouple (Unidirectional)',
+            'mix_decouple_bi': 'Mix/Decouple (Bidirectional)',
         },
         gui_tooltip    = '''\
             The pool of Overworld entrances corresponds to almost
@@ -2838,10 +2838,10 @@ setting_infos = [
             but decouple them, so you are not guaranteed to end up back
             where you came from when you go back through an entrance.
 
-            'Insanity': Decouple Overworld entrances, and shuffle them
-            into the "Insanity" pool together with any other entrance
-            pools set to 'Insanity'. The unidirectional and
-            bidirectional "Insanity" pools are separate.
+            'Mix/Decouple': Decouple Overworld entrances, and shuffle them
+            into the "Mixed/Decoupled" pool together with any other entrance
+            pools set to 'Mix/Decouple'. The unidirectional and
+            bidirectional "Mixed/Decoupled" pools are separate.
 
             Just like when shuffling interior entrances, shuffling Overworld 
             entrances disables trade timers and trade items never revert, 
@@ -2858,8 +2858,8 @@ setting_infos = [
                 ('shuffle', 8),
                 ('mix', 8),
                 ('decouple', 2),
-                ('insanity_uni', 3),
-                ('insanity_bi', 3),
+                ('mix_decouple_uni', 3),
+                ('mix_decouple_bi', 3),
             ],
         },
     ),

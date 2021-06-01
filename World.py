@@ -58,17 +58,17 @@ class World(object):
             self.interior_entrances = 'shuffle'
         elif self.dungeon_entrances == 'mix' and not (self.overworld_entrances == 'mix' or self.interior_entrances == 'mix'):
             self.dungeon_entrances = 'shuffle'
-        if self.overworld_entrances == 'insanity_uni' and not (self.interior_entrances == 'insanity_uni' or self.dungeon_entrances == 'insanity_uni'):
+        if self.overworld_entrances == 'mix_decouple_uni' and not (self.interior_entrances == 'mix_decouple_uni' or self.dungeon_entrances == 'mix_decouple_uni'):
             self.overworld_entrances = 'decouple'
-        elif self.interior_entrances == 'insanity_uni' and not (self.overworld_entrances == 'insanity_uni' or self.dungeon_entrances == 'insanity_uni'):
+        elif self.interior_entrances == 'mix_decouple_uni' and not (self.overworld_entrances == 'mix_decouple_uni' or self.dungeon_entrances == 'mix_decouple_uni'):
             self.interior_entrances = 'decouple_uni'
-        elif self.dungeon_entrances == 'insanity_uni' and not (self.overworld_entrances == 'insanity_uni' or self.interior_entrances == 'insanity_uni'):
+        elif self.dungeon_entrances == 'mix_decouple_uni' and not (self.overworld_entrances == 'mix_decouple_uni' or self.interior_entrances == 'mix_decouple_uni'):
             self.dungeon_entrances = 'decouple_uni'
-        if self.overworld_entrances == 'insanity_bi' and not (self.interior_entrances == 'insanity_bi' or self.dungeon_entrances == 'insanity_bi'):
+        if self.overworld_entrances == 'mix_decouple_bi' and not (self.interior_entrances == 'mix_decouple_bi' or self.dungeon_entrances == 'mix_decouple_bi'):
             self.overworld_entrances = 'decouple'
-        elif self.interior_entrances == 'insanity_bi' and not (self.overworld_entrances == 'insanity_bi' or self.dungeon_entrances == 'insanity_bi'):
+        elif self.interior_entrances == 'mix_decouple_bi' and not (self.overworld_entrances == 'mix_decouple_bi' or self.dungeon_entrances == 'mix_decouple_bi'):
             self.interior_entrances = 'decouple_bi'
-        elif self.dungeon_entrances == 'insanity_bi' and not (self.overworld_entrances == 'insanity_bi' or self.interior_entrances == 'insanity_bi'):
+        elif self.dungeon_entrances == 'mix_decouple_bi' and not (self.overworld_entrances == 'mix_decouple_bi' or self.interior_entrances == 'mix_decouple_bi'):
             self.dungeon_entrances = 'decouple_bi'
 
         self.shuffle_overworld_entrances = self.overworld_entrances != 'off'
@@ -76,15 +76,15 @@ class World(object):
         self.shuffle_dungeon_entrances = self.dungeon_entrances != 'off'
         self.entrance_shuffle = self.shuffle_interior_entrances or self.shuffle_grotto_entrances or self.shuffle_dungeon_entrances or \
                                 self.shuffle_overworld_entrances or self.owl_drops or self.warp_songs or self.spawn_positions
-        self.mix_entrance_pools = self.interior_entrances in ['mix', 'insanity-uni', 'insanity_bi'] or self.dungeon_entrances in ['mix', 'insanity-uni', 'insanity_bi'] or \
-                                self.overworld_entrances in ['mix', 'insanity-uni', 'insanity_bi']
+        self.mix_entrance_pools = self.interior_entrances in ['mix', 'mix_decouple_uni', 'mix_decouple_bi'] or self.dungeon_entrances in ['mix', 'mix_decouple_uni', 'mix_decouple_bi'] or \
+                                self.overworld_entrances in ['mix', 'mix_decouple_uni', 'mix_decouple_bi']
 
         self.ensure_tod_access = self.shuffle_interior_entrances or self.shuffle_overworld_entrances or self.spawn_positions
         self.disable_trade_revert = self.shuffle_interior_entrances or self.shuffle_overworld_entrances
 
         if self.open_forest == 'closed' and (self.shuffle_special_interior_entrances or self.shuffle_overworld_entrances or 
-                                             self.interior_entrances in ['decouple_uni', 'decouple_bi', 'insanity_uni', 'insanity_bi'] or
-                                             self.dungeon_entrances in ['decouple_uni', 'decouple_bi', 'insanity_uni', 'insanity_bi'] or 
+                                             self.interior_entrances in ['decouple_uni', 'decouple_bi', 'mix_decouple_uni', 'mix_decouple_bi'] or
+                                             self.dungeon_entrances in ['decouple_uni', 'decouple_bi', 'mix_decouple_uni', 'mix_decouple_bi'] or 
                                              self.warp_songs or self.spawn_positions):
             self.open_forest = 'closed_deku'
 

@@ -20,9 +20,9 @@ def set_all_entrances_data(world):
         forward_entrance.primary = True
         if type == 'Grotto':
             forward_entrance.data['index'] = 0x1000 + forward_entrance.data['grotto_id']
-        elif (type in ('Interior', 'SpecialInterior') and world.interior_entrances in ['decouple_uni', 'decouple_bi', 'insanity_uni', 'insanity_bi']) or \
-           (type == 'Dungeon' and world.dungeon_entrances in ['decouple_uni', 'decouple_bi', 'insanity_uni', 'insanity_bi']) or \
-           (type == 'Overworld' and world.overworld_entrances in ['decouple', 'insanity_uni', 'insanity_bi']):
+        elif (type in ('Interior', 'SpecialInterior') and world.interior_entrances in ['decouple_uni', 'decouple_bi', 'mix_decouple_uni', 'mix_decouple_bi']) or \
+           (type == 'Dungeon' and world.dungeon_entrances in ['decouple_uni', 'decouple_bi', 'mix_decouple_uni', 'mix_decouple_bi']) or \
+           (type == 'Overworld' and world.overworld_entrances in ['decouple', 'mix_decouple_uni', 'mix_decouple_bi']):
             forward_entrance.decouple = True
         if return_entry:
             return_entry = return_entry[0]
@@ -411,11 +411,11 @@ def shuffle_random_entrances(worlds):
             interior_entrance_pool += world.get_shufflable_entrances(type='SpecialInterior', only_primary=True)
         grotto_entrance_pool = world.get_shufflable_entrances(type='Grotto', only_primary=True)
         grotto_entrance_pool += world.get_shufflable_entrances(type='Grave', only_primary=True)
-        overworld_entrance_pool = world.get_shufflable_entrances(type='Overworld', only_primary=worlds[0].overworld_entrances in ['mix', 'insanity_uni'])
+        overworld_entrance_pool = world.get_shufflable_entrances(type='Overworld', only_primary=worlds[0].overworld_entrances in ['mix', 'mix_decouple_uni'])
         entrance_pools['Mixed'] = []
-        entrance_pools['Insanity'] = []
-        entrance_pools['InsanityFront'] = []
-        entrance_pools['InsanityReverse'] = []
+        entrance_pools['MixDecouple'] = []
+        entrance_pools['MixDecoupleFront'] = []
+        entrance_pools['MixDecoupleReverse'] = []
 
         if worlds[0].dungeon_entrances == 'shuffle':
             entrance_pools['Dungeon'] = dungeon_entrance_pool
@@ -423,14 +423,14 @@ def shuffle_random_entrances(worlds):
             entrance_pools['Mixed'] += dungeon_entrance_pool
         elif worlds[0].dungeon_entrances == 'decouple_bi':
             entrance_pools['Dungeon'] = dungeon_entrance_pool + [entrance.reverse for entrance in dungeon_entrance_pool]
-        elif worlds[0].dungeon_entrances == 'insanity_bi':
-            entrance_pools['Insanity'] += dungeon_entrance_pool + [entrance.reverse for entrance in dungeon_entrance_pool]
+        elif worlds[0].dungeon_entrances == 'mix_decouple_bi':
+            entrance_pools['MixDecouple'] += dungeon_entrance_pool + [entrance.reverse for entrance in dungeon_entrance_pool]
         elif worlds[0].dungeon_entrances == 'decouple_uni':
             entrance_pools['Dungeon'] = dungeon_entrance_pool
             entrance_pools['DungeonReverse'] = [entrance.reverse for entrance in dungeon_entrance_pool]
-        elif worlds[0].dungeon_entrances == 'insanity_uni':
-            entrance_pools['InsanityFront'] += dungeon_entrance_pool
-            entrance_pools['InsanityReverse'] += [entrance.reverse for entrance in dungeon_entrance_pool]
+        elif worlds[0].dungeon_entrances == 'mix_decouple_uni':
+            entrance_pools['MixDecoupleFront'] += dungeon_entrance_pool
+            entrance_pools['MixDecoupleReverse'] += [entrance.reverse for entrance in dungeon_entrance_pool]
 
         if worlds[0].interior_entrances == 'shuffle':
             entrance_pools['Interior'] = interior_entrance_pool
@@ -438,14 +438,14 @@ def shuffle_random_entrances(worlds):
             entrance_pools['Mixed'] += interior_entrance_pool
         elif worlds[0].interior_entrances == 'decouple_bi':
             entrance_pools['Interior'] = interior_entrance_pool + [entrance.reverse for entrance in interior_entrance_pool]
-        elif worlds[0].interior_entrances == 'insanity_bi':
-            entrance_pools['Insanity'] += interior_entrance_pool + [entrance.reverse for entrance in interior_entrance_pool]
+        elif worlds[0].interior_entrances == 'mix_decouple_bi':
+            entrance_pools['MixDecouple'] += interior_entrance_pool + [entrance.reverse for entrance in interior_entrance_pool]
         elif worlds[0].interior_entrances == 'decouple_uni':
             entrance_pools['Interior'] = interior_entrance_pool
             entrance_pools['InteriorReverse'] = [entrance.reverse for entrance in interior_entrance_pool]
-        elif worlds[0].interior_entrances == 'insanity_uni':
-            entrance_pools['InsanityFront'] += interior_entrance_pool
-            entrance_pools['InsanityReverse'] += [entrance.reverse for entrance in interior_entrance_pool]
+        elif worlds[0].interior_entrances == 'mix_decouple_uni':
+            entrance_pools['MixDecoupleFront'] += interior_entrance_pool
+            entrance_pools['MixDecoupleReverse'] += [entrance.reverse for entrance in interior_entrance_pool]
 
         if worlds[0].shuffle_grotto_entrances:
             entrance_pools['GrottoGrave'] = grotto_entrance_pool
@@ -458,12 +458,12 @@ def shuffle_random_entrances(worlds):
             entrance_pools['Mixed'] += overworld_entrance_pool
         elif worlds[0].overworld_entrances == 'decouple':
             entrance_pools['Overworld'] = overworld_entrance_pool
-        elif worlds[0].overworld_entrances == 'insanity_bi':
-            entrance_pools['Insanity'] += overworld_entrance_pool
-        elif worlds[0].overworld_entrances == 'insanity_uni':
-            entrance_pools['InsanityFront'] += overworld_entrance_pool
+        elif worlds[0].overworld_entrances == 'mix_decouple_bi':
+            entrance_pools['MixDecouple'] += overworld_entrance_pool
+        elif worlds[0].overworld_entrances == 'mix_decouple_uni':
+            entrance_pools['MixDecoupleFront'] += overworld_entrance_pool
             overworld_entrance_pool.remove(world.get_entrance('GV Lower Stream -> Lake Hylia'))
-            entrance_pools['InsanityReverse'] += [entrance.reverse for entrance in overworld_entrance_pool]
+            entrance_pools['MixDecoupleReverse'] += [entrance.reverse for entrance in overworld_entrance_pool]
 
         # Set shuffled entrances as such
         for entrance in list(chain.from_iterable(one_way_entrance_pools.values())) + list(chain.from_iterable(entrance_pools.values())):
