@@ -148,6 +148,7 @@
         "dungeon": "Spirit Temple", #"room": 05,
         "exits": {
             "Spirit Temple Lobby": "True",
+            "Spirit Temple Statue Room": "True",
             "Twinrovas Lair": "Boss_Key_Spirit_Temple"
         }
     },

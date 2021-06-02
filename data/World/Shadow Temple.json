@@ -66,7 +66,9 @@
         "exits": {
             "Shadow Temple Room06": "True",
             "Shadow Temple Room07": "True",
-            "Shadow Temple Room08": "has_explosives and (Small_Key_Shadow_Temple, 1)"
+            "Shadow Temple Room08": "
+                ((Small_Key_Shadow_Temple, 1) and (not shadow_backdoor or (Small_Key_Shadow_Temple, 2))) and
+                has_explosives"
         }
     },
     {
@@ -96,7 +98,8 @@
         "exits": {
             "Shadow Temple Room10": "True",
             "Shadow Temple Room11": "
-                (Small_Key_Shadow_Temple, 2) and (logic_lens_shadow_back or can_use(Lens_of_Truth))",
+                ((Small_Key_Shadow_Temple, 2) and (not shadow_backdoor or (Small_Key_Shadow_Temple, 3))) and
+                (logic_lens_shadow_back or can_use(Lens_of_Truth))",
             "Shadow Temple Room16": "True"
         }
     },
@@ -118,7 +121,9 @@
         },
         "exits": {
             "Shadow Temple Room14": "Progressive_Hookshot",
-            "Shadow Temple Room18": "Progressive_Hookshot and (Small_Key_Shadow_Temple, 3)"
+            "Shadow Temple Fan Trap Room": "
+                ((Small_Key_Shadow_Temple, 3) and (not shadow_backdoor or (Small_Key_Shadow_Temple, 4))) and
+                Progressive_Hookshot"
         }
     },
     {
@@ -172,29 +177,30 @@
         }
     },
     {
-        "region_name": "Shadow Temple Room18",
+        "region_name": "Shadow Temple Fan Trap Room",
         "dungeon": "Shadow Temple", #"room": 18,
         "exits": {
-            "Shadow Temple Room19": "True",
-            "Shadow Temple Room20": "True"
+            "Shadow Temple Wind Hint Room": "True",
+            "Shadow Temple After Wind": "True"
         }
     },
     {
-        "region_name": "Shadow Temple Room19",
+        "region_name": "Shadow Temple Wind Hint Room",
         "dungeon": "Shadow Temple", #"room": 19,
         "locations": {
             "Shadow Temple Wind Hint Chest": "True"
         }
     },
     {
-        "region_name": "Shadow Temple Room20",
+        "region_name": "Shadow Temple After Wind",
         "dungeon": "Shadow Temple", #"room": 20,
         "locations": {
             "Shadow Temple After Wind Enemy Chest": "True",
             "Shadow Temple After Wind Hidden Chest": "True"
         },
         "exits": {
-            "Shadow Temple River": "(Small_Key_Shadow_Temple, 4)"
+            "Shadow Temple River": "
+                ((Small_Key_Shadow_Temple, 4) and (not shadow_backdoor or (Small_Key_Shadow_Temple, 5)))"
         }
     },
     {
