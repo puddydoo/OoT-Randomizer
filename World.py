@@ -96,8 +96,8 @@ class World(object):
         self.resolve_random_settings()
 
         if self.open_forest == 'closed' and self.starting_age == 'adult' and self.logic_rules == 'glitchless' and \
-            not (self.open_door_of_time or \
-            self.shuffle_special_interior_entrances or self.settings.shuffle_overworld_entrances or self.settings.spawn_positions):
+            not (self.open_door_of_time or ('Ocarina' and 'Song of Time') in self.distribution.starting_items or \
+            self.shuffle_special_interior_entrances or self.shuffle_overworld_entrances or self.spawn_positions):
                 # adult is not compatible with glitchless closed forest without shuffled entrances or open door of time
                 self.open_forest = 'closed_deku'
 
