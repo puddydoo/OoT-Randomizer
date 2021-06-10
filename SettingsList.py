@@ -2439,8 +2439,8 @@ setting_infos = [
             used to escape the forest early.
 
             This will not apply with certain settings:
+            - Glitched logic
             - Starting as Adult
-            - Shuffle Overworld Entrances
             - Shuffle Interior Entrances set to "All Interiors"
             - Randomize Overworld Spawns
         ''',

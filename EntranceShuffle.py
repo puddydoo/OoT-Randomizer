@@ -410,6 +410,14 @@ def shuffle_random_entrances(worlds):
 
         if worlds[0].shuffle_overworld_entrances:
             entrance_pools['Overworld'] = world.get_shufflable_entrances(type='Overworld')
+            if world.logic_rules == 'glitchless' and worlds[0].open_forest == 'closed' and worlds[0].starting_age == 'child' and \
+                worlds[0].logic_require_gohma and not (worlds[0].shuffle_special_interior_entrances or worlds[0].spawn_positions):
+                entrance_pools['Overworld'].remove(world.get_entrance('Kokiri Forest -> Lost Woods'))
+                entrance_pools['Overworld'].remove(world.get_entrance('LW Forest Exit -> Kokiri Forest'))
+                entrance_pools['Overworld'].remove(world.get_entrance('Lost Woods -> GC Woods Warp'))
+                entrance_pools['Overworld'].remove(world.get_entrance('GC Woods Warp -> Lost Woods'))
+                entrance_pools['Overworld'].remove(world.get_entrance('LW Beyond Mido -> SFM Entryway'))
+                entrance_pools['Overworld'].remove(world.get_entrance('SFM Entryway -> LW Beyond Mido'))
 
         # Set shuffled entrances as such
         for entrance in list(chain.from_iterable(one_way_entrance_pools.values())) + list(chain.from_iterable(entrance_pools.values())):
@@ -744,7 +752,8 @@ def validate_world(world, worlds, entrance_placed, locations_to_ensure_reachable
             if impas_front_entrance is not None and impas_back_entrance is not None and not same_hint_area(impas_front_entrance, impas_back_entrance):
                 raise EntranceShuffleError('Kak Impas House entrances are not in the same hint area')
 
-    if (world.shuffle_special_interior_entrances or world.shuffle_overworld_entrances or world.spawn_positions) and \
+    if (world.shuffle_special_interior_entrances or world.spawn_positions or (world.shuffle_overworld_entrances and \
+       not (world.logic_rules == 'glitchless' and world.open_forest == 'closed' and world.starting_age == 'child' and world.logic_require_gohma))) and \
        (entrance_placed == None or entrance_placed.type in ['SpecialInterior', 'Overworld', 'Spawn', 'WarpSong', 'OwlDrop']):
         # At least one valid starting region with all basic refills should be reachable without using any items at the beginning of the seed
         # Note this creates new empty states rather than reuse the worlds' states (which already have starting items)
